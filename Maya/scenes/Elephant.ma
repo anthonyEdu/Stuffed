@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: Elephant.ma
-//Last modified: Fri, May 15, 2020 10:33:28 AM
+//Last modified: Fri, May 15, 2020 10:40:11 AM
 //Codeset: 1252
 requires maya "2018";
 requires "mtoa" "3.1.2";
@@ -13,14 +13,14 @@ fileInfo "osv" "Microsoft Windows 8 Home Premium Edition, 64-bit  (Build 9200)\n
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
-	setAttr ".t" -type "double3" 5.4752142104828456 -4.0257570040710817 19.531881991861862 ;
-	setAttr ".r" -type "double3" 386.06164723412849 4698.2000000001353 0 ;
+	setAttr ".t" -type "double3" 12.507847790999726 -2.0588833688966712 42.998286550139682 ;
+	setAttr ".r" -type "double3" 369.26164723045622 4334.6000000000204 -4.1083555608444432e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "77E8AA9E-234E-68FC-26D2-21B85028178A";
 	setAttr -k off ".v";
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 20.623374937017058;
+	setAttr ".coi" 44.554165611243192;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -52,7 +52,7 @@ createNode camera -s -n "frontShape" -p "front";
 	setAttr -k off ".v";
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.0619913654756;
-	setAttr ".ow" 50.71120215899905;
+	setAttr ".ow" 9.8808028467496296;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
@@ -295,7 +295,9 @@ createNode mesh -n "Body_GeoShape" -p "Body_Geo";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 93 ".pt";
+	setAttr -s 95 ".pt";
+	setAttr ".pt[1]" -type "float3" 0.051028349 0 0 ;
+	setAttr ".pt[2]" -type "float3" -0.051028345 0 0 ;
 	setAttr ".pt[4]" -type "float3" 0.0050481251 0 0.0039547989 ;
 	setAttr ".pt[5]" -type "float3" 0.0016982858 0 -0.0063488535 ;
 	setAttr ".pt[6]" -type "float3" -0.0017242325 0 -0.0063250442 ;
@@ -330,7 +332,8 @@ createNode mesh -n "Body_GeoShape" -p "Body_Geo";
 	setAttr ".pt[102]" -type "float3" 0.00045248133 0 0 ;
 	setAttr ".pt[103]" -type "float3" -0.00034705986 0 0 ;
 	setAttr ".pt[133]" -type "float3" 0.00037506607 0 0 ;
-	setAttr ".pt[136]" -type "float3" -1.4046895e-05 0 0 ;
+	setAttr ".pt[134]" -type "float3" 0.046360191 0 0 ;
+	setAttr ".pt[136]" -type "float3" -0.045270748 0 0 ;
 	setAttr ".pt[137]" -type "float3" -0.00047070882 0 0 ;
 	setAttr ".pt[647]" -type "float3" 0.0010933536 0 0 ;
 	setAttr ".pt[648]" -type "float3" 0.00046378886 0 0 ;
@@ -5525,6 +5528,132 @@ createNode camera -n "leftShape" -p "left";
 	setAttr ".hc" -type "string" "viewSet -ls %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
+createNode transform -n "Tusk";
+	rename -uid "43D83CAC-4BDF-CFBE-06F4-D7B3A17FC1AC";
+	setAttr ".t" -type "double3" 0.79499209620903311 4.5429360618399235 1.6179198285951282 ;
+	setAttr ".r" -type "double3" 143.14994187171007 54.941869830034157 -12.889640096496301 ;
+	setAttr ".s" -type "double3" 0.41906907387193432 0.41906907387193432 0.41906907387193432 ;
+createNode mesh -n "TuskShape" -p "Tusk";
+	rename -uid "738D9ECC-4E6A-4EF5-CEBC-D398AEF46AAB";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.375 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 53 ".uvst[0].uvsp[0:52]" -type "float2" 0.375 0 0.5 0 0.625
+		 0 0.375 0.25 0.5 0.25 0.625 0.25 0.375 0.375 0.5 0.375 0.625 0.375 0.375 0.5 0.5
+		 0.5 0.625 0.5 0.375 0.75 0.5 0.75 0.625 0.75 0.875 0 0.75 0 0.875 0.25 0.75 0.25
+		 0.125 0 0.25 0 0.125 0.25 0.25 0.25 0.375 0.12616424 0.5 0.12616424 0.625 0.12616424
+		 0.75 0.12616424 0.625 0.6238358 0.875 0.12616426 0.5 0.6238358 0.125 0.12616426 0.375
+		 0.6238358 0.25 0.12616424 0.375 0.038477696 0.5 0.038477696 0.625 0.038477696 0.75
+		 0.038477696 0.625 0.71152234 0.875 0.0384777 0.5 0.71152234 0.125 0.0384777 0.375
+		 0.71152234 0.25 0.038477696 0.125 0.21293318 0.37499997 0.53706682 0.5 0.53706682
+		 0.625 0.53706682 0.87499994 0.21293318 0.75 0.21293317 0.625 0.21293317 0.5 0.21293317
+		 0.375 0.21293317 0.25 0.21293317;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 41 ".vt[0:40]"  -0.31666091 -0.57699364 0.31666091 0 -0.5760228 0.41326839
+		 0.31666091 -0.57699364 0.31666091 -0.075351 0.76086915 0.07535097 4.4912718e-09 0.76086915 0.098339185
+		 0.075351 0.76086915 0.07535097 -0.098038547 0.76086915 0 0 0.78313607 0 0.098038547 0.76086915 0
+		 -0.075351 0.76086915 -0.07535097 0 0.76086915 -0.098339185 0.075351 0.76086915 -0.07535097
+		 -0.31666091 -0.57699364 -0.31666091 0 -0.5760228 -0.41326839 0.31666091 -0.57699364 -0.31666091
+		 -0.41200483 -0.5760228 0 0.41200483 -0.5760228 0 -0.28399786 0.18883702 0.28399783
+		 4.178212e-09 0.19919944 0.36819094 0.28399786 0.18883702 0.2839978 0.36698121 0.19957347 -1.143146e-09
+		 0.28399786 0.18883705 -0.2839978 0 0.19919947 -0.36819091 -0.28399786 0.18883705 -0.2839978
+		 -0.36698121 0.19957347 -1.143146e-09 -0.38059938 -0.42756251 0.38059938 1.3558833e-09 -0.42248601 0.49556643
+		 0.38059938 -0.42756251 0.38059932 0.4940075 -0.42229509 -3.7101755e-10 0.38059938 -0.42756251 -0.38059938
+		 0 -0.42248601 -0.49556643 -0.38059938 -0.42756251 -0.38059938 -0.4940075 -0.42229509 -3.7101755e-10
+		 -0.15163524 0.64438665 -0.1516352 0 0.64554727 -0.19726709 0.15163524 0.64438665 -0.1516352
+		 0.19665068 0.64558494 -3.7729522e-10 0.15163524 0.64438671 0.1516352 5.5236518e-09 0.64554733 0.19726709
+		 -0.15163524 0.64438671 0.1516352 -0.19665068 0.64558494 -3.7729522e-10;
+	setAttr -s 76 ".ed[0:75]"  0 1 1 1 2 1 3 4 1 4 5 1 6 7 1 7 8 1 9 10 1
+		 10 11 1 12 13 1 13 14 1 0 25 1 1 26 1 2 27 1 3 6 1 4 7 1 5 8 1 6 9 1 7 10 1 8 11 1
+		 10 34 1 11 35 1 12 15 1 14 16 1 15 0 1 16 2 1 16 28 1 15 32 1 18 38 1 19 37 1 20 36 1
+		 21 29 1 22 30 1 23 31 1 24 40 1 17 18 1 18 19 1 19 20 1 20 21 1 21 22 1 22 23 1 23 24 1
+		 24 17 1 25 17 1 26 18 1 27 19 1 28 20 1 29 14 1 30 13 1 31 12 1 32 24 1 25 26 1 26 27 1
+		 27 28 1 28 29 1 29 30 1 30 31 1 31 32 1 32 25 1 9 33 1 17 39 1 33 23 1 34 22 1 35 21 1
+		 36 8 1 37 5 1 38 4 1 39 3 1 40 6 1 33 34 1 34 35 1 35 36 1 36 37 1 37 38 1 38 39 1
+		 39 40 1 40 33 1;
+	setAttr -s 36 -ch 144 ".fc[0:35]" -type "polyFaces" 
+		f 4 73 -60 34 27
+		mu 0 4 50 51 23 24
+		f 4 72 -28 35 28
+		mu 0 4 49 50 24 25
+		f 4 2 14 -5 -14
+		mu 0 4 3 4 7 6
+		f 4 3 15 -6 -15
+		mu 0 4 4 5 8 7
+		f 4 4 17 -7 -17
+		mu 0 4 6 7 10 9
+		f 4 5 18 -8 -18
+		mu 0 4 7 8 11 10
+		f 4 -61 68 61 39
+		mu 0 4 31 44 45 29
+		f 4 -62 69 62 38
+		mu 0 4 29 45 46 27
+		f 4 -63 70 -30 37
+		mu 0 4 28 47 48 26
+		f 4 71 -29 36 29
+		mu 0 4 48 49 25 26
+		f 4 75 60 40 33
+		mu 0 4 52 43 30 32
+		f 4 59 74 -34 41
+		mu 0 4 23 51 52 32
+		f 4 50 43 -35 -43
+		mu 0 4 33 34 24 23
+		f 4 51 44 -36 -44
+		mu 0 4 34 35 25 24
+		f 4 52 45 -37 -45
+		mu 0 4 35 36 26 25
+		f 4 53 -31 -38 -46
+		mu 0 4 36 38 28 26
+		f 4 -39 30 54 -32
+		mu 0 4 29 27 37 39
+		f 4 -40 31 55 -33
+		mu 0 4 31 29 39 41
+		f 4 56 49 -41 32
+		mu 0 4 40 42 32 30
+		f 4 57 42 -42 -50
+		mu 0 4 42 33 23 32
+		f 4 0 11 -51 -11
+		mu 0 4 0 1 34 33
+		f 4 1 12 -52 -12
+		mu 0 4 1 2 35 34
+		f 4 -25 25 -53 -13
+		mu 0 4 2 16 36 35
+		f 4 -23 -47 -54 -26
+		mu 0 4 16 15 38 36
+		f 4 -55 46 -10 -48
+		mu 0 4 39 37 14 13
+		f 4 -56 47 -9 -49
+		mu 0 4 41 39 13 12
+		f 4 21 26 -57 48
+		mu 0 4 19 20 42 40
+		f 4 23 10 -58 -27
+		mu 0 4 20 0 33 42
+		f 4 -69 -59 6 19
+		mu 0 4 45 44 9 10
+		f 4 -70 -20 7 20
+		mu 0 4 46 45 10 11
+		f 4 -64 -71 -21 -19
+		mu 0 4 18 48 47 17
+		f 4 -65 -72 63 -16
+		mu 0 4 5 49 48 18
+		f 4 -66 -73 64 -4
+		mu 0 4 4 50 49 5
+		f 4 -67 -74 65 -3
+		mu 0 4 3 51 50 4
+		f 4 -68 -75 66 13
+		mu 0 4 22 52 51 3
+		f 4 58 -76 67 16
+		mu 0 4 21 43 52 22;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "3DA2B695-41A4-3A55-AE08-94A286BE658F";
 	setAttr -s 3 ".lnk";
@@ -5630,7 +5759,7 @@ select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
 select -ne :initialShadingGroup;
-	setAttr -s 3 ".dsm";
+	setAttr -s 4 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
@@ -5695,4 +5824,5 @@ connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "EyeMesh_RShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "EyeMesh_LShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "L_Ear_GeoShape.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "TuskShape.iog" ":initialShadingGroup.dsm" -na;
 // End of Elephant.ma
