@@ -1,7 +1,11 @@
 //Maya ASCII 2019 scene
 //Name: Toucan.ma
-//Last modified: Thu, May 21, 2020 12:25:40 PM
+//Last modified: Thu, May 21, 2020 12:48:44 PM
 //Codeset: 1252
+file -rdi 1 -ns "BaseCartoonJointsAdded" -dr 1 -rfn "BaseCartoonJointsAddedRN"
+		 -op "v=0;" -typ "mayaAscii" "F:/Summer 2020/ProjectManagement/StuffedGame/Assets/Maya/scenes/BaseCartoonJointsAdded.ma";
+file -r -ns "BaseCartoonJointsAdded" -dr 1 -rfn "BaseCartoonJointsAddedRN" -op "v=0;"
+		 -typ "mayaAscii" "F:/Summer 2020/ProjectManagement/StuffedGame/Assets/Maya/scenes/BaseCartoonJointsAdded.ma";
 requires maya "2019";
 requires "mtoa" "3.1.2";
 currentUnit -l centimeter -a degree -t film;
@@ -14,14 +18,14 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 2.3819280925526813 5.19507560502141 21.505409293448601 ;
-	setAttr ".r" -type "double3" 716.0616470058261 5045.3999999998641 4.9917703432623299e-17 ;
+	setAttr ".t" -type "double3" -4.2206152653941675 8.5405846601036544 18.222825981761904 ;
+	setAttr ".r" -type "double3" 707.06164700705699 4663.8000000006841 6.2101210459584627e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "77E8AA9E-234E-68FC-26D2-21B85028178A";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 22.158119547558844;
+	setAttr ".coi" 18.255785203036769;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -78,7 +82,6 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".o" yes;
 createNode transform -n "Toucan_Low";
 	rename -uid "6E273A11-44BA-4968-6A80-47B313A0BC4B";
-	setAttr ".v" no;
 createNode transform -n "Geo" -p "Toucan_Low";
 	rename -uid "E25DC702-4A17-639C-6E1C-2B91905D4882";
 createNode transform -n "Head_Feather_01_Geo" -p "|Toucan_Low|Geo";
@@ -26165,6 +26168,7 @@ createNode joint -n "Wrist_J_R" -p "|Toucan_ID|Skeleton|Root_J|LowerBack_J|Middl
 	setAttr ".radi" 0.5;
 createNode transform -n "Toucan_UVStacking";
 	rename -uid "05262D22-4B05-0480-3151-7A92FB882516";
+	setAttr ".v" no;
 createNode transform -n "Geo" -p "Toucan_UVStacking";
 	rename -uid "5FE4D5D5-4120-B30E-83CB-BC9CAEBC48B2";
 createNode transform -n "Head_Feather_01_Geo" -p "|Toucan_UVStacking|Geo";
@@ -41131,6 +41135,16 @@ createNode groupId -n "groupId89";
 createNode groupId -n "groupId90";
 	rename -uid "69796CE6-48F9-8CF5-B7F4-7AA4913D4735";
 	setAttr ".ihi" 0;
+createNode reference -n "BaseCartoonJointsAddedRN";
+	rename -uid "93D9253A-414C-6745-29D4-718FF32DBE78";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"BaseCartoonJointsAddedRN"
+		"BaseCartoonJointsAddedRN" 0;
+lockNode -l 1 ;
+createNode reference -n "sharedReferenceNode";
+	rename -uid "14756F19-416D-6486-653F-11B7A0D5A711";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"sharedReferenceNode";
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -41582,6 +41596,7 @@ connectAttr "polyLayoutUV10.out" "polyFlipUV17.ip";
 connectAttr "|Toucan_Low|Geo|Body_Geo|Body_GeoShape.wm" "polyFlipUV17.mp";
 connectAttr "polyFlipUV17.out" "polyTweakUV14.ip";
 connectAttr "polyLayoutUV9.out" "polyTweakUV15.ip";
+connectAttr "sharedReferenceNode.sr" "BaseCartoonJointsAddedRN.sr";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert4SG.pa" ":renderPartition.st" -na;
