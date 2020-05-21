@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Lizard.ma
-//Last modified: Thu, May 21, 2020 10:46:37 AM
+//Last modified: Thu, May 21, 2020 10:47:46 AM
 //Codeset: UTF-8
 file -rdi 1 -ns "BaseCartoonJointsAdded" -rfn "BaseCartoonJointsAddedRN" -op
 		 "v=0;" -typ "mayaAscii" "/Users/anthonyromrell/GitRepos/Stuffed/Maya//scenes/BaseCartoonJointsAdded.ma";
@@ -17,8 +17,8 @@ fileInfo "osv" "Mac OS X 10.15.3";
 createNode transform -s -n "persp";
 	rename -uid "6F70B95C-754F-64CA-D285-B99EA5D88A75";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 16.141190338441159 10.948376856055965 40.355854825242119 ;
-	setAttr ".r" -type "double3" -14.138352729602548 21.800000000000235 0 ;
+	setAttr ".t" -type "double3" 24.666749761924358 9.1186832328361511 36.296020061183555 ;
+	setAttr ".r" -type "double3" -11.738352729602985 34.200000000000848 -1.4420699054562655e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "64B80A5F-4C43-F9A3-B5CB-60A209934822";
 	setAttr -k off ".v" no;
