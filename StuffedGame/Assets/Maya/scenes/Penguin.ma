@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Penguin.ma
-//Last modified: Thu, May 21, 2020 06:16:19 PM
+//Last modified: Thu, May 21, 2020 06:24:25 PM
 //Codeset: 1252
 file -rdi 1 -ns "BaseCartoonJointsAdded" -rfn "BaseCartoonJointsAddedRN" -op
 		 "v=0;" -typ "mayaAscii" "C:/Users/Xmen9/Desktop/__School/_ _UVU2020Summer/_DGM3220/Repo/Stuffed/StuffedGame/Assets/Maya//scenes/BaseCartoonJointsAdded.ma";
