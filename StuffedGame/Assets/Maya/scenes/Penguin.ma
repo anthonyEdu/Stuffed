@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Penguin.ma
-//Last modified: Sat, May 23, 2020 08:24:49 PM
+//Last modified: Sat, May 23, 2020 08:35:59 PM
 //Codeset: 1252
 file -rdi 1 -ns "BaseCartoonJointsAdded" -rfn "BaseCartoonJointsAddedRN" -op
 		 "v=0;" -typ "mayaAscii" "C:/Users/Xmen9/Desktop/__School/_ _UVU2020Summer/_DGM3220/Repo/Stuffed/StuffedGame/Assets/Maya//scenes/BaseCartoonJointsAdded.ma";
@@ -19,13 +19,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "303A8C8F-4E75-124D-670F-61AAA4D7523B";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.37126127801352649 8.0242930525351515 21.629046837780695 ;
-	setAttr ".r" -type "double3" -11.138352646763085 14040.999999947358 0 ;
+	setAttr ".t" -type "double3" 5.0279017820064071 8.6681341406510732 18.437298019048104 ;
+	setAttr ".r" -type "double3" -15.938352602036041 14056.199999962968 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "ECF3FB9B-4E95-2871-C87B-4BBBB370A430";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 22.156878385916187;
+	setAttr ".coi" 19.780029302022065;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -4784,12 +4784,15 @@ createNode mesh -n "PenguinOBJ1:polySurfaceShape5" -p "PenguinOBJ1:polySurface33
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.68993144482374191 0.72010095790028572 ;
+	setAttr ".pv" -type "double2" 0.5 0.5 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 3 ".pt";
+	setAttr ".pt[789]" -type "float3" -0.015881196 0.027708916 -0.041085534 ;
+	setAttr ".pt[790]" -type "float3" -0.015881196 0.027708916 -0.041085534 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode mesh -n "PenguinOBJ1:polySurfaceShape16" -p "PenguinOBJ1:polySurface33";
 	rename -uid "6787F75F-4FF1-1852-6D25-47BBAFDDA8B5";
