@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Penguin.ma
-//Last modified: Mon, May 25, 2020 09:24:08 PM
+//Last modified: Tue, May 26, 2020 05:37:48 PM
 //Codeset: 1252
 file -rdi 1 -ns "BaseCartoonJointsAdded" -rfn "BaseCartoonJointsAddedRN" -op
 		 "v=0;" -typ "mayaAscii" "C:/Users/Xmen9/Desktop/__School/_ _UVU2020Summer/_DGM3220/Repo/Stuffed/StuffedGame/Assets/Maya//scenes/BaseCartoonJointsAdded.ma";
@@ -20,17 +20,17 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "303A8C8F-4E75-124D-670F-61AAA4D7523B";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.65170145645061139 9.2982557457004678 8.7928930790010309 ;
-	setAttr ".r" -type "double3" -27.938352119816578 16565.799999984683 -3.9961508112885307e-16 ;
+	setAttr ".t" -type "double3" 0.54591212303799141 8.4344105134471565 13.157511528110476 ;
+	setAttr ".r" -type "double3" -12.338352117634862 16920.199999999419 4.3484410957544814e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "ECF3FB9B-4E95-2871-C87B-4BBBB370A430";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 5.5468074704012302;
+	setAttr ".coi" 12.152935026047913;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 0.018148481845855713 5.6625080108642578 4.5324744346467325 ;
+	setAttr ".tp" -type "double3" -0.76102748513221741 5.6625080108642578 1.6347335577011108 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".ai_translator" -type "string" "perspective";
 createNode transform -s -n "top";
@@ -7327,22 +7327,22 @@ createNode mesh -n "PenguinOBJ1:polySurfaceShape16" -p "PenguinOBJ1:polySurface3
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "82C1C3CD-46A1-BF2F-60EB-E8861F48041F";
+	rename -uid "C5E4DCAF-483D-807D-5A38-5C8D19EE1D52";
 	setAttr -s 4 ".lnk";
 	setAttr -s 4 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "EFB3B654-4D77-4D00-66CA-B18462781D6A";
+	rename -uid "9564376D-4FE3-40A9-2968-D3A3570E4FEC";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "4EF10403-4A2C-BCD9-3B47-12930C3D0AA7";
+	rename -uid "E22BEACA-41EB-2B10-E897-D2A0C0E90A6C";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "42F927B0-42ED-9495-F236-56BA4D3E9B3D";
+	rename -uid "83D50C36-46D7-BA45-1A82-5A8334AE89DF";
 	setAttr ".cdl" 1;
 	setAttr -s 4 ".dli[1:3]"  1 2 3;
 	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "E7714AF5-46A3-9F22-D261-3880AA856DF7";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "A9A5BA7A-4E2A-7B8D-BDAF-C180DCA239E1";
+	rename -uid "335DD670-4327-3C4B-FC8D-1E8275DA45CE";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "69A866E3-47B5-175B-D4F2-1FACFD09FA23";
 	setAttr ".g" yes;
@@ -19635,6 +19635,22 @@ createNode polyTweakUV -n "polyTweakUV61";
 		 0.060090367 -0.1227618 0.074704789 -0.11765982 0.091040216 -0.1169672 0.10804664
 		 -0.12072811 0.12460674 -0.1286972 0.13961467 -0.14035194 0.15205643 -0.15492715 0.16108337
 		 -0.17146944 0.16607192 -0.18890493 0.16666159 -0.20611031 0.16277158;
+createNode polyDelEdge -n "polyDelEdge1";
+	rename -uid "B0864C1F-4203-1BFB-2147-2599556F4B03";
+	setAttr ".ics" -type "componentList" 19 "e[782]" "e[784]" "e[786]" "e[788]" "e[790]" "e[792]" "e[794]" "e[796]" "e[798]" "e[800]" "e[802]" "e[804]" "e[806]" "e[808]" "e[810]" "e[812]" "e[814]" "e[816]" "e[818:819]";
+	setAttr ".cv" yes;
+createNode polyDelEdge -n "polyDelEdge2";
+	rename -uid "3F22E25E-470F-E485-BF3D-4D99A4E65E6A";
+	setAttr ".ics" -type "componentList" 19 "e[782]" "e[784]" "e[786]" "e[788]" "e[790]" "e[792]" "e[794]" "e[796]" "e[798]" "e[800]" "e[802]" "e[804]" "e[806]" "e[808]" "e[810]" "e[812]" "e[814]" "e[816]" "e[818:819]";
+	setAttr ".cv" yes;
+createNode polyDelEdge -n "polyDelEdge3";
+	rename -uid "31A355EA-4A9B-1A3E-B1F7-9C99CF1DA2E8";
+	setAttr ".ics" -type "componentList" 19 "e[782]" "e[784]" "e[786]" "e[788]" "e[790]" "e[792]" "e[794]" "e[796]" "e[798]" "e[800]" "e[802]" "e[804]" "e[806]" "e[808]" "e[810]" "e[812]" "e[814]" "e[816]" "e[818:819]";
+	setAttr ".cv" yes;
+createNode polyDelEdge -n "polyDelEdge4";
+	rename -uid "FC69EAC9-4AED-8940-E885-66869DFD014A";
+	setAttr ".ics" -type "componentList" 19 "e[782]" "e[784]" "e[786]" "e[788]" "e[790]" "e[792]" "e[794]" "e[796]" "e[798]" "e[800]" "e[802]" "e[804]" "e[806]" "e[808]" "e[810]" "e[812]" "e[814]" "e[816]" "e[818:819]";
+	setAttr ".cv" yes;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -19677,14 +19693,14 @@ connectAttr "PenguinOBJ1:groupId37.id" "PenguinOBJ1:polySurfaceShape14.iog.og[0]
 		;
 connectAttr "PenguinOBJ1:lambert4SG.mwc" "PenguinOBJ1:polySurfaceShape14.iog.og[0].gco"
 		;
-connectAttr "polyTweakUV61.out" "PenguinOBJ1:polySurfaceShape14.i";
+connectAttr "polyDelEdge3.out" "PenguinOBJ1:polySurfaceShape14.i";
 connectAttr "polyTweakUV61.uvtk[0]" "PenguinOBJ1:polySurfaceShape14.uvst[0].uvtw"
 		;
 connectAttr "PenguinOBJ1:groupId38.id" "PenguinOBJ1:polySurfaceShape15.iog.og[0].gid"
 		;
 connectAttr "PenguinOBJ1:lambert4SG.mwc" "PenguinOBJ1:polySurfaceShape15.iog.og[0].gco"
 		;
-connectAttr "polyTweakUV60.out" "PenguinOBJ1:polySurfaceShape15.i";
+connectAttr "polyDelEdge4.out" "PenguinOBJ1:polySurfaceShape15.i";
 connectAttr "polyTweakUV60.uvtk[0]" "PenguinOBJ1:polySurfaceShape15.uvst[0].uvtw"
 		;
 connectAttr "polyTweakUV59.out" "PenguinOBJ1:polySurfaceShape5.i";
@@ -19911,6 +19927,10 @@ connectAttr "PenguinOBJ1:polyTweakUV8.out" "polyLayoutUV12.ip";
 connectAttr "PenguinOBJ1:polyTweakUV9.out" "polyLayoutUV13.ip";
 connectAttr "polyLayoutUV12.out" "polyTweakUV60.ip";
 connectAttr "polyLayoutUV13.out" "polyTweakUV61.ip";
+connectAttr "polyTweakUV60.out" "polyDelEdge1.ip";
+connectAttr "polyTweakUV61.out" "polyDelEdge2.ip";
+connectAttr "polyDelEdge2.out" "polyDelEdge3.ip";
+connectAttr "polyDelEdge1.out" "polyDelEdge4.ip";
 connectAttr "PenguinOBJ:lambert4SG.pa" ":renderPartition.st" -na;
 connectAttr "PenguinOBJ1:lambert4SG.pa" ":renderPartition.st" -na;
 connectAttr "PenguinOBJ:lambert4SG1.msg" ":defaultShaderList1.s" -na;
