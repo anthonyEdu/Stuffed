@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Elephant.ma
-//Last modified: Tue, May 26, 2020 05:32:46 PM
+//Last modified: Tue, May 26, 2020 05:41:01 PM
 //Codeset: 1252
 file -rdi 1 -ns "BaseCharacter" -rfn "BaseCharacterRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/BaseCharacter.ma";
@@ -17,14 +17,14 @@ fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 18363)\n";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
-	setAttr ".t" -type "double3" 0.3386711464265284 2.9394201012369594 18.728400318822423 ;
-	setAttr ".r" -type "double3" -1440.3383527761214 -1442.1999999997358 2.3312261318620504e-18 ;
+	setAttr ".t" -type "double3" -9.6708705749661643 4.6158692620985633 17.623939454431753 ;
+	setAttr ".r" -type "double3" -1442.13835277613 -1469.3999999997188 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "77E8AA9E-234E-68FC-26D2-21B85028178A";
 	setAttr -k off ".v";
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 18.648455759783111;
+	setAttr ".coi" 19.713863648370111;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -48,17 +48,17 @@ createNode camera -s -n "topShape" -p "top";
 	setAttr ".o" yes;
 createNode transform -s -n "front";
 	rename -uid "3F8EC8A1-D942-A6DC-BA45-FFA7E6A52CC1";
-	setAttr ".t" -type "double3" 0.42801128495145613 2.0119705138248758 1000.1166954089305 ;
+	setAttr ".t" -type "double3" 0 3.88029310067407 1000.1171359649453 ;
 createNode camera -s -n "frontShape" -p "front";
 	rename -uid "5094073D-7A4A-D791-4AEE-3AA14C3CF72E";
 	setAttr -k off ".v";
 	setAttr ".rnd" no;
-	setAttr ".coi" 999.65578628074138;
-	setAttr ".ow" 17.736497526293022;
+	setAttr ".coi" 999.65622683675622;
+	setAttr ".ow" 25.796341266968547;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
-	setAttr ".tp" -type "double3" 0 3.9107842143367897 0.46090912818908691 ;
+	setAttr ".tp" -type "double3" 0 3.88029310067407 0.46090912818908691 ;
 	setAttr ".hc" -type "string" "viewSet -f %camera";
 	setAttr ".o" yes;
 createNode transform -s -n "side";
@@ -5156,7 +5156,6 @@ createNode displayLayer -n "Base_Geo_Layer";
 	setAttr ".do" 2;
 createNode displayLayer -n "Base_Rig_Layer";
 	rename -uid "32B39BF4-46D4-8D68-D094-F0AB3DA9DD6A";
-	setAttr ".v" no;
 	setAttr ".do" 3;
 createNode groupId -n "groupId23";
 	rename -uid "CB238B47-403E-DD77-6ACC-6788B3719C26";
@@ -5174,7 +5173,7 @@ createNode displayLayer -n "Geometry_Layer";
 	rename -uid "8AB54782-4142-3726-3DE7-57B86CDAB816";
 	setAttr ".do" 4;
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "D90A22D5-46ED-2F75-70A5-8783050ECE33";
+	rename -uid "8A14DA6C-43EC-1C40-D775-52ACCB3BB8BB";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -911.90472566892379 -958.41739310857508 ;
 	setAttr ".tgi[0].vh" -type "double2" 972.61900897064061 957.22691696540414 ;
