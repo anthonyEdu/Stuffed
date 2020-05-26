@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Penguin.ma
-//Last modified: Mon, May 25, 2020 08:59:00 PM
+//Last modified: Mon, May 25, 2020 09:00:32 PM
 //Codeset: 1252
 file -rdi 1 -ns "BaseCartoonJointsAdded" -rfn "BaseCartoonJointsAddedRN" -op
 		 "v=0;" -typ "mayaAscii" "C:/Users/Xmen9/Desktop/__School/_ _UVU2020Summer/_DGM3220/Repo/Stuffed/StuffedGame/Assets/Maya//scenes/BaseCartoonJointsAdded.ma";
@@ -20,13 +20,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "303A8C8F-4E75-124D-670F-61AAA4D7523B";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.27925628219452736 11.190978166109385 15.090128521864301 ;
-	setAttr ".r" -type "double3" -23.138352120322569 16561.799999991363 0 ;
+	setAttr ".t" -type "double3" 7.2513737154193834 7.6328346650092094 10.201269579346414 ;
+	setAttr ".r" -type "double3" -18.338352120302741 16596.199999991044 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "ECF3FB9B-4E95-2871-C87B-4BBBB370A430";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 17.201595559345453;
+	setAttr ".coi" 13.69570002357155;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
