@@ -1,0 +1,6 @@
+[submodule "StuffedGame/Assets/Tools"]
+	path = StuffedGame/Assets/Tools
+	url = https://github.com/anthonyromrell/ArtisanDream.Tools.git
+[submodule "StuffedGame/Assets/Foundation"]
+	path = StuffedGame/Assets/Foundation
+	url = https://github.com/anthonyromrell/UnityScriptingFoundation.git
