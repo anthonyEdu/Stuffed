@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Toucan.ma
-//Last modified: Thu, May 28, 2020 09:43:42 PM
+//Last modified: Thu, May 28, 2020 09:44:59 PM
 //Codeset: 1252
 file -rdi 1 -ns "BaseCharacter" -rfn "BaseCharacterRN" -op "v=0;" -typ "mayaAscii"
 		 "F:/Summer 2020/ProjectManagement/StuffedGame/Assets/Maya/scenes/BaseCharacter.ma";
@@ -18,8 +18,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 3.2128704745315799 4.1763877520223476 9.6776079667214301 ;
-	setAttr ".r" -type "double3" 717.2616473538053 4700.6000000020404 0 ;
+	setAttr ".t" -type "double3" -6.0841723462921804 7.5230811402923123 8.2830731474884569 ;
+	setAttr ".r" -type "double3" 699.86164735379975 4649.8000000020938 9.2000677163276234e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "77E8AA9E-234E-68FC-26D2-21B85028178A";
 	setAttr -k off ".v" no;
@@ -7204,6 +7204,7 @@ createNode transform -n "Skeleton" -p "Toucan_Low";
 	setAttr ".v" no;
 createNode transform -n "Toucan_High";
 	rename -uid "8B33A8D2-4F5E-930F-9678-5783057F6838";
+	setAttr ".v" no;
 createNode transform -n "Geo" -p "Toucan_High";
 	rename -uid "6E6EE9D3-4170-96BC-FBBC-6793335D4CF4";
 createNode transform -n "Head_Feather_01_Geo" -p "|Toucan_High|Geo";
