@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Dragon.ma
-//Last modified: Sat, May 30, 2020 08:49:49 PM
+//Last modified: Mon, Jun 01, 2020 11:58:11 AM
 //Codeset: 1252
 file -rdi 1 -ns "BaseCharacter" -rfn "BaseCharacterRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/BaseCharacter.ma";
@@ -18,14 +18,14 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -14.481832468521834 4.7454055694503934 17.939436495556073 ;
-	setAttr ".r" -type "double3" -362.13835315959847 2480.9999999971014 0 ;
+	setAttr ".t" -type "double3" -0.59579084861094511 4.0367156855407362 23.931861387699563 ;
+	setAttr ".r" -type "double3" -360.33835315963051 2518.9999999970287 -7.7662089090321409e-18 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "77E8AA9E-234E-68FC-26D2-21B85028178A";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 22.736937938660006;
+	setAttr ".coi" 23.654054791488296;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -55,7 +55,7 @@ createNode camera -s -n "frontShape" -p "front";
 	setAttr -k off ".v";
 	setAttr ".rnd" no;
 	setAttr ".coi" 999.98972719029746;
-	setAttr ".ow" 20.266227284540321;
+	setAttr ".ow" 28.923158426794657;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
@@ -760,7 +760,7 @@ createNode mesh -n "Body_GeoShape" -p "Body_Geo";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 48 ".pt";
+	setAttr -s 44 ".pt";
 	setAttr ".pt[1146]" -type "float3" 0 0 -0.0013667124 ;
 	setAttr ".pt[1192]" -type "float3" 0 0 -0.0012105576 ;
 	setAttr ".pt[1193]" -type "float3" 0 0 -0.0032355285 ;
@@ -7661,8 +7661,8 @@ createNode mesh -n "L_Ear_GeoShape" -p "L_Ear_Geo";
 	setAttr ".vcs" 2;
 createNode transform -n "R_Ear_Geo" -p "Geometry";
 	rename -uid "926152DE-4BF1-DC61-68DC-738629F34337";
-	setAttr ".rp" -type "double3" -1.1089158671430626 6.9837164856286451 0.84643781907064231 ;
-	setAttr ".sp" -type "double3" -1.1089158671430626 6.9837164856286451 0.84643781907064231 ;
+	setAttr ".rp" -type "double3" -1.0674457083341551 6.9837164856286451 0.84643781907064231 ;
+	setAttr ".sp" -type "double3" -1.0674457083341551 6.9837164856286451 0.84643781907064231 ;
 createNode mesh -n "R_Ear_GeoShape" -p "R_Ear_Geo";
 	rename -uid "33E07F81-465E-313F-8521-5F844746B1F1";
 	setAttr -k off ".v";
@@ -7681,21 +7681,21 @@ createNode mesh -n "R_Ear_GeoShape" -p "R_Ear_Geo";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 34 ".pt[0:33]" -type "float3"  -2.3199856 -0.54126441 -0.63390315 
-		-3.0200484 -0.50483149 -0.50276518 -5.1853547 -0.4387092 -0.89436519 -5.8907871 -0.53778011 
-		-0.91228074 -5.3781085 -0.3721717 -0.90133023 -6.0115757 -0.46567902 -0.92832404 
-		-2.386842 -0.27966672 -0.62846112 -3.242779 -0.38613105 -0.52941716 -5.516542 -0.49588847 
-		-0.97290599 -4.7756567 -0.40126234 -0.71948731 -2.9972279 -0.35233489 -0.58159828 
-		-4.0509958 -0.34390539 -0.79670841 -3.2277219 -0.42672682 -0.47101459 -2.2057095 
-		-0.49354291 -0.67928588 -2.5256305 -0.58145976 -0.52693117 -4.4705811 -0.51879555 
-		-0.70035505 -5.9152398 -0.55020177 -0.9699955 -3.7784376 -0.56747341 -0.82698703 
-		-6.2568855 -0.52362239 -0.97721446 -6.0279255 -0.43447864 -0.97551417 -4.1094065 
-		-0.55510402 -0.74038082 -6.266221 -0.52408451 -1.0345688 -2.6596677 -0.52515304 -0.53964615 
-		-4.7282119 -0.44569302 -0.68622875 -3.7796309 -0.51896167 -0.85836959 -4.9389849 
-		-0.42493224 -0.80815709 -5.7332826 -0.45056093 -0.90625226 -4.4180508 -0.4279874 
-		-0.72435337 -4.0722642 -0.43446344 -0.7290284 -5.5713477 -0.46150494 -0.86666358 
-		-4.6597137 -0.43633151 -0.72684741 -3.4647362 -0.42785293 -0.58858258 -3.2684441 
-		-0.43190339 -0.61835879 -2.985872 -0.43755656 -0.62719822;
+	setAttr -s 34 ".pt[0:33]" -type "float3"  -2.2785156 -0.54126441 -0.63390315 
+		-2.9785783 -0.50483149 -0.50276518 -5.1438847 -0.4387092 -0.89436519 -5.8493171 -0.53778011 
+		-0.91228074 -5.3366385 -0.3721717 -0.90133023 -5.9701056 -0.46567902 -0.92832404 
+		-2.345372 -0.27966672 -0.62846112 -3.201309 -0.38613105 -0.52941716 -5.4750719 -0.49588847 
+		-0.97290599 -4.7341866 -0.40126234 -0.71948731 -2.9557579 -0.35233489 -0.58159828 
+		-4.0095258 -0.34390539 -0.79670841 -3.1862519 -0.42672682 -0.47101459 -2.1642394 
+		-0.49354291 -0.67928588 -2.4841604 -0.58145976 -0.52693117 -4.429111 -0.51879555 
+		-0.70035505 -5.8737698 -0.55020177 -0.9699955 -3.7369676 -0.56747341 -0.82698703 
+		-6.2154155 -0.52362239 -0.97721446 -5.9864554 -0.43447864 -0.97551417 -4.0679364 
+		-0.55510402 -0.74038082 -6.224751 -0.52408451 -1.0345688 -2.6181977 -0.52515304 -0.53964615 
+		-4.6867418 -0.44569302 -0.68622875 -3.7381608 -0.51896167 -0.85836959 -4.8975148 
+		-0.42493224 -0.80815709 -5.6918125 -0.45056093 -0.90625226 -4.3765807 -0.4279874 
+		-0.72435337 -4.0307941 -0.43446344 -0.7290284 -5.5298777 -0.46150494 -0.86666358 
+		-4.6182437 -0.43633151 -0.72684741 -3.4232662 -0.42785293 -0.58858258 -3.226974 -0.43190339 
+		-0.61835879 -2.944402 -0.43755656 -0.62719822;
 	setAttr -s 34 ".vt[0:33]"  0.78816569 7.02895546 0.41274875 1.22124863 6.21251822 0.11337796
 		 2.20963573 6.43462133 0.86265647 2.59399295 6.15470314 0.76456356 2.25242329 6.28583241 1.23629236
 		 2.62241268 6.10753584 0.98788106 0.72080117 6.83173943 1.10048532 1.28093779 6.12357426 0.47925517
@@ -8373,25 +8373,25 @@ createNode camera -n "leftShape" -p "left";
 	setAttr ".hc" -type "string" "viewSet -ls %camera";
 	setAttr ".o" yes;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "F82049BF-4F3B-E8E2-97D0-8ABA2715FDB2";
-	setAttr -s 2 ".lnk";
-	setAttr -s 2 ".slnk";
+	rename -uid "EBFC5759-46EE-1743-4592-FBAA3325CE94";
+	setAttr -s 3 ".lnk";
+	setAttr -s 3 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "E3F9183C-4608-F4A0-0C3B-90815F5FE5AF";
-	setAttr ".cdl" 2;
-	setAttr -s 3 ".dli[1:2]"  1 2;
-	setAttr -s 2 ".dli";
+	rename -uid "84201D67-4615-DC33-8865-B29C2706EEC6";
+	setAttr ".cdl" 3;
+	setAttr -s 3 ".dli[1:2]"  3 2;
+	setAttr -s 3 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "E7C5F4A4-1A43-5AA7-BC6D-F3BC66616717";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "D54709F1-442D-CA05-FA0C-5EB1439ED222";
+	rename -uid "3935C85B-4BB5-79B8-5FF0-BB98D4997541";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "FF83EB3D-CE4E-B5AE-86C3-BEBE5F5E5A78";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "C149C634-4AB0-88FC-2E8D-3EBA75FEB280";
+	rename -uid "AA0D3FE1-4CCF-4498-106E-3289017A8982";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "83F6B5C8-440A-0BF2-96C4-8EAE3A45118E";
+	rename -uid "D015EBE0-4355-9F8B-8B1D-D685972FF78A";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "0A41BEBB-A04A-3F4E-1C8A-B69EEECED819";
 	setAttr ".b" -type "string" (
@@ -8447,19 +8447,40 @@ createNode groupId -n "groupId19";
 	setAttr ".ihi" 0;
 createNode reference -n "BaseCharacterRN";
 	rename -uid "91E0EE91-45F8-2C76-24CB-F9A1BA983CC4";
+	setAttr -s 5 ".phl";
 	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"BaseCharacterRN"
 		"BaseCharacterRN" 0
-		"BaseCharacterRN" 7
+		"BaseCharacterRN" 15
 		0 "|BaseCharacter:Root_J" "|World_Dragon|Skeleton" "-s -r "
 		0 "|BaseCharacter:pCube2" "|Reference" "-s -r "
 		0 "|BaseCharacter:pCube3" "|Reference" "-s -r "
 		0 "|BaseCharacter:NoseMesh" "|Reference" "-s -r "
 		0 "|BaseCharacter:BodyMesh" "|Reference" "-s -r "
 		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J" "visibility" " 1"
+		3 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeLid_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L|BaseCharacter:EyeMesh_L|BaseCharacter:EyeMesh_LShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L|BaseCharacter:EyeLid_J_L|BaseCharacter:EyeMesh_L|BaseCharacter:EyeMesh_LShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
 		5 4 "BaseCharacterRN" "|World_Dragon|Skeleton|BaseCharacter:Root_J.drawOverride" 
-		"BaseCharacterRN.placeHolderList[1]" "";
+		"BaseCharacterRN.placeHolderList[1]" ""
+		5 3 "BaseCharacterRN" "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L|BaseCharacter:EyeLid_J_L|BaseCharacter:EyeMesh_L|BaseCharacter:EyeMesh_LShape.instObjGroups" 
+		"BaseCharacterRN.placeHolderList[2]" ":initialShadingGroup.dsm"
+		5 3 "BaseCharacterRN" "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L|BaseCharacter:EyeMesh_L|BaseCharacter:EyeMesh_LShape.instObjGroups" 
+		"BaseCharacterRN.placeHolderList[3]" ":initialShadingGroup.dsm"
+		5 3 "BaseCharacterRN" "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeLid_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape.instObjGroups" 
+		"BaseCharacterRN.placeHolderList[4]" ":initialShadingGroup.dsm"
+		5 3 "BaseCharacterRN" "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape.instObjGroups" 
+		"BaseCharacterRN.placeHolderList[5]" ":initialShadingGroup.dsm";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode displayLayer -n "Referenced_Rig_Layer";
@@ -8471,9 +8492,31 @@ createNode objectSet -n "set1";
 createNode objectSet -n "set2";
 	rename -uid "2B280840-430A-5650-C19A-3FBD3887579B";
 	setAttr ".ihi" 0;
-createNode groupId -n "groupId20";
-	rename -uid "24CCA9E7-4B46-0464-8D8A-C5AABC324A4D";
+createNode lambert -n "Dragon_Shader";
+	rename -uid "6859C450-4E55-80CF-1B9E-19843D4FD1EF";
+	setAttr ".c" -type "float3" 1 1 1 ;
+createNode shadingEngine -n "lambert2SG";
+	rename -uid "D33D5C32-444F-E23A-5C2E-AF8E8E961942";
 	setAttr ".ihi" 0;
+	setAttr -s 11 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo1";
+	rename -uid "66D717CA-4380-A269-E8AF-2FA1B1C2EFB5";
+createNode displayLayer -n "Geometry_Layer";
+	rename -uid "AD7C12C6-40DB-AC70-94A0-73BF2B528752";
+	setAttr ".do" 2;
+createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "1EDC69D0-4589-F33F-727A-0F903FC1274C";
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -328.4868109806003 -325.57770298441693 ;
+	setAttr ".tgi[0].vh" -type "double2" 320.32268704755029 333.94608033227189 ;
+	setAttr -s 2 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" -252.85714721679688;
+	setAttr ".tgi[0].ni[0].y" 150;
+	setAttr ".tgi[0].ni[0].nvs" 1923;
+	setAttr ".tgi[0].ni[1].x" 54.285713195800781;
+	setAttr ".tgi[0].ni[1].y" 150;
+	setAttr ".tgi[0].ni[1].nvs" 1923;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -8484,16 +8527,16 @@ select -ne :hardwareRenderingGlobals;
 		 0 0 0 0 ;
 	setAttr ".fprt" yes;
 select -ne :renderPartition;
-	setAttr -s 2 ".st";
+	setAttr -s 3 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 4 ".s";
+	setAttr -s 5 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
 	setAttr -s 2 ".r";
 select -ne :initialShadingGroup;
-	setAttr -s 15 ".dsm";
+	setAttr -s 4 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
@@ -8505,8 +8548,17 @@ select -ne :hardwareRenderGlobals;
 select -ne :ikSystem;
 	setAttr -s 4 ".sol";
 connectAttr "Referenced_Rig_Layer.di" "BaseCharacterRN.phl[1]";
-connectAttr "groupId20.id" "Body_GeoShape.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "Body_GeoShape.iog.og[0].gco";
+connectAttr "BaseCharacterRN.phl[2]" "lambert2SG.dsm" -na;
+connectAttr "BaseCharacterRN.phl[3]" "lambert2SG.dsm" -na;
+connectAttr "BaseCharacterRN.phl[4]" "lambert2SG.dsm" -na;
+connectAttr "BaseCharacterRN.phl[5]" "lambert2SG.dsm" -na;
+connectAttr "Geometry_Layer.di" "Body_Geo.do";
+connectAttr "Geometry_Layer.di" "L_Horn.do";
+connectAttr "Geometry_Layer.di" "R_Horn.do";
+connectAttr "Geometry_Layer.di" "L_Ear_Geo.do";
+connectAttr "Geometry_Layer.di" "R_Ear_Geo.do";
+connectAttr "Geometry_Layer.di" "L_Wing.do";
+connectAttr "Geometry_Layer.di" "R_Wing.do";
 connectAttr ":defaultColorMgtGlobals.cme" "imagePlaneShape1.cme";
 connectAttr ":defaultColorMgtGlobals.cfe" "imagePlaneShape1.cmcf";
 connectAttr ":defaultColorMgtGlobals.cfp" "imagePlaneShape1.cmcp";
@@ -8514,18 +8566,29 @@ connectAttr ":defaultColorMgtGlobals.wsn" "imagePlaneShape1.ws";
 connectAttr ":frontShape.msg" "imagePlaneShape1.ltc";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "layerManager.dli[2]" "Referenced_Rig_Layer.id";
+connectAttr "Dragon_Shader.oc" "lambert2SG.ss";
+connectAttr "R_WingShape.iog" "lambert2SG.dsm" -na;
+connectAttr "L_WingShape.iog" "lambert2SG.dsm" -na;
+connectAttr "R_Ear_GeoShape.iog" "lambert2SG.dsm" -na;
+connectAttr "L_Ear_GeoShape.iog" "lambert2SG.dsm" -na;
+connectAttr "R_HornShape.iog" "lambert2SG.dsm" -na;
+connectAttr "L_HornShape.iog" "lambert2SG.dsm" -na;
+connectAttr "Body_GeoShape.iog" "lambert2SG.dsm" -na;
+connectAttr "lambert2SG.msg" "materialInfo1.sg";
+connectAttr "Dragon_Shader.msg" "materialInfo1.m";
+connectAttr "layerManager.dli[1]" "Geometry_Layer.id";
+connectAttr "Dragon_Shader.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+		;
+connectAttr "lambert2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+		;
+connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
+connectAttr "Dragon_Shader.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "L_Ear_GeoShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "R_Ear_GeoShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "L_WingShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "L_HornShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "R_HornShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "R_WingShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "Body_GeoShape.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId20.msg" ":initialShadingGroup.gn" -na;
 // End of Dragon.ma
