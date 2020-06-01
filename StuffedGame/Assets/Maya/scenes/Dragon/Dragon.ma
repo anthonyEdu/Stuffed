@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Dragon.ma
-//Last modified: Mon, Jun 01, 2020 12:30:27 PM
+//Last modified: Mon, Jun 01, 2020 12:47:12 PM
 //Codeset: 1252
 file -rdi 1 -ns "BaseCharacter" -rfn "BaseCharacterRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/BaseCharacter.ma";
@@ -18,18 +18,18 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.48693499622411629 5.2746320993526048 14.381160355069213 ;
-	setAttr ".r" -type "double3" 3.8616468148959604 1439.4000000001072 1.8637084469866416e-17 ;
+	setAttr ".t" -type "double3" -3.386290728163929 3.2538351378563597 12.135490002109972 ;
+	setAttr ".r" -type "double3" 11.661646814464055 1066.9999999995816 -1.0200676045790661e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "77E8AA9E-234E-68FC-26D2-21B85028178A";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 14.26382076948293;
+	setAttr ".coi" 11.916349860586656;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -0.0035932064056396484 4.1862717920448631 0.13137614727020264 ;
+	setAttr ".tp" -type "double3" -0.76102721691131436 5.6625080108642578 0.76422443985940225 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "85E8FBB6-6441-A19C-C04D-C5AA44DD2279";
@@ -55,7 +55,7 @@ createNode camera -s -n "frontShape" -p "front";
 	setAttr -k off ".v";
 	setAttr ".rnd" no;
 	setAttr ".coi" 999.98972719029746;
-	setAttr ".ow" 28.923158426794657;
+	setAttr ".ow" 19.756496414710007;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
@@ -7171,6 +7171,18 @@ createNode mesh -n "L_HornShape" -p "L_Horn";
 	setAttr ".vif" yes;
 	setAttr ".pv" -type "double2" 0.5 0.3750000074505806 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape4" -p "L_Horn";
+	rename -uid "F27026CD-4B85-8B25-89CB-4B9F76050E71";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.3750000074505806 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 73 ".uvst[0].uvsp[0:72]" -type "float2" 0.375 0 0.625 0 0.375
 		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.875 0 0.875 0.25 0.125
 		 0 0.125 0.25 0.50102401 0 0.50102401 0.75 0.50102401 0.5 0.50102401 0.25 0.26027974
@@ -7360,6 +7372,18 @@ createNode transform -n "R_Horn" -p "Geometry";
 createNode mesh -n "R_HornShape" -p "R_Horn";
 	rename -uid "2F4DBC1B-4F18-9E3F-B203-23B78A51C01F";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.3750000074505806 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape5" -p "R_Horn";
+	rename -uid "7F8A7B08-4639-B9BD-9403-CA850F22F615";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".pv" -type "double2" 0.5 0.3750000074505806 ;
@@ -7834,6 +7858,18 @@ createNode mesh -n "L_WingShape" -p "L_Wing";
 	setAttr ".vif" yes;
 	setAttr ".pv" -type "double2" 0.43833225965499878 0.63387000560760498 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape6" -p "L_Wing";
+	rename -uid "F6E632A8-4772-AD64-787C-C1B29965E5DD";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.43833225965499878 0.63387000560760498 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 97 ".uvst[0].uvsp[0:96]" -type "float2" 0.375 0 0.625 0 0.375
 		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
 		 0.875 0.25 0.125 0 0.125 0.25 0.43833226 0 0.43833226 1 0.43833226 0.75 0.43833226
@@ -8083,15 +8119,282 @@ createNode mesh -n "L_WingShape" -p "L_Wing";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "R_Wing" -p "Geometry";
-	rename -uid "43F228C5-4D41-C9EC-3A6A-4C95427A8991";
-	setAttr ".rp" -type "double3" -0.59892428158584088 3.058200970717996 -0.58042329893898814 ;
-	setAttr ".sp" -type "double3" -0.59892428158584088 3.058200970717996 -0.58042329893898814 ;
+	rename -uid "AC495DC4-4D31-BE76-A26A-278F45AE779B";
+	setAttr ".rp" -type "double3" -0.60201804049904406 3.058200970717996 -0.58042329893898814 ;
+	setAttr ".sp" -type "double3" -0.60201804049904406 3.058200970717996 -0.58042329893898814 ;
 createNode mesh -n "R_WingShape" -p "R_Wing";
-	rename -uid "43CBAE5B-4505-2559-8B3F-D7B247E5F90C";
+	rename -uid "408C8FA0-426D-C43E-0AAB-86B632CE5CDB";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.75 0.5 ;
+	setAttr ".pv" -type "double2" 0.43833225965499878 0.63387000560760498 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 138 ".uvst[0].uvsp[0:137]" -type "float2" 0.87059528 0.72709453
+		 0.95827568 0.12789407 0.96247131 0.11337075 0.14529574 0.74987876 0.18017238 0.75036985
+		 0.93425143 0.13389279 0.28267872 0.94348538 0.82430804 0.19093259 0.7899074 0.11997621
+		 0.3876223 0.73545897 0.75495648 0.24037509 0.69809049 0.09898521 0.4543612 0.75024533
+		 0.70873451 0.291096 0.62677366 0.08025261 0.68739706 0.057768412 0.77871883 0.084491588
+		 0.54478312 0.78050113 0.65151799 0.3677969 0.55763251 0.066748351 0.61596602 0.039253075
+		 0.72449613 0.66832632 0.44248119 0.37796903 0.68818206 0.94225621 0.64262748 0.66194034
+		 0.83218575 0.71481627 0.84138751 0.80808419 0.4085708 0.093186848 0.58312005 0.42769423
+		 0.34517986 0.81773269 0.45696679 0.020544453 0.35856661 0.16709204 0.17829169 0.78353691
+		 0.46964818 0.39463761 0.48982152 0 0.3036783 0.23867665 0.76313972 0.46894804 0.22202519
+		 0.27984157 0.06882599 0.65331453 0.30786523 0.28293079 0.23340875 0.31637916 0.15459198
+		 0.33554435 0.14799455 0.30134523 0.20691419 0.41276467 0.94593275 0.72413307 0.040684849
+		 0.32165676 0.052251607 0.36076644 0.088121802 0.47930884 0.87773812 0.43878821 0.91888183
+		 0.45494777 0.84325159 0.50019562 0.021947771 0.37857667 0 0.34433481 0.90854132 0.54786402
+		 0.88325655 0.5899173 0.77947825 0.51102376 0.069887459 0.47912228 0.89518613 0.7388497
+		 0.56688327 0.32856542 0.62216437 0.91558516 0.31688151 0.45766076 0.38403857 0.49412239
+		 0.33714771 0.54931539 0.52962255 0.011399373 0.44202742 0.42519057 0.27858877 0.62233877
+		 0.53433609 0.45840138 0.48695484 0.44676703 0.61127096 0.48295736 0.44792658 0.48339283
+		 0.70254445 0.51225799 0.3988834 0.53360128 0.35204792 0.58917803 0.28988683 0.65764135
+		 0.50761485 0.053645033 0.46851864 0.088484943 0.42248783 0.155095 0.36548641 0.2307853
+		 0.021032065 0.65358245 0.05330196 0.72273737 0.11414185 0.78772402 0.18734124 0.83887428
+		 0.52020651 0.85119396 0.58991289 0.82726938 0.67974669 0.79585576 0.39383331 0.87808609
+		 0.43425718 0.87658322 0.27240637 0.86236304 0.35594863 0.8796671 0.053051233 0.61749941
+		 0.84228814 0.45548379 0.1109941 0.71949542 0.67088652 0.45180973 0.51226085 0.79884911
+		 0.58308041 0.78403449 0.67463017 0.76461041 0.38365206 0.8150506 0.42418939 0.81426269
+		 0.26469636 0.8090052 0.50874174 0.39283183 0.046317935 0.5416252 0 0.54643667 0.98525357
+		 0.6820159 0.26348522 0.43095055 0.90439999 0.76617247 0.38688394 0.48783877 0.43756589
+		 0.9471882 0.3696461 0.95588225 0.28470492 0.96083981 0.6253925 0.94175774 0.53240347
+		 0.93731689 0.75694203 0.89718908 0.50393897 0.32299066 0.15713441 0.4280926 0.94760931
+		 0.53890204 0.96688968 0.6600402 0.93580711 0.69691974 0.86135161 0.64513916 0.83220285
+		 0.78096819 0.43422729 0.92127216 0.36668265 0.93127608 0.30269599 0.73450428 0.59139413
+		 0.69936365 0.52882111 0.91075981 0.75309414 0.86774576 0.68537045 0.91397929 1 0.63248485
+		 0.98405159 0.6236487 0.16091979 0.96499032 0.15954047 0.95334601 0.89523143 0.72476363
+		 0.157094 0.75931329 0.85560596 0.72895592 0.89707381 0.73634362 0.87240708 0.73848504
+		 0.85753155 0.74117362 0.96042073 0.4279837 0.93866646 0.3939819;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 78 ".pt[0:77]" -type "float3"  -1.0366548 0 0 -7.1521721 
+		0 3.3306691e-16 -0.74261349 0 1.110223e-16 -7.3332553 0 3.3306691e-16 -0.23376411 
+		0 1.110223e-16 -7.3836179 0 3.3306691e-16 -0.90483177 0 0 -7.1999049 0 3.3306691e-16 
+		-3.211025 0 0 -3.2724864 0 0 -1.9594514 0 0 -1.8089025 0 0 -5.3983488 0 0 -2.909656 
+		0 4.4408921e-16 -3.1604183 0 4.4408921e-16 -5.4947987 0 0 -3.8978293 0 0 -3.9919302 
+		0 0 -2.488529 0 0 -2.2476861 0 4.4408921e-16 -1.8050795 0 0 -1.8413842 0 0 -1.0187924 
+		0 0 -1.1106426 0 1.110223e-16 -5.8772888 0 2.220446e-16 -4.5543704 0 4.4408921e-16 
+		-4.7316108 0 4.4408921e-16 -5.9749131 0 0 -3.4349377 0 0 -3.5148501 0 0 -2.2574971 
+		0 4.4408921e-16 -2.1326082 0 0 -4.4899602 0 0 -2.4767275 0 4.4408921e-16 -2.7248003 
+		0 4.4408921e-16 -4.5880542 0 0 -6.3503919 0 2.220446e-16 -5.5009103 0 4.4408921e-16 
+		-5.6308055 0 4.4408921e-16 -6.4207101 0 2.220446e-16 -5.6283946 0 2.220446e-16 -5.7274623 
+		0 0 -4.0361857 0 4.4408921e-16 -3.8246222 0 4.4408921e-16 -2.3922036 0 0 -1.506281 
+		0 0 -1.636759 0 0 -2.440546 0 0 -1.3132843 0 0 -1.2394109 0 0 -0.59027642 0 1.110223e-16 
+		-0.90469563 0 1.110223e-16 -0.73796368 0 5.5511151e-17 -0.93636632 0 1.110223e-16 
+		-1.2955368 0 0 -1.6570305 0 0 -2.1799908 0 0 -2.4654479 0 0 -2.7163188 0 4.4408921e-16 
+		-2.885911 0 4.4408921e-16 -3.4123228 0 4.4408921e-16 -4.0874858 0 4.4408921e-16 -4.8103271 
+		0 4.4408921e-16 -5.7447381 0 3.3306691e-16 -7.3526306 0 3.3306691e-16 -7.3995929 
+		0 3.3306691e-16 -5.8658595 0 4.4408921e-16 -4.9882293 0 4.4408921e-16 -4.2942524 
+		0 4.4408921e-16 -3.6540785 0 4.4408921e-16 -3.1414411 0 4.4408921e-16 -2.8782046 
+		0 0 -2.6065793 0 0 -2.2311416 0 0 -1.7674415 0 0 -1.1180013 0 0 -0.71000314 0 1.110223e-16 
+		-0.35440391 0 5.5511151e-17;
+	setAttr -s 78 ".vt[0:77]"  0.50665051 2.76131654 -0.66178238 3.56440902 5.42353535 -0.68115497
+		 0.35962984 3.45904779 -0.28032666 3.65495062 5.58920956 -0.63346481 0.10520515 3.44630289 -0.33278346
+		 3.68013191 5.58920956 -0.69779289 0.44073898 2.74487424 -0.73764658 3.58827543 5.42344618 -0.74214178
+		 1.59383559 2.56169701 -1.015990973 1.62456632 2.55616355 -1.17281365 0.96804881 4.078139305 -1.85506976
+		 0.89277434 4.028557777 -1.55514359 2.68749738 3.61502624 -1.034570932 1.44315112 5.15516472 -1.59971237
+		 1.56853223 5.18689537 -1.92772245 2.7357223 3.61502624 -1.17625999 1.93723774 3.50601864 -1.4320972
+		 1.98428822 3.53147292 -1.58152187 1.23258758 4.99386168 -2.026166439 1.11216617 4.9389925 -1.7009511
+		 0.89086282 2.78345013 -0.91205144 0.90901518 2.74028826 -1.067317843 0.49771926 3.45676517 -1.28024817
+		 0.54364437 3.46149731 -0.88562095 2.92696738 4.48987198 -0.94443583 2.26550817 5.28290653 -1.24832869
+		 2.35412836 5.28505421 -1.47616446 2.97577953 4.49060678 -1.073966265 1.70579195 3.12233305 -1.33736932
+		 1.74574816 3.14850855 -1.49618769 1.11707163 4.5367775 -1.9569633 1.05462718 4.49189091 -1.665838
+		 2.23330307 3.63693786 -1.29099584 1.22668684 5.11491919 -1.65267038 1.35072327 5.16433811 -1.98336399
+		 2.28235006 3.63710189 -1.42987704 3.16351891 4.89308357 -0.86540782 2.73877811 5.34167194 -1.034350514
+		 2.80372572 5.34394073 -1.1988132 3.19867802 4.89352322 -0.95643997 2.80252028 4.13137436 -0.98230124
+		 2.85205412 4.13161659 -1.11958098 2.006415844 5.22596264 -1.68837845 1.90063417 5.22544909 -1.41223979
+		 1.18442488 2.6659925 -0.99169219 0.7414636 3.66024995 -1.22246599 0.80670261 3.68257523 -1.59766042
+		 1.20859611 2.62616348 -1.14585364 0.64496523 2.84246016 -0.8192153 0.60802853 2.79506087 -0.9674511
+		 0.2834613 3.40943575 -0.91483855 0.44067091 3.42398024 -0.69650233 0.35730493 3.23199224 -0.28349847
+		 0.45650625 3.23538518 -0.54136646 0.63609147 3.2572279 -1.00034379959 0.81683832 3.41993475 -1.27931857
+		 1.078318477 3.72755218 -1.42558074 1.22104704 4.1889534 -1.66054225 1.34648252 4.62426949 -1.68803477
+		 1.43127859 4.88426971 -1.66934252 1.69448447 4.95760822 -1.54387951 2.032065868 5.038228035 -1.3593694
+		 2.3934865 5.093812466 -1.18289042 2.86069202 5.1829319 -0.98174024 3.66463828 5.50540972 -0.63264132
+		 3.68811941 5.50531769 -0.69262785 2.92125273 5.18512678 -1.13467681 2.48243761 5.09604454 -1.41097188
+		 2.13544917 5.039260864 -1.6262697 1.81536233 4.96169281 -1.84594047 1.55904365 4.92475653 -1.97982717
+		 1.42742538 4.66212988 -2.00583148 1.29161274 4.23657084 -1.90766203 1.10389388 3.76754093 -1.7449342
+		 0.87204385 3.44252253 -1.57203817 0.54732376 3.24818587 -1.30203795 0.34332466 3.22728515 -0.88674402
+		 0.16552505 3.22694254 -0.32505333;
+	setAttr -s 152 ".ed[0:151]"  0 48 0 2 51 0 4 50 0 6 49 0 0 52 0 1 64 0
+		 2 4 0 3 5 0 4 77 0 5 65 0 6 0 0 7 1 0 8 28 0 9 29 0 10 30 0 11 31 0 8 9 1 9 73 1
+		 10 11 1 11 56 1 12 40 0 13 43 0 14 42 0 15 41 0 12 60 1 13 14 1 14 69 1 15 12 1 16 32 0
+		 17 35 0 18 34 0 19 33 0 16 17 1 17 71 1 18 19 1 19 58 1 20 44 0 21 47 0 22 46 0 23 45 0
+		 20 21 1 21 75 1 22 23 1 23 54 1 24 36 0 25 37 0 26 38 0 27 39 0 24 62 1 25 26 1 26 67 1
+		 27 24 1 28 16 0 29 17 0 30 18 0 31 19 0 28 29 1 29 72 1 30 31 1 31 57 1 32 12 0 33 13 0
+		 34 14 0 35 15 0 32 59 1 33 34 1 34 70 1 35 32 1 36 1 0 37 3 0 38 5 0 39 7 0 36 63 1
+		 37 38 1 38 66 1 39 36 1 40 24 0 41 27 0 42 26 0 43 25 0 40 41 1 41 68 1 42 43 1 43 61 1
+		 44 8 0 45 11 0 46 10 0 47 9 0 44 55 1 45 46 1 46 74 1 47 44 1 48 20 0 49 21 0 50 22 0
+		 51 23 0 48 49 1 49 76 1 50 51 1 51 53 1 52 2 0 53 48 1 54 20 1 55 45 1 56 8 1 57 28 1
+		 58 16 1 59 33 1 60 13 1 61 40 1 62 25 1 63 37 1 64 3 0 65 7 0 66 39 1 67 27 1 68 42 1
+		 69 15 1 70 35 1 71 18 1 72 30 1 73 10 1 74 47 1 75 22 1 76 50 1 77 6 0 52 53 1 53 54 1
+		 54 55 1 55 56 1 56 57 1 57 58 1 58 59 1 59 60 1 60 61 1 61 62 1 62 63 1 63 64 1 64 65 1
+		 65 66 1 66 67 1 67 68 1 68 69 1 69 70 1 70 71 1 71 72 1 72 73 1 73 74 1 74 75 1 75 76 1
+		 76 77 1 77 52 1;
+	setAttr -s 76 -ch 304 ".fc[0:75]" -type "polyFaces" 
+		f 4 31 -108 -133 -36
+		mu 0 4 99 33 67 66
+		f 4 30 -66 -32 -35
+		mu 0 4 88 85 96 29
+		f 4 -67 -31 -120 -145
+		mu 0 4 74 34 30 75
+		f 4 28 -68 -30 -33
+		mu 0 4 125 59 109 23
+		f 4 112 7 9 -139
+		mu 0 4 0 132 135 134
+		f 4 -9 -7 -101 -152
+		mu 0 4 46 45 52 51
+		f 4 36 -92 -38 -41
+		mu 0 4 116 57 104 44
+		f 4 -91 -39 -124 -149
+		mu 0 4 39 35 37 40
+		f 4 38 -90 -40 -43
+		mu 0 4 79 80 91 38
+		f 4 39 -104 -129 -44
+		mu 0 4 90 36 55 50
+		f 4 79 -111 -136 -84
+		mu 0 4 61 62 72 71
+		f 4 78 -50 -80 -83
+		mu 0 4 82 83 94 93
+		f 4 -51 -79 -117 -142
+		mu 0 4 11 15 20 14
+		f 4 76 -52 -78 -81
+		mu 0 4 119 120 107 106
+		f 4 52 32 -54 -57
+		mu 0 4 124 125 23 111
+		f 4 119 -55 -121 -146
+		mu 0 4 75 30 27 76
+		f 4 54 34 -56 -59
+		mu 0 4 87 88 29 98
+		f 4 55 35 -132 -60
+		mu 0 4 28 99 66 68
+		f 4 92 40 -94 -97
+		mu 0 4 115 116 44 102
+		f 4 123 -95 -125 -150
+		mu 0 4 40 37 42 41
+		f 4 94 42 -96 -99
+		mu 0 4 78 79 38 89
+		f 4 95 43 -128 -100
+		mu 0 4 48 90 50 49
+		f 4 45 -112 -137 110
+		mu 0 4 62 65 73 72
+		f 4 46 -74 -46 49
+		mu 0 4 83 84 95 94
+		f 4 -75 -47 50 -141
+		mu 0 4 8 16 15 11
+		f 4 44 -76 -48 51
+		mu 0 4 120 6 108 107
+		f 4 12 56 -14 -17
+		mu 0 4 118 124 111 26
+		f 4 120 -15 -122 -147
+		mu 0 4 76 27 31 77
+		f 4 14 58 -16 -19
+		mu 0 4 81 87 98 32
+		f 4 15 59 -131 -20
+		mu 0 4 92 28 68 70
+		f 4 61 -109 -134 107
+		mu 0 4 33 64 69 67
+		f 4 62 -26 -62 65
+		mu 0 4 85 86 97 96
+		f 4 -27 -63 66 -144
+		mu 0 4 19 63 34 74
+		f 4 60 -28 -64 67
+		mu 0 4 59 123 110 109
+		f 4 69 -113 -138 111
+		mu 0 4 65 3 131 73
+		f 4 70 -8 -70 73
+		mu 0 4 84 135 132 95
+		f 4 -10 -71 74 -140
+		mu 0 4 1 2 16 8
+		f 4 68 -12 -72 75
+		mu 0 4 6 129 128 108
+		f 4 20 80 -24 27
+		mu 0 4 123 119 106 110
+		f 4 116 -23 26 -143
+		mu 0 4 14 20 63 19
+		f 4 22 82 -22 25
+		mu 0 4 86 82 93 97
+		f 4 21 83 -135 108
+		mu 0 4 64 61 71 69
+		f 4 85 19 -130 103
+		mu 0 4 36 92 70 55
+		f 4 86 18 -86 89
+		mu 0 4 80 81 32 91
+		f 4 121 -87 90 -148
+		mu 0 4 77 31 35 39
+		f 4 84 16 -88 91
+		mu 0 4 57 118 26 104
+		f 4 10 0 96 -4
+		mu 0 4 126 127 115 102
+		f 4 8 -151 124 -3
+		mu 0 4 45 46 41 42
+		f 4 6 2 98 -2
+		mu 0 4 100 101 78 89
+		f 4 100 1 99 -127
+		mu 0 4 136 137 48 49
+		f 4 4 126 101 -1
+		mu 0 4 114 136 49 53
+		f 4 102 -93 -102 127
+		mu 0 4 50 54 53 49
+		f 4 -89 -37 -103 128
+		mu 0 4 55 117 54 50
+		f 4 104 -85 88 129
+		mu 0 4 70 25 117 55
+		f 4 105 -13 -105 130
+		mu 0 4 68 21 25 70
+		f 4 106 -53 -106 131
+		mu 0 4 66 24 21 68
+		f 4 -65 -29 -107 132
+		mu 0 4 67 122 24 66
+		f 4 -25 -61 64 133
+		mu 0 4 69 17 122 67
+		f 4 109 -21 24 134
+		mu 0 4 71 12 17 69
+		f 4 -49 -77 -110 135
+		mu 0 4 72 9 12 71
+		f 4 -73 -45 48 136
+		mu 0 4 73 121 9 72
+		f 4 -6 -69 72 137
+		mu 0 4 131 4 121 73
+		f 4 5 138 113 11
+		mu 0 4 130 0 134 133
+		f 4 71 -114 139 114
+		mu 0 4 7 5 1 8
+		f 4 47 -115 140 115
+		mu 0 4 10 7 8 11
+		f 4 77 -116 141 -82
+		mu 0 4 13 10 11 14
+		f 4 23 81 142 117
+		mu 0 4 18 13 14 19
+		f 4 63 -118 143 118
+		mu 0 4 58 18 19 74
+		f 4 29 -119 144 -34
+		mu 0 4 112 58 74 75
+		f 4 53 33 145 -58
+		mu 0 4 22 112 75 76
+		f 4 13 57 146 -18
+		mu 0 4 105 22 76 77
+		f 4 87 17 147 122
+		mu 0 4 60 105 77 39
+		f 4 37 -123 148 -42
+		mu 0 4 103 60 39 40
+		f 4 93 41 149 -98
+		mu 0 4 43 103 40 41
+		f 4 125 3 97 150
+		mu 0 4 46 113 43 41
+		f 4 -126 151 -5 -11
+		mu 0 4 47 46 51 56;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape6" -p "R_Wing";
+	rename -uid "0262D4FC-42F1-6E75-0D84-648FB2A81D2E";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.43833225965499878 0.63387000560760498 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 97 ".uvst[0].uvsp[0:96]" -type "float2" 0.375 0 0.625 0 0.375
 		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
@@ -8116,36 +8419,36 @@ createNode mesh -n "R_WingShape" -p "R_Wing";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 78 ".pt[0:77]" -type "float3"  -0.40093738 3.5106678 -1.1617824 
-		-7.7042847 3.108278 -1.181155 0.047717929 3.0073094 -0.78032666 -7.9275451 3.1346173 
-		-1.1334648 0.30214262 2.9945643 0.16721654 -7.9527264 3.1346173 -0.19779286 -0.33502579 
-		3.4942255 -0.23764655 -7.7281508 3.1081893 -0.24214177 -3.0781193 3.0113034 -1.515991 
-		-3.10885 3.00577 -0.67281371 -1.3514864 3.026679 -1.3550698 -1.276212 2.9770975 -2.0551436 
-		-5.5765295 3.1162 -1.5345709 -2.6049418 3.135376 -2.0997124 -2.7303231 3.1671062 
-		-1.4277225 -5.6247549 3.1162 -0.67625999 -3.774502 3.0645087 -1.9320972 -3.8215525 
-		3.0899622 -1.0815219 -1.964339 3.153439 -1.5261663 -1.8439176 3.0985713 -2.2009511 
-		-1.2304032 3.3302741 -1.4120514 -1.2485555 3.2871122 -0.56731784 -0.5890891 2.9227564 
-		-0.78024817 -0.63501424 2.9274888 -1.385621 -6.1578789 3.1122952 -1.4444358 -4.5633821 
-		3.1322734 -1.7483287 -4.6520023 3.1344211 -0.97616446 -6.2066908 3.1130304 -0.57396626 
-		-3.258795 2.9358783 -1.8373693 -3.2987514 2.9620538 -0.99618769 -1.6773269 3.1294732 
-		-1.4569633 -1.6148825 3.084589 -2.165838 -4.4757586 3.1159673 -1.7909958 -2.1077952 
-		3.1199036 -2.1526704 -2.2318316 3.1693206 -1.483364 -4.5248051 3.1161304 -0.9298771 
-		-6.7273059 3.0713658 -1.3654078 -5.7072659 3.0918539 -1.5343505 -5.7722135 3.094125 
-		-0.69881314 -6.762465 3.0718088 -0.45643997 -5.8557072 3.1412604 -1.4823012 -5.9052415 
-		3.1415012 -0.61958098 -3.7930033 3.1526561 -1.1883785 -3.6872215 3.152144 -1.9122398 
-		-2.1798391 3.1385322 -1.4916922 -1.0268872 2.9220116 -1.722466 -1.0921263 2.9443369 
-		-1.0976604 -2.2040105 3.0987031 -0.64585364 -0.75659901 3.4747553 -1.3192153 -0.71966231 
-		3.427356 -0.46745107 -0.1956166 2.9523804 -0.41483858 -0.35282612 2.9669249 -1.1965023 
-		-0.11147642 3.4234133 -0.78349847 -0.47547829 3.3616552 -1.0413665 -0.86035168 3.3019836 
-		-1.5003438 -1.4824479 3.3300438 -1.7793186 -2.0512371 3.479882 -1.9255807 -2.3128989 
-		3.4353912 -2.1605422 -2.6702139 3.5329368 -2.1880348 -3.0413609 3.6785748 -2.1693425 
-		-3.781179 3.7522647 -2.0438795 -4.4968925 3.5449483 -1.8593694 -5.1909838 3.357136 
-		-1.6828904 -6.1479506 3.1623554 -1.4817402 -7.8661642 3.1254272 -1.1326413 -7.8896451 
-		3.1253357 -0.19262785 -6.2085114 3.1645494 -0.63467681 -5.2799344 3.3593676 -0.91097194 
-		-4.6002755 3.5459816 -1.1262697 -3.9020567 3.7563491 -1.3459405 -3.169126 3.7190619 
-		-1.4798272 -2.7511568 3.5707974 -1.5058315 -2.3834646 3.4830065 -1.407662 -2.0768127 
-		3.5198734 -1.2449342 -1.5376533 3.3526316 -1.0720382 -0.77158397 3.2929416 -0.80203789 
-		-0.3622967 3.3535552 -0.38674399 0.080303431 3.4183636 0.17494667;
+	setAttr -s 78 ".pt[0:77]" -type "float3"  0.63262367 3.5106678 -1.1617824 
+		-0.55520654 3.1082783 -1.181155 0.78723758 3.0073094 -0.78032666 -0.59738398 3.1346173 
+		-1.1334648 0.53281289 2.9945643 0.16721654 -0.57220256 3.1346173 -0.19779286 0.56671214 
+		3.4942255 -0.23764655 -0.53134024 3.1081893 -0.24214177 0.12981184 3.0113034 -1.515991 
+		0.16054259 3.00577 -0.67281371 0.60487115 3.0266793 -1.3550698 0.52959669 2.9770975 
+		-2.0551436 -0.18127511 3.1162002 -1.5345709 0.30162027 3.1353762 -2.0997124 0.42700133 
+		3.1671064 -1.4277225 -0.13305029 3.1162002 -0.67625999 0.12023364 3.0645082 -1.9320972 
+		0.16728407 3.0899625 -1.0815219 0.52109605 3.15344 -1.5261663 0.4006747 3.0985711 
+		-2.2009511 0.5715825 3.3302741 -1.4120514 0.58973485 3.2871122 -0.56731784 0.42660946 
+		2.9227564 -0.78024817 0.47253454 2.9274888 -1.385621 -0.28368422 3.1122963 -1.4444358 
+		-0.012106059 3.1322744 -1.7483287 0.076514162 3.1344221 -0.97616446 -0.234872 3.1130311 
+		-0.57396626 0.17304896 2.9358783 -1.8373693 0.21300519 2.9620538 -0.99618769 0.57707632 
+		3.1294739 -1.4569633 0.51463199 3.0845878 -2.165838 0.0111079 3.1159673 -1.7909958 
+		0.36583847 3.1199021 -2.1526704 0.4898749 3.1693213 -1.483364 0.060154829 3.1161313 
+		-0.9298771 -0.38000804 3.0713673 -1.3654078 -0.20944984 3.0918543 -1.5343505 -0.14450207 
+		3.0941229 -0.69881314 -0.34484896 3.0718067 -0.45643997 -0.23040697 3.1412597 -1.4823012 
+		-0.18087323 3.1415017 -0.61958098 0.24008855 3.1526566 -1.1883785 0.1343068 3.1521428 
+		-1.9122398 0.20927049 3.1385322 -1.4916922 0.47630003 2.9220116 -1.722466 0.54153901 
+		2.9443369 -1.0976604 0.23344176 3.0987031 -0.64585364 0.55359149 3.4747553 -1.3192153 
+		0.51665479 3.427356 -0.46745107 0.39156607 2.9523804 -0.41483858 0.54877567 2.9669249 
+		-1.1965023 0.62339342 3.4234133 -0.78349847 0.45779425 3.3616552 -1.0413665 0.4320913 
+		3.3019836 -1.5003438 0.17148882 3.3300438 -1.7793186 0.12565973 3.4798832 -1.9255807 
+		0.14945517 3.43539 -2.1605422 0.04301101 3.5329366 -2.1880348 -0.15854371 3.6785748 
+		-2.1693425 -0.37194985 3.7522645 -2.0438795 -0.4125005 3.5449488 -1.8593694 -0.38375071 
+		3.3571367 -1.6828904 -0.40630668 3.162354 -1.4817402 -0.51662797 3.1254287 -1.1326413 
+		-0.4931463 3.1253366 -0.19262785 -0.34574598 3.1645489 -0.63467681 -0.29479924 3.359369 
+		-0.91097194 -0.30911699 3.5459819 -1.1262697 -0.25107205 3.7563491 -1.3459405 -0.030778691 
+		3.7190619 -1.4798272 0.12395398 3.570797 -1.5058315 0.22002086 3.4830074 -1.407662 
+		0.15123513 3.519872 -1.2449342 0.22669438 3.3526316 -1.0720382 0.34332359 3.2929416 
+		-0.80203789 0.34461266 3.3535552 -0.38674399 0.4316135 3.4183636 0.17494667;
 	setAttr -s 78 ".vt[0:77]"  -0.12597318 -0.7493512 0.5 4.11961555 2.31525683 0.5
 		 -0.42760774 0.45173848 0.5 4.25233459 2.45459247 0.5 -0.42760774 0.45173848 -0.5
 		 4.25233459 2.45459247 -0.5 -0.12597318 -0.7493512 -0.5 4.11961555 2.31525683 -0.5
@@ -8185,158 +8488,158 @@ createNode mesh -n "R_WingShape" -p "R_Wing";
 		 65 66 1 66 67 1 67 68 1 68 69 1 69 70 1 70 71 1 71 72 1 72 73 1 73 74 1 74 75 1 75 76 1
 		 76 77 1 77 52 1;
 	setAttr -s 76 -ch 304 ".fc[0:75]" -type "polyFaces" 
-		f 4 31 -108 -133 -36
-		mu 0 4 28 46 76 75
-		f 4 30 -66 -32 -35
-		mu 0 4 27 47 46 28
-		f 4 -67 -31 -120 -145
-		mu 0 4 88 47 27 89
-		f 4 28 -68 -30 -33
-		mu 0 4 25 45 48 26
-		f 4 112 7 9 -139
-		mu 0 4 81 3 11 83
-		f 4 -9 -7 -101 -152
-		mu 0 4 95 13 2 69
-		f 4 36 -92 -38 -41
-		mu 0 4 30 60 63 31
-		f 4 -91 -39 -124 -149
-		mu 0 4 92 62 32 93
-		f 4 38 -90 -40 -43
-		mu 0 4 32 62 61 33
-		f 4 39 -104 -129 -44
-		mu 0 4 33 61 72 71
-		f 4 79 -111 -136 -84
-		mu 0 4 58 36 79 78
-		f 4 78 -50 -80 -83
-		mu 0 4 57 37 36 58
-		f 4 -51 -79 -117 -142
-		mu 0 4 85 37 57 86
-		f 4 76 -52 -78 -81
-		mu 0 4 55 35 38 56
-		f 4 52 32 -54 -57
-		mu 0 4 40 25 26 41
-		f 4 119 -55 -121 -146
-		mu 0 4 89 27 42 90
-		f 4 54 34 -56 -59
-		mu 0 4 42 27 28 43
-		f 4 55 35 -132 -60
-		mu 0 4 43 28 75 74
-		f 4 92 40 -94 -97
-		mu 0 4 65 30 31 66
-		f 4 123 -95 -125 -150
-		mu 0 4 93 32 67 94
-		f 4 94 42 -96 -99
-		mu 0 4 67 32 33 68
-		f 4 95 43 -128 -100
-		mu 0 4 68 33 71 70
-		f 4 45 -112 -137 110
-		mu 0 4 36 51 80 79
-		f 4 46 -74 -46 49
-		mu 0 4 37 52 51 36
-		f 4 -75 -47 50 -141
-		mu 0 4 84 52 37 85
-		f 4 44 -76 -48 51
-		mu 0 4 35 50 53 38
-		f 4 12 56 -14 -17
-		mu 0 4 15 40 41 16
-		f 4 120 -15 -122 -147
-		mu 0 4 90 42 17 91
-		f 4 14 58 -16 -19
-		mu 0 4 17 42 43 18
-		f 4 15 59 -131 -20
-		mu 0 4 18 43 74 73
-		f 4 61 -109 -134 107
-		mu 0 4 46 21 77 76
-		f 4 62 -26 -62 65
-		mu 0 4 47 22 21 46
-		f 4 -27 -63 66 -144
-		mu 0 4 87 22 47 88
-		f 4 60 -28 -64 67
-		mu 0 4 45 20 23 48
-		f 4 69 -113 -138 111
-		mu 0 4 51 3 81 80
-		f 4 70 -8 -70 73
-		mu 0 4 52 5 3 51
-		f 4 -10 -71 74 -140
-		mu 0 4 82 5 52 84
-		f 4 68 -12 -72 75
-		mu 0 4 50 9 7 53
-		f 4 20 80 -24 27
-		mu 0 4 20 55 56 23
-		f 4 116 -23 26 -143
-		mu 0 4 86 57 22 87
-		f 4 22 82 -22 25
-		mu 0 4 22 57 58 21
-		f 4 21 83 -135 108
-		mu 0 4 21 58 78 77
-		f 4 85 19 -130 103
-		mu 0 4 61 18 73 72
-		f 4 86 18 -86 89
-		mu 0 4 62 17 18 61
-		f 4 121 -87 90 -148
-		mu 0 4 91 17 62 92
-		f 4 84 16 -88 91
-		mu 0 4 60 15 16 63
-		f 4 10 0 96 -4
-		mu 0 4 6 8 65 66
-		f 4 8 -151 124 -3
-		mu 0 4 4 96 94 67
-		f 4 6 2 98 -2
-		mu 0 4 2 4 67 68
-		f 4 100 1 99 -127
-		mu 0 4 69 2 68 70
-		f 4 4 126 101 -1
-		mu 0 4 0 69 70 64
-		f 4 102 -93 -102 127
-		mu 0 4 71 29 64 70
-		f 4 -89 -37 -103 128
-		mu 0 4 72 59 29 71
-		f 4 104 -85 88 129
-		mu 0 4 73 14 59 72
-		f 4 105 -13 -105 130
-		mu 0 4 74 39 14 73
-		f 4 106 -53 -106 131
-		mu 0 4 75 24 39 74
-		f 4 -65 -29 -107 132
-		mu 0 4 76 44 24 75
-		f 4 -25 -61 64 133
-		mu 0 4 77 19 44 76
-		f 4 109 -21 24 134
-		mu 0 4 78 54 19 77
-		f 4 -49 -77 -110 135
-		mu 0 4 79 34 54 78
-		f 4 -73 -45 48 136
-		mu 0 4 80 49 34 79
-		f 4 -6 -69 72 137
-		mu 0 4 81 1 49 80
-		f 4 5 138 113 11
-		mu 0 4 1 81 83 10
-		f 4 71 -114 139 114
-		mu 0 4 53 7 82 84
-		f 4 47 -115 140 115
-		mu 0 4 38 53 84 85
-		f 4 77 -116 141 -82
-		mu 0 4 56 38 85 86
-		f 4 23 81 142 117
-		mu 0 4 23 56 86 87
-		f 4 63 -118 143 118
-		mu 0 4 48 23 87 88
-		f 4 29 -119 144 -34
-		mu 0 4 26 48 88 89
-		f 4 53 33 145 -58
-		mu 0 4 41 26 89 90
-		f 4 13 57 146 -18
-		mu 0 4 16 41 90 91
-		f 4 87 17 147 122
-		mu 0 4 63 16 91 92
-		f 4 37 -123 148 -42
-		mu 0 4 31 63 92 93
-		f 4 93 41 149 -98
-		mu 0 4 66 31 93 94
-		f 4 125 3 97 150
-		mu 0 4 96 6 66 94
-		f 4 -126 151 -5 -11
-		mu 0 4 12 95 69 0;
+		f 4 35 132 107 -32
+		mu 0 4 28 75 76 46
+		f 4 34 31 65 -31
+		mu 0 4 27 28 46 47
+		f 4 144 119 30 66
+		mu 0 4 88 89 27 47
+		f 4 32 29 67 -29
+		mu 0 4 25 26 48 45
+		f 4 138 -10 -8 -113
+		mu 0 4 81 83 11 3
+		f 4 151 100 6 8
+		mu 0 4 95 69 2 13
+		f 4 40 37 91 -37
+		mu 0 4 30 31 63 60
+		f 4 148 123 38 90
+		mu 0 4 92 93 32 62
+		f 4 42 39 89 -39
+		mu 0 4 32 33 61 62
+		f 4 43 128 103 -40
+		mu 0 4 33 71 72 61
+		f 4 83 135 110 -80
+		mu 0 4 58 78 79 36
+		f 4 82 79 49 -79
+		mu 0 4 57 58 36 37
+		f 4 141 116 78 50
+		mu 0 4 85 86 57 37
+		f 4 80 77 51 -77
+		mu 0 4 55 56 38 35
+		f 4 56 53 -33 -53
+		mu 0 4 40 41 26 25
+		f 4 145 120 54 -120
+		mu 0 4 89 90 42 27
+		f 4 58 55 -35 -55
+		mu 0 4 42 43 28 27
+		f 4 59 131 -36 -56
+		mu 0 4 43 74 75 28
+		f 4 96 93 -41 -93
+		mu 0 4 65 66 31 30
+		f 4 149 124 94 -124
+		mu 0 4 93 94 67 32
+		f 4 98 95 -43 -95
+		mu 0 4 67 68 33 32
+		f 4 99 127 -44 -96
+		mu 0 4 68 70 71 33
+		f 4 -111 136 111 -46
+		mu 0 4 36 79 80 51
+		f 4 -50 45 73 -47
+		mu 0 4 37 36 51 52
+		f 4 140 -51 46 74
+		mu 0 4 84 85 37 52
+		f 4 -52 47 75 -45
+		mu 0 4 35 38 53 50
+		f 4 16 13 -57 -13
+		mu 0 4 15 16 41 40
+		f 4 146 121 14 -121
+		mu 0 4 90 91 17 42
+		f 4 18 15 -59 -15
+		mu 0 4 17 18 43 42
+		f 4 19 130 -60 -16
+		mu 0 4 18 73 74 43
+		f 4 -108 133 108 -62
+		mu 0 4 46 76 77 21
+		f 4 -66 61 25 -63
+		mu 0 4 47 46 21 22
+		f 4 143 -67 62 26
+		mu 0 4 87 88 47 22
+		f 4 -68 63 27 -61
+		mu 0 4 45 48 23 20
+		f 4 -112 137 112 -70
+		mu 0 4 51 80 81 3
+		f 4 -74 69 7 -71
+		mu 0 4 52 51 3 5
+		f 4 139 -75 70 9
+		mu 0 4 82 84 52 5
+		f 4 -76 71 11 -69
+		mu 0 4 50 53 7 9
+		f 4 -28 23 -81 -21
+		mu 0 4 20 23 56 55
+		f 4 142 -27 22 -117
+		mu 0 4 86 87 22 57
+		f 4 -26 21 -83 -23
+		mu 0 4 22 21 58 57
+		f 4 -109 134 -84 -22
+		mu 0 4 21 77 78 58
+		f 4 -104 129 -20 -86
+		mu 0 4 61 72 73 18
+		f 4 -90 85 -19 -87
+		mu 0 4 62 61 18 17
+		f 4 147 -91 86 -122
+		mu 0 4 91 92 62 17
+		f 4 -92 87 -17 -85
+		mu 0 4 60 63 16 15
+		f 4 3 -97 -1 -11
+		mu 0 4 6 66 65 8
+		f 4 2 -125 150 -9
+		mu 0 4 4 67 94 96
+		f 4 1 -99 -3 -7
+		mu 0 4 2 68 67 4
+		f 4 126 -100 -2 -101
+		mu 0 4 69 70 68 2
+		f 4 0 -102 -127 -5
+		mu 0 4 0 64 70 69
+		f 4 -128 101 92 -103
+		mu 0 4 71 70 64 29
+		f 4 -129 102 36 88
+		mu 0 4 72 71 29 59
+		f 4 -130 -89 84 -105
+		mu 0 4 73 72 59 14
+		f 4 -131 104 12 -106
+		mu 0 4 74 73 14 39
+		f 4 -132 105 52 -107
+		mu 0 4 75 74 39 24
+		f 4 -133 106 28 64
+		mu 0 4 76 75 24 44
+		f 4 -134 -65 60 24
+		mu 0 4 77 76 44 19
+		f 4 -135 -25 20 -110
+		mu 0 4 78 77 19 54
+		f 4 -136 109 76 48
+		mu 0 4 79 78 54 34
+		f 4 -137 -49 44 72
+		mu 0 4 80 79 34 49
+		f 4 -138 -73 68 5
+		mu 0 4 81 80 49 1
+		f 4 -12 -114 -139 -6
+		mu 0 4 1 10 83 81
+		f 4 -115 -140 113 -72
+		mu 0 4 53 84 82 7
+		f 4 -116 -141 114 -48
+		mu 0 4 38 85 84 53
+		f 4 81 -142 115 -78
+		mu 0 4 56 86 85 38
+		f 4 -118 -143 -82 -24
+		mu 0 4 23 87 86 56
+		f 4 -119 -144 117 -64
+		mu 0 4 48 88 87 23
+		f 4 33 -145 118 -30
+		mu 0 4 26 89 88 48
+		f 4 57 -146 -34 -54
+		mu 0 4 41 90 89 26
+		f 4 17 -147 -58 -14
+		mu 0 4 16 91 90 41
+		f 4 -123 -148 -18 -88
+		mu 0 4 63 92 91 16
+		f 4 41 -149 122 -38
+		mu 0 4 31 93 92 63
+		f 4 97 -150 -42 -94
+		mu 0 4 66 94 93 31
+		f 4 -151 -98 -4 -126
+		mu 0 4 96 94 66 6
+		f 4 10 4 -152 125
+		mu 0 4 12 0 69 95;
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
@@ -8411,7 +8714,7 @@ createNode camera -n "leftShape" -p "left";
 	setAttr ".hc" -type "string" "viewSet -ls %camera";
 	setAttr ".o" yes;
 createNode fosterParent -n "BaseCharacterRNfosterParent1";
-	rename -uid "A9EBFB2A-4CC0-772D-5509-A5A5A2F264A7";
+	rename -uid "CE216F45-4549-B181-C4CD-ED837CDC0DAA";
 createNode mesh -n "BaseCharacter:polySurfaceShape2" -p "BaseCharacterRNfosterParent1";
 	rename -uid "DF224E85-4187-8689-3F97-5AAB531636AA";
 	setAttr -k off ".v";
@@ -13611,7 +13914,7 @@ createNode groupId -n "groupId19";
 	setAttr ".ihi" 0;
 createNode reference -n "BaseCharacterRN";
 	rename -uid "91E0EE91-45F8-2C76-24CB-F9A1BA983CC4";
-	setAttr -s 9 ".phl";
+	setAttr -s 17 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -13621,10 +13924,18 @@ createNode reference -n "BaseCharacterRN";
 	setAttr ".phl[7]" 0;
 	setAttr ".phl[8]" 0;
 	setAttr ".phl[9]" 0;
+	setAttr ".phl[10]" 0;
+	setAttr ".phl[11]" 0;
+	setAttr ".phl[12]" 0;
+	setAttr ".phl[13]" 0;
+	setAttr ".phl[14]" 0;
+	setAttr ".phl[15]" 0;
+	setAttr ".phl[16]" 0;
+	setAttr ".phl[17]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"BaseCharacterRN"
 		"BaseCharacterRN" 0
-		"BaseCharacterRN" 35
+		"BaseCharacterRN" 438
 		0 "|BaseCharacter:Root_J" "|World_Dragon|Skeleton" "-s -r "
 		0 "|BaseCharacter:pCube2" "|Reference" "-s -r "
 		0 "|BaseCharacter:pCube3" "|Reference" "-s -r "
@@ -13640,21 +13951,29 @@ createNode reference -n "BaseCharacterRN";
 		"-s -r "
 		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J" "visibility" " 1"
 		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L|BaseCharacter:EyeLid_J_L|BaseCharacter:EyeMesh_L|BaseCharacter:EyeMesh_LShape" 
-		"uvPivot" " -type \"double2\" 0 0"
+		"uvPivot" " -type \"double2\" 0.49975117761641741 0.43560633901506662"
 		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L|BaseCharacter:EyeLid_J_L|BaseCharacter:EyeMesh_L|BaseCharacter:EyeMesh_LShape" 
 		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
 		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L|BaseCharacter:EyeLid_J_L|BaseCharacter:EyeMesh_L|BaseCharacter:EyeMesh_LShape" 
+		"currentUVSet" " -type \"string\" \"map1\""
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L|BaseCharacter:EyeLid_J_L|BaseCharacter:EyeMesh_L|BaseCharacter:EyeMesh_LShape" 
 		"pnts[0]" " -type \"float3\" 0 0 0"
 		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L|BaseCharacter:EyeMesh_L|BaseCharacter:EyeMesh_LShape" 
 		"uvPivot" " -type \"double2\" 0 0"
 		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L|BaseCharacter:EyeMesh_L|BaseCharacter:EyeMesh_LShape" 
 		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
 		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L|BaseCharacter:EyeMesh_L|BaseCharacter:EyeMesh_LShape" 
+		"currentUVSet" " -type \"string\" \"map1\""
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L|BaseCharacter:EyeMesh_L|BaseCharacter:EyeMesh_LShape" 
 		"pnts[0]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeLid_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"instObjGroups.objectGroups[0].objectGroupId" " -av"
 		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeLid_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
 		"uvPivot" " -type \"double2\" 0 0"
 		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeLid_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
 		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeLid_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"currentUVSet" " -type \"string\" \"map1\""
 		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeLid_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
 		"pnts[0]" " -type \"float3\" 0 0 0"
 		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
@@ -13662,7 +13981,789 @@ createNode reference -n "BaseCharacterRN";
 		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
 		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
 		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"currentUVSet" " -type \"string\" \"map1\""
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"colorSet" " -s 2"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"colorSet[0].colorName" " -type \"string\" \"SculptFreezeColorTemp\""
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"colorSet[0].clamped" " 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"colorSet[0].representation" " 4"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"colorSet[1].colorName" " -type \"string\" \"SculptMaskColorTemp\""
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"colorSet[1].clamped" " 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"colorSet[1].representation" " 4"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts" " -s 382"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
 		"pnts[0]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[1]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[2]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[3]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[4]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[5]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[6]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[7]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[8]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[9]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[10]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[11]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[12]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[13]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[14]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[15]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[16]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[17]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[18]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[19]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[20]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[21]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[22]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[23]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[24]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[25]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[26]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[27]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[28]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[29]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[30]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[31]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[32]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[33]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[34]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[35]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[36]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[37]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[38]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[39]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[40]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[41]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[42]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[43]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[44]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[45]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[46]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[47]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[48]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[49]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[50]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[51]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[52]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[53]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[54]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[55]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[56]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[57]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[58]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[59]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[60]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[61]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[62]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[63]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[64]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[65]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[66]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[67]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[68]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[69]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[70]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[71]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[72]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[73]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[74]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[75]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[76]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[77]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[78]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[79]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[80]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[81]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[82]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[83]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[84]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[85]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[86]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[87]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[88]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[89]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[90]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[91]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[92]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[93]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[94]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[95]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[96]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[97]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[98]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[99]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[100]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[101]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[102]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[103]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[104]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[105]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[106]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[107]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[108]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[109]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[110]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[111]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[112]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[113]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[114]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[115]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[116]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[117]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[118]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[119]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[120]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[121]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[122]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[123]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[124]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[125]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[126]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[127]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[128]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[129]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[130]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[131]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[132]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[133]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[134]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[135]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[136]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[137]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[138]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[139]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[140]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[141]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[142]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[143]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[144]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[145]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[146]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[147]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[148]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[149]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[150]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[151]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[152]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[153]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[154]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[155]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[156]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[157]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[158]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[159]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[160]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[161]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[162]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[163]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[164]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[165]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[166]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[167]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[168]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[169]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[170]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[171]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[172]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[173]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[174]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[175]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[176]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[177]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[178]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[179]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[180]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[181]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[182]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[183]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[184]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[185]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[186]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[187]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[188]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[189]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[190]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[191]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[192]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[193]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[194]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[195]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[196]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[197]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[198]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[199]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[200]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[201]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[202]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[203]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[204]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[205]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[206]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[207]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[208]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[209]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[210]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[211]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[212]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[213]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[214]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[215]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[216]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[217]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[218]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[219]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[220]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[221]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[222]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[223]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[224]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[225]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[226]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[227]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[228]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[229]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[230]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[231]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[232]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[233]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[234]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[235]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[236]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[237]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[238]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[239]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[240]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[241]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[242]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[243]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[244]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[245]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[246]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[247]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[248]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[249]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[250]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[251]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[252]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[253]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[254]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[255]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[256]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[257]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[258]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[259]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[260]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[261]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[262]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[263]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[264]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[265]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[266]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[267]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[268]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[269]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[270]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[271]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[272]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[273]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[274]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[275]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[276]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[277]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[278]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[279]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[280]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[281]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[282]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[283]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[284]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[285]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[286]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[287]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[288]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[289]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[290]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[291]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[292]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[293]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[294]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[295]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[296]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[297]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[298]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[299]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[300]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[301]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[302]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[303]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[304]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[305]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[306]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[307]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[308]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[309]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[310]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[311]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[312]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[313]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[314]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[315]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[316]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[317]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[318]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[319]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[320]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[321]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[322]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[323]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[324]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[325]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[326]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[327]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[328]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[329]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[330]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[331]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[332]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[333]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[334]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[335]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[336]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[337]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[338]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[339]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[340]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[341]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[342]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[343]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[344]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[345]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[346]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[347]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[348]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[349]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[350]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[351]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[352]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[353]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[354]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[355]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[356]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[357]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[358]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[359]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[360]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[361]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[362]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[363]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[364]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[365]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[366]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[367]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[368]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[369]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[370]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[371]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[372]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[373]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[374]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[375]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[376]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[377]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[378]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[379]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[380]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"pnts[381]" " -type \"float3\" 0 0 0"
+		2 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape" 
+		"useMeshSculptCache" " 0"
 		3 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeLid_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L|BaseCharacter:EyeMesh_L|BaseCharacter:EyeMesh_LShape.instObjGroups" 
@@ -13677,18 +14778,34 @@ createNode reference -n "BaseCharacterRN";
 		"BaseCharacterRN.placeHolderList[2]" ":initialShadingGroup.dsm"
 		5 4 "BaseCharacterRN" "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L|BaseCharacter:EyeLid_J_L|BaseCharacter:EyeMesh_L|BaseCharacter:EyeMesh_LShape.inMesh" 
 		"BaseCharacterRN.placeHolderList[3]" ""
-		5 3 "BaseCharacterRN" "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L|BaseCharacter:EyeMesh_L|BaseCharacter:EyeMesh_LShape.instObjGroups" 
-		"BaseCharacterRN.placeHolderList[4]" ":initialShadingGroup.dsm"
-		5 4 "BaseCharacterRN" "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L|BaseCharacter:EyeMesh_L|BaseCharacter:EyeMesh_LShape.inMesh" 
+		5 4 "BaseCharacterRN" "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L|BaseCharacter:EyeLid_J_L|BaseCharacter:EyeMesh_L|BaseCharacter:EyeMesh_LShape.uvSet[0].uvSetTweakLocation" 
+		"BaseCharacterRN.placeHolderList[4]" ""
+		5 3 "BaseCharacterRN" "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L|BaseCharacter:EyeLid_J_L|BaseCharacter:EyeMesh_L|BaseCharacter:EyeMesh_LShape.worldMatrix" 
 		"BaseCharacterRN.placeHolderList[5]" ""
-		5 3 "BaseCharacterRN" "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeLid_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape.instObjGroups" 
+		5 3 "BaseCharacterRN" "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L|BaseCharacter:EyeMesh_L|BaseCharacter:EyeMesh_LShape.instObjGroups" 
 		"BaseCharacterRN.placeHolderList[6]" ":initialShadingGroup.dsm"
-		5 4 "BaseCharacterRN" "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeLid_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape.inMesh" 
+		5 4 "BaseCharacterRN" "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L|BaseCharacter:EyeMesh_L|BaseCharacter:EyeMesh_LShape.inMesh" 
 		"BaseCharacterRN.placeHolderList[7]" ""
+		5 4 "BaseCharacterRN" "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L|BaseCharacter:EyeMesh_L|BaseCharacter:EyeMesh_LShape.uvSet[0].uvSetTweakLocation" 
+		"BaseCharacterRN.placeHolderList[8]" ""
+		5 3 "BaseCharacterRN" "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L|BaseCharacter:EyeMesh_L|BaseCharacter:EyeMesh_LShape.worldMatrix" 
+		"BaseCharacterRN.placeHolderList[9]" ""
+		5 3 "BaseCharacterRN" "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeLid_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape.instObjGroups" 
+		"BaseCharacterRN.placeHolderList[10]" ":initialShadingGroup.dsm"
+		5 4 "BaseCharacterRN" "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeLid_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape.inMesh" 
+		"BaseCharacterRN.placeHolderList[11]" ""
+		5 4 "BaseCharacterRN" "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeLid_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape.uvSet[0].uvSetTweakLocation" 
+		"BaseCharacterRN.placeHolderList[12]" ""
+		5 3 "BaseCharacterRN" "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeLid_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape.worldMatrix" 
+		"BaseCharacterRN.placeHolderList[13]" ""
 		5 3 "BaseCharacterRN" "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape.instObjGroups" 
-		"BaseCharacterRN.placeHolderList[8]" ":initialShadingGroup.dsm"
+		"BaseCharacterRN.placeHolderList[14]" ":initialShadingGroup.dsm"
 		5 4 "BaseCharacterRN" "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape.inMesh" 
-		"BaseCharacterRN.placeHolderList[9]" "";
+		"BaseCharacterRN.placeHolderList[15]" ""
+		5 4 "BaseCharacterRN" "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape.uvSet[0].uvSetTweakLocation" 
+		"BaseCharacterRN.placeHolderList[16]" ""
+		5 3 "BaseCharacterRN" "|World_Dragon|Skeleton|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape.worldMatrix" 
+		"BaseCharacterRN.placeHolderList[17]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode displayLayer -n "Referenced_Rig_Layer";
@@ -18166,6 +19283,1776 @@ createNode polyTweakUV -n "polyTweakUV7";
 	setAttr ".uvtk[46]" -type "float2" 0.093904667 -0.063455552 ;
 	setAttr ".uvtk[47]" -type "float2" -0.005474031 0.043223619 ;
 	setAttr ".uvtk[48]" -type "float2" 0.019170225 0.046912968 ;
+createNode polyMapDel -n "polyMapDel10";
+	rename -uid "B4E76BC3-445D-636F-D5FE-87ACCB4CE3D4";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:51]";
+createNode polyAutoProj -n "polyAutoProj4";
+	rename -uid "B8EC81FA-4313-A916-601F-C1B6BB90C3CA";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:51]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".s" -type "double3" 2.5202760696411133 2.5202760696411133 2.5202760696411133 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyMapSew -n "polyMapSew42";
+	rename -uid "29955956-44C3-245D-9A0A-0CBBD650A9FE";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[0:107]";
+createNode polyMapCut -n "polyMapCut259";
+	rename -uid "83F6BF06-45C9-C931-EDE2-40844C906CD0";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[36:43]";
+	setAttr ".uic" yes;
+createNode polyMapCut -n "polyMapCut260";
+	rename -uid "965AD747-4DF2-58BE-22B3-2185BB6058F4";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 5 "e[16]" "e[49]" "e[64]" "e[81]" "e[96]";
+	setAttr ".uic" yes;
+createNode polyMapSew -n "polyMapSew43";
+	rename -uid "73EFC773-4181-BCE9-DB74-9EAB8B5CD6DA";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[41]";
+	setAttr ".uic" yes;
+createNode polyTweakUV -n "polyTweakUV8";
+	rename -uid "7C42E140-471B-3DCE-7C73-679B24EF8BAD";
+	setAttr ".uopa" yes;
+	setAttr -s 69 ".uvtk[0:68]" -type "float2" 0.16184038 0.49601215 0.02925235
+		 0.23845062 0.12893021 0.029190123 0.11423385 0.033426046 0.04936713 0.48431727 -0.082575798
+		 0.2358734 0.10789573 -0.019315839 0.13776147 0.035762966 0.16217262 0.28044489 0.30879843
+		 0.39099309 -0.10472521 0.45938763 -0.2557593 0.22004622 -0.006773293 -0.032752752
+		 -0.28741983 0.43904239 -0.47079843 0.25550255 -0.17495996 -0.050400019 -0.4646247
+		 0.41146734 -0.67878747 0.31570327 -0.40885785 -0.20192033 -0.58867025 0.38444707
+		 -0.81460166 0.36160284 -0.69312453 -0.14432296 -0.80933714 -0.1227484 -0.14860898
+		 -0.43272895 0.38536739 -0.22906621 0.40803018 -0.18985507 0.14688325 -0.27171448
+		 -0.18443683 -0.4314664 0.32587788 -0.26463765 0.28695655 0.041742593 0.24907327 -0.19473882
+		 0.40124843 -0.11623919 0.2301414 -0.21882123 -0.25749967 -0.45426077 0.27162272 -0.29828042
+		 0.21299553 -0.45075503 0.34652498 0.18893221 0.3127996 -0.18971527 0.29528782 -0.17337012
+		 0.19045615 -0.66511196 0.35373813 0.075657248 0.20128399 -0.17493325 0.18634707 -0.26709402
+		 0.18302488 -0.16624486 0.071819544 -0.27950472 0.16303575 -0.17174584 0.18294871
+		 -0.18797284 -0.087939501 -0.29179043 0.2082459 0.29252973 -0.38856384 -0.45672718
+		 0.34598005 0.48399752 0.27367234 0.28344581 -0.27819091 0.52232838 -0.48911497 0.35558498
+		 0.33864686 -0.84567434 -0.74523479 -0.57192439 -0.66138822 -0.56496549 0.050416827
+		 0.25501606 0.14466244 0.03374368 0.14855874 0.5218693 0.22673982 0.24154371 0.24745962
+		 -0.014847338 0.28456822 -0.021851122 0.21128887 -0.16269058 0.11504334 0.70808798
+		 0.2670452 -0.081307292 -0.064363182 0.65257955 0.31568152 -0.51078349 -0.63736898
+		 0.19355041;
+createNode polyMapDel -n "polyMapDel11";
+	rename -uid "EF2BCE67-4899-3003-A2CE-2982A621D64B";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:51]";
+createNode polyAutoProj -n "polyAutoProj5";
+	rename -uid "93A1E9D5-4EAE-0A7C-2032-8BB99B7A25C1";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:51]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".s" -type "double3" 2.5202760696411133 2.5202760696411133 2.5202760696411133 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyMapSew -n "polyMapSew44";
+	rename -uid "AC52FD73-4B8F-F380-4039-DC976C656FAC";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[0:107]";
+createNode polyMapCut -n "polyMapCut261";
+	rename -uid "6E6751BD-47EE-D35D-FD48-769B9C720824";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[36:43]";
+	setAttr ".uic" yes;
+createNode polyMapSew -n "polyMapSew45";
+	rename -uid "B37050E1-4E34-E854-4610-93AE72FD92F2";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[41]";
+	setAttr ".uic" yes;
+createNode polyMapCut -n "polyMapCut262";
+	rename -uid "02C9923B-4C23-215D-8943-E09ADD6E2845";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[34]";
+	setAttr ".uic" yes;
+createNode polyMapCut -n "polyMapCut263";
+	rename -uid "D1063BD9-41F5-AE57-2DAD-EC9857C9DE0E";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 5 "e[34]" "e[50]" "e[63]" "e[82]" "e[95]";
+	setAttr ".uic" yes;
+createNode polyTweakUV -n "polyTweakUV9";
+	rename -uid "28E601FC-4129-A52E-1F5F-6DBD2EDF28EE";
+	setAttr ".uopa" yes;
+	setAttr -s 69 ".uvtk[0:68]" -type "float2" -0.0056633949 0.58833212
+		 -0.054728448 0.10895067 -0.03052932 0.12896091 -0.02491504 0.169431 -0.00078582764
+		 0.55224466 0.036224723 0.316632 -0.0015814304 0.12714195 0.060653687 -0.058779538
+		 -0.071508884 0.55940771 -0.01743722 0.10480219 0.052822053 -0.12023401 -0.17833179
+		 0.54330468 -0.0018300414 0.0062429905 0.036508977 -0.20715049 0.27342939 -0.063689515
+		 0.019044638 -0.10213636 -0.090295553 -0.4717775 -0.68215817 0.55875993 0.02527076
+		 -0.21384606 -0.22197694 -0.54516065 0.28718168 -0.4966056 0.024023831 -0.28471118
+		 -0.28724545 -0.60979861 -0.11415452 -0.42799094 0.24456507 -0.25270048 0.42292929
+		 -0.067711174 0.1048895 -0.04997021 0.38887492 -0.18521798 0.65256876 -0.014795899
+		 0.27681214 0.25971958 0.01669167 0.1594826 -0.37476426 -0.41806865 -0.19374719 -0.0073364973
+		 0.4729656 -0.12964731 0.50235081 -0.056040168 0.42136705 0.35040721 -0.27468467 0.062885284
+		 -0.5956465 -0.4301511 -0.45237729 0.02007423 0.38902292 0.21252602 -0.55149901 -0.036204964
+		 0.13976181 -0.12056696 0.15355468 -0.15238386 0.16323394 -0.1040588 0.14087999 -0.18001306
+		 0.11326361 -0.1424818 0.13396245 -0.31332397 0.17275542 0.29258117 0.082748413 -0.36634719
+		 -0.17826617 -0.60698628 0.15173197 0.6843791 0.054355741 0.56374478 -0.1840454 0.37206271
+		 -0.50780791 0.16208965 -0.7770406 -0.011579394 -0.49703988 -0.78763294 -0.64378709
+		 -0.8304826 -0.13985008 0.38645068 0.013087511 0.15022898 0.36886385 0.20660383 0.4583945
+		 -0.10211146 0.51601118 -0.027164102 0.15424192 -0.26753592 0.17703295 0.39180255
+		 0.20570832 0.29186055 0.23518711 0.14948913 -0.3868784 0.54103678 0.28848231 -0.31816787
+		 -0.89087856 0.55892527;
+createNode polyMapDel -n "polyMapDel12";
+	rename -uid "AF859D1B-4AEC-F350-B95A-3C9B2AC665E3";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:75]";
+createNode polyAutoProj -n "polyAutoProj6";
+	rename -uid "DBA6C22D-41B2-116D-6820-D19D01B3007D";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:75]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".s" -type "double3" 3.582914263010025 3.582914263010025 3.582914263010025 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyMapSew -n "polyMapSew46";
+	rename -uid "D167395B-4D1B-A25B-18B2-B6A8290F4B2C";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[0:151]";
+createNode polyMapCut -n "polyMapCut264";
+	rename -uid "75F63739-46C3-AE6C-57E0-5782B4E922B8";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[6]";
+	setAttr ".uic" yes;
+createNode polyMapCut -n "polyMapCut265";
+	rename -uid "84AC5EC4-41E4-55B6-65D6-799C7DBD2ADE";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[6]";
+	setAttr ".uic" yes;
+createNode polyMapCut -n "polyMapCut266";
+	rename -uid "369E3439-430C-8640-301D-9DB7F38226DD";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 12 "e[2]" "e[14]" "e[22]" "e[30]" "e[38]" "e[46]" "e[54]" "e[62]" "e[70]" "e[78]" "e[86]" "e[94]";
+	setAttr ".uic" yes;
+createNode polyMapCut -n "polyMapCut267";
+	rename -uid "00CBB78D-4E5A-BAF5-608E-64892BDBCE10";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 12 "e[1]" "e[15]" "e[21]" "e[31]" "e[39]" "e[45]" "e[55]" "e[61]" "e[69]" "e[79]" "e[85]" "e[95]";
+	setAttr ".uic" yes;
+createNode polyMapCut -n "polyMapCut268";
+	rename -uid "35709B7D-4394-E63C-34B7-AC84AD89FF83";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[6]";
+	setAttr ".uic" yes;
+createNode polyMapCut -n "polyMapCut269";
+	rename -uid "125296E7-4310-D5CA-407C-849E3A2326DA";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[10]";
+	setAttr ".uic" yes;
+createNode polyMapCut -n "polyMapCut270";
+	rename -uid "4EEE2CF0-43EF-CAB6-D89F-7DBA0BB2AC88";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[10]";
+	setAttr ".uic" yes;
+createNode polyMapCut -n "polyMapCut271";
+	rename -uid "31324339-49E0-2914-29D4-A1951F9B1612";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 2 "e[8]" "e[125]";
+	setAttr ".uic" yes;
+createNode polyMapCut -n "polyMapCut272";
+	rename -uid "A1668550-4FB6-DB57-D350-0F9F792B2F07";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 2 "e[4]" "e[100]";
+	setAttr ".uic" yes;
+createNode polyMapCut -n "polyMapCut273";
+	rename -uid "A1D5A26D-4A34-9C6B-0B36-D8B01355E217";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 12 "e[3]" "e[13]" "e[23]" "e[29]" "e[37]" "e[47]" "e[53]" "e[63]" "e[71]" "e[77]" "e[87]" "e[93]";
+	setAttr ".uic" yes;
+createNode polyMapCut -n "polyMapCut274";
+	rename -uid "D8A0CEA2-4AC2-EF00-44D2-AF8FBDB7F36A";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[0]";
+	setAttr ".uic" yes;
+createNode polyMapCut -n "polyMapCut275";
+	rename -uid "5F27BB9B-4637-F676-2D82-7A9F9F1D8F95";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 12 "e[0]" "e[12]" "e[20]" "e[28]" "e[36]" "e[44]" "e[52]" "e[60]" "e[68]" "e[76]" "e[84]" "e[92]";
+	setAttr ".uic" yes;
+createNode polyMapCut -n "polyMapCut276";
+	rename -uid "BBB1D4A0-4498-73C6-58A9-9C984F73735E";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[10]";
+	setAttr ".uic" yes;
+createNode polyMapSew -n "polyMapSew47";
+	rename -uid "7A53FD8A-43B6-6948-1DB4-C5AD97E1F97D";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[8]";
+	setAttr ".uic" yes;
+createNode polyMapSew -n "polyMapSew48";
+	rename -uid "7919D837-41EF-B1A7-CBE3-1EB5252A0720";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[100]";
+	setAttr ".uic" yes;
+createNode polyMapCut -n "polyMapCut277";
+	rename -uid "8FD4AFF6-4C5E-14E2-3B93-5BB18A4C7D4F";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[11]";
+	setAttr ".uic" yes;
+createNode polyMapCut -n "polyMapCut278";
+	rename -uid "DF4D5EA7-44D9-83AB-1A96-4B9EADF07896";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[5]";
+	setAttr ".uic" yes;
+createNode polyMapCut -n "polyMapCut279";
+	rename -uid "E33D248B-4550-1E72-9EB7-73A6C0192208";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 2 "e[5]" "e[112]";
+	setAttr ".uic" yes;
+createNode polyMapCut -n "polyMapCut280";
+	rename -uid "121784B6-4F9C-3B0F-E29C-5CB5C935557F";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[113]";
+	setAttr ".uic" yes;
+createNode polyMapCut -n "polyMapCut281";
+	rename -uid "52596ADC-41DF-162B-6F91-44ADAA61EF0C";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 2 "e[9]" "e[113]";
+	setAttr ".uic" yes;
+createNode polyTweakUV -n "polyTweakUV10";
+	rename -uid "63559291-4158-14B2-3B39-67AE531EDDD3";
+	setAttr ".uopa" yes;
+	setAttr -s 136 ".uvtk[0:135]" -type "float2" 1.010977387 -0.088532388
+		 1.35644722 -0.59126705 1.22488582 -0.49597567 -1.37440646 0.46722156 -1.19837606
+		 0.42519444 1.36111891 -0.5610534 -0.97972023 0.30591613 1.1665951 -0.39391205 1.050185204
+		 -0.63817203 -0.86571813 0.55109817 1.046681643 -0.25795513 0.91030937 -0.56028658
+		 -0.76137191 0.62940633 0.97193372 -0.12707648 0.63418847 -0.23951837 0.64822108 -0.59490371
+		 0.89066905 -0.61766219 -0.68647265 0.5710296 0.68518811 0.013568521 0.54111701 -0.25925297
+		 0.5071767 -0.40676582 -0.27512935 0.42761266 0.43896469 -0.046305299 -0.057732046
+		 0.09298867 -0.48200744 0.20861387 -0.062442385 0.55496991 0.4838804 -0.087001324
+		 0.37021834 -0.28981501 -0.53468251 0.031995833 -0.0028583407 0.12011039 0.43726668
+		 -0.39594036 0.30088487 -0.18184498 -0.34362251 0.19309431 -0.91177279 -0.17586529
+		 0.32942492 -0.54481053 0.21309191 -0.077265561 -0.26484469 0.11542624 0.27212468
+		 -0.31483957 -0.59854949 -0.34778225 0.36561975 -0.067191362 0.28184035 -0.13382474
+		 -0.1385048 -0.057499528 0.15201294 -0.25078735 0.19020471 0.047625482 0.72084177
+		 -0.27651721 -0.096894979 -0.26136744 -0.14682126 -0.18549645 -0.019723445 0.1355477
+		 0.046043083 -0.21541154 0.064171344 -0.2295149 -0.049777955 -0.090824366 -0.011379302
+		 -0.24429637 -0.00049573183 -0.30553782 0.085693493 0.026339829 0.060760625 0.11456311
+		 -0.076623037 0.25978833 0.22552364 -0.025240362 0.85319775 -0.14286244 0.52036101
+		 -0.10442048 -0.10983162 0.20052665 0.40436035 0.20074487 -1.0629251 0.097100019 -1.14732504
+		 0.20204079 0.27709448 -0.35451323 -0.95685059 -0.034220815 -1.25338507 0.34149843
+		 -0.42646593 0.28308448 -0.5090971 0.22496143 -0.29423237 0.38781589 -0.60774678 0.26686648
+		 -0.13831642 0.5036056 -0.7327919 0.3274624 -0.8583827 0.39986089 -1.023095369 0.48578048
+		 0.4133926 0.042649247 0.37708873 0.052008018 0.33131468 0.082011402 0.27772194 0.11840436
+		 -0.72297812 -0.3205463 -0.6440084 -0.20957023 -0.69598895 0.22309923 -0.53637588
+		 0.32932508 -0.014873683 0.31673968 0.16657513 0.051860809 0.46216732 -0.075184345
+		 -0.27077848 0.29190034 -0.2973066 0.46241933 -0.36344478 0.37810531 -0.19361174 0.41404134
+		 -0.4574472 -0.48864061 -0.17961013 -0.12454379 -0.4805814 0.009963572 -0.40241879
+		 0.1405158 0.10850221 0.11968148 0.23968333 0.11322683 0.40930283 0.10566831 -0.13250744
+		 0.025695801 -0.053046167 0.12107056 -0.16822821 0.17270184 -0.64511424 -0.089656353
+		 -0.60687971 -0.67075431 -0.85880125 -0.58332658 0.80722368 -0.41409531 0.28864789
+		 0.10233343 0.65062034 -0.10789114 0.50363153 0.15681958 -0.56740087 0.27798408 -0.73667926
+		 0.24379605 -0.93881488 0.19295084 -0.32365188 0.23179764 -0.52410811 0.28092402 0.11854282
+		 0.10193068 0.5311588 -0.25267407 0.081128925 0.060754359 0.13673435 -0.010140955
+		 1.0010765791 -0.61758721 0.93231517 -0.49496567 0.055194207 0.43838248 0.61450922
+		 -0.018618464 -0.56660855 0.36867037 -0.74897403 0.33796382 -1.002245903 0.48592377
+		 -0.59276241 0.40171528 -0.37799942 0.23876959 0.3535766 0.14744526 0.090317816 0.05792135
+		 0.80919576 -0.55206531 1.039639592 -0.73554099 -1.22658253 0.11992019 -1.31683385
+		 0.24763989 1.066230059 -0.080423355 -1.23618197 0.42530888 0.85885966 -0.02897042
+		 1.15672326 -0.21435255 1.065726042 -0.23135686 0.8971411 -0.10926408;
+createNode polyMapCut -n "polyMapCut282";
+	rename -uid "2C9E30DA-4136-5F95-8562-BBA55181F1C6";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[100]";
+createNode polyTweakUV -n "polyTweakUV11";
+	rename -uid "B9919A97-4290-FE1F-C908-FF9246382156";
+	setAttr ".uopa" yes;
+	setAttr -s 138 ".uvtk[0:137]" -type "float2" -0.496517 0.1900475 -0.70332062
+		 -0.072897941 -0.70525581 -0.066203319 1.042578459 -0.28722584 1.026503325 -0.28745431
+		 -0.69224548 -0.075661406 0.92748618 0.10883909 -0.64155972 -0.1019472 -0.62570697
+		 -0.06923528 0.93088508 -0.28059506 -0.60958648 -0.12473388 -0.58338302 -0.059551999
+		 0.90012491 -0.28741467 -0.58827531 -0.14811164 -0.55050904 -0.050911285 -0.5784567
+		 -0.040551119 -0.62055218 -0.052876793 0.85844982 -0.30136597 -0.56189394 -0.18346477
+		 -0.51863748 -0.044680923 -0.54553002 -0.032010596 0.77560985 -0.24967414 -0.4655318
+		 -0.18813807 0.27926734 0.1108039 0.81334412 -0.2467255 0.72597688 -0.27110904 0.03436029
+		 0.3252849 -0.44992134 -0.056857266 0.84075701 -0.13875368 0.069219172 0.092453957
+		 -0.47223625 -0.023374336 -0.42686495 -0.090922132 0.24891441 0.12927407 0.89305604
+		 -0.12350997 -0.48738316 -0.0139063 -0.40155724 -0.12391694 0.75778532 -0.1577799
+		 -0.36391392 -0.142887 0.36678052 0.26948982 -0.40348396 -0.14431745 -0.36915874 -0.15973079
+		 -0.33282435 -0.16855955 -0.32978636 -0.15279487 -0.35693789 -0.20416027 -0.13276088
+		 0.45948529 -0.28033316 -0.16216946 -0.28564259 -0.18017468 -0.30214939 -0.23479921
+		 0.70496237 -0.14388683 0.68599814 -0.15133953 0.72086239 -0.17218763 -0.2716502 -0.18835548
+		 -0.26168612 -0.17275664 0.69077301 -0.19416213 0.70242953 -0.21354407 0.75025737
+		 -0.17717427 -0.29374421 -0.2347123 -0.051639676 0.43595996 -0.52288216 -0.1653735
+		 0.3848002 0.15343893 -0.40762708 -0.22486475 0.93252122 -0.16935873 0.95413756 -0.19479507
+		 -0.50572968 -0.01916416 0.90578884 -0.13759053 0.9811331 -0.22844905 0.8632443 -0.15290397
+		 0.88508236 -0.14753848 0.82778525 -0.16422719 0.90307355 -0.16441739 0.78571761 -0.17773825
+		 0.92568165 -0.18755615 0.94727248 -0.21316946 0.97592807 -0.24472141 -0.49558151
+		 -0.038636807 -0.47755632 -0.054694295 -0.45633212 -0.085396588 -0.43005005 -0.12028386
+		 0.41824222 0.26920131 0.38349593 0.19473946 0.31798717 0.12476563 0.23917043 0.069690049
+		 -0.11923915 0.056424797 -0.19429493 0.082185328 -0.2910226 0.11600953 0.016832024
+		 0.02746892 -0.02669397 0.029087126 0.14757735 0.044398606 0.057624012 0.025766611
+		 0.38376579 0.30805343 0.72130334 -0.15157938 0.32137644 0.19823015 0.80030549 -0.1498746
+		 -0.1106838 0.11278653 -0.18693811 0.12873799 -0.2855134 0.14965272 0.02779457 0.095341921
+		 -0.015853614 0.096190214 0.15587902 0.10185128 0.87503695 -0.12268016 0.3910158 0.38975024
+		 0.44088826 0.38456959 -0.19561744 0.52681172 -0.38301453 -0.21254787 -0.06636858
+		 0.39228296 -0.43989441 -0.23878142 0.67989069 0.10292 0.78846407 0.0890221 0.92424715
+		 0.081097126 0.37963995 0.1116007 0.52828777 0.11869973 0.16935092 0.18284601 -0.49386662
+		 -0.16279891 -0.33398914 -0.21122211 0.67276692 -0.19003195 -0.16626173 0.56194109
+		 -0.11657441 0.50298715 0.71252936 -0.23899549 0.049042344 0.36863127 0.68522763 0.14434808
+		 0.79320133 0.1283564 0.97002912 -0.28014964 0.83696073 -0.26397121 0.53401458 0.16115272
+		 0.17550194 0.2299127 0.28376186 0.15600598 -0.21919036 0.60598981 -0.19369602 0.62011474
+		 1.12212431 0.074462533 1.12432921 0.093076408 -0.52304369 0.19255728 1.037141085
+		 -0.29157501 -0.48037744 0.1880433 -0.52502745 0.18008858 -0.49846804 0.17778283 -0.48245084
+		 0.17488796 0.66682279 -0.13894844 0.67698038 -0.12310955;
+createNode polyAutoProj -n "polyAutoProj7";
+	rename -uid "FFD4CEEB-4D07-8538-9F8D-FC82D48CF5F2";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:399]";
+	setAttr ".ix" -type "matrix" 1.7763568394002505e-15 -2.2204460492503131e-16 1.0000000000000002 0
+		 3.944304526105059e-31 1 2.2204460492503136e-16 0 -1.0000000000000002 0 1.7763568394002505e-15 0
+		 0.79732459783551946 5.6625080108642578 0.7642243504524221 1;
+	setAttr ".s" -type "double3" 2.0000003576278691 2.0000003576278691 2.0000003576278691 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyMapSew -n "polyMapSew49";
+	rename -uid "4A6D5663-444E-5D02-D4C2-AB8A033C7663";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[0:779]";
+createNode polyMapCut -n "polyMapCut283";
+	rename -uid "1D35B255-4807-BC51-30A5-54BE8D24E12D";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[320:339]";
+	setAttr ".uic" yes;
+createNode polyMapCut -n "BaseCharacter:polyMapCut1";
+	rename -uid "3FC46BE2-4CFE-43FC-A1B5-729A9A15C6BE";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[40:59]";
+	setAttr ".uic" yes;
+createNode polyMapCut -n "BaseCharacter:polyMapCut2";
+	rename -uid "EDBB003C-41FE-BEBE-9C2B-95A8A5C4489A";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[429]";
+	setAttr ".uic" yes;
+createNode polyMapCut -n "BaseCharacter:polyMapCut3";
+	rename -uid "F67489CA-476B-EB82-1E6E-D8905989E594";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 14 "e[429]" "e[449]" "e[469]" "e[489]" "e[509]" "e[529]" "e[549]" "e[569]" "e[589]" "e[609]" "e[629]" "e[649]" "e[669]" "e[689]";
+	setAttr ".uic" yes;
+createNode polyTweakUV -n "BaseCharacter:polyTweakUV1";
+	rename -uid "222E0074-4B51-CCA9-949A-15A3FEDF0FB4";
+	setAttr ".uopa" yes;
+	setAttr -s 437 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" -0.0012910068 0.00090242922 -0.00094893575
+		 0.0012571961 -0.0010421872 0.0017911792 -0.001544714 0.001381442 -1.4901161e-08 0
+		 -0.00051403046 0.0014889091 -0.00043767691 0.0020255744 -0.23873158 0.50365281 -0.17470177
+		 0.52401173 -0.0015066862 0.00045929849 -0.0018959939 0.00083649158 -2.8729439e-05
+		 0.0015748739 0.00020965934 0.0020616949 -0.29294494 0.47584462 -0.23430188 0.46972072
+		 -0.17420083 0.48084283 -0.099561363 0.53998148 -0.0015748739 -2.8759241e-05 -0.0020616949
+		 0.00020965934 0.00045931339 0.0015066862 0.00083649158 0.0018960088 -0.33956593 0.43841091
+		 -0.28194177 0.44899008 -0.22675972 0.43456611 -0.1700232 0.43746865 -0.099728972
+		 0.48648399 -0.013130575 0.55511194 -0.0014888942 -0.00051403046 -0.0020255744 -0.00043767691
+		 0.00090241432 0.0012910068 0.001381442 0.0015446991 -0.3814792 0.39043102 -0.32026049
+		 0.41558611 -0.26868409 0.42011741 -0.21519221 0.39736801 -0.16131124 0.39321405 -0.096009791
+		 0.43393254 -0.010422409 0.49135691 0.083569139 0.57304716 -0.001257211 -0.00094893575
+		 -0.0017911792 -0.0010421872 0.0012571812 0.00094895065 0.0017911643 0.001042217 -0.42189664
+		 0.33258241 -0.35330993 0.36794394 -0.29975447 0.39022148 -0.25224233 0.38833547 -0.36326909
+		 0.13042289 -0.29494604 0.12053677 -0.087664157 0.38183087 -0.0039940774 0.42972365
+		 0.092645675 0.50027061 0.18832555 0.59715492 -0.00090241432 -0.001290977 -0.0013814569
+		 -0.001544714 0.0014889091 0.00051401556 0.0020255595 0.00043769181 -0.46397492 0.26745993
+		 -0.3856681 0.30638582 -0.32505497 0.34267199 -0.27710783 0.36147669 -0.32153368 -0.040219307
+		 -0.2158255 0.10281909 0.0066977441 0.3698898 0.10491493 0.43069792 0.20690438 0.51767075
+		 0.29783872 0.63021296 -0.00045931339 -0.0015066862 -0.00083650649 -0.0018959939 0.0015748739
+		 2.8759241e-05 0.0020616949 -0.00020967424 -0.51037824 0.19990081 -0.42202395 0.23347467
+		 -0.3503547 0.27737162 -0.29573038 0.31399432 -0.22854868 -0.017884821 -0.12534717
+		 0.084672213 0.12063599 0.36413947 0.22783706 0.44225904 0.32844132 0.54724926 0.40788436
+		 0.67417848 2.874434e-05 -0.0015748441 -0.00020968914 -0.0020616651 0.0015066713 -0.00045931339
+		 0.0018960088 -0.00083650649 -0.5627284 0.1373584 -0.4667609 0.15439354 -0.38165084
+		 0.19668883 -0.3148469 0.24535598 -0.27813044 -0.034579426 -0.024107695 0.073559463
+		 0.25100985 0.37079227 0.36032826 0.46889731 0.45224434 0.59166449 0.51350379 0.73005974
+		 0.00051400065 -0.0014888942 0.00043769181 -0.0020255744 0.0012910068 -0.00090241432
+		 0.001544714 -0.0013814569 0.77260506 1.059336662 -0.52350533 0.07749179 -0.42474657
+		 0.10583031 -0.34147602 0.1576243 -0.32849228 -0.06372413 0.26931769 0.13002914 0.39293131
+		 0.39499795 0.49669829 0.51385957 0.57247251 0.65240586 0.60916317 0.79789418 0.00094895065
+		 -0.001257211 0.0010422021 -0.0017911792 0.74579418 0.96493459 0.87875217 1.050212383
+		 -0.48485801 0.01337634 -0.38246819 0.055751897 -0.49351811 -0.31180918 0.57276487
+		 0.27661955 0.54014838 0.44046307 0.63036335 0.57898998 0.68267518 0.72980541 0.68881238
+		 0.87678957 0.84424984 0.93087733 0.98606366 1.03493011 -0.44416776 -0.052042544 -0.57167864
+		 -0.36116731 0.69234145 0.2918281 0.68549216 0.50926352 0.75415725 0.6647675 0.77585435
+		 0.82316643 0.9409883 0.89466751 1.089718342 1.010791421 -0.64994049 -0.41724193 0.81080335
+		 0.32125527 0.82128721 0.60188723 0.86045879 0.77051157 1.032168388 0.85445917 0.93189955
+		 0.7497232 0.77292162 0.40251642 0.9396022 0.71750855 0.86683577 0.65564686 0.77976906
+		 0.57555932 -0.35143954 -0.30172604 -0.39149964 -0.39614937 -0.33341047 -0.4204247
+		 -0.28803128 -0.33414468 -0.41083676 -0.26689968 -0.44640636 -0.36835644 -0.41957912
+		 -0.4759883 -0.36815479 -0.49422666 -0.00079154968 0.00057017803 -0.00057661533 0.00078687072
+		 -0.29573125 -0.19633938 -0.22918636 -0.23843715 -0.51030576 -0.31737646 -0.42760417
+		 -0.47476473 -0.46886751 -0.45343006 -0.35776693 -0.15318999 -0.44020689 -0.53928196
+		 -0.39574751 -0.55388069 -0.00092893839 0.0002977252 -0.0017117262 -0.0010988116 -0.0019674897
+		 -0.00051608682 -0.00030523539 0.0009265244 -0.22204763 -0.084806517 -0.15511835 -0.13735333
+		 -0.37266719 -0.54756844 -0.44258505 -0.26270586 -0.48366165 -0.51986849 -0.28437912
+		 -0.032708377 -0.45812994 -0.58608115 -0.41976464 -0.59938419 -0.00097548962 -3.9041042e-06
+		 -0.0012883544 -0.0015739501 -0.0012174249 -0.00097715855 -0.0014597774 -0.0005531311
+		 -0.0020306706 0.00011715293 -3.9339066e-06 0.00097544491 -0.12970334 0.027399361
+		 -0.065409303 -0.035500839 -0.41932142 -0.57432622 -0.36365664 -0.20793089 -0.49658197
+		 -0.56769526 -0.18975902 0.088331431 -0.47751051 -0.61865866 -0.44317335 -0.63256097
+		 -0.0009265542 -0.00030520558 -0.00073891878 -0.0018950105 -0.00085586309 -0.0013055503
+		 -5.9604645e-08 -2.9802322e-08 -0.0015592575 -7.4952841e-05 -0.0018950701 0.00073887408
+		 0.0002976656 0.00092896819 -0.019767225 0.13471507 0.038913965 0.062415287 -0.46486056
+		 -0.59220338 -0.27298731 -0.15272668 -0.51291585 -0.59945124 -0.075010777 0.20363829
+		 -0.50094819 -0.64154178 -0.46747211 -0.65704399 -0.00078684092 -0.00057652593 -0.00011712313
+		 -0.002030611 -0.00041055679 -0.00150612 -0.0015061498 0.00041057169 -0.0015740395
+		 0.0012883693 0.00057011843 0.00079150498 0.10501784 0.23202671 0.15543127 0.15202582
+		 -0.58185762 -0.74725097 -0.17114609 -0.09682858 -0.5364244 -0.6202693 0.056842387
+		 0.30747575 -0.528274 -0.66128695 -0.49164197 -0.67796314 -0.00057017803 -0.00079146028
+		 0.00051605701 -0.0019674301 7.4982643e-05 -0.0015592873 -0.0013055205 0.00085586309
+		 -0.0010988712 0.0017116517 0.00078678131 0.00057654083 0.24049872 0.31512436 0.28054124
+		 0.22965419 -0.68574524 -0.81937516 0.16324466 -0.049965262 -0.56811953 -0.63776124
+		 0.20116693 0.39520389 0.99704474 0.41697142 0.96224213 0.33383688 -0.0002976656 -0.00092896819
+		 0.001098752 -0.0017116666 0.00055319071 -0.0014597774 -0.00097709894 0.0012174398
+		 -0.00051611662 0.0019674152 0.0009264946 0.00030519813 0.3815394 0.38100639 0.40979987
+		 0.29253548 -0.7392903 -0.83368063 0.42864257 0.19579753 1.017173529 0.50279498 0.35221118
+		 0.46366104 0.89755511 0.45150402 0.87609619 0.36786097 3.9339066e-06 -0.00097550452
+		 0.0015739202 -0.0012883246 0.00097721815 -0.0012174249 -0.0005531311 0.0014598072
+		 0.00011712313 0.0020306408 0.00097543001 3.9488077e-06 0.52257973 0.42797673 0.53836668
+		 0.3388564;
+	setAttr ".uvtk[250:436]" 0.88588625 0.36080813 0.55114555 0.22404316 0.9082008
+		 0.53359997 0.50374949 0.51132727 0.78424346 0.46345907 0.7751292 0.37774879 0.00030523539
+		 -0.0009264797 0.0018950701 -0.00073891878 0.0013056397 -0.0008559078 -7.4923038e-05
+		 0.0015593171 0.00073891878 0.0018949956 0.00092893839 -0.00029767305 0.65828669 0.45546037
+		 0.6615144 0.36754572 0.77747273 0.38506275 0.67442882 0.2416397 0.7856338 0.54526293
+		 0.64983797 0.53819269 0.00057655573 -0.00078684092 0.002030611 -0.00011713803 0.0015062094
+		 -0.0004106015 0.0004106164 0.0015061051 0.0012883544 0.0015739053 0.00079149008 -0.00057019293
+		 0.66569245 0.39476976 0.68457425 0.22163019 0.0019674301 0.00051610172 0.0015593767
+		 7.493794e-05 0.0008559227 0.0013055652 0.0017116666 0.0010987967 0.001459837 0.0005531311
+		 0.0012175441 0.00097712874 -0.53170598 -0.13957429 -0.44609398 -0.15372601 -0.3709549
+		 -0.28744209 -0.53734255 -0.18579203 -0.4514493 -0.20263332 -0.36065513 -0.17610902
+		 -0.37685779 -0.338265 -0.5435074 -0.23550975 -0.45758623 -0.2533958 -0.36569446 -0.22789413
+		 -0.27534312 -0.19878268 -0.38298947 -0.38932192 -0.54918444 -0.28878433 -0.46349013
+		 -0.30604479 -0.3717466 -0.27967343 -0.28000253 -0.25330168 -0.19012946 -0.21376526
+		 -0.3883324 -0.44063598 -0.55336076 -0.34558031 -0.4681477 -0.36056283 -0.3777985
+		 -0.33145225 -0.28590697 -0.30595091 -0.19430774 -0.27056181 0.26490542 -0.008538425
+		 -0.39187425 -0.49221545 -0.38283604 -0.38323629 -0.29204357 -0.35671261 -0.1999855
+		 -0.32383651 0.26136157 -0.060118198 -0.29739743 -0.40561858 -0.20615029 -0.37355313
+		 0.25601763 -0.11143178 -0.21178544 -0.41976935 0.24988592 -0.16248745 0.2439841 -0.2133086
+		 -0.90751797 -0.79103398 -0.81203043 -0.79762304 0.71013892 0.47870892 -0.91149485
+		 -0.85900772 -0.81775731 -0.86170578 -0.59731102 -0.584539 0.63859135 0.46237308 0.73521382
+		 0.42522013 -0.910025 -0.92046845 -0.81999677 -0.91883552 -0.60371518 -0.64044625
+		 0.56063205 0.45195431 0.65235507 0.4155044 0.75208902 0.36284453 -0.90261996 -0.97484732
+		 -0.81796354 -0.96874571 -0.60792506 -0.69340515 0.72572637 0.28943455 0.56769627
+		 0.4094032 0.65975738 0.36112726 0.7604124 0.29257345 -0.88885266 -1.021717191 -0.81089652
+		 -1.011297703 -0.60901666 -0.74333453 0.72865951 0.24258357 0.5697273 0.35949439 0.66122526
+		 0.29966933 0.76002944 0.21566999 -0.60608095 -0.79018629 0.72756612 0.19265527 0.56748635
+		 0.30236703 0.65724707 0.23169875 0.72335535 0.13969845 0.5617587 0.23828673 0.71695077
+		 0.083793283 -0.21056336 -0.42199805 -0.29732805 -0.40372366 -0.21672414 -0.47693631
+		 -0.38496017 -0.38698411 -0.30371895 -0.45595056 -0.22273853 -0.52914804 -0.39148471
+		 -0.43702409 -0.30947497 -0.5070895 -0.22758996 -0.57862532 -0.39671871 -0.48748374
+		 -0.31358677 -0.55715334 -0.23026879 -0.62541485 -0.3996774 -0.53837836 -0.31505418
+		 -0.60616124 -0.3993867 -0.58968264 0.88894254 0.14752215 0.80460823 0.16400009 0.88923073
+		 0.096218646 0.71982157 0.18325323 0.80313861 0.11499262 0.8862707 0.045324802 0.71714061
+		 0.13646382 0.7990256 0.064929545 0.88103592 -0.005132854 0.71228808 0.086987078 0.79326928
+		 0.013792396 0.87451142 -0.055170774 0.70627344 0.034776866 0.78687871 -0.038432479
+		 0.70011324 -0.020159423 -0.084406912 -0.19084491 -0.15906805 -0.28028679 0.0025021434
+		 -0.10056364 0.10068756 -0.013167173 0.20809978 0.067842439 0.32175529 0.13943368
+		 0.43797678 0.19918364 0.55270231 0.24526262 0.6618154 0.27622896 0.76141763 0.29058856
+		 0.84792346 0.28609633 0.91774642 0.25876033 -0.46058387 -0.69011617 -0.43776095 -0.66900688
+		 -0.411313 -0.64331114 -0.3826907 -0.60963297 -0.35138097 -0.56552023 -0.31564492
+		 -0.50978464 -0.27316773 -0.44256896 -0.2216112 -0.36525974 -5.1856041e-06 0.0011222363
+		 0.00034183264 0.0010689348 -0.00035175681 0.001065731 -0.00066390634 0.00090485811
+		 -0.00091099739 0.00065538287 -0.0010689199 0.00034183264 -0.0011222661 -5.2750111e-06
+		 -0.0010657161 -0.00035175681 -0.00090484321 -0.00066384673 -0.00065539777 -0.00091099739
+		 -0.00034179538 -0.0010689199 5.2452087e-06 -0.0011222661 0.00035178661 -0.0010657161
+		 0.00066387653 -0.00090484321 0.00091099739 -0.00065541267 0.0010689348 -0.00034179538
+		 0.0011222363 5.2526593e-06 0.001065731 0.00035180151 0.00090485811 0.00066386163
+		 0.00065538287 0.00091099739 -0.62078208 0.090387776 -0.51090115 -0.70108914 -0.47562179
+		 -0.71020901 -0.55501282 -0.68581003 -0.60469043 -0.66167343 -0.79279995 -0.85483783
+		 -0.96039623 -1.038054943 -0.98547536 -0.9845649 -1.0023542643 -0.92218697 -1.010680676
+		 -0.85191226 -1.01030004 -0.77500468 -0.74680525 -0.46590617 -0.53216761 -0.1536561
+		 -0.56601667 -0.067827821 -0.59441358 0.015309677;
+createNode polyMapCut -n "BaseCharacter:polyMapCut4";
+	rename -uid "050AB9E8-48C3-27BD-6A5E-ED9352102250";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[180:199]";
+	setAttr ".uic" yes;
+createNode polyMapSewMove -n "BaseCharacter:polyMapSewMove1";
+	rename -uid "0A607348-4170-F5D7-1C5D-5580422D93E5";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[199]";
+createNode polyMapSewMove -n "BaseCharacter:polyMapSewMove2";
+	rename -uid "720D4EB3-44F6-FCB8-1CB3-7F98CAD68800";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[59]";
+createNode polyMapSewMove -n "BaseCharacter:polyMapSewMove3";
+	rename -uid "3626FF43-4B47-254C-959E-06888D45F15A";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[339]";
+createNode polyTweakUV -n "BaseCharacter:polyTweakUV2";
+	rename -uid "CF9BE124-4059-1B83-D877-CFAFB70E2B6C";
+	setAttr ".uopa" yes;
+	setAttr -s 452 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" -0.01504387 0.030522645 -0.021426573
+		 0.028341413 -0.018027335 0.0070338845 -0.0052844584 0.011356413 -0.024980053 0.049500644
+		 -0.028139971 0.028244257 -0.031397298 0.0069087148 0.051632077 0.034260094 0.016072869
+		 -0.00044876337 -0.0096104443 0.034579158 0.0059262514 0.019711494 -0.034537651 0.030232787
+		 -0.044156477 0.010939538 0.071103968 0.071475923 0.040301964 0.030311465 0.024989769
+		 0.0071707368 0.0099520385 -0.0028010011 -0.0057048798 0.0400787 0.013715923 0.030683696
+		 -0.040000074 0.034107029 -0.055063788 0.018726051 0.08796674 0.1191718 0.051070407
+		 0.065574229 0.029023439 0.025374234 0.021975487 0.0060409904 0.0030121803 -0.0049895048
+		 -0.037090242 -0.018658578 -0.003703177 0.046487689 0.017664149 0.043457627 -0.043995976
+		 0.039485395 -0.06304691 0.029509306 0.10350452 0.17668265 0.059088632 0.11323929
+		 0.031068303 0.05860883 0.017365277 0.020049691 0.018731177 0.0046587586 0.0078339577
+		 -0.00046283007 -0.02582863 -0.0064326525 -0.079128593 -0.018908918 -0.0037906766
+		 0.053186595 0.017455533 0.056836128 -0.046135053 0.045840561 -0.067318857 0.042238057
+		 0.11905503 0.24256131 0.066164508 0.17290008 0.030298976 0.10624829 0.010556117 0.051100552
+		 0.0051742792 0.014523089 0.015118539 0.00319767 0.012286007 0.0036907792 -0.014772385
+		 0.0047197342 -0.063204467 0.00090152025 -0.12882376 -0.013047695 -0.0059519559 0.059525073
+		 0.013118222 0.069515705 -0.046207756 0.052550673 -0.067456827 0.055669904 0.13598458
+		 0.31430086 0.074166872 0.24334329 0.028979637 0.16814116 0.00086421892 0.09852615
+		 -0.010683849 0.043207228 0.016452789 0.0077930093 -0.0039195418 0.015570939 -0.047435135
+		 0.019673049 -0.1099925 0.015091062 -0.18618339 -0.0028218627 -0.0099721849 0.064884961
+		 0.0050722212 0.080251515 -0.044206008 0.058959723 -0.06344381 0.068492651 0.15573698
+		 0.38797137 0.085070565 0.32231343 0.029459193 0.24335301 -0.0090296343 0.16241422
+		 -0.029535651 0.090166181 0.0068200827 0.026428938 -0.031704724 0.038178027 -0.09133172
+		 0.042167842 -0.16657513 0.033959806 -0.25072789 0.0097365379 -0.01545684 0.068742573
+		 -0.0059003979 0.087988555 -0.040324368 0.064441144 -0.055669561 0.079453468 0.17995268
+		 0.45773217 0.10108873 0.40615225 0.034212947 0.32995135 -0.016349524 0.24210206 -0.048315942
+		 0.15570387 -0.015877306 0.056743622 -0.072524786 0.068998277 -0.14716673 0.069660306
+		 -0.23279721 0.055025756 -0.32132113 0.022313476 -0.021869257 0.070719838 -0.018730223
+		 0.091966212 -0.034941517 0.06845957 -0.044892438 0.087481141 -0.6065771 0.012815118
+		 0.12496653 0.48922735 0.045970976 0.42465076 -0.018220246 0.33598167 -0.063869014
+		 0.23940107 -0.053361058 0.095950723 -0.12737483 0.10515684 -0.21510142 0.099264681
+		 -0.30783775 0.075456023 -0.39598393 0.032263041 -0.028582767 0.070622683 -0.032164939
+		 0.091792107 -0.54390228 0.031436682 -0.64227152 0.075418353 0.068007886 0.522214
+		 -0.011611849 0.44117785 -0.07299605 0.33994606 -0.10688865 0.14087284 -0.19670439
+		 0.14340764 -0.29462475 0.12770414 -0.39001375 0.091981649 -0.47165585 0.036512733
+		 -0.56281132 0.097115517 -0.67918718 0.14387774 0.0068106651 0.55300283 -0.072509944
+		 0.45485806 -0.17716777 0.18794429 -0.2802915 0.18009555 -0.38435134 0.15122426 -0.47648618
+		 0.1007508 -0.58227521 0.16515756 -0.71295297 0.21881247 -0.059309423 0.58003896 -0.26423419
+		 0.23318887 -0.3770352 0.21108842 -0.48168448 0.16545022 -0.59885293 0.2364403 -0.74130583
+		 0.30018103 -0.36724782 0.27218091 -0.48460352 0.23167956 -0.61102986 0.31132615 -0.48414153
+		 0.30001521 0.041955948 0.011274274 0.073836863 -0.0038976539 0.087917536 0.013839122
+		 0.051659346 0.021620894 0.032311499 0.0011688769 0.059620678 -0.021433866 0.11658454
+		 -0.026194632 0.13305172 -0.00046949089 -0.013052821 -0.025037482 -0.0074657798 -0.0058859102
+		 0.019863665 0.016956374 0.023528278 0.020826153 0.022567064 -0.0090364516 0.045052499
+		 -0.039138757 0.099754065 -0.051769778 0.016442001 0.013389051 0.17073467 -0.052874699
+		 0.18723759 -0.018946201 -0.012518108 -0.045145415 0.0084505677 -0.027949311 0.012266636
+		 -0.015125133 0.015608907 0.018138045 0.0060260892 0.011133954 0.0019285679 0.0094208419
+		 0.082249045 -0.077613786 0.013114989 0.0097768456 0.15357634 -0.086762011 0.010232985
+		 0.013011009 0.23616204 -0.08075887 0.24999624 -0.038839668 -0.0058146119 -0.064167932
+		 0.008800149 -0.041335009 0.029863298 -0.030760393 0.031798959 -0.024327002 0.01994586
+		 -0.0040655024 0.0096571445 0.01626746 -0.00089508295 -0.0074312687 -0.013296962 -0.012982517
+		 0.13532341 -0.12108791 0.014622927 0.014850646 0.22129607 -0.12286586 0.011761665
+		 -0.0016100705 0.3118754 -0.1061447 0.32000726 -0.056923091 0.0064353347 -0.080218181
+		 0.013273537 -0.053977609 0.03002125 -0.037462398 0.051185071 -0.03355401 0.035649359
+		 -0.018784199 0.031078696 0.0043995106 0.04027909 0.030354585 -0.0029675961 -0.039918348
+		 -0.024250031 -0.04764992 0.2047922 -0.16570464 0.024753928 0.0042649806 0.30224752
+		 -0.15599993 0.018684447 -0.031794071 0.39568695 -0.12467664 0.39482912 -0.069363207
+		 0.023046374 -0.091714874 0.021437287 -0.064636186 0.032250464 -0.043782145 0.041043818
+		 -0.014670029 0.043783963 0.0088575687 0.060222328 0.030605208 -0.002355814 -0.086987212
+		 -0.032711089 -0.095056549 0.29030204 -0.20707816 0.040837586 -0.023479223 0.39452744
+		 -0.18145111 0.028474391 -0.078371853 0.48370221 -0.13114777 0.47049776 -0.071543664
+		 0.042399764 -0.097527355 0.032497883 -0.072263375 0.036329508 -0.049103409 0.047407687
+		 -0.012421474 0.057160199 0.00912455 0.079447269 0.024698114 -0.001280427 -0.14873207
+		 -0.040463924 -0.15509793 0.39024949 -0.24025303 0.059993207 -0.069375396 0.49440804
+		 -0.19373906 0.038505733 -0.14161822 -0.11966097 -0.72645521 -0.17999828 -0.66468257
+		 0.062605441 -0.097083256 0.045377195 -0.076109111 0.041858017 -0.052905999 0.054124236
+		 -0.012254197 0.069969058 0.0052266531 0.095972598 0.013138122 -0.0020003319 -0.22461057
+		 -0.049312234 -0.22702616 0.50114036 -0.25970227 0.079217136 -0.13385692 -0.050893426
+		 -0.78605169 0.046099305 -0.221183 -0.070845485 -0.62626606 -0.13393652 -0.58466595
+		 0.081689119 -0.090423584 0.058818281 -0.075794339 0.048295081 -0.054817505 0.060546517
+		 -0.014176618 0.080964327 -0.0024486706 0.10814691 -0.0029679202 -0.0068067312 -0.31331539
+		 -0.061074018 -0.30929711;
+	setAttr ".uvtk[250:451]" 0.026417971 -0.84049004 0.095444918 -0.21674007 -0.0031409264
+		 -0.66533226 0.048547029 -0.31598479 -0.038371921 -0.51873922 -0.10104585 -0.49313214
+		 0.097785354 -0.07819812 0.071508229 -0.071347728 0.055011749 -0.054650173 0.066052914
+		 -0.017995551 0.089065254 -0.01315362 0.11476463 -0.022053733 -0.018067956 -0.41256291
+		 -0.077625632 -0.39933085 0.069827557 -0.70028496 0.10560405 -0.31713638 0.026915908
+		 -0.54213095 0.04310298 -0.424034 0.10932142 -0.061601549 0.082207561 -0.063202426
+		 0.061351538 -0.052419342 0.07010752 -0.023334797 0.093473256 -0.025844373 0.11517102
+		 -0.042256393 0.095665216 -0.56245375 0.10665989 -0.43331212 0.089871347 -0.052154049
+		 0.066695511 -0.048342399 0.07231462 -0.029670864 0.093752265 -0.039282098 0.070521951
+		 -0.04281722 0.072457731 -0.03638389 -0.0075791776 0.0088181198 0.011144757 0.0016917586
+		 -0.032730326 0.034940302 -0.020860761 0.0028650463 0.0068809986 8.3386898e-05 0.020422369
+		 0.011932373 -0.055593237 0.026222616 -0.0087794363 -0.040979624 0.0024526715 -0.0017659664
+		 0.02431047 0.016085118 0.017560184 0.037400723 -0.0025519431 -0.09435387 0.0021968782
+		 -0.030136243 0.006269902 0.0021369457 0.028279662 0.020148903 0.028441012 0.048487663
+		 0.00018680096 0.075504243 0.014163375 -0.07558316 0.012580127 -0.01946719 0.0097672343
+		 0.0060196519 0.023756444 0.018329233 0.065455258 0.022368073 0.016647279 0.094492912
+		 -0.033667743 0.12319916 0.029958606 -0.05717165 0.019159496 0.016606569 0.051676571
+		 0.016142696 0.1104058 0.0028513074 -0.013266444 0.15081745 0.038076818 0.01015985
+		 0.086734772 -0.0062766969 0.15930772 -0.039778054 0.06352663 -0.014998734 0.12539816
+		 -0.050200075 0.092291236 -0.060010791 -0.13064042 0.60260344 -0.13720226 0.46533436
+		 -0.76294965 0.38771248 -0.20746034 0.62041414 -0.20607966 0.47247729 -0.13055819
+		 0.34165755 -0.61804265 0.39008594 -0.77720869 0.48115766 0.49086022 -0.4819333 0.35378247
+		 -0.43326133 -0.19123441 0.34102476 -0.47976452 0.37089199 -0.61949998 0.47312021
+		 0.30444133 -0.96077907 0.49977231 -0.40315843 0.3702077 -0.36568871 0.23670194 -0.37134072
+		 -0.3545813 0.33491766 -0.47117877 0.44474417 0.32246375 -0.77601522 0.2046243 -0.92824334
+		 0.50309485 -0.32935524 0.38226837 -0.30151868 0.25782394 -0.31443164 -0.33877772
+		 0.39964277 0.32680368 -0.60317028 0.23237681 -0.75563228 0.11179459 -0.88814527 0.27559617
+		 -0.25977963 0.31554532 -0.44702283 0.24525106 -0.59295374 0.14827442 -0.73044854
+		 0.24257553 -0.444832 0.16832685 -0.57941061 0.17304373 -0.44025677 -0.061048314 0.081159234
+		 -0.089115836 0.14796767 -0.093741544 0.07142356 -0.11344069 0.23515433 -0.13157083
+		 0.13912198 0.023554936 -0.15832503 -0.16529588 0.22927707 0.071432188 -0.22885615
+		 0.044368476 -0.13082467 0.14233558 -0.30148032 0.094493255 -0.19200498 0.063853845
+		 -0.10393264 0.16557893 -0.25480181 0.11570498 -0.15611628 0.18630698 -0.20960566
+		 -0.24612784 0.28733575 -0.15622908 0.23315889 -0.22573662 0.34279341 -0.085495412
+		 0.17703265 -0.13367188 0.27923632 0.29002392 -0.31084412 -0.062997699 0.21376061
+		 0.25305772 -0.19683164 0.22611988 -0.31463525 0.20819139 -0.10629374 0.19878274 -0.20466304
+		 0.16471434 -0.31670368 0.16398919 -0.11631 0.14628613 -0.21125552 0.12101543 -0.12544593
+		 -0.025705516 -0.017577589 -0.045509577 -0.054341704 -0.063092768 -0.10205206 -0.079745412
+		 -0.16038825 -0.096791625 -0.22842523 -0.11552811 -0.30443165 -0.13721955 -0.38560328
+		 -0.16315675 -0.46767849 -0.19477963 -0.54439533 -0.23383856 -0.60672593 0.45802963
+		 -0.014089555 0.39448047 -0.014475256 0.32853347 -0.0072490871 0.26414797 0.0039398968
+		 0.20400026 0.016003966 0.14973557 0.026316345 0.10219145 0.032630198 0.061602771
+		 0.033049263 0.033335507 0.021252036 0.03912124 0.040324688 0.03879863 0.06042105
+		 0.032299727 0.079498947 0.020227045 0.095665336 0.0037485063 0.10732728 -0.015530124
+		 0.11333817 -0.03572613 0.11310577 -0.054866035 0.10665041 -0.07107909 0.09460187
+		 -0.082781069 0.078137577 -0.088829286 0.058866858 -0.08863508 0.03867352 -0.082222015
+		 0.019530892 -0.070224993 0.0033073425 -0.053832259 -0.0084194541 -0.03468205 -0.014527142
+		 -0.014748544 -0.014492869 0.21062231 0.51518834 0.54097968 -0.057902485 0.51369298
+		 -0.0018748343 0.56959176 -0.11916396 0.59550798 -0.18625203 0.61662543 -0.25920945
+		 0.63170338 -0.33790517 0.64003301 -0.42227262 -0.28800762 0.80449951 -0.19516259
+		 0.77976328 -0.10918963 0.74793267 -0.030302435 0.70911252 0.041077465 0.66408974
+		 0.10461691 0.6144225 0.16051131 0.56292015 0.039651871 0.059615701 0.03371346 0.11367625
+		 0.0080677271 0.17882025 -0.039159417 0.25112826 -0.10925317 0.3263157 -0.20281827
+		 0.3997829 -0.31961167 0.46668333 -0.45820576 0.5220595 -0.61528111 0.56117481 -0.78396475
+		 0.58054376 0.64135385 -0.51256883 -0.29022616 0.63350737 -0.27955812 0.47627488 -0.25532162
+		 0.33797231 -0.21962202 0.22164783 -0.17577741 0.12901911 -0.12763758 0.060799643
+		 -0.079235211 0.016893893 -0.034585088 -0.0034877956;
+createNode polyAutoProj -n "BaseCharacter:polyAutoProj1";
+	rename -uid "E1B1DCB4-4FB6-7663-0AF6-45876078433F";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:399]";
+	setAttr ".ix" -type "matrix" 1.7763568394002505e-15 -2.2204460492503131e-16 1.0000000000000002 0
+		 3.944304526105059e-31 1 2.2204460492503136e-16 0 -1.0000000000000002 0 1.7763568394002505e-15 0
+		 0.79732459783551946 5.6625080108642578 0.7642243504524221 1;
+	setAttr ".s" -type "double3" 2.0000003576278691 2.0000003576278691 2.0000003576278691 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyMapSew -n "BaseCharacter:polyMapSew1";
+	rename -uid "7C2CC1F5-49F7-52B9-5C41-F68003B60254";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[0:779]";
+createNode polyMapCut -n "BaseCharacter:polyMapCut5";
+	rename -uid "71555013-41E5-98F6-0DC1-E09B843B9823";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[320:339]";
+	setAttr ".uic" yes;
+createNode polyMapCut -n "BaseCharacter:polyMapCut6";
+	rename -uid "34924F55-4AB1-6A5A-B117-F4ADC07C89D3";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[40:59]";
+	setAttr ".uic" yes;
+createNode polyMapCut -n "BaseCharacter:polyMapCut7";
+	rename -uid "5D6B4B96-4940-6DD5-0D28-C4AE97B459FC";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[689]";
+	setAttr ".uic" yes;
+createNode polyMapCut -n "BaseCharacter:polyMapCut8";
+	rename -uid "4EA3E714-4AEE-7F21-E236-9EA984165C5A";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 14 "e[429]" "e[449]" "e[469]" "e[489]" "e[509]" "e[529]" "e[549]" "e[569]" "e[589]" "e[609]" "e[629]" "e[649]" "e[669]" "e[689]";
+	setAttr ".uic" yes;
+createNode polyTweakUV -n "BaseCharacter:polyTweakUV3";
+	rename -uid "BA257DE8-4534-4E5B-C8A9-B69ECA54C17D";
+	setAttr ".uopa" yes;
+	setAttr -s 316 ".uvtk";
+	setAttr ".uvtk[7]" -type "float2" -0.23142217 -0.024475396 ;
+	setAttr ".uvtk[8]" -type "float2" -0.26489538 0.037996814 ;
+	setAttr ".uvtk[13]" -type "float2" -0.1878179 -0.093809322 ;
+	setAttr ".uvtk[14]" -type "float2" -0.19661586 0.0044305772 ;
+	setAttr ".uvtk[15]" -type "float2" -0.23526113 0.058290496 ;
+	setAttr ".uvtk[16]" -type "float2" -0.28651828 0.096451178 ;
+	setAttr ".uvtk[21]" -type "float2" -0.13692628 -0.17208837 ;
+	setAttr ".uvtk[22]" -type "float2" -0.14498943 -0.058527581 ;
+	setAttr ".uvtk[23]" -type "float2" -0.15964577 0.031509072 ;
+	setAttr ".uvtk[24]" -type "float2" -0.20286344 0.077824473 ;
+	setAttr ".uvtk[25]" -type "float2" -0.25875437 0.10701822 ;
+	setAttr ".uvtk[26]" -type "float2" -0.29579645 0.15412685 ;
+	setAttr ".uvtk[31]" -type "float2" -0.082555518 -0.26031795 ;
+	setAttr ".uvtk[32]" -type "float2" -0.083941177 -0.13361967 ;
+	setAttr ".uvtk[33]" -type "float2" -0.10089704 -0.025910098 ;
+	setAttr ".uvtk[34]" -type "float2" -0.11943528 0.056415364 ;
+	setAttr ".uvtk[35]" -type "float2" -0.16651732 0.096289068 ;
+	setAttr ".uvtk[36]" -type "float2" -0.228 0.11801787 ;
+	setAttr ".uvtk[37]" -type "float2" -0.26646838 0.15506586 ;
+	setAttr ".uvtk[38]" -type "float2" -0.29349348 0.21425596 ;
+	setAttr ".uvtk[43]" -type "float2" -0.029316351 -0.35817814 ;
+	setAttr ".uvtk[44]" -type "float2" -0.018188655 -0.2225877 ;
+	setAttr ".uvtk[45]" -type "float2" -0.030775726 -0.098337144 ;
+	setAttr ".uvtk[46]" -type "float2" -0.054653108 0.0037408024 ;
+	setAttr ".uvtk[47]" -type "float2" -0.23954564 -0.14832604 ;
+	setAttr ".uvtk[48]" -type "float2" -0.27293533 -0.11367494 ;
+	setAttr ".uvtk[49]" -type "float2" -0.19303906 0.12921345 ;
+	setAttr ".uvtk[50]" -type "float2" -0.23432118 0.15763822 ;
+	setAttr ".uvtk[51]" -type "float2" -0.25937399 0.20688334 ;
+	setAttr ".uvtk[52]" -type "float2" -0.28157967 0.2796607 ;
+	setAttr ".uvtk[57]" -type "float2" 0.017502844 -0.46383643 ;
+	setAttr ".uvtk[58]" -type "float2" 0.046635374 -0.32562557 ;
+	setAttr ".uvtk[59]" -type "float2" 0.04525432 -0.18819073 ;
+	setAttr ".uvtk[60]" -type "float2" 0.023185581 -0.066380449 ;
+	setAttr ".uvtk[61]" -type "float2" -0.095140278 -0.36316234 ;
+	setAttr ".uvtk[62]" -type "float2" -0.29477984 -0.086613476 ;
+	setAttr ".uvtk[63]" -type "float2" -0.19818008 0.16167575 ;
+	setAttr ".uvtk[64]" -type "float2" -0.22298554 0.20223373 ;
+	setAttr ".uvtk[65]" -type "float2" -0.23998143 0.26642677 ;
+	setAttr ".uvtk[66]" -type "float2" -0.2631003 0.35237902 ;
+	setAttr ".uvtk[71]" -type "float2" 0.051977023 -0.57377505 ;
+	setAttr ".uvtk[72]" -type "float2" 0.10416861 -0.4412331 ;
+	setAttr ".uvtk[73]" -type "float2" 0.12075426 -0.2961393 ;
+	setAttr ".uvtk[74]" -type "float2" 0.10802855 -0.15694034 ;
+	setAttr ".uvtk[75]" -type "float2" 0.1016483 -0.38466346 ;
+	setAttr ".uvtk[76]" -type "float2" -0.3047584 -0.059900612 ;
+	setAttr ".uvtk[77]" -type "float2" -0.18325704 0.20016292 ;
+	setAttr ".uvtk[78]" -type "float2" -0.19697738 0.25678048 ;
+	setAttr ".uvtk[79]" -type "float2" -0.21217453 0.33670253 ;
+	setAttr ".uvtk[80]" -type "float2" -0.24197984 0.43333617 ;
+	setAttr ".uvtk[85]" -type "float2" 0.067466691 -0.68252826 ;
+	setAttr ".uvtk[86]" -type "float2" 0.14734855 -0.56614733 ;
+	setAttr ".uvtk[87]" -type "float2" 0.18857938 -0.42099389 ;
+	setAttr ".uvtk[88]" -type "float2" 0.19283876 -0.26899907 ;
+	setAttr ".uvtk[89]" -type "float2" 0.15712905 -0.4449687 ;
+	setAttr ".uvtk[90]" -type "float2" -0.30374625 -0.026295424 ;
+	setAttr ".uvtk[91]" -type "float2" -0.15164922 0.25052214 ;
+	setAttr ".uvtk[92]" -type "float2" -0.16090737 0.32515517 ;
+	setAttr ".uvtk[93]" -type "float2" -0.18096299 0.41937655 ;
+	setAttr ".uvtk[94]" -type "float2" -0.22278646 0.52207518 ;
+	setAttr ".uvtk[99]" -type "float2" -0.2648558 0.88444901 ;
+	setAttr ".uvtk[100]" -type "float2" 0.16814956 -0.69521332 ;
+	setAttr ".uvtk[101]" -type "float2" 0.2409589 -0.55972952 ;
+	setAttr ".uvtk[102]" -type "float2" 0.2699697 -0.40160167 ;
+	setAttr ".uvtk[103]" -type "float2" 0.21311775 -0.51790142 ;
+	setAttr ".uvtk[104]" -type "float2" -0.11065689 0.074444652 ;
+	setAttr ".uvtk[105]" -type "float2" -0.1085636 0.31737268 ;
+	setAttr ".uvtk[106]" -type "float2" -0.1207088 0.40969157 ;
+	setAttr ".uvtk[107]" -type "float2" -0.1521942 0.51446098 ;
+	setAttr ".uvtk[108]" -type "float2" -0.21048637 0.61653394 ;
+	setAttr ".uvtk[111]" -type "float2" -0.22688606 0.80496287 ;
+	setAttr ".uvtk[112]" -type "float2" -0.1924226 0.9453963 ;
+	setAttr ".uvtk[113]" -type "float2" 0.26923078 -0.70751894 ;
+	setAttr ".uvtk[114]" -type "float2" 0.33136368 -0.55188709 ;
+	setAttr ".uvtk[115]" -type "float2" 0.15558058 -0.81083435 ;
+	setAttr ".uvtk[116]" -type "float2" 0.091920495 0.2644155 ;
+	setAttr ".uvtk[117]" -type "float2" -0.060676157 0.40361822 ;
+	setAttr ".uvtk[118]" -type "float2" -0.08328522 0.51083076 ;
+	setAttr ".uvtk[119]" -type "float2" -0.1322685 0.62005436 ;
+	setAttr ".uvtk[120]" -type "float2" -0.21019596 0.71282601 ;
+	setAttr ".uvtk[121]" -type "float2" -0.14581829 0.84384763 ;
+	setAttr ".uvtk[122]" -type "float2" -0.11616775 1.0084174 ;
+	setAttr ".uvtk[123]" -type "float2" 0.36841863 -0.71532393 ;
+	setAttr ".uvtk[124]" -type "float2" 0.18557394 -0.90781522 ;
+	setAttr ".uvtk[125]" -type "float2" 0.10954864 0.32144541 ;
+	setAttr ".uvtk[126]" -type "float2" -0.015706569 0.51008177 ;
+	setAttr ".uvtk[127]" -type "float2" -0.056167863 0.62686014 ;
+	setAttr ".uvtk[128]" -type "float2" -0.12789047 0.73207349 ;
+	setAttr ".uvtk[129]" -type "float2" -0.064563647 0.88432765 ;
+	setAttr ".uvtk[130]" -type "float2" -0.03604079 1.0687217 ;
+	setAttr ".uvtk[131]" -type "float2" 0.21510693 -1.0174069 ;
+	setAttr ".uvtk[132]" -type "float2" 0.12428547 0.39008731 ;
+	setAttr ".uvtk[133]" -type "float2" 0.017995246 0.63525844 ;
+	setAttr ".uvtk[134]" -type "float2" -0.047242768 0.75366038 ;
+	setAttr ".uvtk[135]" -type "float2" 0.016788043 0.92296267 ;
+	setAttr ".uvtk[136]" -type "float2" -0.20738667 0.89635158 ;
+	setAttr ".uvtk[137]" -type "float2" -0.019974783 0.50628442 ;
+	setAttr ".uvtk[138]" -type "float2" 0.031769283 0.77513647 ;
+	setAttr ".uvtk[139]" -type "float2" -0.15118507 0.8040238 ;
+	setAttr ".uvtk[140]" -type "float2" -0.12322143 0.7072919 ;
+	setAttr ".uvtk[141]" -type "float2" -0.023581266 -0.073253661 ;
+	setAttr ".uvtk[142]" -type "float2" 0.033279061 -0.21065427 ;
+	setAttr ".uvtk[143]" -type "float2" 0.11343229 -0.16915999 ;
+	setAttr ".uvtk[144]" -type "float2" 0.063939035 -0.04074657 ;
+	setAttr ".uvtk[145]" -type "float2" -0.10698056 -0.10291728 ;
+	setAttr ".uvtk[146]" -type "float2" -0.043777466 -0.24807337 ;
+	setAttr ".uvtk[147]" -type "float2" 0.10162938 -0.33222207 ;
+	setAttr ".uvtk[148]" -type "float2" 0.17242604 -0.28365064 ;
+	setAttr ".uvtk[151]" -type "float2" -0.065450549 0.075745702 ;
+	setAttr ".uvtk[152]" -type "float2" 0.026805699 0.097854674 ;
+	setAttr ".uvtk[153]" -type "float2" -0.23070008 -0.2175182 ;
+	setAttr ".uvtk[154]" -type "float2" -0.047655463 -0.41917112 ;
+	setAttr ".uvtk[155]" -type "float2" 0.032605886 -0.37578505 ;
+	setAttr ".uvtk[156]" -type "float2" -0.15293002 0.055022925 ;
+	setAttr ".uvtk[157]" -type "float2" 0.1771822 -0.43508229 ;
+	setAttr ".uvtk[158]" -type "float2" 0.23743433 -0.38155559 ;
+	setAttr ".uvtk[163]" -type "float2" -0.090105295 0.23109955 ;
+	setAttr ".uvtk[164]" -type "float2" 0.003851831 0.2421031 ;
+	setAttr ".uvtk[165]" -type "float2" 0.1081602 -0.53534967 ;
+	setAttr ".uvtk[166]" -type "float2" -0.26321083 -0.11813515 ;
+	setAttr ".uvtk[167]" -type "float2" 0.11715132 -0.48299751 ;
+	setAttr ".uvtk[168]" -type "float2" -0.17904645 0.21990123 ;
+	setAttr ".uvtk[169]" -type "float2" 0.25551116 -0.51788312 ;
+	setAttr ".uvtk[170]" -type "float2" 0.30488622 -0.46139434 ;
+	setAttr ".uvtk[177]" -type "float2" -0.096909285 0.38702729 ;
+	setAttr ".uvtk[178]" -type "float2" -0.0044024587 0.38703185 ;
+	setAttr ".uvtk[179]" -type "float2" 0.16346484 -0.60392314 ;
+	setAttr ".uvtk[180]" -type "float2" -0.28474057 -0.018505394 ;
+	setAttr ".uvtk[181]" -type "float2" 0.20461613 -0.56848067 ;
+	setAttr ".uvtk[182]" -type "float2" -0.18459368 0.38524282 ;
+	setAttr ".uvtk[183]" -type "float2" 0.33281773 -0.58070523 ;
+	setAttr ".uvtk[184]" -type "float2" 0.37176418 -0.52275759 ;
+	setAttr ".uvtk[192]" -type "float2" -0.08692193 0.53774863 ;
+	setAttr ".uvtk[193]" -type "float2" 0.0011801124 0.52767646 ;
+	setAttr ".uvtk[194]" -type "float2" 0.22166234 -0.66100943 ;
+	setAttr ".uvtk[195]" -type "float2" -0.29503465 0.081473708 ;
+	setAttr ".uvtk[196]" -type "float2" 0.29038692 -0.63278311 ;
+	setAttr ".uvtk[197]" -type "float2" -0.17080331 0.54457211 ;
+	setAttr ".uvtk[198]" -type "float2" 0.40676659 -0.62463629 ;
+	setAttr ".uvtk[199]" -type "float2" 0.4362762 -0.56589091 ;
+	setAttr ".uvtk[206]" -type "float2" -0.062800407 0.67802459 ;
+	setAttr ".uvtk[207]" -type "float2" 0.018441916 0.65950632 ;
+	setAttr ".uvtk[208]" -type "float2" 0.21105629 -0.85098648 ;
+	setAttr ".uvtk[209]" -type "float2" -0.29490137 0.18190545 ;
+	setAttr ".uvtk[210]" -type "float2" 0.3714307 -0.67784977 ;
+	setAttr ".uvtk[211]" -type "float2" -0.14077336 0.69204706 ;
+	setAttr ".uvtk[212]" -type "float2" 0.47730005 -0.6508832 ;
+	setAttr ".uvtk[213]" -type "float2" 0.49843723 -0.59086448 ;
+	setAttr ".uvtk[220]" -type "float2" -0.028498709 0.80364788 ;
+	setAttr ".uvtk[221]" -type "float2" 0.044197798 0.77881581 ;
+	setAttr ".uvtk[222]" -type "float2" 0.2172752 -0.95106804 ;
+	setAttr ".uvtk[223]" -type "float2" -0.063172042 0.27296004 ;
+	setAttr ".uvtk[224]" -type "float2" 0.44729358 -0.70620769 ;
+	setAttr ".uvtk[225]" -type "float2" -0.099141061 0.82303381 ;
+	setAttr ".uvtk[226]" -type "float2" 0.16796035 1.2065099 ;
+	setAttr ".uvtk[227]" -type "float2" 0.21106291 1.169893 ;
+	setAttr ".uvtk[234]" -type "float2" 0.011225879 0.91182995 ;
+	setAttr ".uvtk[235]" -type "float2" 0.074669003 0.88301802 ;
+	setAttr ".uvtk[236]" -type "float2" 0.27877265 -0.98200834 ;
+	setAttr ".uvtk[237]" -type "float2" 0.098433971 0.56255603 ;
+	setAttr ".uvtk[238]" -type "float2" 0.11371017 1.2350179 ;
+	setAttr ".uvtk[239]" -type "float2" -0.051548362 0.93456578 ;
+	setAttr ".uvtk[240]" -type "float2" 0.14352489 1.1723492 ;
+	setAttr ".uvtk[241]" -type "float2" 0.18449241 1.1405029 ;
+	setAttr ".uvtk[248]" -type "float2" 0.051481485 1.0014455 ;
+	setAttr ".uvtk[249]" -type "float2" 0.10606933 0.97081459 ;
+	setAttr ".uvtk[250]" -type "float2" -0.084627509 1.0258391 ;
+	setAttr ".uvtk[251]" -type "float2" 0.11588788 0.63441074 ;
+	setAttr ".uvtk[252]" -type "float2" 0.095678449 1.1968448 ;
+	setAttr ".uvtk[253]" -type "float2" -0.0039216876 1.0256504 ;
+	setAttr ".uvtk[254]" -type "float2" 0.11858088 1.1289722 ;
+	setAttr ".uvtk[255]" -type "float2" 0.16105705 1.0982307 ;
+	setAttr ".uvtk[262]" -type "float2" 0.088083327 1.0730987 ;
+	setAttr ".uvtk[263]" -type "float2" 0.13534331 1.0421975 ;
+	setAttr ".uvtk[264]" -type "float2" -0.087507546 0.98520559 ;
+	setAttr ".uvtk[265]" -type "float2" 0.13283542 0.69579458 ;
+	setAttr ".uvtk[266]" -type "float2" 0.071848929 1.1528677 ;
+	setAttr ".uvtk[267]" -type "float2" 0.038422704 1.0973854 ;
+	setAttr ".uvtk[274]" -type "float2" -0.091510713 0.9413954 ;
+	setAttr ".uvtk[275]" -type "float2" 0.035508156 0.72063279 ;
+	setAttr ".uvtk[282]" -type "float2" -0.38062632 -0.35590851 ;
+	setAttr ".uvtk[283]" -type "float2" -0.39719552 -0.32513931 ;
+	setAttr ".uvtk[284]" -type "float2" -0.1167151 -0.54838079 ;
+	setAttr ".uvtk[285]" -type "float2" -0.3594794 -0.3394503 ;
+	setAttr ".uvtk[286]" -type "float2" -0.37594795 -0.31112301 ;
+	setAttr ".uvtk[287]" -type "float2" -0.41327274 -0.30239531 ;
+	setAttr ".uvtk[288]" -type "float2" -0.095698595 -0.53678495 ;
+	setAttr ".uvtk[289]" -type "float2" -0.33941454 -0.326213 ;
+	setAttr ".uvtk[290]" -type "float2" -0.35574728 -0.29882476 ;
+	setAttr ".uvtk[291]" -type "float2" -0.39200675 -0.29104015 ;
+	setAttr ".uvtk[292]" -type "float2" -0.42913386 -0.27988458 ;
+	setAttr ".uvtk[293]" -type "float2" -0.075818956 -0.5249849 ;
+	setAttr ".uvtk[294]" -type "float2" -0.3194046 -0.31625161 ;
+	setAttr ".uvtk[295]" -type "float2" -0.33556998 -0.28827715 ;
+	setAttr ".uvtk[296]" -type "float2" -0.37176305 -0.27967632 ;
+	setAttr ".uvtk[297]" -type "float2" -0.4079555 -0.27107388 ;
+	setAttr ".uvtk[298]" -type "float2" -0.44509912 -0.24981505 ;
+	setAttr ".uvtk[299]" -type "float2" -0.056043983 -0.51299757 ;
+	setAttr ".uvtk[300]" -type "float2" -0.29842132 -0.30952993 ;
+	setAttr ".uvtk[301]" -type "float2" -0.31439149 -0.27946442 ;
+	setAttr ".uvtk[302]" -type "float2" -0.35151964 -0.26831216 ;
+	setAttr ".uvtk[303]" -type "float2" -0.38777801 -0.26052749 ;
+	setAttr ".uvtk[304]" -type "float2" -0.42411605 -0.24309671 ;
+	setAttr ".uvtk[305]" -type "float2" -0.091650963 7.9631805e-05 ;
+	setAttr ".uvtk[306]" -type "float2" -0.035340965 -0.50082839 ;
+	setAttr ".uvtk[307]" -type "float2" -0.33025384 -0.25695652 ;
+	setAttr ".uvtk[308]" -type "float2" -0.36757767 -0.24823028 ;
+	setAttr ".uvtk[309]" -type "float2" -0.40410593 -0.23313791 ;
+	setAttr ".uvtk[310]" -type "float2" -0.070947945 0.012244403 ;
+	setAttr ".uvtk[311]" -type "float2" -0.34633011 -0.23421448 ;
+	setAttr ".uvtk[312]" -type "float2" -0.38404143 -0.21990287 ;
+	setAttr ".uvtk[313]" -type "float2" -0.051172853 0.024227858 ;
+	setAttr ".uvtk[314]" -type "float2" -0.36289454 -0.20344639 ;
+	setAttr ".uvtk[315]" -type "float2" -0.031293333 0.036024451 ;
+	setAttr ".uvtk[316]" -type "float2" -0.010276794 0.047617257 ;
+	setAttr ".uvtk[317]" -type "float2" 0.002910018 -1.3232664 ;
+	setAttr ".uvtk[318]" -type "float2" -0.01657939 -1.2804048 ;
+	setAttr ".uvtk[319]" -type "float2" -0.43130261 0.71644717 ;
+	setAttr ".uvtk[320]" -type "float2" 0.036661744 -1.319278 ;
+	setAttr ".uvtk[321]" -type "float2" 0.010434031 -1.278049 ;
+	setAttr ".uvtk[322]" -type "float2" 0.085612357 -1.0215756 ;
+	setAttr ".uvtk[323]" -type "float2" -0.37420726 0.69070977 ;
+	setAttr ".uvtk[324]" -type "float2" -0.39627516 0.75463748 ;
+	setAttr ".uvtk[325]" -type "float2" 0.067878306 -1.3055556 ;
+	setAttr ".uvtk[326]" -type "float2" 0.035357952 -1.2665038 ;
+	setAttr ".uvtk[327]" -type "float2" 0.10910985 -1.013773 ;
+	setAttr ".uvtk[328]" -type "float2" -0.3320848 0.65697753 ;
+	setAttr ".uvtk[329]" -type "float2" -0.3470751 0.7230255 ;
+	setAttr ".uvtk[330]" -type "float2" -0.35705313 0.78266269 ;
+	setAttr ".uvtk[331]" -type "float2" 0.0968678 -1.2823398 ;
+	setAttr ".uvtk[332]" -type "float2" 0.058917284 -1.2458479 ;
+	setAttr ".uvtk[333]" -type "float2" 0.13084537 -1.0014141 ;
+	setAttr ".uvtk[334]" -type "float2" -0.053031206 0.46253622 ;
+	setAttr ".uvtk[335]" -type "float2" -0.30914238 0.68652683 ;
+	setAttr ".uvtk[336]" -type "float2" -0.31808305 0.74623162 ;
+	setAttr ".uvtk[337]" -type "float2" -0.31407869 0.79967004 ;
+	setAttr ".uvtk[338]" -type "float2" 0.12399638 -1.2500143 ;
+	setAttr ".uvtk[339]" -type "float2" 0.081856966 -1.21629 ;
+	setAttr ".uvtk[340]" -type "float2" 0.15173435 -0.98454857 ;
+	setAttr ".uvtk[341]" -type "float2" -0.03206411 0.48381341 ;
+	setAttr ".uvtk[342]" -type "float2" -0.2855812 0.70717418 ;
+	setAttr ".uvtk[343]" -type "float2" -0.28686506 0.75994402 ;
+	setAttr ".uvtk[344]" -type "float2" -0.26796266 0.8050977 ;
+	setAttr ".uvtk[345]" -type "float2" 0.17269939 -0.96326363 ;
+	setAttr ".uvtk[346]" -type "float2" -0.011173725 0.50067115 ;
+	setAttr ".uvtk[347]" -type "float2" -0.26065606 0.71871072 ;
+	setAttr ".uvtk[348]" -type "float2" -0.25311318 0.76392227 ;
+	setAttr ".uvtk[349]" -type "float2" 0.010562748 0.51302272 ;
+	setAttr ".uvtk[350]" -type "float2" -0.23364213 0.72105801 ;
+	setAttr ".uvtk[351]" -type "float2" 0.034060895 0.52081776 ;
+	setAttr ".uvtk[352]" -type "float2" 0.14813173 -0.72716761 ;
+	setAttr ".uvtk[353]" -type "float2" 0.16743585 -0.75278836 ;
+	setAttr ".uvtk[354]" -type "float2" 0.16908371 -0.71989608 ;
+	setAttr ".uvtk[355]" -type "float2" 0.18779269 -0.7798239 ;
+	setAttr ".uvtk[356]" -type "float2" 0.18855602 -0.74284488 ;
+	setAttr ".uvtk[357]" -type "float2" 0.188815 -0.70927018 ;
+	setAttr ".uvtk[358]" -type "float2" 0.20959982 -0.76733279 ;
+	setAttr ".uvtk[359]" -type "float2" 0.20833206 -0.73094821 ;
+	setAttr ".uvtk[360]" -type "float2" 0.2083604 -0.69527495 ;
+	setAttr ".uvtk[361]" -type "float2" 0.22988689 -0.75408399 ;
+	setAttr ".uvtk[362]" -type "float2" 0.22779158 -0.71711344 ;
+	setAttr ".uvtk[363]" -type "float2" 0.2287553 -0.67795384 ;
+	setAttr ".uvtk[364]" -type "float2" 0.24965149 -0.74013066 ;
+	setAttr ".uvtk[365]" -type "float2" 0.24796402 -0.70136648 ;
+	setAttr ".uvtk[366]" -type "float2" 0.26989406 -0.72548985 ;
+	setAttr ".uvtk[367]" -type "float2" 0.21967132 0.28334844 ;
+	setAttr ".uvtk[368]" -type "float2" 0.24158742 0.25921947 ;
+	setAttr ".uvtk[369]" -type "float2" 0.23991522 0.29798222 ;
+	setAttr ".uvtk[370]" -type "float2" 0.2607837 0.2358017 ;
+	setAttr ".uvtk[371]" -type "float2" 0.26176062 0.2749601 ;
+	setAttr ".uvtk[372]" -type "float2" 0.25968087 0.31192875 ;
+	setAttr ".uvtk[373]" -type "float2" 0.28117901 0.2531175 ;
+	setAttr ".uvtk[374]" -type "float2" 0.28122079 0.28878915 ;
+	setAttr ".uvtk[375]" -type "float2" 0.27996856 0.32517099 ;
+	setAttr ".uvtk[376]" -type "float2" 0.30072469 0.26710778 ;
+	setAttr ".uvtk[377]" -type "float2" 0.3009972 0.30068034 ;
+	setAttr ".uvtk[378]" -type "float2" 0.30177623 0.33765572 ;
+	setAttr ".uvtk[379]" -type "float2" 0.32045621 0.27772909 ;
+	setAttr ".uvtk[380]" -type "float2" 0.32211781 0.31061846 ;
+	setAttr ".uvtk[381]" -type "float2" 0.34140825 0.28499639 ;
+	setAttr ".uvtk[382]" -type "float2" 0.10248494 0.25267619 ;
+	setAttr ".uvtk[383]" -type "float2" 0.12353432 0.12070155 ;
+	setAttr ".uvtk[384]" -type "float2" 0.092632592 0.38542885 ;
+	setAttr ".uvtk[385]" -type "float2" 0.093320787 0.51492524 ;
+	setAttr ".uvtk[386]" -type "float2" 0.10292667 0.63744962 ;
+	setAttr ".uvtk[387]" -type "float2" 0.11908352 0.74987787 ;
+	setAttr ".uvtk[388]" -type "float2" 0.13903612 0.84987146 ;
+	setAttr ".uvtk[389]" -type "float2" 0.16012114 0.93595791 ;
+	setAttr ".uvtk[390]" -type "float2" 0.18035221 1.0074569 ;
+	setAttr ".uvtk[391]" -type "float2" 0.19909173 1.0641932 ;
+	setAttr ".uvtk[392]" -type "float2" 0.21777093 1.1059078 ;
+	setAttr ".uvtk[393]" -type "float2" 0.24059093 1.1311836 ;
+	setAttr ".uvtk[394]" -type "float2" 0.51209623 -0.53007174 ;
+	setAttr ".uvtk[395]" -type "float2" 0.46124065 -0.50497842 ;
+	setAttr ".uvtk[396]" -type "float2" 0.40832114 -0.46189326 ;
+	setAttr ".uvtk[397]" -type "float2" 0.35357475 -0.40159807 ;
+	setAttr ".uvtk[398]" -type "float2" 0.29844815 -0.32463539 ;
+	setAttr ".uvtk[399]" -type "float2" 0.24524975 -0.23191623 ;
+	setAttr ".uvtk[400]" -type "float2" 0.19668496 -0.1250497 ;
+	setAttr ".uvtk[401]" -type "float2" 0.15539223 -0.0064538121 ;
+	setAttr ".uvtk[422]" -type "float2" 0.56184256 -0.53523982 ;
+	setAttr ".uvtk[423]" -type "float2" 0.56028879 -0.59619308 ;
+	setAttr ".uvtk[424]" -type "float2" 0.54724663 -0.65922117 ;
+	setAttr ".uvtk[425]" -type "float2" 0.52110946 -0.71953332 ;
+	setAttr ".uvtk[426]" -type "float2" 0.34653932 -1.0014043 ;
+	setAttr ".uvtk[427]" -type "float2" 0.18110913 -1.2757418 ;
+	setAttr ".uvtk[428]" -type "float2" 0.14608681 -1.3139431 ;
+	setAttr ".uvtk[429]" -type "float2" 0.10686827 -1.34198 ;
+	setAttr ".uvtk[430]" -type "float2" 0.063895404 -1.3589995 ;
+	setAttr ".uvtk[431]" -type "float2" 0.01777935 -1.3644396 ;
+	setAttr ".uvtk[432]" -type "float2" 0.22379497 -1.1309613 ;
+	setAttr ".uvtk[433]" -type "float2" 0.37137768 -0.88592041 ;
+	setAttr ".uvtk[434]" -type "float2" 0.26314163 -0.85742378 ;
+	setAttr ".uvtk[435]" -type "float2" 0.15682998 -0.82081753 ;
+	setAttr ".uvtk[436]" -type "float2" 0.056426138 -0.78211766 ;
+createNode polyMapCut -n "BaseCharacter:polyMapCut9";
+	rename -uid "7AF9FFC7-4506-BE42-C626-86AE812F989E";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[180:199]";
+	setAttr ".uic" yes;
+createNode polyMapSewMove -n "BaseCharacter:polyMapSewMove4";
+	rename -uid "032D53FA-4C0F-F02E-23CF-AFBE955EDD20";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[198]";
+createNode polyMapSewMove -n "BaseCharacter:polyMapSewMove5";
+	rename -uid "91402664-4DDA-7C0A-4737-E685F567F3B2";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[338]";
+createNode polyMapSewMove -n "BaseCharacter:polyMapSewMove6";
+	rename -uid "9C746EF6-4297-560A-57E9-EC9D1D30911A";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[58]";
+createNode polyTweakUV -n "BaseCharacter:polyTweakUV4";
+	rename -uid "64A3A6ED-4761-D171-08E5-E0BA371A4955";
+	setAttr ".uopa" yes;
+	setAttr -s 452 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" -0.031745031 -0.038753122 -0.034045026
+		 -0.044568747 -0.01597896 -0.055685073 -0.011158792 -0.043833286 -0.051222038 -0.034295112
+		 -0.038028166 -0.049370825 -0.024244333 -0.065464184 -0.030829333 0.062869474 -0.0053527206
+		 0.029874757 -0.031356182 -0.032480419 -0.010274753 -0.030982912 -0.043302715 -0.052697718
+		 -0.035143577 -0.072222859 -0.067221671 0.098249033 -0.033302009 0.040832654 -0.0061740428
+		 0.016786039 0.011146434 -0.01618126 -0.032918319 -0.026357055 -0.013506152 -0.017976999
+		 -0.049351472 -0.054227591 -0.047611166 -0.075293869 -0.11371392 0.1370645 -0.073094733
+		 0.067741103 -0.03483361 0.018353254 -0.0061189234 0.0033135712 0.0080067068 -0.0062196255
+		 0.010336857 -0.022404253 -0.036265809 -0.021038979 -0.020322267 -0.0070481598 -0.055582136
+		 -0.053812027 -0.060428061 -0.074369952 -0.16892578 0.18015325 -0.12473531 0.099100575
+		 -0.077975571 0.036822494 -0.036156118 -0.0046243966 -0.0059203506 -0.010502875 0.0078993887
+		 -0.010543168 0.0095516294 -0.030617833 0.0052223355 -0.070542097 -0.041072644 -0.017039299
+		 -0.030148448 0.0011486113 -0.061384693 -0.05149135 -0.072340935 -0.069535941 -0.2307514
+		 0.22800149 -0.18681142 0.1362585 -0.13473402 0.060791112 -0.082550362 0.0052478909
+		 -0.037507534 -0.028138593 -0.0058085024 -0.02464956 0.0078975558 -0.01503548 0.0074664652
+		 -0.025585115 -0.0012470931 -0.056708783 -0.011709357 -0.10754049 -0.046871241 -0.014736533
+		 -0.042042259 0.0058970451 -0.066191591 -0.047491521 -0.082184695 -0.061260581 -0.29611564
+		 0.28063217 -0.25717741 0.18025406 -0.2037006 0.092106044 -0.14429392 0.021627229
+		 -0.087055922 -0.027111813 0.0077875257 -0.019681841 0.0055601448 -0.020899415 -0.006823957
+		 -0.043536544 -0.023171566 -0.086774111 -0.036838211 -0.14852369 -0.053095814 -0.014347881
+		 -0.054841425 0.0067417026 -0.069532596 -0.042202592 -0.088996574 -0.050350457 -0.36060232
+		 0.33750206 -0.33271611 0.23175935 -0.28275406 0.13233484 -0.21998452 0.046823218
+		 -0.15363717 -0.018645335 0.0035749078 -0.016284138 -0.012203351 -0.030518234 -0.033746988
+		 -0.066614449 -0.054647475 -0.12232703 -0.068332642 -0.1940434 -0.05913803 -0.015907317
+		 -0.067291901 0.0035945177 -0.071080975 -0.036140472 -0.09211053 -0.037870169 -0.41790527
+		 0.39739484 -0.40893561 0.29105997 -0.36885017 0.18272029 -0.30753917 0.082876369
+		 -0.23584552 -1.0028481e-05 -0.017632872 -0.017370105 -0.044083253 -0.046414495 -0.07157328
+		 -0.096760511 -0.093586564 -0.16448152 -0.10379715 -0.24424165 -0.064406529 -0.019261062
+		 -0.078173481 -0.0032433867 -0.070685692 -0.029896796 -0.091222256 -0.025038451 -0.21028905
+		 -0.47045636 -0.47926539 0.35809252 -0.45763779 0.24416721 -0.40402898 0.13149408
+		 -0.3316274 0.031246126 -0.054430172 -0.025826156 -0.08821395 -0.070924938 -0.11801016
+		 -0.13557345 -0.13727726 -0.21391237 -0.14016183 -0.29867643 -0.06838569 -0.024081081
+		 -0.086419642 -0.013108134 -0.19892047 -0.41451359 -0.27267969 -0.4727394 -0.54275227
+		 0.31727719 -0.50537533 0.1939896 -0.43817082 0.077199042 -0.10482587 -0.044365287
+		 -0.142129 -0.10608405 -0.17009699 -0.18422329 -0.18223169 -0.27071685 -0.17351711
+		 -0.35614884 -0.25661442 -0.40264255 -0.3403956 -0.4741084 -0.60579288 0.2712228 -0.55171096
+		 0.13940674 -0.16620412 -0.075417638 -0.20266901 -0.15351564 -0.22404498 -0.24330115
+		 -0.22395377 -0.33421248 -0.31657201 -0.39057094 -0.41234857 -0.47064352 -0.667207
+		 0.21869355 -0.2352448 -0.12101448 -0.26582986 -0.21426082 -0.2749837 -0.31256837
+		 -0.37824684 -0.3749994 -0.48772341 -0.46040422 -0.3077924 -0.18260533 -0.32653004
+		 -0.28848577 -0.44139329 -0.35442436 -0.37866485 -0.26072842 0.037418902 0.036066741
+		 0.075883389 0.06717521 0.058612168 0.095279709 0.026583135 0.058174491 0.048026621
+		 0.014101803 0.092869878 0.039036304 0.12373596 0.10719121 0.098871708 0.13945894
+		 0.039601803 -0.058984816 0.021054864 -0.05122903 0.010385454 0.012193292 0.0046215653
+		 0.026914328 0.058650255 -0.0079770535 0.10982311 0.010521054 0.14825749 0.074654579
+		 0.015956342 -0.0022206903 0.1784001 0.15742791 0.1450274 0.1915736 0.059689522 -0.060672373
+		 0.045526981 -0.036213458 0.033698916 -0.031335443 0.0058928132 -0.038285553 -0.0036520362
+		 -0.0064228773 -0.0058674216 -7.9452991e-05 0.17269832 0.041393608 0.021579087 -0.016534567
+		 0.21140087 0.12267938 -0.0016281605 -0.01227805 0.23667175 0.21874306 0.19415414
+		 0.25201744 0.079342127 -0.056085438 0.058304071 -0.037201673 0.050573945 -0.015648603
+		 0.04480803 -0.013280213 0.023975372 -0.023035407 -0.0067102909 -0.0072110295 -0.0035829544
+		 -0.022011638 -0.0037831664 -0.02512008 0.24429941 0.08672861 0.00046414137 -0.017852336
+		 0.27886599 0.18438514 -0.0035200715 -0.018591583 0.29455519 0.29138684 0.24258077
+		 0.32057273 0.096631885 -0.045656025 0.070778012 -0.034197479 0.056787491 -0.016109765
+		 0.055147052 0.0038401484 0.040052414 -0.0092280507 0.017287552 -0.012039185 -0.0071458817
+		 -0.013778269 0.011085272 -0.036289334 0.011035919 -0.048495054 0.32100302 0.14816532
+		 -0.003379941 -0.01480341 0.3464272 0.26043501 0.010934591 -0.023580492 0.34699696
+		 0.37475395 0.28563404 0.39620131 0.10986423 -0.030396491 0.081726193 -0.027488232
+		 0.062841654 -0.014622569 0.03676939 -0.0038758516 0.014192283 0.00099390745 -0.0075962543
+		 0.020102561 0.040489972 -0.05160135 0.038778305 -0.072606206 0.39842063 0.22672448
+		 0.010815263 -0.010303319 0.40883523 0.35059991 0.041912019 -0.029910922 0.38745737
+		 0.46698025 0.31726217 0.47671807 0.1177429 -0.011794865 0.090075731 -0.017725259
+		 0.068143845 -0.011333764 0.035278678 0.0022600889 0.01521951 0.013823032 0.00035756826
+		 0.03838408 0.084208608 -0.070153236 0.078977525 -0.099207461 0.47122949 0.32249832
+		 0.043277144 -0.0073999166 0.45944774 0.45328647 0.089032888 -0.040214062 0.51810765
+		 -0.34331822 0.44849718 -0.37354076 0.11949527 0.0083321333 0.095008135 -0.005859673
+		 0.072175145 -0.006565094 0.035739422 0.0085222721 0.02017051 0.025609672 0.013626873
+		 0.053487122 0.1411894 -0.093955338 0.1305328 -0.12978828 0.53294998 0.43410423 0.093665242
+		 -0.009134829 0.5891372 -0.30537319 0.15129572 -0.056977808 0.44868279 -0.27263796
+		 0.39555705 -0.31131339 0.11494935 0.028017819 0.096039653 0.006950736 0.074540496
+		 -0.00078201294 0.038104773 0.014305234 0.028540254 0.035286546 0.030941248 0.063811779
+		 0.20963043 -0.12477809 0.19158065 -0.16556674;
+	setAttr ".uvtk[250:451]" 0.65910023 -0.2583884 0.1610207 -0.018435001 0.50151807
+		 -0.22920287 0.22697407 -0.082473278 0.36848575 -0.21309865 0.32934004 -0.25594246
+		 0.10454905 0.045338273 0.093068838 0.019455135 0.075008154 0.0054509044 0.042140245
+		 0.019055903 0.039507151 0.041916072 0.050615549 0.068306386 0.2867645 -0.16410345
+		 0.25926268 -0.20743704 0.55291945 -0.17975295 0.24368608 -0.038017988 0.40682918
+		 -0.16720605 0.31343633 -0.11868 0.089311838 0.058601797 0.086385489 0.030432463 0.073531866
+		 0.011525273 0.047448874 0.022317648 0.051999092 0.044843554 0.070728064 0.066514313
+		 0.44391483 -0.11713195 0.33916956 -0.070279717 0.076643348 0.038811505 0.070255756
+		 0.016848147 0.05351007 0.023775101 0.064794898 0.043775737 0.065500021 0.020900428
+		 0.059729934 0.023286939 -0.038924575 -0.052210733 -0.0058123171 -0.039107785 -0.091540754
+		 -0.060333267 -0.040331066 -0.076856174 -0.0058477819 -0.053855747 0.0075417757 -0.024429709
+		 -0.095945418 -0.094475865 0.09079653 -0.076645985 0.03875941 -0.060289353 0.0072412491
+		 -0.029220492 0.0014658272 -0.011592686 0.16092676 -0.079443678 0.080110073 -0.053182319
+		 0.033080637 -0.045432836 0.0070592165 -0.033983856 -0.00069713593 -0.0067147613 -0.023169786
+		 -0.0039104819 0.14389253 -0.048516557 0.069356203 -0.030351967 0.027305782 -0.03089574
+		 0.0049216151 -0.028603762 -0.0027489364 -0.0015369654 -0.028763652 0.010006785 -0.064863533
+		 -0.0046258569 0.12683207 -0.018598929 0.0026702285 -0.023262084 -0.0028648376 -0.0062257051
+		 0.01044035 0.033016205 -0.075358361 0.017368019 -0.0031343699 -0.010667503 0.01069355
+		 0.018005133 0.04692322 0.065612078 0.010760844 0.0035597086 0.045896828 0.040326357
+		 0.044627547 0.015999198 -0.72646326 0.15922007 -0.59655529 0.079885155 -0.56589592
+		 -0.4423098 -0.78345925 0.092560649 -0.64000565 0.015084624 -0.47132516 0.019374788
+		 -0.50597537 -0.32798171 -0.64651674 -0.41574061 0.7634148 0.33681965 0.66404498 0.20883523
+		 -0.5035882 -0.042287022 -0.43155 -0.22858554 -0.57221186 -0.29503024 0.8503921 -0.061573267
+		 0.68451399 0.37633559 0.59850866 0.25201759 0.55726165 0.10433078 -0.35011899 -0.14776856
+		 -0.48543665 -0.191535 0.69506001 0.0095376968 0.79026335 -0.13638139 0.607903 0.40862671
+		 0.53436136 0.28978544 0.50362885 0.14902869 -0.3929857 -0.10933769 0.54710555 0.063293099
+		 0.64965463 -0.060769677 0.72643852 -0.20203638 0.45075125 0.18971367 0.41098776 0.096985936
+		 0.51395476 -0.0022804737 0.60234702 -0.12373161 0.38789555 0.03723371 0.47961006
+		 -0.062293768 0.3639729 -0.018420935 -0.16282707 -0.060175188 -0.25136048 -0.04863289
+		 -0.17183039 -0.10307396 -0.35509953 -0.02290304 -0.26653311 -0.099218473 0.2463209
+		 -0.065385073 -0.3780058 -0.079813302 0.34357828 -0.031564176 0.22172815 -0.028388426
+		 0.44873559 0.02442956 0.31033307 0.0098822787 0.19717723 0.0071227774 0.4058159 0.068502784
+		 0.27724957 0.049220338 0.36327279 0.10964436 -0.26798806 -0.086271942 -0.19036722
+		 -0.04321903 -0.3010056 -0.048954546 -0.12151057 -0.016800582 -0.21467076 -0.0092160106
+		 0.2903474 0.11131406 -0.13827702 0.011992037 0.18809617 0.10862184 0.27538246 0.058642626
+		 0.10644114 0.092144847 0.17947882 0.064209402 0.25981671 0.0089385509 0.10246158
+		 0.05695492 0.17042148 0.021906316 0.098157227 0.023223281 -0.0020402074 0.042256594
+		 0.010062337 -0.060349405 0.03608197 -0.093210936 0.072743237 -0.12791562 0.11892074
+		 -0.16536885 0.1727522 -0.20620918 0.23139572 -0.2506721 0.29067606 -0.29848808 0.34459335
+		 -0.34879351 0.38467288 -0.4000113 0.24945426 0.48600262 0.22484267 0.41779643 0.19029653
+		 0.3502323 0.15092897 0.2859008 0.11078978 0.22635832 0.073100924 0.17234667 0.040439963
+		 0.12396906 0.014860868 0.0808433 0.011719067 -0.049900174 -0.002366662 0.0083776712
+		 -0.01768274 0.021169931 -0.036326982 0.028734624 -0.056447417 0.030210495 -0.076065235
+		 0.025412381 -0.093256615 0.014793068 -0.10633655 -0.00061666965 -0.11402355 -0.019313872
+		 -0.11556424 -0.039472431 -0.11080709 -0.059122533 -0.10021695 -0.076344013 -0.084829666
+		 -0.089454576 -0.066150583 -0.097174942 -0.046006914 -0.098754898 -0.026368467 -0.094048485
+		 -0.0091538895 -0.083533198 0.0039608553 -0.068279088 0.25778186 0.55093551 0.32956815
+		 0.558267 0.40720999 0.56433928 0.4895004 0.56490201 0.57548392 0.55790168 0.66438609
+		 0.54226267 0.75570375 0.51746941 -1.000067591667 0.10960585 -0.92998558 0.18765956
+		 -0.85582435 0.25626427 -0.77777642 0.31499922 -0.69679695 0.36362028 -0.61456388
+		 0.40234908 -0.53375649 0.43249759 -0.45906568 0.45825851 -0.0057339668 -0.068866178
+		 -0.034276664 0.024536312 -0.085808784 0.040347755 -0.15506154 0.042244732 -0.23910509
+		 0.026867151 -0.33435974 -0.0087374449 -0.43655875 -0.066929936 -0.54066575 -0.14911604
+		 -0.64072835 -0.25495362 -0.72971421 -0.38035703 0.84941125 0.48340487 -0.8384912
+		 0.018485367 -0.6822893 -0.055295676 -0.53506422 -0.1080583 -0.40034914 -0.1397061
+		 -0.28129369 -0.15193221 -0.18052641 -0.14745276 -0.10011616 -0.12960038 -0.041553825
+		 -0.1020899;
+createNode polyAutoProj -n "BaseCharacter:polyAutoProj2";
+	rename -uid "D01D7D5B-4D71-98BE-5943-9DA8030C8271";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:399]";
+	setAttr ".ix" -type "matrix" 1.7763568394002505e-15 -2.2204460492503131e-16 1.0000000000000002 0
+		 3.944304526105059e-31 1 2.2204460492503136e-16 0 -1.0000000000000002 0 1.7763568394002505e-15 0
+		 -0.76102703809737993 5.6625080108642578 0.76422435045243509 1;
+	setAttr ".s" -type "double3" 2.0000008344650273 2.0000008344650273 2.0000008344650273 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyMapSew -n "BaseCharacter:polyMapSew2";
+	rename -uid "C3201B92-4636-258C-C6E2-51A8CDA76CA2";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[0:779]";
+createNode polyMapCut -n "BaseCharacter:polyMapCut10";
+	rename -uid "E4922CD2-4329-8643-816D-1A8893A258FD";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[320:339]";
+	setAttr ".uic" yes;
+createNode polyMapCut -n "BaseCharacter:polyMapCut11";
+	rename -uid "E230D8F9-43F2-88B0-3D41-72A5007B4E59";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[40:59]";
+	setAttr ".uic" yes;
+createNode polyMapCut -n "BaseCharacter:polyMapCut12";
+	rename -uid "89B23275-4C99-78AB-6B75-BC9BC906B982";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 14 "e[429]" "e[449]" "e[469]" "e[489]" "e[509]" "e[529]" "e[549]" "e[569]" "e[589]" "e[609]" "e[629]" "e[649]" "e[669]" "e[689]";
+	setAttr ".uic" yes;
+createNode polyTweakUV -n "BaseCharacter:polyTweakUV5";
+	rename -uid "78510843-48EA-60AB-A0DB-78A884ED47E6";
+	setAttr ".uopa" yes;
+	setAttr -s 437 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" -0.001290977 0.00090242922 -0.00094896555
+		 0.001257211 -0.0010421872 0.0017911643 -0.001544714 0.0013814569 -1.4901161e-08 1.4901161e-08
+		 -0.00051403046 0.0014889091 -0.00043767691 0.0020256042 -0.23873147 0.50365275 -0.17470182
+		 0.52401173 -0.0015066564 0.00045932829 -0.0018959939 0.00083652139 -2.8759241e-05
+		 0.0015748888 0.00020962954 0.0020616949 -0.29294497 0.47584456 -0.23430175 0.46972063
+		 -0.17420085 0.4808428 -0.099561274 0.53998154 -0.0015748739 -2.8789043e-05 -0.0020616949
+		 0.00020962954 0.00045929849 0.0015066862 0.00083649158 0.0018960088 -0.3395659 0.43841082
+		 -0.28194162 0.44899005 -0.2267597 0.43456617 -0.17002322 0.43746877 -0.099728853
+		 0.48648405 -0.013130456 0.55511189 -0.001488924 -0.00051400065 -0.0020255744 -0.00043773651
+		 0.00090241432 0.0012910217 0.0013814569 0.001544714 -0.38147911 0.39043105 -0.32026026
+		 0.41558623 -0.26868409 0.42011741 -0.21519226 0.39736801 -0.16131124 0.39321402 -0.096009672
+		 0.43393266 -0.010422289 0.4913567 0.083568931 0.57304692 -0.001257211 -0.00094896555
+		 -0.0017911792 -0.0010422468 0.001257211 0.00094896555 0.0017911643 0.001042217 -0.42189655
+		 0.33258241 -0.35330993 0.36794382 -0.29975441 0.3902216 -0.2522423 0.38833547 -0.36326903
+		 0.13042289 -0.29494587 0.12053663 -0.087664068 0.38183087 -0.0039940178 0.42972356
+		 0.092645794 0.50027055 0.18832543 0.59715492 -0.00090242922 -0.0012910068 -0.0013814867
+		 -0.0015447438 0.001488924 0.00051401556 0.0020255744 0.00043769181 -0.4639748 0.26745999
+		 -0.38566798 0.30638587 -0.32505485 0.34267217 -0.27710778 0.36147666 -0.32153362
+		 -0.040219307 -0.21582544 0.10281903 0.0066977739 0.36988977 0.10491532 0.43069783
+		 0.20690447 0.51767081 0.29783854 0.63021302 -0.00045932829 -0.0015066862 -0.00083652139
+		 -0.0018959939 0.0015748888 2.8759241e-05 0.0020616949 -0.00020967424 -0.51037812
+		 0.19990095 -0.42202389 0.23347479 -0.35035467 0.27737173 -0.29573035 0.31399435 -0.22854869
+		 -0.017884731 -0.12534723 0.084672153 0.12063599 0.36413938 0.22783691 0.44225907
+		 0.32844117 0.54724908 0.40788469 0.67417824 2.874434e-05 -0.0015748739 -0.00020965934
+		 -0.0020616949 0.0015067011 -0.00045929849 0.0018960088 -0.00083649158 -0.56272829
+		 0.13735859 -0.46676084 0.15439394 -0.38165081 0.19668916 -0.31484687 0.24535608 -0.27813032
+		 -0.034579366 -0.024107635 0.073559463 0.25101003 0.37079212 0.36032867 0.46889737
+		 0.45224452 0.59166431 0.51350415 0.73005968 0.00051401556 -0.001488924 0.00043769181
+		 -0.0020256042 0.0012910217 -0.00090245903 0.001544714 -0.0013814867 0.772605 1.059336662
+		 -0.52350521 0.07749176 -0.42474651 0.10583052 -0.34147602 0.15762439 -0.32849228
+		 -0.063724011 0.26931766 0.13002908 0.39293131 0.39499798 0.4966982 0.51385933 0.57247269
+		 0.6524055 0.60916305 0.797894 0.00094896555 -0.0012571812 0.0010422021 -0.001791209
+		 0.745794 0.96493423 0.87875199 1.050212383 -0.48485804 0.013376519 -0.38246807 0.055752017
+		 -0.49351817 -0.31180906 0.57276487 0.27661949 0.54014838 0.44046292 0.63036358 0.57898974
+		 0.682675 0.72980493 0.68881226 0.87678945 0.8442499 0.93087709 0.98606372 1.034930229
+		 -0.44416767 -0.05204238 -0.57167852 -0.3611671 0.69234145 0.29182798 0.68549216 0.50926328
+		 0.75415701 0.66476744 0.77585411 0.82316625 0.94098806 0.89466715 1.089718223 1.01079154
+		 -0.64994061 -0.41724169 0.81080329 0.32125521 0.82128727 0.60188729 0.86045861 0.77051163
+		 1.032168269 0.85445881 0.93189961 0.74972314 0.77292156 0.40251631 0.93960214 0.71750838
+		 0.86683559 0.65564674 0.77976894 0.57555896 -0.35143936 -0.30172604 -0.39149934 -0.39614931
+		 -0.33341071 -0.42042485 -0.28803128 -0.33414471 -0.41083699 -0.2668997 -0.44640657
+		 -0.36835638 -0.41957882 -0.4759883 -0.36815491 -0.49422669 -0.00079143047 0.00057014823
+		 -0.00057655573 0.00078681111 -0.29573137 -0.19633973 -0.22918636 -0.23843762 -0.51030588
+		 -0.31737635 -0.42760411 -0.4747647 -0.46886736 -0.45343006 -0.35776711 -0.15318999
+		 -0.44020694 -0.5392819 -0.39574772 -0.55388081 -0.00092899799 0.0002976656 -0.001711607
+		 -0.0010987818 -0.0019673705 -0.00051611662 -0.00030517578 0.0009264648 -0.22204751
+		 -0.084806636 -0.15511817 -0.13735352 -0.37266716 -0.54756832 -0.44258505 -0.26270574
+		 -0.48366159 -0.51986849 -0.28437912 -0.032708377 -0.45812994 -0.58608115 -0.41976506
+		 -0.59938419 -0.00097548962 -3.9339066e-06 -0.0012883544 -0.0015739202 -0.0012174845
+		 -0.00097715855 -0.0014598966 -0.0005531311 -0.0020305514 0.00011712313 -3.9339066e-06
+		 0.00097540021 -0.1297034 0.027399465 -0.065409005 -0.03550075 -0.41932142 -0.57432616
+		 -0.36365664 -0.20793095 -0.49658203 -0.56769508 -0.18975908 0.088331416 -0.47751051
+		 -0.61865866 -0.44317365 -0.63256097 -0.0009264946 -0.00030517578 -0.00073891878 -0.0018950105
+		 -0.0008559227 -0.0013055801 0 2.9802322e-08 -0.0015591979 -7.4982643e-05 -0.0018949509
+		 0.00073884428 0.0002977252 0.00092893839 -0.019767046 0.13471508 0.038914084 0.062414899
+		 -0.46486062 -0.59220338 -0.27298731 -0.15272656 -0.51291573 -0.5994513 -0.075010896
+		 0.20363817 -0.50094819 -0.64154172 -0.46747217 -0.65704381 -0.00078684092 -0.00057655573
+		 -0.00011718273 -0.0020305812 -0.00041055679 -0.0015061498 -0.0015060902 0.00041052699
+		 -0.0015739202 0.0012883246 0.00057017803 0.00079149008 0.10501766 0.23202631 0.15543169
+		 0.15202588 -0.58185774 -0.7472508 -0.17114609 -0.09682864 -0.53642446 -0.62026924
+		 0.056842446 0.30747581 -0.52827406 -0.66128683 -0.49164212 -0.67796302 -0.00057011843
+		 -0.00079151988 0.00051605701 -0.0019674301 7.4923038e-05 -0.0015593171 -0.0013054609
+		 0.0008559078 -0.001098752 0.0017116666 0.00078690052 0.00057655573 0.2404989 0.31512415
+		 0.28054142 0.22965395 -0.6857453 -0.81937504 0.16324455 -0.049965292 -0.56811941
+		 -0.63776112 0.20116699 0.39520368 0.99704468 0.41697121 0.96224242 0.33383667 -0.00029760599
+		 -0.00092890859 0.0010988116 -0.0017116368 0.0005530715 -0.0014598072 -0.00097721815
+		 0.0012174249 -0.00051605701 0.0019674599 0.00092643499 0.00030519813 0.38153905 0.38100612
+		 0.40979981 0.29253572 -0.73929036 -0.83368051 0.42864257 0.19579759 1.017173529 0.5027948
+		 0.35221112 0.46366104 0.89755493 0.45150393 0.87609625 0.36786103 3.9935112e-06 -0.00097543001
+		 0.0015739799 -0.0012883246 0.00097715855 -0.0012174547 -0.00055319071 0.0014598221
+		 0.00011706352 0.0020305961 0.00097543001 3.9711595e-06 0.52257967 0.42797673 0.53836697
+		 0.33885661;
+	setAttr ".uvtk[250:436]" 0.88588631 0.36080813 0.55114549 0.22404313 0.90820074
+		 0.53359979 0.50374937 0.51132727 0.78424364 0.46345896 0.77512938 0.37774888 0.00030523539
+		 -0.0009264797 0.0018950701 -0.00073893368 0.0013055801 -0.0008559078 -7.4982643e-05
+		 0.001559332 0.00073885918 0.0018950403 0.00092893839 -0.0002976656 0.65828675 0.45546034
+		 0.6615141 0.3675456 0.77747267 0.38506269 0.67442876 0.24163964 0.78563362 0.54526293
+		 0.64983803 0.53819257 0.00057655573 -0.00078682601 0.002030611 -0.00011712313 0.0015060902
+		 -0.0004106015 0.00041055679 0.0015061498 0.0012882948 0.0015739501 0.00079149008
+		 -0.00057017803 0.66569227 0.39476979 0.68457419 0.22163013 0.0019674301 0.00051611662
+		 0.0015593171 7.4967742e-05 0.00085586309 0.0013055801 0.001711607 0.0010988414 0.001459837
+		 0.0005531162 0.0012174249 0.00097718835 -0.53170598 -0.13957438 -0.44609401 -0.15372607
+		 -0.37095499 -0.28744215 -0.53734255 -0.18579212 -0.45144928 -0.20263335 -0.36065516
+		 -0.17610902 -0.37685761 -0.33826497 -0.54350746 -0.23550981 -0.45758629 -0.2533958
+		 -0.36569431 -0.22789419 -0.27534306 -0.19878298 -0.3829895 -0.38932183 -0.5491845
+		 -0.28878438 -0.46348995 -0.30604482 -0.37174666 -0.27967346 -0.28000242 -0.2533018
+		 -0.19012958 -0.21376532 -0.38833225 -0.4406358 -0.5533607 -0.34558046 -0.46814772
+		 -0.36056292 -0.37779844 -0.33145222 -0.28590703 -0.30595088 -0.19430763 -0.27056205
+		 0.26490536 -0.008538425 -0.39187446 -0.49221542 -0.38283598 -0.38323635 -0.29204357
+		 -0.3567127 -0.1999855 -0.32383645 0.26136133 -0.060118258 -0.29739738 -0.40561867
+		 -0.20615029 -0.37355316 0.25601757 -0.1114319 -0.21178544 -0.41976932 0.24988568
+		 -0.16248745 0.2439841 -0.21330854 -0.90751803 -0.79103392 -0.81203043 -0.79762298
+		 0.71013874 0.4787088 -0.91149485 -0.8590076 -0.81775725 -0.86170554 -0.59731096 -0.58453888
+		 0.63859111 0.4623729 0.73521376 0.42522013 -0.91002506 -0.92046821 -0.81999683 -0.91883522
+		 -0.60371518 -0.64044619 0.56063193 0.45195419 0.65235507 0.41550428 0.75208884 0.36284453
+		 -0.90261996 -0.97484708 -0.81796354 -0.96874541 -0.607925 -0.69340491 0.72572637
+		 0.28943431 0.56769633 0.40940309 0.65975744 0.3611272 0.76041216 0.29257351 -0.88885278
+		 -1.021716952 -0.81089652 -1.011297464 -0.60901666 -0.74333441 0.72865945 0.24258357
+		 0.56972736 0.35949439 0.66122502 0.29966938 0.76002914 0.21567023 -0.60608101 -0.79018605
+		 0.72756612 0.19265527 0.56748635 0.30236703 0.65724701 0.23169869 0.72335529 0.13969851
+		 0.56175882 0.23828697 0.71695089 0.083793521 -0.2105633 -0.42199799 -0.29732805 -0.40372363
+		 -0.21672411 -0.47693622 -0.38496023 -0.38698417 -0.30371904 -0.4559505 -0.22273846
+		 -0.52914792 -0.39148453 -0.43702406 -0.30947489 -0.50708938 -0.22758996 -0.57862514
+		 -0.39671862 -0.48748362 -0.31358671 -0.55715317 -0.23026885 -0.62541467 -0.39967722
+		 -0.5383783 -0.31505412 -0.60616106 -0.39938697 -0.58968234 0.8889426 0.14752203 0.80460823
+		 0.16400009 0.88923073 0.096218407 0.71982139 0.18325323 0.80313855 0.11499256 0.88627064
+		 0.045324802 0.71714061 0.13646376 0.79902565 0.064929485 0.8810358 -0.0051327944
+		 0.71228814 0.086987019 0.79326916 0.013792396 0.87451148 -0.055170596 0.70627332
+		 0.034777045 0.78687871 -0.038432479 0.7001133 -0.020159364 -0.084406912 -0.190845
+		 -0.15906793 -0.28028682 0.0025022626 -0.1005637 0.10068727 -0.013167292 0.20809996
+		 0.067842498 0.32175529 0.1394334 0.43797719 0.19918364 0.55270249 0.24526279 0.66181529
+		 0.2762289 0.76141757 0.29058844 0.84792352 0.28609622 0.91774637 0.25875992 -0.46058401
+		 -0.69011605 -0.43776107 -0.66900682 -0.41131318 -0.64331108 -0.38269076 -0.60963285
+		 -0.351381 -0.56552029 -0.31564516 -0.5097847 -0.27316773 -0.44256902 -0.22161126
+		 -0.36525953 -5.2154064e-06 0.001122281 0.00034183264 0.0010689497 -0.00035178661
+		 0.0010657012 -0.00066384673 0.00090482831 -0.00091099739 0.00065541267 -0.0010689497
+		 0.00034183264 -0.0011222512 -5.2452087e-06 -0.0010657012 -0.00035181642 -0.00090484321
+		 -0.00066390634 -0.00065542758 -0.00091099739 -0.00034182519 -0.0010689497 5.222857e-06
+		 -0.0011222512 0.00035175681 -0.0010657012 0.00066387653 -0.00090482831 0.00091099739
+		 -0.00065539777 0.0010689497 -0.00034178793 0.0011222512 5.2601099e-06 0.0010657012
+		 0.00035180151 0.00090485811 0.00066387653 0.00065544248 0.00091101229 -0.51090109
+		 -0.70108902 -0.47562173 -0.71020877 -0.55501282 -0.68580991 -0.60469055 -0.66167331
+		 -0.79280013 -0.85483766 -0.96039653 -1.038054705 -0.98547554 -0.98456454 -1.0023543835
+		 -0.92218673 -1.010680676 -0.85191208 -1.010300159 -0.77500457 -0.74680519 -0.46590611
+		 -0.53216749 -0.15365589 -0.5660165 -0.067827627 -0.5944134 0.015309989 -0.62078184
+		 0.09038806;
+createNode polyMapCut -n "BaseCharacter:polyMapCut13";
+	rename -uid "B7229F99-478F-0D51-E95D-0D803A4EB953";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[180:199]";
+	setAttr ".uic" yes;
+createNode polyMapSewMove -n "BaseCharacter:polyMapSewMove7";
+	rename -uid "06AE35E2-4DDE-F468-9822-AAB2452F5D96";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[199]";
+createNode polyMapSewMove -n "BaseCharacter:polyMapSewMove8";
+	rename -uid "17EA7C6D-455A-D6DD-5A2D-3FB4C6864D1D";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[59]";
+createNode polyMapSewMove -n "BaseCharacter:polyMapSewMove9";
+	rename -uid "75A91E1D-4150-0765-23A1-F2B376A2F671";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[339]";
+createNode polyTweakUV -n "BaseCharacter:polyTweakUV6";
+	rename -uid "D7B7841A-4D1A-4BEF-0377-5D8AD5642F89";
+	setAttr ".uopa" yes;
+	setAttr -s 452 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" -0.015043825 0.030522764 -0.021426514
+		 0.028341591 -0.018027604 0.0070341229 -0.0052845925 0.011356473 -0.024979755 0.049500823
+		 -0.028139956 0.028244555 -0.031397484 0.0069090128 0.051631719 0.034259856 0.016072497
+		 -0.00044894218 -0.0096103698 0.034579217 0.0059261769 0.019711375 -0.034537584 0.030233085
+		 -0.044156618 0.010940075 0.071103692 0.071475744 0.040301606 0.030311227 0.024989471
+		 0.007170558 0.0099516958 -0.0028012991 -0.0057047307 0.0400787 0.013715878 0.030683637
+		 -0.039999969 0.034107447 -0.055063814 0.018726587 0.08796642 0.11917162 0.051070042
+		 0.06557399 0.029023156 0.025374115 0.021975175 0.0060408711 0.0030117929 -0.0049897432
+		 -0.03709057 -0.018658757 -0.0037029237 0.046487629 0.017664328 0.043457389 -0.043995783
+		 0.039485812 -0.063046813 0.029509902 0.10350417 0.17668241 0.059088238 0.11323887
+		 0.031068042 0.058608711 0.017364964 0.020049512 0.018730879 0.0046586394 0.0078336
+		 -0.00046300888 -0.025828958 -0.0064327717 -0.079128772 -0.018909156 -0.0037903786
+		 0.053186595 0.017455876 0.05683583 -0.046134889 0.045840979 -0.067318603 0.042238772
+		 0.1190547 0.2425611 0.066164196 0.17289996 0.030298661 0.10624802 0.010555811 0.051100373
+		 0.0051739365 0.01452288 0.015118212 0.0031974316 0.01228568 0.0036906004 -0.014772743
+		 0.004719615 -0.063204795 0.00090134144 -0.128824 -0.013047934 -0.0059516132 0.059525073
+		 0.013118729 0.069515288 -0.046207458 0.05255115 -0.067456484 0.055670619 0.13598424
+		 0.31430063 0.074166514 0.243343 0.028979328 0.16814077 0.00086389482 0.098526001
+		 -0.010684177 0.043207079 0.016452461 0.0077928305 -0.0039198995 0.01557076 -0.047435582
+		 0.01967299 -0.10999283 0.015090823 -0.18618357 -0.0028221607 -0.0099717528 0.06488502
+		 0.005072847 0.080251336 -0.044205591 0.05896008 -0.063443325 0.068493307 0.15573664
+		 0.38797104 0.085070267 0.3223131 0.029458925 0.24335277 -0.0090299398 0.16241404
+		 -0.029535946 0.090166003 0.0068197846 0.026428699 -0.031705081 0.038177967 -0.091331959
+		 0.042167604 -0.16657528 0.033959687 -0.25072816 0.0097366571 -0.015456334 0.068742633
+		 -0.0058996826 0.087988555 -0.040323921 0.064441502 -0.055668917 0.079453945 0.17995235
+		 0.45773178 0.10108849 0.40615162 0.034212723 0.32995084 -0.016349792 0.24210173 -0.048316233
+		 0.15570354 -0.015877604 0.056743443 -0.072525144 0.068998158 -0.14716721 0.069660246
+		 -0.23279747 0.055025756 -0.32132155 0.022313356 -0.02186878 0.070720017 -0.018729463
+		 0.091966331 -0.034941018 0.068459868 -0.044891812 0.087481618 -0.60657734 0.012815118
+		 0.12496608 0.48922712 0.045970768 0.42465037 -0.018220499 0.33598143 -0.063869238
+		 0.23940089 -0.053361297 0.095950544 -0.12737513 0.1051566 -0.2151016 0.099264503
+		 -0.30783796 0.075456023 -0.39598405 0.032262921 -0.028582297 0.070622921 -0.032164149
+		 0.091792285 -0.54390228 0.031436563 -0.6422717 0.075418234 0.068007708 0.5222137
+		 -0.011612147 0.44117755 -0.072996259 0.33994576 -0.10688895 0.14087266 -0.19670463
+		 0.14340752 -0.29462504 0.12770402 -0.39001372 0.091981649 -0.47165596 0.036512613
+		 -0.56281137 0.097115397 -0.67918742 0.14387751 0.0068103671 0.55300254 -0.072510272
+		 0.45485771 -0.17716807 0.18794405 -0.28029174 0.18009543 -0.3843514 0.15122414 -0.47648621
+		 0.10075057 -0.58227515 0.16515744 -0.71295309 0.21881223 -0.059309572 0.58003867
+		 -0.26423436 0.23318863 -0.3770355 0.21108818 -0.48168463 0.16544998 -0.59885293 0.23644018
+		 -0.74130595 0.30018091 -0.367248 0.2721808 -0.48460358 0.23167944 -0.61102986 0.31132603
+		 -0.48414147 0.30001509 0.041955948 0.011274185 0.073836863 -0.0038977219 0.087917656
+		 0.013838973 0.051659346 0.021620801 0.03231144 0.0011686981 0.059620678 -0.02143411
+		 0.11658457 -0.026194654 0.1330519 -0.00046966225 -0.013052464 -0.025037725 -0.0074656606
+		 -0.0058860444 0.019863665 0.016956307 0.023528278 0.020826131 0.022567004 -0.0090366304
+		 0.045052469 -0.03913898 0.099754125 -0.051769964 0.016441882 0.013388947 0.17073476
+		 -0.052874789 0.18723786 -0.018946335 -0.012517691 -0.045145661 0.0084509254 -0.027949378
+		 0.012267053 -0.015125249 0.015608847 0.01813801 0.0060259104 0.011133924 0.0019284487
+		 0.0094208494 0.082249135 -0.07761395 0.01311481 0.0097767562 0.15357649 -0.086762175
+		 0.010232806 0.013010964 0.23616225 -0.080758929 0.24999672 -0.038840085 -0.0058138967
+		 -0.064168096 0.0088006258 -0.041335113 0.029863715 -0.030760296 0.031799376 -0.024326902
+		 0.019946158 -0.0040654149 0.0096571445 0.016267523 -0.00089520216 -0.0074312538 -0.013297141
+		 -0.012982517 0.13532349 -0.12108804 0.014622748 0.014850557 0.22129616 -0.12286603
+		 0.011761427 -0.0016100705 0.31187561 -0.10614473 0.32000768 -0.05692336 0.0064361095
+		 -0.080218345 0.013274133 -0.053977638 0.030021787 -0.037462398 0.051185489 -0.033553779
+		 0.035649776 -0.018784128 0.031078815 0.0043996247 0.04027909 0.03035485 -0.0029677749
+		 -0.039918303 -0.024250209 -0.047649801 0.20479256 -0.16570482 0.02475369 0.0042649806
+		 0.30224791 -0.15599996 0.018684208 -0.031793982 0.39568713 -0.12467673 0.39482942
+		 -0.069363415 0.023047328 -0.091714919 0.021437943 -0.064636186 0.03225106 -0.043782108
+		 0.041044176 -0.014669832 0.043784082 0.0088577187 0.060222208 0.030605625 -0.002356112
+		 -0.086986944 -0.032711267 -0.095056549 0.2903024 -0.20707852 0.040837288 -0.023479164
+		 0.39452776 -0.18145135 0.028474092 -0.078371763 0.48370263 -0.13114798 0.47049814
+		 -0.071543992 0.042400718 -0.097527221 0.032498598 -0.072263241 0.036330104 -0.049103275
+		 0.047408044 -0.01242131 0.057160378 0.0091249142 0.079447389 0.024698643 -0.0012806654
+		 -0.14873189 -0.040464163 -0.15509777 0.39024988 -0.24025336 0.05999285 -0.069375157
+		 0.49440831 -0.19373927 0.038505495 -0.14161798 -0.11966097 -0.72645462 -0.1799984
+		 -0.66468221 0.062606454 -0.097082987 0.045378089 -0.076108977 0.041858613 -0.05290582
+		 0.054124534 -0.012253944 0.069969177 0.0052272147 0.095972657 0.013138765 -0.0020005703
+		 -0.22461012 -0.049312234 -0.22702599 0.50114071 -0.25970256 0.079216838 -0.13385671
+		 -0.050893426 -0.78605098 0.046099067 -0.22118267 -0.070845485 -0.62626541 -0.13393641
+		 -0.5846656 0.081690013 -0.090423092 0.058819175 -0.075794086 0.048295796 -0.054817334
+		 0.060546815 -0.014176287 0.080964446 -0.0024480298 0.1081472 -0.0029672384 -0.0068069696
+		 -0.31331506 -0.061074138 -0.30929706;
+	setAttr ".uvtk[250:451]" 0.026417851 -0.84048939 0.095444679 -0.21673971 -0.0031411648
+		 -0.6653316 0.048546791 -0.3159844 -0.038372159 -0.51873893 -0.10104597 -0.49313185
+		 0.097786188 -0.078197494 0.071509004 -0.071347296 0.055012405 -0.054649845 0.066053212
+		 -0.017995242 0.089065552 -0.013152946 0.11476505 -0.022052988 -0.018068194 -0.41256255
+		 -0.077625632 -0.39933035 0.069827437 -0.70028436 0.10560381 -0.31713602 0.026915908
+		 -0.54213035 0.043102741 -0.42403358 0.10932219 -0.061600804 0.082208276 -0.063202009
+		 0.061352193 -0.052419007 0.070107937 -0.023334399 0.093473732 -0.025843702 0.11517155
+		 -0.042255633 0.095665097 -0.56245309 0.10665965 -0.43331164 0.089872062 -0.05215349
+		 0.066696167 -0.048341975 0.072314978 -0.029670469 0.093752861 -0.03928148 0.070522547
+		 -0.042816937 0.072458208 -0.036383487 -0.007579565 0.008817941 0.011144459 0.00169155
+		 -0.032730669 0.034940153 -0.020861089 0.0028648674 0.0068807304 8.3208084e-05 0.020422071
+		 0.011932135 -0.055593491 0.026222348 -0.0087796152 -0.040979922 0.0024524033 -0.001766175
+		 0.024310142 0.016084969 0.017559826 0.037400663 -0.0025520325 -0.094354197 0.002196759
+		 -0.030136511 0.0062696934 0.0021367967 0.028279424 0.020148754 0.028440654 0.048487544
+		 0.00018650293 0.075504005 0.014163256 -0.075583443 0.012580007 -0.019467413 0.0097670853
+		 0.0060195029 0.023756206 0.018329144 0.06545496 0.022368014 0.016646981 0.094492793
+		 -0.033667982 0.12319887 0.029958606 -0.057172008 0.019159257 0.01660645 0.051676273
+		 0.016142637 0.11040533 0.0028513074 -0.013266623 0.1508171 0.03807652 0.01015982
+		 0.086734295 -0.0062765777 0.15930718 -0.039777875 0.063526273 -0.014998645 0.12539774
+		 -0.050199777 0.092290878 -0.060010642 -0.13064077 0.6026032 -0.13720265 0.46533406
+		 -0.76294959 0.38771248 -0.20746064 0.62041378 -0.20607993 0.47247687 -0.13055849
+		 0.34165719 -0.61804259 0.39008582 -0.77720869 0.48115754 0.49086073 -0.48193371 0.35378295
+		 -0.43326181 -0.19123468 0.34102452 -0.4797647 0.37089187 -0.61950016 0.47311997 0.30444133
+		 -0.96077818 0.49977261 -0.40315878 0.37020797 -0.3656891 0.23670213 -0.37134108 -0.35458148
+		 0.33491766 -0.47117907 0.44474405 0.32246339 -0.77601463 0.20462441 -0.92824268 0.50309533
+		 -0.32935572 0.38226867 -0.30151904 0.25782424 -0.31443202 -0.3387779 0.39964253 0.32680333
+		 -0.60316968 0.23237669 -0.75563157 0.11179471 -0.88814455 0.27559644 -0.25978002
+		 0.31554484 -0.44702229 0.24525094 -0.5929535 0.1482743 -0.73044789 0.24257529 -0.44483152
+		 0.16832685 -0.57941031 0.17304385 -0.44025654 -0.061048642 0.081158996 -0.089116149
+		 0.1479674 -0.093741834 0.071423322 -0.11344111 0.23515421 -0.13157119 0.13912186
+		 0.023554891 -0.15832528 -0.16529609 0.22927663 0.071432203 -0.22885643 0.044368505
+		 -0.13082501 0.14233565 -0.30148065 0.094493315 -0.19200534 0.063853875 -0.10393295
+		 0.16557895 -0.25480205 0.11570498 -0.15611662 0.18630734 -0.20960622 -0.2461282 0.28733557
+		 -0.15622938 0.23315871 -0.22573686 0.34279323 -0.085495591 0.17703241 -0.13367212
+		 0.2792362 0.29002345 -0.31084377 -0.062997997 0.2137605 0.25305736 -0.19683141 0.22611964
+		 -0.31463477 0.20819092 -0.10629362 0.19878232 -0.20466256 0.16471434 -0.31670353
+		 0.16398895 -0.11630967 0.14628577 -0.21125525 0.12101507 -0.12544572 -0.025705576
+		 -0.017577507 -0.045509636 -0.054341488 -0.063092887 -0.10205197 -0.07974565 -0.16038801
+		 -0.096791863 -0.22842517 -0.11552811 -0.30443156 -0.13721967 -0.38560286 -0.16315675
+		 -0.46767813 -0.19477975 -0.54439503 -0.2338388 -0.60672539 0.45803007 -0.014089704
+		 0.39448082 -0.014475435 0.32853377 -0.0072492361 0.26414815 0.003939718 0.20400047
+		 0.016003907 0.14973575 0.02631624 0.10219151 0.032630138 0.061602712 0.033049174
+		 0.033335447 0.021251619 0.039121389 0.040324092 0.038798958 0.060420454 0.032300264
+		 0.07949841 0.02022776 0.095664978 0.0037494004 0.10732728 -0.015529126 0.11333811
+		 -0.035725132 0.11310607 -0.054865055 0.10665089 -0.071078293 0.094602525 -0.082780428
+		 0.078138411 -0.088828847 0.058867693 -0.088634863 0.038674414 -0.082222015 0.019531727
+		 -0.070225194 0.0033081174 -0.053832576 -0.0084189177 -0.034682468 -0.014526784 -0.014748961
+		 -0.01449281 0.54098004 -0.057902575 0.51369321 -0.0018748641 0.56959218 -0.11916411
+		 0.59550852 -0.18625224 0.61662602 -0.25920981 0.63170409 -0.33790559 0.64003348 -0.4222731
+		 -0.28800774 0.80449933 -0.19516301 0.77976304 -0.10918993 0.74793255 -0.030302763
+		 0.70911229 0.041077167 0.66408932 0.10461658 0.61442214 0.16051099 0.56291962 0.21062195
+		 0.5151878 0.039651632 0.059615552 0.033713102 0.11367601 0.0080674291 0.17882007
+		 -0.039159775 0.25112814 -0.10925353 0.32631558 -0.20281857 0.3997826 -0.31961191
+		 0.46668309 -0.45820594 0.52205932 -0.61528128 0.56117451 -0.78396463 0.5805434 0.64135444
+		 -0.51256925 -0.29022634 0.63350713 -0.27955821 0.4762747 -0.25532177 0.33797199 -0.21962219
+		 0.22164747 -0.17577761 0.12901887 -0.12763783 0.06079942 -0.079235539 0.016893744
+		 -0.034585387 -0.0034879744;
+createNode polyAutoProj -n "BaseCharacter:polyAutoProj3";
+	rename -uid "3E842FB2-4BD3-C01A-52B3-7DAF73CBAB28";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:399]";
+	setAttr ".ix" -type "matrix" 1.7763568394002505e-15 -2.2204460492503131e-16 1.0000000000000002 0
+		 3.944304526105059e-31 1 2.2204460492503136e-16 0 -1.0000000000000002 0 1.7763568394002505e-15 0
+		 -0.76102703809737993 5.6625080108642578 0.76422435045243509 1;
+	setAttr ".s" -type "double3" 2.0000008344650273 2.0000008344650273 2.0000008344650273 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyMapSew -n "BaseCharacter:polyMapSew3";
+	rename -uid "241BB07A-40D5-7BC1-FB61-4294E33D288C";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[0:779]";
+createNode createColorSet -n "BaseCharacter:createColorSet1";
+	rename -uid "E1671F46-4F49-3145-7F4E-539617325BE7";
+	setAttr ".colos" -type "string" "SculptFreezeColorTemp";
+	setAttr ".clam" no;
+createNode createColorSet -n "BaseCharacter:createColorSet2";
+	rename -uid "E2B597E4-4D95-FD03-E15F-5F8716D0D966";
+	setAttr ".colos" -type "string" "SculptMaskColorTemp";
+	setAttr ".clam" no;
+createNode polyMapCut -n "BaseCharacter:polyMapCut14";
+	rename -uid "130BB8F8-492E-8038-C8F4-BE8BA8DC3EA0";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[340:359]";
+	setAttr ".uic" yes;
+createNode polyMapCut -n "BaseCharacter:polyMapCut15";
+	rename -uid "8B96CEA5-4AB8-72F9-65A8-01A386038FA8";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[40:59]";
+	setAttr ".uic" yes;
+createNode polyMapSew -n "BaseCharacter:polyMapSew4";
+	rename -uid "9D076334-421E-DFDB-976C-CBAE960FB8EB";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[340:359]";
+	setAttr ".uic" yes;
+createNode polyMapCut -n "BaseCharacter:polyMapCut16";
+	rename -uid "DD265AC2-47C7-80C2-5CD5-54AC7901ED5F";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[320:339]";
+	setAttr ".uic" yes;
+createNode polyMapCut -n "BaseCharacter:polyMapCut17";
+	rename -uid "22A61C1A-46E2-C37A-8FEE-9283B59A994C";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[689]";
+	setAttr ".uic" yes;
+createNode polyMapCut -n "BaseCharacter:polyMapCut18";
+	rename -uid "6F3A2480-41CE-1DC9-C63D-6C805B9ADCC4";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 14 "e[429]" "e[449]" "e[469]" "e[489]" "e[509]" "e[529]" "e[549]" "e[569]" "e[589]" "e[609]" "e[629]" "e[649]" "e[669]" "e[689]";
+	setAttr ".uic" yes;
+createNode polyTweakUV -n "BaseCharacter:polyTweakUV7";
+	rename -uid "88ED167E-4C16-4CA4-0F08-408E2983C2E0";
+	setAttr ".uopa" yes;
+	setAttr -s 437 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" -0.001290977 0.00090242922 -0.00094896555
+		 0.001257211 -0.0010421872 0.0017911643 -0.001544714 0.0013814569 -1.4901161e-08 1.4901161e-08
+		 -0.00051403046 0.0014889091 -0.00043767691 0.0020256042 -0.23873147 0.50365275 -0.17470182
+		 0.52401173 -0.0015066564 0.00045932829 -0.0018959939 0.00083652139 -2.8759241e-05
+		 0.0015748888 0.00020962954 0.0020616949 -0.29294497 0.47584456 -0.23430175 0.46972063
+		 -0.17420085 0.4808428 -0.099561274 0.53998154 -0.0015748739 -2.8789043e-05 -0.0020616949
+		 0.00020962954 0.00045929849 0.0015066862 0.00083649158 0.0018960088 -0.3395659 0.43841082
+		 -0.28194162 0.44899005 -0.2267597 0.43456617 -0.17002322 0.43746877 -0.099728853
+		 0.48648405 -0.013130456 0.55511189 -0.001488924 -0.00051400065 -0.0020255744 -0.00043773651
+		 0.00090241432 0.0012910217 0.0013814569 0.001544714 -0.38147911 0.39043105 -0.32026026
+		 0.41558623 -0.26868409 0.42011741 -0.21519226 0.39736801 -0.16131124 0.39321402 -0.096009672
+		 0.43393266 -0.010422289 0.4913567 0.083568931 0.57304692 -0.001257211 -0.00094896555
+		 -0.0017911792 -0.0010422468 0.001257211 0.00094896555 0.0017911643 0.001042217 -0.42189655
+		 0.33258241 -0.35330993 0.36794382 -0.29975441 0.3902216 -0.2522423 0.38833547 -0.36326903
+		 0.13042289 -0.29494587 0.12053663 -0.087664068 0.38183087 -0.0039940178 0.42972356
+		 0.092645794 0.50027055 0.18832543 0.59715492 -0.00090242922 -0.0012910068 -0.0013814867
+		 -0.0015447438 0.001488924 0.00051401556 0.0020255744 0.00043769181 -0.4639748 0.26745999
+		 -0.38566798 0.30638587 -0.32505485 0.34267217 -0.27710778 0.36147666 -0.32153362
+		 -0.040219307 -0.21582544 0.10281903 0.0066977739 0.36988977 0.10491532 0.43069783
+		 0.20690447 0.51767081 0.29783854 0.63021302 -0.00045932829 -0.0015066862 -0.00083652139
+		 -0.0018959939 0.0015748888 2.8759241e-05 0.0020616949 -0.00020967424 -0.51037812
+		 0.19990095 -0.42202389 0.23347479 -0.35035467 0.27737173 -0.29573035 0.31399435 -0.22854869
+		 -0.017884731 -0.12534723 0.084672153 0.12063599 0.36413938 0.22783691 0.44225907
+		 0.32844117 0.54724908 0.40788469 0.67417824 2.874434e-05 -0.0015748739 -0.00020965934
+		 -0.0020616949 0.0015067011 -0.00045929849 0.0018960088 -0.00083649158 -0.56272829
+		 0.13735859 -0.46676084 0.15439394 -0.38165081 0.19668916 -0.31484687 0.24535608 -0.27813032
+		 -0.034579366 -0.024107635 0.073559463 0.25101003 0.37079212 0.36032867 0.46889737
+		 0.45224452 0.59166431 0.51350415 0.73005968 0.00051401556 -0.001488924 0.00043769181
+		 -0.0020256042 0.0012910217 -0.00090245903 0.001544714 -0.0013814867 0.772605 1.059336662
+		 -0.52350521 0.07749176 -0.42474651 0.10583052 -0.34147602 0.15762439 -0.32849228
+		 -0.063724011 0.26931766 0.13002908 0.39293131 0.39499798 0.4966982 0.51385933 0.57247269
+		 0.6524055 0.60916305 0.797894 0.00094896555 -0.0012571812 0.0010422021 -0.001791209
+		 0.745794 0.96493423 0.87875199 1.050212383 -0.48485804 0.013376519 -0.38246807 0.055752017
+		 -0.49351817 -0.31180906 0.57276487 0.27661949 0.54014838 0.44046292 0.63036358 0.57898974
+		 0.682675 0.72980493 0.68881226 0.87678945 0.8442499 0.93087709 0.98606372 1.034930229
+		 -0.44416767 -0.05204238 -0.57167852 -0.3611671 0.69234145 0.29182798 0.68549216 0.50926328
+		 0.75415701 0.66476744 0.77585411 0.82316625 0.94098806 0.89466715 1.089718223 1.01079154
+		 -0.64994061 -0.41724169 0.81080329 0.32125521 0.82128727 0.60188729 0.86045861 0.77051163
+		 1.032168269 0.85445881 0.93189961 0.74972314 0.77292156 0.40251631 0.93960214 0.71750838
+		 0.86683559 0.65564674 0.77976894 0.57555896 -0.35143936 -0.30172604 -0.39149934 -0.39614931
+		 -0.33341071 -0.42042485 -0.28803128 -0.33414471 -0.41083699 -0.2668997 -0.44640657
+		 -0.36835638 -0.41957882 -0.4759883 -0.36815491 -0.49422669 -0.00079143047 0.00057014823
+		 -0.00057655573 0.00078681111 -0.29573137 -0.19633973 -0.22918636 -0.23843762 -0.51030588
+		 -0.31737635 -0.42760411 -0.4747647 -0.46886736 -0.45343006 -0.35776711 -0.15318999
+		 -0.44020694 -0.5392819 -0.39574772 -0.55388081 -0.00092899799 0.0002976656 -0.001711607
+		 -0.0010987818 -0.0019673705 -0.00051611662 -0.00030517578 0.0009264648 -0.22204751
+		 -0.084806636 -0.15511817 -0.13735352 -0.37266716 -0.54756832 -0.44258505 -0.26270574
+		 -0.48366159 -0.51986849 -0.28437912 -0.032708377 -0.45812994 -0.58608115 -0.41976506
+		 -0.59938419 -0.00097548962 -3.9339066e-06 -0.0012883544 -0.0015739202 -0.0012174845
+		 -0.00097715855 -0.0014598966 -0.0005531311 -0.0020305514 0.00011712313 -3.9339066e-06
+		 0.00097540021 -0.1297034 0.027399465 -0.065409005 -0.03550075 -0.41932142 -0.57432616
+		 -0.36365664 -0.20793095 -0.49658203 -0.56769508 -0.18975908 0.088331416 -0.47751051
+		 -0.61865866 -0.44317365 -0.63256097 -0.0009264946 -0.00030517578 -0.00073891878 -0.0018950105
+		 -0.0008559227 -0.0013055801 0 2.9802322e-08 -0.0015591979 -7.4982643e-05 -0.0018949509
+		 0.00073884428 0.0002977252 0.00092893839 -0.019767046 0.13471508 0.038914084 0.062414899
+		 -0.46486062 -0.59220338 -0.27298731 -0.15272656 -0.51291573 -0.5994513 -0.075010896
+		 0.20363817 -0.50094819 -0.64154172 -0.46747217 -0.65704381 -0.00078684092 -0.00057655573
+		 -0.00011718273 -0.0020305812 -0.00041055679 -0.0015061498 -0.0015060902 0.00041052699
+		 -0.0015739202 0.0012883246 0.00057017803 0.00079149008 0.10501766 0.23202631 0.15543169
+		 0.15202588 -0.58185774 -0.7472508 -0.17114609 -0.09682864 -0.53642446 -0.62026924
+		 0.056842446 0.30747581 -0.52827406 -0.66128683 -0.49164212 -0.67796302 -0.00057011843
+		 -0.00079151988 0.00051605701 -0.0019674301 7.4923038e-05 -0.0015593171 -0.0013054609
+		 0.0008559078 -0.001098752 0.0017116666 0.00078690052 0.00057655573 0.2404989 0.31512415
+		 0.28054142 0.22965395 -0.6857453 -0.81937504 0.16324455 -0.049965292 -0.56811941
+		 -0.63776112 0.20116699 0.39520368 0.99704468 0.41697121 0.96224242 0.33383667 -0.00029760599
+		 -0.00092890859 0.0010988116 -0.0017116368 0.0005530715 -0.0014598072 -0.00097721815
+		 0.0012174249 -0.00051605701 0.0019674599 0.00092643499 0.00030519813 0.38153905 0.38100612
+		 0.40979981 0.29253572 -0.73929036 -0.83368051 0.42864257 0.19579759 1.017173529 0.5027948
+		 0.35221112 0.46366104 0.89755493 0.45150393 0.87609625 0.36786103 3.9935112e-06 -0.00097543001
+		 0.0015739799 -0.0012883246 0.00097715855 -0.0012174547 -0.00055319071 0.0014598221
+		 0.00011706352 0.0020305961 0.00097543001 3.9711595e-06 0.52257967 0.42797673 0.53836697
+		 0.33885661;
+	setAttr ".uvtk[250:436]" 0.88588631 0.36080813 0.55114549 0.22404313 0.90820074
+		 0.53359979 0.50374937 0.51132727 0.78424364 0.46345896 0.77512938 0.37774888 0.00030523539
+		 -0.0009264797 0.0018950701 -0.00073893368 0.0013055801 -0.0008559078 -7.4982643e-05
+		 0.001559332 0.00073885918 0.0018950403 0.00092893839 -0.0002976656 0.65828675 0.45546034
+		 0.6615141 0.3675456 0.77747267 0.38506269 0.67442876 0.24163964 0.78563362 0.54526293
+		 0.64983803 0.53819257 0.00057655573 -0.00078682601 0.002030611 -0.00011712313 0.0015060902
+		 -0.0004106015 0.00041055679 0.0015061498 0.0012882948 0.0015739501 0.00079149008
+		 -0.00057017803 0.66569227 0.39476979 0.68457419 0.22163013 0.0019674301 0.00051611662
+		 0.0015593171 7.4967742e-05 0.00085586309 0.0013055801 0.001711607 0.0010988414 0.001459837
+		 0.0005531162 0.0012174249 0.00097718835 -0.53170598 -0.13957438 -0.44609401 -0.15372607
+		 -0.37095499 -0.28744215 -0.53734255 -0.18579212 -0.45144928 -0.20263335 -0.36065516
+		 -0.17610902 -0.37685761 -0.33826497 -0.54350746 -0.23550981 -0.45758629 -0.2533958
+		 -0.36569431 -0.22789419 -0.27534306 -0.19878298 -0.3829895 -0.38932183 -0.5491845
+		 -0.28878438 -0.46348995 -0.30604482 -0.37174666 -0.27967346 -0.28000242 -0.2533018
+		 -0.19012958 -0.21376532 -0.38833225 -0.4406358 -0.5533607 -0.34558046 -0.46814772
+		 -0.36056292 -0.37779844 -0.33145222 -0.28590703 -0.30595088 -0.19430763 -0.27056205
+		 0.26490536 -0.008538425 -0.39187446 -0.49221542 -0.38283598 -0.38323635 -0.29204357
+		 -0.3567127 -0.1999855 -0.32383645 0.26136133 -0.060118258 -0.29739738 -0.40561867
+		 -0.20615029 -0.37355316 0.25601757 -0.1114319 -0.21178544 -0.41976932 0.24988568
+		 -0.16248745 0.2439841 -0.21330854 -0.90751803 -0.79103392 -0.81203043 -0.79762298
+		 0.71013874 0.4787088 -0.91149485 -0.8590076 -0.81775725 -0.86170554 -0.59731096 -0.58453888
+		 0.63859111 0.4623729 0.73521376 0.42522013 -0.91002506 -0.92046821 -0.81999683 -0.91883522
+		 -0.60371518 -0.64044619 0.56063193 0.45195419 0.65235507 0.41550428 0.75208884 0.36284453
+		 -0.90261996 -0.97484708 -0.81796354 -0.96874541 -0.607925 -0.69340491 0.72572637
+		 0.28943431 0.56769633 0.40940309 0.65975744 0.3611272 0.76041216 0.29257351 -0.88885278
+		 -1.021716952 -0.81089652 -1.011297464 -0.60901666 -0.74333441 0.72865945 0.24258357
+		 0.56972736 0.35949439 0.66122502 0.29966938 0.76002914 0.21567023 -0.60608101 -0.79018605
+		 0.72756612 0.19265527 0.56748635 0.30236703 0.65724701 0.23169869 0.72335529 0.13969851
+		 0.56175882 0.23828697 0.71695089 0.083793521 -0.2105633 -0.42199799 -0.29732805 -0.40372363
+		 -0.21672411 -0.47693622 -0.38496023 -0.38698417 -0.30371904 -0.4559505 -0.22273846
+		 -0.52914792 -0.39148453 -0.43702406 -0.30947489 -0.50708938 -0.22758996 -0.57862514
+		 -0.39671862 -0.48748362 -0.31358671 -0.55715317 -0.23026885 -0.62541467 -0.39967722
+		 -0.5383783 -0.31505412 -0.60616106 -0.39938697 -0.58968234 0.8889426 0.14752203 0.80460823
+		 0.16400009 0.88923073 0.096218407 0.71982139 0.18325323 0.80313855 0.11499256 0.88627064
+		 0.045324802 0.71714061 0.13646376 0.79902565 0.064929485 0.8810358 -0.0051327944
+		 0.71228814 0.086987019 0.79326916 0.013792396 0.87451148 -0.055170596 0.70627332
+		 0.034777045 0.78687871 -0.038432479 0.7001133 -0.020159364 -5.2154064e-06 0.001122281
+		 0.00034183264 0.0010689497 -0.00035178661 0.0010657012 -0.00066384673 0.00090482831
+		 -0.00091099739 0.00065541267 -0.0010689497 0.00034183264 -0.0011222512 -5.2452087e-06
+		 -0.0010657012 -0.00035181642 -0.00090484321 -0.00066390634 -0.00065542758 -0.00091099739
+		 -0.00034182519 -0.0010689497 5.222857e-06 -0.0011222512 0.00035175681 -0.0010657012
+		 0.00066387653 -0.00090482831 0.00091099739 -0.00065539777 0.0010689497 -0.00034178793
+		 0.0011222512 5.2601099e-06 0.0010657012 0.00035180151 0.00090485811 0.00066387653
+		 0.00065544248 0.00091101229 -0.084406912 -0.190845 -0.15906793 -0.28028682 0.0025022626
+		 -0.1005637 0.10068727 -0.013167292 0.20809996 0.067842498 0.32175529 0.1394334 0.43797719
+		 0.19918364 0.55270249 0.24526279 0.66181529 0.2762289 0.76141757 0.29058844 0.84792352
+		 0.28609622 0.91774637 0.25875992 -0.46058401 -0.69011605 -0.43776107 -0.66900682
+		 -0.41131318 -0.64331108 -0.38269076 -0.60963285 -0.351381 -0.56552029 -0.31564516
+		 -0.5097847 -0.27316773 -0.44256902 -0.22161126 -0.36525953 -0.47562173 -0.71020877
+		 -0.51090109 -0.70108902 -0.55501282 -0.68580991 -0.60469055 -0.66167331 -0.79280013
+		 -0.85483766 -0.96039653 -1.038054705 -0.98547554 -0.98456454 -1.0023543835 -0.92218673
+		 -1.010680676 -0.85191208 -1.010300159 -0.77500457 -0.74680519 -0.46590611 -0.53216749
+		 -0.15365589 -0.5660165 -0.067827627 -0.5944134 0.015309989 -0.62078184 0.09038806;
+createNode polyMapCut -n "BaseCharacter:polyMapCut19";
+	rename -uid "8C7CF04B-464B-8919-DFED-A2BB387FF1A4";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[180:199]";
+createNode polyMapSewMove -n "BaseCharacter:polyMapSewMove10";
+	rename -uid "2B02C858-4244-49E6-3A26-76A2E068523E";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[198]";
+createNode polyMapSewMove -n "BaseCharacter:polyMapSewMove11";
+	rename -uid "1EA392A7-4157-5904-E995-0CB381BB5957";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[58]";
+createNode polyMapSewMove -n "BaseCharacter:polyMapSewMove12";
+	rename -uid "6968D96A-43C3-9DA8-3435-A184C5C1C319";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[338]";
+createNode polyTweakUV -n "BaseCharacter:polyTweakUV8";
+	rename -uid "4F78B089-4909-93A7-BECB-79BAFA306A1D";
+	setAttr ".uopa" yes;
+	setAttr -s 452 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" -0.047198877 0.012572169 -0.053915128
+		 0.012413919 -0.056980029 -0.0089594126 -0.04360418 -0.0087106824 -0.050947279 0.033708453
+		 -0.060334459 0.01434499 -0.069782645 -0.0050444603 0.045647681 0.054514408 0.025850981
+		 0.017721474 -0.040832371 0.014811873 -0.030893654 -0.0042701364 -0.065835267 0.018171191
+		 -0.080766812 0.0026454329 0.063229114 0.10225481 0.024367377 0.047822595 0.013423204
+		 0.013121784 -0.0094991028 -0.016150475 -0.035432756 0.018918514 -0.019750357 0.0041795373
+		 -0.069882363 0.023515582 -0.088852674 0.013360739 0.079885431 0.16062129 0.03282579
+		 0.095264137 0.0030617565 0.040089905 0.00099951029 0.0075644851 -0.0017877817 -0.0093130469
+		 -0.015434235 -0.018044531 -0.031575024 0.024455726 -0.012056559 0.015228093 -0.072080694
+		 0.029854298 -0.093243159 0.026056707 0.096940532 0.22868818 0.040582001 0.15534037
+		 0.0024464279 0.087198436 -0.018615395 0.031963468 -0.011680573 0.0017361641 -0.0059047937
+		 -0.011036813 -0.023367733 -0.020746469 -0.061406165 -0.032976806 -0.029630765 0.030886114
+		 -0.0082232356 0.028046191 -0.072214723 0.036567092 -0.093503907 0.039493978 0.11569059
+		 0.30472338 0.049439669 0.22730315 0.0013743327 0.14898318 -0.028409749 0.078586042
+		 -0.040794879 0.023645818 -0.024697632 -0.0041466951 -0.01013279 -0.012925684 -0.01971966
+		 -0.016891897 -0.051473975 -0.021565914 -0.10196951 -0.032574952 -0.029779598 0.037587941
+		 -0.0085546374 0.041431427 -0.070270315 0.04299742 -0.089605808 0.052359819 0.13740014
+		 0.38592085 0.061216518 0.30960679 0.0021041334 0.22490072 -0.038437918 0.14187738
+		 -0.05995591 0.06959182 -0.014545143 -0.014777899 -0.016316026 -0.013340771 -0.041783839
+		 -0.011238337 -0.087703407 -0.013804495 -0.14948565 -0.026274085 -0.032000035 0.043910265
+		 -0.013010502 0.054079235 -0.066436633 0.048516929 -0.081927441 0.063397169 0.16335888
+		 0.46801847 0.077788293 0.39967039 0.0069271326 0.31364268 -0.046020828 0.221486 -0.079176515
+		 0.13412341 -0.013008416 -0.0097455978 -0.032153904 -0.0011529922 -0.073631942 0.0039098263
+		 -0.13280556 0.00048857927 -0.20372066 -0.015969872 -0.036071554 0.049236655 -0.021159202
+		 0.064748287 -0.061087459 0.052586436 -0.071217731 0.071527362 0.19500616 0.54475224
+		 0.10123324 0.49349794 0.018210873 0.41292432 -0.04845044 0.3163293 -0.095392711 0.21705508
+		 -0.022425234 0.009031415 -0.059426427 0.021422863 -0.11634344 0.02618885 -0.18695736
+		 0.01895529 -0.26383772 -0.0039092302 -0.04159455 0.053046584 -0.032208741 0.07239002
+		 -0.054745018 0.054808438 -0.058522657 0.075956523 -0.5132817 0.0019438267 0.13415286
+		 0.58505195 0.038543046 0.51913089 -0.042981416 0.42441708 -0.10553232 0.31749785
+		 -0.04486984 0.039103568 -0.099519074 0.051738203 -0.17045498 0.05285722 -0.24968117
+		 0.038844824 -0.32819307 0.0072814226 -0.048028633 0.054966748 -0.045082018 0.076252997
+		 -0.45763674 0.014140844 -0.54054379 0.057954788 0.071049839 0.62668192 -0.02676335
+		 0.54254794 -0.10656109 0.43371615 -0.082021415 0.077555597 -0.15329814 0.086717069
+		 -0.23584259 0.080736518 -0.3196575 0.056930065 -0.39411193 0.014514327 -0.47008517
+		 0.071573615 -0.5691303 0.11919618 0.0033307374 0.66577786 -0.095532656 0.56289554
+		 -0.13504773 0.12101465 -0.22097313 0.12281525 -0.31151605 0.10612428 -0.39444607
+		 0.069378257 -0.48326987 0.13115442 -0.59502167 0.18626153 -0.069655001 0.70075929
+		 -0.20446694 0.16562474 -0.30188006 0.15595138 -0.3952896 0.12466586 -0.4939568 0.19372058
+		 -0.61611587 0.25919366 -0.28992695 0.20700085 -0.39411652 0.18141341 -0.50067186
+		 0.25965714 -0.38982618 0.24018729 0.04724592 -0.019692097 0.091105163 -0.042167891
+		 0.10974857 -0.015123278 0.062992811 -0.00095079094 0.0315364 -0.038168233 0.072314471
+		 -0.068967596 0.14690039 -0.069648162 0.16629657 -0.033980966 -0.039067984 -0.060517184
+		 -0.039361238 -0.040421542 0.014616966 -0.0047638491 0.025646389 0.0063610449 0.015728623
+		 -0.056705937 0.053165823 -0.095890254 0.12711951 -0.10511268 0.0037891865 -0.01558882
+		 0.21479318 -0.099247158 0.23248285 -0.05504185 -0.032597303 -0.079603367 -0.017720878
+		 -0.05696347 -0.017909884 -0.043585554 -0.033547878 -0.021358699 -0.0079602599 0.00038833916
+		 -0.0031688809 0.0048910081 0.10664344 -0.14079776 -0.006926775 -0.026421577 0.1964021
+		 -0.14335786 -0.01238364 -0.0037424862 0.29427442 -0.1276882 0.30748689 -0.075473189
+		 -0.02054888 -0.095786355 -0.013402343 -0.069648609 0.0035293698 -0.053345107 0.0034515858
+		 -0.046646386 -0.013943255 -0.030818205 -0.010141253 0.0026767589 -0.022077858 -0.0061503798
+		 -0.025125563 -0.0072998703 0.17687038 -0.18786323 -0.016523242 -0.0078229606 0.27994141
+		 -0.18004805 -0.018802106 -0.0047495067 0.38395911 -0.15121707 0.38962644 -0.092005879
+		 -0.0040882826 -0.10747176 -0.0053725243 -0.080395512 0.0056812763 -0.059686366 0.024722755
+		 -0.049690157 0.0054625869 -0.040240753 -0.0061381459 -0.01985788 -0.01624465 0.00029887259
+		 -0.029107749 -0.025522217 -0.040421546 -0.030474544 0.2638841 -0.23311076 -0.015159488
+		 -0.0032705367 0.37663803 -0.21105096 -0.017416239 -0.020183414 0.48125154 -0.16545841
+		 0.47606423 -0.10078803 0.015180409 -0.11351024 0.0055881739 -0.088148147 0.0096934438
+		 -0.065051809 0.0093759298 -0.034747131 0.0050837994 -0.011519272 0.01458478 0.014315158
+		 -0.031140924 -0.058797747 -0.05117929 -0.065773323 0.36684558 -0.27211419 -0.0051934123
+		 -0.014643461 0.48416048 -0.23165983 -0.010594368 -0.051280111 0.58180404 -0.1651879
+		 0.56235701 -0.097171783 0.035375595 -0.11330728 0.018411398 -0.092144124 0.015172124
+		 -0.068917051 0.014814913 -0.030698724 0.017832279 -0.0072154552 0.034517407 0.014320098
+		 -0.03036648 -0.10647953 -0.059192538 -0.1134754 0.48368862 -0.299968 0.010678232
+		 -0.043378085 0.59836638 -0.23644516 -0.00089740753 -0.098753005 -0.10479295 -0.61487764
+		 -0.16070676 -0.56334966 0.054523766 -0.1068802 0.031845689 -0.091989666 0.021581352
+		 -0.070903577 0.021200299 -0.028526895 0.031201601 -0.0071097985 0.053657591 0.008184731
+		 -0.029049158 -0.16841456 -0.066269279 -0.17317343 0.61052895 -0.31130564 0.029535413
+		 -0.090389252 -0.04123342 -0.66456777 0.0089936256 -0.16268855 -0.068150878 -0.52263898
+		 -0.12513304 -0.48963219 0.070753455 -0.094855987 0.044578791 -0.087697491 0.028294563
+		 -0.070816226 0.027913451 -0.028439518 0.043954194 -0.011159047 0.070032358 -0.0035653785
+		 -0.029537439 -0.2436682 -0.074278593 -0.24365282;
+	setAttr ".uvtk[250:451]" 0.030166864 -0.70961148 0.048312306 -0.15597925 -0.0069304705
+		 -0.55344641 0.016303062 -0.24242279 -0.04608655 -0.42504206 -0.10123193 -0.40652776
+		 0.082478702 -0.078409605 0.055366933 -0.079685867 0.034656107 -0.068662405 0.034307897
+		 -0.030437257 0.054849625 -0.018960986 0.082005084 -0.019805457 -0.034306765 -0.33030581
+		 -0.085195065 -0.32265717 0.059212208 -0.58050001 0.063853264 -0.23972756 0.011522889
+		 -0.44158369 0.018155932 -0.33634654 0.08855468 -0.059148762 0.063156724 -0.068737164
+		 0.040044487 -0.0646521 0.039764404 -0.034319248 0.06281656 -0.029755322 0.088389874
+		 -0.038956359 0.072446704 -0.45527792 0.072960258 -0.34032097 0.067188203 -0.055920944
+		 0.043933868 -0.059176579 0.043752193 -0.039703108 0.067069709 -0.0424897 0.04594487
+		 -0.052770961 0.045881927 -0.046061076 -0.063511267 0.015161932 -0.038046271 -0.010050058
+		 -0.09228193 0.060229093 -0.086747855 0.0064358413 -0.051672906 -0.016042113 -0.019105166
+		 -0.016547143 -0.12541795 0.050419301 -0.033809572 -0.11355996 -0.03969419 -0.059537828
+		 -0.023726732 -0.018283814 -0.0096812248 -0.006006062 -0.0082236528 -0.17867541 -0.016759992
+		 -0.094402328 -0.028503805 -0.048432618 -0.028275579 -0.020118207 -0.0062054992 -0.0021418333
+		 -0.012455285 0.019440472 0.01309821 -0.15070003 -0.0003170073 -0.075439699 -0.017644346
+		 -0.037369296 -0.024330139 -0.016074002 -0.0024108887 0.0017419755 -0.0020899773 0.030087233
+		 -0.029788852 0.057111621 0.033486545 -0.12310991 -0.020466924 -0.011941373 -0.0068657398
+		 -0.00012302399 0.034654319 0.0034034848 -0.01400727 0.075497508 -0.011157095 -0.001747638
+		 0.020901561 -0.0029606521 0.079321504 -0.017042518 0.0075906515 -0.0089257658 0.055649936
+		 -0.026377857 0.032756567 -0.035103053 -0.14812082 0.73095053 -0.16821575 0.5798766
+		 -0.63117242 0.33786166 -0.2322439 0.7561608 -0.24516234 0.59344298 -0.17296895 0.44068116
+		 -0.50261015 0.32928205 -0.63948274 0.42219973 0.61474121 -0.56108099 0.45772344 -0.52193332
+		 -0.24252534 0.44527611 -0.38183379 0.30142373 -0.49927253 0.40305555 0.28793061 -0.80505306
+		 0.61897314 -0.47305059 0.47070658 -0.44464403 0.31919187 -0.46653244 -0.27521479
+		 0.2596724 -0.36976266 0.36556357 0.29019392 -0.63401854 0.19506705 -0.78029954 0.6175285
+		 -0.39004076 0.47930196 -0.37081814 0.33836433 -0.39951965 -0.25743669 0.31429356
+		 0.27956748 -0.47673732 0.20740759 -0.62090832 0.10907435 -0.74845076 0.35417339 -0.33482257
+		 0.25536597 -0.3383792 0.20606589 -0.47292519 0.13056588 -0.60308129 0.19125307 -0.34142059
+		 0.13716424 -0.46576819 0.13055015 -0.3420428 -0.12100294 0.12571925 -0.14626119 0.21158236
+		 -0.16400588 0.11658943 -0.16466875 0.31708163 -0.19878617 0.20500106 0.038939252
+		 -0.25096536 -0.22610083 0.3150284 0.10896631 -0.32614577 0.062770098 -0.21362656
+		 0.20246416 -0.39961699 0.13338235 -0.27909583 0.085259333 -0.17692778 0.22538444
+		 -0.34265643 0.15593585 -0.23304783 0.2457771 -0.28722805 -0.18598032 0.20949608 -0.11543274
+		 0.15601397 -0.16525131 0.25466144 -0.063634455 0.10384703 -0.094225287 0.19187278
+		 0.21969271 -0.22199404 -0.04415828 0.13071108 0.17586434 -0.12930077 0.16533875 -0.22961608
+		 0.12772971 -0.061014712 0.13162863 -0.1394009 0.11345494 -0.23548692 0.093804002
+		 -0.071640611 0.089143395 -0.14824459 0.061079919 -0.081378937 -0.040128663 -0.030211449
+		 0.0076618493 0.0059628487 0.01327464 0.025105357 0.012767434 0.045212626 0.006090194
+		 0.064243019 -0.0061370432 0.080308855 -0.022731423 0.091827393 -0.042075619 0.097665787
+		 -0.06228058 0.09724915 -0.081372008 0.090615749 -0.097483873 0.078413069 -0.10904177
+		 0.061833203 -0.1149172 0.042497277 -0.11453841 0.022295356 -0.10794701 0.0032017231
+		 -0.095795371 -0.012919903 -0.079286844 -0.024501681 -0.060071051 -0.030434668 0.036879122
+		 0.018557992 -0.051789582 -0.03443943 -0.07125175 -0.071686313 -0.088109493 -0.1194137
+		 -0.10364711 -0.17695606 -0.11920249 -0.24286498 -0.13614178 -0.31463334 -0.1559087
+		 -0.38833043 -0.18014336 -0.4581148 -0.21083593 -0.51559037 0.54346573 -0.031519413
+		 0.47124559 -0.036580265 0.39560217 -0.032320112 0.32096925 -0.022365063 0.25040603
+		 -0.0097877979 0.18589157 0.0027659386 0.12856078 0.01298169 0.078892589 0.018827893
+		 0.60611808 -0.01291737 0.64178824 -0.075498998 0.67868114 -0.14393651 0.71242607
+		 -0.21884823 0.74076009 -0.30019331 0.76238704 -0.38770115 0.77663064 -0.48112285
+		 -0.30428302 0.96137112 -0.20444423 0.9288072 -0.1115942 0.88867915 -0.026199818 0.84099138
+		 0.051125675 0.78651881 0.11990356 0.72688735 0.18024737 0.66508049 0.23409122 0.60709149
+		 -0.065479726 -0.022277445 0.008867383 0.040907621 0.0026932359 0.094241977 -0.023354888
+		 0.15818262 -0.071169496 0.22869366 -0.14200813 0.30130869 -0.23630959 0.37117141
+		 -0.35332751 0.43310547 -0.49034631 0.48180056 -0.64078611 0.51246572 0.78337252 -0.58048576
+		 -0.32235271 0.77656966 -0.3267386 0.60368246 -0.31552097 0.4474864 -0.29003271 0.31125271
+		 -0.25309065 0.19718024 -0.2082383 0.10657889 -0.15935788 0.039997786 -0.11044852
+		 -0.0026969612;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -18198,18 +21085,30 @@ select -ne :ikSystem;
 	setAttr -s 4 ".sol";
 connectAttr "Referenced_Rig_Layer.di" "BaseCharacterRN.phl[1]";
 connectAttr "BaseCharacterRN.phl[2]" "lambert2SG.dsm" -na;
-connectAttr "polyMapDel1.out" "BaseCharacterRN.phl[3]";
-connectAttr "BaseCharacterRN.phl[4]" "lambert2SG.dsm" -na;
-connectAttr "polyMapDel3.out" "BaseCharacterRN.phl[5]";
+connectAttr "BaseCharacter:polyTweakUV2.out" "BaseCharacterRN.phl[3]";
+connectAttr "BaseCharacter:polyTweakUV2.uvtk[0]" "BaseCharacterRN.phl[4]";
+connectAttr "BaseCharacterRN.phl[5]" "polyAutoProj7.mp";
 connectAttr "BaseCharacterRN.phl[6]" "lambert2SG.dsm" -na;
-connectAttr "polyMapDel4.out" "BaseCharacterRN.phl[7]";
-connectAttr "BaseCharacterRN.phl[8]" "lambert2SG.dsm" -na;
-connectAttr "polyMapDel2.out" "BaseCharacterRN.phl[9]";
+connectAttr "BaseCharacter:polyTweakUV4.out" "BaseCharacterRN.phl[7]";
+connectAttr "BaseCharacter:polyTweakUV4.uvtk[0]" "BaseCharacterRN.phl[8]";
+connectAttr "BaseCharacterRN.phl[9]" "BaseCharacter:polyAutoProj1.mp";
+connectAttr "BaseCharacterRN.phl[10]" "lambert2SG.dsm" -na;
+connectAttr "BaseCharacter:polyTweakUV6.out" "BaseCharacterRN.phl[11]";
+connectAttr "BaseCharacter:polyTweakUV6.uvtk[0]" "BaseCharacterRN.phl[12]";
+connectAttr "BaseCharacterRN.phl[13]" "BaseCharacter:polyAutoProj2.mp";
+connectAttr "BaseCharacterRN.phl[14]" "lambert2SG.dsm" -na;
+connectAttr "BaseCharacter:polyTweakUV8.out" "BaseCharacterRN.phl[15]";
+connectAttr "BaseCharacter:polyTweakUV8.uvtk[0]" "BaseCharacterRN.phl[16]";
+connectAttr "BaseCharacterRN.phl[17]" "BaseCharacter:polyAutoProj3.mp";
 connectAttr "Geometry_Layer.di" "Body_Geo.do";
 connectAttr "polyTweakUV4.out" "Body_GeoShape.i";
 connectAttr "polyTweakUV4.uvtk[0]" "Body_GeoShape.uvst[0].uvtw";
 connectAttr "Geometry_Layer.di" "L_Horn.do";
+connectAttr "polyTweakUV8.out" "L_HornShape.i";
+connectAttr "polyTweakUV8.uvtk[0]" "L_HornShape.uvst[0].uvtw";
 connectAttr "Geometry_Layer.di" "R_Horn.do";
+connectAttr "polyTweakUV9.out" "R_HornShape.i";
+connectAttr "polyTweakUV9.uvtk[0]" "R_HornShape.uvst[0].uvtw";
 connectAttr "Geometry_Layer.di" "L_Ear_Geo.do";
 connectAttr "polyTweakUV5.out" "L_Ear_GeoShape.i";
 connectAttr "polyTweakUV5.uvtk[0]" "L_Ear_GeoShape.uvst[0].uvtw";
@@ -18217,6 +21116,8 @@ connectAttr "Geometry_Layer.di" "R_Ear_Geo.do";
 connectAttr "polyTweakUV7.out" "R_Ear_GeoShape.i";
 connectAttr "polyTweakUV7.uvtk[0]" "R_Ear_GeoShape.uvst[0].uvtw";
 connectAttr "Geometry_Layer.di" "L_Wing.do";
+connectAttr "polyTweakUV11.out" "L_WingShape.i";
+connectAttr "polyTweakUV11.uvtk[0]" "L_WingShape.uvst[0].uvtw";
 connectAttr "Geometry_Layer.di" "R_Wing.do";
 connectAttr ":defaultColorMgtGlobals.cme" "imagePlaneShape1.cme";
 connectAttr ":defaultColorMgtGlobals.cfe" "imagePlaneShape1.cmcf";
@@ -18234,13 +21135,13 @@ connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "BaseCharacterRNfosterParent1.msg" "BaseCharacterRN.fp";
 connectAttr "layerManager.dli[2]" "Referenced_Rig_Layer.id";
 connectAttr "Dragon_Shader.oc" "lambert2SG.ss";
-connectAttr "R_WingShape.iog" "lambert2SG.dsm" -na;
 connectAttr "L_WingShape.iog" "lambert2SG.dsm" -na;
 connectAttr "R_Ear_GeoShape.iog" "lambert2SG.dsm" -na;
 connectAttr "L_Ear_GeoShape.iog" "lambert2SG.dsm" -na;
 connectAttr "R_HornShape.iog" "lambert2SG.dsm" -na;
 connectAttr "L_HornShape.iog" "lambert2SG.dsm" -na;
 connectAttr "Body_GeoShape.iog" "lambert2SG.dsm" -na;
+connectAttr "R_WingShape.iog" "lambert2SG.dsm" -na;
 connectAttr "lambert2SG.msg" "materialInfo1.sg";
 connectAttr "Dragon_Shader.msg" "materialInfo1.m";
 connectAttr "layerManager.dli[1]" "Geometry_Layer.id";
@@ -18570,6 +21471,113 @@ connectAttr "polyMapCut257.out" "polyMapCut258.ip";
 connectAttr "polyMapCut258.out" "polyTweakUV6.ip";
 connectAttr "polyTweakUV6.out" "polyMapSewMove1.ip";
 connectAttr "polyMapSewMove1.out" "polyTweakUV7.ip";
+connectAttr "polySurfaceShape4.o" "polyMapDel10.ip";
+connectAttr "polyMapDel10.out" "polyAutoProj4.ip";
+connectAttr "L_HornShape.wm" "polyAutoProj4.mp";
+connectAttr "polyAutoProj4.out" "polyMapSew42.ip";
+connectAttr "polyMapSew42.out" "polyMapCut259.ip";
+connectAttr "polyMapCut259.out" "polyMapCut260.ip";
+connectAttr "polyMapCut260.out" "polyMapSew43.ip";
+connectAttr "polyMapSew43.out" "polyTweakUV8.ip";
+connectAttr "polySurfaceShape5.o" "polyMapDel11.ip";
+connectAttr "polyMapDel11.out" "polyAutoProj5.ip";
+connectAttr "R_HornShape.wm" "polyAutoProj5.mp";
+connectAttr "polyAutoProj5.out" "polyMapSew44.ip";
+connectAttr "polyMapSew44.out" "polyMapCut261.ip";
+connectAttr "polyMapCut261.out" "polyMapSew45.ip";
+connectAttr "polyMapSew45.out" "polyMapCut262.ip";
+connectAttr "polyMapCut262.out" "polyMapCut263.ip";
+connectAttr "polyMapCut263.out" "polyTweakUV9.ip";
+connectAttr "|World_Dragon|Geometry|L_Wing|polySurfaceShape6.o" "polyMapDel12.ip"
+		;
+connectAttr "polyMapDel12.out" "polyAutoProj6.ip";
+connectAttr "L_WingShape.wm" "polyAutoProj6.mp";
+connectAttr "polyAutoProj6.out" "polyMapSew46.ip";
+connectAttr "polyMapSew46.out" "polyMapCut264.ip";
+connectAttr "polyMapCut264.out" "polyMapCut265.ip";
+connectAttr "polyMapCut265.out" "polyMapCut266.ip";
+connectAttr "polyMapCut266.out" "polyMapCut267.ip";
+connectAttr "polyMapCut267.out" "polyMapCut268.ip";
+connectAttr "polyMapCut268.out" "polyMapCut269.ip";
+connectAttr "polyMapCut269.out" "polyMapCut270.ip";
+connectAttr "polyMapCut270.out" "polyMapCut271.ip";
+connectAttr "polyMapCut271.out" "polyMapCut272.ip";
+connectAttr "polyMapCut272.out" "polyMapCut273.ip";
+connectAttr "polyMapCut273.out" "polyMapCut274.ip";
+connectAttr "polyMapCut274.out" "polyMapCut275.ip";
+connectAttr "polyMapCut275.out" "polyMapCut276.ip";
+connectAttr "polyMapCut276.out" "polyMapSew47.ip";
+connectAttr "polyMapSew47.out" "polyMapSew48.ip";
+connectAttr "polyMapSew48.out" "polyMapCut277.ip";
+connectAttr "polyMapCut277.out" "polyMapCut278.ip";
+connectAttr "polyMapCut278.out" "polyMapCut279.ip";
+connectAttr "polyMapCut279.out" "polyMapCut280.ip";
+connectAttr "polyMapCut280.out" "polyMapCut281.ip";
+connectAttr "polyMapCut281.out" "polyTweakUV10.ip";
+connectAttr "polyTweakUV10.out" "polyMapCut282.ip";
+connectAttr "polyMapCut282.out" "polyTweakUV11.ip";
+connectAttr "polyMapDel1.out" "polyAutoProj7.ip";
+connectAttr "polyAutoProj7.out" "polyMapSew49.ip";
+connectAttr "polyMapSew49.out" "polyMapCut283.ip";
+connectAttr "polyMapCut283.out" "BaseCharacter:polyMapCut1.ip";
+connectAttr "BaseCharacter:polyMapCut1.out" "BaseCharacter:polyMapCut2.ip";
+connectAttr "BaseCharacter:polyMapCut2.out" "BaseCharacter:polyMapCut3.ip";
+connectAttr "BaseCharacter:polyMapCut3.out" "BaseCharacter:polyTweakUV1.ip";
+connectAttr "BaseCharacter:polyTweakUV1.out" "BaseCharacter:polyMapCut4.ip";
+connectAttr "BaseCharacter:polyMapCut4.out" "BaseCharacter:polyMapSewMove1.ip";
+connectAttr "BaseCharacter:polyMapSewMove1.out" "BaseCharacter:polyMapSewMove2.ip"
+		;
+connectAttr "BaseCharacter:polyMapSewMove2.out" "BaseCharacter:polyMapSewMove3.ip"
+		;
+connectAttr "BaseCharacter:polyMapSewMove3.out" "BaseCharacter:polyTweakUV2.ip";
+connectAttr "polyMapDel3.out" "BaseCharacter:polyAutoProj1.ip";
+connectAttr "BaseCharacter:polyAutoProj1.out" "BaseCharacter:polyMapSew1.ip";
+connectAttr "BaseCharacter:polyMapSew1.out" "BaseCharacter:polyMapCut5.ip";
+connectAttr "BaseCharacter:polyMapCut5.out" "BaseCharacter:polyMapCut6.ip";
+connectAttr "BaseCharacter:polyMapCut6.out" "BaseCharacter:polyMapCut7.ip";
+connectAttr "BaseCharacter:polyMapCut7.out" "BaseCharacter:polyMapCut8.ip";
+connectAttr "BaseCharacter:polyMapCut8.out" "BaseCharacter:polyTweakUV3.ip";
+connectAttr "BaseCharacter:polyTweakUV3.out" "BaseCharacter:polyMapCut9.ip";
+connectAttr "BaseCharacter:polyMapCut9.out" "BaseCharacter:polyMapSewMove4.ip";
+connectAttr "BaseCharacter:polyMapSewMove4.out" "BaseCharacter:polyMapSewMove5.ip"
+		;
+connectAttr "BaseCharacter:polyMapSewMove5.out" "BaseCharacter:polyMapSewMove6.ip"
+		;
+connectAttr "BaseCharacter:polyMapSewMove6.out" "BaseCharacter:polyTweakUV4.ip";
+connectAttr "polyMapDel4.out" "BaseCharacter:polyAutoProj2.ip";
+connectAttr "BaseCharacter:polyAutoProj2.out" "BaseCharacter:polyMapSew2.ip";
+connectAttr "BaseCharacter:polyMapSew2.out" "BaseCharacter:polyMapCut10.ip";
+connectAttr "BaseCharacter:polyMapCut10.out" "BaseCharacter:polyMapCut11.ip";
+connectAttr "BaseCharacter:polyMapCut11.out" "BaseCharacter:polyMapCut12.ip";
+connectAttr "BaseCharacter:polyMapCut12.out" "BaseCharacter:polyTweakUV5.ip";
+connectAttr "BaseCharacter:polyTweakUV5.out" "BaseCharacter:polyMapCut13.ip";
+connectAttr "BaseCharacter:polyMapCut13.out" "BaseCharacter:polyMapSewMove7.ip";
+connectAttr "BaseCharacter:polyMapSewMove7.out" "BaseCharacter:polyMapSewMove8.ip"
+		;
+connectAttr "BaseCharacter:polyMapSewMove8.out" "BaseCharacter:polyMapSewMove9.ip"
+		;
+connectAttr "BaseCharacter:polyMapSewMove9.out" "BaseCharacter:polyTweakUV6.ip";
+connectAttr "polyMapDel2.out" "BaseCharacter:polyAutoProj3.ip";
+connectAttr "BaseCharacter:polyAutoProj3.out" "BaseCharacter:polyMapSew3.ip";
+connectAttr "BaseCharacter:polyMapSew3.out" "BaseCharacter:createColorSet1.ig";
+connectAttr "BaseCharacter:createColorSet1.og" "BaseCharacter:createColorSet2.ig"
+		;
+connectAttr "BaseCharacter:createColorSet2.og" "BaseCharacter:polyMapCut14.ip";
+connectAttr "BaseCharacter:polyMapCut14.out" "BaseCharacter:polyMapCut15.ip";
+connectAttr "BaseCharacter:polyMapCut15.out" "BaseCharacter:polyMapSew4.ip";
+connectAttr "BaseCharacter:polyMapSew4.out" "BaseCharacter:polyMapCut16.ip";
+connectAttr "BaseCharacter:polyMapCut16.out" "BaseCharacter:polyMapCut17.ip";
+connectAttr "BaseCharacter:polyMapCut17.out" "BaseCharacter:polyMapCut18.ip";
+connectAttr "BaseCharacter:polyMapCut18.out" "BaseCharacter:polyTweakUV7.ip";
+connectAttr "BaseCharacter:polyTweakUV7.out" "BaseCharacter:polyMapCut19.ip";
+connectAttr "BaseCharacter:polyMapCut19.out" "BaseCharacter:polyMapSewMove10.ip"
+		;
+connectAttr "BaseCharacter:polyMapSewMove10.out" "BaseCharacter:polyMapSewMove11.ip"
+		;
+connectAttr "BaseCharacter:polyMapSewMove11.out" "BaseCharacter:polyMapSewMove12.ip"
+		;
+connectAttr "BaseCharacter:polyMapSewMove12.out" "BaseCharacter:polyTweakUV8.ip"
+		;
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "Dragon_Shader.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
