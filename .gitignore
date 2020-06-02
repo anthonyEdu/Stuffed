@@ -8,6 +8,7 @@
 [Bb]uild/
 [Bb]uilds/
 [Ll]ogs/
+.idea/
 [Mm]emoryCaptures/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
@@ -58,7 +59,9 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-
+*.meta
 *.DS_Store
 
 StuffedGame/Temp/
+
+
