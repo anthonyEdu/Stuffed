@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Dragon.ma
-//Last modified: Wed, Jun 03, 2020 03:43:23 PM
+//Last modified: Wed, Jun 03, 2020 03:46:02 PM
 //Codeset: 1252
 file -rdi 1 -ns "BaseRig" -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
 file -r -ns "BaseRig" -dr 1 -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
@@ -53,7 +53,7 @@ createNode camera -s -n "frontShape" -p "front";
 	setAttr -k off ".v";
 	setAttr ".rnd" no;
 	setAttr ".coi" 999.98972719029746;
-	setAttr ".ow" 26.773135211387231;
+	setAttr ".ow" 22.253259913343157;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
@@ -11194,8 +11194,9 @@ createNode mesh -n "polySurfaceShape6" -p "R_Wing_Geo_Low";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "Skeleton" -p "World_Dragon";
-	rename -uid "F17997DF-43B2-29F8-CE10-3DBEF222F60A";
-	setAttr ".v" no;
+	rename -uid "3B251092-4ACF-BAA1-2172-70AFF5E7BD9E";
+createNode transform -n "Controls" -p "World_Dragon";
+	rename -uid "CCAD0BEA-48CF-EEEE-6D45-A49EA48A40B9";
 createNode transform -n "imagePlane1";
 	rename -uid "A9CC7FDC-48D3-B686-C5BB-FA94F7C6FF32";
 	setAttr ".v" no;
@@ -19954,9 +19955,9 @@ createNode lightLinker -s -n "lightLinker1";
 	setAttr -s 7 ".slnk";
 createNode displayLayerManager -n "layerManager";
 	rename -uid "0E73C36C-41FA-3EAE-F0B8-BD938D5598B7";
-	setAttr ".cdl" 1;
-	setAttr -s 5 ".dli[1:4]"  3 2 1 4;
-	setAttr -s 2 ".dli";
+	setAttr ".cdl" 5;
+	setAttr -s 5 ".dli[1:4]"  3 5 1 4;
+	setAttr -s 3 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "E7C5F4A4-1A43-5AA7-BC6D-F3BC66616717";
 createNode renderLayerManager -n "renderLayerManager";
@@ -20159,11 +20160,20 @@ createNode groupId -n "groupId60";
 	setAttr ".ihi" 0;
 createNode reference -n "BaseRigRN";
 	rename -uid "990E3881-4940-345F-C3D2-A9AE684D1E95";
+	setAttr ".phl[1]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"BaseRigRN"
-		"BaseRigRN" 0;
+		"BaseRigRN" 0
+		"BaseRigRN" 3
+		0 "|BaseRig:Root_J" "|World_Dragon|Skeleton" "-s -r "
+		0 "|BaseRig:Root_J_GRP" "|World_Dragon|Controls" "-s -r "
+		5 4 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J.drawOverride" 
+		"BaseRigRN.placeHolderList[1]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
+createNode displayLayer -n "Base_Joints_Layer";
+	rename -uid "30FE5834-4957-620A-40A3-E195A80AE975";
+	setAttr ".do" 2;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -20194,6 +20204,7 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
 	setAttr -s 4 ".sol";
+connectAttr "Base_Joints_Layer.di" "BaseRigRN.phl[1]";
 connectAttr "Geometry_Layer.di" "Body_Geo_Low.do";
 connectAttr "Geometry_Layer.di" "L_Horn_Geo_Low.do";
 connectAttr "Geometry_Layer.di" "R_Horn_Geo_Low.do";
@@ -20326,6 +20337,7 @@ connectAttr "Blue_ShaderSG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0]
 		;
 connectAttr "Yellow_ShaderSG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
 		;
+connectAttr "layerManager.dli[2]" "Base_Joints_Layer.id";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "Yellow_ShaderSG.pa" ":renderPartition.st" -na;
 connectAttr "Red_ShaderSG.pa" ":renderPartition.st" -na;
