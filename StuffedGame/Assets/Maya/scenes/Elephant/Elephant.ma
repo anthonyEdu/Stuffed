@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Elephant.ma
-//Last modified: Wed, Jun 03, 2020 03:43:29 PM
+//Last modified: Wed, Jun 03, 2020 03:47:07 PM
 //Codeset: 1252
 file -rdi 1 -ns "BaseRig" -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
 file -r -ns "BaseRig" -dr 1 -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
@@ -9848,7 +9848,9 @@ createNode mesh -n "polySurfaceShape7" -p "EyeMesh_R";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".bw" 3;
 createNode transform -n "Skeleton" -p "Elephant_World";
-	rename -uid "15E8E970-4B15-9089-9E54-D2B599DAC430";
+	rename -uid "1B4EB690-47BA-7221-21B4-2088A4F5DDDF";
+createNode transform -n "Controls" -p "Elephant_World";
+	rename -uid "9B8FD660-40FD-5C7E-FA9A-048DC6C416A5";
 	setAttr ".v" no;
 createNode transform -n "Elephant_Export";
 	rename -uid "FC5B9A4A-4731-F72F-FB7B-608B90359470";
@@ -18676,9 +18678,9 @@ createNode lightLinker -s -n "lightLinker1";
 	setAttr -s 16 ".slnk";
 createNode displayLayerManager -n "layerManager";
 	rename -uid "FFB528D0-4953-9404-D263-B6A2E2FB6CB4";
-	setAttr ".cdl" 2;
-	setAttr -s 8 ".dli[1:7]"  1 8 3 2 4 6 7;
-	setAttr -s 2 ".dli";
+	setAttr ".cdl" 5;
+	setAttr -s 8 ".dli[1:7]"  5 8 3 2 4 6 7;
+	setAttr -s 3 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "E7C5F4A4-1A43-5AA7-BC6D-F3BC66616717";
 createNode renderLayerManager -n "renderLayerManager";
@@ -19238,9 +19240,15 @@ createNode reference -n "BaseRigRN";
 	rename -uid "282B9C78-417D-7D27-CB84-F3BAEBB45DBD";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"BaseRigRN"
-		"BaseRigRN" 0;
+		"BaseRigRN" 0
+		"BaseRigRN" 2
+		0 "|BaseRig:Root_J" "|Elephant_World|Skeleton" "-s -r "
+		0 "|BaseRig:Root_J_GRP" "|Elephant_World|Controls" "-s -r ";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
+createNode displayLayer -n "Base_Joints_Layer";
+	rename -uid "D9E5C922-4875-496B-17F9-F7A1D8AA30F7";
+	setAttr ".do" 2;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -19278,7 +19286,7 @@ connectAttr "polyTweakUV2.uvtk[0]" "EyeMesh_LShape.uvst[0].uvtw";
 connectAttr "Geometry_Layer.di" "EyeMesh_R.do";
 connectAttr "transformGeometry2.og" "EyeMesh_RShape.i";
 connectAttr "polyTweakUV3.uvtk[0]" "EyeMesh_RShape.uvst[0].uvtw";
-connectAttr "Geometry_Layer.di" "Skeleton.do";
+connectAttr "Base_Joints_Layer.di" "Skeleton.do";
 connectAttr "groupId42.id" "Elephant_Geo_HighShape.iog.og[1].gid";
 connectAttr "Elephant_HighSG1.mwc" "Elephant_Geo_HighShape.iog.og[1].gco";
 connectAttr "groupId43.id" "Elephant_Geo_HighShape.iog.og[2].gid";
@@ -19403,6 +19411,7 @@ connectAttr "White_ShaderSG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0
 		;
 connectAttr "lambert2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
 		;
+connectAttr "layerManager.dli[1]" "Base_Joints_Layer.id";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "Black_ShaderSG.pa" ":renderPartition.st" -na;
