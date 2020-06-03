@@ -1,7 +1,9 @@
 //Maya ASCII 2019 scene
 //Name: Elephant.ma
-//Last modified: Tue, Jun 02, 2020 06:14:33 PM
+//Last modified: Wed, Jun 03, 2020 03:43:29 PM
 //Codeset: 1252
+file -rdi 1 -ns "BaseRig" -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
+file -r -ns "BaseRig" -dr 1 -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
 requires maya "2019";
 requires "mtoa" "3.1.2";
 currentUnit -l centimeter -a degree -t film;
@@ -18669,25 +18671,26 @@ createNode mesh -n "polySurfaceShape7" -p "R_Eye_Geo_High";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".bw" 3;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "74B0A853-4B85-0719-4D4A-ACA5BD3DB5DB";
+	rename -uid "04C61DE5-42E3-6A2D-59C7-F78B8350F6CA";
 	setAttr -s 16 ".lnk";
 	setAttr -s 16 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "91C7C2D5-4927-5503-B55C-C0AF37925840";
+	rename -uid "FFB528D0-4953-9404-D263-B6A2E2FB6CB4";
 	setAttr ".cdl" 2;
 	setAttr -s 8 ".dli[1:7]"  1 8 3 2 4 6 7;
 	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "E7C5F4A4-1A43-5AA7-BC6D-F3BC66616717";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "3A3D1868-452C-3C88-445B-EAA0E5ED9AE6";
+	rename -uid "C8AC8DE9-46D0-E3DE-2BFC-74AE7839DA56";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "FF83EB3D-CE4E-B5AE-86C3-BEBE5F5E5A78";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "7B3E8DA5-4303-E918-C64C-20A1BE3623F9";
+	rename -uid "8625BBB2-4263-1938-9C44-CDAF8F272629";
+	setAttr ".bsdt[0].bscd" -type "Int32Array" 1 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "361AFF87-4AB0-9639-34EB-F3A7E3AFC1EA";
+	rename -uid "56C19228-45DC-C8C7-9F46-8DA4EB134748";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "0A41BEBB-A04A-3F4E-1C8A-B69EEECED819";
 	setAttr ".b" -type "string" (
@@ -19231,6 +19234,13 @@ createNode groupId -n "groupId48";
 createNode groupId -n "groupId49";
 	rename -uid "57D08F84-468F-58FE-799F-CF9AAA3CAB6E";
 	setAttr ".ihi" 0;
+createNode reference -n "BaseRigRN";
+	rename -uid "282B9C78-417D-7D27-CB84-F3BAEBB45DBD";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"BaseRigRN"
+		"BaseRigRN" 0;
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -19248,7 +19258,9 @@ select -ne :defaultShaderList1;
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
+	setAttr -s 2 ".r";
 select -ne :initialShadingGroup;
+	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
