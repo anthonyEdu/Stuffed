@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Elephant_Rig.ma
-//Last modified: Thu, Jun 04, 2020 08:50:01 AM
+//Last modified: Thu, Jun 04, 2020 09:04:36 AM
 //Codeset: 1252
 file -rdi 1 -ns "BaseRig" -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
 file -r -ns "BaseRig" -dr 1 -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
@@ -15,14 +15,14 @@ fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 18363)\n";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
-	setAttr ".t" -type "double3" -0.59630869858134294 4.8879189476446916 24.476304999360625 ;
-	setAttr ".r" -type "double3" -2520.9383527259297 -5041.3999999993712 0 ;
+	setAttr ".t" -type "double3" 1.1583618750713875 3.4741910561983049 20.537156406984629 ;
+	setAttr ".r" -type "double3" -2519.7383527257466 -5038.1999999995533 2.3306578623012864e-18 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "77E8AA9E-234E-68FC-26D2-21B85028178A";
 	setAttr -k off ".v";
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 23.848817481845586;
+	setAttr ".coi" 19.930813555180364;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -13799,7 +13799,7 @@ createNode mesh -n "polySurfaceShape7" -p "R_Eye_Geo_High";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".bw" 3;
 createNode fosterParent -n "BaseRigRNfosterParent1";
-	rename -uid "CA1A9EBE-43EB-8A0F-558A-1B8E55B3027D";
+	rename -uid "681691F0-4786-9150-065C-069C963425C5";
 createNode mesh -n "BaseRig:polySurfaceShape2" -p "BaseRigRNfosterParent1";
 	rename -uid "EEB1EB25-49C9-EAE7-5F45-2197EE221C1D";
 	setAttr -k off ".v";
