@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: BaseRig.ma
-//Last modified: Thu, Jun 04, 2020 01:52:36 PM
+//Last modified: Thu, Jun 04, 2020 01:55:41 PM
 //Codeset: UTF-8
 requires maya "2018";
 requires "mtoa" "3.1.2";
@@ -14,13 +14,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 6.3446740389974794 6.6668020826734482 26.493288105085465 ;
-	setAttr ".r" -type "double3" 348.26164721252292 7212.5999999990618 -4.07380373702853e-16 ;
+	setAttr ".t" -type "double3" 2.4735110777014486 2.5277702388331083 18.322350576626224 ;
+	setAttr ".r" -type "double3" 356.66164721243234 7203.3999999974403 -1.2445948735860992e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "77E8AA9E-234E-68FC-26D2-21B85028178A";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 27.979014996154866;
+	setAttr ".coi" 16.799667958354043;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -3005,7 +3005,22 @@ createNode joint -n "Wrist_J_R" -p "Elbow_J_R";
 		 0.66916885615804877 -0.74311038342101521 2.6703372270652036e-15 0 1.3322676295501882e-15 -2.3314683517128283e-15 -0.99999999999999978 0
 		 -1.5394199999999993 2.5513399999999993 -1.9877799999999974e-15 1;
 	setAttr ".radi" 0.5;
-createNode transform -n "Root_J_GRP";
+createNode transform -n "Transform_Ctrl_Grp";
+	rename -uid "A3FFDBD1-484E-B335-9E02-B4888C324FDC";
+createNode transform -n "Transform_Ctrl" -p "Transform_Ctrl_Grp";
+	rename -uid "3E7005D2-2F40-1170-5232-77BCC9D976F8";
+createNode nurbsCurve -n "Transform_CtrlShape" -p "Transform_Ctrl";
+	rename -uid "EDAB7F9D-424D-FCDB-7B45-64987D2AF9CA";
+	setAttr -k off ".v";
+	setAttr ".tw" yes;
+	setAttr -s 11 ".cp[0:10]" -type "double3" 6.0336247568471295 3.6945296228645227e-16 
+		-6.0336247568471144 7.3545102973237362e-17 3.4035742145262291e-16 -5.5584585153791792 
+		-6.0336247568471197 3.6945296228645262e-16 -6.0336247568471197 -5.5584585153791792 
+		1.1190798382218166e-31 -2.2359674720783171e-15 -6.0336247568471215 -3.6945296228645262e-16 
+		6.0336247568471171 -9.6717327334792164e-16 -3.4035742145262301e-16 5.558458515379181 
+		6.0336247568471144 -3.6945296228645272e-16 6.0336247568471162 5.5584585153791792 
+		-1.6952571685357419e-31 2.3601936557129929e-15 0 0 0 0 0 0 0 0 0;
+createNode transform -n "Root_J_GRP" -p "Transform_Ctrl";
 	rename -uid "2E8EBCD5-EF4A-5249-3DC7-EABC28156016";
 	setAttr ".rp" -type "double3" 0 2.0000000000000004 0 ;
 	setAttr ".sp" -type "double3" 0 2.0000000000000004 0 ;
@@ -3791,6 +3806,9 @@ createNode makeNurbCircle -n "makeNurbCircle27";
 createNode transformGeometry -n "transformGeometry27";
 	rename -uid "1B990ACD-A347-E958-78A5-8C91564C4808";
 	setAttr ".txf" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0.56331828302429754 -2.9260591661841966 -4.6404549206511516e-15 1;
+createNode makeNurbCircle -n "makeNurbCircle28";
+	rename -uid "E7E77CBF-5143-166B-9E99-7D9AD34BF709";
+	setAttr ".nr" -type "double3" 0 1 0 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -3878,6 +3896,7 @@ connectAttr "Shoulder_J_R.s" "Elbow_J_R.is";
 connectAttr "Elbow_J_R_CTRL.r" "Elbow_J_R.r";
 connectAttr "Elbow_J_R.s" "Wrist_J_R.is";
 connectAttr "Wrist_J_R_CTRL.r" "Wrist_J_R.r";
+connectAttr "makeNurbCircle28.oc" "Transform_CtrlShape.cr";
 connectAttr "Root_J.jo" "Root_J_GRP.r";
 connectAttr "transformGeometry1.og" "Root_J_CTRLShape.cr";
 connectAttr "Pelvis_J.jo" "Pelvis_J_GRP.r";
