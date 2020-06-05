@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: moth.ma
-//Last modified: Fri, Jun 05, 2020 05:42:09 PM
+//Last modified: Fri, Jun 05, 2020 05:49:16 PM
 //Codeset: 1252
 requires maya "2018";
 requires "mtoa" "3.1.2";
@@ -14,14 +14,14 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -17.513964099883626 8.4767802071994236 -1.610028763704332 ;
-	setAttr ".r" -type "double3" 726.86164645317558 8142.2000000208527 0 ;
+	setAttr ".t" -type "double3" -13.543587047798399 5.9457471984425778 -17.793679965835796 ;
+	setAttr ".r" -type "double3" 716.66164645318395 8097.0000000205391 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "77E8AA9E-234E-68FC-26D2-21B85028178A";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 9.9999997473787516e-06;
+	setAttr ".coi" 17.454277978461512;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
