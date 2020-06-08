@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Elephant_Rig.ma
-//Last modified: Mon, Jun 08, 2020 03:39:13 PM
+//Last modified: Mon, Jun 08, 2020 04:42:39 PM
 //Codeset: 1252
 file -rdi 1 -ns "BaseRig" -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
 file -r -ns "BaseRig" -dr 1 -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
@@ -15,14 +15,14 @@ fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 18363)\n";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
-	setAttr ".t" -type "double3" 0.10459656254415961 2.9014539565700526 17.695956178808039 ;
-	setAttr ".r" -type "double3" -1079.1383526486618 -1801.7999999998087 0 ;
+	setAttr ".t" -type "double3" 0.11707096636662673 4.9064578142896691 14.444779431383536 ;
+	setAttr ".r" -type "double3" -1092.9383526478114 -1440.1999999999791 9.6286909977423957e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "77E8AA9E-234E-68FC-26D2-21B85028178A";
 	setAttr -k off ".v";
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 18.234932053761575;
+	setAttr ".coi" 14.656225624927636;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -140,7 +140,7 @@ createNode mesh -n "Elephant_GeoShape" -p "Elephant_Geo";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 1667 ".pt";
+	setAttr -s 1483 ".pt";
 	setAttr ".pt[0]" -type "float3" 0 0 -2.9802322e-08 ;
 	setAttr ".pt[1]" -type "float3" -4.7683716e-07 2.3841858e-07 -1.1920929e-07 ;
 	setAttr ".pt[2]" -type "float3" -2.3841858e-07 -2.3841858e-07 0 ;
@@ -20157,26 +20157,26 @@ createNode mesh -n "polySurfaceShape7" -p "R_Eye_Geo_High";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".bw" 3;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "9BD14AE8-46BB-FE41-710F-D1AB4936DEA0";
+	rename -uid "A4B0FB45-4AA8-5283-A9B9-6690FEFF2FC7";
 	setAttr -s 16 ".lnk";
 	setAttr -s 16 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "5710856C-4B6B-A1F4-66DE-DB8269ED95C9";
+	rename -uid "D73D2646-4FB7-B05E-783F-D4A167DEFF8E";
 	setAttr ".cdl" 5;
 	setAttr -s 8 ".dli[1:7]"  5 8 3 2 4 6 7;
 	setAttr -s 3 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "E7C5F4A4-1A43-5AA7-BC6D-F3BC66616717";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "F449C764-4203-9465-A755-639099461B3D";
+	rename -uid "E06D557A-43D2-B8A4-D8D1-C19B5E11DDF6";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "FF83EB3D-CE4E-B5AE-86C3-BEBE5F5E5A78";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "98094006-4E91-3A1E-B0FC-D2852FF6B366";
+	rename -uid "55128D23-4D22-B573-7708-3095D6BA990D";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 1 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "C8928EF0-47F4-2A7A-8073-A785B1361081";
+	rename -uid "1C0C761A-40CD-26D8-F471-3E9A1E7E892C";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "0A41BEBB-A04A-3F4E-1C8A-B69EEECED819";
 	setAttr ".b" -type "string" (
@@ -20191,7 +20191,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
 		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
 		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n"
-		+ "            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n"
+		+ "            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 1\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n"
 		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n"
 		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1245\n            -height 684\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n"
@@ -20217,8 +20217,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1245\\n    -height 684\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1245\\n    -height 684\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 1\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1245\\n    -height 684\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 1\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1245\\n    -height 684\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -20429,7 +20429,7 @@ createNode groupId -n "groupId49";
 	setAttr ".ihi" 0;
 createNode reference -n "BaseRigRN";
 	rename -uid "282B9C78-417D-7D27-CB84-F3BAEBB45DBD";
-	setAttr -s 101 ".phl";
+	setAttr -s 104 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -20531,17 +20531,20 @@ createNode reference -n "BaseRigRN";
 	setAttr ".phl[99]" 0;
 	setAttr ".phl[100]" 0;
 	setAttr ".phl[101]" 0;
+	setAttr ".phl[102]" 0;
+	setAttr ".phl[103]" 0;
+	setAttr ".phl[104]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"BaseRigRN"
 		"BaseRigRN" 0
-		"BaseRigRN" 218
+		"BaseRigRN" 225
 		0 "|BaseRig:Root_J" "|Elephant_World|Skeleton" "-s -r "
 		0 "|BaseRig:Root_J_GRP" "|Elephant_World|Controls" "-s -r "
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J" "useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J" "objectColor" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J" "translate" " -type \"double3\" 0 2.00000000000000044 0"
 		
-		2 "|Elephant_World|Skeleton|BaseRig:Root_J" "lockInfluenceWeights" " 0"
+		2 "|Elephant_World|Skeleton|BaseRig:Root_J" "lockInfluenceWeights" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J" "useObjectColor" 
 		" 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J" "objectColor" 
@@ -20553,37 +20556,37 @@ createNode reference -n "BaseRigRN";
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L" 
 		"objectColor" " 2"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L" 
-		"lockInfluenceWeights" " 0"
+		"lockInfluenceWeights" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L|BaseRig:Knee_J_L" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L|BaseRig:Knee_J_L" 
 		"objectColor" " 3"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L|BaseRig:Knee_J_L" 
-		"lockInfluenceWeights" " 0"
+		"lockInfluenceWeights" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L|BaseRig:Knee_J_L|BaseRig:Ankle_J_L" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L|BaseRig:Knee_J_L|BaseRig:Ankle_J_L" 
 		"objectColor" " 4"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L|BaseRig:Knee_J_L|BaseRig:Ankle_J_L" 
-		"lockInfluenceWeights" " 0"
+		"lockInfluenceWeights" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R" 
 		"objectColor" " 2"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R" 
-		"lockInfluenceWeights" " 0"
+		"lockInfluenceWeights" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R|BaseRig:Knee_J_R" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R|BaseRig:Knee_J_R" 
 		"objectColor" " 3"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R|BaseRig:Knee_J_R" 
-		"lockInfluenceWeights" " 0"
+		"lockInfluenceWeights" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R|BaseRig:Knee_J_R|BaseRig:Ankle_J_R" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R|BaseRig:Knee_J_R|BaseRig:Ankle_J_R" 
 		"objectColor" " 4"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R|BaseRig:Knee_J_R|BaseRig:Ankle_J_R" 
-		"lockInfluenceWeights" " 0"
+		"lockInfluenceWeights" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J" "useObjectColor" 
 		" 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J" "objectColor" 
@@ -20595,67 +20598,67 @@ createNode reference -n "BaseRigRN";
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j" 
 		"objectColor" " 2"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j" 
-		"lockInfluenceWeights" " 0"
+		"lockInfluenceWeights" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j" 
 		"objectColor" " 3"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j" 
-		"lockInfluenceWeights" " 0"
+		"lockInfluenceWeights" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J" 
 		"objectColor" " 4"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J" 
-		"lockInfluenceWeights" " 0"
+		"lockInfluenceWeights" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L" 
 		"objectColor" " 5"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L" 
-		"lockInfluenceWeights" " 0"
+		"lockInfluenceWeights" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeLid_J_L" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeLid_J_L" 
 		"objectColor" " 6"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeLid_J_L" 
-		"lockInfluenceWeights" " 0"
+		"lockInfluenceWeights" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R" 
 		"objectColor" " 5"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R" 
-		"lockInfluenceWeights" " 0"
+		"lockInfluenceWeights" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeLid_J_R" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeLid_J_R" 
 		"objectColor" " 6"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeLid_J_R" 
-		"lockInfluenceWeights" " 0"
+		"lockInfluenceWeights" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Jaw_J" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Jaw_J" 
 		"objectColor" " 5"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Jaw_J" 
-		"lockInfluenceWeights" " 0"
+		"lockInfluenceWeights" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L" 
 		"objectColor" " 4"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L" 
-		"lockInfluenceWeights" " 0"
+		"lockInfluenceWeights" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L" 
 		"objectColor" " 5"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L" 
-		"lockInfluenceWeights" " 0"
+		"lockInfluenceWeights" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L|BaseRig:Elbow_J_L" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L|BaseRig:Elbow_J_L" 
 		"objectColor" " 6"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L|BaseRig:Elbow_J_L" 
-		"lockInfluenceWeights" " 0"
+		"lockInfluenceWeights" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L|BaseRig:Elbow_J_L|BaseRig:Wrist_J_L" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L|BaseRig:Elbow_J_L|BaseRig:Wrist_J_L" 
@@ -20663,25 +20666,25 @@ createNode reference -n "BaseRigRN";
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L|BaseRig:Elbow_J_L|BaseRig:Wrist_J_L" 
 		"translate" " -type \"double3\" 0.3438154355144134 0 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L|BaseRig:Elbow_J_L|BaseRig:Wrist_J_L" 
-		"lockInfluenceWeights" " 0"
+		"lockInfluenceWeights" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R" 
 		"objectColor" " 4"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R" 
-		"lockInfluenceWeights" " 0"
+		"lockInfluenceWeights" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R" 
 		"objectColor" " 5"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R" 
-		"lockInfluenceWeights" " 0"
+		"lockInfluenceWeights" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R|BaseRig:Elbow_J_R" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R|BaseRig:Elbow_J_R" 
 		"objectColor" " 6"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R|BaseRig:Elbow_J_R" 
-		"lockInfluenceWeights" " 0"
+		"lockInfluenceWeights" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R|BaseRig:Elbow_J_R|BaseRig:Wrist_J_R" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R|BaseRig:Elbow_J_R|BaseRig:Wrist_J_R" 
@@ -20689,7 +20692,7 @@ createNode reference -n "BaseRigRN";
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R|BaseRig:Elbow_J_R|BaseRig:Wrist_J_R" 
 		"translate" " -type \"double3\" -0.34381295059651917 1.4548538547209944e-06 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R|BaseRig:Elbow_J_R|BaseRig:Wrist_J_R" 
-		"lockInfluenceWeights" " 0"
+		"lockInfluenceWeights" " 1"
 		2 "|Elephant_World|Controls|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL" "rotate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Elephant_World|Controls|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL" "rotateX" 
@@ -20698,6 +20701,14 @@ createNode reference -n "BaseRigRN";
 		" -av"
 		2 "|Elephant_World|Controls|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL" "rotateZ" 
 		" -av"
+		2 "|Elephant_World|Controls|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_World|Controls|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL" 
+		"rotateX" " -av"
+		2 "|Elephant_World|Controls|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL" 
+		"rotateY" " -av"
+		2 "|Elephant_World|Controls|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL" 
+		"rotateZ" " -av"
 		2 "|Elephant_World|Controls|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Hip_J_L_GRP|BaseRig:Hip_J_L_CTRL" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Elephant_World|Controls|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Hip_J_R_GRP|BaseRig:Hip_J_R_CTRL|BaseRig:Knee_J_R_GRP|BaseRig:Knee_J_R_CTRL" 
@@ -20774,93 +20785,93 @@ createNode reference -n "BaseRigRN";
 		"BaseRigRN.placeHolderList[4]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J.message" 
 		"BaseRigRN.placeHolderList[5]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J.lockInfluenceWeights" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J.message" 
 		"BaseRigRN.placeHolderList[6]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J.worldMatrix" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J.lockInfluenceWeights" 
 		"BaseRigRN.placeHolderList[7]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J.objectColorRGB" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J.worldMatrix" 
 		"BaseRigRN.placeHolderList[8]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L.message" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J.objectColorRGB" 
 		"BaseRigRN.placeHolderList[9]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L.lockInfluenceWeights" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L.message" 
 		"BaseRigRN.placeHolderList[10]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L.worldMatrix" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L.lockInfluenceWeights" 
 		"BaseRigRN.placeHolderList[11]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L.objectColorRGB" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L.worldMatrix" 
 		"BaseRigRN.placeHolderList[12]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L|BaseRig:Knee_J_L.message" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L.objectColorRGB" 
 		"BaseRigRN.placeHolderList[13]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L|BaseRig:Knee_J_L.lockInfluenceWeights" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L|BaseRig:Knee_J_L.message" 
 		"BaseRigRN.placeHolderList[14]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L|BaseRig:Knee_J_L.worldMatrix" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L|BaseRig:Knee_J_L.lockInfluenceWeights" 
 		"BaseRigRN.placeHolderList[15]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L|BaseRig:Knee_J_L.objectColorRGB" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L|BaseRig:Knee_J_L.worldMatrix" 
 		"BaseRigRN.placeHolderList[16]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L|BaseRig:Knee_J_L|BaseRig:Ankle_J_L.message" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L|BaseRig:Knee_J_L.objectColorRGB" 
 		"BaseRigRN.placeHolderList[17]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L|BaseRig:Knee_J_L|BaseRig:Ankle_J_L.lockInfluenceWeights" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L|BaseRig:Knee_J_L|BaseRig:Ankle_J_L.message" 
 		"BaseRigRN.placeHolderList[18]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L|BaseRig:Knee_J_L|BaseRig:Ankle_J_L.worldMatrix" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L|BaseRig:Knee_J_L|BaseRig:Ankle_J_L.lockInfluenceWeights" 
 		"BaseRigRN.placeHolderList[19]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L|BaseRig:Knee_J_L|BaseRig:Ankle_J_L.objectColorRGB" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L|BaseRig:Knee_J_L|BaseRig:Ankle_J_L.worldMatrix" 
 		"BaseRigRN.placeHolderList[20]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R.message" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L|BaseRig:Knee_J_L|BaseRig:Ankle_J_L.objectColorRGB" 
 		"BaseRigRN.placeHolderList[21]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R.lockInfluenceWeights" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R.message" 
 		"BaseRigRN.placeHolderList[22]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R.worldMatrix" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R.lockInfluenceWeights" 
 		"BaseRigRN.placeHolderList[23]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R.objectColorRGB" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R.worldMatrix" 
 		"BaseRigRN.placeHolderList[24]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R|BaseRig:Knee_J_R.message" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R.objectColorRGB" 
 		"BaseRigRN.placeHolderList[25]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R|BaseRig:Knee_J_R.lockInfluenceWeights" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R|BaseRig:Knee_J_R.message" 
 		"BaseRigRN.placeHolderList[26]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R|BaseRig:Knee_J_R.worldMatrix" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R|BaseRig:Knee_J_R.lockInfluenceWeights" 
 		"BaseRigRN.placeHolderList[27]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R|BaseRig:Knee_J_R.objectColorRGB" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R|BaseRig:Knee_J_R.worldMatrix" 
 		"BaseRigRN.placeHolderList[28]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R|BaseRig:Knee_J_R|BaseRig:Ankle_J_R.message" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R|BaseRig:Knee_J_R.objectColorRGB" 
 		"BaseRigRN.placeHolderList[29]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R|BaseRig:Knee_J_R|BaseRig:Ankle_J_R.lockInfluenceWeights" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R|BaseRig:Knee_J_R|BaseRig:Ankle_J_R.message" 
 		"BaseRigRN.placeHolderList[30]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R|BaseRig:Knee_J_R|BaseRig:Ankle_J_R.worldMatrix" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R|BaseRig:Knee_J_R|BaseRig:Ankle_J_R.lockInfluenceWeights" 
 		"BaseRigRN.placeHolderList[31]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R|BaseRig:Knee_J_R|BaseRig:Ankle_J_R.objectColorRGB" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R|BaseRig:Knee_J_R|BaseRig:Ankle_J_R.worldMatrix" 
 		"BaseRigRN.placeHolderList[32]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J.message" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R|BaseRig:Knee_J_R|BaseRig:Ankle_J_R.objectColorRGB" 
 		"BaseRigRN.placeHolderList[33]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J.lockInfluenceWeights" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J.message" 
 		"BaseRigRN.placeHolderList[34]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J.worldMatrix" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J.lockInfluenceWeights" 
 		"BaseRigRN.placeHolderList[35]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J.objectColorRGB" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J.worldMatrix" 
 		"BaseRigRN.placeHolderList[36]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j.message" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J.objectColorRGB" 
 		"BaseRigRN.placeHolderList[37]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j.lockInfluenceWeights" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j.message" 
 		"BaseRigRN.placeHolderList[38]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j.worldMatrix" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j.lockInfluenceWeights" 
 		"BaseRigRN.placeHolderList[39]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j.objectColorRGB" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j.worldMatrix" 
 		"BaseRigRN.placeHolderList[40]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j.message" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j.objectColorRGB" 
 		"BaseRigRN.placeHolderList[41]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j.lockInfluenceWeights" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j.message" 
 		"BaseRigRN.placeHolderList[42]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j.worldMatrix" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j.lockInfluenceWeights" 
 		"BaseRigRN.placeHolderList[43]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j.objectColorRGB" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j.worldMatrix" 
 		"BaseRigRN.placeHolderList[44]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J.message" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j.objectColorRGB" 
 		"BaseRigRN.placeHolderList[45]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J.lockInfluenceWeights" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J.message" 
 		"BaseRigRN.placeHolderList[46]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J.worldMatrix" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J.lockInfluenceWeights" 
 		"BaseRigRN.placeHolderList[47]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J.objectColorRGB" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J.worldMatrix" 
 		"BaseRigRN.placeHolderList[48]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L.message" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J.objectColorRGB" 
 		"BaseRigRN.placeHolderList[49]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L.message" 
 		"BaseRigRN.placeHolderList[50]" ""
@@ -20965,7 +20976,13 @@ createNode reference -n "BaseRigRN";
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R|BaseRig:Elbow_J_R|BaseRig:Wrist_J_R.worldMatrix" 
 		"BaseRigRN.placeHolderList[100]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R|BaseRig:Elbow_J_R|BaseRig:Wrist_J_R.objectColorRGB" 
-		"BaseRigRN.placeHolderList[101]" "";
+		"BaseRigRN.placeHolderList[101]" ""
+		5 4 "BaseRigRN" "|Elephant_World|Controls|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL.rotateX" 
+		"BaseRigRN.placeHolderList[102]" ""
+		5 4 "BaseRigRN" "|Elephant_World|Controls|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL.rotateY" 
+		"BaseRigRN.placeHolderList[103]" ""
+		5 4 "BaseRigRN" "|Elephant_World|Controls|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL.rotateZ" 
+		"BaseRigRN.placeHolderList[104]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode displayLayer -n "Base_Joints_Layer";
@@ -21468,7 +21485,7 @@ createNode skinCluster -n "skinCluster1";
 		1 11 1
 		1 11 1
 		1 11 1;
-	setAttr ".wl[309:547].w"
+	setAttr ".wl[309:570].w"
 		1 11 1
 		1 11 1
 		1 11 1
@@ -21579,23 +21596,24 @@ createNode skinCluster -n "skinCluster1";
 		3 9 0.17200221121311188 10 0.70514006912708282 11 0.1228577196598053
 		4 8 0.23397558927536011 9 0.46802407503128052 10 0.29644182324409485 
 		17 0.0015585124492645264
-		2 0 0.13992667198181152 8 0.86007332801818848
-		2 0 0.316639244556427 8 0.683360755443573
-		2 0 0.12136590480804443 8 0.87863409519195557
-		3 0 0.13814795017242432 8 0.80872952565550804 9 0.053122524172067642
-		3 0 0.099676907062530518 8 0.8924035681411624 9 0.0079195247963070869
+		2 1 0.79184542596340179 8 0.20815457403659821
+		2 1 0.94738085195422173 8 0.052619148045778275
+		2 1 0.96780598163604736 8 0.032194018363952637
+		2 1 0.87223207950592041 8 0.12776792049407959
+		2 1 0.75275564193725586 8 0.24724435806274414
 		3 9 0.25826650857925415 10 0.72393983602523804 17 0.017793655395507813
 		3 9 0.29395592212677002 10 0.66265487670898438 11 0.043389201164245605
 		4 8 0.35673820972442627 9 0.41135388612747192 10 0.20332279056310654 
 		11 0.02858511358499527
-		4 0 0.010008501820266247 8 0.70283896941691637 9 0.22301740944385529 
+		4 0 0.010008501820266247 1 0.70283896941691637 9 0.22301740944385529 
 		10 0.064135119318962097
 		4 0 0.0022043890785425901 8 0.85159316589124501 9 0.13927741348743439 
 		10 0.0069250315427780151
-		4 0 0.055466603487730026 8 0.79384161904454231 9 0.14804138243198395 
+		4 0 0.055466603487730026 1 0.79384161904454231 9 0.14804138243198395 
 		10 0.0026503950357437134
 		3 9 0.13910999894142151 10 0.61829806864261627 11 0.24259193241596222
-		3 8 0.42102876305580139 9 0.4238460510969162 10 0.15512518584728241
+		4 1 0.078232981264591217 8 0.34279578179121017 9 0.4238460510969162 
+		10 0.15512518584728241
 		1 11 1
 		1 11 1
 		1 11 1
@@ -21668,23 +21686,21 @@ createNode skinCluster -n "skinCluster1";
 		3 8 0.28783547878265381 9 0.40313607454299927 10 0.30902844667434692
 		4 8 0.26421582698822021 9 0.43652170896530151 10 0.15663950145244598 
 		17 0.14262296259403229
-		2 0 0.34240055084228516 8 0.65759944915771484
-		2 0 0.46143880486488342 8 0.53856119513511658
-		2 0 0.33146953582763672 8 0.66853046417236328
-		3 0 0.33393701910972595 8 0.66461986978538334 9 0.0014431111048907042
-		3 0 0.32110413908958435 8 0.65877577476203442 9 0.020120086148381233
-		3 0 0.30390298366546631 8 0.68366642482578754 9 0.012430591508746147
-		3 0 0.30831989645957947 8 0.69158461965707829 9 9.5483883342240006e-05
-		2 0 0.28584873676300049 8 0.71415126323699951
-		3 0 0.11032057553529739 8 0.75827666372060776 9 0.13140276074409485
-		4 0 0.10490645468235016 8 0.76042909920215607 9 0.12656530737876892 
-		10 0.0080991387367248535
-		4 0 0.11667095124721527 8 0.7933756411075592 9 0.089546084403991699 
-		10 0.00040732324123382568
-		3 0 0.11154585331678391 8 0.85768596827983856 9 0.030768178403377533
-		3 0 0.11176902800798416 8 0.81918799132108688 9 0.069042980670928955
-		3 0 0.071919254958629608 8 0.81469708681106567 9 0.11338365823030472
-		3 0 0.12583695352077484 8 0.85341531597077847 9 0.020747730508446693
+		1 1 1
+		1 1 1
+		1 1 1
+		2 1 0.90031643211841583 8 0.099683567881584167
+		2 1 0.54653307795524597 8 0.45346692204475403
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		2 1 0.41877728700637817 8 0.58122271299362183
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
 		4 10 0.51975244283676147 17 0.45443779043853283 18 0.025800934878134285 
 		19 8.8318465714110062e-06
 		4 10 0.42747852206230164 11 0.35869702696800232 17 0.13694892823696136 
@@ -21759,9 +21775,7 @@ createNode skinCluster -n "skinCluster1";
 		17 0.039791427552700043
 		4 8 0.6076829731464386 9 0.29337328672409058 10 0.097196506801992655 
 		17 0.0017472333274781704
-		1 10 0.074897944927215576;
-	setAttr ".wl[547:998].w"
-		1 11 0.92510205507278442
+		2 10 0.074897944927215576 11 0.92510205507278442
 		1 11 1
 		1 11 1
 		1 11 1
@@ -21784,7 +21798,8 @@ createNode skinCluster -n "skinCluster1";
 		1 11 1
 		1 11 1
 		2 10 0.016009969636797905 11 0.9839900303632021
-		1 11 1
+		1 11 1;
+	setAttr ".wl[571:1026].w"
 		1 11 1
 		1 11 1
 		1 11 1
@@ -21935,21 +21950,21 @@ createNode skinCluster -n "skinCluster1";
 		1 10 1
 		3 8 0.0011584126623347402 9 0.99239741719793528 10 0.0064441701397299767
 		1 9 1
-		1 8 1
-		2 0 0.9409521147608757 8 0.059047885239124298
-		1 8 1
-		1 8 1
-		2 0 0.047214154154062271 8 0.95278584584593773
-		1 8 1
-		1 8 1
-		2 0 0.084363676607608795 8 0.9156363233923912
-		1 8 1
-		2 0 0.047169864177703857 8 0.95283013582229614
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
 		1 10 1
 		1 10 1
 		1 10 1
@@ -22212,8 +22227,7 @@ createNode skinCluster -n "skinCluster1";
 		1 11 1
 		1 11 1
 		1 11 1
-		1 11 1;
-	setAttr ".wl[999:1384].w"
+		1 11 1
 		1 11 1
 		1 11 1
 		1 11 1
@@ -22241,7 +22255,8 @@ createNode skinCluster -n "skinCluster1";
 		1 11 1
 		1 11 1
 		1 11 1
-		1 11 1
+		1 11 1;
+	setAttr ".wl[1027:1406].w"
 		1 11 1
 		1 11 1
 		1 11 1
@@ -22599,8 +22614,7 @@ createNode skinCluster -n "skinCluster1";
 		2 10 0.031689539551734924 11 0.96831046044826508
 		2 10 0.041277404874563217 11 0.95872259512543678
 		2 10 0.048463426530361176 11 0.95153657346963882
-		2 10 0.051151756197214127 11 0.94884824380278587;
-	setAttr ".wl[1385:1668].w"
+		2 10 0.051151756197214127 11 0.94884824380278587
 		2 10 0.038932695984840393 11 0.96106730401515961
 		2 10 0.030683886259794235 11 0.96931611374020576
 		2 10 0.010041054338216782 11 0.98995894566178322
@@ -22622,7 +22636,8 @@ createNode skinCluster -n "skinCluster1";
 		1 11 1
 		2 10 0.00042686646338552237 11 0.99957313353661448
 		2 10 0.0025633554905653 11 0.9974366445094347
-		2 10 0.0032580660190433264 11 0.99674193398095667
+		2 10 0.0032580660190433264 11 0.99674193398095667;
+	setAttr ".wl[1407:1668].w"
 		1 11 1
 		2 10 0.026915526017546654 11 0.97308447398245335
 		1 11 1
@@ -22721,168 +22736,168 @@ createNode skinCluster -n "skinCluster1";
 		1 11 1
 		1 11 1
 		2 10 0.0052785323932766914 11 0.99472146760672331
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		2 0 0.99977320432662964 8 0.0002267956733703613
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		2 0 0.99999508325299757 8 4.9167470024258364e-06
-		2 0 0.99679383868351579 8 0.0032061613164842129
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		2 0 0.99498194456100464 8 0.0050180554389953613
-		1 0 1
-		3 0 0.99843460321426392 8 0.00093454413581639528 9 0.0006308526499196887
-		2 0 0.99809360504150391 8 0.0019063949584960938
-		2 0 0.9999690055847168 8 3.0994415283203125e-05
-		1 0 1
-		2 0 0.99075389746576548 8 0.0092461025342345238
-		2 0 0.6731145977973938 8 0.3268854022026062
-		2 0 0.86423367261886597 8 0.13576632738113403
-		2 0 0.90250582247972488 8 0.097494177520275116
-		2 0 0.77198053896427155 8 0.22801946103572845
-		2 0 0.63543218374252319 8 0.36456781625747681
-		2 0 0.83928990364074707 8 0.16071009635925293
-		2 0 0.86286318302154541 8 0.13713681697845459
-		2 0 0.66007983684539795 8 0.33992016315460205
-		3 0 0.73872220516204834 8 0.2610222595394589 9 0.00025553529849275947
-		3 0 0.9636501669883728 8 0.036321978172054514 9 2.7854839572682977e-05
-		2 0 0.72269761562347412 8 0.27730238437652588
-		2 0 0.94232213497161865 8 0.057677865028381348
-		2 0 0.68987935781478882 8 0.31012064218521118
-		2 0 0.92594647407531738 8 0.074053525924682617
-		2 0 0.72372567653656006 8 0.27627432346343994
-		2 0 0.91946613788604736 8 0.080533862113952637
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		2 0 0.999979177960995 8 2.082203900499735e-05
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		2 0 0.99916820618091151 8 0.00083179381908848882
-		1 0 1
-		1 0 1
-		1 0 1
-		3 0 0.99543702602386475 8 0.0044473697053035721 9 0.00011560427083168179
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		2 0 0.99016797542572021 8 0.0098320245742797852
-		2 0 0.98939645290374756 8 0.010603547096252441
-		2 0 0.99007636308670044 8 0.0099236369132995605
-		2 0 0.96527236700057983 8 0.034727632999420166
-		2 0 0.96317708492279053 8 0.036822915077209473
-		2 0 0.94639432430267334 8 0.05360567569732666
-		2 0 0.95965456962585449 8 0.040345430374145508
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		2 1 0.80307041108608246 8 0.19692958891391754
+		2 1 0.89571541547775269 8 0.10428458452224731
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		2 1 0.96545520797371864 8 0.034544792026281357
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
 		1 10 1
 		3 17 0.0534331314265728 18 0.91496770828962326 19 0.03159916028380394;
 	setAttr -s 25 ".pm";
@@ -22967,9 +22982,25 @@ createNode skinCluster -n "skinCluster1";
 	setAttr ".ucm" yes;
 	setAttr -s 25 ".ifcl";
 	setAttr -s 25 ".ifcl";
+createNode animCurveTA -n "Pelvis_J_CTRL_rotateX";
+	rename -uid "B10897F5-4DAF-C48C-B89F-4AA1BAA9E377";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 10 54.88943340987111 20 0 30 0;
+createNode animCurveTA -n "Pelvis_J_CTRL_rotateY";
+	rename -uid "03523F87-4284-C439-2DBD-668F48323421";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 6 ".ktv[0:5]"  1 0 30 0 40 -23.53582073627399 50 0 60 30.56405002224836
+		 70 0;
+createNode animCurveTA -n "Pelvis_J_CTRL_rotateZ";
+	rename -uid "76ED3897-499C-A077-F3BC-2396B2974784";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  1 0 70 0 80 38.014730909684367 90 0 100 -41.401693910327658;
 select -ne :time1;
-	setAttr ".o" 92;
-	setAttr ".unw" 92;
+	setAttr ".o" 1;
+	setAttr ".unw" 1;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -22997,56 +23028,58 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
 	setAttr -s 4 ".sol";
+select -ne :modelPanel4ViewSelectedSet;
+	setAttr ".ihi" 0;
 connectAttr "BaseRigRN.phl[1]" "bindPose3.m[2]";
 connectAttr "BaseRigRN.phl[2]" "skinCluster1.lw[0]";
 connectAttr "BaseRigRN.phl[3]" "skinCluster1.ma[0]";
 connectAttr "BaseRigRN.phl[4]" "skinCluster1.ifcl[0]";
 connectAttr "BaseRigRN.phl[5]" "bindPose3.m[3]";
-connectAttr "BaseRigRN.phl[6]" "skinCluster1.lw[1]";
-connectAttr "BaseRigRN.phl[7]" "skinCluster1.ma[1]";
-connectAttr "BaseRigRN.phl[8]" "skinCluster1.ifcl[1]";
-connectAttr "BaseRigRN.phl[9]" "bindPose3.m[4]";
-connectAttr "BaseRigRN.phl[10]" "skinCluster1.lw[2]";
-connectAttr "BaseRigRN.phl[11]" "skinCluster1.ma[2]";
-connectAttr "BaseRigRN.phl[12]" "skinCluster1.ifcl[2]";
-connectAttr "BaseRigRN.phl[13]" "bindPose3.m[5]";
-connectAttr "BaseRigRN.phl[14]" "skinCluster1.lw[3]";
-connectAttr "BaseRigRN.phl[15]" "skinCluster1.ma[3]";
-connectAttr "BaseRigRN.phl[16]" "skinCluster1.ifcl[3]";
-connectAttr "BaseRigRN.phl[17]" "bindPose3.m[6]";
-connectAttr "BaseRigRN.phl[18]" "skinCluster1.lw[4]";
-connectAttr "BaseRigRN.phl[19]" "skinCluster1.ma[4]";
-connectAttr "BaseRigRN.phl[20]" "skinCluster1.ifcl[4]";
-connectAttr "BaseRigRN.phl[21]" "bindPose3.m[7]";
-connectAttr "BaseRigRN.phl[22]" "skinCluster1.lw[5]";
-connectAttr "BaseRigRN.phl[23]" "skinCluster1.ma[5]";
-connectAttr "BaseRigRN.phl[24]" "skinCluster1.ifcl[5]";
-connectAttr "BaseRigRN.phl[25]" "bindPose3.m[8]";
-connectAttr "BaseRigRN.phl[26]" "skinCluster1.lw[6]";
-connectAttr "BaseRigRN.phl[27]" "skinCluster1.ma[6]";
-connectAttr "BaseRigRN.phl[28]" "skinCluster1.ifcl[6]";
-connectAttr "BaseRigRN.phl[29]" "bindPose3.m[9]";
-connectAttr "BaseRigRN.phl[30]" "skinCluster1.lw[7]";
-connectAttr "BaseRigRN.phl[31]" "skinCluster1.ma[7]";
-connectAttr "BaseRigRN.phl[32]" "skinCluster1.ifcl[7]";
-connectAttr "BaseRigRN.phl[33]" "bindPose3.m[10]";
-connectAttr "BaseRigRN.phl[34]" "skinCluster1.lw[8]";
-connectAttr "BaseRigRN.phl[35]" "skinCluster1.ma[8]";
-connectAttr "BaseRigRN.phl[36]" "skinCluster1.ifcl[8]";
-connectAttr "BaseRigRN.phl[37]" "bindPose3.m[11]";
-connectAttr "BaseRigRN.phl[38]" "skinCluster1.lw[9]";
-connectAttr "BaseRigRN.phl[39]" "skinCluster1.ma[9]";
-connectAttr "BaseRigRN.phl[40]" "skinCluster1.ifcl[9]";
-connectAttr "BaseRigRN.phl[41]" "bindPose3.m[12]";
-connectAttr "BaseRigRN.phl[42]" "skinCluster1.lw[10]";
-connectAttr "BaseRigRN.phl[43]" "skinCluster1.ma[10]";
-connectAttr "BaseRigRN.phl[44]" "skinCluster1.ifcl[10]";
-connectAttr "BaseRigRN.phl[45]" "bindPose3.m[13]";
-connectAttr "BaseRigRN.phl[46]" "skinCluster1.lw[11]";
-connectAttr "BaseRigRN.phl[47]" "skinCluster1.ma[11]";
-connectAttr "BaseRigRN.phl[48]" "skinCluster1.ifcl[11]";
-connectAttr "BaseRigRN.phl[49]" "bindPose3.m[14]";
-connectAttr "BaseRigRN.phl[50]" "skinCluster1.ptt";
+connectAttr "BaseRigRN.phl[6]" "skinCluster1.ptt";
+connectAttr "BaseRigRN.phl[7]" "skinCluster1.lw[1]";
+connectAttr "BaseRigRN.phl[8]" "skinCluster1.ma[1]";
+connectAttr "BaseRigRN.phl[9]" "skinCluster1.ifcl[1]";
+connectAttr "BaseRigRN.phl[10]" "bindPose3.m[4]";
+connectAttr "BaseRigRN.phl[11]" "skinCluster1.lw[2]";
+connectAttr "BaseRigRN.phl[12]" "skinCluster1.ma[2]";
+connectAttr "BaseRigRN.phl[13]" "skinCluster1.ifcl[2]";
+connectAttr "BaseRigRN.phl[14]" "bindPose3.m[5]";
+connectAttr "BaseRigRN.phl[15]" "skinCluster1.lw[3]";
+connectAttr "BaseRigRN.phl[16]" "skinCluster1.ma[3]";
+connectAttr "BaseRigRN.phl[17]" "skinCluster1.ifcl[3]";
+connectAttr "BaseRigRN.phl[18]" "bindPose3.m[6]";
+connectAttr "BaseRigRN.phl[19]" "skinCluster1.lw[4]";
+connectAttr "BaseRigRN.phl[20]" "skinCluster1.ma[4]";
+connectAttr "BaseRigRN.phl[21]" "skinCluster1.ifcl[4]";
+connectAttr "BaseRigRN.phl[22]" "bindPose3.m[7]";
+connectAttr "BaseRigRN.phl[23]" "skinCluster1.lw[5]";
+connectAttr "BaseRigRN.phl[24]" "skinCluster1.ma[5]";
+connectAttr "BaseRigRN.phl[25]" "skinCluster1.ifcl[5]";
+connectAttr "BaseRigRN.phl[26]" "bindPose3.m[8]";
+connectAttr "BaseRigRN.phl[27]" "skinCluster1.lw[6]";
+connectAttr "BaseRigRN.phl[28]" "skinCluster1.ma[6]";
+connectAttr "BaseRigRN.phl[29]" "skinCluster1.ifcl[6]";
+connectAttr "BaseRigRN.phl[30]" "bindPose3.m[9]";
+connectAttr "BaseRigRN.phl[31]" "skinCluster1.lw[7]";
+connectAttr "BaseRigRN.phl[32]" "skinCluster1.ma[7]";
+connectAttr "BaseRigRN.phl[33]" "skinCluster1.ifcl[7]";
+connectAttr "BaseRigRN.phl[34]" "bindPose3.m[10]";
+connectAttr "BaseRigRN.phl[35]" "skinCluster1.lw[8]";
+connectAttr "BaseRigRN.phl[36]" "skinCluster1.ma[8]";
+connectAttr "BaseRigRN.phl[37]" "skinCluster1.ifcl[8]";
+connectAttr "BaseRigRN.phl[38]" "bindPose3.m[11]";
+connectAttr "BaseRigRN.phl[39]" "skinCluster1.lw[9]";
+connectAttr "BaseRigRN.phl[40]" "skinCluster1.ma[9]";
+connectAttr "BaseRigRN.phl[41]" "skinCluster1.ifcl[9]";
+connectAttr "BaseRigRN.phl[42]" "bindPose3.m[12]";
+connectAttr "BaseRigRN.phl[43]" "skinCluster1.lw[10]";
+connectAttr "BaseRigRN.phl[44]" "skinCluster1.ma[10]";
+connectAttr "BaseRigRN.phl[45]" "skinCluster1.ifcl[10]";
+connectAttr "BaseRigRN.phl[46]" "bindPose3.m[13]";
+connectAttr "BaseRigRN.phl[47]" "skinCluster1.lw[11]";
+connectAttr "BaseRigRN.phl[48]" "skinCluster1.ma[11]";
+connectAttr "BaseRigRN.phl[49]" "skinCluster1.ifcl[11]";
+connectAttr "BaseRigRN.phl[50]" "bindPose3.m[14]";
 connectAttr "BaseRigRN.phl[51]" "skinCluster1.lw[12]";
 connectAttr "BaseRigRN.phl[52]" "skinCluster1.ma[12]";
 connectAttr "BaseRigRN.phl[53]" "skinCluster1.ifcl[12]";
@@ -23098,6 +23131,9 @@ connectAttr "BaseRigRN.phl[98]" "bindPose3.m[26]";
 connectAttr "BaseRigRN.phl[99]" "skinCluster1.lw[24]";
 connectAttr "BaseRigRN.phl[100]" "skinCluster1.ma[24]";
 connectAttr "BaseRigRN.phl[101]" "skinCluster1.ifcl[24]";
+connectAttr "Pelvis_J_CTRL_rotateX.o" "BaseRigRN.phl[102]";
+connectAttr "Pelvis_J_CTRL_rotateY.o" "BaseRigRN.phl[103]";
+connectAttr "Pelvis_J_CTRL_rotateZ.o" "BaseRigRN.phl[104]";
 connectAttr "Geometry_Layer.di" "Elephant_Geo.do";
 connectAttr "skinCluster1GroupId.id" "Elephant_GeoShape.iog.og[4].gid";
 connectAttr "skinCluster1Set.mwc" "Elephant_GeoShape.iog.og[4].gco";
