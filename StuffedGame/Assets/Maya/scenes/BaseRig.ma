@@ -1,9 +1,8 @@
 //Maya ASCII 2018 scene
 //Name: BaseRig.ma
-//Last modified: Tue, Jun 09, 2020 08:57:36 AM
+//Last modified: Tue, Jun 09, 2020 09:12:09 AM
 //Codeset: UTF-8
 requires maya "2018";
-requires "mtoa" "3.1.2";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2018";
@@ -14,8 +13,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -3.1219284546702628 5.634292785750544 18.646207426638995 ;
-	setAttr ".r" -type "double3" 349.46164697252863 6827.7999999989697 2.0337777271100648e-16 ;
+	setAttr ".t" -type "double3" -6.8903685822537897 7.2742364033405646 16.943465842869259 ;
+	setAttr ".r" -type "double3" 344.0616469725357 6814.199999998038 -4.4158729976309258e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "77E8AA9E-234E-68FC-26D2-21B85028178A";
 	setAttr -k off ".v" no;
@@ -5149,26 +5148,26 @@ createNode nurbsCurve -n "Wrist_J_R_CTRLShape" -p "Wrist_J_R_CTRL";
 		-0.91952193960895978 1.0974486852102481 0.44186604755512804 -1.2441045022721235 0.49686396996855375 
 		-6.5959325758737654e-16 0 0 0 0 0 0 0 0 0;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "844D9464-204D-FCBA-CC1C-24BEDEC649F4";
+	rename -uid "8F5F5A11-8C43-1139-1C5E-FAA645DD40D9";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "FACE72CB-064E-4C9D-3D1C-178B24678EB9";
+	rename -uid "FF363316-4E47-7390-4A62-6FA953DD6283";
 	setAttr ".cdl" 1;
 	setAttr -s 3 ".dli[1:2]"  1 2;
 	setAttr -s 3 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "E7C5F4A4-1A43-5AA7-BC6D-F3BC66616717";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "CCBD36D9-1245-56F5-00C7-28AB9F65AFBE";
+	rename -uid "7B92A170-C84D-F66E-CC37-C587C3BC630F";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "FF83EB3D-CE4E-B5AE-86C3-BEBE5F5E5A78";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "C3D11B54-6043-7C3C-C5EB-00B80E6C766F";
+	rename -uid "FFB96475-7C4E-97BF-BC35-4B8B86C6B770";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "AF3A2B00-474F-F501-B681-4AAA9DF3521C";
+	rename -uid "B3244A49-0D42-1629-10A4-2BBD802E07D7";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "0A41BEBB-A04A-3F4E-1C8A-B69EEECED819";
 	setAttr ".b" -type "string" (
