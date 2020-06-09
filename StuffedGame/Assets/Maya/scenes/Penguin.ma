@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Penguin.ma
-//Last modified: Sun, Jun 07, 2020 04:05:14 PM
+//Last modified: Mon, Jun 08, 2020 08:55:43 PM
 //Codeset: 1252
 file -rdi 1 -ns "BaseCharacter" -rfn "BaseCharacterRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/Xmen9/Desktop/__School/_ _UVU2020Summer/_DGM3220/Repo/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
@@ -20,13 +20,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "303A8C8F-4E75-124D-670F-61AAA4D7523B";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.95808998353476693 4.0943951214413374 13.568657627591415 ;
-	setAttr ".r" -type "double3" 1437.2616477189899 41044.999999978325 2.4942999090146685e-17 ;
+	setAttr ".t" -type "double3" 12.577181925660069 6.5192421467568611 13.834877066153714 ;
+	setAttr ".r" -type "double3" 1432.4616476924939 40361.00000000112 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "ECF3FB9B-4E95-2871-C87B-4BBBB370A430";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 13.274989326450806;
+	setAttr ".coi" 18.794041897492836;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -9550,7 +9550,7 @@ createNode mesh -n "Penguin_V_2_3_UV_mapped1:EyeMesh_RShape" -p "Penguin_V_2_3_U
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode fosterParent -n "BaseCharacterRNfosterParent1";
-	rename -uid "C26B9C06-43FE-37E0-0011-73A109A3A41A";
+	rename -uid "B78F7C8C-4367-0018-2E87-9981EAC6838C";
 createNode mesh -n "BaseCharacter:polySurfaceShape1" -p "BaseCharacterRNfosterParent1";
 	rename -uid "FC93FAC2-4D07-7D8A-DB05-6EA186B0552B";
 	setAttr -k off ".v";
@@ -12116,23 +12116,23 @@ createNode mesh -n "BaseCharacter:polySurfaceShape2" -p "BaseCharacterRNfosterPa
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "867AF472-4C7B-8730-FEAE-E59134C317F8";
+	rename -uid "80C56F37-4AFE-8D89-B057-EF929DAFB77C";
 	setAttr -s 4 ".lnk";
 	setAttr -s 4 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "9BC55ACD-4100-C791-2E8B-11AEBB8E1E00";
+	rename -uid "AB0DBBDF-4C80-8533-A698-2A8BCA8A8C4D";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 1 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "399C93A6-4ABF-85D8-1A2B-638354C52668";
+	rename -uid "F0307D23-44B3-1EA2-9814-9E8216AB7F5A";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "63809CBF-4BD1-D6A9-577D-92829F57C7DB";
+	rename -uid "ECA03AA5-46CA-57C6-8BF0-538E34B9E822";
 	setAttr ".cdl" 5;
 	setAttr -s 6 ".dli[1:5]"  6 1 4 5 3;
 	setAttr -s 4 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "E7714AF5-46A3-9F22-D261-3880AA856DF7";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "5213A4EF-4720-0E08-B119-0090315BBDD6";
+	rename -uid "722D24A8-41C7-ABC3-3461-B5A10B2B74A8";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "69A866E3-47B5-175B-D4F2-1FACFD09FA23";
 	setAttr ".g" yes;
@@ -12177,17 +12177,17 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 865\n            -height 504\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
 		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n"
 		+ "            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n"
-		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 864\n            -height 503\n"
+		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n"
 		+ "            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n"
 		+ "            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
 		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
-		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 865\n            -height 503\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n"
+		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n"
 		+ "            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n"
 		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n"
-		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1743\n            -height 1099\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2071\n            -height 1099\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n"
 		+ "            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n"
@@ -12215,8 +12215,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n"
 		+ "                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n"
 		+ "\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1743\\n    -height 1099\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1743\\n    -height 1099\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2071\\n    -height 1099\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2071\\n    -height 1099\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -12767,7 +12767,7 @@ createNode reference -n "BaseCharacterRN";
 		""
 		5 4 "BaseCharacterRN" "|BaseCharacter:BodyMesh.drawOverride" "BaseCharacterRN.placeHolderList[139]" 
 		""
-		"BaseCharacterRN" 667
+		"BaseCharacterRN" 652
 		0 "|BaseCharacterRNfosterParent1|BaseCharacter:polySurfaceShape2" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L|BaseCharacter:EyeMesh_L" 
 		"-s -r "
 		0 "|BaseCharacterRNfosterParent1|BaseCharacter:polySurfaceShape1" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R" 
@@ -12781,9 +12781,6 @@ createNode reference -n "BaseCharacterRN";
 		2 "|BaseCharacter:Root_J" "lockInfluenceWeights" " 0"
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J" "useObjectColor" " 1"
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J" "objectColor" " 1"
-		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J" "rotateX" " 0"
-		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J" "rotateY" " 0"
-		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J" "rotateZ" " 0"
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J" "bindPose" " -type \"matrix\" 0 1 0 0 0 0 -1.00000000000000022 0 -1.00000000000000022 0 0 0 0 2.00000000000000044 0 1"
 		
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J" "lockInfluenceWeights" " 0"
@@ -12828,12 +12825,6 @@ createNode reference -n "BaseCharacterRN";
 		"rotate" " -type \"double3\" -0.012110980284990743 -4.42616240277415152 1.08667085083282422"
 		
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK|BaseCharacter:Knee_J_L_IK" 
-		"inverseScaleX" " 1.00000000000000022"
-		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK|BaseCharacter:Knee_J_L_IK" 
-		"inverseScaleY" " 1"
-		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK|BaseCharacter:Knee_J_L_IK" 
-		"inverseScaleZ" " 1.00000000000000022"
-		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK|BaseCharacter:Knee_J_L_IK" 
 		"lockInfluenceWeights" " 0"
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK|BaseCharacter:Knee_J_L_IK|BaseCharacter:Ankle_J_L_IK" 
 		"useObjectColor" " 1"
@@ -12845,12 +12836,6 @@ createNode reference -n "BaseCharacterRN";
 		"useObjectColor" " 1"
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_FK" 
 		"objectColor" " 2"
-		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_FK" 
-		"rotateX" " 0"
-		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_FK" 
-		"rotateY" " 0"
-		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_FK" 
-		"rotateZ" " 0"
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_FK" 
 		"lockInfluenceWeights" " 0"
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_FK|BaseCharacter:Knee_J_L_FK" 
@@ -12964,12 +12949,6 @@ createNode reference -n "BaseCharacterRN";
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK|BaseCharacter:Knee_J_R_IK" 
 		"rotate" " -type \"double3\" -0.012111507929830031 -4.42615586310145215 1.08667600011380228"
 		
-		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK|BaseCharacter:Knee_J_R_IK" 
-		"inverseScaleX" " 1.00000000000000022"
-		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK|BaseCharacter:Knee_J_R_IK" 
-		"inverseScaleY" " 1"
-		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK|BaseCharacter:Knee_J_R_IK" 
-		"inverseScaleZ" " 1.00000000000000022"
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK|BaseCharacter:Knee_J_R_IK" 
 		"lockInfluenceWeights" " 0"
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK|BaseCharacter:Knee_J_R_IK|BaseCharacter:Ankle_J_R_IK" 
@@ -13267,12 +13246,6 @@ createNode reference -n "BaseCharacterRN";
 		2 "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_IK|BaseCharacter:Shoulder_J_L_IK|BaseCharacter:Elbow_J_L_IK" 
 		"rotate" " -type \"double3\" 0 -0.0031705424261540133 0"
 		2 "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_IK|BaseCharacter:Shoulder_J_L_IK|BaseCharacter:Elbow_J_L_IK" 
-		"inverseScaleX" " 1.00000000000000022"
-		2 "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_IK|BaseCharacter:Shoulder_J_L_IK|BaseCharacter:Elbow_J_L_IK" 
-		"inverseScaleY" " 1"
-		2 "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_IK|BaseCharacter:Shoulder_J_L_IK|BaseCharacter:Elbow_J_L_IK" 
-		"inverseScaleZ" " 1.00000000000000022"
-		2 "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_IK|BaseCharacter:Shoulder_J_L_IK|BaseCharacter:Elbow_J_L_IK" 
 		"lockInfluenceWeights" " 0"
 		2 "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_IK|BaseCharacter:Shoulder_J_L_IK|BaseCharacter:Elbow_J_L_IK|BaseCharacter:Wrist_J_L_IK" 
 		"useObjectColor" " 1"
@@ -13422,12 +13395,6 @@ createNode reference -n "BaseCharacterRN";
 		"rotate" " -type \"double3\" 2.114437847897086e-05 -0.0031330433678352244 0.00037949236194032314"
 		
 		2 "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_R|BaseCharacter:Shoulder_J_R2_IK|BaseCharacter:Shoulder_J_R_IK|BaseCharacter:Elbow_J_R_IK" 
-		"inverseScaleX" " 1"
-		2 "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_R|BaseCharacter:Shoulder_J_R2_IK|BaseCharacter:Shoulder_J_R_IK|BaseCharacter:Elbow_J_R_IK" 
-		"inverseScaleY" " 0.99999999999999978"
-		2 "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_R|BaseCharacter:Shoulder_J_R2_IK|BaseCharacter:Shoulder_J_R_IK|BaseCharacter:Elbow_J_R_IK" 
-		"inverseScaleZ" " 1.00000000000000022"
-		2 "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_R|BaseCharacter:Shoulder_J_R2_IK|BaseCharacter:Shoulder_J_R_IK|BaseCharacter:Elbow_J_R_IK" 
 		"lockInfluenceWeights" " 0"
 		2 "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_R|BaseCharacter:Shoulder_J_R2_IK|BaseCharacter:Shoulder_J_R_IK|BaseCharacter:Elbow_J_R_IK|BaseCharacter:Wrist_J_R_IK" 
 		"useObjectColor" " 1"
@@ -13503,11 +13470,17 @@ createNode reference -n "BaseCharacterRN";
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:head_J_GRP|BaseCharacter:head_J_CTRL|BaseCharacter:Jaw_J_GRP|BaseCharacter:Jaw_J_CTRL" 
 		"rotate" " -type \"double3\" 0 0 0"
+		2 "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:Clavical_J_L_GRP|BaseCharacter:Clavical_J_L_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:Clavical_J_L_GRP|BaseCharacter:Clavical_J_L_CTRL|BaseCharacter:Shoulder_J_L2_GRP|BaseCharacter:Shoulder_J_L2_CTRL" 
+		"rotate" " -type \"double3\" 0 0 -5.02479226267205181"
 		2 "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:Clavical_J_L_GRP|BaseCharacter:Clavical_J_L_CTRL|BaseCharacter:Shoulder_J_L2_GRP|BaseCharacter:Shoulder_J_L2_CTRL|BaseCharacter:Arm_L_FK_Master_Ctrl_Grp|BaseCharacter:Shoulder_J_L_GRP|BaseCharacter:Shoulder_J_L_CTRL" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:Clavical_J_L_GRP|BaseCharacter:Clavical_J_L_CTRL|BaseCharacter:Shoulder_J_L2_GRP|BaseCharacter:Shoulder_J_L2_CTRL|BaseCharacter:Arm_L_FK_Master_Ctrl_Grp|BaseCharacter:Shoulder_J_L_GRP|BaseCharacter:Shoulder_J_L_CTRL|BaseCharacter:Elbow_J_L_GRP|BaseCharacter:Elbow_J_L_CTRL" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:Clavical_J_L_GRP|BaseCharacter:Clavical_J_L_CTRL|BaseCharacter:Shoulder_J_L2_GRP|BaseCharacter:Shoulder_J_L2_CTRL|BaseCharacter:Arm_L_FK_Master_Ctrl_Grp|BaseCharacter:Shoulder_J_L_GRP|BaseCharacter:Shoulder_J_L_CTRL|BaseCharacter:Elbow_J_L_GRP|BaseCharacter:Elbow_J_L_CTRL|BaseCharacter:Wrist_J_L_GRP|BaseCharacter:Wrist_J_L_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:Clavical_J_R_GRP|BaseCharacter:Clavical_J_R_CTRL" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "BaseCharacter:layer1" "displayType" " 2"
 		2 "BaseCharacter:layer1" "visibility" " 1"
@@ -13615,342 +13588,342 @@ createNode reference -n "BaseCharacterRN";
 		""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J.message" 
 		"BaseCharacterRN.placeHolderList[144]" "BaseCharacter:bindPose1.m[1]"
-		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J.message" 
-		"BaseCharacterRN.placeHolderList[145]" "BaseCharacter:bindPose1.m[1]"
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[146]" ""
+		"BaseCharacterRN.placeHolderList[145]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[147]" ""
+		"BaseCharacterRN.placeHolderList[146]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[148]" ""
+		"BaseCharacterRN.placeHolderList[147]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK.message" 
-		"BaseCharacterRN.placeHolderList[149]" ""
+		"BaseCharacterRN.placeHolderList[148]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[150]" ""
+		"BaseCharacterRN.placeHolderList[149]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[151]" ""
+		"BaseCharacterRN.placeHolderList[150]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[152]" ""
+		"BaseCharacterRN.placeHolderList[151]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK|BaseCharacter:Knee_J_L_IK.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[153]" ""
+		"BaseCharacterRN.placeHolderList[152]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK|BaseCharacter:Knee_J_L_IK.message" 
-		"BaseCharacterRN.placeHolderList[154]" ""
+		"BaseCharacterRN.placeHolderList[153]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK|BaseCharacter:Knee_J_L_IK.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[155]" ""
+		"BaseCharacterRN.placeHolderList[154]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK|BaseCharacter:Knee_J_L_IK.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[156]" ""
+		"BaseCharacterRN.placeHolderList[155]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK|BaseCharacter:Knee_J_L_IK|BaseCharacter:Ankle_J_L_IK.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[157]" ""
+		"BaseCharacterRN.placeHolderList[156]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK|BaseCharacter:Knee_J_L_IK|BaseCharacter:Ankle_J_L_IK.message" 
-		"BaseCharacterRN.placeHolderList[158]" ""
+		"BaseCharacterRN.placeHolderList[157]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK|BaseCharacter:Knee_J_L_IK|BaseCharacter:Ankle_J_L_IK.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[159]" ""
+		"BaseCharacterRN.placeHolderList[158]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK|BaseCharacter:Knee_J_L_IK|BaseCharacter:Ankle_J_L_IK.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[160]" ""
+		"BaseCharacterRN.placeHolderList[159]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_FK.message" 
-		"BaseCharacterRN.placeHolderList[161]" "BaseCharacter:bindPose1.m[2]"
+		"BaseCharacterRN.placeHolderList[160]" "BaseCharacter:bindPose1.m[2]"
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_FK.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[162]" ""
+		"BaseCharacterRN.placeHolderList[161]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_FK.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[163]" ""
+		"BaseCharacterRN.placeHolderList[162]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_FK.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[164]" ""
+		"BaseCharacterRN.placeHolderList[163]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_FK|BaseCharacter:Knee_J_L_FK.message" 
-		"BaseCharacterRN.placeHolderList[165]" "BaseCharacter:bindPose1.m[3]"
+		"BaseCharacterRN.placeHolderList[164]" "BaseCharacter:bindPose1.m[3]"
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_FK|BaseCharacter:Knee_J_L_FK.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[166]" ""
+		"BaseCharacterRN.placeHolderList[165]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_FK|BaseCharacter:Knee_J_L_FK.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[167]" ""
+		"BaseCharacterRN.placeHolderList[166]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_FK|BaseCharacter:Knee_J_L_FK.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[168]" ""
+		"BaseCharacterRN.placeHolderList[167]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_FK|BaseCharacter:Knee_J_L_FK|BaseCharacter:Ankle_J_L_FK.message" 
-		"BaseCharacterRN.placeHolderList[169]" "BaseCharacter:bindPose1.m[4]"
+		"BaseCharacterRN.placeHolderList[168]" "BaseCharacter:bindPose1.m[4]"
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_FK|BaseCharacter:Knee_J_L_FK|BaseCharacter:Ankle_J_L_FK.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[170]" ""
+		"BaseCharacterRN.placeHolderList[169]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_FK|BaseCharacter:Knee_J_L_FK|BaseCharacter:Ankle_J_L_FK.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[171]" ""
+		"BaseCharacterRN.placeHolderList[170]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_FK|BaseCharacter:Knee_J_L_FK|BaseCharacter:Ankle_J_L_FK.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[172]" ""
+		"BaseCharacterRN.placeHolderList[171]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_RK.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[173]" ""
+		"BaseCharacterRN.placeHolderList[172]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_RK.message" 
-		"BaseCharacterRN.placeHolderList[174]" ""
+		"BaseCharacterRN.placeHolderList[173]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_RK.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[175]" ""
+		"BaseCharacterRN.placeHolderList[174]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_RK.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[176]" ""
+		"BaseCharacterRN.placeHolderList[175]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_RK|BaseCharacter:Knee_J_L_RK.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[177]" ""
+		"BaseCharacterRN.placeHolderList[176]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_RK|BaseCharacter:Knee_J_L_RK.message" 
-		"BaseCharacterRN.placeHolderList[178]" ""
+		"BaseCharacterRN.placeHolderList[177]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_RK|BaseCharacter:Knee_J_L_RK.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[179]" ""
+		"BaseCharacterRN.placeHolderList[178]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_RK|BaseCharacter:Knee_J_L_RK.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[180]" ""
+		"BaseCharacterRN.placeHolderList[179]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_RK|BaseCharacter:Knee_J_L_RK|BaseCharacter:Ankle_J_L_RK.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[181]" ""
+		"BaseCharacterRN.placeHolderList[180]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_RK|BaseCharacter:Knee_J_L_RK|BaseCharacter:Ankle_J_L_RK.message" 
-		"BaseCharacterRN.placeHolderList[182]" ""
+		"BaseCharacterRN.placeHolderList[181]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_RK|BaseCharacter:Knee_J_L_RK|BaseCharacter:Ankle_J_L_RK.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[183]" ""
+		"BaseCharacterRN.placeHolderList[182]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_RK|BaseCharacter:Knee_J_L_RK|BaseCharacter:Ankle_J_L_RK.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[184]" ""
+		"BaseCharacterRN.placeHolderList[183]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK.message" 
-		"BaseCharacterRN.placeHolderList[185]" ""
+		"BaseCharacterRN.placeHolderList[184]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[186]" ""
+		"BaseCharacterRN.placeHolderList[185]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[187]" ""
+		"BaseCharacterRN.placeHolderList[186]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[188]" ""
+		"BaseCharacterRN.placeHolderList[187]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK|BaseCharacter:Knee_J_R_IK.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[189]" ""
+		"BaseCharacterRN.placeHolderList[188]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK|BaseCharacter:Knee_J_R_IK.message" 
-		"BaseCharacterRN.placeHolderList[190]" ""
+		"BaseCharacterRN.placeHolderList[189]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK|BaseCharacter:Knee_J_R_IK.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[191]" ""
+		"BaseCharacterRN.placeHolderList[190]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK|BaseCharacter:Knee_J_R_IK.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[192]" ""
+		"BaseCharacterRN.placeHolderList[191]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK|BaseCharacter:Knee_J_R_IK|BaseCharacter:Ankle_J_R_IK.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[193]" ""
+		"BaseCharacterRN.placeHolderList[192]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK|BaseCharacter:Knee_J_R_IK|BaseCharacter:Ankle_J_R_IK.message" 
-		"BaseCharacterRN.placeHolderList[194]" ""
+		"BaseCharacterRN.placeHolderList[193]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK|BaseCharacter:Knee_J_R_IK|BaseCharacter:Ankle_J_R_IK.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[195]" ""
+		"BaseCharacterRN.placeHolderList[194]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK|BaseCharacter:Knee_J_R_IK|BaseCharacter:Ankle_J_R_IK.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[196]" ""
+		"BaseCharacterRN.placeHolderList[195]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_FK.message" 
-		"BaseCharacterRN.placeHolderList[197]" "BaseCharacter:bindPose1.m[5]"
+		"BaseCharacterRN.placeHolderList[196]" "BaseCharacter:bindPose1.m[5]"
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_FK.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[198]" ""
+		"BaseCharacterRN.placeHolderList[197]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_FK.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[199]" ""
+		"BaseCharacterRN.placeHolderList[198]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_FK.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[200]" ""
+		"BaseCharacterRN.placeHolderList[199]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_FK|BaseCharacter:Knee_J_R_FK.message" 
-		"BaseCharacterRN.placeHolderList[201]" "BaseCharacter:bindPose1.m[6]"
+		"BaseCharacterRN.placeHolderList[200]" "BaseCharacter:bindPose1.m[6]"
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_FK|BaseCharacter:Knee_J_R_FK.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[202]" ""
+		"BaseCharacterRN.placeHolderList[201]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_FK|BaseCharacter:Knee_J_R_FK.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[203]" ""
+		"BaseCharacterRN.placeHolderList[202]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_FK|BaseCharacter:Knee_J_R_FK.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[204]" ""
+		"BaseCharacterRN.placeHolderList[203]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_FK|BaseCharacter:Knee_J_R_FK|BaseCharacter:Ankle_J_R_FK.message" 
-		"BaseCharacterRN.placeHolderList[205]" "BaseCharacter:bindPose1.m[7]"
+		"BaseCharacterRN.placeHolderList[204]" "BaseCharacter:bindPose1.m[7]"
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_FK|BaseCharacter:Knee_J_R_FK|BaseCharacter:Ankle_J_R_FK.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[206]" ""
+		"BaseCharacterRN.placeHolderList[205]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_FK|BaseCharacter:Knee_J_R_FK|BaseCharacter:Ankle_J_R_FK.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[207]" ""
+		"BaseCharacterRN.placeHolderList[206]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_FK|BaseCharacter:Knee_J_R_FK|BaseCharacter:Ankle_J_R_FK.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[208]" ""
+		"BaseCharacterRN.placeHolderList[207]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_RK.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[209]" ""
+		"BaseCharacterRN.placeHolderList[208]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_RK.message" 
-		"BaseCharacterRN.placeHolderList[210]" ""
+		"BaseCharacterRN.placeHolderList[209]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_RK.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[211]" ""
+		"BaseCharacterRN.placeHolderList[210]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_RK.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[212]" ""
+		"BaseCharacterRN.placeHolderList[211]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_RK|BaseCharacter:Knee_J_R_RK.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[213]" ""
+		"BaseCharacterRN.placeHolderList[212]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_RK|BaseCharacter:Knee_J_R_RK.message" 
-		"BaseCharacterRN.placeHolderList[214]" ""
+		"BaseCharacterRN.placeHolderList[213]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_RK|BaseCharacter:Knee_J_R_RK.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[215]" ""
+		"BaseCharacterRN.placeHolderList[214]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_RK|BaseCharacter:Knee_J_R_RK.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[216]" ""
+		"BaseCharacterRN.placeHolderList[215]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_RK|BaseCharacter:Knee_J_R_RK|BaseCharacter:Ankle_J_R_RK.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[217]" ""
+		"BaseCharacterRN.placeHolderList[216]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_RK|BaseCharacter:Knee_J_R_RK|BaseCharacter:Ankle_J_R_RK.message" 
-		"BaseCharacterRN.placeHolderList[218]" ""
+		"BaseCharacterRN.placeHolderList[217]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_RK|BaseCharacter:Knee_J_R_RK|BaseCharacter:Ankle_J_R_RK.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[219]" ""
+		"BaseCharacterRN.placeHolderList[218]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_RK|BaseCharacter:Knee_J_R_RK|BaseCharacter:Ankle_J_R_RK.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[220]" ""
+		"BaseCharacterRN.placeHolderList[219]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J.message" 
-		"BaseCharacterRN.placeHolderList[221]" "BaseCharacter:bindPose1.m[8]"
+		"BaseCharacterRN.placeHolderList[220]" "BaseCharacter:bindPose1.m[8]"
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[222]" ""
+		"BaseCharacterRN.placeHolderList[221]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[223]" ""
+		"BaseCharacterRN.placeHolderList[222]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[224]" ""
+		"BaseCharacterRN.placeHolderList[223]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j.message" 
-		"BaseCharacterRN.placeHolderList[225]" "BaseCharacter:bindPose1.m[9]"
+		"BaseCharacterRN.placeHolderList[224]" "BaseCharacter:bindPose1.m[9]"
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[226]" ""
+		"BaseCharacterRN.placeHolderList[225]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[227]" ""
+		"BaseCharacterRN.placeHolderList[226]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[228]" ""
+		"BaseCharacterRN.placeHolderList[227]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j.message" 
-		"BaseCharacterRN.placeHolderList[229]" "BaseCharacter:bindPose1.m[10]"
+		"BaseCharacterRN.placeHolderList[228]" "BaseCharacter:bindPose1.m[10]"
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[230]" ""
+		"BaseCharacterRN.placeHolderList[229]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[231]" ""
+		"BaseCharacterRN.placeHolderList[230]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[232]" ""
+		"BaseCharacterRN.placeHolderList[231]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J.message" 
-		"BaseCharacterRN.placeHolderList[233]" "BaseCharacter:bindPose1.m[11]"
+		"BaseCharacterRN.placeHolderList[232]" "BaseCharacter:bindPose1.m[11]"
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[234]" ""
+		"BaseCharacterRN.placeHolderList[233]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[235]" ""
+		"BaseCharacterRN.placeHolderList[234]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[236]" ""
+		"BaseCharacterRN.placeHolderList[235]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L.message" 
-		"BaseCharacterRN.placeHolderList[237]" "BaseCharacter:bindPose1.m[12]"
+		"BaseCharacterRN.placeHolderList[236]" "BaseCharacter:bindPose1.m[12]"
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[238]" ""
+		"BaseCharacterRN.placeHolderList[237]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[239]" ""
+		"BaseCharacterRN.placeHolderList[238]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[240]" ""
+		"BaseCharacterRN.placeHolderList[239]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L|BaseCharacter:EyeLid_J_L.message" 
-		"BaseCharacterRN.placeHolderList[241]" "BaseCharacter:bindPose1.m[13]"
+		"BaseCharacterRN.placeHolderList[240]" "BaseCharacter:bindPose1.m[13]"
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L|BaseCharacter:EyeLid_J_L.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[242]" ""
+		"BaseCharacterRN.placeHolderList[241]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L|BaseCharacter:EyeLid_J_L.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[243]" ""
+		"BaseCharacterRN.placeHolderList[242]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L|BaseCharacter:EyeLid_J_L.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[244]" ""
+		"BaseCharacterRN.placeHolderList[243]" ""
 		5 4 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L|BaseCharacter:EyeMesh_L|BaseCharacter:EyeMesh_LShape.inMesh" 
-		"BaseCharacterRN.placeHolderList[245]" ""
+		"BaseCharacterRN.placeHolderList[244]" ""
 		5 4 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L|BaseCharacter:EyeMesh_L|BaseCharacter:EyeMesh_LShape.uvSet[0].uvSetTweakLocation" 
-		"BaseCharacterRN.placeHolderList[246]" ""
+		"BaseCharacterRN.placeHolderList[245]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R.message" 
-		"BaseCharacterRN.placeHolderList[247]" "BaseCharacter:bindPose1.m[14]"
+		"BaseCharacterRN.placeHolderList[246]" "BaseCharacter:bindPose1.m[14]"
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[248]" ""
+		"BaseCharacterRN.placeHolderList[247]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[249]" ""
+		"BaseCharacterRN.placeHolderList[248]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[250]" ""
+		"BaseCharacterRN.placeHolderList[249]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeLid_J_R.message" 
-		"BaseCharacterRN.placeHolderList[251]" "BaseCharacter:bindPose1.m[15]"
+		"BaseCharacterRN.placeHolderList[250]" "BaseCharacter:bindPose1.m[15]"
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeLid_J_R.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[252]" ""
+		"BaseCharacterRN.placeHolderList[251]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeLid_J_R.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[253]" ""
+		"BaseCharacterRN.placeHolderList[252]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeLid_J_R.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[254]" ""
+		"BaseCharacterRN.placeHolderList[253]" ""
 		5 4 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape.inMesh" 
-		"BaseCharacterRN.placeHolderList[255]" ""
+		"BaseCharacterRN.placeHolderList[254]" ""
 		5 4 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape.uvSet[0].uvSetTweakLocation" 
-		"BaseCharacterRN.placeHolderList[256]" ""
+		"BaseCharacterRN.placeHolderList[255]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Jaw_J.message" 
-		"BaseCharacterRN.placeHolderList[257]" "BaseCharacter:bindPose1.m[16]"
+		"BaseCharacterRN.placeHolderList[256]" "BaseCharacter:bindPose1.m[16]"
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Jaw_J.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[258]" ""
+		"BaseCharacterRN.placeHolderList[257]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Jaw_J.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[259]" ""
+		"BaseCharacterRN.placeHolderList[258]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Jaw_J.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[260]" ""
+		"BaseCharacterRN.placeHolderList[259]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L.message" 
-		"BaseCharacterRN.placeHolderList[261]" "BaseCharacter:bindPose1.m[17]"
+		"BaseCharacterRN.placeHolderList[260]" "BaseCharacter:bindPose1.m[17]"
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[262]" ""
+		"BaseCharacterRN.placeHolderList[261]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[263]" ""
+		"BaseCharacterRN.placeHolderList[262]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[264]" ""
+		"BaseCharacterRN.placeHolderList[263]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_IK.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[265]" ""
+		"BaseCharacterRN.placeHolderList[264]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_IK.message" 
-		"BaseCharacterRN.placeHolderList[266]" ""
+		"BaseCharacterRN.placeHolderList[265]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_IK.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[267]" ""
+		"BaseCharacterRN.placeHolderList[266]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_IK.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[268]" ""
+		"BaseCharacterRN.placeHolderList[267]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_IK|BaseCharacter:Shoulder_J_L_IK.message" 
-		"BaseCharacterRN.placeHolderList[269]" ""
+		"BaseCharacterRN.placeHolderList[268]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_IK|BaseCharacter:Shoulder_J_L_IK.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[270]" ""
+		"BaseCharacterRN.placeHolderList[269]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_IK|BaseCharacter:Shoulder_J_L_IK.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[271]" ""
+		"BaseCharacterRN.placeHolderList[270]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_IK|BaseCharacter:Shoulder_J_L_IK.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[272]" ""
+		"BaseCharacterRN.placeHolderList[271]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_IK|BaseCharacter:Shoulder_J_L_IK|BaseCharacter:Elbow_J_L_IK.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[273]" ""
+		"BaseCharacterRN.placeHolderList[272]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_IK|BaseCharacter:Shoulder_J_L_IK|BaseCharacter:Elbow_J_L_IK.message" 
-		"BaseCharacterRN.placeHolderList[274]" ""
+		"BaseCharacterRN.placeHolderList[273]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_IK|BaseCharacter:Shoulder_J_L_IK|BaseCharacter:Elbow_J_L_IK.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[275]" ""
+		"BaseCharacterRN.placeHolderList[274]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_IK|BaseCharacter:Shoulder_J_L_IK|BaseCharacter:Elbow_J_L_IK.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[276]" ""
+		"BaseCharacterRN.placeHolderList[275]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_IK|BaseCharacter:Shoulder_J_L_IK|BaseCharacter:Elbow_J_L_IK|BaseCharacter:Wrist_J_L_IK.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[277]" ""
+		"BaseCharacterRN.placeHolderList[276]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_IK|BaseCharacter:Shoulder_J_L_IK|BaseCharacter:Elbow_J_L_IK|BaseCharacter:Wrist_J_L_IK.message" 
-		"BaseCharacterRN.placeHolderList[278]" ""
+		"BaseCharacterRN.placeHolderList[277]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_IK|BaseCharacter:Shoulder_J_L_IK|BaseCharacter:Elbow_J_L_IK|BaseCharacter:Wrist_J_L_IK.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[279]" ""
+		"BaseCharacterRN.placeHolderList[278]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_IK|BaseCharacter:Shoulder_J_L_IK|BaseCharacter:Elbow_J_L_IK|BaseCharacter:Wrist_J_L_IK.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[280]" ""
+		"BaseCharacterRN.placeHolderList[279]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_FK.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[281]" ""
+		"BaseCharacterRN.placeHolderList[280]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_FK.message" 
-		"BaseCharacterRN.placeHolderList[282]" ""
+		"BaseCharacterRN.placeHolderList[281]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_FK.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[283]" ""
+		"BaseCharacterRN.placeHolderList[282]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_FK.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[284]" ""
+		"BaseCharacterRN.placeHolderList[283]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_FK|BaseCharacter:Shoulder_J_L_FK.message" 
-		"BaseCharacterRN.placeHolderList[285]" "BaseCharacter:bindPose1.m[18]"
+		"BaseCharacterRN.placeHolderList[284]" "BaseCharacter:bindPose1.m[18]"
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_FK|BaseCharacter:Shoulder_J_L_FK.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[286]" ""
+		"BaseCharacterRN.placeHolderList[285]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_FK|BaseCharacter:Shoulder_J_L_FK.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[287]" ""
+		"BaseCharacterRN.placeHolderList[286]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_FK|BaseCharacter:Shoulder_J_L_FK.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[288]" ""
+		"BaseCharacterRN.placeHolderList[287]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_FK|BaseCharacter:Shoulder_J_L_FK|BaseCharacter:Elbow_J_L_FK.message" 
-		"BaseCharacterRN.placeHolderList[289]" "BaseCharacter:bindPose1.m[19]"
+		"BaseCharacterRN.placeHolderList[288]" "BaseCharacter:bindPose1.m[19]"
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_FK|BaseCharacter:Shoulder_J_L_FK|BaseCharacter:Elbow_J_L_FK.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[290]" ""
+		"BaseCharacterRN.placeHolderList[289]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_FK|BaseCharacter:Shoulder_J_L_FK|BaseCharacter:Elbow_J_L_FK.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[291]" ""
+		"BaseCharacterRN.placeHolderList[290]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_FK|BaseCharacter:Shoulder_J_L_FK|BaseCharacter:Elbow_J_L_FK.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[292]" ""
+		"BaseCharacterRN.placeHolderList[291]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_FK|BaseCharacter:Shoulder_J_L_FK|BaseCharacter:Elbow_J_L_FK|BaseCharacter:Wrist_J_L_FK.message" 
-		"BaseCharacterRN.placeHolderList[293]" "BaseCharacter:bindPose1.m[20]"
+		"BaseCharacterRN.placeHolderList[292]" "BaseCharacter:bindPose1.m[20]"
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_FK|BaseCharacter:Shoulder_J_L_FK|BaseCharacter:Elbow_J_L_FK|BaseCharacter:Wrist_J_L_FK.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[294]" ""
+		"BaseCharacterRN.placeHolderList[293]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_FK|BaseCharacter:Shoulder_J_L_FK|BaseCharacter:Elbow_J_L_FK|BaseCharacter:Wrist_J_L_FK.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[295]" ""
+		"BaseCharacterRN.placeHolderList[294]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_FK|BaseCharacter:Shoulder_J_L_FK|BaseCharacter:Elbow_J_L_FK|BaseCharacter:Wrist_J_L_FK.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[296]" ""
+		"BaseCharacterRN.placeHolderList[295]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_RK.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[297]" ""
+		"BaseCharacterRN.placeHolderList[296]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_RK.message" 
-		"BaseCharacterRN.placeHolderList[298]" ""
+		"BaseCharacterRN.placeHolderList[297]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_RK.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[299]" ""
+		"BaseCharacterRN.placeHolderList[298]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_RK.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[300]" ""
+		"BaseCharacterRN.placeHolderList[299]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_RK|BaseCharacter:Shoulder_J_L_RK.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[301]" ""
+		"BaseCharacterRN.placeHolderList[300]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_RK|BaseCharacter:Shoulder_J_L_RK.message" 
-		"BaseCharacterRN.placeHolderList[302]" ""
+		"BaseCharacterRN.placeHolderList[301]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_RK|BaseCharacter:Shoulder_J_L_RK.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[303]" ""
+		"BaseCharacterRN.placeHolderList[302]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_RK|BaseCharacter:Shoulder_J_L_RK.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[304]" ""
+		"BaseCharacterRN.placeHolderList[303]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_RK|BaseCharacter:Shoulder_J_L_RK|BaseCharacter:Elbow_J_L_RK.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[305]" ""
+		"BaseCharacterRN.placeHolderList[304]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_RK|BaseCharacter:Shoulder_J_L_RK|BaseCharacter:Elbow_J_L_RK.message" 
-		"BaseCharacterRN.placeHolderList[306]" ""
+		"BaseCharacterRN.placeHolderList[305]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_RK|BaseCharacter:Shoulder_J_L_RK|BaseCharacter:Elbow_J_L_RK.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[307]" ""
+		"BaseCharacterRN.placeHolderList[306]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_RK|BaseCharacter:Shoulder_J_L_RK|BaseCharacter:Elbow_J_L_RK.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[308]" ""
+		"BaseCharacterRN.placeHolderList[307]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_RK|BaseCharacter:Shoulder_J_L_RK|BaseCharacter:Elbow_J_L_RK|BaseCharacter:Wrist_J_L_RK.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[309]" ""
+		"BaseCharacterRN.placeHolderList[308]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_RK|BaseCharacter:Shoulder_J_L_RK|BaseCharacter:Elbow_J_L_RK|BaseCharacter:Wrist_J_L_RK.message" 
-		"BaseCharacterRN.placeHolderList[310]" ""
+		"BaseCharacterRN.placeHolderList[309]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_RK|BaseCharacter:Shoulder_J_L_RK|BaseCharacter:Elbow_J_L_RK|BaseCharacter:Wrist_J_L_RK.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[311]" ""
+		"BaseCharacterRN.placeHolderList[310]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_L|BaseCharacter:Shoulder_J_L2_RK|BaseCharacter:Shoulder_J_L_RK|BaseCharacter:Elbow_J_L_RK|BaseCharacter:Wrist_J_L_RK.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[312]" ""
+		"BaseCharacterRN.placeHolderList[311]" ""
+		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_R.message" 
+		"BaseCharacterRN.placeHolderList[312]" "BaseCharacter:bindPose1.m[21]"
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_R.message" 
 		"BaseCharacterRN.placeHolderList[313]" "BaseCharacter:bindPose1.m[21]"
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:Clavical_J_R.lockInfluenceWeights" 
@@ -16257,7 +16230,7 @@ createNode skinCluster -n "skinCluster1";
 		3 21 2.9906743748142612e-10 22 4.112690582758205e-05 23 0.99995887279510498
 		3 21 4.166284464029955e-10 22 5.9188016328987635e-08 23 0.99999994039535522
 		3 21 1.0668075859143752e-05 22 0.0050160300366286492 23 0.99497330188751221;
-	setAttr ".wl[404:614].w"
+	setAttr ".wl[404:611].w"
 		4 20 1.1744914048517533e-10 21 3.8639643840309541e-06 22 0.00029856988575716059 
 		23 0.99969756603240967
 		3 21 3.2324010135198478e-10 22 2.0262346822619293e-06 23 0.99999797344207764
@@ -16446,31 +16419,33 @@ createNode skinCluster -n "skinCluster1";
 		2 22 0.0011482834815979004 23 0.9988517165184021
 		3 21 4.3510931741775453e-07 22 0.096979022026062012 23 0.90302054286462052
 		3 21 0.00011536647463802899 22 0.094898819923400879 23 0.90498581360196106
-		2 21 0.0023015141487121582 22 0.99769848585128784
-		2 21 3.2067298889160156e-05 22 0.99996793270111084
-		2 22 0.099930204451084137 29 0.90006979554891586
-		3 20 6.2809135670249816e-10 21 0.00021505293025825267 22 0.99978494644165039
-		2 21 0.099294789135456085 22 0.90070521086454391
-		3 21 0.089874308227195568 22 0.099928125739097595 29 0.81019756603370685
-		4 0 6.7511988141053735e-08 20 0.0010067442281291006 21 0.99507161940051425 
-		29 0.0039215688593685627
-		4 0 3.2551322144263913e-07 20 0.00076315912637019579 21 0.89976707716517978 
-		22 0.099469438195228577
+		3 21 0.0021047572508710033 22 0.91240504580584592 29 0.085490196943283081
+		3 21 2.9074350980096145e-05 22 0.90663759191832227 29 0.093333333730697632
+		2 22 0.47489756345748901 29 0.52510243654251099
+		4 20 5.7193259970682259e-10 21 0.00019582466812296964 22 0.91039240942295407 
+		29 0.089411765336990356
+		3 21 0.089715762545931332 22 0.81381365049852139 29 0.096470586955547333
+		3 21 0.17742823734243895 22 0.19727630243340946 29 0.62529546022415161
+		4 0 6.1025541978843234e-08 20 0.00091001781827679468 21 0.89946669552685155 
+		29 0.099623225629329681
+		5 0 2.9296189881332273e-07 20 0.00068684321259598045 21 0.80979036810790439 
+		22 0.089522494227484706 29 0.10000000149011612
 		3 21 2.8040926406998673e-06 22 0.094149820506572723 23 0.90584737540078653
-		3 20 1.1814933031928376e-08 21 0.0008969188796470462 22 0.99910306930541992
+		4 20 1.0661239516689739e-08 21 0.00080933738491088759 22 0.9015435885197256 
+		29 0.097647063434123993
 		4 20 3.5050591340472818e-10 21 1.7012916129588965e-06 22 0.093730948865413666 
 		29 0.90626734949246746
 		3 22 0.099895425140857697 29 0.45047475761024547 39 0.44962981724889683
 		4 21 0.17096121042476781 22 0.0010011437530097647 29 0.42762419581413269 
 		39 0.4004134500080897
 		2 22 0.067058824002742767 23 0.93294117599725723
-		1 22 1
+		2 22 0.89999999850988388 29 0.10000000149011612
 		3 21 5.4800723554518533e-08 22 0.094633154571056366 29 0.90536679062822012
 		3 22 0.10127753019332886 29 0.48496710875657267 39 0.41375536105009847
 		5 20 2.7507589825158053e-07 21 0.00052458071853731263 22 0.10000000149011612 
 		29 0.34690662500201513 39 0.55256851771343318
 		3 21 1.4691850218260293e-07 22 0.098842121660709381 29 0.90115773142078848
-		2 21 0.00018072128295898438 22 0.99981927871704102
+		3 21 0.0001627908968373504 22 0.9006215227819041 29 0.099215686321258545
 		2 22 0.097459010779857635 23 0.90254098922014236
 		1 23 1
 		3 21 1.1096101815155635e-08 22 0.0006869324349345618 23 0.99931305646896362
@@ -16494,29 +16469,32 @@ createNode skinCluster -n "skinCluster1";
 		4 20 4.2031083057506285e-09 21 1.231007238075262e-06 22 0.0012109444504507382 
 		23 0.99878782033920288
 		2 22 0.0028934478759765625 23 0.99710655212402344
-		2 22 0.00011008977890014648 23 0.99988991022109985
+		2 22 0.00011008977890014648 23 0.99988991022109985;
+	setAttr ".wl[612:763].w"
 		4 20 1.7453463681465899e-10 21 3.1854857800718558e-06 22 0.00043431243233665851 
 		23 0.99956250190734863
 		3 21 2.6225265327223099e-07 22 0.0034587740975969717 23 0.99654096364974976
-		1 23 1;
-	setAttr ".wl[615:769].w"
+		1 23 1
 		3 21 1.5657618371394363e-09 22 1.0608061008182392e-05 23 0.99998939037322998
 		4 20 2.7172935900663385e-09 21 3.2666904442153277e-06 22 0.077748231589794159 
 		23 0.92224849900246808
-		2 21 0.001166999340057373 22 0.99883300065994263
-		3 21 4.9708825360787831e-07 22 0.099738501012325287 29 0.90026100189942115
-		2 22 0.10000000149011612 29 0.89999999850988388
-		3 21 0.068835689747602236 22 0.098042882978916168 29 0.8331214272734816
+		3 21 0.0010777582106773489 22 0.92245165066145018 29 0.076470591127872467
+		3 21 3.2395289100675502e-06 22 0.64999676643155446 29 0.34999999403953552
+		2 22 0.65000000596046448 29 0.34999999403953552
+		3 21 0.26760066943580307 22 0.38114445013588272 29 0.35125488042831421
 		3 21 0.095984473824501038 29 0.4419397689524861 39 0.46207575722301292
 		4 21 0.17380402982234955 22 0.00038535578370811125 29 0.40359571681027945 
 		39 0.42221489758366293
-		3 0 6.0236548549141844e-07 20 0.00024145209694736991 21 0.99975794553756714
+		4 0 5.4307382481961646e-07 20 0.00021768563597721784 21 0.90135040013779699 
+		29 0.09843137115240097
 		3 21 2.7402955897700022e-09 22 0.10000000149011612 23 0.89999999576958833
 		2 21 1.1920928955078125e-07 22 0.99999988079071045
-		2 21 1.7285346984863281e-06 22 0.99999827146530151
-		2 21 1.0728836059570313e-06 22 0.99999892711639404
-		3 20 3.7965742795841592e-09 21 0.099635392427444458 22 0.90036460377598126
-		3 20 5.4639378355147983e-07 21 0.91669610637625887 22 0.083303347229957581
+		3 21 1.5773726431689281e-06 22 0.91254744148722011 29 0.087450981140136719
+		3 21 9.794796174134035e-07 22 0.91294019323938436 29 0.08705882728099823
+		4 20 3.5911126023061407e-09 21 0.094243359153005649 22 0.85163898746225686 
+		29 0.054117649793624878
+		4 20 5.3118046592278232e-07 21 0.89117240999624991 22 0.080983920620259303 
+		29 0.027843138203024864
 		2 22 0.090698540210723877 23 0.90930145978927612
 		3 20 2.952607047745914e-08 21 0.0013798180004798155 22 0.99862015247344971
 		3 20 3.8195759735019913e-09 21 5.4832453617385875e-05 22 0.99994516372680664
@@ -16544,24 +16522,28 @@ createNode skinCluster -n "skinCluster1";
 		22 0.086666665971279144
 		3 21 1.4219046983564966e-07 22 0.099834643304347992 23 0.90016521450518217
 		1 22 1
-		2 21 0.00014573335647583008 22 0.99985426664352417
-		2 21 0.0002695918083190918 22 0.99973040819168091
-		2 21 0.10000000149011612 22 0.89999999850988388
-		4 0 5.8517251767418993e-06 20 0.00025567942995564653 21 0.91385611059186544 
-		22 0.085882358253002167
+		3 21 0.00013264592882089588 22 0.91006342742446966 42 0.089803926646709442
+		3 21 0.00024368984980016606 22 0.90367787705379099 42 0.096078433096408844
+		3 21 0.090196079614700039 22 0.81176470309203752 42 0.098039217293262482
+		5 0 5.287205814239054e-06 20 0.00023101388527536554 21 0.82569587521015464 
+		22 0.077597236743208439 42 0.096470586955547333
 		3 21 2.7652567501832006e-08 22 0.09987255185842514 23 0.9001274204890074
-		3 20 2.770704377041967e-07 21 0.0078386277871977939 22 0.9921610951423645
-		3 21 6.9879410753657392e-05 22 0.099990151822566986 42 0.89993996876667937
-		4 20 5.2539684541889664e-10 21 4.1769426325496396e-05 22 0.093534186482429504 
-		42 0.90642404356584816
-		3 21 0.073114246129989624 22 0.092600745789012492 42 0.83428500808099793
-		3 0 6.3263740912589118e-07 20 0.017689191466899956 21 0.98231017589569092
+		4 20 2.5121053007504045e-07 21 0.0071070225239445433 22 0.89955939253482775 
+		42 0.093333333730697632
+		3 21 0.00045627105974765887 22 0.65287631999707607 42 0.34666740894317627
+		4 20 3.6495267124969939e-09 21 0.00029013999316846974 22 0.64970986231776928 
+		42 0.34999999403953552
+		3 21 0.28678310797321793 22 0.36321689798724649 42 0.34999999403953552
+		4 0 5.7736134232572888e-07 20 0.01614361588907217 21 0.89648179755759561 
+		42 0.087374009191989899
 		2 22 0.099958479404449463 23 0.90004152059555054
 		2 22 0.082745179533958435 23 0.91725482046604156
-		3 20 5.7218954685965369e-09 21 5.2088737638222808e-05 22 0.99994790554046631
-		3 20 2.3188194660718943e-08 21 0.00012461012403068109 22 0.99987536668777466
-		4 20 1.9885875399659217e-09 21 7.2847389232333798e-05 22 0.099349901080131531 
-		42 0.90057724954204854
+		4 20 5.1784275692283658e-09 21 4.714132869299644e-05 22 0.90497245716252284 
+		42 0.094980396330356598
+		4 20 2.0896655352927432e-08 21 0.0001122957113934263 22 0.90106415092983116 
+		42 0.098823532462120056
+		4 20 3.9994616457945036e-09 21 0.00014651119620108621 22 0.19981323974818493 
+		42 0.80004024505615234
 		4 20 1.4825164206454556e-10 21 2.1721223346213121e-06 22 0.10000000149011612 
 		42 0.89999782623929758
 		4 21 2.9562496614995647e-05 22 0.10000000149011612 42 0.4454157827869733 
@@ -16579,20 +16561,23 @@ createNode skinCluster -n "skinCluster1";
 		4 0 4.8433795873977462e-08 20 1.1348235815388944e-06 21 0.90235175330849859 
 		22 0.097647063434123993
 		3 21 0.0022501093817659627 22 0.086328186094760895 23 0.91142170452347315
-		2 21 0.00091862678527832031 22 0.99908137321472168
-		2 21 4.4226646423339844e-05 22 0.99995577335357666
-		3 20 1.2582479294726118e-07 21 0.09611763060092926 22 0.90388224357427782
-		4 0 2.615807458329189e-08 20 1.1550423642101475e-06 21 0.90078313247830266 
-		22 0.099215686321258545
+		3 21 0.00082856533426500778 22 0.90113221737247251 42 0.098039217293262482
+		3 21 4.0879296257401192e-05 22 0.92427284474472771 42 0.075686275959014893
+		4 20 1.1487063403039824e-07 21 0.08774974239978417 22 0.8251913154485836 
+		42 0.08705882728099823
+		5 0 2.4055170478614512e-08 20 1.0621860142123828e-06 21 0.82836723119775868 
+		22 0.091239523039476925 42 0.080392159521579742
 		2 22 0.072156868875026703 23 0.9278431311249733
-		2 21 0.00013548135757446289 22 0.99986451864242554
-		3 21 1.6155101115371396e-07 22 0.093611225485801697 42 0.90638861296318718
-		3 21 0.0022754163860494989 22 0.099792107939720154 42 0.8979324756742304
-		3 0 2.0547830104078457e-09 20 0.00017678532162079819 21 0.99982321262359619
+		3 21 0.00012257078110877728 22 0.90458331129133995 42 0.09529411792755127
+		3 21 8.5738057247457337e-07 22 0.4968117842400635 42 0.50318735837936401
+		3 21 0.011111833977568824 22 0.48732765681756668 42 0.5015605092048645
+		4 0 1.9000699275334458e-09 20 0.00016347442602921593 21 0.92454240157402445 
+		42 0.075294122099876404
 		3 21 0.050821848213672638 42 0.41336649740949111 52 0.5358116543768362
 		3 22 0.10237758606672287 42 0.38724316266161596 52 0.51037925127166117
 		2 22 0.084648333489894867 42 0.91535166651010513
-		3 20 1.0668658005421201e-09 21 3.2771885968459423e-06 22 0.99999672174453735
+		4 20 9.6268948804088612e-10 21 2.957180754044139e-06 22 0.90234997842243247 
+		42 0.097647063434123993
 		4 20 1.6007622021643475e-10 21 1.7566930759734503e-06 22 0.086246773600578308 
 		23 0.91375146954626951
 		1 39 1
@@ -16705,7 +16690,8 @@ createNode skinCluster -n "skinCluster1";
 		5 21 7.067547385438143e-06 22 0.00026493878037929974 42 0.0030355026930652409 
 		52 0.91590817759845178 53 0.080784313380718231
 		5 20 2.695912440745993e-09 21 9.8406350484037208e-07 22 0.00012865789950973526 
-		42 0.00091576120578855977 52 0.99895459413528442
+		42 0.00091576120578855977 52 0.99895459413528442;
+	setAttr ".wl[764:946].w"
 		5 20 2.1700636245428594e-08 21 5.071657814446525e-06 22 3.9815268110196558e-05 
 		42 0.00025645245742348652 52 0.99969863891601563
 		5 20 1.5528400713695097e-09 21 1.2723634820186705e-06 22 3.3826407778233764e-05 
@@ -16716,10 +16702,8 @@ createNode skinCluster -n "skinCluster1";
 		42 0.0026781693048984752 52 0.99726694822311401
 		5 20 1.2525559034791688e-09 21 6.0884803204921522e-08 22 2.2050106659700155e-06 
 		42 0.00016450664805646456 52 0.99983322620391846
-		4 21 6.1255506053982948e-05 22 0.00026516329458789011 42 0.0056230541999271952 
-		52 0.89797209390302213;
-	setAttr ".wl[769:956].w"
-		1 53 0.096078433096408844
+		5 21 6.1255506053982948e-05 22 0.00026516329458789011 42 0.0056230541999271952 
+		52 0.89797209390302213 53 0.096078433096408844
 		5 22 7.003911981954568e-09 42 8.8599491894413168e-07 52 0.086989100680900988 
 		53 0.81957670814970152 54 0.093433298170566559
 		4 42 1.6289045309082974e-09 52 1.8005471289785065e-05 53 0.099889665842056274 
@@ -16731,7 +16715,7 @@ createNode skinCluster -n "skinCluster1";
 		2 52 0.91725490242242813 53 0.082745097577571869
 		5 22 4.3076449407398925e-07 42 3.6784997767744754e-05 52 0.090990082755227533 
 		53 0.8188735083267451 54 0.090099193155765533
-		4 42 2.956169280195273e-08 52 3.8923496902253703e-07 53 0.096087947487831116 
+		4 42 2.9561692801952727e-08 52 3.8923496902253703e-07 53 0.096087947487831116 
 		54 0.90391163371550709
 		5 22 3.3165165308746978e-10 42 1.371932944845355e-08 52 2.9123339471580636e-05 
 		53 0.00024355385939472992 54 0.99972730875015259
@@ -16917,8 +16901,9 @@ createNode skinCluster -n "skinCluster1";
 		3 8 7.3294598532260358e-10 9 0.91966459081788099 10 0.080335408449172974
 		2 9 0.90156862884759903 10 0.09843137115240097
 		3 8 1.6790648143178226e-07 9 0.99976348876953125 10 0.00023634332398731823
-		4 1 5.1520176986825542e-10 8 2.4196386734287658e-07 9 0.90039127659060247 
-		10 0.099608480930328369
+		2 1 5.1520176986825542e-10 8 2.4196386734287658e-07;
+	setAttr ".wl[946:1129].w"
+		2 9 0.90039127659060247 10 0.099608480930328369
 		3 1 1.1519447653540735e-06 8 0.00029722890698025139 9 0.99970161914825439
 		3 8 1.3690818142272775e-07 9 0.99883806705474854 10 0.001161796037070042
 		2 1 0.092941179871559143 9 0.90705882012844086
@@ -16931,9 +16916,8 @@ createNode skinCluster -n "skinCluster1";
 		18 0.079053287616293058
 		4 1 0.74885501272576771 9 0.096862748265266418 17 0.073176967502269069 
 		18 0.081105271506696774
-		2 1 0.73088031740500581 9 0.10000000149011612;
-	setAttr ".wl[956:1137].w"
-		2 17 0.080907915365575844 18 0.088211765739302242
+		4 1 0.73088031740500581 9 0.10000000149011612 17 0.080907915365575844 
+		18 0.088211765739302242
 		3 1 0.078152072753052249 17 0.090654924511909485 18 0.83119300273503827
 		3 1 1.8428172184349694e-06 17 0.012065177122204172 18 0.98793298006057739
 		1 18 1
@@ -16950,7 +16934,7 @@ createNode skinCluster -n "skinCluster1";
 		4 1 0.76300187320869206 9 0.086666665971279144 17 0.064584170550774478 
 		18 0.085747290269254345
 		3 17 0.0015034710472680375 18 0.99723255634307861 19 0.0012639726096533492
-		4 1 8.375759962735688e-10 17 0.0098439932618229857 18 0.97645962238311768 
+		4 1 8.3757599627356869e-10 17 0.0098439932618229857 18 0.97645962238311768 
 		19 0.01369638351748334
 		4 1 7.73307866625553e-09 17 0.010440036515559957 18 0.9504656195640564 
 		19 0.039094336187304977
@@ -17163,7 +17147,8 @@ createNode skinCluster -n "skinCluster1";
 		19 0.9966089129447937
 		4 1 1.837602846490375e-09 17 1.8709518442306487e-06 18 0.00015911935609125294 
 		19 0.99983900785446167
-		1 19 1
+		1 19 1;
+	setAttr ".wl[1130:1347].w"
 		4 1 5.6037517478438524e-10 17 1.7319860783716249e-08 18 0.0044773042213570591 
 		19 0.99552267789840698
 		3 17 3.1756038865182745e-07 18 0.00026212169055739309 19 0.99973756074905396
@@ -17177,8 +17162,7 @@ createNode skinCluster -n "skinCluster1";
 		4 1 1.4692718026914572e-07 17 1.5782075150225617e-05 18 9.4935636951731808e-05 
 		19 0.99988913536071777
 		4 1 1.3793785716149402e-07 17 4.1938803358759127e-06 18 0.00016977334919587861 
-		19 0.99982589483261108;
-	setAttr ".wl[1138:1347].w"
+		19 0.99982589483261108
 		4 1 1.7946960751021293e-10 17 5.1334651361421607e-08 18 0.0010911903224268826 
 		19 0.99890875816345215
 		4 1 5.4702381526014796e-07 17 3.5996041146527889e-06 18 0.0010353583769528996 
@@ -17961,182 +17945,181 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "BaseCharacterRN.phl[140]" "bindPose2.m[0]";
 connectAttr "BaseCharacterRN.phl[141]" "skinCluster1.lw[0]";
 connectAttr "BaseCharacterRN.phl[142]" "skinCluster1.ma[0]";
 connectAttr "BaseCharacterRN.phl[143]" "skinCluster1.ifcl[0]";
-connectAttr "BaseCharacterRN.phl[144]" "skinCluster1.ptt";
-connectAttr "BaseCharacterRN.phl[145]" "bindPose2.m[1]";
-connectAttr "BaseCharacterRN.phl[146]" "skinCluster1.lw[1]";
-connectAttr "BaseCharacterRN.phl[147]" "skinCluster1.ma[1]";
-connectAttr "BaseCharacterRN.phl[148]" "skinCluster1.ifcl[1]";
-connectAttr "BaseCharacterRN.phl[149]" "bindPose2.m[2]";
-connectAttr "BaseCharacterRN.phl[150]" "skinCluster1.lw[2]";
-connectAttr "BaseCharacterRN.phl[151]" "skinCluster1.ma[2]";
-connectAttr "BaseCharacterRN.phl[152]" "skinCluster1.ifcl[2]";
-connectAttr "BaseCharacterRN.phl[153]" "skinCluster1.lw[3]";
-connectAttr "BaseCharacterRN.phl[154]" "bindPose2.m[3]";
-connectAttr "BaseCharacterRN.phl[155]" "skinCluster1.ma[3]";
-connectAttr "BaseCharacterRN.phl[156]" "skinCluster1.ifcl[3]";
-connectAttr "BaseCharacterRN.phl[157]" "skinCluster1.lw[4]";
-connectAttr "BaseCharacterRN.phl[158]" "bindPose2.m[4]";
-connectAttr "BaseCharacterRN.phl[159]" "skinCluster1.ma[4]";
-connectAttr "BaseCharacterRN.phl[160]" "skinCluster1.ifcl[4]";
-connectAttr "BaseCharacterRN.phl[161]" "bindPose2.m[5]";
-connectAttr "BaseCharacterRN.phl[162]" "skinCluster1.lw[5]";
-connectAttr "BaseCharacterRN.phl[163]" "skinCluster1.ma[5]";
-connectAttr "BaseCharacterRN.phl[164]" "skinCluster1.ifcl[5]";
-connectAttr "BaseCharacterRN.phl[165]" "bindPose2.m[6]";
-connectAttr "BaseCharacterRN.phl[166]" "skinCluster1.lw[6]";
-connectAttr "BaseCharacterRN.phl[167]" "skinCluster1.ma[6]";
-connectAttr "BaseCharacterRN.phl[168]" "skinCluster1.ifcl[6]";
-connectAttr "BaseCharacterRN.phl[169]" "bindPose2.m[7]";
-connectAttr "BaseCharacterRN.phl[170]" "skinCluster1.lw[7]";
-connectAttr "BaseCharacterRN.phl[171]" "skinCluster1.ma[7]";
-connectAttr "BaseCharacterRN.phl[172]" "skinCluster1.ifcl[7]";
-connectAttr "BaseCharacterRN.phl[173]" "skinCluster1.lw[8]";
-connectAttr "BaseCharacterRN.phl[174]" "bindPose2.m[8]";
-connectAttr "BaseCharacterRN.phl[175]" "skinCluster1.ma[8]";
-connectAttr "BaseCharacterRN.phl[176]" "skinCluster1.ifcl[8]";
-connectAttr "BaseCharacterRN.phl[177]" "skinCluster1.lw[9]";
-connectAttr "BaseCharacterRN.phl[178]" "bindPose2.m[9]";
-connectAttr "BaseCharacterRN.phl[179]" "skinCluster1.ma[9]";
-connectAttr "BaseCharacterRN.phl[180]" "skinCluster1.ifcl[9]";
-connectAttr "BaseCharacterRN.phl[181]" "skinCluster1.lw[10]";
-connectAttr "BaseCharacterRN.phl[182]" "bindPose2.m[10]";
-connectAttr "BaseCharacterRN.phl[183]" "skinCluster1.ma[10]";
-connectAttr "BaseCharacterRN.phl[184]" "skinCluster1.ifcl[10]";
-connectAttr "BaseCharacterRN.phl[185]" "bindPose2.m[11]";
-connectAttr "BaseCharacterRN.phl[186]" "skinCluster1.lw[11]";
-connectAttr "BaseCharacterRN.phl[187]" "skinCluster1.ma[11]";
-connectAttr "BaseCharacterRN.phl[188]" "skinCluster1.ifcl[11]";
-connectAttr "BaseCharacterRN.phl[189]" "skinCluster1.lw[12]";
-connectAttr "BaseCharacterRN.phl[190]" "bindPose2.m[12]";
-connectAttr "BaseCharacterRN.phl[191]" "skinCluster1.ma[12]";
-connectAttr "BaseCharacterRN.phl[192]" "skinCluster1.ifcl[12]";
-connectAttr "BaseCharacterRN.phl[193]" "skinCluster1.lw[13]";
-connectAttr "BaseCharacterRN.phl[194]" "bindPose2.m[13]";
-connectAttr "BaseCharacterRN.phl[195]" "skinCluster1.ma[13]";
-connectAttr "BaseCharacterRN.phl[196]" "skinCluster1.ifcl[13]";
-connectAttr "BaseCharacterRN.phl[197]" "bindPose2.m[14]";
-connectAttr "BaseCharacterRN.phl[198]" "skinCluster1.lw[14]";
-connectAttr "BaseCharacterRN.phl[199]" "skinCluster1.ma[14]";
-connectAttr "BaseCharacterRN.phl[200]" "skinCluster1.ifcl[14]";
-connectAttr "BaseCharacterRN.phl[201]" "bindPose2.m[15]";
-connectAttr "BaseCharacterRN.phl[202]" "skinCluster1.lw[15]";
-connectAttr "BaseCharacterRN.phl[203]" "skinCluster1.ma[15]";
-connectAttr "BaseCharacterRN.phl[204]" "skinCluster1.ifcl[15]";
-connectAttr "BaseCharacterRN.phl[205]" "bindPose2.m[16]";
-connectAttr "BaseCharacterRN.phl[206]" "skinCluster1.lw[16]";
-connectAttr "BaseCharacterRN.phl[207]" "skinCluster1.ma[16]";
-connectAttr "BaseCharacterRN.phl[208]" "skinCluster1.ifcl[16]";
-connectAttr "BaseCharacterRN.phl[209]" "skinCluster1.lw[17]";
-connectAttr "BaseCharacterRN.phl[210]" "bindPose2.m[17]";
-connectAttr "BaseCharacterRN.phl[211]" "skinCluster1.ma[17]";
-connectAttr "BaseCharacterRN.phl[212]" "skinCluster1.ifcl[17]";
-connectAttr "BaseCharacterRN.phl[213]" "skinCluster1.lw[18]";
-connectAttr "BaseCharacterRN.phl[214]" "bindPose2.m[18]";
-connectAttr "BaseCharacterRN.phl[215]" "skinCluster1.ma[18]";
-connectAttr "BaseCharacterRN.phl[216]" "skinCluster1.ifcl[18]";
-connectAttr "BaseCharacterRN.phl[217]" "skinCluster1.lw[19]";
-connectAttr "BaseCharacterRN.phl[218]" "bindPose2.m[19]";
-connectAttr "BaseCharacterRN.phl[219]" "skinCluster1.ma[19]";
-connectAttr "BaseCharacterRN.phl[220]" "skinCluster1.ifcl[19]";
-connectAttr "BaseCharacterRN.phl[221]" "bindPose2.m[20]";
-connectAttr "BaseCharacterRN.phl[222]" "skinCluster1.lw[20]";
-connectAttr "BaseCharacterRN.phl[223]" "skinCluster1.ma[20]";
-connectAttr "BaseCharacterRN.phl[224]" "skinCluster1.ifcl[20]";
-connectAttr "BaseCharacterRN.phl[225]" "bindPose2.m[21]";
-connectAttr "BaseCharacterRN.phl[226]" "skinCluster1.lw[21]";
-connectAttr "BaseCharacterRN.phl[227]" "skinCluster1.ma[21]";
-connectAttr "BaseCharacterRN.phl[228]" "skinCluster1.ifcl[21]";
-connectAttr "BaseCharacterRN.phl[229]" "bindPose2.m[22]";
-connectAttr "BaseCharacterRN.phl[230]" "skinCluster1.lw[22]";
-connectAttr "BaseCharacterRN.phl[231]" "skinCluster1.ma[22]";
-connectAttr "BaseCharacterRN.phl[232]" "skinCluster1.ifcl[22]";
-connectAttr "BaseCharacterRN.phl[233]" "bindPose2.m[23]";
-connectAttr "BaseCharacterRN.phl[234]" "skinCluster1.lw[23]";
-connectAttr "BaseCharacterRN.phl[235]" "skinCluster1.ma[23]";
-connectAttr "BaseCharacterRN.phl[236]" "skinCluster1.ifcl[23]";
-connectAttr "BaseCharacterRN.phl[237]" "bindPose2.m[24]";
-connectAttr "BaseCharacterRN.phl[238]" "skinCluster1.lw[24]";
-connectAttr "BaseCharacterRN.phl[239]" "skinCluster1.ma[24]";
-connectAttr "BaseCharacterRN.phl[240]" "skinCluster1.ifcl[24]";
-connectAttr "BaseCharacterRN.phl[241]" "bindPose2.m[25]";
-connectAttr "BaseCharacterRN.phl[242]" "skinCluster1.lw[25]";
-connectAttr "BaseCharacterRN.phl[243]" "skinCluster1.ma[25]";
-connectAttr "BaseCharacterRN.phl[244]" "skinCluster1.ifcl[25]";
-connectAttr "Penguin_with_hair:polyTweakUV30.out" "BaseCharacterRN.phl[245]";
-connectAttr "Penguin_with_hair:polyTweakUV30.uvtk[0]" "BaseCharacterRN.phl[246]"
+connectAttr "BaseCharacterRN.phl[144]" "bindPose2.m[1]";
+connectAttr "BaseCharacterRN.phl[145]" "skinCluster1.lw[1]";
+connectAttr "BaseCharacterRN.phl[146]" "skinCluster1.ma[1]";
+connectAttr "BaseCharacterRN.phl[147]" "skinCluster1.ifcl[1]";
+connectAttr "BaseCharacterRN.phl[148]" "bindPose2.m[2]";
+connectAttr "BaseCharacterRN.phl[149]" "skinCluster1.lw[2]";
+connectAttr "BaseCharacterRN.phl[150]" "skinCluster1.ma[2]";
+connectAttr "BaseCharacterRN.phl[151]" "skinCluster1.ifcl[2]";
+connectAttr "BaseCharacterRN.phl[152]" "skinCluster1.lw[3]";
+connectAttr "BaseCharacterRN.phl[153]" "bindPose2.m[3]";
+connectAttr "BaseCharacterRN.phl[154]" "skinCluster1.ma[3]";
+connectAttr "BaseCharacterRN.phl[155]" "skinCluster1.ifcl[3]";
+connectAttr "BaseCharacterRN.phl[156]" "skinCluster1.lw[4]";
+connectAttr "BaseCharacterRN.phl[157]" "bindPose2.m[4]";
+connectAttr "BaseCharacterRN.phl[158]" "skinCluster1.ma[4]";
+connectAttr "BaseCharacterRN.phl[159]" "skinCluster1.ifcl[4]";
+connectAttr "BaseCharacterRN.phl[160]" "bindPose2.m[5]";
+connectAttr "BaseCharacterRN.phl[161]" "skinCluster1.lw[5]";
+connectAttr "BaseCharacterRN.phl[162]" "skinCluster1.ma[5]";
+connectAttr "BaseCharacterRN.phl[163]" "skinCluster1.ifcl[5]";
+connectAttr "BaseCharacterRN.phl[164]" "bindPose2.m[6]";
+connectAttr "BaseCharacterRN.phl[165]" "skinCluster1.lw[6]";
+connectAttr "BaseCharacterRN.phl[166]" "skinCluster1.ma[6]";
+connectAttr "BaseCharacterRN.phl[167]" "skinCluster1.ifcl[6]";
+connectAttr "BaseCharacterRN.phl[168]" "bindPose2.m[7]";
+connectAttr "BaseCharacterRN.phl[169]" "skinCluster1.lw[7]";
+connectAttr "BaseCharacterRN.phl[170]" "skinCluster1.ma[7]";
+connectAttr "BaseCharacterRN.phl[171]" "skinCluster1.ifcl[7]";
+connectAttr "BaseCharacterRN.phl[172]" "skinCluster1.lw[8]";
+connectAttr "BaseCharacterRN.phl[173]" "bindPose2.m[8]";
+connectAttr "BaseCharacterRN.phl[174]" "skinCluster1.ma[8]";
+connectAttr "BaseCharacterRN.phl[175]" "skinCluster1.ifcl[8]";
+connectAttr "BaseCharacterRN.phl[176]" "skinCluster1.lw[9]";
+connectAttr "BaseCharacterRN.phl[177]" "bindPose2.m[9]";
+connectAttr "BaseCharacterRN.phl[178]" "skinCluster1.ma[9]";
+connectAttr "BaseCharacterRN.phl[179]" "skinCluster1.ifcl[9]";
+connectAttr "BaseCharacterRN.phl[180]" "skinCluster1.lw[10]";
+connectAttr "BaseCharacterRN.phl[181]" "bindPose2.m[10]";
+connectAttr "BaseCharacterRN.phl[182]" "skinCluster1.ma[10]";
+connectAttr "BaseCharacterRN.phl[183]" "skinCluster1.ifcl[10]";
+connectAttr "BaseCharacterRN.phl[184]" "bindPose2.m[11]";
+connectAttr "BaseCharacterRN.phl[185]" "skinCluster1.lw[11]";
+connectAttr "BaseCharacterRN.phl[186]" "skinCluster1.ma[11]";
+connectAttr "BaseCharacterRN.phl[187]" "skinCluster1.ifcl[11]";
+connectAttr "BaseCharacterRN.phl[188]" "skinCluster1.lw[12]";
+connectAttr "BaseCharacterRN.phl[189]" "bindPose2.m[12]";
+connectAttr "BaseCharacterRN.phl[190]" "skinCluster1.ma[12]";
+connectAttr "BaseCharacterRN.phl[191]" "skinCluster1.ifcl[12]";
+connectAttr "BaseCharacterRN.phl[192]" "skinCluster1.lw[13]";
+connectAttr "BaseCharacterRN.phl[193]" "bindPose2.m[13]";
+connectAttr "BaseCharacterRN.phl[194]" "skinCluster1.ma[13]";
+connectAttr "BaseCharacterRN.phl[195]" "skinCluster1.ifcl[13]";
+connectAttr "BaseCharacterRN.phl[196]" "bindPose2.m[14]";
+connectAttr "BaseCharacterRN.phl[197]" "skinCluster1.lw[14]";
+connectAttr "BaseCharacterRN.phl[198]" "skinCluster1.ma[14]";
+connectAttr "BaseCharacterRN.phl[199]" "skinCluster1.ifcl[14]";
+connectAttr "BaseCharacterRN.phl[200]" "bindPose2.m[15]";
+connectAttr "BaseCharacterRN.phl[201]" "skinCluster1.lw[15]";
+connectAttr "BaseCharacterRN.phl[202]" "skinCluster1.ma[15]";
+connectAttr "BaseCharacterRN.phl[203]" "skinCluster1.ifcl[15]";
+connectAttr "BaseCharacterRN.phl[204]" "bindPose2.m[16]";
+connectAttr "BaseCharacterRN.phl[205]" "skinCluster1.lw[16]";
+connectAttr "BaseCharacterRN.phl[206]" "skinCluster1.ma[16]";
+connectAttr "BaseCharacterRN.phl[207]" "skinCluster1.ifcl[16]";
+connectAttr "BaseCharacterRN.phl[208]" "skinCluster1.lw[17]";
+connectAttr "BaseCharacterRN.phl[209]" "bindPose2.m[17]";
+connectAttr "BaseCharacterRN.phl[210]" "skinCluster1.ma[17]";
+connectAttr "BaseCharacterRN.phl[211]" "skinCluster1.ifcl[17]";
+connectAttr "BaseCharacterRN.phl[212]" "skinCluster1.lw[18]";
+connectAttr "BaseCharacterRN.phl[213]" "bindPose2.m[18]";
+connectAttr "BaseCharacterRN.phl[214]" "skinCluster1.ma[18]";
+connectAttr "BaseCharacterRN.phl[215]" "skinCluster1.ifcl[18]";
+connectAttr "BaseCharacterRN.phl[216]" "skinCluster1.lw[19]";
+connectAttr "BaseCharacterRN.phl[217]" "bindPose2.m[19]";
+connectAttr "BaseCharacterRN.phl[218]" "skinCluster1.ma[19]";
+connectAttr "BaseCharacterRN.phl[219]" "skinCluster1.ifcl[19]";
+connectAttr "BaseCharacterRN.phl[220]" "bindPose2.m[20]";
+connectAttr "BaseCharacterRN.phl[221]" "skinCluster1.lw[20]";
+connectAttr "BaseCharacterRN.phl[222]" "skinCluster1.ma[20]";
+connectAttr "BaseCharacterRN.phl[223]" "skinCluster1.ifcl[20]";
+connectAttr "BaseCharacterRN.phl[224]" "bindPose2.m[21]";
+connectAttr "BaseCharacterRN.phl[225]" "skinCluster1.lw[21]";
+connectAttr "BaseCharacterRN.phl[226]" "skinCluster1.ma[21]";
+connectAttr "BaseCharacterRN.phl[227]" "skinCluster1.ifcl[21]";
+connectAttr "BaseCharacterRN.phl[228]" "bindPose2.m[22]";
+connectAttr "BaseCharacterRN.phl[229]" "skinCluster1.lw[22]";
+connectAttr "BaseCharacterRN.phl[230]" "skinCluster1.ma[22]";
+connectAttr "BaseCharacterRN.phl[231]" "skinCluster1.ifcl[22]";
+connectAttr "BaseCharacterRN.phl[232]" "bindPose2.m[23]";
+connectAttr "BaseCharacterRN.phl[233]" "skinCluster1.lw[23]";
+connectAttr "BaseCharacterRN.phl[234]" "skinCluster1.ma[23]";
+connectAttr "BaseCharacterRN.phl[235]" "skinCluster1.ifcl[23]";
+connectAttr "BaseCharacterRN.phl[236]" "bindPose2.m[24]";
+connectAttr "BaseCharacterRN.phl[237]" "skinCluster1.lw[24]";
+connectAttr "BaseCharacterRN.phl[238]" "skinCluster1.ma[24]";
+connectAttr "BaseCharacterRN.phl[239]" "skinCluster1.ifcl[24]";
+connectAttr "BaseCharacterRN.phl[240]" "bindPose2.m[25]";
+connectAttr "BaseCharacterRN.phl[241]" "skinCluster1.lw[25]";
+connectAttr "BaseCharacterRN.phl[242]" "skinCluster1.ma[25]";
+connectAttr "BaseCharacterRN.phl[243]" "skinCluster1.ifcl[25]";
+connectAttr "Penguin_with_hair:polyTweakUV30.out" "BaseCharacterRN.phl[244]";
+connectAttr "Penguin_with_hair:polyTweakUV30.uvtk[0]" "BaseCharacterRN.phl[245]"
 		;
-connectAttr "BaseCharacterRN.phl[247]" "bindPose2.m[26]";
-connectAttr "BaseCharacterRN.phl[248]" "skinCluster1.lw[26]";
-connectAttr "BaseCharacterRN.phl[249]" "skinCluster1.ma[26]";
-connectAttr "BaseCharacterRN.phl[250]" "skinCluster1.ifcl[26]";
-connectAttr "BaseCharacterRN.phl[251]" "bindPose2.m[27]";
-connectAttr "BaseCharacterRN.phl[252]" "skinCluster1.lw[27]";
-connectAttr "BaseCharacterRN.phl[253]" "skinCluster1.ma[27]";
-connectAttr "BaseCharacterRN.phl[254]" "skinCluster1.ifcl[27]";
-connectAttr "Penguin_with_hair:polyTweakUV31.out" "BaseCharacterRN.phl[255]";
-connectAttr "Penguin_with_hair:polyTweakUV31.uvtk[0]" "BaseCharacterRN.phl[256]"
+connectAttr "BaseCharacterRN.phl[246]" "bindPose2.m[26]";
+connectAttr "BaseCharacterRN.phl[247]" "skinCluster1.lw[26]";
+connectAttr "BaseCharacterRN.phl[248]" "skinCluster1.ma[26]";
+connectAttr "BaseCharacterRN.phl[249]" "skinCluster1.ifcl[26]";
+connectAttr "BaseCharacterRN.phl[250]" "bindPose2.m[27]";
+connectAttr "BaseCharacterRN.phl[251]" "skinCluster1.lw[27]";
+connectAttr "BaseCharacterRN.phl[252]" "skinCluster1.ma[27]";
+connectAttr "BaseCharacterRN.phl[253]" "skinCluster1.ifcl[27]";
+connectAttr "Penguin_with_hair:polyTweakUV31.out" "BaseCharacterRN.phl[254]";
+connectAttr "Penguin_with_hair:polyTweakUV31.uvtk[0]" "BaseCharacterRN.phl[255]"
 		;
-connectAttr "BaseCharacterRN.phl[257]" "bindPose2.m[28]";
-connectAttr "BaseCharacterRN.phl[258]" "skinCluster1.lw[28]";
-connectAttr "BaseCharacterRN.phl[259]" "skinCluster1.ma[28]";
-connectAttr "BaseCharacterRN.phl[260]" "skinCluster1.ifcl[28]";
-connectAttr "BaseCharacterRN.phl[261]" "bindPose2.m[29]";
-connectAttr "BaseCharacterRN.phl[262]" "skinCluster1.lw[29]";
-connectAttr "BaseCharacterRN.phl[263]" "skinCluster1.ma[29]";
-connectAttr "BaseCharacterRN.phl[264]" "skinCluster1.ifcl[29]";
-connectAttr "BaseCharacterRN.phl[265]" "skinCluster1.lw[30]";
-connectAttr "BaseCharacterRN.phl[266]" "bindPose2.m[30]";
-connectAttr "BaseCharacterRN.phl[267]" "skinCluster1.ma[30]";
-connectAttr "BaseCharacterRN.phl[268]" "skinCluster1.ifcl[30]";
-connectAttr "BaseCharacterRN.phl[269]" "bindPose2.m[31]";
-connectAttr "BaseCharacterRN.phl[270]" "skinCluster1.lw[31]";
-connectAttr "BaseCharacterRN.phl[271]" "skinCluster1.ma[31]";
-connectAttr "BaseCharacterRN.phl[272]" "skinCluster1.ifcl[31]";
-connectAttr "BaseCharacterRN.phl[273]" "skinCluster1.lw[32]";
-connectAttr "BaseCharacterRN.phl[274]" "bindPose2.m[32]";
-connectAttr "BaseCharacterRN.phl[275]" "skinCluster1.ma[32]";
-connectAttr "BaseCharacterRN.phl[276]" "skinCluster1.ifcl[32]";
-connectAttr "BaseCharacterRN.phl[277]" "skinCluster1.lw[33]";
-connectAttr "BaseCharacterRN.phl[278]" "bindPose2.m[33]";
-connectAttr "BaseCharacterRN.phl[279]" "skinCluster1.ma[33]";
-connectAttr "BaseCharacterRN.phl[280]" "skinCluster1.ifcl[33]";
-connectAttr "BaseCharacterRN.phl[281]" "skinCluster1.lw[34]";
-connectAttr "BaseCharacterRN.phl[282]" "bindPose2.m[34]";
-connectAttr "BaseCharacterRN.phl[283]" "skinCluster1.ma[34]";
-connectAttr "BaseCharacterRN.phl[284]" "skinCluster1.ifcl[34]";
-connectAttr "BaseCharacterRN.phl[285]" "bindPose2.m[35]";
-connectAttr "BaseCharacterRN.phl[286]" "skinCluster1.lw[35]";
-connectAttr "BaseCharacterRN.phl[287]" "skinCluster1.ma[35]";
-connectAttr "BaseCharacterRN.phl[288]" "skinCluster1.ifcl[35]";
-connectAttr "BaseCharacterRN.phl[289]" "bindPose2.m[36]";
-connectAttr "BaseCharacterRN.phl[290]" "skinCluster1.lw[36]";
-connectAttr "BaseCharacterRN.phl[291]" "skinCluster1.ma[36]";
-connectAttr "BaseCharacterRN.phl[292]" "skinCluster1.ifcl[36]";
-connectAttr "BaseCharacterRN.phl[293]" "bindPose2.m[37]";
-connectAttr "BaseCharacterRN.phl[294]" "skinCluster1.lw[37]";
-connectAttr "BaseCharacterRN.phl[295]" "skinCluster1.ma[37]";
-connectAttr "BaseCharacterRN.phl[296]" "skinCluster1.ifcl[37]";
-connectAttr "BaseCharacterRN.phl[297]" "skinCluster1.lw[38]";
-connectAttr "BaseCharacterRN.phl[298]" "bindPose2.m[38]";
-connectAttr "BaseCharacterRN.phl[299]" "skinCluster1.ma[38]";
-connectAttr "BaseCharacterRN.phl[300]" "skinCluster1.ifcl[38]";
-connectAttr "BaseCharacterRN.phl[301]" "skinCluster1.lw[39]";
-connectAttr "BaseCharacterRN.phl[302]" "bindPose2.m[39]";
-connectAttr "BaseCharacterRN.phl[303]" "skinCluster1.ma[39]";
-connectAttr "BaseCharacterRN.phl[304]" "skinCluster1.ifcl[39]";
-connectAttr "BaseCharacterRN.phl[305]" "skinCluster1.lw[40]";
-connectAttr "BaseCharacterRN.phl[306]" "bindPose2.m[40]";
-connectAttr "BaseCharacterRN.phl[307]" "skinCluster1.ma[40]";
-connectAttr "BaseCharacterRN.phl[308]" "skinCluster1.ifcl[40]";
-connectAttr "BaseCharacterRN.phl[309]" "skinCluster1.lw[41]";
-connectAttr "BaseCharacterRN.phl[310]" "bindPose2.m[41]";
-connectAttr "BaseCharacterRN.phl[311]" "skinCluster1.ma[41]";
-connectAttr "BaseCharacterRN.phl[312]" "skinCluster1.ifcl[41]";
+connectAttr "BaseCharacterRN.phl[256]" "bindPose2.m[28]";
+connectAttr "BaseCharacterRN.phl[257]" "skinCluster1.lw[28]";
+connectAttr "BaseCharacterRN.phl[258]" "skinCluster1.ma[28]";
+connectAttr "BaseCharacterRN.phl[259]" "skinCluster1.ifcl[28]";
+connectAttr "BaseCharacterRN.phl[260]" "bindPose2.m[29]";
+connectAttr "BaseCharacterRN.phl[261]" "skinCluster1.lw[29]";
+connectAttr "BaseCharacterRN.phl[262]" "skinCluster1.ma[29]";
+connectAttr "BaseCharacterRN.phl[263]" "skinCluster1.ifcl[29]";
+connectAttr "BaseCharacterRN.phl[264]" "skinCluster1.lw[30]";
+connectAttr "BaseCharacterRN.phl[265]" "bindPose2.m[30]";
+connectAttr "BaseCharacterRN.phl[266]" "skinCluster1.ma[30]";
+connectAttr "BaseCharacterRN.phl[267]" "skinCluster1.ifcl[30]";
+connectAttr "BaseCharacterRN.phl[268]" "bindPose2.m[31]";
+connectAttr "BaseCharacterRN.phl[269]" "skinCluster1.lw[31]";
+connectAttr "BaseCharacterRN.phl[270]" "skinCluster1.ma[31]";
+connectAttr "BaseCharacterRN.phl[271]" "skinCluster1.ifcl[31]";
+connectAttr "BaseCharacterRN.phl[272]" "skinCluster1.lw[32]";
+connectAttr "BaseCharacterRN.phl[273]" "bindPose2.m[32]";
+connectAttr "BaseCharacterRN.phl[274]" "skinCluster1.ma[32]";
+connectAttr "BaseCharacterRN.phl[275]" "skinCluster1.ifcl[32]";
+connectAttr "BaseCharacterRN.phl[276]" "skinCluster1.lw[33]";
+connectAttr "BaseCharacterRN.phl[277]" "bindPose2.m[33]";
+connectAttr "BaseCharacterRN.phl[278]" "skinCluster1.ma[33]";
+connectAttr "BaseCharacterRN.phl[279]" "skinCluster1.ifcl[33]";
+connectAttr "BaseCharacterRN.phl[280]" "skinCluster1.lw[34]";
+connectAttr "BaseCharacterRN.phl[281]" "bindPose2.m[34]";
+connectAttr "BaseCharacterRN.phl[282]" "skinCluster1.ma[34]";
+connectAttr "BaseCharacterRN.phl[283]" "skinCluster1.ifcl[34]";
+connectAttr "BaseCharacterRN.phl[284]" "bindPose2.m[35]";
+connectAttr "BaseCharacterRN.phl[285]" "skinCluster1.lw[35]";
+connectAttr "BaseCharacterRN.phl[286]" "skinCluster1.ma[35]";
+connectAttr "BaseCharacterRN.phl[287]" "skinCluster1.ifcl[35]";
+connectAttr "BaseCharacterRN.phl[288]" "bindPose2.m[36]";
+connectAttr "BaseCharacterRN.phl[289]" "skinCluster1.lw[36]";
+connectAttr "BaseCharacterRN.phl[290]" "skinCluster1.ma[36]";
+connectAttr "BaseCharacterRN.phl[291]" "skinCluster1.ifcl[36]";
+connectAttr "BaseCharacterRN.phl[292]" "bindPose2.m[37]";
+connectAttr "BaseCharacterRN.phl[293]" "skinCluster1.lw[37]";
+connectAttr "BaseCharacterRN.phl[294]" "skinCluster1.ma[37]";
+connectAttr "BaseCharacterRN.phl[295]" "skinCluster1.ifcl[37]";
+connectAttr "BaseCharacterRN.phl[296]" "skinCluster1.lw[38]";
+connectAttr "BaseCharacterRN.phl[297]" "bindPose2.m[38]";
+connectAttr "BaseCharacterRN.phl[298]" "skinCluster1.ma[38]";
+connectAttr "BaseCharacterRN.phl[299]" "skinCluster1.ifcl[38]";
+connectAttr "BaseCharacterRN.phl[300]" "skinCluster1.lw[39]";
+connectAttr "BaseCharacterRN.phl[301]" "bindPose2.m[39]";
+connectAttr "BaseCharacterRN.phl[302]" "skinCluster1.ma[39]";
+connectAttr "BaseCharacterRN.phl[303]" "skinCluster1.ifcl[39]";
+connectAttr "BaseCharacterRN.phl[304]" "skinCluster1.lw[40]";
+connectAttr "BaseCharacterRN.phl[305]" "bindPose2.m[40]";
+connectAttr "BaseCharacterRN.phl[306]" "skinCluster1.ma[40]";
+connectAttr "BaseCharacterRN.phl[307]" "skinCluster1.ifcl[40]";
+connectAttr "BaseCharacterRN.phl[308]" "skinCluster1.lw[41]";
+connectAttr "BaseCharacterRN.phl[309]" "bindPose2.m[41]";
+connectAttr "BaseCharacterRN.phl[310]" "skinCluster1.ma[41]";
+connectAttr "BaseCharacterRN.phl[311]" "skinCluster1.ifcl[41]";
+connectAttr "BaseCharacterRN.phl[312]" "skinCluster1.ptt";
 connectAttr "BaseCharacterRN.phl[313]" "bindPose2.m[42]";
 connectAttr "BaseCharacterRN.phl[314]" "skinCluster1.lw[42]";
 connectAttr "BaseCharacterRN.phl[315]" "skinCluster1.ma[42]";
