@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Penguin.ma
-//Last modified: Tue, Jun 09, 2020 09:22:39 PM
+//Last modified: Tue, Jun 09, 2020 09:31:11 PM
 //Codeset: 1252
 file -rdi 1 -ns "BaseCharacter" -rfn "BaseCharacterRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/Xmen9/Desktop/__School/_ _UVU2020Summer/_DGM3220/Repo/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
@@ -20,13 +20,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "303A8C8F-4E75-124D-670F-61AAA4D7523B";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -5.8824150400847284 5.9887149060239109 9.0457983738177621 ;
-	setAttr ".r" -type "double3" 1436.0616469284794 42084.999999984844 2.4267127087601187e-16 ;
+	setAttr ".t" -type "double3" 15.493287432979802 4.8407661951618355 15.163483953396375 ;
+	setAttr ".r" -type "double3" 1434.8616469306769 42167.399999977009 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "ECF3FB9B-4E95-2871-C87B-4BBBB370A430";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 9.6958144226894127;
+	setAttr ".coi" 20.300098423079724;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -9550,7 +9550,7 @@ createNode mesh -n "Penguin_V_2_3_UV_mapped1:EyeMesh_RShape" -p "Penguin_V_2_3_U
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode fosterParent -n "BaseCharacterRNfosterParent1";
-	rename -uid "C32F85A0-46D1-5B69-7713-72B20EF4DBF7";
+	rename -uid "EE0D91C2-4996-8205-8E5B-F0BDEBB5FDF8";
 createNode mesh -n "BaseCharacter:polySurfaceShape1" -p "BaseCharacterRNfosterParent1";
 	rename -uid "FC93FAC2-4D07-7D8A-DB05-6EA186B0552B";
 	setAttr -k off ".v";
@@ -12767,7 +12767,7 @@ createNode reference -n "BaseCharacterRN";
 		""
 		5 4 "BaseCharacterRN" "|BaseCharacter:BodyMesh.drawOverride" "BaseCharacterRN.placeHolderList[139]" 
 		""
-		"BaseCharacterRN" 665
+		"BaseCharacterRN" 666
 		0 "|BaseCharacterRNfosterParent1|BaseCharacter:polySurfaceShape2" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L|BaseCharacter:EyeMesh_L" 
 		"-s -r "
 		0 "|BaseCharacterRNfosterParent1|BaseCharacter:polySurfaceShape1" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R" 
@@ -13486,6 +13486,8 @@ createNode reference -n "BaseCharacterRN";
 		2 "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:head_J_GRP|BaseCharacter:head_J_CTRL|BaseCharacter:Eye_J_R_GRP|BaseCharacter:Eye_J_R_CTRL|BaseCharacter:EyeLid_J_R_GRP|BaseCharacter:EyeLid_J_R_CTRL" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:head_J_GRP|BaseCharacter:head_J_CTRL|BaseCharacter:Jaw_J_GRP|BaseCharacter:Jaw_J_CTRL" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:head_J_GRP|BaseCharacter:head_J_CTRL|BaseCharacter:Jaw_J_GRP|BaseCharacter:Jaw_J_CTRL" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:Clavical_J_L_GRP|BaseCharacter:Clavical_J_L_CTRL" 
 		"rotate" " -type \"double3\" 0 0 0"
@@ -13827,18 +13829,18 @@ createNode reference -n "BaseCharacterRN";
 		"BaseCharacterRN.placeHolderList[249]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeLid_J_R.message" 
 		"BaseCharacterRN.placeHolderList[250]" "BaseCharacter:bindPose1.m[15]"
-		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeLid_J_R.message" 
-		"BaseCharacterRN.placeHolderList[251]" "BaseCharacter:bindPose1.m[15]"
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeLid_J_R.lockInfluenceWeights" 
-		"BaseCharacterRN.placeHolderList[252]" ""
+		"BaseCharacterRN.placeHolderList[251]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeLid_J_R.worldMatrix" 
-		"BaseCharacterRN.placeHolderList[253]" ""
+		"BaseCharacterRN.placeHolderList[252]" ""
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeLid_J_R.objectColorRGB" 
-		"BaseCharacterRN.placeHolderList[254]" ""
+		"BaseCharacterRN.placeHolderList[253]" ""
 		5 4 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape.inMesh" 
-		"BaseCharacterRN.placeHolderList[255]" ""
+		"BaseCharacterRN.placeHolderList[254]" ""
 		5 4 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R|BaseCharacter:EyeMesh_RShape.uvSet[0].uvSetTweakLocation" 
-		"BaseCharacterRN.placeHolderList[256]" ""
+		"BaseCharacterRN.placeHolderList[255]" ""
+		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Jaw_J.message" 
+		"BaseCharacterRN.placeHolderList[256]" "BaseCharacter:bindPose1.m[16]"
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Jaw_J.message" 
 		"BaseCharacterRN.placeHolderList[257]" "BaseCharacter:bindPose1.m[16]"
 		5 3 "BaseCharacterRN" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Jaw_J.lockInfluenceWeights" 
@@ -15788,7 +15790,7 @@ createNode skinCluster -n "skinCluster1";
 	setAttr -s 1348 ".wl";
 	setAttr ".wl[0:223].w"
 		2 23 0.95098039135336876 28 0.049019608646631241
-		2 23 0.95156862586736679 28 0.048431374132633209
+		2 23 0.86144998669624329 28 0.13855001330375671
 		2 23 0.0066435933113098145 28 0.99335640668869019
 		2 23 0.00071436166763305664 28 0.99928563833236694
 		5 20 5.6996082109566662e-09 21 1.0503075265910747e-06 22 0.0008308776798540596 
@@ -15802,8 +15804,8 @@ createNode skinCluster -n "skinCluster1";
 		3 21 1.929975720491237e-10 22 2.3822558152951338e-07 23 0.9999997615814209
 		1 28 1
 		2 23 0.00038498640060424805 28 0.99961501359939575
-		3 22 7.366108145667739e-07 23 0.95063608984477854 28 0.049363173544406891
-		3 22 2.8326854306648382e-06 23 0.95048867392090974 28 0.049508493393659592
+		3 22 6.3664529204032771e-07 23 0.82162517719652772 28 0.17837418615818024
+		3 22 2.4468880255312797e-06 23 0.82103693175501036 28 0.17896062135696411
 		3 22 1.1385026255084085e-10 23 0.0019100903326219054 28 0.99808990955352783
 		2 23 0.18431371450424194 28 0.81568628549575806
 		1 23 1
@@ -15897,13 +15899,13 @@ createNode skinCluster -n "skinCluster1";
 		4 21 8.6538604300336619e-09 22 0.00040441899084639845 23 0.9620310264854659 
 		28 0.037564545869827271
 		2 23 0.5000002384185791 28 0.4999997615814209
-		2 23 0.60166126489639282 28 0.39833873510360718
+		2 23 0.45194262266159058 28 0.54805737733840942
 		2 23 0.80039215087890625 28 0.19960784912109375
 		2 23 0.8072802722454071 28 0.1927197277545929
 		2 23 0.81223879754543304 28 0.18776120245456696
 		2 23 0.80197615921497345 28 0.19802384078502655
 		2 23 0.80084192752838135 28 0.19915807247161865
-		2 23 0.59785500168800354 28 0.40214499831199646
+		2 23 0.49389970302581787 28 0.50610029697418213
 		2 23 0.50000035762786865 28 0.49999964237213135
 		4 21 8.3074699261905894e-10 22 0.0034844046033830965 23 0.94867245494723473 
 		28 0.047843139618635178
@@ -16362,17 +16364,17 @@ createNode skinCluster -n "skinCluster1";
 		1 23 1
 		1 23 1
 		2 22 0.00081211328506469727 23 0.9991878867149353
-		3 22 2.2738587635018345e-07 23 0.95372526333320362 28 0.046274509280920029
-		2 23 0.52320972084999084 28 0.47679027915000916
-		2 23 0.90158092975616455 28 0.098419070243835449
+		3 22 2.1739873190540488e-07 23 0.91183615342703561 28 0.088163629174232483
+		2 23 0.75500577688217163 28 0.24499422311782837
+		2 23 0.8673492819070816 28 0.1326507180929184
 		2 23 0.965050358325243 28 0.034949641674757004
 		2 23 0.95582929626107216 28 0.044170703738927841
 		2 23 0.95764705911278725 28 0.042352940887212753
 		2 23 0.96118330210447311 28 0.038816697895526886
 		2 23 0.95599581673741341 28 0.044004183262586594
-		3 22 1.7716551781177254e-07 23 0.5944686548504734 28 0.40553116798400879
-		3 22 1.1859345878661998e-06 23 0.53774694224114761 28 0.46225187182426453
-		2 23 0.95509803667664528 28 0.044901963323354721
+		3 22 1.1781017814830407e-07 23 0.73033285140991211 28 0.26966703077990972
+		3 22 8.5713795443745096e-07 23 0.65885567665100098 28 0.34114346621104458
+		2 23 0.91296135634183884 28 0.087038643658161163
 		2 22 5.245208740234375e-06 23 0.99999475479125977
 		3 21 8.0976657983508468e-08 22 0.0018073702715109617 23 0.99819254875183105
 		1 23 1
@@ -18172,14 +18174,14 @@ connectAttr "BaseCharacterRN.phl[246]" "bindPose2.m[26]";
 connectAttr "BaseCharacterRN.phl[247]" "skinCluster1.lw[26]";
 connectAttr "BaseCharacterRN.phl[248]" "skinCluster1.ma[26]";
 connectAttr "BaseCharacterRN.phl[249]" "skinCluster1.ifcl[26]";
-connectAttr "BaseCharacterRN.phl[250]" "skinCluster1.ptt";
-connectAttr "BaseCharacterRN.phl[251]" "bindPose2.m[27]";
-connectAttr "BaseCharacterRN.phl[252]" "skinCluster1.lw[27]";
-connectAttr "BaseCharacterRN.phl[253]" "skinCluster1.ma[27]";
-connectAttr "BaseCharacterRN.phl[254]" "skinCluster1.ifcl[27]";
-connectAttr "Penguin_with_hair:polyTweakUV31.out" "BaseCharacterRN.phl[255]";
-connectAttr "Penguin_with_hair:polyTweakUV31.uvtk[0]" "BaseCharacterRN.phl[256]"
+connectAttr "BaseCharacterRN.phl[250]" "bindPose2.m[27]";
+connectAttr "BaseCharacterRN.phl[251]" "skinCluster1.lw[27]";
+connectAttr "BaseCharacterRN.phl[252]" "skinCluster1.ma[27]";
+connectAttr "BaseCharacterRN.phl[253]" "skinCluster1.ifcl[27]";
+connectAttr "Penguin_with_hair:polyTweakUV31.out" "BaseCharacterRN.phl[254]";
+connectAttr "Penguin_with_hair:polyTweakUV31.uvtk[0]" "BaseCharacterRN.phl[255]"
 		;
+connectAttr "BaseCharacterRN.phl[256]" "skinCluster1.ptt";
 connectAttr "BaseCharacterRN.phl[257]" "bindPose2.m[28]";
 connectAttr "BaseCharacterRN.phl[258]" "skinCluster1.lw[28]";
 connectAttr "BaseCharacterRN.phl[259]" "skinCluster1.ma[28]";
