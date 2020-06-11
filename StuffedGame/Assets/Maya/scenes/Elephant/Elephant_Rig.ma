@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Elephant_Rig.ma
-//Last modified: Thu, Jun 11, 2020 10:58:09 AM
+//Last modified: Thu, Jun 11, 2020 11:00:30 AM
 //Codeset: 1252
 file -rdi 1 -ns "BaseRig" -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
 file -r -ns "BaseRig" -dr 1 -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
@@ -15,14 +15,14 @@ fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 18363)\n";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
-	setAttr ".t" -type "double3" -0.031962000583341421 2.1297988531041199 6.788310908062174 ;
-	setAttr ".r" -type "double3" -2522.1383527369926 -2162.9999999997967 -6.8426004946217191e-17 ;
+	setAttr ".t" -type "double3" 5.1321164390105061 1.5270531096362814 23.330039958112184 ;
+	setAttr ".r" -type "double3" -2516.1383527366893 -2507.8000000003681 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "77E8AA9E-234E-68FC-26D2-21B85028178A";
 	setAttr -k off ".v";
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 8.7577853469123355;
+	setAttr ".coi" 25.529191874040031;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -19265,7 +19265,7 @@ createNode groupId -n "groupId49";
 	setAttr ".ihi" 0;
 createNode reference -n "BaseRigRN";
 	rename -uid "964E0B97-46C0-80EF-405F-90878FE7DEDF";
-	setAttr -s 109 ".phl";
+	setAttr -s 112 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -19375,10 +19375,13 @@ createNode reference -n "BaseRigRN";
 	setAttr ".phl[107]" 0;
 	setAttr ".phl[108]" 0;
 	setAttr ".phl[109]" 0;
+	setAttr ".phl[110]" 0;
+	setAttr ".phl[111]" 0;
+	setAttr ".phl[112]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"BaseRigRN"
 		"BaseRigRN" 0
-		"BaseRigRN" 260
+		"BaseRigRN" 266
 		0 "|BaseRig:Root_J" "|Elephant_World|Skeleton" "-s -r "
 		0 "|BaseRig:Transform_Ctrl_Grp" "|Elephant_World|Controls" "-s -r "
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J" "useObjectColor" " 1"
@@ -19658,6 +19661,12 @@ createNode reference -n "BaseRigRN";
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL" 
 		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL" 
+		"rotateY" " -av"
+		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL" 
+		"rotateZ" " -av"
 		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL|BaseRig:head_J_GRP|BaseRig:head_J_CTRL" 
@@ -19890,7 +19899,13 @@ createNode reference -n "BaseRigRN";
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.worldMatrix" 
 		"BaseRigRN.placeHolderList[108]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.objectColorRGB" 
-		"BaseRigRN.placeHolderList[109]" "";
+		"BaseRigRN.placeHolderList[109]" ""
+		5 4 "BaseRigRN" "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL.rotateX" 
+		"BaseRigRN.placeHolderList[110]" ""
+		5 4 "BaseRigRN" "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL.rotateY" 
+		"BaseRigRN.placeHolderList[111]" ""
+		5 4 "BaseRigRN" "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL.rotateZ" 
+		"BaseRigRN.placeHolderList[112]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode skinCluster -n "skinCluster1";
@@ -21855,6 +21870,22 @@ createNode dagPose -n "bindPose2";
 	setAttr -s 29 ".g[0:28]" yes yes no no no no no no no no no no no no 
 		no no no no no no no no no no no no no no no;
 	setAttr ".bp" yes;
+createNode animCurveTA -n "LowerBack_J_CTRL_rotateX";
+	rename -uid "B3CE5C53-4F0A-8A53-EEC3-B09E2C1D811E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "LowerBack_J_CTRL_rotateY";
+	rename -uid "B3227DCC-4AC8-3F3E-9B27-2DA90B3824B2";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  1 0 10 45.276199626115911 20 0 30 -34.879865343367726
+		 40 0;
+createNode animCurveTA -n "LowerBack_J_CTRL_rotateZ";
+	rename -uid "DF53BE12-4D9B-7308-5DBC-B69124009DF0";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  1 0 40 0 50 -62.277359986026909 60 0 70 72.333119331784204;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -21887,6 +21918,8 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
 	setAttr -s 4 ".sol";
+select -ne :modelPanel4ViewSelectedSet;
+	setAttr ".ihi" 0;
 connectAttr "BaseRigRN.phl[1]" "bindPose2.m[2]";
 connectAttr "BaseRigRN.phl[2]" "skinCluster1.ma[0]";
 connectAttr "BaseRigRN.phl[3]" "skinCluster1.lw[0]";
@@ -21996,6 +22029,9 @@ connectAttr "BaseRigRN.phl[106]" "skinCluster1.lw[26]";
 connectAttr "BaseRigRN.phl[107]" "bindPose2.m[28]";
 connectAttr "BaseRigRN.phl[108]" "skinCluster1.ma[26]";
 connectAttr "BaseRigRN.phl[109]" "skinCluster1.ifcl[26]";
+connectAttr "LowerBack_J_CTRL_rotateX.o" "BaseRigRN.phl[110]";
+connectAttr "LowerBack_J_CTRL_rotateY.o" "BaseRigRN.phl[111]";
+connectAttr "LowerBack_J_CTRL_rotateZ.o" "BaseRigRN.phl[112]";
 connectAttr "Geometry_Layer.di" "Elephant_Geo.do";
 connectAttr "skinCluster1GroupId.id" "Elephant_GeoShape.iog.og[4].gid";
 connectAttr "skinCluster1Set.mwc" "Elephant_GeoShape.iog.og[4].gco";
