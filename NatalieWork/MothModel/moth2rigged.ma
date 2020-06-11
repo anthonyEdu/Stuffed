@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: moth2rigged.ma
-//Last modified: Wed, Jun 10, 2020 07:42:41 PM
+//Last modified: Wed, Jun 10, 2020 07:46:22 PM
 //Codeset: 1252
 file -rdi 1 -ns "BaseRig" -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/nzoll/OneDrive/Documents/GitHub/Stuffed/StuffedGame/Assets/Maya/scenes/BaseRig.ma";
 file -r -ns "BaseRig" -dr 1 -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/nzoll/OneDrive/Documents/GitHub/Stuffed/StuffedGame/Assets/Maya/scenes/BaseRig.ma";
@@ -9391,23 +9391,23 @@ createNode mesh -n "wingsShape1" -p "wings1";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "C44A7DB2-4A8C-90C2-8271-59826A754B84";
+	rename -uid "C3263289-4980-BAF8-7182-57BCE68B8D87";
 	setAttr -s 7 ".lnk";
 	setAttr -s 7 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "3FFC2032-4ECE-562D-28A9-2FBC9EA32118";
+	rename -uid "F259ED67-422C-D256-C909-BEA8D35F16AF";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "E7C5F4A4-1A43-5AA7-BC6D-F3BC66616717";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "577206AE-43D7-3206-A7E2-F8BD8E701D2F";
+	rename -uid "8AFDE593-4864-3C6B-ED55-9E86B5E0EB8A";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "FF83EB3D-CE4E-B5AE-86C3-BEBE5F5E5A78";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "52FC842D-424A-6724-4E84-D0B00DC69807";
+	rename -uid "698A0007-48FB-14E1-2CDC-2380EE10A121";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 1 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "0B4DD993-4A47-3395-D5E5-B5AD015A7829";
+	rename -uid "BE64FAAD-4F23-7249-E0FF-82897F5720E2";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "0A41BEBB-A04A-3F4E-1C8A-B69EEECED819";
 	setAttr ".b" -type "string" (
@@ -9587,7 +9587,7 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".btrs" 512;
 select -ne :characterPartition;
 select -ne :ikSystem;
-	setAttr -s 5 ".sol";
+	setAttr -s 4 ".sol";
 connectAttr ":defaultColorMgtGlobals.cme" "imagePlaneShape1.cme";
 connectAttr ":defaultColorMgtGlobals.cfe" "imagePlaneShape1.cmcf";
 connectAttr ":defaultColorMgtGlobals.cfp" "imagePlaneShape1.cmcp";
