@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: moth2rigged.ma
-//Last modified: Thu, Jun 11, 2020 06:25:25 PM
+//Last modified: Thu, Jun 11, 2020 06:26:53 PM
 //Codeset: 1252
 file -rdi 1 -ns "BaseRig" -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/nzoll/OneDrive/Documents/GitHub/Stuffed/StuffedGame/Assets/Maya/scenes/BaseRig.ma";
 file -r -ns "BaseRig" -dr 1 -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/nzoll/OneDrive/Documents/GitHub/Stuffed/StuffedGame/Assets/Maya/scenes/BaseRig.ma";
@@ -16,8 +16,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -2.6484435557321735 2.6483912843496054 -13.493148164950911 ;
-	setAttr ".r" -type "double3" 730.46164665418348 8467.8000000013853 0 ;
+	setAttr ".t" -type "double3" -4.6250529342020839 4.3891678370300324 -13.333778474358043 ;
+	setAttr ".r" -type "double3" 724.46164665412891 8474.6000000006734 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "77E8AA9E-234E-68FC-26D2-21B85028178A";
 	setAttr -k off ".v" no;
@@ -132,6 +132,7 @@ createNode camera -n "bottomShape" -p "bottom";
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "mothGeo";
 	rename -uid "4B56AFD5-4706-47D0-E628-49879FFBF7CC";
+	setAttr ".v" no;
 	setAttr ".r" -type "double3" 0 -180 0 ;
 createNode transform -n "mainBody" -p "mothGeo";
 	rename -uid "810AB1C2-4677-C6E2-91BF-9BA1B9083281";
@@ -9485,6 +9486,30 @@ createNode clusterHandle -n "cluster4HandleShape" -p "cluster4Handle";
 	setAttr ".ihi" 0;
 	setAttr -k off ".v";
 	setAttr ".or" -type "double3" -3.2965033054351807 3.5902729034423828 -0.90465468168258623 ;
+createNode joint -n "joint1";
+	rename -uid "0F11B0CE-46DF-604D-1C07-2DB0B339524A";
+	setAttr ".t" -type "double3" -0.47770017385482788 3.0915131568908691 -0.65362894535064697 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".radi" 0.5;
+createNode joint -n "joint2";
+	rename -uid "DF7A75AB-4BDF-6AEA-A3E6-2385FE46D817";
+	setAttr ".t" -type "double3" 0.47770014405250549 3.0915131568908691 -0.65362894535064697 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".radi" 0.5;
+createNode joint -n "joint3";
+	rename -uid "849AB9C0-4CD1-47F5-6F26-5C978083B739";
+	setAttr ".t" -type "double3" -3.2965033054351807 3.5902729034423828 -0.90465468168258667 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".radi" 0.5;
+createNode joint -n "joint4";
+	rename -uid "DE2B208B-466C-E755-E07D-33B11273993D";
+	setAttr ".t" -type "double3" 3.3054153919219971 3.5902729034423828 -0.92571753263473511 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".radi" 0.5;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "15ADEB08-459B-1708-9CF2-DF8ACC16D8D9";
 	setAttr -s 7 ".lnk";
