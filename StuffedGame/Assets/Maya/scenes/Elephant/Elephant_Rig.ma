@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Elephant_Rig.ma
-//Last modified: Fri, Jun 12, 2020 01:16:28 PM
+//Last modified: Fri, Jun 12, 2020 02:21:57 PM
 //Codeset: 1252
 file -rdi 1 -ns "BaseRig" -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
 file -r -ns "BaseRig" -dr 1 -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
@@ -15,14 +15,14 @@ fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 18363)\n";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
-	setAttr ".t" -type "double3" 16.076062033716671 2.0190605276485232 10.929032946332168 ;
-	setAttr ".r" -type "double3" -2514.9383527281348 -2100.9999999999495 -7.719222219696089e-16 ;
+	setAttr ".t" -type "double3" 13.20267855730498 2.7278039020161766 12.524388668179128 ;
+	setAttr ".r" -type "double3" -2515.538352733332 -2114.6000000003614 -2.8310731790205368e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "77E8AA9E-234E-68FC-26D2-21B85028178A";
 	setAttr -k off ".v";
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 20.841735105775015;
+	setAttr ".coi" 17.904213019909722;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -134,7 +134,7 @@ createNode mesh -n "Elephant_GeoShape" -p "Elephant_Geo";
 	setAttr -av ".iog[0].og[1].gco";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.44284576177597046 0.23215159773826599 ;
+	setAttr ".pv" -type "double2" 0.50568041577935219 0.50020140409469604 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -9959,7 +9959,6 @@ createNode transform -n "Skeleton" -p "Elephant_World";
 	rename -uid "49F32440-4ECF-A670-7FBA-42AE3D0DA8F3";
 createNode transform -n "Controls" -p "Elephant_World";
 	rename -uid "15694E93-4782-8097-8B8C-3CBA44A52D42";
-	setAttr ".v" no;
 createNode transform -n "Elephant_Export";
 	rename -uid "FC5B9A4A-4731-F72F-FB7B-608B90359470";
 	setAttr ".v" no;
@@ -19459,18 +19458,18 @@ createNode reference -n "BaseRigRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"BaseRigRN"
 		"BaseRigRN" 0
-		"BaseRigRN" 268
+		"BaseRigRN" 271
 		0 "|BaseRig:Root_J" "|Elephant_World|Skeleton" "-s -r "
 		0 "|BaseRig:Transform_Ctrl_Grp" "|Elephant_World|Controls" "-s -r "
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J" "useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J" "objectColor" " 0"
-		2 "|Elephant_World|Skeleton|BaseRig:Root_J" "lockInfluenceWeights" " 1"
+		2 "|Elephant_World|Skeleton|BaseRig:Root_J" "lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J" "useObjectColor" 
 		" 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J" "objectColor" 
 		" 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J" "lockInfluenceWeights" 
-		" 1"
+		" 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_IK" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_IK" 
@@ -19500,19 +19499,19 @@ createNode reference -n "BaseRigRN";
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK" 
 		"objectColor" " 2"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK|BaseRig:Knee_J_L_RK" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK|BaseRig:Knee_J_L_RK" 
 		"objectColor" " 3"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK|BaseRig:Knee_J_L_RK" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK|BaseRig:Knee_J_L_RK|BaseRig:Ankle_J_L_RK" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK|BaseRig:Knee_J_L_RK|BaseRig:Ankle_J_L_RK" 
 		"objectColor" " 4"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK|BaseRig:Knee_J_L_RK|BaseRig:Ankle_J_L_RK" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_IK" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_IK" 
@@ -19542,25 +19541,25 @@ createNode reference -n "BaseRigRN";
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK" 
 		"objectColor" " 2"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK" 
 		"objectColor" " 3"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK|BaseRig:Ankle_J_R_RK" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK|BaseRig:Ankle_J_R_RK" 
 		"objectColor" " 4"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK|BaseRig:Ankle_J_R_RK" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J" "useObjectColor" 
 		" 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J" "objectColor" 
 		" 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J" "lockInfluenceWeights" 
-		" 1"
+		" 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j" 
@@ -19578,43 +19577,43 @@ createNode reference -n "BaseRigRN";
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J" 
 		"objectColor" " 4"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L" 
 		"objectColor" " 5"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeLid_J_L" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeLid_J_L" 
 		"objectColor" " 6"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeLid_J_L" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R" 
 		"objectColor" " 5"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeLid_J_R" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeLid_J_R" 
 		"objectColor" " 6"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeLid_J_R" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Jaw_J" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Jaw_J" 
 		"objectColor" " 5"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Jaw_J" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L" 
 		"objectColor" " 4"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_IK" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_IK" 
@@ -19652,31 +19651,31 @@ createNode reference -n "BaseRigRN";
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK" 
 		"objectColor" " 5"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK" 
 		"objectColor" " 6"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK" 
 		"objectColor" " 7"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK" 
 		"objectColor" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R" 
 		"objectColor" " 4"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_IK" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_IK" 
@@ -19714,25 +19713,25 @@ createNode reference -n "BaseRigRN";
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK" 
 		"objectColor" " 5"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK" 
 		"objectColor" " 6"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK" 
 		"objectColor" " 7"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK" 
 		"objectColor" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp" "visibility" " 1"
 		
 		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL" 
@@ -19759,6 +19758,12 @@ createNode reference -n "BaseRigRN";
 		"rotateZ" " -av"
 		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL|BaseRig:head_J_GRP|BaseRig:head_J_CTRL" 
 		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL|BaseRig:head_J_GRP|BaseRig:head_J_CTRL" 
+		"rotateX" " -av"
+		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL|BaseRig:head_J_GRP|BaseRig:head_J_CTRL" 
+		"rotateY" " -av"
+		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL|BaseRig:head_J_GRP|BaseRig:head_J_CTRL" 
+		"rotateZ" " -av"
 		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL|BaseRig:head_J_GRP|BaseRig:head_J_CTRL|BaseRig:Eye_J_L_GRP|BaseRig:Eye_J_L_CTRL|BaseRig:EyeLid_J_L_GRP|BaseRig:EyeLid_J_L_CTRL" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL|BaseRig:head_J_GRP|BaseRig:head_J_CTRL|BaseRig:Eye_J_R_GRP|BaseRig:Eye_J_R_CTRL" 
@@ -19830,27 +19835,27 @@ createNode reference -n "BaseRigRN";
 		"BaseRigRN.placeHolderList[29]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK|BaseRig:Ankle_J_R_RK.message" 
 		"BaseRigRN.placeHolderList[30]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK|BaseRig:Ankle_J_R_RK.worldMatrix" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK|BaseRig:Ankle_J_R_RK.message" 
 		"BaseRigRN.placeHolderList[31]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK|BaseRig:Ankle_J_R_RK.objectColorRGB" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK|BaseRig:Ankle_J_R_RK.worldMatrix" 
 		"BaseRigRN.placeHolderList[32]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J.message" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK|BaseRig:Ankle_J_R_RK.objectColorRGB" 
 		"BaseRigRN.placeHolderList[33]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J.lockInfluenceWeights" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J.message" 
 		"BaseRigRN.placeHolderList[34]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J.worldMatrix" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J.lockInfluenceWeights" 
 		"BaseRigRN.placeHolderList[35]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J.objectColorRGB" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J.worldMatrix" 
 		"BaseRigRN.placeHolderList[36]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j.message" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J.objectColorRGB" 
 		"BaseRigRN.placeHolderList[37]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j.lockInfluenceWeights" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j.message" 
 		"BaseRigRN.placeHolderList[38]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j.worldMatrix" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j.lockInfluenceWeights" 
 		"BaseRigRN.placeHolderList[39]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j.objectColorRGB" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j.worldMatrix" 
 		"BaseRigRN.placeHolderList[40]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j.message" 
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j.objectColorRGB" 
 		"BaseRigRN.placeHolderList[41]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j.message" 
 		"BaseRigRN.placeHolderList[42]" ""
@@ -19993,7 +19998,7 @@ lockNode -l 1 ;
 createNode skinCluster -n "skinCluster1";
 	rename -uid "BAA43DB9-4526-CE42-4FC4-B4A9FB4A3A64";
 	setAttr -s 1669 ".wl";
-	setAttr ".wl[0:420].w"
+	setAttr ".wl[0:412].w"
 		1 10 1
 		1 10 1
 		1 10 1
@@ -20101,13 +20106,13 @@ createNode skinCluster -n "skinCluster1";
 		1 10 1
 		2 9 0.0059340042062103748 10 0.99406599579378963
 		2 9 0.01893940195441246 10 0.98106059804558754
-		2 9 0.026845946907997131 10 0.97315405309200287
-		2 9 0.012819135561585426 10 0.98718086443841457
+		3 9 0.026845946907997131 10 0.96390659734606743 11 0.0092474557459354401
+		3 9 0.012819135561585426 10 0.98718034373615637 11 5.2070225819988991e-07
 		1 10 1
 		1 10 1
 		1 10 1
 		1 10 1
-		2 9 0.0018811851041391492 10 0.99811881489586085
+		3 9 0.0018811851041391492 10 0.9406700924737379 11 0.057448722422122955
 		1 10 1
 		2 9 0.033153150230646133 10 0.96684684976935387
 		1 10 1
@@ -20118,30 +20123,30 @@ createNode skinCluster -n "skinCluster1";
 		1 10 1
 		1 10 1
 		1 10 1
+		2 10 0.99818593636155128 11 0.0018140636384487152
 		1 10 1
 		1 10 1
-		1 10 1
-		1 10 1
-		2 9 0.0010977293131873012 10 0.9989022706868127
-		2 9 0.0013809989904984832 10 0.99861900100950152
-		2 9 0.019196923822164536 10 0.98080307617783546
-		2 9 0.016829133033752441 10 0.98317086696624756
-		2 9 0.0068168709985911846 10 0.99318312900140882
+		2 10 0.99989379251201171 11 0.00010620748798828572
+		3 9 0.0010977293131873012 10 0.99043846514541656 11 0.0084638055413961411
+		3 9 0.0013809989904984832 10 0.98082701640669256 11 0.017791984602808952
+		3 9 0.019196923822164536 10 0.88600705191493034 11 0.094796024262905121
+		3 9 0.016829133033752441 10 0.79588663578033447 11 0.18728423118591309
+		3 9 0.0068168709985911846 10 0.85859745740890503 11 0.13458567159250379
 		2 9 0.00070087052881717682 10 0.99929912947118282
 		1 10 1
-		2 9 0.028668737038969994 10 0.97133126296103001
-		2 9 0.064073562622070313 10 0.93592643737792969
-		2 9 0.12291818112134933 10 0.87708181887865067
+		3 9 0.028668737038969994 10 0.75228872336447239 11 0.21904253959655762
+		3 9 0.064073562622070313 10 0.87701094523072243 11 0.05891549214720726
+		3 9 0.12291818112134933 10 0.87561374250799417 11 0.0014680763706564903
 		2 9 0.047586407512426376 10 0.95241359248757362
 		2 9 0.10891716182231903 10 0.89108283817768097
-		2 9 0.047148913145065308 10 0.95285108685493469
-		2 9 0.033285330981016159 10 0.96671466901898384
-		2 9 0.00012676615733653307 10 0.99987323384266347
+		3 9 0.047148913145065308 10 0.95262529111641925 11 0.0002257957385154441
+		3 9 0.033285330981016159 10 0.94490892440080643 11 0.021805744618177414
+		3 9 0.00012676615733653307 10 0.99803181912284344 11 0.0018414147198200226
+		2 10 0.99999296844725905 11 7.031552740954794e-06
 		1 10 1
 		1 10 1
-		1 10 1
-		2 9 0.030234888195991516 10 0.96976511180400848
-		2 9 0.10687462985515594 10 0.89312537014484406
+		3 9 0.030234888195991516 10 0.96915590832941234 11 0.00060920347459614277
+		3 9 0.10687462985515594 10 0.87508291564881802 11 0.018042454496026039
 		1 10 1
 		1 10 1
 		1 10 1
@@ -20238,178 +20243,181 @@ createNode skinCluster -n "skinCluster1";
 		2 9 0.01700274646282196 10 0.98299725353717804
 		2 9 0.023125531151890755 10 0.97687446884810925
 		2 9 0.024952122941613197 10 0.9750478770583868
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		2 9 0.0036173462867736816 10 0.99638265371322632
-		2 9 0.01787877082824707 10 0.98212122917175293
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		2 9 0.55153194069862366 10 0.44846805930137634
-		2 9 0.22656500339508057 10 0.77343499660491943
-		1 10 1
-		2 9 0.00066256290301680565 10 0.99933743709698319
-		2 9 0.016056744381785393 10 0.98394325561821461
-		2 9 0.034423094242811203 10 0.9655769057571888
-		2 9 0.036820616573095322 10 0.96317938342690468
-		2 9 0.18158054351806641 10 0.81841945648193359
-		2 9 0.075700297951698303 10 0.9242997020483017
-		2 9 0.11260084807872772 10 0.88739915192127228
-		3 8 0.19182711839675903 9 0.54542434215545654 10 0.26274853944778442
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		2 10 0.013610047288239002 11 0.986389952711761
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		2 10 0.0068747913464903831 11 0.99312520865350962
+		1 11 1
+		1 11 1
+		1 11 1
+		2 10 0.056604791432619095 11 0.94339520856738091
+		1 11 1
+		1 11 1
+		1 11 1
+		2 10 0.076212503015995026 11 0.92378749698400497
+		2 10 0.096172206103801727 11 0.90382779389619827
+		3 9 0.55153194069862366 10 0.43148248270153999 11 0.016985576599836349
+		3 9 0.22656500339508057 10 0.65170395374298096 11 0.12173104286193848
+		2 10 0.19016215205192566 11 0.80983784794807434
+		2 10 0.13279812037944794 11 0.86720187962055206
+		2 10 0.23124752938747406 11 0.76875247061252594
+		2 10 0.40613919496536255 11 0.59386080503463745
+		2 10 0.42341271042823792 11 0.57658728957176208
+		1 9 0.18158054351806641;
+	setAttr ".wl[412:677].w"
+		2 10 0.76021909713745117 11 0.058200359344482422
+		3 9 0.075700297951698303 10 0.75451511144638062 11 0.16978459060192108
+		3 9 0.11260084807872772 10 0.69107668101787567 11 0.19632247090339661
+		4 8 0.19182711839675903 9 0.54542434215545654 10 0.25599740911275148 
+		11 0.0067511303350329399
 		4 0 0.99113619327545166 8 0.0027882712893188 9 0.00088475988013669848 
 		10 0.0051907755550928414
 		4 0 0.96957127191126347 8 0.013914503157138824 9 0.0075354194268584251 
@@ -20417,80 +20425,81 @@ createNode skinCluster -n "skinCluster1";
 		3 0 0.93381588160991669 8 0.061557328794151545 9 0.0046267895959317684
 		4 0 0.82889918982982635 8 0.14345190860331059 9 0.017914116382598877 
 		10 0.009734785184264183
-		2 0 0.8827325701713562 8 0.098307497799396515;
-	setAttr ".wl[420:762].w"
-		1 9 0.018959932029247284
-		2 9 0.35372740030288696 10 0.64627259969711304
-		2 9 0.42231684923171997 10 0.57768315076828003
-		3 8 0.27583587169647217 9 0.33196967840194702 10 0.39219444990158081
+		3 0 0.8827325701713562 8 0.098307497799396515 9 0.018959932029247284
+		3 9 0.35372740030288696 10 0.61676680482923985 11 0.029505794867873192
+		3 9 0.42231684923171997 10 0.53168149664998055 11 0.046001654118299484
+		4 8 0.27583587169647217 9 0.33196967840194702 10 0.38761245645582676 
+		11 0.0045819934457540512
 		4 0 0.34523111581802368 8 0.24812537431716919 9 0.34396634250879288 
 		10 0.062677167356014252
 		4 0 0.37867295742034912 8 0.30576944351196289 9 0.15490120649337769 
 		10 0.1606563925743103
 		4 0 0.64707165956497192 8 0.21805870532989502 9 0.090551268309354782 
 		10 0.044318366795778275
-		2 9 0.054925508797168732 10 0.94507449120283127
+		3 9 0.054925508797168732 10 0.58452385663986206 11 0.36055063456296921
 		3 8 0.33482968807220459 9 0.50165228545665741 10 0.163518026471138
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		2 9 0.49313569068908691 10 0.50686430931091309
-		2 9 0.22077234089374542 10 0.77922765910625458
-		2 9 0.18715023994445801 10 0.81284976005554199
-		2 9 0.39811301231384277 10 0.60188698768615723
-		2 9 0.17576742172241211 10 0.82423257827758789
-		2 9 0.15258380770683289 10 0.84741619229316711
+		1 11 1
+		1 11 1
+		1 11 1
+		2 10 0.011802583001554012 11 0.98819741699844599
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		2 10 0.0064196651801466942 11 0.99358033481985331
+		2 10 0.091083787381649017 11 0.90891621261835098
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		2 10 0.072367481887340546 11 0.92763251811265945
+		2 10 0.096804298460483551 11 0.90319570153951645
+		2 10 0.10182860493659973 11 0.89817139506340027
+		2 10 0.1529344767332077 11 0.8470655232667923
+		3 9 0.49313569068908691 10 0.42710178345441818 11 0.079762525856494904
+		3 9 0.22077234089374542 10 0.62693466246128082 11 0.15229299664497375
+		3 9 0.18715023994445801 10 0.65081517398357391 11 0.16203458607196808
+		3 9 0.39811301231384277 10 0.5909128962084651 11 0.010974091477692127
+		3 9 0.17576742172241211 10 0.8227168838493526 11 0.0015156944282352924
+		3 9 0.15258380770683289 10 0.78730517625808716 11 0.060111016035079956
 		2 9 0.3280298113822937 10 0.6719701886177063
-		2 9 0.11320532858371735 10 0.88679467141628265
-		2 9 0.0027666869573295116 10 0.99723331304267049
-		2 9 0.0021992523688822985 10 0.9978007476311177
-		2 9 0.021585032343864441 10 0.97841496765613556
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		2 9 0.0034613988827914 10 0.9965386011172086
-		2 9 3.9198723243316635e-05 10 0.99996080127675668
-		2 9 0.008855791762471199 10 0.9911442082375288
-		2 9 0.022943543270230293 10 0.97705645672976971
-		2 9 0.030071109533309937 10 0.96992889046669006
-		1 10 1
-		2 9 0.00011790514690801501 10 0.99988209485309198
-		2 9 0.042142849415540695 10 0.9578571505844593
-		2 9 0.29208600521087646 10 0.70791399478912354
-		2 9 0.12063246220350266 10 0.87936753779649734
-		2 9 0.12163287401199341 10 0.87836712598800659
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		2 9 0.24867831170558929 10 0.75132168829441071
-		3 8 0.24023431539535522 9 0.43414318561553955 10 0.32562249898910522
-		3 8 0.17317622900009155 9 0.47679635882377625 10 0.3500274121761322
+		3 9 0.11320532858371735 10 0.65575538575649261 11 0.23103928565979004
+		3 9 0.0027666869573295116 10 0.69505399465560913 11 0.30217931838706136
+		3 9 0.0021992523688822985 10 0.63919198513031006 11 0.35860876250080764
+		3 9 0.021585032343864441 10 0.67516487836837769 11 0.30325008928775787
+		2 10 0.21016243100166321 11 0.78983756899833679
+		2 10 0.21900206804275513 11 0.78099793195724487
+		2 10 0.19550171494483948 11 0.80449828505516052
+		2 10 0.09986279159784317 11 0.90013720840215683
+		2 10 0.14894703030586243 11 0.85105296969413757
+		2 10 0.15144349634647369 11 0.84855650365352631
+		2 10 0.1952221691608429 11 0.8047778308391571
+		2 10 0.2069648951292038 11 0.7930351048707962
+		2 10 0.33465629816055298 11 0.66534370183944702
+		2 10 0.31803470849990845 11 0.68196529150009155
+		2 10 0.36671951413154602 11 0.63328048586845398
+		2 10 0.35531115531921387 11 0.64468884468078613
+		2 10 0.45934092998504639 11 0.54065907001495361
+		3 9 0.29208600521087646 10 0.59572356939315796 11 0.11219042539596558
+		3 9 0.12063246220350266 10 0.65213978290557861 11 0.22722775489091873
+		3 9 0.12163287401199341 10 0.70091331005096436 11 0.17745381593704224
+		2 10 0.35717025399208069 11 0.64282974600791931
+		2 10 0.21466614305973053 11 0.78533385694026947
+		2 10 0.31163835525512695 11 0.68836164474487305
+		2 10 0.19444350898265839 11 0.80555649101734161
+		3 9 0.24867831170558929 10 0.65472292900085449 11 0.096598759293556213
+		4 8 0.24023431539535522 9 0.43414318561553955 10 0.29998003132641315 
+		11 0.02564246766269207
+		4 8 0.17317622900009155 9 0.47679635882377625 10 0.34730827971361578 
+		11 0.002719132462516427
 		1 0 1
 		2 0 0.9670025110244751 8 0.032997488975524902
 		2 0 0.97727257944643497 8 0.022727420553565025
@@ -20514,28 +20523,28 @@ createNode skinCluster -n "skinCluster1";
 		4 0 0.82045173645019531 8 0.12107833474874496 9 0.054554827511310577 
 		10 0.0039151012897491455
 		2 9 0.34095644950866699 10 0.65904355049133301
-		2 9 0.062962628901004791 10 0.93703737109899521
-		2 9 0.10654162615537643 10 0.89345837384462357
-		2 9 0.23432780802249908 10 0.76567219197750092
-		2 9 0.18387690186500549 10 0.81612309813499451
+		3 9 0.062962628901004791 10 0.70448004454374313 11 0.23255732655525208
+		3 9 0.10654162615537643 10 0.76395998150110245 11 0.12949839234352112
+		3 9 0.23432780802249908 10 0.75984066072851419 11 0.005831531248986721
+		3 9 0.18387690186500549 10 0.81611330111263669 11 9.7970223578158766e-06
 		2 9 0.17981143295764923 10 0.82018856704235077
-		2 9 0.06647723913192749 10 0.93352276086807251
+		3 9 0.06647723913192749 10 0.93322589609306306 11 0.0002968647750094533
 		3 8 0.18950928747653961 9 0.48468194901943207 10 0.32580876350402832
 		3 8 0.14766524732112885 9 0.5582955926656723 10 0.29403916001319885
 		3 8 0.15598960220813751 9 0.46681199967861176 10 0.37719839811325073
-		2 9 0.34237813949584961 10 0.65762186050415039
-		2 9 0.28929176926612854 10 0.71070823073387146
-		2 9 0.058055561035871506 10 0.94194443896412849
-		2 9 0.14759144186973572 10 0.85240855813026428
-		2 9 0.25618895888328552 10 0.74381104111671448
-		2 9 0.36887878179550171 10 0.63112121820449829
-		2 9 0.05894000455737114 10 0.94105999544262886
-		2 9 0.012052970007061958 10 0.98794702999293804
-		1 10 1
+		3 9 0.34237813949584961 10 0.63657230697572231 11 0.021049553528428078
+		3 9 0.28929176926612854 10 0.66458135843276978 11 0.046126872301101685
+		3 9 0.058055561035871506 10 0.90477007627487183 11 0.037174362689256668
+		3 9 0.14759144186973572 10 0.79573866724967957 11 0.056669890880584717
+		3 9 0.25618895888328552 10 0.62621903419494629 11 0.11759200692176819
+		3 9 0.36887878179550171 10 0.52268964797258377 11 0.10843157023191452
+		3 9 0.05894000455737114 10 0.65387547016143799 11 0.28718452528119087
+		2 10 0.38997122645378113 11 0.61002877354621887
+		2 10 0.23034650087356567 11 0.76965349912643433
 		3 8 0.19651980698108673 9 0.52752439677715302 10 0.27595579624176025
 		3 8 0.27876809239387512 9 0.32445046305656433 10 0.39678144454956055
-		1 10 1
-		2 9 0.00029150740010663867 10 0.99970849259989336
+		2 10 0.16748827695846558 11 0.83251172304153442
+		2 10 0.32791215181350708 11 0.67208784818649292
 		4 0 0.36870932579040527 8 0.27703091502189636 9 0.25764349848031998 
 		10 0.096616260707378387
 		4 0 0.39507433772087097 8 0.24050611257553101 9 0.25913534313440323 
@@ -20556,156 +20565,157 @@ createNode skinCluster -n "skinCluster1";
 		10 0.048250500112771988
 		4 0 0.54627799987792969 8 0.28068017959594727 9 0.11672414094209671 
 		10 0.056317679584026337
-		2 9 0.057791844010353088 10 0.94220815598964691
-		2 9 0.059913758188486099 10 0.9400862418115139
-		2 9 0.031028861179947853 10 0.96897113882005215
-		2 9 0.0098233819007873535 10 0.99017661809921265
+		3 9 0.057791844010353088 10 0.6248769611120224 11 0.31733119487762451
+		3 9 0.059913758188486099 10 0.57715212926268578 11 0.36293411254882813
+		3 9 0.031028861179947853 10 0.58293355070054531 11 0.38603758811950684
+		3 9 0.0098233819007873535 10 0.54661655426025391 11 0.44356006383895874
 		3 8 0.36834859848022461 9 0.43354013562202454 10 0.19811126589775085
 		3 8 0.3295292854309082 9 0.41609883308410645 10 0.25437188148498535
 		3 8 0.30900406837463379 9 0.48822209239006042 10 0.20277383923530579
 		3 8 0.32242703437805176 9 0.42848750948905945 10 0.24908545613288879
 		3 8 0.27656006813049316 9 0.48908770084381104 10 0.2343522310256958
 		3 8 0.2881864607334137 9 0.5468977689743042 10 0.1649157702922821
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
+		2 10 0.15338318049907684 11 0.84661681950092316
+		2 10 0.084034822881221771 11 0.91596517711877823
+		2 10 0.016884934157133102 11 0.9831150658428669
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		2 10 0.063556291162967682 11 0.93644370883703232
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		2 10 0.00023819440684746951 11 0.99976180559315253
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		2 10 0.17369696497917175 11 0.82630303502082825
+		2 10 0.087645389139652252 11 0.91235461086034775
+		2 10 0.01272753719240427 11 0.98727246280759573
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		2 10 0.13495916128158569 11 0.86504083871841431
+		2 10 0.059412691742181778 11 0.94058730825781822
+		2 10 0.0053356988355517387 11 0.99466430116444826
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		2 10 0.089858457446098328 11 0.91014154255390167
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		2 10 0.0054648523218929768 11 0.99453514767810702
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		2 10 0.0094392960891127586 11 0.99056070391088724
+		1 11 1;
+	setAttr ".wl[678:1143].w"
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		2 10 0.0054359650239348412 11 0.99456403497606516
+		2 10 0.017305012792348862 11 0.98269498720765114
 		2 9 0.0050478768534958363 10 0.99495212314650416
 		2 9 0.016098100692033768 10 0.98390189930796623
 		1 10 1
@@ -20717,26 +20727,26 @@ createNode skinCluster -n "skinCluster1";
 		1 10 1
 		1 10 1
 		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		2 9 5.1713195716729388e-05 10 0.99994828680428327
-		1 10 1
-		1 10 1
-		1 10 1
-		2 9 0.0071139968931674957 10 0.9928860031068325
+		2 10 0.078274130821228027 11 0.92172586917877197
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		2 10 0.0050474782474339008 11 0.9949525217525661
+		1 11 1
+		2 10 0.01307323295623064 11 0.98692676704376936
+		2 10 0.063325613737106323 11 0.93667438626289368
+		2 10 0.014161628670990467 11 0.98583837132900953
+		1 11 1
+		2 10 0.024160673841834068 11 0.97583932615816593
+		2 10 0.28574928641319275 11 0.71425071358680725
 		2 9 0.0023115493822842836 10 0.99768845061771572
-		2 9 0.0073428857140243053 10 0.99265711428597569
-		2 9 0.006976597011089325 10 0.99302340298891068
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
+		3 9 0.0073428857140243053 10 0.98602764122188091 11 0.0066294730640947819
+		3 9 0.006976597011089325 10 0.98946559429168701 11 0.0035578086972236633
+		2 10 0.019535720348358154 11 0.98046427965164185
+		1 11 1
+		1 11 1
+		1 11 1
 		1 10 1
 		2 9 0.97394466400146484 10 0.026055335998535156
 		1 9 1
@@ -20772,25 +20782,24 @@ createNode skinCluster -n "skinCluster1";
 		1 10 1
 		2 9 0.0053497506305575371 10 0.99465024936944246
 		1 10 1
-		1 10 1
-		1 10 1
+		2 10 0.089274413883686066 11 0.91072558611631393
+		1 11 1
 		1 9 1
 		2 9 0.98422404751181602 10 0.015775952488183975
-		1 10 1
-		1 10 1
+		1 11 1
+		1 11 1
 		1 8 1
 		1 8 1
 		1 8 1
-		1 8 1;
-	setAttr ".wl[763:1260].w"
+		1 8 1
 		1 8 1
 		1 8 1
 		1 8 1
 		1 8 1
 		1 0 1
 		1 0 1
-		2 9 0.0006864501629024744 10 0.99931354983709753
-		1 10 1
+		3 9 0.0006864501629024744 10 0.95769131183624268 11 0.04162223800085485
+		2 10 0.99005341529846191 11 0.0099465847015380859
 		1 10 1
 		1 10 1
 		2 9 0.99503639014437795 10 0.0049636098556220531
@@ -20799,733 +20808,733 @@ createNode skinCluster -n "skinCluster1";
 		1 9 1
 		1 9 1
 		1 9 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1;
-	setAttr ".wl[1261:1668].w"
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		2 9 0.0040343822911381721 10 0.99596561770886183
-		2 9 8.7385742517653853e-05 10 0.99991261425748235
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		2 9 0.0051697492599487305 10 0.99483025074005127
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		2 9 0.0081298323348164558 10 0.99187016766518354
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		2 10 0.021428966894745827 11 0.97857103310525417
+		1 11 1
+		1 11 1
+		2 10 0.0015723637770861387 11 0.99842763622291386
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		2 10 0.0023944536224007607 11 0.99760554637759924
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		2 10 0.044037461280822754 11 0.95596253871917725
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		2 10 0.042090509086847305 11 0.95790949091315269
+		2 10 0.0022714899387210608 11 0.99772851006127894
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1;
+	setAttr ".wl[1144:1608].w"
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		2 10 0.026786010712385178 11 0.97321398928761482
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		2 10 0.0074088610708713531 11 0.99259113892912865
+		2 10 0.018683843314647675 11 0.98131615668535233
+		2 10 0.0032224941533058882 11 0.99677750584669411
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		2 10 0.0047117485664784908 11 0.99528825143352151
+		2 10 0.0004024635418318212 11 0.99959753645816818
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		2 10 0.03691568598151207 11 0.96308431401848793
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		2 10 0.0016626639990136027 11 0.9983373360009864
+		2 10 0.041101254522800446 11 0.95889874547719955
+		2 10 0.081105679273605347 11 0.91889432072639465
+		2 10 0.067413754761219025 11 0.93258624523878098
+		2 10 0.061085127294063568 11 0.93891487270593643
+		2 10 0.017501393333077431 11 0.98249860666692257
+		2 10 0.049162440001964569 11 0.95083755999803543
+		2 10 0.043127577751874924 11 0.95687242224812508
+		2 10 0.041283614933490753 11 0.95871638506650925
+		2 10 0.056508760899305344 11 0.94349123910069466
+		2 10 0.12337910383939743 11 0.87662089616060257
+		2 10 0.11694497615098953 11 0.88305502384901047
+		2 10 0.10560878366231918 11 0.89439121633768082
+		2 10 0.078059419989585876 11 0.92194058001041412
+		2 10 0.019053278490900993 11 0.98094672150909901
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		2 10 0.0096146166324615479 11 0.99038538336753845
+		2 10 0.026314668357372284 11 0.97368533164262772
+		2 10 0.038757290691137314 11 0.96124270930886269
+		2 10 0.049465309828519821 11 0.95053469017148018
+		2 10 0.039303410798311234 11 0.96069658920168877
+		2 10 0.043492447584867477 11 0.95650755241513252
+		2 10 0.00057929079048335552 11 0.99942070920951664
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		2 10 0.014450538903474808 11 0.98554946109652519
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
 		1 0 1
 		1 0 1
 		1 0 1
@@ -21629,7 +21638,8 @@ createNode skinCluster -n "skinCluster1";
 		1 0 1
 		1 0 1
 		1 0 1
-		1 0 1
+		1 0 1;
+	setAttr ".wl[1609:1668].w"
 		1 0 1
 		1 0 1
 		1 0 1
@@ -21780,6 +21790,1107 @@ createNode skinCluster -n "skinCluster1";
 	setAttr -s 27 ".ifcl";
 createNode tweak -n "tweak1";
 	rename -uid "591DB14C-45EA-4D11-EAD8-74BDD09112B5";
+	setAttr -s 1100 ".vl[0].vt";
+	setAttr ".vl[0].vt[244]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[245]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[246]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[247]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[248]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[249]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[250]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[251]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[252]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[253]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[254]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[255]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[256]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[257]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[258]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[259]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[260]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[261]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[262]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[263]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[264]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[265]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[266]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[267]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[268]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[269]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[270]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[271]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[272]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[273]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[274]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[275]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[276]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[277]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[278]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[279]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[280]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[281]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[282]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[283]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[284]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[285]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[286]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[287]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[288]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[289]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[290]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[291]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[292]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[293]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[294]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[295]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[296]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[297]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[298]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[299]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[300]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[301]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[302]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[303]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[304]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[305]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[306]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[307]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[308]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[309]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[310]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[311]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[312]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[313]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[314]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[315]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[316]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[317]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[318]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[319]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[320]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[321]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[322]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[323]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[324]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[325]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[326]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[327]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[328]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[329]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[330]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[331]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[332]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[333]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[334]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[335]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[336]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[337]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[338]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[339]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[340]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[341]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[342]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[343]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[344]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[345]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[346]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[347]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[348]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[349]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[350]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[351]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[352]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[353]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[354]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[355]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[356]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[357]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[358]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[359]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[360]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[361]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[362]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[363]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[364]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[365]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[366]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[367]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[368]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[369]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[370]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[371]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[372]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[373]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[374]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[375]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[376]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[377]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[378]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[379]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[380]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[381]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[382]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[383]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[384]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[385]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[386]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[387]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[388]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[389]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[390]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[391]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[392]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[393]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[394]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[395]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[396]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[397]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[398]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[399]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[400]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[401]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[402]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[403]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[404]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[407]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[408]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[409]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[410]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[411]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[429]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[430]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[431]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[432]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[433]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[434]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[435]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[436]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[437]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[438]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[439]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[440]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[441]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[442]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[443]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[444]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[445]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[446]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[447]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[448]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[449]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[450]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[451]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[452]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[453]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[454]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[466]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[467]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[468]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[469]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[470]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[471]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[472]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[473]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[474]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[475]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[476]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[477]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[478]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[482]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[483]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[484]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[485]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[521]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[522]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[525]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[526]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[547]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[548]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[549]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[550]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[551]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[552]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[553]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[554]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[555]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[556]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[557]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[558]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[559]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[560]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[561]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[562]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[563]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[564]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[565]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[566]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[567]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[568]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[569]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[570]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[571]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[572]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[573]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[574]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[575]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[576]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[577]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[578]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[579]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[580]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[581]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[582]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[583]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[584]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[585]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[586]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[587]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[588]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[589]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[590]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[591]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[592]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[593]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[594]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[595]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[596]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[597]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[598]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[599]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[600]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[601]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[602]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[603]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[604]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[605]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[606]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[607]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[608]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[609]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[610]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[611]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[612]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[613]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[614]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[615]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[616]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[617]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[618]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[619]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[620]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[621]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[622]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[623]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[624]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[625]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[626]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[627]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[628]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[629]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[630]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[631]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[632]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[633]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[634]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[635]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[636]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[637]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[638]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[639]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[640]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[641]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[642]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[643]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[644]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[645]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[646]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[647]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[648]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[649]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[650]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[651]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[652]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[653]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[654]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[655]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[656]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[657]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[658]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[659]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[660]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[661]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[662]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[663]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[664]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[665]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[666]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[667]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[668]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[669]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[670]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[671]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[672]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[673]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[674]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[675]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[676]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[677]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[678]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[679]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[680]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[681]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[682]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[683]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[684]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[685]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[686]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[698]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[699]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[700]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[701]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[702]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[703]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[704]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[705]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[706]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[707]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[708]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[709]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[710]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[714]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[715]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[716]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[717]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[753]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[754]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[757]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[758]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[779]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[780]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[781]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[782]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[783]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[784]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[785]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[786]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[787]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[788]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[789]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[790]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[791]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[792]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[793]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[794]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[795]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[796]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[797]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[798]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[799]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[800]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[801]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[802]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[803]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[804]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[805]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[806]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[807]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[808]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[809]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[810]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[811]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[812]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[813]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[814]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[815]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[816]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[817]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[818]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[819]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[820]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[821]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[822]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[823]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[824]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[825]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[826]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[827]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[828]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[829]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[830]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[831]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[832]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[833]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[834]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[835]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[836]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[837]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[838]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[839]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[840]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[841]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[842]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[843]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[844]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[845]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[846]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[847]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[848]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[849]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[850]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[851]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[852]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[853]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[854]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[855]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[856]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[857]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[858]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[859]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[860]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[861]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[862]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[863]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[864]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[865]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[866]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[867]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[868]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[869]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[870]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[871]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[872]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[873]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[874]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[875]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[876]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[877]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[878]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[879]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[880]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[881]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[882]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[883]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[884]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[885]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[886]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[887]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[888]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[889]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[890]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[891]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[892]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[893]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[894]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[895]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[896]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[897]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[898]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[899]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[900]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[901]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[902]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[903]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[904]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[905]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[906]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[907]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[908]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[909]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[910]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[911]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[912]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[913]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[914]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[915]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[916]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[917]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[918]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[919]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[920]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[921]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[922]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[923]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[924]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[925]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[926]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[927]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[928]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[929]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[930]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[931]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[932]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[933]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[934]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[935]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[936]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[937]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[938]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[939]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[940]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[941]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[942]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[943]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[944]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[945]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[946]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[947]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[948]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[949]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[950]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[951]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[952]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[953]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[954]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[955]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[956]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[957]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[958]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[959]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[960]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[961]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[962]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[963]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[964]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[965]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[966]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[967]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[968]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[969]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[970]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[971]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[972]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[973]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[974]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[975]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[976]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[977]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[978]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[979]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[980]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[981]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[982]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[983]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[984]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[985]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[986]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[987]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[988]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[989]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[990]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[991]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[992]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[993]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[994]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[995]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[996]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[997]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[998]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[999]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1000]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1001]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1002]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1003]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1004]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1005]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1006]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1007]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1008]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1009]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1010]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1011]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1012]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1013]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1014]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1015]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1016]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1017]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1018]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1019]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1020]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1021]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1022]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1023]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1024]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1025]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1026]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1027]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1028]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1029]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1030]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1031]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1032]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1033]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1034]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1035]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1036]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1037]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1038]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1039]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1040]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1041]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1042]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1043]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1044]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1045]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1046]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1047]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1048]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1049]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1050]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1051]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1052]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1053]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1054]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1055]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1056]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1057]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1058]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1059]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1060]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1061]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1062]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1063]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1064]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1065]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1066]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1067]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1068]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1069]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1070]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1071]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1072]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1073]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1074]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1075]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1076]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1077]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1078]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1079]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1080]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1081]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1082]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1083]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1084]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1085]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1086]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1087]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1088]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1089]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1090]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1091]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1092]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1093]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1094]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1095]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1096]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1097]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1098]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1099]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1100]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1101]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1102]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1103]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1104]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1105]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1106]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1107]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1108]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1109]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1110]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1111]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1112]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1113]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1114]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1115]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1116]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1117]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1118]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1119]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1120]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1121]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1122]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1123]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1124]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1125]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1126]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1127]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1128]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1129]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1130]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1131]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1132]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1133]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1134]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1135]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1136]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1137]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1138]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1139]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1140]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1141]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1142]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1143]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1144]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1145]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1146]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1147]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1148]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1149]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1150]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1151]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1152]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1153]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1154]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1155]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1156]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1157]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1158]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1159]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1160]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1161]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1162]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1163]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1164]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1165]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1166]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1167]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1168]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1169]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1170]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1171]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1172]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1173]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1174]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1175]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1176]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1177]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1178]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1179]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1180]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1181]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1182]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1183]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1184]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1185]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1186]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1187]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1188]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1189]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1190]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1191]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1192]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1193]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1194]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1195]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1196]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1197]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1198]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1199]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1200]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1201]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1202]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1203]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1204]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1205]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1206]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1207]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1208]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1209]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1210]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1211]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1212]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1213]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1214]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1215]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1216]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1217]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1218]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1219]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1220]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1221]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1222]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1223]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1224]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1225]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1226]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1227]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1228]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1229]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1230]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1231]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1232]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1233]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1234]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1235]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1236]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1237]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1238]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1239]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1240]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1241]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1242]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1243]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1244]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1245]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1246]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1247]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1248]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1249]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1250]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1251]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1252]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1253]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1254]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1255]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1256]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1257]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1258]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1259]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1260]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1261]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1262]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1263]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1264]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1265]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1266]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1267]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1268]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1269]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1270]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1271]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1272]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1273]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1274]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1275]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1276]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1277]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1278]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1279]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1280]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1281]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1282]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1283]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1284]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1285]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1286]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1287]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1288]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1289]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1290]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1291]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1292]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1293]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1294]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1295]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1296]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1297]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1298]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1299]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1300]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1301]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1302]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1303]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1304]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1305]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1306]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1307]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1308]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1309]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1310]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1311]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1312]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1313]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1314]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1315]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1316]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1317]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1318]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1319]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1320]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1321]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1322]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1323]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1324]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1325]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1326]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1327]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1328]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1329]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1330]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1331]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1332]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1333]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1334]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1335]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1336]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1337]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1338]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1339]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1340]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1341]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1342]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1343]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1344]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1345]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1346]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1347]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1348]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1349]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1350]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1351]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1352]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1353]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1354]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1355]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1356]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1357]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1358]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1359]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1360]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1361]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1362]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1363]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1364]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1365]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1366]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1367]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1368]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1369]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1370]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1371]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1372]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1373]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1374]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1375]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1376]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1377]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1378]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1379]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1380]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1381]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1382]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1383]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1384]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1385]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1386]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1387]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1388]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1389]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1390]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1391]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1392]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1393]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1394]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1395]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1396]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1397]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1398]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1399]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1400]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1401]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1402]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1403]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1404]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1405]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1406]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1407]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1408]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1409]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1410]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1411]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1412]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1413]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1414]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1415]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1416]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1417]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1418]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1419]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1420]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1421]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1422]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1423]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1424]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1425]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1426]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1427]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1428]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1429]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1430]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1431]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1432]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1433]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1434]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1435]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1436]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1437]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1438]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1439]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1440]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1441]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1442]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1443]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1444]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1445]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1446]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1447]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1448]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1449]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1450]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1451]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1452]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1453]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1454]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1455]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1456]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1457]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1458]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1459]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1460]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1461]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1462]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1463]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1464]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1465]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1466]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1467]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1468]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1469]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1470]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1471]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1472]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1473]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1474]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1475]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1476]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1477]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1478]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1479]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1480]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1481]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1482]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1483]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1484]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1485]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1486]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1487]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1488]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1489]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1490]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1491]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1492]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1493]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1494]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1495]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1496]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1497]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1498]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1499]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1500]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1501]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1502]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1503]" -type "float3" 0 1.1920929e-07 0 ;
+	setAttr ".vl[0].vt[1504]" -type "float3" 0 1.1920929e-07 0 ;
 createNode objectSet -n "skinCluster1Set";
 	rename -uid "07C30CE9-4CE0-BD65-41FB-A4BED32F8DFE";
 	setAttr ".ihi" 0;
@@ -21973,8 +23084,8 @@ createNode dagPose -n "bindPose3";
 		no no no no no no no no no no no no no no no;
 	setAttr ".bp" yes;
 select -ne :time1;
-	setAttr ".o" 89;
-	setAttr ".unw" 89;
+	setAttr ".o" 114;
+	setAttr ".unw" 114;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -22033,19 +23144,19 @@ connectAttr "BaseRigRN.phl[26]" "bindPose3.m[8]";
 connectAttr "BaseRigRN.phl[27]" "skinCluster1.ma[6]";
 connectAttr "BaseRigRN.phl[28]" "skinCluster1.ifcl[6]";
 connectAttr "BaseRigRN.phl[29]" "skinCluster1.lw[7]";
-connectAttr "BaseRigRN.phl[30]" "bindPose3.m[9]";
-connectAttr "BaseRigRN.phl[31]" "skinCluster1.ma[7]";
-connectAttr "BaseRigRN.phl[32]" "skinCluster1.ifcl[7]";
-connectAttr "BaseRigRN.phl[33]" "bindPose3.m[10]";
-connectAttr "BaseRigRN.phl[34]" "skinCluster1.lw[8]";
-connectAttr "BaseRigRN.phl[35]" "skinCluster1.ma[8]";
-connectAttr "BaseRigRN.phl[36]" "skinCluster1.ifcl[8]";
-connectAttr "BaseRigRN.phl[37]" "bindPose3.m[11]";
-connectAttr "BaseRigRN.phl[38]" "skinCluster1.lw[9]";
-connectAttr "BaseRigRN.phl[39]" "skinCluster1.ma[9]";
-connectAttr "BaseRigRN.phl[40]" "skinCluster1.ifcl[9]";
-connectAttr "BaseRigRN.phl[41]" "bindPose3.m[12]";
-connectAttr "BaseRigRN.phl[42]" "skinCluster1.ptt";
+connectAttr "BaseRigRN.phl[30]" "skinCluster1.ptt";
+connectAttr "BaseRigRN.phl[31]" "bindPose3.m[9]";
+connectAttr "BaseRigRN.phl[32]" "skinCluster1.ma[7]";
+connectAttr "BaseRigRN.phl[33]" "skinCluster1.ifcl[7]";
+connectAttr "BaseRigRN.phl[34]" "bindPose3.m[10]";
+connectAttr "BaseRigRN.phl[35]" "skinCluster1.lw[8]";
+connectAttr "BaseRigRN.phl[36]" "skinCluster1.ma[8]";
+connectAttr "BaseRigRN.phl[37]" "skinCluster1.ifcl[8]";
+connectAttr "BaseRigRN.phl[38]" "bindPose3.m[11]";
+connectAttr "BaseRigRN.phl[39]" "skinCluster1.lw[9]";
+connectAttr "BaseRigRN.phl[40]" "skinCluster1.ma[9]";
+connectAttr "BaseRigRN.phl[41]" "skinCluster1.ifcl[9]";
+connectAttr "BaseRigRN.phl[42]" "bindPose3.m[12]";
 connectAttr "BaseRigRN.phl[43]" "skinCluster1.lw[10]";
 connectAttr "BaseRigRN.phl[44]" "skinCluster1.ma[10]";
 connectAttr "BaseRigRN.phl[45]" "skinCluster1.ifcl[10]";
