@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: Puni the Panda 4.0.ma
-//Last modified: Thu, Jun 11, 2020 08:25:15 PM
+//Last modified: Fri, Jun 12, 2020 04:27:33 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "BaseRig" -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "/Users/Katie/Stuffed/StuffedGame/Assets/Maya/scenes/BaseRig.ma";
 file -r -ns "BaseRig" -dr 1 -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "/Users/Katie/Stuffed/StuffedGame/Assets/Maya/scenes/BaseRig.ma";
@@ -16,14 +16,14 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 8.1711336415711422 5.2533015211578977 17.118719024156221 ;
-	setAttr ".r" -type "double3" 352.46164678704537 7582.6000000004296 0 ;
+	setAttr ".t" -type "double3" -0.48941402812781232 4.0636717253587227 18.176484217144591 ;
+	setAttr ".r" -type "double3" 354.86164678661754 7555.3999999992302 4.9856761586770121e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "77E8AA9E-234E-68FC-26D2-21B85028178A";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 19.091864675517073;
+	setAttr ".coi" 19.091864675515563;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -8412,7 +8412,7 @@ createNode reference -n "BaseRigRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"BaseRigRN"
 		"BaseRigRN" 0
-		"BaseRigRN" 244
+		"BaseRigRN" 249
 		2 "|BaseRig:Root_J|BaseRig:Pelvis_J" "useObjectColor" " 1"
 		2 "|BaseRig:Root_J|BaseRig:Pelvis_J" "objectColor" " 0"
 		2 "|BaseRig:Root_J|BaseRig:Pelvis_J" "lockInfluenceWeights" " 0"
@@ -8537,6 +8537,14 @@ createNode reference -n "BaseRigRN";
 		
 		2 "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl" "translateZ" " -k 0 -cb 1"
 		
+		2 "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl" "LArmIKFKSwitch" " -k 1 1"
+		
+		2 "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl" "RArmIKFKSwitch" " -k 1 1"
+		
+		2 "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl" "LLegIKFKSwich" " -k 1 1"
+		
+		2 "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl" "RLegIKFKSwitch" " -k 1 1"
+		
 		2 "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL" 
@@ -8569,6 +8577,8 @@ createNode reference -n "BaseRigRN";
 		"rotateY" " -av"
 		2 "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_L_FK_Master_Ctrl_Grp|BaseRig:Hip_J_L_GRP_FK|BaseRig:Hip_J_L_CTRL|BaseRig:Knee_J_L_GRP|BaseRig:Knee_J_L_CTRL|BaseRig:Ankle_J_L_GRP|BaseRig:Ankle_J_L_CTRL" 
 		"rotateX" " -av"
+		2 "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_L_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_L_IK|BaseRig:Ankle_Ctrl_L_IK" 
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_R_FK_Master_Ctrl_Grp|BaseRig:Hip_J_R_CTRL" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_R_FK_Master_Ctrl_Grp|BaseRig:Hip_J_R_CTRL" 
