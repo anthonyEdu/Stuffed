@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: moth2rigged.ma
-//Last modified: Thu, Jun 11, 2020 06:06:38 PM
+//Last modified: Thu, Jun 11, 2020 06:16:46 PM
 //Codeset: 1252
 file -rdi 1 -ns "BaseRig" -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/nzoll/OneDrive/Documents/GitHub/Stuffed/StuffedGame/Assets/Maya/scenes/BaseRig.ma";
 file -r -ns "BaseRig" -dr 1 -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/nzoll/OneDrive/Documents/GitHub/Stuffed/StuffedGame/Assets/Maya/scenes/BaseRig.ma";
@@ -16,14 +16,14 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -1.7662367067146896 5.0264151202499239 -14.974451013482515 ;
-	setAttr ".r" -type "double3" 721.46164665423919 8109.00000000808 0 ;
+	setAttr ".t" -type "double3" -0.30430137669182827 3.6974283176245546 -17.422220947952852 ;
+	setAttr ".r" -type "double3" 725.0616466542225 8463.8000000032043 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "77E8AA9E-234E-68FC-26D2-21B85028178A";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 17.890609132174816;
+	setAttr ".coi" 20.235593355366088;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -132,6 +132,7 @@ createNode camera -n "bottomShape" -p "bottom";
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "mothGeo";
 	rename -uid "4B56AFD5-4706-47D0-E628-49879FFBF7CC";
+	setAttr ".v" no;
 	setAttr ".r" -type "double3" 0 -180 0 ;
 createNode transform -n "mainBody" -p "mothGeo";
 	rename -uid "810AB1C2-4677-C6E2-91BF-9BA1B9083281";
@@ -6509,10 +6510,10 @@ createNode transform -n "wings1" -p "mothGeo";
 createNode mesh -n "wingsShape1" -p "wings1";
 	rename -uid "E44A1201-456B-C039-2C96-7B9513BEE740";
 	setAttr -k off ".v";
-	setAttr -s 2 ".iog[0].og";
+	setAttr -s 8 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.5 0.47277340292930603 ;
+	setAttr ".pv" -type "double2" 0.51436622440814972 0.50925054401159286 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -9449,6 +9450,40 @@ createNode mesh -n "wingsShape1Orig" -p "wings1";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
+createNode transform -n "cluster1Handle";
+	rename -uid "5086EEAD-426B-1A7A-A697-7FA7EAAADE19";
+	setAttr ".rp" -type "double3" -3.360596776008606 3.5902729034423828 -0.91301491856574968 ;
+	setAttr ".sp" -type "double3" -3.360596776008606 3.5902729034423828 -0.91301491856574968 ;
+createNode clusterHandle -n "cluster1HandleShape" -p "cluster1Handle";
+	rename -uid "6C686E3C-43EF-D458-2DBD-44B3C3923C96";
+	setAttr ".ihi" 0;
+	setAttr -k off ".v";
+	setAttr ".or" -type "double3" -3.360596776008606 3.5902729034423828 -0.91301491856574968 ;
+createNode transform -n "cluster2Handle";
+	rename -uid "D031C40F-42C7-6ED9-CE04-BFB8B4345CC0";
+	setAttr ".rp" -type "double3" 3.3605970144271851 3.5902729034423828 -0.91301491856575057 ;
+	setAttr ".sp" -type "double3" 3.3605970144271851 3.5902729034423828 -0.91301491856575057 ;
+createNode clusterHandle -n "cluster2HandleShape" -p "cluster2Handle";
+	rename -uid "855529C0-49A2-94CC-347C-A89EF4A7D452";
+	setAttr ".ihi" 0;
+	setAttr -k off ".v";
+	setAttr ".or" -type "double3" 3.3605970144271851 3.5902729034423828 -0.91301491856575057 ;
+createNode fosterParent -n "BaseRigRNfosterParent1";
+	rename -uid "633CF593-4AE4-C1C0-9ECD-FC84B01DFE14";
+createNode joint -n "LWingJnt" -p "BaseRigRNfosterParent1";
+	rename -uid "E52E427C-4645-E064-1E1C-478EEB19B1C9";
+	setAttr ".t" -type "double3" 0.41180934691131599 0.91301494836806718 -3.3605971336364764 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" 89.999999999999986 89.999999999999901 0 ;
+	setAttr ".radi" 0.5;
+createNode joint -n "RWingJnt" -p "BaseRigRNfosterParent1";
+	rename -uid "972964C4-42D5-6F5E-E68E-5E96E754686C";
+	setAttr ".t" -type "double3" 0.41180934691131599 0.9130148887634344 3.3605966567993146 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" 89.999999999999986 89.999999999999901 0 ;
+	setAttr ".radi" 0.5;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "15ADEB08-459B-1708-9CF2-DF8ACC16D8D9";
 	setAttr -s 7 ".lnk";
@@ -9558,10 +9593,17 @@ createNode materialInfo -n "materialInfo5";
 	rename -uid "A5CD525B-4135-545D-D74B-B6A6329832C2";
 createNode reference -n "BaseRigRN";
 	rename -uid "B1C5ECC2-46A5-99D9-5ED7-90BC2BD25F52";
+	setAttr -s 2 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"BaseRigRN"
 		"BaseRigRN" 0
-		"BaseRigRN" 292
+		"BaseRigRN" 296
+		0 "|BaseRigRNfosterParent1|RWingJnt" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j" 
+		"-s -r "
+		0 "|BaseRigRNfosterParent1|LWingJnt" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j" 
+		"-s -r "
 		2 "|BaseRig:Root_J" "useObjectColor" " 0"
 		2 "|BaseRig:Root_J" "objectColor" " 0"
 		2 "|BaseRig:Root_J" "bindPose" " -type \"matrix\" 0 0 1 0 0 1 0 0 -1 0 0 0 0 2.00000000000000044 0 1"
@@ -10180,7 +10222,11 @@ createNode reference -n "BaseRigRN";
 		3 "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_FK|BaseRig:Shoulder_J_R_FK|BaseRig:Elbow_J_R_FK|BaseRig:Wrist_J_R_FK.message" 
 		"BaseRig:bindPose1.members[24]" ""
 		3 "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_FK|BaseRig:Shoulder_J_R_FK|BaseRig:Elbow_J_R_FK|BaseRig:Wrist_J_R_FK.bindPose" 
-		"BaseRig:bindPose1.worldMatrix[24]" "";
+		"BaseRig:bindPose1.worldMatrix[24]" ""
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j.scale" 
+		"BaseRigRN.placeHolderList[1]" ""
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j.scale" 
+		"BaseRigRN.placeHolderList[2]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode groupId -n "groupId31";
@@ -10190,6 +10236,49 @@ createNode groupParts -n "groupParts9";
 	rename -uid "203AC0C9-48EF-1B99-C0B4-999FD7A7FA14";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "f[0:871]";
+createNode cluster -n "cluster1";
+	rename -uid "13AD59E1-4AA5-8EAD-0DA3-279DD2404F31";
+	setAttr ".gm[0]" -type "matrix" -1 0 1.2246467991473532e-16 0 -0 1 0 0 -1.2246467991473532e-16 0 -1 0
+		 0 0 0 1;
+createNode tweak -n "tweak1";
+	rename -uid "530D9D10-4998-DE31-D732-659F8F4D6426";
+createNode objectSet -n "cluster1Set";
+	rename -uid "95F49E9D-470C-C18B-5E3E-F9A828697B1C";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "cluster1GroupId";
+	rename -uid "E111CDD6-426E-5EA1-B8BA-85946FA469F9";
+	setAttr ".ihi" 0;
+createNode groupParts -n "cluster1GroupParts";
+	rename -uid "EA2C7F5F-4D86-9C35-54AF-F887BAFB67EB";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[856:863]";
+createNode objectSet -n "tweakSet1";
+	rename -uid "0614B872-4411-0440-284C-6D94476AD40A";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "groupId33";
+	rename -uid "237489B4-4FBF-D6E9-62C1-C68027D16AC2";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts11";
+	rename -uid "8A63FC66-49F2-B093-06B6-719835807A18";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode cluster -n "cluster2";
+	rename -uid "E40E6909-4AC3-4421-F20C-1FB7774A9D1F";
+	setAttr ".gm[0]" -type "matrix" -1 0 1.2246467991473532e-16 0 -0 1 0 0 -1.2246467991473532e-16 0 -1 0
+		 0 0 0 1;
+createNode objectSet -n "cluster2Set";
+	rename -uid "9F5900DB-4562-71A6-C622-6C8A0F9B37CF";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "cluster2GroupId";
+	rename -uid "FD886477-49F1-E4D6-E4B8-19BD3BBE716D";
+	setAttr ".ihi" 0;
+createNode groupParts -n "cluster2GroupParts";
+	rename -uid "BC603657-4DD8-6583-7EF0-AD809A580377";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[416:423]";
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -10225,6 +10314,8 @@ select -ne :hardwareRenderGlobals;
 select -ne :characterPartition;
 select -ne :ikSystem;
 	setAttr -s 4 ".sol";
+connectAttr "BaseRigRN.phl[1]" "RWingJnt.is";
+connectAttr "BaseRigRN.phl[2]" "LWingJnt.is";
 connectAttr ":defaultColorMgtGlobals.cme" "imagePlaneShape1.cme";
 connectAttr ":defaultColorMgtGlobals.cfe" "imagePlaneShape1.cmcf";
 connectAttr ":defaultColorMgtGlobals.cfp" "imagePlaneShape1.cmcp";
@@ -10236,7 +10327,14 @@ connectAttr "eyesShapeOrig.w" "eyesShape.i";
 connectAttr "cowlShapeOrig.w" "cowlShape.i";
 connectAttr "groupId31.id" "wingsShape1.iog.og[0].gid";
 connectAttr "lambert4SG.mwc" "wingsShape1.iog.og[0].gco";
-connectAttr "groupParts9.og" "wingsShape1.i";
+connectAttr "cluster1GroupId.id" "wingsShape1.iog.og[3].gid";
+connectAttr "cluster1Set.mwc" "wingsShape1.iog.og[3].gco";
+connectAttr "groupId33.id" "wingsShape1.iog.og[4].gid";
+connectAttr "tweakSet1.mwc" "wingsShape1.iog.og[4].gco";
+connectAttr "cluster2GroupId.id" "wingsShape1.iog.og[5].gid";
+connectAttr "cluster2Set.mwc" "wingsShape1.iog.og[5].gco";
+connectAttr "cluster2.og[0]" "wingsShape1.i";
+connectAttr "tweak1.vl[0].vt[0]" "wingsShape1.twl";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
@@ -10274,8 +10372,34 @@ connectAttr "bodyColor.oc" "lambert6SG.ss";
 connectAttr "mainBodyShape.iog" "lambert6SG.dsm" -na;
 connectAttr "lambert6SG.msg" "materialInfo5.sg";
 connectAttr "bodyColor.msg" "materialInfo5.m";
+connectAttr "BaseRigRNfosterParent1.msg" "BaseRigRN.fp";
 connectAttr "wingsShape1Orig.w" "groupParts9.ig";
 connectAttr "groupId31.id" "groupParts9.gi";
+connectAttr "cluster1GroupParts.og" "cluster1.ip[0].ig";
+connectAttr "cluster1GroupId.id" "cluster1.ip[0].gi";
+connectAttr "cluster1Handle.wm" "cluster1.ma";
+connectAttr "cluster1HandleShape.x" "cluster1.x";
+connectAttr "groupParts11.og" "tweak1.ip[0].ig";
+connectAttr "groupId33.id" "tweak1.ip[0].gi";
+connectAttr "cluster1GroupId.msg" "cluster1Set.gn" -na;
+connectAttr "wingsShape1.iog.og[3]" "cluster1Set.dsm" -na;
+connectAttr "cluster1.msg" "cluster1Set.ub[0]";
+connectAttr "tweak1.og[0]" "cluster1GroupParts.ig";
+connectAttr "cluster1GroupId.id" "cluster1GroupParts.gi";
+connectAttr "groupId33.msg" "tweakSet1.gn" -na;
+connectAttr "wingsShape1.iog.og[4]" "tweakSet1.dsm" -na;
+connectAttr "tweak1.msg" "tweakSet1.ub[0]";
+connectAttr "groupParts9.og" "groupParts11.ig";
+connectAttr "groupId33.id" "groupParts11.gi";
+connectAttr "cluster2GroupParts.og" "cluster2.ip[0].ig";
+connectAttr "cluster2GroupId.id" "cluster2.ip[0].gi";
+connectAttr "cluster2Handle.wm" "cluster2.ma";
+connectAttr "cluster2HandleShape.x" "cluster2.x";
+connectAttr "cluster2GroupId.msg" "cluster2Set.gn" -na;
+connectAttr "wingsShape1.iog.og[5]" "cluster2Set.dsm" -na;
+connectAttr "cluster2.msg" "cluster2Set.ub[0]";
+connectAttr "cluster1.og[0]" "cluster2GroupParts.ig";
+connectAttr "cluster2GroupId.id" "cluster2GroupParts.gi";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert4SG.pa" ":renderPartition.st" -na;
