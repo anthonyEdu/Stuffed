@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: moth2rigged.ma
-//Last modified: Thu, Jun 11, 2020 06:45:19 PM
+//Last modified: Thu, Jun 11, 2020 06:47:37 PM
 //Codeset: 1252
 file -rdi 1 -ns "BaseRig" -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/nzoll/OneDrive/Documents/GitHub/Stuffed/StuffedGame/Assets/Maya/scenes/BaseRig.ma";
 file -r -ns "BaseRig" -dr 1 -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/nzoll/OneDrive/Documents/GitHub/Stuffed/StuffedGame/Assets/Maya/scenes/BaseRig.ma";
@@ -16,8 +16,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -8.4174617291794931 6.716306295268919 -4.428236784478548 ;
-	setAttr ".r" -type "double3" 698.06164665404754 8875.7999999994263 0 ;
+	setAttr ".t" -type "double3" 0.33059624635556539 5.7719916787860814 -9.0521718053272586 ;
+	setAttr ".r" -type "double3" 703.4616466540665 8816.5999999993455 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "77E8AA9E-234E-68FC-26D2-21B85028178A";
 	setAttr -k off ".v" no;
@@ -9450,10 +9450,30 @@ createNode mesh -n "wingsShape1Orig" -p "wings1";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "RWingCtrlGrp";
+createNode fosterParent -n "BaseRigRNfosterParent1";
+	rename -uid "801FF2CD-4668-6916-D656-47A3379150CD";
+createNode transform -n "LWingCtrlGrp" -p "BaseRigRNfosterParent1";
+	rename -uid "B4C80A47-4320-0FE0-68A7-FEBC063A9275";
+	setAttr ".t" -type "double3" 3.0915131568908691 0.65362894535064697 -0.47770014405250666 ;
+	setAttr ".r" -type "double3" 89.999999999999986 89.999999999999901 0 ;
+createNode transform -n "LWingCtrl" -p "LWingCtrlGrp";
+	rename -uid "BFC74750-4502-9741-EE2B-08A8DD476756";
+createNode nurbsCurve -n "LWingCtrlShape" -p "LWingCtrl";
+	rename -uid "02A6EC94-43ED-A5C3-5026-8E8BA8682CF0";
+	setAttr -k off ".v";
+	setAttr ".tw" yes;
+	setAttr -s 11 ".cp[0:10]" -type "double3" 1.2155132798066792 -8.8817841970012523e-16 
+		-0.62657212136805462 1.2155132798066792 -8.8817841970012523e-16 -0.62657212136805462 
+		1.2155132798066792 -8.8817841970012523e-16 -0.62657212136805462 1.2155132798066792 
+		-8.8817841970012523e-16 -0.62657212136805462 1.2155132798066792 -8.8817841970012523e-16 
+		-0.62657212136805462 1.2155132798066792 -8.8817841970012523e-16 -0.62657212136805462 
+		1.2155132798066792 -8.8817841970012523e-16 -0.62657212136805462 1.2155132798066792 
+		-8.8817841970012523e-16 -0.62657212136805462 0 0 0 0 0 0 0 0 0;
+	setAttr ".oclr" -type "float3" 1 1 0 ;
+createNode transform -n "RWingCtrlGrp" -p "BaseRigRNfosterParent1";
 	rename -uid "C9D4F761-4013-8A3B-265D-46BB6BAA3040";
-	setAttr ".t" -type "double3" -0.47770017385482788 3.0915131568908691 -0.65362894535064697 ;
-	setAttr ".r" -type "double3" -9.5416640443904872e-15 8.9055531080978495e-14 8.2694421718051442e-14 ;
+	setAttr ".t" -type "double3" 3.0915131568908691 0.65362894535064853 0.47770017385482672 ;
+	setAttr ".r" -type "double3" 89.999999999999986 89.999999999999901 0 ;
 createNode transform -n "RWingCtrl" -p "RWingCtrlGrp";
 	rename -uid "B4D4374A-4801-756E-4C20-E5B9A178184E";
 createNode nurbsCurve -n "RWingCtrlShape" -p "RWingCtrl";
@@ -9469,39 +9489,6 @@ createNode nurbsCurve -n "RWingCtrlShape" -p "RWingCtrl";
 		-8.8817841970012523e-16 -0.66741743003239939 0 0 0 0 0 0 0 0 0;
 	setAttr ".uocol" yes;
 	setAttr ".oclr" -type "float3" 1 1 0 ;
-createNode transform -n "LWingCtrlGrp";
-	rename -uid "B4C80A47-4320-0FE0-68A7-FEBC063A9275";
-	setAttr ".t" -type "double3" 0.47770014405250549 3.0915131568908691 -0.65362894535064708 ;
-	setAttr ".r" -type "double3" -9.5416640443904872e-15 8.9055531080978495e-14 8.2694421718051442e-14 ;
-createNode transform -n "LWingCtrl" -p "LWingCtrlGrp";
-	rename -uid "BFC74750-4502-9741-EE2B-08A8DD476756";
-createNode nurbsCurve -n "LWingCtrlShape" -p "LWingCtrl";
-	rename -uid "02A6EC94-43ED-A5C3-5026-8E8BA8682CF0";
-	setAttr -k off ".v";
-	setAttr ".tw" yes;
-	setAttr -s 11 ".cp[0:10]" -type "double3" 1.2155132798066792 -8.8817841970012523e-16 
-		-0.62657212136805462 1.2155132798066792 -8.8817841970012523e-16 -0.62657212136805462 
-		1.2155132798066792 -8.8817841970012523e-16 -0.62657212136805462 1.2155132798066792 
-		-8.8817841970012523e-16 -0.62657212136805462 1.2155132798066792 -8.8817841970012523e-16 
-		-0.62657212136805462 1.2155132798066792 -8.8817841970012523e-16 -0.62657212136805462 
-		1.2155132798066792 -8.8817841970012523e-16 -0.62657212136805462 1.2155132798066792 
-		-8.8817841970012523e-16 -0.62657212136805462 0 0 0 0 0 0 0 0 0;
-	setAttr ".oclr" -type "float3" 1 1 0 ;
-createNode fosterParent -n "BaseRigRNfosterParent1";
-	rename -uid "CEA649F8-4CF6-ACD7-CC58-008D262651D6";
-createNode joint -n "RWingHingeJnt" -p "BaseRigRNfosterParent1";
-	rename -uid "0F11B0CE-46DF-604D-1C07-2DB0B339524A";
-	setAttr ".t" -type "double3" -0.086950399640197684 0.65362894535064842 0.47770017385482672 ;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 89.999999999999986 89.999999999999901 0 ;
-	setAttr ".radi" 0.5;
-createNode joint -n "RWingEndJnt" -p "RWingHingeJnt";
-	rename -uid "849AB9C0-4CD1-47F5-6F26-5C978083B739";
-	setAttr ".t" -type "double3" -2.8188031315803528 0.49875974655151367 -0.2510257363319397 ;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".radi" 0.5;
 createNode joint -n "LWingHingeJnt" -p "BaseRigRNfosterParent1";
 	rename -uid "DF7A75AB-4BDF-6AEA-A3E6-2385FE46D817";
 	setAttr ".t" -type "double3" -0.086950399640197684 0.65362894535064675 -0.47770014405250666 ;
@@ -9512,6 +9499,19 @@ createNode joint -n "LWingHingeJnt" -p "BaseRigRNfosterParent1";
 createNode joint -n "LWingEndJnt" -p "LWingHingeJnt";
 	rename -uid "DE2B208B-466C-E755-E07D-33B11273993D";
 	setAttr ".t" -type "double3" 2.8277152478694916 0.49875974655151367 -0.27208858728408813 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".radi" 0.5;
+createNode joint -n "RWingHingeJnt" -p "BaseRigRNfosterParent1";
+	rename -uid "0F11B0CE-46DF-604D-1C07-2DB0B339524A";
+	setAttr ".t" -type "double3" -0.086950399640197684 0.65362894535064842 0.47770017385482672 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" 89.999999999999986 89.999999999999901 0 ;
+	setAttr ".radi" 0.5;
+createNode joint -n "RWingEndJnt" -p "RWingHingeJnt";
+	rename -uid "849AB9C0-4CD1-47F5-6F26-5C978083B739";
+	setAttr ".t" -type "double3" -2.8188031315803528 0.49875974655151367 -0.2510257363319397 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".radi" 0.5;
@@ -9630,10 +9630,14 @@ createNode reference -n "BaseRigRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"BaseRigRN"
 		"BaseRigRN" 0
-		"BaseRigRN" 296
+		"BaseRigRN" 298
+		0 "|BaseRigRNfosterParent1|RWingHingeJnt" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j" 
+		"-s -r "
 		0 "|BaseRigRNfosterParent1|LWingHingeJnt" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j" 
 		"-s -r "
-		0 "|BaseRigRNfosterParent1|RWingHingeJnt" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j" 
+		0 "|BaseRigRNfosterParent1|RWingCtrlGrp" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL" 
+		"-s -r "
+		0 "|BaseRigRNfosterParent1|LWingCtrlGrp" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL" 
 		"-s -r "
 		2 "|BaseRig:Root_J" "useObjectColor" " 0"
 		2 "|BaseRig:Root_J" "objectColor" " 0"
@@ -10338,10 +10342,10 @@ connectAttr "groupId33.id" "wingsShape1.iog.og[7].gid";
 connectAttr "tweakSet1.mwc" "wingsShape1.iog.og[7].gco";
 connectAttr "tweak1.og[0]" "wingsShape1.i";
 connectAttr "tweak1.vl[0].vt[0]" "wingsShape1.twl";
-connectAttr "makeNurbCircle1.oc" "RWingCtrlShape.cr";
 connectAttr "makeNurbCircle2.oc" "LWingCtrlShape.cr";
-connectAttr "RWingHingeJnt.s" "RWingEndJnt.is";
+connectAttr "makeNurbCircle1.oc" "RWingCtrlShape.cr";
 connectAttr "LWingHingeJnt.s" "LWingEndJnt.is";
+connectAttr "RWingHingeJnt.s" "RWingEndJnt.is";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
