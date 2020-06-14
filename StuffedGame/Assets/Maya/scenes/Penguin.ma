@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Penguin.ma
-//Last modified: Sat, Jun 13, 2020 06:05:21 PM
+//Last modified: Sat, Jun 13, 2020 06:11:14 PM
 //Codeset: 1252
 file -rdi 1 -ns "BaseCharacter" -rfn "BaseCharacterRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/Xmen9/Desktop/__School/_ _UVU2020Summer/_DGM3220/Repo/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
@@ -20,13 +20,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "303A8C8F-4E75-124D-670F-61AAA4D7523B";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 3.7219464016317669 1.5417436638805122 13.919971801768222 ;
-	setAttr ".r" -type "double3" 1440.861647221823 42133.799999996401 -1.2793330419178833e-17 ;
+	setAttr ".t" -type "double3" 3.7702756110442879 5.2983573334729659 19.893150940441242 ;
+	setAttr ".r" -type "double3" 1432.4616472214145 42129.799999993978 -1.0086415376504795e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "ECF3FB9B-4E95-2871-C87B-4BBBB370A430";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 14.267009354261489;
+	setAttr ".coi" 20.198492440340591;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -9550,7 +9550,7 @@ createNode mesh -n "Penguin_V_2_3_UV_mapped1:EyeMesh_RShape" -p "Penguin_V_2_3_U
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode fosterParent -n "BaseCharacterRNfosterParent1";
-	rename -uid "A9AE470A-4CE1-C592-1892-CEBA2545C470";
+	rename -uid "FCB898B0-4CF8-1EC0-22F9-22AF273AFBE6";
 createNode mesh -n "BaseCharacter:polySurfaceShape1" -p "BaseCharacterRNfosterParent1";
 	rename -uid "FC93FAC2-4D07-7D8A-DB05-6EA186B0552B";
 	setAttr -k off ".v";
@@ -12236,7 +12236,7 @@ createNode reference -n "BaseCharacterRN";
 	setAttr -s 2 ".fn";
 	setAttr ".fn[0]" -type "string" "C:/Users/Xmen9/Desktop/__School/_ _UVU2020Summer/_DGM3220/Repo/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
 	setAttr ".fn[1]" -type "string" "C:/Users/Xmen9/Desktop/__School/_ _UVU2020Summer/_DGM3220/Repo/Stuffed/StuffedGame/Assets/Maya//scenes/BaseCharacter.ma";
-	setAttr -s 293 ".phl";
+	setAttr -s 323 ".phl";
 	setAttr ".phl[140]" 0;
 	setAttr ".phl[141]" 0;
 	setAttr ".phl[142]" 0;
@@ -12530,6 +12530,36 @@ createNode reference -n "BaseCharacterRN";
 	setAttr ".phl[430]" 0;
 	setAttr ".phl[431]" 0;
 	setAttr ".phl[432]" 0;
+	setAttr ".phl[433]" 0;
+	setAttr ".phl[434]" 0;
+	setAttr ".phl[435]" 0;
+	setAttr ".phl[436]" 0;
+	setAttr ".phl[437]" 0;
+	setAttr ".phl[438]" 0;
+	setAttr ".phl[439]" 0;
+	setAttr ".phl[440]" 0;
+	setAttr ".phl[441]" 0;
+	setAttr ".phl[442]" 0;
+	setAttr ".phl[443]" 0;
+	setAttr ".phl[444]" 0;
+	setAttr ".phl[445]" 0;
+	setAttr ".phl[446]" 0;
+	setAttr ".phl[447]" 0;
+	setAttr ".phl[448]" 0;
+	setAttr ".phl[449]" 0;
+	setAttr ".phl[450]" 0;
+	setAttr ".phl[451]" 0;
+	setAttr ".phl[452]" 0;
+	setAttr ".phl[453]" 0;
+	setAttr ".phl[454]" 0;
+	setAttr ".phl[455]" 0;
+	setAttr ".phl[456]" 0;
+	setAttr ".phl[457]" 0;
+	setAttr ".phl[458]" 0;
+	setAttr ".phl[459]" 0;
+	setAttr ".phl[460]" 0;
+	setAttr ".phl[461]" 0;
+	setAttr ".phl[462]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"BaseCharacterRN"
 		"BaseCharacterRN" 131
@@ -12807,7 +12837,7 @@ createNode reference -n "BaseCharacterRN";
 		""
 		5 4 "BaseCharacterRN" "|BaseCharacter:BodyMesh.drawOverride" "BaseCharacterRN.placeHolderList[139]" 
 		""
-		"BaseCharacterRN" 735
+		"BaseCharacterRN" 772
 		0 "|BaseCharacterRNfosterParent1|BaseCharacter:polySurfaceShape2" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L|BaseCharacter:EyeMesh_L" 
 		"-s -r "
 		0 "|BaseCharacterRNfosterParent1|BaseCharacter:polySurfaceShape1" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R" 
@@ -12839,7 +12869,7 @@ createNode reference -n "BaseCharacterRN";
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK" 
 		"translateZ" " -av"
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK" 
-		"rotate" " -type \"double3\" 28.0416896220680556 -0.0025258396037766057 0.00020900121454760744"
+		"rotate" " -type \"double3\" 28.0416896220680556 -0.0025258396037810614 0.00020900121456668115"
 		
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK" 
 		"rotateX" " -av"
@@ -12848,7 +12878,7 @@ createNode reference -n "BaseCharacterRN";
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK" 
 		"rotateZ" " -av"
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK" 
-		"scale" " -type \"double3\" 1.00000000000000022 1 1.00000000000000022"
+		"scale" " -type \"double3\" 1 0.99999999999999989 1.00000000000000022"
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK" 
 		"scaleX" " -av"
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK" 
@@ -12862,7 +12892,7 @@ createNode reference -n "BaseCharacterRN";
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK|BaseCharacter:Knee_J_L_IK" 
 		"objectColor" " 3"
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK|BaseCharacter:Knee_J_L_IK" 
-		"rotate" " -type \"double3\" -0.012110980284990743 -4.42616240277415152 1.08667085083282422"
+		"rotate" " -type \"double3\" -0.01211098028499033 -4.42616240277417106 1.08667085083278714"
 		
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK|BaseCharacter:Knee_J_L_IK" 
 		"lockInfluenceWeights" " 0"
@@ -12954,7 +12984,7 @@ createNode reference -n "BaseCharacterRN";
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK" 
 		"objectColor" " 2"
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK" 
-		"translate" " -type \"double3\" -0.50148000000000148 -0.12181200000000006 0.56434200000000279"
+		"translate" " -type \"double3\" -0.50148000000000126 -0.12181200000000007 0.56434200000000301"
 		
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK" 
 		"translateX" " -av"
@@ -12963,7 +12993,7 @@ createNode reference -n "BaseCharacterRN";
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK" 
 		"translateZ" " -av"
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK" 
-		"rotate" " -type \"double3\" 28.04422295855184188 -0.0027085118402874861 0.00020594849406343064"
+		"rotate" " -type \"double3\" 28.04422295855184188 -0.0027085118402647278 0.00020594849395199602"
 		
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK" 
 		"rotateX" " -av"
@@ -12972,7 +13002,7 @@ createNode reference -n "BaseCharacterRN";
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK" 
 		"rotateZ" " -av"
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK" 
-		"scale" " -type \"double3\" 1.00000000000000022 1 1.00000000000000022"
+		"scale" " -type \"double3\" 1 0.99999999999999989 1.00000000000000022"
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK" 
 		"scaleX" " -av"
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK" 
@@ -12986,7 +13016,7 @@ createNode reference -n "BaseCharacterRN";
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK|BaseCharacter:Knee_J_R_IK" 
 		"objectColor" " 3"
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK|BaseCharacter:Knee_J_R_IK" 
-		"rotate" " -type \"double3\" -0.012111507929830031 -4.42615586310145215 1.08667600011380228"
+		"rotate" " -type \"double3\" -0.012111507929832356 -4.4261558631013429 1.08667600011401078"
 		
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK|BaseCharacter:Knee_J_R_IK" 
 		"lockInfluenceWeights" " 0"
@@ -13532,13 +13562,27 @@ createNode reference -n "BaseCharacterRN";
 		2 "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL" 
+		"rotateX" " -av"
+		2 "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL" 
+		"rotateY" " -av"
+		2 "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL" 
+		"rotateZ" " -av"
+		2 "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL" 
 		"rotateOrder" " 1"
 		2 "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL|BaseCharacter:Knee_J_R_GRP|BaseCharacter:Knee_J_R_CTRL" 
 		"rotate" " -type \"double3\" 0 0 0"
+		2 "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL|BaseCharacter:Knee_J_R_GRP|BaseCharacter:Knee_J_R_CTRL" 
+		"rotateZ" " -av"
 		2 "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL|BaseCharacter:Knee_J_R_GRP|BaseCharacter:Knee_J_R_CTRL" 
 		"rotateOrder" " 1"
 		2 "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL|BaseCharacter:Knee_J_R_GRP|BaseCharacter:Knee_J_R_CTRL|BaseCharacter:Ankle_J_R_GRP|BaseCharacter:Ankle_J_R_CTRL" 
 		"rotate" " -type \"double3\" 0 0 0"
+		2 "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL|BaseCharacter:Knee_J_R_GRP|BaseCharacter:Knee_J_R_CTRL|BaseCharacter:Ankle_J_R_GRP|BaseCharacter:Ankle_J_R_CTRL" 
+		"rotateX" " -av"
+		2 "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL|BaseCharacter:Knee_J_R_GRP|BaseCharacter:Knee_J_R_CTRL|BaseCharacter:Ankle_J_R_GRP|BaseCharacter:Ankle_J_R_CTRL" 
+		"rotateY" " -av"
+		2 "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL|BaseCharacter:Knee_J_R_GRP|BaseCharacter:Knee_J_R_CTRL|BaseCharacter:Ankle_J_R_GRP|BaseCharacter:Ankle_J_R_CTRL" 
+		"rotateZ" " -av"
 		2 "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL|BaseCharacter:Knee_J_R_GRP|BaseCharacter:Knee_J_R_CTRL|BaseCharacter:Ankle_J_R_GRP|BaseCharacter:Ankle_J_R_CTRL" 
 		"rotateOrder" " 4"
 		2 "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL" 
@@ -14245,50 +14289,110 @@ createNode reference -n "BaseCharacterRN";
 		"BaseCharacterRN.placeHolderList[409]" ""
 		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_L_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_L_GRP_FK|BaseCharacter:Hip_J_L_CTRL|BaseCharacter:Knee_J_L_GRP|BaseCharacter:Knee_J_L_CTRL|BaseCharacter:Ankle_J_L_GRP|BaseCharacter:Ankle_J_L_CTRL.scaleZ" 
 		"BaseCharacterRN.placeHolderList[410]" ""
-		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL.drawOverride" 
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL.rotateX" 
 		"BaseCharacterRN.placeHolderList[411]" ""
-		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL|BaseCharacter:Knee_J_R_GRP|BaseCharacter:Knee_J_R_CTRL.drawOverride" 
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL.rotateY" 
 		"BaseCharacterRN.placeHolderList[412]" ""
-		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL|BaseCharacter:Knee_J_R_GRP|BaseCharacter:Knee_J_R_CTRL|BaseCharacter:Ankle_J_R_GRP|BaseCharacter:Ankle_J_R_CTRL.drawOverride" 
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL.rotateZ" 
 		"BaseCharacterRN.placeHolderList[413]" ""
-		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL.drawOverride" 
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL.drawOverride" 
 		"BaseCharacterRN.placeHolderList[414]" ""
-		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL.drawOverride" 
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL.visibility" 
 		"BaseCharacterRN.placeHolderList[415]" ""
-		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL.drawOverride" 
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL.translateX" 
 		"BaseCharacterRN.placeHolderList[416]" ""
-		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:head_J_GRP|BaseCharacter:head_J_CTRL.drawOverride" 
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL.translateY" 
 		"BaseCharacterRN.placeHolderList[417]" ""
-		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:head_J_GRP|BaseCharacter:head_J_CTRL|BaseCharacter:Eye_J_L_GRP|BaseCharacter:Eye_J_L_CTRL.drawOverride" 
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL.translateZ" 
 		"BaseCharacterRN.placeHolderList[418]" ""
-		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:head_J_GRP|BaseCharacter:head_J_CTRL|BaseCharacter:Eye_J_L_GRP|BaseCharacter:Eye_J_L_CTRL|BaseCharacter:EyeLid_J_L_GRP|BaseCharacter:EyeLid_J_L_CTRL.drawOverride" 
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL.scaleX" 
 		"BaseCharacterRN.placeHolderList[419]" ""
-		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:head_J_GRP|BaseCharacter:head_J_CTRL|BaseCharacter:Eye_J_R_GRP|BaseCharacter:Eye_J_R_CTRL.drawOverride" 
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL.scaleY" 
 		"BaseCharacterRN.placeHolderList[420]" ""
-		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:head_J_GRP|BaseCharacter:head_J_CTRL|BaseCharacter:Eye_J_R_GRP|BaseCharacter:Eye_J_R_CTRL|BaseCharacter:EyeLid_J_R_GRP|BaseCharacter:EyeLid_J_R_CTRL.drawOverride" 
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL.scaleZ" 
 		"BaseCharacterRN.placeHolderList[421]" ""
-		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:head_J_GRP|BaseCharacter:head_J_CTRL|BaseCharacter:Jaw_J_GRP|BaseCharacter:Jaw_J_CTRL.drawOverride" 
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL|BaseCharacter:Knee_J_R_GRP|BaseCharacter:Knee_J_R_CTRL.rotateX" 
 		"BaseCharacterRN.placeHolderList[422]" ""
-		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:Clavical_J_L_GRP|BaseCharacter:Clavical_J_L_CTRL.drawOverride" 
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL|BaseCharacter:Knee_J_R_GRP|BaseCharacter:Knee_J_R_CTRL.rotateY" 
 		"BaseCharacterRN.placeHolderList[423]" ""
-		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:Clavical_J_L_GRP|BaseCharacter:Clavical_J_L_CTRL|BaseCharacter:Shoulder_J_L2_GRP|BaseCharacter:Shoulder_J_L2_CTRL.drawOverride" 
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL|BaseCharacter:Knee_J_R_GRP|BaseCharacter:Knee_J_R_CTRL.rotateZ" 
 		"BaseCharacterRN.placeHolderList[424]" ""
-		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:Clavical_J_L_GRP|BaseCharacter:Clavical_J_L_CTRL|BaseCharacter:Shoulder_J_L2_GRP|BaseCharacter:Shoulder_J_L2_CTRL|BaseCharacter:Arm_L_FK_Master_Ctrl_Grp|BaseCharacter:Shoulder_J_L_GRP|BaseCharacter:Shoulder_J_L_CTRL.drawOverride" 
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL|BaseCharacter:Knee_J_R_GRP|BaseCharacter:Knee_J_R_CTRL.drawOverride" 
 		"BaseCharacterRN.placeHolderList[425]" ""
-		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:Clavical_J_L_GRP|BaseCharacter:Clavical_J_L_CTRL|BaseCharacter:Shoulder_J_L2_GRP|BaseCharacter:Shoulder_J_L2_CTRL|BaseCharacter:Arm_L_FK_Master_Ctrl_Grp|BaseCharacter:Shoulder_J_L_GRP|BaseCharacter:Shoulder_J_L_CTRL|BaseCharacter:Elbow_J_L_GRP|BaseCharacter:Elbow_J_L_CTRL.drawOverride" 
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL|BaseCharacter:Knee_J_R_GRP|BaseCharacter:Knee_J_R_CTRL.visibility" 
 		"BaseCharacterRN.placeHolderList[426]" ""
-		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:Clavical_J_L_GRP|BaseCharacter:Clavical_J_L_CTRL|BaseCharacter:Shoulder_J_L2_GRP|BaseCharacter:Shoulder_J_L2_CTRL|BaseCharacter:Arm_L_FK_Master_Ctrl_Grp|BaseCharacter:Shoulder_J_L_GRP|BaseCharacter:Shoulder_J_L_CTRL|BaseCharacter:Elbow_J_L_GRP|BaseCharacter:Elbow_J_L_CTRL|BaseCharacter:Wrist_J_L_GRP|BaseCharacter:Wrist_J_L_CTRL.drawOverride" 
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL|BaseCharacter:Knee_J_R_GRP|BaseCharacter:Knee_J_R_CTRL.translateX" 
 		"BaseCharacterRN.placeHolderList[427]" ""
-		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:Clavical_J_R_GRP|BaseCharacter:Clavical_J_R_CTRL.drawOverride" 
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL|BaseCharacter:Knee_J_R_GRP|BaseCharacter:Knee_J_R_CTRL.translateY" 
 		"BaseCharacterRN.placeHolderList[428]" ""
-		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:Clavical_J_R_GRP|BaseCharacter:Clavical_J_R_CTRL|BaseCharacter:Shoulder_J_R2_GRP|BaseCharacter:Shoulder_J_R2_CTRL.drawOverride" 
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL|BaseCharacter:Knee_J_R_GRP|BaseCharacter:Knee_J_R_CTRL.translateZ" 
 		"BaseCharacterRN.placeHolderList[429]" ""
-		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:Clavical_J_R_GRP|BaseCharacter:Clavical_J_R_CTRL|BaseCharacter:Shoulder_J_R2_GRP|BaseCharacter:Shoulder_J_R2_CTRL|BaseCharacter:Arm_R_FK_Master_Ctrl_Grp|BaseCharacter:Shoulder_J_R_GRP|BaseCharacter:Shoulder_J_R_CTRL.drawOverride" 
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL|BaseCharacter:Knee_J_R_GRP|BaseCharacter:Knee_J_R_CTRL.scaleX" 
 		"BaseCharacterRN.placeHolderList[430]" ""
-		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:Clavical_J_R_GRP|BaseCharacter:Clavical_J_R_CTRL|BaseCharacter:Shoulder_J_R2_GRP|BaseCharacter:Shoulder_J_R2_CTRL|BaseCharacter:Arm_R_FK_Master_Ctrl_Grp|BaseCharacter:Shoulder_J_R_GRP|BaseCharacter:Shoulder_J_R_CTRL|BaseCharacter:Elbow_J_R_GRP|BaseCharacter:Elbow_J_R_CTRL.drawOverride" 
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL|BaseCharacter:Knee_J_R_GRP|BaseCharacter:Knee_J_R_CTRL.scaleY" 
 		"BaseCharacterRN.placeHolderList[431]" ""
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL|BaseCharacter:Knee_J_R_GRP|BaseCharacter:Knee_J_R_CTRL.scaleZ" 
+		"BaseCharacterRN.placeHolderList[432]" ""
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL|BaseCharacter:Knee_J_R_GRP|BaseCharacter:Knee_J_R_CTRL|BaseCharacter:Ankle_J_R_GRP|BaseCharacter:Ankle_J_R_CTRL.rotateX" 
+		"BaseCharacterRN.placeHolderList[433]" ""
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL|BaseCharacter:Knee_J_R_GRP|BaseCharacter:Knee_J_R_CTRL|BaseCharacter:Ankle_J_R_GRP|BaseCharacter:Ankle_J_R_CTRL.rotateY" 
+		"BaseCharacterRN.placeHolderList[434]" ""
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL|BaseCharacter:Knee_J_R_GRP|BaseCharacter:Knee_J_R_CTRL|BaseCharacter:Ankle_J_R_GRP|BaseCharacter:Ankle_J_R_CTRL.rotateZ" 
+		"BaseCharacterRN.placeHolderList[435]" ""
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL|BaseCharacter:Knee_J_R_GRP|BaseCharacter:Knee_J_R_CTRL|BaseCharacter:Ankle_J_R_GRP|BaseCharacter:Ankle_J_R_CTRL.drawOverride" 
+		"BaseCharacterRN.placeHolderList[436]" ""
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL|BaseCharacter:Knee_J_R_GRP|BaseCharacter:Knee_J_R_CTRL|BaseCharacter:Ankle_J_R_GRP|BaseCharacter:Ankle_J_R_CTRL.visibility" 
+		"BaseCharacterRN.placeHolderList[437]" ""
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL|BaseCharacter:Knee_J_R_GRP|BaseCharacter:Knee_J_R_CTRL|BaseCharacter:Ankle_J_R_GRP|BaseCharacter:Ankle_J_R_CTRL.translateX" 
+		"BaseCharacterRN.placeHolderList[438]" ""
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL|BaseCharacter:Knee_J_R_GRP|BaseCharacter:Knee_J_R_CTRL|BaseCharacter:Ankle_J_R_GRP|BaseCharacter:Ankle_J_R_CTRL.translateY" 
+		"BaseCharacterRN.placeHolderList[439]" ""
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL|BaseCharacter:Knee_J_R_GRP|BaseCharacter:Knee_J_R_CTRL|BaseCharacter:Ankle_J_R_GRP|BaseCharacter:Ankle_J_R_CTRL.translateZ" 
+		"BaseCharacterRN.placeHolderList[440]" ""
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL|BaseCharacter:Knee_J_R_GRP|BaseCharacter:Knee_J_R_CTRL|BaseCharacter:Ankle_J_R_GRP|BaseCharacter:Ankle_J_R_CTRL.scaleX" 
+		"BaseCharacterRN.placeHolderList[441]" ""
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL|BaseCharacter:Knee_J_R_GRP|BaseCharacter:Knee_J_R_CTRL|BaseCharacter:Ankle_J_R_GRP|BaseCharacter:Ankle_J_R_CTRL.scaleY" 
+		"BaseCharacterRN.placeHolderList[442]" ""
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:Pelvis_J_GRP|BaseCharacter:Pelvis_J_CTRL|BaseCharacter:Leg_R_FK_Master_Ctrl_Grp|BaseCharacter:Hip_J_R_CTRL|BaseCharacter:Knee_J_R_GRP|BaseCharacter:Knee_J_R_CTRL|BaseCharacter:Ankle_J_R_GRP|BaseCharacter:Ankle_J_R_CTRL.scaleZ" 
+		"BaseCharacterRN.placeHolderList[443]" ""
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL.drawOverride" 
+		"BaseCharacterRN.placeHolderList[444]" ""
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL.drawOverride" 
+		"BaseCharacterRN.placeHolderList[445]" ""
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL.drawOverride" 
+		"BaseCharacterRN.placeHolderList[446]" ""
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:head_J_GRP|BaseCharacter:head_J_CTRL.drawOverride" 
+		"BaseCharacterRN.placeHolderList[447]" ""
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:head_J_GRP|BaseCharacter:head_J_CTRL|BaseCharacter:Eye_J_L_GRP|BaseCharacter:Eye_J_L_CTRL.drawOverride" 
+		"BaseCharacterRN.placeHolderList[448]" ""
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:head_J_GRP|BaseCharacter:head_J_CTRL|BaseCharacter:Eye_J_L_GRP|BaseCharacter:Eye_J_L_CTRL|BaseCharacter:EyeLid_J_L_GRP|BaseCharacter:EyeLid_J_L_CTRL.drawOverride" 
+		"BaseCharacterRN.placeHolderList[449]" ""
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:head_J_GRP|BaseCharacter:head_J_CTRL|BaseCharacter:Eye_J_R_GRP|BaseCharacter:Eye_J_R_CTRL.drawOverride" 
+		"BaseCharacterRN.placeHolderList[450]" ""
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:head_J_GRP|BaseCharacter:head_J_CTRL|BaseCharacter:Eye_J_R_GRP|BaseCharacter:Eye_J_R_CTRL|BaseCharacter:EyeLid_J_R_GRP|BaseCharacter:EyeLid_J_R_CTRL.drawOverride" 
+		"BaseCharacterRN.placeHolderList[451]" ""
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:head_J_GRP|BaseCharacter:head_J_CTRL|BaseCharacter:Jaw_J_GRP|BaseCharacter:Jaw_J_CTRL.drawOverride" 
+		"BaseCharacterRN.placeHolderList[452]" ""
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:Clavical_J_L_GRP|BaseCharacter:Clavical_J_L_CTRL.drawOverride" 
+		"BaseCharacterRN.placeHolderList[453]" ""
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:Clavical_J_L_GRP|BaseCharacter:Clavical_J_L_CTRL|BaseCharacter:Shoulder_J_L2_GRP|BaseCharacter:Shoulder_J_L2_CTRL.drawOverride" 
+		"BaseCharacterRN.placeHolderList[454]" ""
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:Clavical_J_L_GRP|BaseCharacter:Clavical_J_L_CTRL|BaseCharacter:Shoulder_J_L2_GRP|BaseCharacter:Shoulder_J_L2_CTRL|BaseCharacter:Arm_L_FK_Master_Ctrl_Grp|BaseCharacter:Shoulder_J_L_GRP|BaseCharacter:Shoulder_J_L_CTRL.drawOverride" 
+		"BaseCharacterRN.placeHolderList[455]" ""
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:Clavical_J_L_GRP|BaseCharacter:Clavical_J_L_CTRL|BaseCharacter:Shoulder_J_L2_GRP|BaseCharacter:Shoulder_J_L2_CTRL|BaseCharacter:Arm_L_FK_Master_Ctrl_Grp|BaseCharacter:Shoulder_J_L_GRP|BaseCharacter:Shoulder_J_L_CTRL|BaseCharacter:Elbow_J_L_GRP|BaseCharacter:Elbow_J_L_CTRL.drawOverride" 
+		"BaseCharacterRN.placeHolderList[456]" ""
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:Clavical_J_L_GRP|BaseCharacter:Clavical_J_L_CTRL|BaseCharacter:Shoulder_J_L2_GRP|BaseCharacter:Shoulder_J_L2_CTRL|BaseCharacter:Arm_L_FK_Master_Ctrl_Grp|BaseCharacter:Shoulder_J_L_GRP|BaseCharacter:Shoulder_J_L_CTRL|BaseCharacter:Elbow_J_L_GRP|BaseCharacter:Elbow_J_L_CTRL|BaseCharacter:Wrist_J_L_GRP|BaseCharacter:Wrist_J_L_CTRL.drawOverride" 
+		"BaseCharacterRN.placeHolderList[457]" ""
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:Clavical_J_R_GRP|BaseCharacter:Clavical_J_R_CTRL.drawOverride" 
+		"BaseCharacterRN.placeHolderList[458]" ""
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:Clavical_J_R_GRP|BaseCharacter:Clavical_J_R_CTRL|BaseCharacter:Shoulder_J_R2_GRP|BaseCharacter:Shoulder_J_R2_CTRL.drawOverride" 
+		"BaseCharacterRN.placeHolderList[459]" ""
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:Clavical_J_R_GRP|BaseCharacter:Clavical_J_R_CTRL|BaseCharacter:Shoulder_J_R2_GRP|BaseCharacter:Shoulder_J_R2_CTRL|BaseCharacter:Arm_R_FK_Master_Ctrl_Grp|BaseCharacter:Shoulder_J_R_GRP|BaseCharacter:Shoulder_J_R_CTRL.drawOverride" 
+		"BaseCharacterRN.placeHolderList[460]" ""
+		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:Clavical_J_R_GRP|BaseCharacter:Clavical_J_R_CTRL|BaseCharacter:Shoulder_J_R2_GRP|BaseCharacter:Shoulder_J_R2_CTRL|BaseCharacter:Arm_R_FK_Master_Ctrl_Grp|BaseCharacter:Shoulder_J_R_GRP|BaseCharacter:Shoulder_J_R_CTRL|BaseCharacter:Elbow_J_R_GRP|BaseCharacter:Elbow_J_R_CTRL.drawOverride" 
+		"BaseCharacterRN.placeHolderList[461]" ""
 		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:Clavical_J_R_GRP|BaseCharacter:Clavical_J_R_CTRL|BaseCharacter:Shoulder_J_R2_GRP|BaseCharacter:Shoulder_J_R2_CTRL|BaseCharacter:Arm_R_FK_Master_Ctrl_Grp|BaseCharacter:Shoulder_J_R_GRP|BaseCharacter:Shoulder_J_R_CTRL|BaseCharacter:Elbow_J_R_GRP|BaseCharacter:Elbow_J_R_CTRL|BaseCharacter:Wrist_J_R_GRP|BaseCharacter:Wrist_J_R_CTRL.drawOverride" 
-		"BaseCharacterRN.placeHolderList[432]" "";
+		"BaseCharacterRN.placeHolderList[462]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode polyMapSew -n "Penguin_with_hair:polyMapSew1";
@@ -18453,6 +18557,192 @@ createNode animCurveTU -n "Ankle_J_L_CTRL_scaleZ";
 	setAttr ".wgt" no;
 	setAttr -s 7 ".ktv[0:6]"  5.208333333333333 1 259 1 336 1 396 1 524 1
 		 617 1 677 1;
+createNode animCurveTA -n "Hip_J_R_CTRL_rotateX";
+	rename -uid "329C3459-477B-0FF1-259B-59BB038F3F2C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  5.208333333333333 0 120 0 251 0 381 -15.720260810165732
+		 463 -25.175107792230865 512 -25.175107792230865 561 28.969998043981342 627 28.969998043981342;
+createNode animCurveTA -n "Hip_J_R_CTRL_rotateY";
+	rename -uid "DE30A7CE-46E3-205C-4614-3F8FD0B8FD99";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  5.208333333333333 0 120 0 251 0 381 41.128294288272556
+		 463 64.703208777865171 512 -12.194045428904181 561 -11.029327556297858 627 27.714749684099292;
+createNode animCurveTA -n "Hip_J_R_CTRL_rotateZ";
+	rename -uid "3B1E191A-4550-33E3-623E-6EAD5C68C78F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  5.208333333333333 0 120 78.090809674946357
+		 251 -38.539054861368342 381 10.769050958283691 463 3.2064652383038457 512 3.2064652383038457
+		 561 -12.759125377627825 627 -12.759125377627825;
+createNode animCurveTU -n "Hip_J_R_CTRL_visibility";
+	rename -uid "E1308DBA-46A9-E654-FAE4-409F1BC5FFEF";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  5.208333333333333 1 120 1 251 1 381 1 463 1
+		 512 1 561 1 627 1;
+	setAttr -s 8 ".kot[0:7]"  5 5 5 5 5 5 5 5;
+createNode animCurveTL -n "Hip_J_R_CTRL_translateX";
+	rename -uid "E98A9829-45DB-A7DD-210F-47B02D856523";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  5.208333333333333 0 120 0 251 0 381 0 463 0
+		 512 0 561 0 627 0;
+createNode animCurveTL -n "Hip_J_R_CTRL_translateY";
+	rename -uid "DE3EB9B5-4094-EA3F-2FFF-EFAA3FB40E64";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  5.208333333333333 0 120 0 251 0 381 0 463 0
+		 512 0 561 0 627 0;
+createNode animCurveTL -n "Hip_J_R_CTRL_translateZ";
+	rename -uid "06FFA6B0-4375-1501-C9DF-F4B44DD1F232";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  5.208333333333333 0 120 0 251 0 381 0 463 0
+		 512 0 561 0 627 0;
+createNode animCurveTU -n "Hip_J_R_CTRL_scaleX";
+	rename -uid "CBA764A2-4E81-3F43-37D7-3DBBE0076F05";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  5.208333333333333 1 120 1 251 1 381 1 463 1
+		 512 1 561 1 627 1;
+createNode animCurveTU -n "Hip_J_R_CTRL_scaleY";
+	rename -uid "FED5050B-4C5D-42F1-D70A-A3970CAB16AC";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  5.208333333333333 1 120 1 251 1 381 1 463 1
+		 512 1 561 1 627 1;
+createNode animCurveTU -n "Hip_J_R_CTRL_scaleZ";
+	rename -uid "DA01B063-49D6-8C3F-58CF-E88F798B2206";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  5.208333333333333 1 120 1 251 1 381 1 463 1
+		 512 1 561 1 627 1;
+createNode animCurveTA -n "Knee_J_R_CTRL_rotateX";
+	rename -uid "3D9E8645-43F7-C8D6-AF16-5C87D0A0CA8B";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  5.208333333333333 0 129 0 196 0 241 0 353 0
+		 458 0 583 0;
+createNode animCurveTA -n "Knee_J_R_CTRL_rotateY";
+	rename -uid "6405E114-41DF-3221-31E7-CB8C2F3AFC15";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  5.208333333333333 0 129 0 196 0 241 0 353 0
+		 458 0 583 0;
+createNode animCurveTA -n "Knee_J_R_CTRL_rotateZ";
+	rename -uid "1E3C1F4F-4411-A313-7D11-7396EAB668AD";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  5.208333333333333 0 129 28.299054402588848
+		 196 28.299054402588848 241 -17.017179793640494 353 -43.162324175354776 458 0.41489591203528298
+		 583 -36.962014754106598;
+createNode animCurveTU -n "Knee_J_R_CTRL_visibility";
+	rename -uid "C95D6550-40E9-2BE5-B664-57BA7B2B1723";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  5.208333333333333 1 129 1 196 1 241 1 353 1
+		 458 1 583 1;
+	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
+createNode animCurveTL -n "Knee_J_R_CTRL_translateX";
+	rename -uid "F67EA3AE-463A-D65B-C477-68BFBD7A6429";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  5.208333333333333 0 129 0 196 0 241 0 353 0
+		 458 0 583 0;
+createNode animCurveTL -n "Knee_J_R_CTRL_translateY";
+	rename -uid "BB3D73A5-4241-9258-AFDF-6DB3846F0988";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  5.208333333333333 0 129 0 196 0 241 0 353 0
+		 458 0 583 0;
+createNode animCurveTL -n "Knee_J_R_CTRL_translateZ";
+	rename -uid "98ACCECD-4C56-9C03-BE33-B9AEC2311B50";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  5.208333333333333 0 129 0 196 0 241 0 353 0
+		 458 0 583 0;
+createNode animCurveTU -n "Knee_J_R_CTRL_scaleX";
+	rename -uid "594EDC9C-4390-C6DC-E608-3B96C636F86C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  5.208333333333333 1 129 1 196 1 241 1 353 1
+		 458 1 583 1;
+createNode animCurveTU -n "Knee_J_R_CTRL_scaleY";
+	rename -uid "5057EA24-49B0-9790-7128-8AB649C23EB0";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  5.208333333333333 1 129 1 196 1 241 1 353 1
+		 458 1 583 1;
+createNode animCurveTU -n "Knee_J_R_CTRL_scaleZ";
+	rename -uid "BB74D934-46F2-9BE5-7148-378E79F024E4";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  5.208333333333333 1 129 1 196 1 241 1 353 1
+		 458 1 583 1;
+createNode animCurveTA -n "Ankle_J_R_CTRL_rotateX";
+	rename -uid "A21C0216-488E-B690-0457-7ABAF0A0989B";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  5.208333333333333 0 124 0 204 0 256 0 400 0
+		 443 0 596 -37.843005053651993 666 -37.843005053651993;
+createNode animCurveTA -n "Ankle_J_R_CTRL_rotateY";
+	rename -uid "6FB28445-414F-ED15-00E6-0E93897B00BE";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  5.208333333333333 0 124 0 204 0 256 0 400 0
+		 443 0 596 18.132561927704813 666 18.132561927704813;
+createNode animCurveTA -n "Ankle_J_R_CTRL_rotateZ";
+	rename -uid "2A736714-4E9A-ECA9-8AD1-D49F7A497028";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  5.208333333333333 0 124 21.208689600065942
+		 204 21.208689600065942 256 -33.231856585149693 400 -33.231856585149693 443 19.27466664140195
+		 596 19.27466664140195 666 2.0045240746565036;
+createNode animCurveTU -n "Ankle_J_R_CTRL_visibility";
+	rename -uid "2BE3D1BF-431A-8C2A-91F8-AAA2A73B6901";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  5.208333333333333 1 124 1 204 1 256 1 400 1
+		 443 1 596 1 666 1;
+	setAttr -s 8 ".kot[0:7]"  5 5 5 5 5 5 5 5;
+createNode animCurveTL -n "Ankle_J_R_CTRL_translateX";
+	rename -uid "C48FF7A4-4A22-5747-81E1-D7997C17B3F0";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  5.208333333333333 0 124 0 204 0 256 0 400 0
+		 443 0 596 0 666 0;
+createNode animCurveTL -n "Ankle_J_R_CTRL_translateY";
+	rename -uid "AF5E5156-4C97-004F-3ACF-12A9828EF17E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  5.208333333333333 0 124 0 204 0 256 0 400 0
+		 443 0 596 0 666 0;
+createNode animCurveTL -n "Ankle_J_R_CTRL_translateZ";
+	rename -uid "5EE581ED-4488-7C2C-3C14-67A0170DB795";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  5.208333333333333 0 124 0 204 0 256 0 400 0
+		 443 0 596 0 666 0;
+createNode animCurveTU -n "Ankle_J_R_CTRL_scaleX";
+	rename -uid "66516919-42BF-3C1E-E9DF-62B3A6654056";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  5.208333333333333 1 124 1 204 1 256 1 400 1
+		 443 1 596 1 666 1;
+createNode animCurveTU -n "Ankle_J_R_CTRL_scaleY";
+	rename -uid "A6200AC1-47BC-B23D-6F33-929A33E02EFD";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  5.208333333333333 1 124 1 204 1 256 1 400 1
+		 443 1 596 1 666 1;
+createNode animCurveTU -n "Ankle_J_R_CTRL_scaleZ";
+	rename -uid "EB6162C8-41F8-FF81-66F3-9EA886431ED4";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  5.208333333333333 1 124 1 204 1 256 1 400 1
+		 443 1 596 1 666 1;
 select -ne :time1;
 	setAttr ".o" 5.208333333333333;
 	setAttr ".unw" 5.208333333333333;
@@ -18759,28 +19049,58 @@ connectAttr "Ankle_J_L_CTRL_translateZ.o" "BaseCharacterRN.phl[407]";
 connectAttr "Ankle_J_L_CTRL_scaleX.o" "BaseCharacterRN.phl[408]";
 connectAttr "Ankle_J_L_CTRL_scaleY.o" "BaseCharacterRN.phl[409]";
 connectAttr "Ankle_J_L_CTRL_scaleZ.o" "BaseCharacterRN.phl[410]";
-connectAttr "Controllers.di" "BaseCharacterRN.phl[411]";
-connectAttr "Controllers.di" "BaseCharacterRN.phl[412]";
-connectAttr "Controllers.di" "BaseCharacterRN.phl[413]";
+connectAttr "Hip_J_R_CTRL_rotateX.o" "BaseCharacterRN.phl[411]";
+connectAttr "Hip_J_R_CTRL_rotateY.o" "BaseCharacterRN.phl[412]";
+connectAttr "Hip_J_R_CTRL_rotateZ.o" "BaseCharacterRN.phl[413]";
 connectAttr "Controllers.di" "BaseCharacterRN.phl[414]";
-connectAttr "Controllers.di" "BaseCharacterRN.phl[415]";
-connectAttr "Controllers.di" "BaseCharacterRN.phl[416]";
-connectAttr "Controllers.di" "BaseCharacterRN.phl[417]";
-connectAttr "Controllers.di" "BaseCharacterRN.phl[418]";
-connectAttr "Controllers.di" "BaseCharacterRN.phl[419]";
-connectAttr "Controllers.di" "BaseCharacterRN.phl[420]";
-connectAttr "Controllers.di" "BaseCharacterRN.phl[421]";
-connectAttr "Controllers.di" "BaseCharacterRN.phl[422]";
-connectAttr "Controllers.di" "BaseCharacterRN.phl[423]";
-connectAttr "Controllers.di" "BaseCharacterRN.phl[424]";
+connectAttr "Hip_J_R_CTRL_visibility.o" "BaseCharacterRN.phl[415]";
+connectAttr "Hip_J_R_CTRL_translateX.o" "BaseCharacterRN.phl[416]";
+connectAttr "Hip_J_R_CTRL_translateY.o" "BaseCharacterRN.phl[417]";
+connectAttr "Hip_J_R_CTRL_translateZ.o" "BaseCharacterRN.phl[418]";
+connectAttr "Hip_J_R_CTRL_scaleX.o" "BaseCharacterRN.phl[419]";
+connectAttr "Hip_J_R_CTRL_scaleY.o" "BaseCharacterRN.phl[420]";
+connectAttr "Hip_J_R_CTRL_scaleZ.o" "BaseCharacterRN.phl[421]";
+connectAttr "Knee_J_R_CTRL_rotateX.o" "BaseCharacterRN.phl[422]";
+connectAttr "Knee_J_R_CTRL_rotateY.o" "BaseCharacterRN.phl[423]";
+connectAttr "Knee_J_R_CTRL_rotateZ.o" "BaseCharacterRN.phl[424]";
 connectAttr "Controllers.di" "BaseCharacterRN.phl[425]";
-connectAttr "Controllers.di" "BaseCharacterRN.phl[426]";
-connectAttr "Controllers.di" "BaseCharacterRN.phl[427]";
-connectAttr "Controllers.di" "BaseCharacterRN.phl[428]";
-connectAttr "Controllers.di" "BaseCharacterRN.phl[429]";
-connectAttr "Controllers.di" "BaseCharacterRN.phl[430]";
-connectAttr "Controllers.di" "BaseCharacterRN.phl[431]";
-connectAttr "Controllers.di" "BaseCharacterRN.phl[432]";
+connectAttr "Knee_J_R_CTRL_visibility.o" "BaseCharacterRN.phl[426]";
+connectAttr "Knee_J_R_CTRL_translateX.o" "BaseCharacterRN.phl[427]";
+connectAttr "Knee_J_R_CTRL_translateY.o" "BaseCharacterRN.phl[428]";
+connectAttr "Knee_J_R_CTRL_translateZ.o" "BaseCharacterRN.phl[429]";
+connectAttr "Knee_J_R_CTRL_scaleX.o" "BaseCharacterRN.phl[430]";
+connectAttr "Knee_J_R_CTRL_scaleY.o" "BaseCharacterRN.phl[431]";
+connectAttr "Knee_J_R_CTRL_scaleZ.o" "BaseCharacterRN.phl[432]";
+connectAttr "Ankle_J_R_CTRL_rotateX.o" "BaseCharacterRN.phl[433]";
+connectAttr "Ankle_J_R_CTRL_rotateY.o" "BaseCharacterRN.phl[434]";
+connectAttr "Ankle_J_R_CTRL_rotateZ.o" "BaseCharacterRN.phl[435]";
+connectAttr "Controllers.di" "BaseCharacterRN.phl[436]";
+connectAttr "Ankle_J_R_CTRL_visibility.o" "BaseCharacterRN.phl[437]";
+connectAttr "Ankle_J_R_CTRL_translateX.o" "BaseCharacterRN.phl[438]";
+connectAttr "Ankle_J_R_CTRL_translateY.o" "BaseCharacterRN.phl[439]";
+connectAttr "Ankle_J_R_CTRL_translateZ.o" "BaseCharacterRN.phl[440]";
+connectAttr "Ankle_J_R_CTRL_scaleX.o" "BaseCharacterRN.phl[441]";
+connectAttr "Ankle_J_R_CTRL_scaleY.o" "BaseCharacterRN.phl[442]";
+connectAttr "Ankle_J_R_CTRL_scaleZ.o" "BaseCharacterRN.phl[443]";
+connectAttr "Controllers.di" "BaseCharacterRN.phl[444]";
+connectAttr "Controllers.di" "BaseCharacterRN.phl[445]";
+connectAttr "Controllers.di" "BaseCharacterRN.phl[446]";
+connectAttr "Controllers.di" "BaseCharacterRN.phl[447]";
+connectAttr "Controllers.di" "BaseCharacterRN.phl[448]";
+connectAttr "Controllers.di" "BaseCharacterRN.phl[449]";
+connectAttr "Controllers.di" "BaseCharacterRN.phl[450]";
+connectAttr "Controllers.di" "BaseCharacterRN.phl[451]";
+connectAttr "Controllers.di" "BaseCharacterRN.phl[452]";
+connectAttr "Controllers.di" "BaseCharacterRN.phl[453]";
+connectAttr "Controllers.di" "BaseCharacterRN.phl[454]";
+connectAttr "Controllers.di" "BaseCharacterRN.phl[455]";
+connectAttr "Controllers.di" "BaseCharacterRN.phl[456]";
+connectAttr "Controllers.di" "BaseCharacterRN.phl[457]";
+connectAttr "Controllers.di" "BaseCharacterRN.phl[458]";
+connectAttr "Controllers.di" "BaseCharacterRN.phl[459]";
+connectAttr "Controllers.di" "BaseCharacterRN.phl[460]";
+connectAttr "Controllers.di" "BaseCharacterRN.phl[461]";
+connectAttr "Controllers.di" "BaseCharacterRN.phl[462]";
 connectAttr "MyEyes.di" "Penguin_V_2_3_UV_mapped:EyeMesh_L.do";
 connectAttr "MyCharacter.di" "Penguin_V_2_3_UV_mapped:polySurface33.do";
 connectAttr "skinCluster1GroupId.id" "Penguin_V_2_3_UV_mapped:polySurface33Shape.iog.og[10].gid"
