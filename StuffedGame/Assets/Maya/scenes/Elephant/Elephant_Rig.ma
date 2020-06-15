@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Elephant_Rig.ma
-//Last modified: Mon, Jun 15, 2020 05:37:05 PM
+//Last modified: Mon, Jun 15, 2020 05:48:26 PM
 //Codeset: 1252
 file -rdi 1 -ns "BaseRig" -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
 file -r -ns "BaseRig" -dr 1 -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
@@ -15,14 +15,14 @@ fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 18363)\n";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
-	setAttr ".t" -type "double3" 17.021390505579191 3.5807007478311599 9.7513447961499384 ;
-	setAttr ".r" -type "double3" -1081.5383527923991 -2459.3999999998746 4.0493613285362222e-16 ;
+	setAttr ".t" -type "double3" 1.0019900028671869 -0.96227452610177355 17.288273871641234 ;
+	setAttr ".r" -type "double3" -1064.7383527922091 -2519.3999999993971 -1.6152139873886329e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "77E8AA9E-234E-68FC-26D2-21B85028178A";
 	setAttr -k off ".v";
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 18.935791429873486;
+	setAttr ".coi" 17.932811668637544;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -9959,7 +9959,6 @@ createNode transform -n "Skeleton" -p "Elephant_World";
 	rename -uid "49F32440-4ECF-A670-7FBA-42AE3D0DA8F3";
 createNode transform -n "Controls" -p "Elephant_World";
 	rename -uid "15694E93-4782-8097-8B8C-3CBA44A52D42";
-	setAttr ".v" no;
 createNode transform -n "Elephant_Export";
 	rename -uid "FC5B9A4A-4731-F72F-FB7B-608B90359470";
 	setAttr ".v" no;
@@ -19459,18 +19458,20 @@ createNode reference -n "BaseRigRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"BaseRigRN"
 		"BaseRigRN" 0
-		"BaseRigRN" 302
+		"BaseRigRN" 334
 		0 "|BaseRig:Root_J" "|Elephant_World|Skeleton" "-s -r "
 		0 "|BaseRig:Transform_Ctrl_Grp" "|Elephant_World|Controls" "-s -r "
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J" "useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J" "objectColor" " 0"
-		2 "|Elephant_World|Skeleton|BaseRig:Root_J" "lockInfluenceWeights" " 1"
+		2 "|Elephant_World|Skeleton|BaseRig:Root_J" "lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J" "useObjectColor" 
 		" 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J" "objectColor" 
 		" 1"
+		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J" "translate" 
+		" -type \"double3\" 0 0 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J" "lockInfluenceWeights" 
-		" 1"
+		" 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_IK" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_IK" 
@@ -19500,7 +19501,7 @@ createNode reference -n "BaseRigRN";
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK" 
 		"objectColor" " 2"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK|BaseRig:Knee_J_L_RK" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK|BaseRig:Knee_J_L_RK" 
@@ -19542,79 +19543,93 @@ createNode reference -n "BaseRigRN";
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK" 
 		"objectColor" " 2"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK" 
 		"objectColor" " 3"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK|BaseRig:Ankle_J_R_RK" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK|BaseRig:Ankle_J_R_RK" 
 		"objectColor" " 4"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK|BaseRig:Ankle_J_R_RK" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J" "useObjectColor" 
 		" 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J" "objectColor" 
 		" 1"
+		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J" "translate" 
+		" -type \"double3\" 0 0 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J" "lockInfluenceWeights" 
-		" 1"
+		" 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j" 
 		"objectColor" " 2"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j" 
 		"objectColor" " 3"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J" 
 		"objectColor" " 4"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L" 
 		"objectColor" " 5"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L" 
-		"lockInfluenceWeights" " 1"
+		"translate" " -type \"double3\" 0.76422435045242243 1.89481267606765691 -0.7973245978355179"
+		
+		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L" 
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeLid_J_L" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeLid_J_L" 
 		"objectColor" " 6"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeLid_J_L" 
-		"lockInfluenceWeights" " 1"
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeLid_J_L" 
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R" 
 		"objectColor" " 5"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R" 
-		"lockInfluenceWeights" " 1"
+		"translate" " -type \"double3\" 0.76422435045243264 1.89481267606765691 0.76102703809738104"
+		
+		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R" 
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeLid_J_R" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeLid_J_R" 
 		"objectColor" " 6"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeLid_J_R" 
-		"lockInfluenceWeights" " 1"
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeLid_J_R" 
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Jaw_J" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Jaw_J" 
 		"objectColor" " 5"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Jaw_J" 
-		"lockInfluenceWeights" " 1"
+		"translate" " -type \"double3\" 0.574056019121582 0.7452325765527279 0"
+		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Jaw_J" 
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L" 
 		"objectColor" " 4"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_IK" 
 		"visibility" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_IK" 
@@ -19654,11 +19669,19 @@ createNode reference -n "BaseRigRN";
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK" 
 		"objectColor" " 5"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK" 
 		"objectColor" " 6"
+		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK" 
+		"translateX" " -av"
+		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK" 
+		"translateY" " -av"
+		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK" 
+		"translateZ" " -av"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK" 
 		"rotate" " -type \"double3\" 0 0 5.02479226267205092"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK" 
@@ -19668,25 +19691,25 @@ createNode reference -n "BaseRigRN";
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK" 
 		"rotateZ" " -av"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK" 
 		"objectColor" " 7"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK" 
 		"objectColor" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R" 
 		"objectColor" " 4"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_IK" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_IK" 
@@ -19724,27 +19747,47 @@ createNode reference -n "BaseRigRN";
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK" 
 		"objectColor" " 5"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK" 
-		"lockInfluenceWeights" " 1"
+		"translate" " -type \"double3\" -0.34038998504008161 0.002301077464728114 0"
+		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK" 
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK" 
 		"objectColor" " 6"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK" 
-		"lockInfluenceWeights" " 1"
+		"translate" " -type \"double3\" 0.010378954196912593 0.0093462197043874262 0"
+		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK" 
+		"translateX" " -av"
+		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK" 
+		"translateY" " -av"
+		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK" 
+		"translateZ" " -av"
+		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK" 
+		"rotateX" " -av"
+		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK" 
+		"rotateY" " -av"
+		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK" 
+		"rotateZ" " -av"
+		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK" 
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK" 
 		"objectColor" " 7"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK" 
 		"useObjectColor" " 1"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK" 
 		"objectColor" " 0"
 		2 "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp" "visibility" " 1"
 		
+		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl" 
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL" 
@@ -19773,6 +19816,12 @@ createNode reference -n "BaseRigRN";
 		"rotateY" " -av"
 		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_L_FK_Master_Ctrl_Grp|BaseRig:Hip_J_L_GRP_FK|BaseRig:Hip_J_L_CTRL|BaseRig:Knee_J_L_GRP|BaseRig:Knee_J_L_CTRL|BaseRig:Ankle_J_L_GRP|BaseRig:Ankle_J_L_CTRL" 
 		"rotateZ" " -av"
+		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_R_FK_Master_Ctrl_Grp|BaseRig:Hip_J_R_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_R_FK_Master_Ctrl_Grp|BaseRig:Hip_J_R_CTRL|BaseRig:Knee_J_R_GRP|BaseRig:Knee_J_R_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_R_FK_Master_Ctrl_Grp|BaseRig:Hip_J_R_CTRL|BaseRig:Knee_J_R_GRP|BaseRig:Knee_J_R_CTRL|BaseRig:Ankle_J_R_GRP|BaseRig:Ankle_J_R_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL" 
@@ -19799,9 +19848,15 @@ createNode reference -n "BaseRigRN";
 		"rotateY" " -av"
 		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL|BaseRig:head_J_GRP|BaseRig:head_J_CTRL" 
 		"rotateZ" " -av"
+		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL|BaseRig:head_J_GRP|BaseRig:head_J_CTRL|BaseRig:Eye_J_L_GRP|BaseRig:Eye_J_L_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL|BaseRig:head_J_GRP|BaseRig:head_J_CTRL|BaseRig:Eye_J_L_GRP|BaseRig:Eye_J_L_CTRL|BaseRig:EyeLid_J_L_GRP|BaseRig:EyeLid_J_L_CTRL" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL|BaseRig:head_J_GRP|BaseRig:head_J_CTRL|BaseRig:Eye_J_R_GRP|BaseRig:Eye_J_R_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL|BaseRig:head_J_GRP|BaseRig:head_J_CTRL|BaseRig:Eye_J_R_GRP|BaseRig:Eye_J_R_CTRL|BaseRig:EyeLid_J_R_GRP|BaseRig:EyeLid_J_R_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL|BaseRig:head_J_GRP|BaseRig:head_J_CTRL|BaseRig:Jaw_J_GRP|BaseRig:Jaw_J_CTRL" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL|BaseRig:Clavical_J_L_GRP|BaseRig:Clavical_J_L_CTRL" 
 		"rotate" " -type \"double3\" 0 0 0"
@@ -19835,8 +19890,18 @@ createNode reference -n "BaseRigRN";
 		"rotateY" " -av"
 		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL|BaseRig:Clavical_J_L_GRP|BaseRig:Clavical_J_L_CTRL|BaseRig:Shoulder_J_L2_GRP|BaseRig:Shoulder_J_L2_CTRL|BaseRig:Arm_L_FK_Master_Ctrl_Grp|BaseRig:Shoulder_J_L_GRP|BaseRig:Shoulder_J_L_CTRL|BaseRig:Elbow_J_L_GRP|BaseRig:Elbow_J_L_CTRL|BaseRig:Wrist_J_L_GRP|BaseRig:Wrist_J_L_CTRL" 
 		"rotateZ" " -av"
+		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL|BaseRig:Clavical_J_R_GRP|BaseRig:Clavical_J_R_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL|BaseRig:Clavical_J_R_GRP|BaseRig:Clavical_J_R_CTRL|BaseRig:Shoulder_J_R2_GRP|BaseRig:Shoulder_J_R2_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL|BaseRig:Clavical_J_R_GRP|BaseRig:Clavical_J_R_CTRL|BaseRig:Shoulder_J_R2_GRP|BaseRig:Shoulder_J_R2_CTRL|BaseRig:Arm_R_FK_Master_Ctrl_Grp|BaseRig:Shoulder_J_R_GRP|BaseRig:Shoulder_J_R_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL|BaseRig:Clavical_J_R_GRP|BaseRig:Clavical_J_R_CTRL|BaseRig:Shoulder_J_R2_GRP|BaseRig:Shoulder_J_R2_CTRL|BaseRig:Arm_R_FK_Master_Ctrl_Grp|BaseRig:Shoulder_J_R_GRP|BaseRig:Shoulder_J_R_CTRL|BaseRig:Elbow_J_R_GRP|BaseRig:Elbow_J_R_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL|BaseRig:Clavical_J_R_GRP|BaseRig:Clavical_J_R_CTRL|BaseRig:Shoulder_J_R2_GRP|BaseRig:Shoulder_J_R2_CTRL|BaseRig:Arm_R_FK_Master_Ctrl_Grp|BaseRig:Shoulder_J_R_GRP|BaseRig:Shoulder_J_R_CTRL|BaseRig:Elbow_J_R_GRP|BaseRig:Elbow_J_R_CTRL|BaseRig:Wrist_J_R_GRP|BaseRig:Wrist_J_R_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "BaseRig:layer1" "displayType" " 0"
-		2 "BaseRig:layer1" "visibility" " 0"
+		2 "BaseRig:layer1" "visibility" " 1"
 		2 "BaseRig:layer2" "visibility" " 1"
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J.message" "BaseRigRN.placeHolderList[1]" 
 		""
@@ -19874,165 +19939,165 @@ createNode reference -n "BaseRigRN";
 		"BaseRigRN.placeHolderList[17]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK|BaseRig:Knee_J_L_RK|BaseRig:Ankle_J_L_RK.message" 
 		"BaseRigRN.placeHolderList[18]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK|BaseRig:Knee_J_L_RK|BaseRig:Ankle_J_L_RK.message" 
-		"BaseRigRN.placeHolderList[19]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK|BaseRig:Knee_J_L_RK|BaseRig:Ankle_J_L_RK.worldMatrix" 
-		"BaseRigRN.placeHolderList[20]" ""
+		"BaseRigRN.placeHolderList[19]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK|BaseRig:Knee_J_L_RK|BaseRig:Ankle_J_L_RK.objectColorRGB" 
-		"BaseRigRN.placeHolderList[21]" ""
+		"BaseRigRN.placeHolderList[20]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[22]" ""
+		"BaseRigRN.placeHolderList[21]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK.message" 
-		"BaseRigRN.placeHolderList[23]" ""
+		"BaseRigRN.placeHolderList[22]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK.worldMatrix" 
-		"BaseRigRN.placeHolderList[24]" ""
+		"BaseRigRN.placeHolderList[23]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK.objectColorRGB" 
-		"BaseRigRN.placeHolderList[25]" ""
+		"BaseRigRN.placeHolderList[24]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[26]" ""
+		"BaseRigRN.placeHolderList[25]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK.message" 
-		"BaseRigRN.placeHolderList[27]" ""
+		"BaseRigRN.placeHolderList[26]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK.worldMatrix" 
-		"BaseRigRN.placeHolderList[28]" ""
+		"BaseRigRN.placeHolderList[27]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK.objectColorRGB" 
-		"BaseRigRN.placeHolderList[29]" ""
+		"BaseRigRN.placeHolderList[28]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK|BaseRig:Ankle_J_R_RK.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[30]" ""
+		"BaseRigRN.placeHolderList[29]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK|BaseRig:Ankle_J_R_RK.message" 
-		"BaseRigRN.placeHolderList[31]" ""
+		"BaseRigRN.placeHolderList[30]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK|BaseRig:Ankle_J_R_RK.worldMatrix" 
-		"BaseRigRN.placeHolderList[32]" ""
+		"BaseRigRN.placeHolderList[31]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK|BaseRig:Ankle_J_R_RK.objectColorRGB" 
-		"BaseRigRN.placeHolderList[33]" ""
+		"BaseRigRN.placeHolderList[32]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J.message" 
-		"BaseRigRN.placeHolderList[34]" ""
+		"BaseRigRN.placeHolderList[33]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[35]" ""
+		"BaseRigRN.placeHolderList[34]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J.worldMatrix" 
-		"BaseRigRN.placeHolderList[36]" ""
+		"BaseRigRN.placeHolderList[35]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J.objectColorRGB" 
-		"BaseRigRN.placeHolderList[37]" ""
+		"BaseRigRN.placeHolderList[36]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j.message" 
-		"BaseRigRN.placeHolderList[38]" ""
+		"BaseRigRN.placeHolderList[37]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[39]" ""
+		"BaseRigRN.placeHolderList[38]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j.worldMatrix" 
-		"BaseRigRN.placeHolderList[40]" ""
+		"BaseRigRN.placeHolderList[39]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j.objectColorRGB" 
-		"BaseRigRN.placeHolderList[41]" ""
+		"BaseRigRN.placeHolderList[40]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j.message" 
-		"BaseRigRN.placeHolderList[42]" ""
+		"BaseRigRN.placeHolderList[41]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[43]" ""
+		"BaseRigRN.placeHolderList[42]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j.worldMatrix" 
-		"BaseRigRN.placeHolderList[44]" ""
+		"BaseRigRN.placeHolderList[43]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j.objectColorRGB" 
-		"BaseRigRN.placeHolderList[45]" ""
+		"BaseRigRN.placeHolderList[44]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J.message" 
-		"BaseRigRN.placeHolderList[46]" ""
+		"BaseRigRN.placeHolderList[45]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[47]" ""
+		"BaseRigRN.placeHolderList[46]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J.worldMatrix" 
-		"BaseRigRN.placeHolderList[48]" ""
+		"BaseRigRN.placeHolderList[47]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J.objectColorRGB" 
-		"BaseRigRN.placeHolderList[49]" ""
+		"BaseRigRN.placeHolderList[48]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L.message" 
-		"BaseRigRN.placeHolderList[50]" ""
+		"BaseRigRN.placeHolderList[49]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[51]" ""
+		"BaseRigRN.placeHolderList[50]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L.worldMatrix" 
-		"BaseRigRN.placeHolderList[52]" ""
+		"BaseRigRN.placeHolderList[51]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L.objectColorRGB" 
-		"BaseRigRN.placeHolderList[53]" ""
+		"BaseRigRN.placeHolderList[52]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeLid_J_L.message" 
-		"BaseRigRN.placeHolderList[54]" ""
+		"BaseRigRN.placeHolderList[53]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeLid_J_L.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[55]" ""
+		"BaseRigRN.placeHolderList[54]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeLid_J_L.worldMatrix" 
-		"BaseRigRN.placeHolderList[56]" ""
+		"BaseRigRN.placeHolderList[55]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeLid_J_L.objectColorRGB" 
-		"BaseRigRN.placeHolderList[57]" ""
+		"BaseRigRN.placeHolderList[56]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R.message" 
-		"BaseRigRN.placeHolderList[58]" ""
+		"BaseRigRN.placeHolderList[57]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[59]" ""
+		"BaseRigRN.placeHolderList[58]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R.worldMatrix" 
-		"BaseRigRN.placeHolderList[60]" ""
+		"BaseRigRN.placeHolderList[59]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R.objectColorRGB" 
-		"BaseRigRN.placeHolderList[61]" ""
+		"BaseRigRN.placeHolderList[60]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeLid_J_R.message" 
-		"BaseRigRN.placeHolderList[62]" ""
+		"BaseRigRN.placeHolderList[61]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeLid_J_R.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[63]" ""
+		"BaseRigRN.placeHolderList[62]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeLid_J_R.worldMatrix" 
-		"BaseRigRN.placeHolderList[64]" ""
+		"BaseRigRN.placeHolderList[63]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeLid_J_R.objectColorRGB" 
-		"BaseRigRN.placeHolderList[65]" ""
+		"BaseRigRN.placeHolderList[64]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Jaw_J.message" 
-		"BaseRigRN.placeHolderList[66]" ""
+		"BaseRigRN.placeHolderList[65]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Jaw_J.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[67]" ""
+		"BaseRigRN.placeHolderList[66]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Jaw_J.worldMatrix" 
-		"BaseRigRN.placeHolderList[68]" ""
+		"BaseRigRN.placeHolderList[67]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Jaw_J.objectColorRGB" 
-		"BaseRigRN.placeHolderList[69]" ""
+		"BaseRigRN.placeHolderList[68]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L.message" 
-		"BaseRigRN.placeHolderList[70]" ""
+		"BaseRigRN.placeHolderList[69]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[71]" ""
+		"BaseRigRN.placeHolderList[70]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L.worldMatrix" 
-		"BaseRigRN.placeHolderList[72]" ""
+		"BaseRigRN.placeHolderList[71]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L.objectColorRGB" 
-		"BaseRigRN.placeHolderList[73]" ""
+		"BaseRigRN.placeHolderList[72]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[74]" ""
+		"BaseRigRN.placeHolderList[73]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK.message" 
-		"BaseRigRN.placeHolderList[75]" ""
+		"BaseRigRN.placeHolderList[74]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK.worldMatrix" 
-		"BaseRigRN.placeHolderList[76]" ""
+		"BaseRigRN.placeHolderList[75]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK.objectColorRGB" 
-		"BaseRigRN.placeHolderList[77]" ""
+		"BaseRigRN.placeHolderList[76]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[78]" ""
+		"BaseRigRN.placeHolderList[77]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK.message" 
-		"BaseRigRN.placeHolderList[79]" ""
+		"BaseRigRN.placeHolderList[78]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK.worldMatrix" 
-		"BaseRigRN.placeHolderList[80]" ""
+		"BaseRigRN.placeHolderList[79]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK.objectColorRGB" 
-		"BaseRigRN.placeHolderList[81]" ""
+		"BaseRigRN.placeHolderList[80]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[82]" ""
+		"BaseRigRN.placeHolderList[81]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK.message" 
-		"BaseRigRN.placeHolderList[83]" ""
+		"BaseRigRN.placeHolderList[82]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK.worldMatrix" 
-		"BaseRigRN.placeHolderList[84]" ""
+		"BaseRigRN.placeHolderList[83]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK.objectColorRGB" 
-		"BaseRigRN.placeHolderList[85]" ""
+		"BaseRigRN.placeHolderList[84]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[86]" ""
+		"BaseRigRN.placeHolderList[85]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.message" 
-		"BaseRigRN.placeHolderList[87]" ""
+		"BaseRigRN.placeHolderList[86]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.worldMatrix" 
-		"BaseRigRN.placeHolderList[88]" ""
+		"BaseRigRN.placeHolderList[87]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.objectColorRGB" 
-		"BaseRigRN.placeHolderList[89]" ""
+		"BaseRigRN.placeHolderList[88]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R.message" 
-		"BaseRigRN.placeHolderList[90]" ""
+		"BaseRigRN.placeHolderList[89]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[91]" ""
+		"BaseRigRN.placeHolderList[90]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R.worldMatrix" 
-		"BaseRigRN.placeHolderList[92]" ""
+		"BaseRigRN.placeHolderList[91]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R.objectColorRGB" 
-		"BaseRigRN.placeHolderList[93]" ""
+		"BaseRigRN.placeHolderList[92]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[94]" ""
+		"BaseRigRN.placeHolderList[93]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK.message" 
-		"BaseRigRN.placeHolderList[95]" ""
+		"BaseRigRN.placeHolderList[94]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK.worldMatrix" 
-		"BaseRigRN.placeHolderList[96]" ""
+		"BaseRigRN.placeHolderList[95]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK.objectColorRGB" 
-		"BaseRigRN.placeHolderList[97]" ""
+		"BaseRigRN.placeHolderList[96]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK.lockInfluenceWeights" 
+		"BaseRigRN.placeHolderList[97]" ""
+		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK.message" 
 		"BaseRigRN.placeHolderList[98]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK.message" 
 		"BaseRigRN.placeHolderList[99]" ""
@@ -21356,89 +21421,118 @@ createNode groupId -n "skinCluster1GroupId";
 createNode skinCluster -n "skinCluster1";
 	rename -uid "BAA43DB9-4526-CE42-4FC4-B4A9FB4A3A64";
 	setAttr -s 1669 ".wl";
-	setAttr ".wl[0:314].w"
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
+	setAttr ".wl[0:186].w"
+		4 10 0.017604787859709405 23 0.22936056018712336 25 0.37723126567245457 
+		26 0.37580338628071264
+		4 10 0.0038673808960988797 23 0.14903278517561289 25 0.5206746094732202 
+		26 0.326425224455068
+		4 10 0.0060139589952458552 23 0.21747747994061198 25 0.40402067734210245 
+		26 0.37248788372203973
+		4 10 0.0039561085011558562 23 0.17330032413082358 25 0.39938186479348498 
+		26 0.42336170257453565
+		2 25 0.15625473856925964 26 0.84374526143074036
+		2 25 0.089382708072662354 26 0.91061729192733765
+		2 25 0.049145054072141647 26 0.95085494592785835
+		2 25 0.038146901875734329 26 0.96185309812426567
+		2 25 0.11346104741096497 26 0.88653895258903503
+		2 25 0.066574312746524811 26 0.93342568725347519
+		2 25 0.046280641108751297 26 0.9537193588912487
+		2 25 0.10497641563415527 26 0.89502358436584473
+		5 8 1.450315561886173e-05 10 1.5899273596655082e-05 23 0.12859095582587177 
+		25 0.53314859416159976 26 0.33823004758331299
+		4 10 3.8421841639557361e-05 23 0.22907487079379724 25 0.42934247584716728 
+		26 0.34154423151739588
+		2 25 0.14405500888824463 26 0.85594499111175537
+		2 25 0.27870103716850281 26 0.72129896283149719
+		2 25 0.12196942418813705 26 0.87803057581186295
+		2 25 0.076793238520622253 26 0.92320676147937775
+		4 10 1.4982415350937238e-05 23 0.24631408323164103 25 0.38141010526009317 
+		26 0.37226082909291491
+		3 23 0.17292868989333066 25 0.39513604453330764 26 0.4319352655733617
+		2 25 0.069335855543613434 26 0.93066414445638657
+		2 25 0.23020392656326294 26 0.76979607343673706
+		4 8 1.6280289756096673e-05 10 1.7168964706420998e-05 25 0.19284026324748993 
+		26 0.8071262874980476
+		2 25 0.18535074591636658 26 0.81464925408363342
+		2 25 0.21320328116416931 26 0.78679671883583069
+		2 22 0.33270828174369754 23 0.66729171825630251
+		2 22 0.344830609508325 23 0.65516939049167489
+		2 22 0.19373477719916987 23 0.80626522280083013
+		4 22 0.13663776266882621 23 0.86012272673815104 25 0.003043129985848686 
+		26 0.00019638060717405703
+		2 22 0.18734573531363219 23 0.81265426468636792
+		4 22 0.13515895262957242 23 0.86161517843644408 25 0.0032075203986945502 
+		26 1.8348535289025959e-05
+		2 22 0.20784257006737619 23 0.79215742993262395
+		2 22 0.19453092957799498 23 0.805469070422005
+		2 22 0.32348276921609087 23 0.67651723078390913
+		4 22 0.022783321222427818 23 0.96875841428673237 25 0.0052447335821592025 
+		26 0.0032135309086805961
+		4 22 0.002320349655117885 23 0.87178612737668193 25 0.11617361269863058 
+		26 0.0097199102695695386
+		4 22 0.0059121164507445773 23 0.86362191939882171 25 0.11562524938335134 
+		26 0.014840714767082371
+		4 22 0.019545159487653292 23 0.89887097895711354 25 0.073283139198424635 
+		26 0.0083007223568084872
+		4 22 0.0091669983870009651 23 0.98219379259751294 25 0.0039930843293075101 
+		26 0.004646124686178533
+		2 22 0.23366399797070878 23 0.76633600202929109
+		4 22 0.15034033903677685 23 0.84955872644317809 25 9.4815823482154583e-05 
+		26 6.1186965629865719e-06
+		4 22 0.00310357058153116 23 0.8390080874114787 25 0.14161625793150778 
+		26 0.01627208407548239
+		2 22 0.2267724504173155 23 0.77322754958268447
+		4 22 0.19313141539026732 23 0.80667211296614016 25 0.00019553408578095133 
+		26 9.3755781154438118e-07
+		4 22 0.019163416186293202 23 0.89906577602031368 25 0.071582131781454589 
+		26 0.010188676011938541
+		2 22 0.18982348989769798 23 0.81017651010230207
+		2 22 0.16793926885542257 23 0.83206073114457746
+		2 22 0.28313737167574687 23 0.71686262832425318
+		2 22 0.23352217889823534 23 0.76647782110176466
+		2 22 0.14439319278783325 23 0.85560680721216675
+		2 22 0.15158162612780557 23 0.84841837387219454
+		2 22 0.59840830087721519 23 0.40159169912278481
+		4 22 0.0066764044054398713 23 0.98385618227443261 25 0.0074043685893798745 
+		26 0.0020630447307475744
+		2 22 0.28270609234445154 23 0.71729390765554846
+		2 22 0.31910118204557331 23 0.68089881795442675
+		2 22 0.42477501945335661 23 0.57522498054664339
+		2 22 0.82902730649933565 23 0.17097269350066435
+		2 22 0.55911401153990892 23 0.44088598846009092
+		2 22 0.52055961650216309 23 0.47944038349783691
+		2 22 0.27319367756589819 23 0.72680632243410193
+		2 22 0.19454866793413478 23 0.80545133206586517
+		2 22 0.2050880909648663 23 0.79491190903513365
+		2 22 0.15775837135940285 23 0.84224162864059715
+		2 22 0.18755086829458806 23 0.812449131705412
+		2 22 0.30235909209426942 23 0.69764090790573063
+		2 22 0.32199428593601842 23 0.67800571406398158
+		4 22 0.093642721208707883 23 0.85244680176834697 25 0.05351896945602827 
+		26 0.00039150756691681344
+		4 22 0.063985422498701539 23 0.87862367228395621 25 0.054095584736724836 
+		26 0.0032953204806174113
+		4 22 0.071941595627286831 23 0.91440420215821294 25 0.013403113566947648 
+		26 0.00025108864755244548
+		4 22 0.17017605110536532 23 0.82947597112037608 25 0.00034317948654386091 
+		26 4.7982877146650017e-06
+		2 22 0.26244507164126546 23 0.7375549283587346
+		2 22 0.30054211101276368 23 0.69945788898723626
+		4 22 0.080412002682640968 23 0.91945356107967757 25 0.00013428284237656748 
+		26 1.5339530484119742e-07
+		4 22 0.1211280037634014 23 0.87332105120579906 25 0.0055277615094238789 
+		26 2.3183521375787356e-05
+		3 23 0.69633587620652648 25 0.19887040629571384 26 0.10479371749775976
+		3 23 0.68537271249062215 25 0.17673799720430136 26 0.13788929030507643
+		3 23 0.72346479354946602 25 0.13968821439560841 26 0.13684699205492556
+		4 10 0.0013559747490883938 23 0.81326563761597392 25 0.030747829595947091 
+		26 0.15463055803899065
+		4 10 3.3345380641450427e-05 23 0.76306584839662217 25 0.1130823686796 
+		26 0.12381843754313637
+		3 23 0.83571557903538274 25 0.050191796997245422 26 0.1140926239673718
+		3 23 0.71079913548886076 25 0.15298189300098539 26 0.13621897151015377
+		4 10 0.00012692735636071496 23 0.73877085740028958 25 0.15132109097875285 
+		26 0.10978112426459692
 		4 10 0.017976758496071919 19 0.23276214301586151 20 0.37918670712301528 
 		21 0.37007439136505127
 		4 10 0.0039193441629149879 19 0.15044297277927399 20 0.52280867099761963 
@@ -21533,14 +21627,14 @@ createNode skinCluster -n "skinCluster1";
 		3 19 0.87473118305206299 20 0.015964247286319733 21 0.10930456966161728
 		3 19 0.72187155485153198 20 0.14487630128860474 21 0.13325214385986328
 		3 19 0.75589436292648315 20 0.13788984715938568 21 0.10621578991413116
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
+		3 23 0.77725739893922163 25 0.16555481696232427 26 0.05718778409845425
+		3 23 0.81804416597912477 25 0.13163917057895924 26 0.050316663441915987
+		3 23 0.82658078036925486 25 0.10352466230108025 26 0.06989455732966493
+		3 23 0.82110741321248926 25 0.11792015826491578 26 0.060972428522594831
+		3 23 0.93292671253295001 25 0.026384976520839425 26 0.040688310946210615
+		3 23 0.86150004499324428 25 0.064797126578548969 26 0.073702828428206774
+		3 23 0.86339181547968036 25 0.099969964517644297 26 0.036638220002675401
+		3 23 0.84821872948286581 25 0.1108950936670514 26 0.040886176850082757
 		3 19 0.78159299492835999 20 0.16628167405724525 21 0.05212533101439476
 		3 19 0.82266661524772644 20 0.13275174796581268 21 0.044581636786460876
 		3 19 0.82423187792301178 20 0.11082157492637634 21 0.064946547150611877
@@ -21549,14 +21643,22 @@ createNode skinCluster -n "skinCluster1";
 		3 19 0.86706006526947021 20 0.061557933688163757 21 0.071382001042366028
 		3 19 0.8690144270658493 20 0.097857262939214706 21 0.033128309994935989
 		3 19 0.86048330366611481 20 0.10333972051739693 21 0.036176975816488266
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
+		4 22 0.030752104486891335 23 0.89878619796743398 25 0.068943300305207511 
+		26 0.0015183972404671463
+		4 22 0.049886830913278501 23 0.85969700244468772 25 0.086048178347935655 
+		26 0.0043679882940981241
+		4 22 0.067932904860591489 23 0.81868935114186325 25 0.11081275690105317 
+		26 0.0025649870964921206
+		4 22 0.12861652381644839 23 0.86179879996354058 25 0.009089931912808864 
+		26 0.00049474430720217156
+		4 22 0.17905051149780121 23 0.82091598651873077 25 3.0918801431531515e-05 
+		26 2.583182036456703e-06
+		2 22 0.072867070002879827 23 0.92713292999712005
+		2 22 0.075385563931223865 23 0.92317661304133469;
+	setAttr ".wl[186:459].w"
+		2 25 0.0014102038375491694 26 2.7619189892339128e-05
+		4 22 0.082702853768572893 23 0.88784013011638163 25 0.028825652723673281 
+		26 0.00063136339137213643
 		4 17 0.033524379134178162 19 0.90189310908317566 20 0.063451138790696859 
 		21 0.0011313729919493198
 		4 17 0.054255425930023193 19 0.85892420262098312 20 0.083231267519295216 
@@ -21569,14 +21671,15 @@ createNode skinCluster -n "skinCluster1";
 		2 17 0.079252839088439941 19 0.92074716091156006
 		4 17 0.09231877326965332 19 0.88504707813262939 20 0.022608322435189621 
 		21 2.5826162527664565e-05
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
+		2 25 0.27973079681396484 26 0.72026920318603516
+		2 25 0.23989200592041016 26 0.76010799407958984
+		2 25 0.28602826595306396 26 0.71397173404693604
+		4 8 0.0031198090744585559 10 0.0034201314077906089 25 0.37876522541046143 
+		26 0.61469483410728942
+		2 25 0.27277970314025879 26 0.72722029685974121
+		2 25 0.26565301418304443 26 0.73434698581695557
+		2 25 0.22365778684616089 26 0.77634221315383911
+		2 25 0.30870133638381958 26 0.69129866361618042
 		2 20 0.27973079681396484 21 0.72026920318603516
 		2 20 0.23989200592041016 21 0.76010799407958984
 		2 20 0.28602826595306396 21 0.71397173404693604
@@ -21586,14 +21689,22 @@ createNode skinCluster -n "skinCluster1";
 		2 20 0.26565301418304443 21 0.73434698581695557
 		2 20 0.22365778684616089 21 0.77634221315383911
 		2 20 0.30870133638381958 21 0.69129866361618042
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
+		4 10 2.5574012138014036e-06 23 0.41950823582994712 25 0.39667028662977283 
+		26 0.18381892013906626
+		4 10 0.0030659431716373226 23 0.41490774150035292 25 0.39313018417271584 
+		26 0.18889613115529391
+		4 10 6.0095134620803738e-07 23 0.39996398514923731 25 0.38334001010706303 
+		26 0.21669540379235347
+		4 10 2.4575079125976063e-05 23 0.24461022180856978 25 0.56683666534208876 
+		26 0.18852853777021547
+		4 10 0.00024411571243313347 23 0.35633456971158395 25 0.37013530648502435 
+		26 0.27328600809095865
+		4 10 0.020411564635510842 23 0.1772330951795873 25 0.44144076221149908 
+		26 0.36091457797340282
+		4 10 -1.3453174253237717e-10 23 0.18345902766174155 25 0.50726915158799446 
+		26 0.30927182088479566
+		4 10 0.00015393678629180982 23 0.34742632668106949 25 0.41217381215882753 
+		26 0.24024592437381107
 		3 19 0.42607420682907104 20 0.39542454481124878 21 0.17850124835968018
 		4 10 0.0027329974330822632 19 0.41940706968307495 20 0.39343721638546786 
 		21 0.18442271649837494
@@ -21604,14 +21715,14 @@ createNode skinCluster -n "skinCluster1";
 		21 0.36011597514152527
 		3 19 0.18357540667057037 20 0.50876510143280029 21 0.30765949189662933
 		3 19 0.35175243020057678 20 0.41175070405006409 21 0.23649686574935913
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
+		2 25 0.23263828456401825 26 0.76736171543598175
+		2 25 0.18833981454372406 26 0.81166018545627594
+		2 25 0.11965259909629822 26 0.88034740090370178
+		2 25 0.096735231578350067 26 0.90326476842164993
+		2 25 0.070220403373241425 26 0.92977959662675858
+		2 25 0.084288142621517181 26 0.91571185737848282
+		2 25 0.055894806981086731 26 0.94410519301891327
+		2 25 0.16755419969558716 26 0.83244580030441284
 		2 20 0.23263828456401825 21 0.76736171543598175
 		2 20 0.18833981454372406 21 0.81166018545627594
 		2 20 0.11965259909629822 21 0.88034740090370178
@@ -21668,6 +21779,17 @@ createNode skinCluster -n "skinCluster1";
 		1 11 1
 		1 11 1
 		1 11 1
+		1 11 0.99999999999999989
+		1 11 0.99999999999999989
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1.0000000000000002
 		1 11 1
 		1 11 1
 		1 11 1
@@ -21685,24 +21807,12 @@ createNode skinCluster -n "skinCluster1";
 		1 11 1
 		1 11 1
 		1 11 1
+		1 11 0.99999999999999989
 		1 11 1
 		1 11 1
 		1 11 1
 		1 11 1
-		1 11 1
-		1 11 1;
-	setAttr ".wl[315:541].w"
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
+		1 11 0.99999999999999989
 		1 11 1
 		1 11 1
 		1 11 1
@@ -21772,53 +21882,68 @@ createNode skinCluster -n "skinCluster1";
 		1 11 1
 		1 11 1
 		1 11 1
-		2 10 0.0068747913464903831 11 0.99312520865350962
+		2 10 0.0074941470461142457 11 0.99250585295388594
 		1 11 1
 		1 11 1
 		1 11 1
-		2 10 0.056604791432619095 11 0.94339520856738091
+		2 10 0.061139028151367604 11 0.93886097184863249
 		1 11 1
 		1 11 1
 		1 11 1
-		2 10 0.076212503015995026 11 0.92378749698400497
-		2 10 0.096172206103801727 11 0.90382779389619827
-		4 9 0.55153194069862366 10 0.33812630176544189 11 0.016985576599836349 
-		17 0.093356180936098099
-		4 9 0.22656500339508057 10 0.511435866355896 11 0.12173104286193848 
-		17 0.14026808738708496
+		2 10 0.078996013146078514 11 0.9210039868539216
+		2 10 0.10545316191304728 11 0.89454683808695268
+		7 1 5.5471272585249675e-06 8 0.0030158731736147542 9 0.54383247762616949 
+		10 0.32693800939384038 11 0.024884237212328329 17 0.0085382174645708582 
+		22 0.092785638002217757
+		7 1 1.5540006227187741e-10 8 4.0647085800618175e-07 9 0.2374240619231765 
+		10 0.46329017125706018 11 0.12296330866544357 17 0.02503876788667498 
+		22 0.15128328360382437
 		2 10 0.19016215205192566 11 0.80983784794807434
-		2 10 0.13279812037944794 11 0.86720187962055206
+		4 10 0.13436879000674634 11 0.86516647032566796 18 0.00018578023293473847 
+		23 0.00027895943465090013
 		3 10 0.23078095575328916 11 0.76875247061252594 17 0.00046657363418489695
-		3 10 0.39125335216522217 11 0.59386080503463745 17 0.014885842800140381
-		2 10 0.42341271042823792 11 0.57658728957176208
-		3 9 0.18158054351806641 10 0.76021909713745117 11 0.058200359344482422
-		3 9 0.075700297951698303 10 0.75451511144638062 11 0.16978459060192108
-		4 9 0.11260084807872772 10 0.57037878036499023 11 0.19632247090339661 
-		17 0.12069790065288544
-		4 8 0.19182711839675903 9 0.54542434215545654 10 0.25599740911275148 
-		11 0.0067511303350329399
-		4 0 0.090076684951782227 1 0.84321429487317801 2 0.00033305678516626358 
-		8 0.066375963389873505
-		4 0 0.063462734222412109 1 0.84026630409061909 2 0.08383043110370636 
-		8 0.012440530583262444
-		3 0 0.048703849315643311 1 0.88033279031515121 8 0.070963360369205475
-		2 1 0.82501007616519928 8 0.17498992383480072
-		3 0 0.12143492698669434 1 0.69286836683750153 8 0.18569670617580414
-		3 9 0.35372740030288696 10 0.61676680482923985 11 0.029505794867873192
-		4 9 0.42231684923171997 10 0.39472439885139465 11 0.046001654118299484 
-		17 0.13695709779858589
-		4 1 0.27583587169647217 9 0.33196967840194702 10 0.38761245645582676 
-		11 0.0045819934457540512
-		4 1 0.29358798265457153 8 0.29976850748062134 9 0.34396634250879288 
-		10 0.062677167356014252
-		4 1 0.37380343675613403 8 0.31063896417617798 9 0.15490120649337769 
-		10 0.1606563925743103
-		4 1 0.68795549869537354 8 0.17717486619949341 9 0.090551268309354782 
-		10 0.044318366795778275
-		4 9 0.054925508797168732 10 0.51936310529708862 11 0.36055063456296921 
-		17 0.065160751342773438
-		4 1 0.09059365838766098 8 0.24423602968454361 9 0.50165228545665741 
-		10 0.163518026471138
+		7 9 0.0018116336421726696 10 0.36409181665864199 11 0.60060864841896899 
+		17 0.0013487568270281886 18 0.006728910309817801 22 0.015265043626791902 
+		23 0.010145190516578475
+		4 10 0.42516640300127317 11 0.57453839358084169 18 0.00011788781974750656 
+		23 0.00017731559813749759
+		5 9 0.20215651771743245 10 0.72892378613025777 11 0.068786504581762178 
+		18 5.3444745311974056e-05 23 7.9746825235662254e-05
+		5 9 0.083718711015473415 10 0.70615584665844378 11 0.1982191765833512 
+		18 0.0047477947772434012 23 0.0071584709654882667
+		6 8 5.2370046984676312e-09 9 0.12795365123108837 10 0.52235738516560337 
+		11 0.1842370016450369 17 0.027423050721200992 22 0.13802890599906278
+		5 1 0.00088077333996862362 8 0.1978970233669568 9 0.53217754803980322 
+		10 0.26018775609459727 11 0.0088568991586740805
+		7 0 0.076246392815633376 1 0.82208665805787107 2 0.009410799509352745 
+		3 0.002442512563965805 5 0.014410737975601265 6 0.0036673192081875068 
+		8 0.071735579869388139
+		9 0 0.060226579226053747 1 0.81442455758489329 2 3.2166430540727117e-05 
+		3 0.020101767517720658 5 0.062996210579267797 6 0.030235077178583876 
+		8 0.01198364125106806 9 9.6133364772017681e-11 10 4.5444202003114363e-11
+		9 0 0.040641501550714797 1 0.87141886497072096 2 0.00804363888330944 
+		3 0.00043759871679748414 5 0.012078634302779927 6 0.00065711495289318719 
+		8 0.06672243930788764 9 1.4077003182720075e-07 10 6.6544864808500162e-08
+		6 1 0.83140765573520514 2 2.2499008754453213e-05 5 3.3766780631102066e-05 
+		8 0.16837815657941749 9 0.00010723141793357497 10 5.0690478058375408e-05
+		3 0 0.1073621021141857 1 0.71104730656820492 8 0.18159059131760943
+		5 1 9.6392112259061427e-09 8 5.5488473943237954e-11 9 0.34601913769995918 
+		10 0.62248672360571289 11 0.031494128918420766
+		7 1 2.8539486928912622e-08 8 3.0412949677759547e-05 9 0.41712674527784965 
+		10 0.37510829680167151 11 0.055038957272567836 17 0.015236634091267163 
+		22 0.13745892506747925
+		5 1 0.26692438264374319 8 0.0092111905483838984 9 0.33120119485741056 
+		10 0.38854952392444314 11 0.0041137080260191536
+		4 1 0.29625684998772472 8 0.3020134081217466 9 0.33586897837152474 
+		10 0.065860763519004009
+		4 1 0.37988157761978936 8 0.30364034978989957 9 0.15550252744793708 
+		10 0.16097554514237405
+		4 1 0.68259834972371503 8 0.18096270861472741 9 0.091721193854075095 
+		10 0.044717747807482479
+		6 8 2.5313785237542961e-11 9 0.062344439071895033 10 0.49068322219958871 
+		11 0.33418985574585319 17 0.022323073477519977 22 0.090459409479829223
+		4 1 0.09389741957036668 8 0.2459562568356482 9 0.49377378700495994 
+		10 0.16637253658902521
 		1 11 1
 		1 11 1
 		1 11 1
@@ -21851,7 +21976,8 @@ createNode skinCluster -n "skinCluster1";
 		17 0.33610451221466064
 		3 10 0.43680435419082642 17 0.13527950644493103 19 0.42791613936424261
 		3 10 0.54208406805992126 17 0.18111148476600647 19 0.27680444717407227
-		3 10 0.7556111216545105 17 0.19861023128032684 19 0.045778647065162659
+		3 10 0.7556111216545105 17 0.19861023128032684 19 0.045778647065162659;
+	setAttr ".wl[460:697].w"
 		3 10 0.79172235727310181 17 0.0065494459122419357 19 0.20172819681465626
 		3 10 0.66531604528427124 17 0.13724935054779053 19 0.19743460416793823
 		3 10 0.3621094822883606 17 0.1004863977432251 19 0.53740411996841431
@@ -21972,9 +22098,8 @@ createNode skinCluster -n "skinCluster1";
 		19 0.37714755535125732
 		4 9 0.0098233819007873535 10 0.22712370753288269 11 0.44356006383895874 
 		19 0.31949284672737122
-		3 1 0.11058545857667923 8 0.25776313990354538 9 0.43354013562202454;
-	setAttr ".wl[541:971].w"
-		1 10 0.19811126589775085
+		4 1 0.11058545857667923 8 0.25776313990354538 9 0.43354013562202454 
+		10 0.19811126589775085
 		4 1 0.1650804877281189 8 0.16444879770278931 9 0.41609883308410645 
 		10 0.25437188148498535
 		4 1 0.19752226769924164 8 0.11148180067539215 9 0.48822209239006042 
@@ -22045,6 +22170,7 @@ createNode skinCluster -n "skinCluster1";
 		1 11 1
 		1 11 1
 		1 11 1
+		2 10 0.013610047288239002 11 0.986389952711761
 		1 11 1
 		1 11 1
 		1 11 1
@@ -22101,8 +22227,8 @@ createNode skinCluster -n "skinCluster1";
 		1 11 1
 		1 11 1
 		1 11 1
+		2 10 0.011802583001554012 11 0.98819741699844599
 		1 11 1
-		2 10 0.0054648523218929768 11 0.99453514767810702
 		1 11 1
 		1 11 1
 		1 11 1
@@ -22112,115 +22238,188 @@ createNode skinCluster -n "skinCluster1";
 		1 11 1
 		1 11 1
 		1 11 1
+		2 10 0.0064196651801466942 11 0.99358033481985331
+		2 10 0.091083787381649017 11 0.90891621261835098
 		1 11 1
 		1 11 1
-		2 10 0.0094392960891127586 11 0.99056070391088724
 		1 11 1
 		1 11 1
 		1 11 1
 		1 11 1
+		2 10 0.072367481887340546 11 0.92763251811265945
+		2 10 0.096804236307202099 11 0.90319576369279786
+		2 10 0.10182858814288828 11 0.89817141185711169
+		2 10 0.1529344767332077 11 0.8470655232667923
+		4 9 0.49313569068908691 10 0.2602522149682045 11 0.079762525856494904 
+		22 0.16684956848621368
+		4 9 0.22077234089374542 10 0.29083015024662018 11 0.15229299664497375 
+		22 0.33610451221466064
+		3 10 0.43898213752508508 22 0.13734925932320524 23 0.42366860315170979
+		3 10 0.54137541105431963 22 0.1816061130449784 23 0.27701847590070194
+		6 1 3.6660850110115106e-05 8 6.9044756082492498e-05 9 0.00031633291389621121 
+		10 0.75535469208634254 22 0.19847564400914752 23 0.04574762538442112
+		3 10 0.79002183020048511 22 0.0081746978147007737 23 0.20180347198481413
+		6 1 0.0001631900877639373 8 0.00030699176263076881 9 0.0014278162516099049 
+		10 0.66443003241102361 22 0.13683434913092002 23 0.19683762035605176
+		3 10 0.36286905491908483 22 0.10371041947351248 23 0.53342052560740272
+		5 9 0.0027163991073733684 10 0.28768309340556519 11 0.29668684726283784 
+		22 0.0025460584431567512 23 0.41036760178106685
+		4 9 0.0021725262320354682 10 0.29278322001734569 11 0.36261604278441173 
+		23 0.34242821096620712
+		4 9 0.021282662349578339 10 0.37011467563705147 11 0.30189719987485869 
+		22 0.00042195088553765442;
+	setAttr ".wl[697:975].w"
+		1 23 0.30628351125297382
+		2 10 0.21016243100166321 11 0.78983756899833679
+		2 10 0.21900206804275513 11 0.78099793195724487
+		2 10 0.19550171494483948 11 0.80449828505516052
+		2 10 0.09986279159784317 11 0.90013720840215683
+		3 10 0.14602133705602355 11 0.85105915993318959 23 0.0029195030107868614
+		3 10 0.14822154726268788 11 0.84855955440717623 23 0.0032188983301358141
+		3 10 0.1727033073400952 11 0.8048310309935085 23 0.022465661666396242
+		4 10 0.17903332885302056 11 0.79307411422142116 22 0.010349117366345865 
+		23 0.017543439559212389
+		4 10 0.23961240308054865 11 0.66577064658944329 22 0.011078497747640239 
+		23 0.083538452582367806
+		3 10 0.19265906807954747 11 0.68259567049647019 23 0.1247452614239823
+		3 10 0.26776255011916589 11 0.63391681654382226 23 0.09832063333701184
+		3 10 0.32173488121298033 11 0.64480168374289659 23 0.033463435044123059
+		3 10 0.45799426452452774 11 0.54067360381795804 23 0.0013321316575141936
+		3 9 0.29208600521087646 10 0.59572356939315796 11 0.11219042539596558
+		4 9 0.12053892580777961 10 0.60193460022549927 11 0.22734906395853297 
+		23 0.050177410008188185
+		4 9 0.12163287401199341 10 0.38128456473350525 11 0.17745381593704224 
+		22 0.31962874531745911
+		3 10 0.29322035926179968 11 0.64314070752434438 23 0.063638933213855942
+		2 10 0.21466614305973053 11 0.78533385694026947
+		3 10 0.20459015020331986 11 0.68895788337005803 23 0.10645196642662207
+		2 10 0.19444350898265839 11 0.80555649101734161
+		5 9 0.24750093760332814 10 0.49287076463754304 11 0.095931801855424853 
+		22 3.5629162514746147e-05 23 0.16366086674118918
+		4 8 0.24023431539535522 9 0.43414318561553955 10 0.29998003132641315 
+		11 0.02564246766269207
+		4 8 0.17317622900009155 9 0.47679635882377625 10 0.34730827971361578 
+		11 0.002719132462516427
+		4 1 0.7085307240486145 5 0.15262462198734283 6 0.039612740278244019 
+		8 0.099231913685798645
+		4 0 0.05063861608505249 1 0.73355680704116821 6 0.206432213075459 
+		8 0.0093723637983202934
+		4 1 0.8129907409786773 5 0.13480549029693903 6 0.0011259407490822626 
+		8 0.051077827975301457
+		4 1 0.79050874153572859 5 0.14122806262284621 6 0.023003823677492097 
+		8 0.045259372163933088
+		4 1 0.85505808838274078 5 0.089070197705959031 6 0.00032759279922300877 
+		8 0.055544121112077183
+		4 1 0.79094797372817993 5 0.14667142927646637 6 0.0084879212081432343 
+		8 0.053892675787210464
+		4 1 0.72612237930297852 5 0.15833969414234161 6 0.039952628314495087 
+		8 0.075585298240184784
+		4 1 0.8264610692858696 5 0.12386400485411286 6 0.0067386082373559475 
+		8 0.042936317622661591
+		2 1 0.91603738814592361 8 0.083962611854076385
+		4 0 0.05932164192199707 1 0.76508264243602753 5 0.06438126415014267 
+		8 0.11121445149183273
+		2 1 0.89364314079284668 8 0.10635685920715332
+		3 1 0.81970637291669846 5 0.035621963441371918 8 0.14467166364192963
+		3 1 0.88050883990945294 5 0.00047335046110674739 8 0.11901780962944031
+		3 1 0.82559916377067566 5 0.065450400114059448 8 0.10895043611526489
+		2 1 0.84973511099815369 8 0.15026488900184631
+		6 1 0.00028093732269976468 8 0.00051846728436866218 9 0.0030224042351167102 
+		10 0.50464193931495493 22 0.13910812255161864 23 0.35242812929124134
+		3 10 0.30569776360348 22 0.17466921960857901 23 0.51963301678794105
+		3 10 0.48571892593314525 22 0.13914735486485211 23 0.37513371920200256
+		3 10 0.37811294581955462 22 0.33736359381770348 23 0.2845234603627419
+		3 10 0.37534083943157931 22 0.37903201577688217 23 0.24562714479153852
+		3 10 0.4661583346556874 22 0.41169300995046471 23 0.12214865539384791
+		2 10 0.71838340163230896 22 0.28161659836769104
+		4 8 0.18950928747653961 9 0.48468194901943207 10 0.30074158310890198 
+		22 0.025067180395126343
+		4 1 0.051894471049308777 8 0.095770776271820068 9 0.5582955926656723 
+		10 0.29403916001319885
+		4 1 0.054100360721349716 8 0.1018892414867878 9 0.46681199967861176 
+		10 0.37719839811325073
+		7 1 0.00033478705497820186 8 0.00012934876019357134 9 0.34278260382734665 
+		10 0.44385171304737892 11 0.020994069090146561 23 0.19189518044154674 
+		26 1.2297778409301407e-05
+		3 9 0.28929176926612854 10 0.66458135843276978 11 0.046126872301101685
+		3 10 0.5381817866558789 22 0.10534070622848306 23 0.35647750711563803
+		3 10 0.46990740063626851 22 0.24821051506251354 23 0.28188208430121797
+		3 10 0.46149076366277797 22 0.29851779377033955 23 0.23999144256688254
+		4 9 0.36887878179550171 10 0.27754225581884384 11 0.10843157023191452 
+		22 0.24514739215373993
+		4 9 0.059224424208188367 10 0.42879616130943271 11 0.28665085550165853 
+		23 0.22532855898072041
+		3 10 0.37861072324886419 11 0.61008351745856115 23 0.011305759292574685
+		2 10 0.23034650087356567 11 0.76965349912643433
+		4 1 0.19475109347089148 9 0.52277658259052928 10 0.27347214458075253 
+		26 0.0090001793578267097
+		4 1 0.18864025175571442 8 0.090127840638160706 9 0.32445046305656433 
+		10 0.39678144454956055
+		3 10 0.15692975631973854 11 0.83253816268983905 23 0.010532080990422354
+		3 10 0.17771234784743561 11 0.67314875298232835 23 0.14913889917023604
+		4 1 0.32203972339630127 8 0.32370051741600037 9 0.25764349848031998 
+		10 0.096616260707378387
+		4 1 0.40660186111927032 8 0.22897858917713165 9 0.25913534313440323 
+		10 0.10528420656919481
+		4 1 0.50633527338504791 8 0.20119918882846832 9 0.21970570087432861 
+		10 0.072759836912155151
+		4 1 0.57208971679210663 8 0.17484335601329803 9 0.19609217345714569 
+		10 0.056974753737449646
+		4 1 0.5405728667974472 8 0.17440168559551239 9 0.2638474702835083 
+		10 0.021177977323532104
+		4 1 0.43312278389930725 8 0.24233631789684296 9 0.1607697606086731 
+		10 0.1637711375951767
+		4 1 0.42735904455184937 8 0.16242223978042603 9 0.28250560164451599 
+		10 0.12771311402320862
+		4 1 0.49261298775672913 8 0.13269788026809692 9 0.36350899934768677 
+		10 0.011180132627487183
+		4 1 0.63521131873130798 8 0.2144683301448822 9 0.10206985101103783 
+		10 0.048250500112771988
+		4 1 0.58630913496017456 8 0.24064904451370239 9 0.11672414094209671 
+		10 0.056317679584026337
+		4 9 0.057791844010353088 10 0.35720540583133698 11 0.31733119487762451 
+		22 0.26767155528068542
+		4 9 0.058884741191146769 10 0.24417920766739482 11 0.36670003011482666 
+		23 0.33023602102663174
+		4 9 0.030504400815715656 10 0.2053340676889634 11 0.39080341299357113 
+		23 0.37335811850174982
+		4 9 0.0096955168790704427 10 0.22669444273789741 11 0.44666313391763346 
+		23 0.31694690646539869
+		4 1 0.11058545857667923 8 0.25776313990354538 9 0.43354013562202454 
+		10 0.19811126589775085
+		4 1 0.1650804877281189 8 0.16444879770278931 9 0.41609883308410645 
+		10 0.25437188148498535
+		4 1 0.19752226769924164 8 0.11148180067539215 9 0.48822209239006042 
+		10 0.20277383923530579
+		4 1 0.19236475229263306 8 0.1300622820854187 9 0.42848750948905945 
+		10 0.24908545613288877
+		4 1 0.16990133374929428 8 0.10665873438119888 9 0.48908770084381104 
+		10 0.2343522310256958
+		4 1 0.15374636650085452 8 0.1344400942325592 9 0.5468977689743042 
+		10 0.1649157702922821
+		2 10 0.15338318049907684 11 0.84661681950092316
+		2 10 0.084034822881221771 11 0.91596517711877823
+		2 10 0.016884934157133102 11 0.9831150658428669
 		1 11 1
 		1 11 1
 		1 11 1
 		1 11 1
-		2 10 0.0054359650239348412 11 0.99456403497606516
-		2 10 0.017305012792348862 11 0.98269498720765114
-		2 9 0.0050478768534958363 10 0.99495212314650416
-		3 9 0.016098100692033768 10 0.97796754632145166 17 0.0059343529865145683
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		2 9 2.5801118681556545e-06 10 0.99999741988813184
-		1 10 1
-		1 10 1
-		1 10 1
-		2 10 0.078274130821228027 11 0.92172586917877197
 		1 11 1
 		1 11 1
 		1 11 1
 		1 11 1
-		2 10 0.0050474782474339008 11 0.9949525217525661
 		1 11 1
-		2 10 0.01307323295623064 11 0.98692676704376936
-		2 10 0.063325613737106323 11 0.93667438626289368
-		2 10 0.014161628670990467 11 0.98583837132900953
+		2 10 0.063556292213343468 11 0.93644370778665653
 		1 11 1
-		2 10 0.024160673841834068 11 0.97583932615816593
-		2 10 0.28574928641319275 11 0.71425071358680725
-		2 9 0.0023115493822842836 10 0.99768845061771572
-		3 9 0.0073428857140243053 10 0.98602764122188091 11 0.0066294730640947819
-		4 9 0.006976597011089325 10 0.98844010755419731 11 0.0035578086972236633 
-		17 0.0010254867374897003
-		2 10 0.019535720348358154 11 0.98046427965164185
 		1 11 1
 		1 11 1
 		1 11 1
-		1 10 1
-		2 9 0.97394466400146484 10 0.026055335998535156
-		1 9 1
-		1 1 1
-		4 0 0.0002562403678894043 1 0.98912418156396598 2 0.00053940631914883852 
-		8 0.010080171748995781
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		2 1 0.99858146742917597 8 0.0014185325708240271
-		2 1 0.94309157133102417 8 0.05690842866897583
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		2 1 0.95581883192062378 8 0.044181168079376221
-		1 1 1
-		1 1 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 10 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 10 1
-		2 9 0.00072409509448334575 10 0.99927590490551665
-		1 10 1
-		1 10 1
-		1 10 1
-		2 9 0.0053497506305575371 10 0.99465024936944246
-		1 10 1
-		2 10 0.089274413883686066 11 0.91072558611631393
 		1 11 1
-		1 9 1
-		2 9 0.98422404751181602 10 0.015775952488183975
 		1 11 1
 		1 11 1
-		2 1 0.0022565559484064579 8 0.99774344405159354
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		2 1 0.16505421698093414 8 0.83494578301906586
-		2 1 0.0059214751236140728 8 0.99407852487638593
-		1 8 1
-		1 0 1
-		1 0 1
-		3 9 0.0006864501629024744 10 0.95769131183624268 11 0.04162223800085485
-		2 10 0.99005341529846191 11 0.0099465847015380859
-		1 10 1
-		1 10 1
-		2 9 0.99503639014437795 10 0.0049636098556220531
-		1 9 1
-		1 9 1
-		1 9 1
-		1 9 1
-		1 9 1
 		1 11 1
 		1 11 1
+		2 10 0.00023819440684746951 11 0.99976180559315253
 		1 11 1
 		1 11 1
 		1 11 1
@@ -22229,14 +22428,21 @@ createNode skinCluster -n "skinCluster1";
 		1 11 1
 		1 11 1
 		1 11 1
+		2 10 0.17369696497917175 11 0.82630303502082825
+		2 10 0.087645389139652252 11 0.91235461086034775
+		2 10 0.01272753719240427 11 0.98727246280759573
 		1 11 1
 		1 11 1
 		1 11 1
 		1 11 1
+		2 10 0.13495916128158569 11 0.86504083871841431
+		2 10 0.059412691742181778 11 0.94058730825781822
+		2 10 0.0053356988355517387 11 0.99466430116444826
 		1 11 1
 		1 11 1
 		1 11 1
 		1 11 1
+		2 10 0.089858457446098328 11 0.91014154255390167
 		1 11 1
 		1 11 1
 		1 11 1
@@ -22271,6 +22477,8 @@ createNode skinCluster -n "skinCluster1";
 		1 11 1
 		1 11 1
 		1 11 1
+		1 11 0.99999999999999944
+		1 11 0.99999999999999944
 		1 11 1
 		1 11 1
 		1 11 1
@@ -22278,11 +22486,17 @@ createNode skinCluster -n "skinCluster1";
 		1 11 1
 		1 11 1
 		1 11 1
+		2 10 0.024331118465056176 11 0.97566888153494369
+		2 10 0.00012251236149598359 11 0.99987748763850404
+		2 10 4.1456831648134518e-07 11 0.99999958543168355
+		2 10 0.044027804833726369 11 0.95597219516627363
 		1 11 1
 		1 11 1
 		1 11 1
 		1 11 1
 		1 11 1
+		2 10 0.042090507346917889 11 0.95790949265308212
+		2 10 0.0022714899387210608 11 0.99772851006127894
 		1 11 1
 		1 11 1
 		1 11 1
@@ -22308,10 +22522,8 @@ createNode skinCluster -n "skinCluster1";
 		1 11 1
 		1 11 1
 		1 11 1
-		2 10 0.021428966894745827 11 0.97857103310525417
 		1 11 1
 		1 11 1
-		2 10 0.0015723637770861387 11 0.99842763622291386
 		1 11 1
 		1 11 1
 		1 11 1
@@ -22333,37 +22545,7 @@ createNode skinCluster -n "skinCluster1";
 		1 11 1
 		1 11 1
 		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
+		2 10 0.026786007389625565 11 0.97321399261037445
 		1 11 1
 		1 11 1
 		1 11 1
@@ -22412,7 +22594,7 @@ createNode skinCluster -n "skinCluster1";
 		1 11 1
 		1 11 1
 		1 11 1;
-	setAttr ".wl[972:1437].w"
+	setAttr ".wl[976:1420].w"
 		1 11 1
 		1 11 1
 		1 11 1
@@ -22445,13 +22627,17 @@ createNode skinCluster -n "skinCluster1";
 		1 11 1
 		1 11 1
 		1 11 1
+		2 10 0.003290816046848066 11 0.99670918395315167
+		2 10 0.0074083407791094413 11 0.99259165922089054
+		2 10 0.018683843314647675 11 0.98131615668535233
+		2 10 0.0032224939612302689 11 0.99677750603876969
 		1 11 1
 		1 11 1
 		1 11 1
 		1 11 1
-		2 10 0.0023944536224007607 11 0.99760554637759924
 		1 11 1
 		1 11 1
+		1 11 0.99999999999999944
 		1 11 1
 		1 11 1
 		1 11 1
@@ -22462,6 +22648,7 @@ createNode skinCluster -n "skinCluster1";
 		1 11 1
 		1 11 1
 		1 11 1
+		2 10 1.7496827440950494e-06 11 0.99999825031725598
 		1 11 1
 		1 11 1
 		1 11 1
@@ -22474,17 +22661,8 @@ createNode skinCluster -n "skinCluster1";
 		1 11 1
 		1 11 1
 		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
+		2 10 0.0047117485664784908 11 0.99528825143352151
+		2 10 0.0004024635418318212 11 0.99959753645816818
 		1 11 1
 		1 11 1
 		1 11 1
@@ -22720,12 +22898,12 @@ createNode skinCluster -n "skinCluster1";
 		1 11 1
 		1 11 1
 		2 10 0.03691568598151207 11 0.96308431401848793
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		2 10 0.0016626639990136027 11 0.9983373360009864
-		2 10 0.041101254522800446 11 0.95889874547719955
+		2 10 0.036915741462658795 11 0.96308425853734125
+		2 10 0.017501393333077431 11 0.98249860666692257
+		2 10 0.061085127294063568 11 0.93891487270593643
+		2 10 0.067413753629572248 11 0.93258624637042775
+		2 10 0.081105615617626192 11 0.91889438438237381
+		2 10 0.045414579588804106 11 0.95458542041119576
 		2 10 0.081105679273605347 11 0.91889432072639465
 		2 10 0.067413754761219025 11 0.93258624523878098
 		2 10 0.061085127294063568 11 0.93891487270593643
@@ -22737,22 +22915,22 @@ createNode skinCluster -n "skinCluster1";
 		3 10 0.12242520309519023 11 0.87662089616060257 21 0.00095390074420720339
 		2 10 0.11694497615098953 11 0.88305502384901047
 		2 10 0.10560878366231918 11 0.89439121633768082
-		2 10 0.078059419989585876 11 0.92194058001041412
-		2 10 0.019053278490900993 11 0.98094672150909901
+		2 10 0.081999431611847973 11 0.91800056838815192
+		2 10 0.10560878366231918 11 0.89439121633768082
+		2 10 0.11694497615098953 11 0.88305502384901047
+		3 10 0.12242520309519023 11 0.87662089616060257 26 0.00095390074420720339
+		2 10 0.056508760899305344 11 0.94349123910069466
+		2 10 0.041283614933490753 11 0.95871638506650925
+		2 10 0.043127577751874924 11 0.95687242224812508
+		2 10 0.049162440001964569 11 0.95083755999803543
 		1 11 1
 		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		2 10 0.0096146166324615479 11 0.99038538336753845
-		2 10 0.026314668357372284 11 0.97368533164262772
+		2 10 0.00057929079048335552 11 0.99942070920951664
+		2 10 0.043492447584867477 11 0.95650755241513252
+		2 10 0.039303410798311234 11 0.96069658920168877
+		2 10 0.049465309828519821 11 0.95053469017148018
+		2 10 0.038757290691137314 11 0.96124270930886269
+		2 10 0.027943382188749814 11 0.97205661781125019
 		2 10 0.038757290691137314 11 0.96124270930886269
 		2 10 0.049465309828519821 11 0.95053469017148018
 		2 10 0.039303410798311234 11 0.96069658920168877
@@ -22817,24 +22995,7 @@ createNode skinCluster -n "skinCluster1";
 		1 11 1
 		1 11 1
 		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
+		1 11 0.99999999999999989
 		1 11 1
 		1 11 1
 		1 11 1
@@ -22879,7 +23040,7 @@ createNode skinCluster -n "skinCluster1";
 		1 11 1
 		1 11 1
 		1 11 1;
-	setAttr ".wl[1438:1668].w"
+	setAttr ".wl[1421:1641].w"
 		1 11 1
 		1 11 1
 		1 11 1
@@ -22894,6 +23055,31 @@ createNode skinCluster -n "skinCluster1";
 		1 11 1
 		1 11 1
 		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		1 11 1
+		2 10 0.014450538903474808 11 0.98554946109652519
 		1 11 1
 		1 11 1
 		1 11 1
@@ -22939,63 +23125,79 @@ createNode skinCluster -n "skinCluster1";
 		1 11 1
 		1 11 1
 		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		2 1 0.98051628842949867 8 0.019483711570501328
-		1 1 1
-		1 1 1
-		1 1 1
-		2 1 0.99921006365912035 8 0.00078993634087964892
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
+		3 5 0.16241747140884399 6 0.37031325697898865 7 0.46726927161216736
+		3 5 0.15771293640136719 6 0.3341483473777771 7 0.50813871622085571
+		3 5 0.13612192869186401 6 0.33427828550338745 7 0.52959978580474854
+		3 5 0.24395023286342621 6 0.38745099306106567 7 0.36859877407550812
+		2 6 0.00022506660025101155 7 0.99977493339974899
+		2 6 0.0032859861385077238 7 0.99671401386149228
+		2 6 0.0075230002403259277 7 0.99247699975967407
+		2 6 0.0042512719519436359 7 0.99574872804805636
+		2 6 0.00059334503021091223 7 0.99940665496978909
+		2 6 0.00036874791840091348 7 0.99963125208159909
+		2 6 0.0088928248733282089 7 0.99110717512667179
+		2 6 0.0048546143807470798 7 0.99514538561925292
+		3 5 0.19860714673995972 6 0.41155484318733215 7 0.38983801007270813
+		3 5 0.15358412265777588 6 0.39692389965057373 7 0.44949197769165039
+		2 6 0.070215024054050446 7 0.92978497594594955
+		2 6 0.053086660802364349 7 0.94691333919763565
+		2 6 0.079027384519577026 7 0.92097261548042297
+		2 6 0.099489867687225342 7 0.90051013231277466
+		3 5 0.13873332738876343 6 0.46590137481689453 7 0.39536529779434204
+		3 5 0.18418979644775391 6 0.47466418147087097 7 0.34114602208137512
+		2 6 6.6885593696497381e-05 7 0.9999331144063035
+		2 6 0.067323155701160431 7 0.93267684429883957
+		2 6 0.085884727537631989 7 0.91411527246236801
+		2 6 0.12687082588672638 7 0.87312917411327362
+		2 6 0.15981954336166382 7 0.84018045663833618
+		4 1 0.20020638406276703 5 0.42940916121006012 6 0.21712368726730347 
+		7 0.15326076745986938
+		4 1 0.17136131227016449 5 0.45767189562320709 6 0.19076913595199585 
+		7 0.18019765615463257
+		4 1 0.15438644587993622 5 0.47607205808162689 6 0.22896656394004822 
+		7 0.14057493209838867
+		4 1 0.15769542753696442 5 0.52334828674793243 6 0.21661226451396942 
+		7 0.10234402120113373
+		4 1 0.12109477072954178 5 0.62697333097457886 6 0.18301960825920105 
+		7 0.068912290036678314
+		4 1 0.13562436401844025 5 0.5348341315984726 6 0.21446031332015991 
+		7 0.11508119106292725
+		4 1 0.16203749179840088 5 0.51031368970870972 6 0.18201391398906708 
+		7 0.14563490450382233
+		4 1 0.23724345862865448 5 0.42183782160282135 6 0.21683980524539948 
+		7 0.12407891452312469
+		4 1 0.63378512859344482 5 0.25406575947999954 6 0.096703961491584778 
+		8 0.015445150434970856
+		4 1 0.39709654450416565 5 0.38435186445713043 6 0.20995193719863892 
+		7 0.0085996538400650024
+		4 1 0.32951125502586365 5 0.41150954365730286 6 0.25258875358849764 
+		7 0.0063904477283358574
+		4 0 0.044829070568084717 1 0.62589740753173828 6 0.32199729746207595 
+		8 0.0072762244381010532
+		4 1 0.58961081504821777 5 0.28807240538299084 6 0.10816459357738495 
+		8 0.014152185991406441
+		4 1 0.32838726043701172 5 0.49536675214767456 6 0.14361980557441711 
+		7 0.032626181840896606
+		4 1 0.35918828845024109 5 0.45983293652534485 6 0.16684782039374113 
+		7 0.014130954630672932
+		4 1 0.60924065113067627 5 0.30228528683073819 6 0.08481895923614502 
+		8 0.0036551028024405241
+		4 1 0.6482996940612793 5 0.27540563605725765 6 0.064717158675193787 
+		8 0.011577511206269264
+		4 1 0.3578677773475647 5 0.46063841879367828 6 0.16921086516231298 
+		7 0.012282938696444035
+		4 1 0.6199491024017334 5 0.29917647084221244 6 0.076806545257568359 
+		8 0.0040678814984858036
+		4 1 0.3417818546295166 5 0.46884895861148834 6 0.18922788044437766 
+		7 0.0001413063146173954
+		4 1 0.57197338342666626 5 0.3466821163892746 6 0.073934085667133331 
+		8 0.0074104145169258118
+		4 1 0.28450506925582886 5 0.51386569440364838 6 0.18277900293469429 
+		7 0.018850233405828476
+		4 1 0.56560581922531128 5 0.3121014479547739 6 0.10861464589834213 
+		8 0.013678086921572685
+		4 1 0.24107231199741364 5 0.55876968801021576 6 0.18812084570527077 
+		7 0.012037154287099838
 		3 2 0.16241747140884399 3 0.37031325697898865 4 0.46726927161216736
 		3 2 0.15771293640136719 3 0.3341483473777771 4 0.50813871622085571
 		3 2 0.13612192869186401 3 0.33427828550338745 4 0.52959978580474854
@@ -23069,14 +23271,14 @@ createNode skinCluster -n "skinCluster1";
 		8 0.013678086921572685
 		4 1 0.24107231199741364 2 0.55876968801021576 3 0.18812084570527077 
 		4 0.012037154287099838
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
+		2 6 0.18867594003677368 7 0.81132405996322632
+		2 6 0.14666333794593811 7 0.85333666205406189
+		2 6 0.16203394532203674 7 0.83796605467796326
+		2 6 0.15306942164897919 7 0.84693057835102081
+		2 6 0.14865930378437042 7 0.85134069621562958
+		2 6 0.19551777839660645 7 0.80448222160339355
+		2 6 0.2007940411567688 7 0.7992059588432312
+		2 6 0.27188855409622192 7 0.72811144590377808
 		2 3 0.18867594003677368 4 0.81132405996322632
 		2 3 0.14666333794593811 4 0.85333666205406189
 		2 3 0.16203394532203674 4 0.83796605467796326
@@ -23085,14 +23287,14 @@ createNode skinCluster -n "skinCluster1";
 		2 3 0.19551777839660645 4 0.80448222160339355
 		2 3 0.2007940411567688 4 0.7992059588432312
 		2 3 0.27188855409622192 4 0.72811144590377808
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
+		3 5 0.30365270376205444 6 0.36798104643821716 7 0.32836624979972839
+		3 5 0.27862280607223511 6 0.38848766684532166 7 0.33288952708244324
+		3 5 0.31950652599334717 6 0.39130097627639771 7 0.28919249773025513
+		3 5 0.32319307327270508 6 0.45916377007961273 7 0.21764315664768219
+		3 5 0.35178419947624207 6 0.37994807958602905 7 0.26826772093772888
+		3 5 0.34680777788162231 6 0.45764355361461639 7 0.19554866850376129
+		3 5 0.27362540364265442 6 0.38838464021682739 7 0.33798995614051819
+		3 5 0.29678380489349365 6 0.31331926584243774 7 0.3898969292640686
 		3 2 0.30365270376205444 3 0.36798104643821716 4 0.32836624979972839
 		3 2 0.27862280607223511 3 0.38848766684532166 4 0.33288952708244324
 		3 2 0.31950652599334717 3 0.39130097627639771 4 0.28919249773025513
@@ -23101,14 +23303,23 @@ createNode skinCluster -n "skinCluster1";
 		3 2 0.34680777788162231 3 0.45764355361461639 4 0.19554866850376129
 		3 2 0.27362540364265442 3 0.38838464021682739 4 0.33798995614051819
 		3 2 0.29678380489349365 3 0.31331926584243774 4 0.3898969292640686
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
+		4 1 0.19174389541149139 5 0.59641136229038239 6 0.17362655699253082 
+		7 0.038218185305595398
+		4 1 0.17289140820503235 5 0.58407871425151825 6 0.18334884196519852 
+		7 0.059681035578250885
+		4 1 0.18006590008735657 5 0.59557268023490906 6 0.16664284840226173 
+		7 0.057718571275472641
+		4 1 0.22335092723369598 5 0.44560690224170685 6 0.28214586153626442 
+		7 0.048896308988332748
+		4 1 0.25391653180122375 5 0.47589772939682007 6 0.19000005722045898 
+		7 0.080185681581497192
+		4 1 0.23161526024341583 5 0.54704149067401886 6 0.13320422172546387 
+		7 0.08813902735710144
+		2 1 0.23225589096546173 5 0.53096269071102142;
+	setAttr ".wl[1641:1668].w"
+		2 6 0.15953463315963745 7 0.077246785163879395
+		4 1 0.23926405608654022 5 0.55521824955940247 6 0.16017875820398331 
+		7 0.045338936150074005
 		4 1 0.19174389541149139 2 0.59641136229038239 3 0.17362655699253082 
 		4 0.038218185305595398
 		4 1 0.17289140820503235 2 0.58407871425151825 3 0.18334884196519852 
@@ -23125,14 +23336,14 @@ createNode skinCluster -n "skinCluster1";
 		4 0.077246785163879395
 		4 1 0.23926405608654022 2 0.55521824955940247 3 0.16017875820398331 
 		4 0.045338936150074005
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
+		2 6 0.0042421314865350723 7 0.99575786851346493
+		2 6 0.011657644063234329 7 0.98834235593676567
+		2 6 0.021812185645103455 7 0.97818781435489655
+		2 6 0.031968679279088974 7 0.96803132072091103
+		2 6 0.036725610494613647 7 0.96327438950538635
+		2 6 0.063230589032173157 7 0.93676941096782684
+		2 6 0.032749496400356293 7 0.96725050359964371
+		2 6 0.036480803042650223 7 0.96351919695734978
 		2 3 0.0042421314865350723 4 0.99575786851346493
 		2 3 0.011657644063234329 4 0.98834235593676567
 		2 3 0.021812185645103455 4 0.97818781435489655
@@ -23141,7 +23352,7 @@ createNode skinCluster -n "skinCluster1";
 		2 3 0.063230589032173157 4 0.93676941096782684
 		2 3 0.032749496400356293 4 0.96725050359964371
 		2 3 0.036480803042650223 4 0.96351919695734978
-		1 10 1
+		2 22 0.18203130463627268 23 0.81796869536372729
 		2 17 0.184947669506073 19 0.815052330493927;
 	setAttr -s 27 ".pm";
 	setAttr ".pm[0]" -type "matrix" 1.7763568394002497e-15 0 -0.99999999999999978 0 0 1 0 0
@@ -23280,87 +23491,87 @@ connectAttr "BaseRigRN.phl[14]" "bindPose3.m[5]";
 connectAttr "BaseRigRN.phl[15]" "skinCluster1.ma[3]";
 connectAttr "BaseRigRN.phl[16]" "skinCluster1.ifcl[3]";
 connectAttr "BaseRigRN.phl[17]" "skinCluster1.lw[4]";
-connectAttr "BaseRigRN.phl[18]" "skinCluster1.ptt";
-connectAttr "BaseRigRN.phl[19]" "bindPose3.m[6]";
-connectAttr "BaseRigRN.phl[20]" "skinCluster1.ma[4]";
-connectAttr "BaseRigRN.phl[21]" "skinCluster1.ifcl[4]";
-connectAttr "BaseRigRN.phl[22]" "skinCluster1.lw[5]";
-connectAttr "BaseRigRN.phl[23]" "bindPose3.m[7]";
-connectAttr "BaseRigRN.phl[24]" "skinCluster1.ma[5]";
-connectAttr "BaseRigRN.phl[25]" "skinCluster1.ifcl[5]";
-connectAttr "BaseRigRN.phl[26]" "skinCluster1.lw[6]";
-connectAttr "BaseRigRN.phl[27]" "bindPose3.m[8]";
-connectAttr "BaseRigRN.phl[28]" "skinCluster1.ma[6]";
-connectAttr "BaseRigRN.phl[29]" "skinCluster1.ifcl[6]";
-connectAttr "BaseRigRN.phl[30]" "skinCluster1.lw[7]";
-connectAttr "BaseRigRN.phl[31]" "bindPose3.m[9]";
-connectAttr "BaseRigRN.phl[32]" "skinCluster1.ma[7]";
-connectAttr "BaseRigRN.phl[33]" "skinCluster1.ifcl[7]";
-connectAttr "BaseRigRN.phl[34]" "bindPose3.m[10]";
-connectAttr "BaseRigRN.phl[35]" "skinCluster1.lw[8]";
-connectAttr "BaseRigRN.phl[36]" "skinCluster1.ma[8]";
-connectAttr "BaseRigRN.phl[37]" "skinCluster1.ifcl[8]";
-connectAttr "BaseRigRN.phl[38]" "bindPose3.m[11]";
-connectAttr "BaseRigRN.phl[39]" "skinCluster1.lw[9]";
-connectAttr "BaseRigRN.phl[40]" "skinCluster1.ma[9]";
-connectAttr "BaseRigRN.phl[41]" "skinCluster1.ifcl[9]";
-connectAttr "BaseRigRN.phl[42]" "bindPose3.m[12]";
-connectAttr "BaseRigRN.phl[43]" "skinCluster1.lw[10]";
-connectAttr "BaseRigRN.phl[44]" "skinCluster1.ma[10]";
-connectAttr "BaseRigRN.phl[45]" "skinCluster1.ifcl[10]";
-connectAttr "BaseRigRN.phl[46]" "bindPose3.m[13]";
-connectAttr "BaseRigRN.phl[47]" "skinCluster1.lw[11]";
-connectAttr "BaseRigRN.phl[48]" "skinCluster1.ma[11]";
-connectAttr "BaseRigRN.phl[49]" "skinCluster1.ifcl[11]";
-connectAttr "BaseRigRN.phl[50]" "bindPose3.m[14]";
-connectAttr "BaseRigRN.phl[51]" "skinCluster1.lw[12]";
-connectAttr "BaseRigRN.phl[52]" "skinCluster1.ma[12]";
-connectAttr "BaseRigRN.phl[53]" "skinCluster1.ifcl[12]";
-connectAttr "BaseRigRN.phl[54]" "bindPose3.m[15]";
-connectAttr "BaseRigRN.phl[55]" "skinCluster1.lw[13]";
-connectAttr "BaseRigRN.phl[56]" "skinCluster1.ma[13]";
-connectAttr "BaseRigRN.phl[57]" "skinCluster1.ifcl[13]";
-connectAttr "BaseRigRN.phl[58]" "bindPose3.m[16]";
-connectAttr "BaseRigRN.phl[59]" "skinCluster1.lw[14]";
-connectAttr "BaseRigRN.phl[60]" "skinCluster1.ma[14]";
-connectAttr "BaseRigRN.phl[61]" "skinCluster1.ifcl[14]";
-connectAttr "BaseRigRN.phl[62]" "bindPose3.m[17]";
-connectAttr "BaseRigRN.phl[63]" "skinCluster1.lw[15]";
-connectAttr "BaseRigRN.phl[64]" "skinCluster1.ma[15]";
-connectAttr "BaseRigRN.phl[65]" "skinCluster1.ifcl[15]";
-connectAttr "BaseRigRN.phl[66]" "bindPose3.m[18]";
-connectAttr "BaseRigRN.phl[67]" "skinCluster1.lw[16]";
-connectAttr "BaseRigRN.phl[68]" "skinCluster1.ma[16]";
-connectAttr "BaseRigRN.phl[69]" "skinCluster1.ifcl[16]";
-connectAttr "BaseRigRN.phl[70]" "bindPose3.m[19]";
-connectAttr "BaseRigRN.phl[71]" "skinCluster1.lw[17]";
-connectAttr "BaseRigRN.phl[72]" "skinCluster1.ma[17]";
-connectAttr "BaseRigRN.phl[73]" "skinCluster1.ifcl[17]";
-connectAttr "BaseRigRN.phl[74]" "skinCluster1.lw[18]";
-connectAttr "BaseRigRN.phl[75]" "bindPose3.m[20]";
-connectAttr "BaseRigRN.phl[76]" "skinCluster1.ma[18]";
-connectAttr "BaseRigRN.phl[77]" "skinCluster1.ifcl[18]";
-connectAttr "BaseRigRN.phl[78]" "skinCluster1.lw[19]";
-connectAttr "BaseRigRN.phl[79]" "bindPose3.m[21]";
-connectAttr "BaseRigRN.phl[80]" "skinCluster1.ma[19]";
-connectAttr "BaseRigRN.phl[81]" "skinCluster1.ifcl[19]";
-connectAttr "BaseRigRN.phl[82]" "skinCluster1.lw[20]";
-connectAttr "BaseRigRN.phl[83]" "bindPose3.m[22]";
-connectAttr "BaseRigRN.phl[84]" "skinCluster1.ma[20]";
-connectAttr "BaseRigRN.phl[85]" "skinCluster1.ifcl[20]";
-connectAttr "BaseRigRN.phl[86]" "skinCluster1.lw[21]";
-connectAttr "BaseRigRN.phl[87]" "bindPose3.m[23]";
-connectAttr "BaseRigRN.phl[88]" "skinCluster1.ma[21]";
-connectAttr "BaseRigRN.phl[89]" "skinCluster1.ifcl[21]";
-connectAttr "BaseRigRN.phl[90]" "bindPose3.m[24]";
-connectAttr "BaseRigRN.phl[91]" "skinCluster1.lw[22]";
-connectAttr "BaseRigRN.phl[92]" "skinCluster1.ma[22]";
-connectAttr "BaseRigRN.phl[93]" "skinCluster1.ifcl[22]";
-connectAttr "BaseRigRN.phl[94]" "skinCluster1.lw[23]";
-connectAttr "BaseRigRN.phl[95]" "bindPose3.m[25]";
-connectAttr "BaseRigRN.phl[96]" "skinCluster1.ma[23]";
-connectAttr "BaseRigRN.phl[97]" "skinCluster1.ifcl[23]";
-connectAttr "BaseRigRN.phl[98]" "skinCluster1.lw[24]";
+connectAttr "BaseRigRN.phl[18]" "bindPose3.m[6]";
+connectAttr "BaseRigRN.phl[19]" "skinCluster1.ma[4]";
+connectAttr "BaseRigRN.phl[20]" "skinCluster1.ifcl[4]";
+connectAttr "BaseRigRN.phl[21]" "skinCluster1.lw[5]";
+connectAttr "BaseRigRN.phl[22]" "bindPose3.m[7]";
+connectAttr "BaseRigRN.phl[23]" "skinCluster1.ma[5]";
+connectAttr "BaseRigRN.phl[24]" "skinCluster1.ifcl[5]";
+connectAttr "BaseRigRN.phl[25]" "skinCluster1.lw[6]";
+connectAttr "BaseRigRN.phl[26]" "bindPose3.m[8]";
+connectAttr "BaseRigRN.phl[27]" "skinCluster1.ma[6]";
+connectAttr "BaseRigRN.phl[28]" "skinCluster1.ifcl[6]";
+connectAttr "BaseRigRN.phl[29]" "skinCluster1.lw[7]";
+connectAttr "BaseRigRN.phl[30]" "bindPose3.m[9]";
+connectAttr "BaseRigRN.phl[31]" "skinCluster1.ma[7]";
+connectAttr "BaseRigRN.phl[32]" "skinCluster1.ifcl[7]";
+connectAttr "BaseRigRN.phl[33]" "bindPose3.m[10]";
+connectAttr "BaseRigRN.phl[34]" "skinCluster1.lw[8]";
+connectAttr "BaseRigRN.phl[35]" "skinCluster1.ma[8]";
+connectAttr "BaseRigRN.phl[36]" "skinCluster1.ifcl[8]";
+connectAttr "BaseRigRN.phl[37]" "bindPose3.m[11]";
+connectAttr "BaseRigRN.phl[38]" "skinCluster1.lw[9]";
+connectAttr "BaseRigRN.phl[39]" "skinCluster1.ma[9]";
+connectAttr "BaseRigRN.phl[40]" "skinCluster1.ifcl[9]";
+connectAttr "BaseRigRN.phl[41]" "bindPose3.m[12]";
+connectAttr "BaseRigRN.phl[42]" "skinCluster1.lw[10]";
+connectAttr "BaseRigRN.phl[43]" "skinCluster1.ma[10]";
+connectAttr "BaseRigRN.phl[44]" "skinCluster1.ifcl[10]";
+connectAttr "BaseRigRN.phl[45]" "bindPose3.m[13]";
+connectAttr "BaseRigRN.phl[46]" "skinCluster1.lw[11]";
+connectAttr "BaseRigRN.phl[47]" "skinCluster1.ma[11]";
+connectAttr "BaseRigRN.phl[48]" "skinCluster1.ifcl[11]";
+connectAttr "BaseRigRN.phl[49]" "bindPose3.m[14]";
+connectAttr "BaseRigRN.phl[50]" "skinCluster1.lw[12]";
+connectAttr "BaseRigRN.phl[51]" "skinCluster1.ma[12]";
+connectAttr "BaseRigRN.phl[52]" "skinCluster1.ifcl[12]";
+connectAttr "BaseRigRN.phl[53]" "bindPose3.m[15]";
+connectAttr "BaseRigRN.phl[54]" "skinCluster1.lw[13]";
+connectAttr "BaseRigRN.phl[55]" "skinCluster1.ma[13]";
+connectAttr "BaseRigRN.phl[56]" "skinCluster1.ifcl[13]";
+connectAttr "BaseRigRN.phl[57]" "bindPose3.m[16]";
+connectAttr "BaseRigRN.phl[58]" "skinCluster1.lw[14]";
+connectAttr "BaseRigRN.phl[59]" "skinCluster1.ma[14]";
+connectAttr "BaseRigRN.phl[60]" "skinCluster1.ifcl[14]";
+connectAttr "BaseRigRN.phl[61]" "bindPose3.m[17]";
+connectAttr "BaseRigRN.phl[62]" "skinCluster1.lw[15]";
+connectAttr "BaseRigRN.phl[63]" "skinCluster1.ma[15]";
+connectAttr "BaseRigRN.phl[64]" "skinCluster1.ifcl[15]";
+connectAttr "BaseRigRN.phl[65]" "bindPose3.m[18]";
+connectAttr "BaseRigRN.phl[66]" "skinCluster1.lw[16]";
+connectAttr "BaseRigRN.phl[67]" "skinCluster1.ma[16]";
+connectAttr "BaseRigRN.phl[68]" "skinCluster1.ifcl[16]";
+connectAttr "BaseRigRN.phl[69]" "bindPose3.m[19]";
+connectAttr "BaseRigRN.phl[70]" "skinCluster1.lw[17]";
+connectAttr "BaseRigRN.phl[71]" "skinCluster1.ma[17]";
+connectAttr "BaseRigRN.phl[72]" "skinCluster1.ifcl[17]";
+connectAttr "BaseRigRN.phl[73]" "skinCluster1.lw[18]";
+connectAttr "BaseRigRN.phl[74]" "bindPose3.m[20]";
+connectAttr "BaseRigRN.phl[75]" "skinCluster1.ma[18]";
+connectAttr "BaseRigRN.phl[76]" "skinCluster1.ifcl[18]";
+connectAttr "BaseRigRN.phl[77]" "skinCluster1.lw[19]";
+connectAttr "BaseRigRN.phl[78]" "bindPose3.m[21]";
+connectAttr "BaseRigRN.phl[79]" "skinCluster1.ma[19]";
+connectAttr "BaseRigRN.phl[80]" "skinCluster1.ifcl[19]";
+connectAttr "BaseRigRN.phl[81]" "skinCluster1.lw[20]";
+connectAttr "BaseRigRN.phl[82]" "bindPose3.m[22]";
+connectAttr "BaseRigRN.phl[83]" "skinCluster1.ma[20]";
+connectAttr "BaseRigRN.phl[84]" "skinCluster1.ifcl[20]";
+connectAttr "BaseRigRN.phl[85]" "skinCluster1.lw[21]";
+connectAttr "BaseRigRN.phl[86]" "bindPose3.m[23]";
+connectAttr "BaseRigRN.phl[87]" "skinCluster1.ma[21]";
+connectAttr "BaseRigRN.phl[88]" "skinCluster1.ifcl[21]";
+connectAttr "BaseRigRN.phl[89]" "bindPose3.m[24]";
+connectAttr "BaseRigRN.phl[90]" "skinCluster1.lw[22]";
+connectAttr "BaseRigRN.phl[91]" "skinCluster1.ma[22]";
+connectAttr "BaseRigRN.phl[92]" "skinCluster1.ifcl[22]";
+connectAttr "BaseRigRN.phl[93]" "skinCluster1.lw[23]";
+connectAttr "BaseRigRN.phl[94]" "bindPose3.m[25]";
+connectAttr "BaseRigRN.phl[95]" "skinCluster1.ma[23]";
+connectAttr "BaseRigRN.phl[96]" "skinCluster1.ifcl[23]";
+connectAttr "BaseRigRN.phl[97]" "skinCluster1.lw[24]";
+connectAttr "BaseRigRN.phl[98]" "skinCluster1.ptt";
 connectAttr "BaseRigRN.phl[99]" "bindPose3.m[26]";
 connectAttr "BaseRigRN.phl[100]" "skinCluster1.ma[24]";
 connectAttr "BaseRigRN.phl[101]" "skinCluster1.ifcl[24]";
