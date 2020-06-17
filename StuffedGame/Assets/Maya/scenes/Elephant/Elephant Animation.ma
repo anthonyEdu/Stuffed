@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Elephant Animation.ma
-//Last modified: Wed, Jun 17, 2020 09:10:55 AM
+//Last modified: Wed, Jun 17, 2020 09:24:37 AM
 //Codeset: 1252
 file -rdi 1 -ns "Elephant_Rig" -rfn "Elephant_RigRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/Elephant/Elephant_Rig.ma";
@@ -20,13 +20,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "A378DD57-4BB3-37FF-C3FD-1C8E773BBF42";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.2462496689989944 3.5642094590882429 18.619942409226137 ;
-	setAttr ".r" -type "double3" 0.86164727040273248 2.9999999999998948 0 ;
+	setAttr ".t" -type "double3" 8.2119121164809954 3.4871928722910988 5.7054286915245296 ;
+	setAttr ".r" -type "double3" -10.538352728393962 54.199999999997424 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "4EFC06F9-490F-C985-5411-2A87AF15A41D";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 18.700430080317581;
+	setAttr ".coi" 9.9671513587945668;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -65,41 +65,126 @@ createNode camera -s -n "frontShape" -p "front";
 createNode transform -s -n "side";
 	rename -uid "82B91851-416E-56F9-3141-24A9A7FD8BC1";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1000.1 0 0 ;
+	setAttr ".t" -type "double3" 1000.1 1.5231934610578921 -0.010802790503957382 ;
 	setAttr ".r" -type "double3" 0 90 0 ;
 createNode camera -s -n "sideShape" -p "side";
 	rename -uid "636E62AB-4F39-651B-2F74-83B05069BA41";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
-	setAttr ".ow" 30;
+	setAttr ".ow" 31.404081632653057;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "F7B28D1E-480E-8F92-EB7E-FE846D10F1B0";
+	rename -uid "A389EDE7-4980-1C0B-CB61-A1AA091C5BDF";
 	setAttr -s 16 ".lnk";
 	setAttr -s 16 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "909BA77F-4DB7-EA56-16DB-E0AC041E4997";
+	rename -uid "9D196129-438F-D77A-C90B-E68920E8DF9A";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 2 0 1 ;
 	setAttr -s 2 ".bspr";
 	setAttr -s 2 ".obsv";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "806CD7FC-47BC-7EE9-63E6-6A9FC6FE0FE3";
+	rename -uid "9CE38945-4E30-146D-048D-4585CA29B78E";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "B9C42FE9-494B-063B-42A1-8FA0B4552546";
+	rename -uid "6D4AEB6A-4C62-0B8F-19BE-F0A6B9C00286";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "3E0FABEA-433B-E7BF-E797-EC9AA5A995F7";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "56EAD8EA-4BAE-DCD3-C8D5-DD9BD10F68DD";
+	rename -uid "5F636876-43F7-122F-D9D8-60BFAAA517FF";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "C4D45329-4760-7A05-E52B-6BBC9115E248";
 	setAttr ".g" yes;
 createNode reference -n "Elephant_RigRN";
 	rename -uid "82ADC6F1-426A-9C2E-94A3-ABA022088DD9";
+	setAttr -s 84 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
+	setAttr ".phl[6]" 0;
+	setAttr ".phl[7]" 0;
+	setAttr ".phl[8]" 0;
+	setAttr ".phl[9]" 0;
+	setAttr ".phl[10]" 0;
+	setAttr ".phl[11]" 0;
+	setAttr ".phl[12]" 0;
+	setAttr ".phl[13]" 0;
+	setAttr ".phl[14]" 0;
+	setAttr ".phl[15]" 0;
+	setAttr ".phl[16]" 0;
+	setAttr ".phl[17]" 0;
+	setAttr ".phl[18]" 0;
+	setAttr ".phl[19]" 0;
+	setAttr ".phl[20]" 0;
+	setAttr ".phl[21]" 0;
+	setAttr ".phl[22]" 0;
+	setAttr ".phl[23]" 0;
+	setAttr ".phl[24]" 0;
+	setAttr ".phl[25]" 0;
+	setAttr ".phl[26]" 0;
+	setAttr ".phl[27]" 0;
+	setAttr ".phl[28]" 0;
+	setAttr ".phl[29]" 0;
+	setAttr ".phl[30]" 0;
+	setAttr ".phl[31]" 0;
+	setAttr ".phl[32]" 0;
+	setAttr ".phl[33]" 0;
+	setAttr ".phl[34]" 0;
+	setAttr ".phl[35]" 0;
+	setAttr ".phl[36]" 0;
+	setAttr ".phl[37]" 0;
+	setAttr ".phl[38]" 0;
+	setAttr ".phl[39]" 0;
+	setAttr ".phl[40]" 0;
+	setAttr ".phl[41]" 0;
+	setAttr ".phl[42]" 0;
+	setAttr ".phl[43]" 0;
+	setAttr ".phl[44]" 0;
+	setAttr ".phl[45]" 0;
+	setAttr ".phl[46]" 0;
+	setAttr ".phl[47]" 0;
+	setAttr ".phl[48]" 0;
+	setAttr ".phl[49]" 0;
+	setAttr ".phl[50]" 0;
+	setAttr ".phl[51]" 0;
+	setAttr ".phl[52]" 0;
+	setAttr ".phl[53]" 0;
+	setAttr ".phl[54]" 0;
+	setAttr ".phl[55]" 0;
+	setAttr ".phl[56]" 0;
+	setAttr ".phl[57]" 0;
+	setAttr ".phl[58]" 0;
+	setAttr ".phl[59]" 0;
+	setAttr ".phl[60]" 0;
+	setAttr ".phl[61]" 0;
+	setAttr ".phl[62]" 0;
+	setAttr ".phl[63]" 0;
+	setAttr ".phl[64]" 0;
+	setAttr ".phl[65]" 0;
+	setAttr ".phl[66]" 0;
+	setAttr ".phl[67]" 0;
+	setAttr ".phl[68]" 0;
+	setAttr ".phl[69]" 0;
+	setAttr ".phl[70]" 0;
+	setAttr ".phl[71]" 0;
+	setAttr ".phl[72]" 0;
+	setAttr ".phl[73]" 0;
+	setAttr ".phl[74]" 0;
+	setAttr ".phl[75]" 0;
+	setAttr ".phl[76]" 0;
+	setAttr ".phl[77]" 0;
+	setAttr ".phl[78]" 0;
+	setAttr ".phl[79]" 0;
+	setAttr ".phl[80]" 0;
+	setAttr ".phl[81]" 0;
+	setAttr ".phl[82]" 0;
+	setAttr ".phl[83]" 0;
+	setAttr ".phl[84]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Elephant_RigRN"
 		"Elephant_RigRN" 0
@@ -107,8 +192,314 @@ createNode reference -n "Elephant_RigRN";
 		"Elephant_RigRN" 2
 		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls" "visibility" " 1"
 		2 "Elephant_Rig:Geometry_Layer" "displayType" " 2"
-		"Elephant_Rig:BaseRigRN" 1
-		2 "Elephant_Rig:BaseRig:layer1" "visibility" " 1";
+		"Elephant_Rig:BaseRigRN" 154
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL" 
+		"rotateZ" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL" 
+		"rotateX" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL" 
+		"rotateY" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL" 
+		"rotateZ" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_L_GRP_FK|Elephant_Rig:BaseRig:Hip_J_L_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_L_GRP_FK|Elephant_Rig:BaseRig:Hip_J_L_CTRL" 
+		"rotateY" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_L_GRP_FK|Elephant_Rig:BaseRig:Hip_J_L_CTRL" 
+		"rotateZ" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_L_GRP_FK|Elephant_Rig:BaseRig:Hip_J_L_CTRL" 
+		"rotateX" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_L_GRP_FK|Elephant_Rig:BaseRig:Hip_J_L_CTRL|Elephant_Rig:BaseRig:Knee_J_L_GRP|Elephant_Rig:BaseRig:Knee_J_L_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_L_GRP_FK|Elephant_Rig:BaseRig:Hip_J_L_CTRL|Elephant_Rig:BaseRig:Knee_J_L_GRP|Elephant_Rig:BaseRig:Knee_J_L_CTRL" 
+		"rotateY" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_L_GRP_FK|Elephant_Rig:BaseRig:Hip_J_L_CTRL|Elephant_Rig:BaseRig:Knee_J_L_GRP|Elephant_Rig:BaseRig:Knee_J_L_CTRL" 
+		"rotateZ" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_L_GRP_FK|Elephant_Rig:BaseRig:Hip_J_L_CTRL|Elephant_Rig:BaseRig:Knee_J_L_GRP|Elephant_Rig:BaseRig:Knee_J_L_CTRL" 
+		"rotateX" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_L_GRP_FK|Elephant_Rig:BaseRig:Hip_J_L_CTRL|Elephant_Rig:BaseRig:Knee_J_L_GRP|Elephant_Rig:BaseRig:Knee_J_L_CTRL|Elephant_Rig:BaseRig:Ankle_J_L_GRP|Elephant_Rig:BaseRig:Ankle_J_L_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_L_GRP_FK|Elephant_Rig:BaseRig:Hip_J_L_CTRL|Elephant_Rig:BaseRig:Knee_J_L_GRP|Elephant_Rig:BaseRig:Knee_J_L_CTRL|Elephant_Rig:BaseRig:Ankle_J_L_GRP|Elephant_Rig:BaseRig:Ankle_J_L_CTRL" 
+		"rotateY" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_L_GRP_FK|Elephant_Rig:BaseRig:Hip_J_L_CTRL|Elephant_Rig:BaseRig:Knee_J_L_GRP|Elephant_Rig:BaseRig:Knee_J_L_CTRL|Elephant_Rig:BaseRig:Ankle_J_L_GRP|Elephant_Rig:BaseRig:Ankle_J_L_CTRL" 
+		"rotateZ" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_R_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_R_CTRL" 
+		"rotateX" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_R_CTRL" 
+		"rotateY" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_R_CTRL" 
+		"rotateZ" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_R_CTRL|Elephant_Rig:BaseRig:Knee_J_R_GRP|Elephant_Rig:BaseRig:Knee_J_R_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_R_CTRL|Elephant_Rig:BaseRig:Knee_J_R_GRP|Elephant_Rig:BaseRig:Knee_J_R_CTRL" 
+		"rotateX" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_R_CTRL|Elephant_Rig:BaseRig:Knee_J_R_GRP|Elephant_Rig:BaseRig:Knee_J_R_CTRL" 
+		"rotateY" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_R_CTRL|Elephant_Rig:BaseRig:Knee_J_R_GRP|Elephant_Rig:BaseRig:Knee_J_R_CTRL" 
+		"rotateZ" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_R_CTRL|Elephant_Rig:BaseRig:Knee_J_R_GRP|Elephant_Rig:BaseRig:Knee_J_R_CTRL|Elephant_Rig:BaseRig:Ankle_J_R_GRP|Elephant_Rig:BaseRig:Ankle_J_R_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_R_CTRL|Elephant_Rig:BaseRig:Knee_J_R_GRP|Elephant_Rig:BaseRig:Knee_J_R_CTRL|Elephant_Rig:BaseRig:Ankle_J_R_GRP|Elephant_Rig:BaseRig:Ankle_J_R_CTRL" 
+		"rotateZ" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL" 
+		"rotateY" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL" 
+		"rotateZ" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL" 
+		"rotateY" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL" 
+		"rotateZ" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL" 
+		"rotateX" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL" 
+		"rotateY" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL" 
+		"rotateZ" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:head_J_GRP|Elephant_Rig:BaseRig:head_J_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:head_J_GRP|Elephant_Rig:BaseRig:head_J_CTRL" 
+		"rotateX" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:head_J_GRP|Elephant_Rig:BaseRig:head_J_CTRL" 
+		"rotateY" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:head_J_GRP|Elephant_Rig:BaseRig:head_J_CTRL" 
+		"rotateZ" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_L_GRP|Elephant_Rig:BaseRig:Clavical_J_L_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_L_GRP|Elephant_Rig:BaseRig:Clavical_J_L_CTRL" 
+		"rotateX" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_L_GRP|Elephant_Rig:BaseRig:Clavical_J_L_CTRL" 
+		"rotateY" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_L_GRP|Elephant_Rig:BaseRig:Clavical_J_L_CTRL" 
+		"rotateZ" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_L_GRP|Elephant_Rig:BaseRig:Clavical_J_L_CTRL|Elephant_Rig:BaseRig:Shoulder_J_L2_GRP|Elephant_Rig:BaseRig:Shoulder_J_L2_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_L_GRP|Elephant_Rig:BaseRig:Clavical_J_L_CTRL|Elephant_Rig:BaseRig:Shoulder_J_L2_GRP|Elephant_Rig:BaseRig:Shoulder_J_L2_CTRL" 
+		"rotateX" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_L_GRP|Elephant_Rig:BaseRig:Clavical_J_L_CTRL|Elephant_Rig:BaseRig:Shoulder_J_L2_GRP|Elephant_Rig:BaseRig:Shoulder_J_L2_CTRL" 
+		"rotateY" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_L_GRP|Elephant_Rig:BaseRig:Clavical_J_L_CTRL|Elephant_Rig:BaseRig:Shoulder_J_L2_GRP|Elephant_Rig:BaseRig:Shoulder_J_L2_CTRL" 
+		"rotateZ" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_L_GRP|Elephant_Rig:BaseRig:Clavical_J_L_CTRL|Elephant_Rig:BaseRig:Shoulder_J_L2_GRP|Elephant_Rig:BaseRig:Shoulder_J_L2_CTRL|Elephant_Rig:BaseRig:Arm_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_L_GRP|Elephant_Rig:BaseRig:Shoulder_J_L_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_L_GRP|Elephant_Rig:BaseRig:Clavical_J_L_CTRL|Elephant_Rig:BaseRig:Shoulder_J_L2_GRP|Elephant_Rig:BaseRig:Shoulder_J_L2_CTRL|Elephant_Rig:BaseRig:Arm_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_L_GRP|Elephant_Rig:BaseRig:Shoulder_J_L_CTRL" 
+		"rotateY" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_L_GRP|Elephant_Rig:BaseRig:Clavical_J_L_CTRL|Elephant_Rig:BaseRig:Shoulder_J_L2_GRP|Elephant_Rig:BaseRig:Shoulder_J_L2_CTRL|Elephant_Rig:BaseRig:Arm_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_L_GRP|Elephant_Rig:BaseRig:Shoulder_J_L_CTRL|Elephant_Rig:BaseRig:Elbow_J_L_GRP|Elephant_Rig:BaseRig:Elbow_J_L_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_L_GRP|Elephant_Rig:BaseRig:Clavical_J_L_CTRL|Elephant_Rig:BaseRig:Shoulder_J_L2_GRP|Elephant_Rig:BaseRig:Shoulder_J_L2_CTRL|Elephant_Rig:BaseRig:Arm_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_L_GRP|Elephant_Rig:BaseRig:Shoulder_J_L_CTRL|Elephant_Rig:BaseRig:Elbow_J_L_GRP|Elephant_Rig:BaseRig:Elbow_J_L_CTRL" 
+		"rotateY" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_L_GRP|Elephant_Rig:BaseRig:Clavical_J_L_CTRL|Elephant_Rig:BaseRig:Shoulder_J_L2_GRP|Elephant_Rig:BaseRig:Shoulder_J_L2_CTRL|Elephant_Rig:BaseRig:Arm_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_L_GRP|Elephant_Rig:BaseRig:Shoulder_J_L_CTRL|Elephant_Rig:BaseRig:Elbow_J_L_GRP|Elephant_Rig:BaseRig:Elbow_J_L_CTRL" 
+		"rotateZ" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_L_GRP|Elephant_Rig:BaseRig:Clavical_J_L_CTRL|Elephant_Rig:BaseRig:Shoulder_J_L2_GRP|Elephant_Rig:BaseRig:Shoulder_J_L2_CTRL|Elephant_Rig:BaseRig:Arm_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_L_GRP|Elephant_Rig:BaseRig:Shoulder_J_L_CTRL|Elephant_Rig:BaseRig:Elbow_J_L_GRP|Elephant_Rig:BaseRig:Elbow_J_L_CTRL|Elephant_Rig:BaseRig:Wrist_J_L_GRP|Elephant_Rig:BaseRig:Wrist_J_L_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_L_GRP|Elephant_Rig:BaseRig:Clavical_J_L_CTRL|Elephant_Rig:BaseRig:Shoulder_J_L2_GRP|Elephant_Rig:BaseRig:Shoulder_J_L2_CTRL|Elephant_Rig:BaseRig:Arm_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_L_GRP|Elephant_Rig:BaseRig:Shoulder_J_L_CTRL|Elephant_Rig:BaseRig:Elbow_J_L_GRP|Elephant_Rig:BaseRig:Elbow_J_L_CTRL|Elephant_Rig:BaseRig:Wrist_J_L_GRP|Elephant_Rig:BaseRig:Wrist_J_L_CTRL" 
+		"rotateX" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_L_GRP|Elephant_Rig:BaseRig:Clavical_J_L_CTRL|Elephant_Rig:BaseRig:Shoulder_J_L2_GRP|Elephant_Rig:BaseRig:Shoulder_J_L2_CTRL|Elephant_Rig:BaseRig:Arm_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_L_GRP|Elephant_Rig:BaseRig:Shoulder_J_L_CTRL|Elephant_Rig:BaseRig:Elbow_J_L_GRP|Elephant_Rig:BaseRig:Elbow_J_L_CTRL|Elephant_Rig:BaseRig:Wrist_J_L_GRP|Elephant_Rig:BaseRig:Wrist_J_L_CTRL" 
+		"rotateY" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_L_GRP|Elephant_Rig:BaseRig:Clavical_J_L_CTRL|Elephant_Rig:BaseRig:Shoulder_J_L2_GRP|Elephant_Rig:BaseRig:Shoulder_J_L2_CTRL|Elephant_Rig:BaseRig:Arm_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_L_GRP|Elephant_Rig:BaseRig:Shoulder_J_L_CTRL|Elephant_Rig:BaseRig:Elbow_J_L_GRP|Elephant_Rig:BaseRig:Elbow_J_L_CTRL|Elephant_Rig:BaseRig:Wrist_J_L_GRP|Elephant_Rig:BaseRig:Wrist_J_L_CTRL" 
+		"rotateZ" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_R_GRP|Elephant_Rig:BaseRig:Clavical_J_R_CTRL|Elephant_Rig:BaseRig:Shoulder_J_R2_GRP|Elephant_Rig:BaseRig:Shoulder_J_R2_CTRL|Elephant_Rig:BaseRig:Arm_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_R_GRP|Elephant_Rig:BaseRig:Shoulder_J_R_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_R_GRP|Elephant_Rig:BaseRig:Clavical_J_R_CTRL|Elephant_Rig:BaseRig:Shoulder_J_R2_GRP|Elephant_Rig:BaseRig:Shoulder_J_R2_CTRL|Elephant_Rig:BaseRig:Arm_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_R_GRP|Elephant_Rig:BaseRig:Shoulder_J_R_CTRL" 
+		"rotateX" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_R_GRP|Elephant_Rig:BaseRig:Clavical_J_R_CTRL|Elephant_Rig:BaseRig:Shoulder_J_R2_GRP|Elephant_Rig:BaseRig:Shoulder_J_R2_CTRL|Elephant_Rig:BaseRig:Arm_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_R_GRP|Elephant_Rig:BaseRig:Shoulder_J_R_CTRL" 
+		"rotateY" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_R_GRP|Elephant_Rig:BaseRig:Clavical_J_R_CTRL|Elephant_Rig:BaseRig:Shoulder_J_R2_GRP|Elephant_Rig:BaseRig:Shoulder_J_R2_CTRL|Elephant_Rig:BaseRig:Arm_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_R_GRP|Elephant_Rig:BaseRig:Shoulder_J_R_CTRL" 
+		"rotateZ" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_R_GRP|Elephant_Rig:BaseRig:Clavical_J_R_CTRL|Elephant_Rig:BaseRig:Shoulder_J_R2_GRP|Elephant_Rig:BaseRig:Shoulder_J_R2_CTRL|Elephant_Rig:BaseRig:Arm_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_R_GRP|Elephant_Rig:BaseRig:Shoulder_J_R_CTRL|Elephant_Rig:BaseRig:Elbow_J_R_GRP|Elephant_Rig:BaseRig:Elbow_J_R_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_R_GRP|Elephant_Rig:BaseRig:Clavical_J_R_CTRL|Elephant_Rig:BaseRig:Shoulder_J_R2_GRP|Elephant_Rig:BaseRig:Shoulder_J_R2_CTRL|Elephant_Rig:BaseRig:Arm_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_R_GRP|Elephant_Rig:BaseRig:Shoulder_J_R_CTRL|Elephant_Rig:BaseRig:Elbow_J_R_GRP|Elephant_Rig:BaseRig:Elbow_J_R_CTRL" 
+		"rotateY" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_R_GRP|Elephant_Rig:BaseRig:Clavical_J_R_CTRL|Elephant_Rig:BaseRig:Shoulder_J_R2_GRP|Elephant_Rig:BaseRig:Shoulder_J_R2_CTRL|Elephant_Rig:BaseRig:Arm_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_R_GRP|Elephant_Rig:BaseRig:Shoulder_J_R_CTRL|Elephant_Rig:BaseRig:Elbow_J_R_GRP|Elephant_Rig:BaseRig:Elbow_J_R_CTRL" 
+		"rotateZ" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_R_GRP|Elephant_Rig:BaseRig:Clavical_J_R_CTRL|Elephant_Rig:BaseRig:Shoulder_J_R2_GRP|Elephant_Rig:BaseRig:Shoulder_J_R2_CTRL|Elephant_Rig:BaseRig:Arm_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_R_GRP|Elephant_Rig:BaseRig:Shoulder_J_R_CTRL|Elephant_Rig:BaseRig:Elbow_J_R_GRP|Elephant_Rig:BaseRig:Elbow_J_R_CTRL|Elephant_Rig:BaseRig:Wrist_J_R_GRP|Elephant_Rig:BaseRig:Wrist_J_R_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_R_GRP|Elephant_Rig:BaseRig:Clavical_J_R_CTRL|Elephant_Rig:BaseRig:Shoulder_J_R2_GRP|Elephant_Rig:BaseRig:Shoulder_J_R2_CTRL|Elephant_Rig:BaseRig:Arm_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_R_GRP|Elephant_Rig:BaseRig:Shoulder_J_R_CTRL|Elephant_Rig:BaseRig:Elbow_J_R_GRP|Elephant_Rig:BaseRig:Elbow_J_R_CTRL|Elephant_Rig:BaseRig:Wrist_J_R_GRP|Elephant_Rig:BaseRig:Wrist_J_R_CTRL" 
+		"rotateY" " -av"
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_R_GRP|Elephant_Rig:BaseRig:Clavical_J_R_CTRL|Elephant_Rig:BaseRig:Shoulder_J_R2_GRP|Elephant_Rig:BaseRig:Shoulder_J_R2_CTRL|Elephant_Rig:BaseRig:Arm_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_R_GRP|Elephant_Rig:BaseRig:Shoulder_J_R_CTRL|Elephant_Rig:BaseRig:Elbow_J_R_GRP|Elephant_Rig:BaseRig:Elbow_J_R_CTRL|Elephant_Rig:BaseRig:Wrist_J_R_GRP|Elephant_Rig:BaseRig:Wrist_J_R_CTRL" 
+		"rotateZ" " -av"
+		2 "Elephant_Rig:BaseRig:layer1" "visibility" " 1"
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl.rotateX" 
+		"Elephant_RigRN.placeHolderList[1]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl.rotateY" 
+		"Elephant_RigRN.placeHolderList[2]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl.rotateZ" 
+		"Elephant_RigRN.placeHolderList[3]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL.rotateX" 
+		"Elephant_RigRN.placeHolderList[4]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL.rotateY" 
+		"Elephant_RigRN.placeHolderList[5]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL.rotateZ" 
+		"Elephant_RigRN.placeHolderList[6]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL.rotateX" 
+		"Elephant_RigRN.placeHolderList[7]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL.rotateY" 
+		"Elephant_RigRN.placeHolderList[8]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL.rotateZ" 
+		"Elephant_RigRN.placeHolderList[9]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_L_GRP_FK|Elephant_Rig:BaseRig:Hip_J_L_CTRL.rotateY" 
+		"Elephant_RigRN.placeHolderList[10]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_L_GRP_FK|Elephant_Rig:BaseRig:Hip_J_L_CTRL.rotateZ" 
+		"Elephant_RigRN.placeHolderList[11]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_L_GRP_FK|Elephant_Rig:BaseRig:Hip_J_L_CTRL.rotateX" 
+		"Elephant_RigRN.placeHolderList[12]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_L_GRP_FK|Elephant_Rig:BaseRig:Hip_J_L_CTRL|Elephant_Rig:BaseRig:Knee_J_L_GRP|Elephant_Rig:BaseRig:Knee_J_L_CTRL.rotateY" 
+		"Elephant_RigRN.placeHolderList[13]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_L_GRP_FK|Elephant_Rig:BaseRig:Hip_J_L_CTRL|Elephant_Rig:BaseRig:Knee_J_L_GRP|Elephant_Rig:BaseRig:Knee_J_L_CTRL.rotateZ" 
+		"Elephant_RigRN.placeHolderList[14]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_L_GRP_FK|Elephant_Rig:BaseRig:Hip_J_L_CTRL|Elephant_Rig:BaseRig:Knee_J_L_GRP|Elephant_Rig:BaseRig:Knee_J_L_CTRL.rotateX" 
+		"Elephant_RigRN.placeHolderList[15]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_L_GRP_FK|Elephant_Rig:BaseRig:Hip_J_L_CTRL|Elephant_Rig:BaseRig:Knee_J_L_GRP|Elephant_Rig:BaseRig:Knee_J_L_CTRL|Elephant_Rig:BaseRig:Ankle_J_L_GRP|Elephant_Rig:BaseRig:Ankle_J_L_CTRL.rotateY" 
+		"Elephant_RigRN.placeHolderList[16]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_L_GRP_FK|Elephant_Rig:BaseRig:Hip_J_L_CTRL|Elephant_Rig:BaseRig:Knee_J_L_GRP|Elephant_Rig:BaseRig:Knee_J_L_CTRL|Elephant_Rig:BaseRig:Ankle_J_L_GRP|Elephant_Rig:BaseRig:Ankle_J_L_CTRL.rotateZ" 
+		"Elephant_RigRN.placeHolderList[17]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_L_GRP_FK|Elephant_Rig:BaseRig:Hip_J_L_CTRL|Elephant_Rig:BaseRig:Knee_J_L_GRP|Elephant_Rig:BaseRig:Knee_J_L_CTRL|Elephant_Rig:BaseRig:Ankle_J_L_GRP|Elephant_Rig:BaseRig:Ankle_J_L_CTRL.rotateX" 
+		"Elephant_RigRN.placeHolderList[18]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_R_CTRL.rotateX" 
+		"Elephant_RigRN.placeHolderList[19]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_R_CTRL.rotateY" 
+		"Elephant_RigRN.placeHolderList[20]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_R_CTRL.rotateZ" 
+		"Elephant_RigRN.placeHolderList[21]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_R_CTRL|Elephant_Rig:BaseRig:Knee_J_R_GRP|Elephant_Rig:BaseRig:Knee_J_R_CTRL.rotateX" 
+		"Elephant_RigRN.placeHolderList[22]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_R_CTRL|Elephant_Rig:BaseRig:Knee_J_R_GRP|Elephant_Rig:BaseRig:Knee_J_R_CTRL.rotateY" 
+		"Elephant_RigRN.placeHolderList[23]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_R_CTRL|Elephant_Rig:BaseRig:Knee_J_R_GRP|Elephant_Rig:BaseRig:Knee_J_R_CTRL.rotateZ" 
+		"Elephant_RigRN.placeHolderList[24]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_R_CTRL|Elephant_Rig:BaseRig:Knee_J_R_GRP|Elephant_Rig:BaseRig:Knee_J_R_CTRL|Elephant_Rig:BaseRig:Ankle_J_R_GRP|Elephant_Rig:BaseRig:Ankle_J_R_CTRL.rotateX" 
+		"Elephant_RigRN.placeHolderList[25]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_R_CTRL|Elephant_Rig:BaseRig:Knee_J_R_GRP|Elephant_Rig:BaseRig:Knee_J_R_CTRL|Elephant_Rig:BaseRig:Ankle_J_R_GRP|Elephant_Rig:BaseRig:Ankle_J_R_CTRL.rotateY" 
+		"Elephant_RigRN.placeHolderList[26]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:Pelvis_J_GRP|Elephant_Rig:BaseRig:Pelvis_J_CTRL|Elephant_Rig:BaseRig:Leg_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Hip_J_R_CTRL|Elephant_Rig:BaseRig:Knee_J_R_GRP|Elephant_Rig:BaseRig:Knee_J_R_CTRL|Elephant_Rig:BaseRig:Ankle_J_R_GRP|Elephant_Rig:BaseRig:Ankle_J_R_CTRL.rotateZ" 
+		"Elephant_RigRN.placeHolderList[27]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL.rotateY" 
+		"Elephant_RigRN.placeHolderList[28]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL.rotateZ" 
+		"Elephant_RigRN.placeHolderList[29]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL.rotateX" 
+		"Elephant_RigRN.placeHolderList[30]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL.rotateY" 
+		"Elephant_RigRN.placeHolderList[31]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL.rotateZ" 
+		"Elephant_RigRN.placeHolderList[32]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL.rotateX" 
+		"Elephant_RigRN.placeHolderList[33]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL.rotateY" 
+		"Elephant_RigRN.placeHolderList[34]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL.rotateZ" 
+		"Elephant_RigRN.placeHolderList[35]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL.rotateX" 
+		"Elephant_RigRN.placeHolderList[36]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:head_J_GRP|Elephant_Rig:BaseRig:head_J_CTRL.rotateX" 
+		"Elephant_RigRN.placeHolderList[37]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:head_J_GRP|Elephant_Rig:BaseRig:head_J_CTRL.rotateY" 
+		"Elephant_RigRN.placeHolderList[38]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:head_J_GRP|Elephant_Rig:BaseRig:head_J_CTRL.rotateZ" 
+		"Elephant_RigRN.placeHolderList[39]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:head_J_GRP|Elephant_Rig:BaseRig:head_J_CTRL|Elephant_Rig:BaseRig:Eye_J_L_GRP|Elephant_Rig:BaseRig:Eye_J_L_CTRL.rotateX" 
+		"Elephant_RigRN.placeHolderList[40]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:head_J_GRP|Elephant_Rig:BaseRig:head_J_CTRL|Elephant_Rig:BaseRig:Eye_J_L_GRP|Elephant_Rig:BaseRig:Eye_J_L_CTRL.rotateY" 
+		"Elephant_RigRN.placeHolderList[41]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:head_J_GRP|Elephant_Rig:BaseRig:head_J_CTRL|Elephant_Rig:BaseRig:Eye_J_L_GRP|Elephant_Rig:BaseRig:Eye_J_L_CTRL.rotateZ" 
+		"Elephant_RigRN.placeHolderList[42]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:head_J_GRP|Elephant_Rig:BaseRig:head_J_CTRL|Elephant_Rig:BaseRig:Eye_J_L_GRP|Elephant_Rig:BaseRig:Eye_J_L_CTRL|Elephant_Rig:BaseRig:EyeLid_J_L_GRP|Elephant_Rig:BaseRig:EyeLid_J_L_CTRL.rotateX" 
+		"Elephant_RigRN.placeHolderList[43]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:head_J_GRP|Elephant_Rig:BaseRig:head_J_CTRL|Elephant_Rig:BaseRig:Eye_J_L_GRP|Elephant_Rig:BaseRig:Eye_J_L_CTRL|Elephant_Rig:BaseRig:EyeLid_J_L_GRP|Elephant_Rig:BaseRig:EyeLid_J_L_CTRL.rotateY" 
+		"Elephant_RigRN.placeHolderList[44]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:head_J_GRP|Elephant_Rig:BaseRig:head_J_CTRL|Elephant_Rig:BaseRig:Eye_J_L_GRP|Elephant_Rig:BaseRig:Eye_J_L_CTRL|Elephant_Rig:BaseRig:EyeLid_J_L_GRP|Elephant_Rig:BaseRig:EyeLid_J_L_CTRL.rotateZ" 
+		"Elephant_RigRN.placeHolderList[45]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:head_J_GRP|Elephant_Rig:BaseRig:head_J_CTRL|Elephant_Rig:BaseRig:Eye_J_R_GRP|Elephant_Rig:BaseRig:Eye_J_R_CTRL.rotateX" 
+		"Elephant_RigRN.placeHolderList[46]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:head_J_GRP|Elephant_Rig:BaseRig:head_J_CTRL|Elephant_Rig:BaseRig:Eye_J_R_GRP|Elephant_Rig:BaseRig:Eye_J_R_CTRL.rotateY" 
+		"Elephant_RigRN.placeHolderList[47]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:head_J_GRP|Elephant_Rig:BaseRig:head_J_CTRL|Elephant_Rig:BaseRig:Eye_J_R_GRP|Elephant_Rig:BaseRig:Eye_J_R_CTRL.rotateZ" 
+		"Elephant_RigRN.placeHolderList[48]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:head_J_GRP|Elephant_Rig:BaseRig:head_J_CTRL|Elephant_Rig:BaseRig:Eye_J_R_GRP|Elephant_Rig:BaseRig:Eye_J_R_CTRL|Elephant_Rig:BaseRig:EyeLid_J_R_GRP|Elephant_Rig:BaseRig:EyeLid_J_R_CTRL.rotateX" 
+		"Elephant_RigRN.placeHolderList[49]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:head_J_GRP|Elephant_Rig:BaseRig:head_J_CTRL|Elephant_Rig:BaseRig:Eye_J_R_GRP|Elephant_Rig:BaseRig:Eye_J_R_CTRL|Elephant_Rig:BaseRig:EyeLid_J_R_GRP|Elephant_Rig:BaseRig:EyeLid_J_R_CTRL.rotateY" 
+		"Elephant_RigRN.placeHolderList[50]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:head_J_GRP|Elephant_Rig:BaseRig:head_J_CTRL|Elephant_Rig:BaseRig:Eye_J_R_GRP|Elephant_Rig:BaseRig:Eye_J_R_CTRL|Elephant_Rig:BaseRig:EyeLid_J_R_GRP|Elephant_Rig:BaseRig:EyeLid_J_R_CTRL.rotateZ" 
+		"Elephant_RigRN.placeHolderList[51]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:head_J_GRP|Elephant_Rig:BaseRig:head_J_CTRL|Elephant_Rig:BaseRig:Jaw_J_GRP|Elephant_Rig:BaseRig:Jaw_J_CTRL.rotateX" 
+		"Elephant_RigRN.placeHolderList[52]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:head_J_GRP|Elephant_Rig:BaseRig:head_J_CTRL|Elephant_Rig:BaseRig:Jaw_J_GRP|Elephant_Rig:BaseRig:Jaw_J_CTRL.rotateY" 
+		"Elephant_RigRN.placeHolderList[53]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:head_J_GRP|Elephant_Rig:BaseRig:head_J_CTRL|Elephant_Rig:BaseRig:Jaw_J_GRP|Elephant_Rig:BaseRig:Jaw_J_CTRL.rotateZ" 
+		"Elephant_RigRN.placeHolderList[54]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_L_GRP|Elephant_Rig:BaseRig:Clavical_J_L_CTRL.rotateX" 
+		"Elephant_RigRN.placeHolderList[55]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_L_GRP|Elephant_Rig:BaseRig:Clavical_J_L_CTRL.rotateY" 
+		"Elephant_RigRN.placeHolderList[56]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_L_GRP|Elephant_Rig:BaseRig:Clavical_J_L_CTRL.rotateZ" 
+		"Elephant_RigRN.placeHolderList[57]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_L_GRP|Elephant_Rig:BaseRig:Clavical_J_L_CTRL|Elephant_Rig:BaseRig:Shoulder_J_L2_GRP|Elephant_Rig:BaseRig:Shoulder_J_L2_CTRL.rotateX" 
+		"Elephant_RigRN.placeHolderList[58]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_L_GRP|Elephant_Rig:BaseRig:Clavical_J_L_CTRL|Elephant_Rig:BaseRig:Shoulder_J_L2_GRP|Elephant_Rig:BaseRig:Shoulder_J_L2_CTRL.rotateY" 
+		"Elephant_RigRN.placeHolderList[59]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_L_GRP|Elephant_Rig:BaseRig:Clavical_J_L_CTRL|Elephant_Rig:BaseRig:Shoulder_J_L2_GRP|Elephant_Rig:BaseRig:Shoulder_J_L2_CTRL.rotateZ" 
+		"Elephant_RigRN.placeHolderList[60]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_L_GRP|Elephant_Rig:BaseRig:Clavical_J_L_CTRL|Elephant_Rig:BaseRig:Shoulder_J_L2_GRP|Elephant_Rig:BaseRig:Shoulder_J_L2_CTRL|Elephant_Rig:BaseRig:Arm_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_L_GRP|Elephant_Rig:BaseRig:Shoulder_J_L_CTRL.rotateX" 
+		"Elephant_RigRN.placeHolderList[61]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_L_GRP|Elephant_Rig:BaseRig:Clavical_J_L_CTRL|Elephant_Rig:BaseRig:Shoulder_J_L2_GRP|Elephant_Rig:BaseRig:Shoulder_J_L2_CTRL|Elephant_Rig:BaseRig:Arm_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_L_GRP|Elephant_Rig:BaseRig:Shoulder_J_L_CTRL.rotateY" 
+		"Elephant_RigRN.placeHolderList[62]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_L_GRP|Elephant_Rig:BaseRig:Clavical_J_L_CTRL|Elephant_Rig:BaseRig:Shoulder_J_L2_GRP|Elephant_Rig:BaseRig:Shoulder_J_L2_CTRL|Elephant_Rig:BaseRig:Arm_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_L_GRP|Elephant_Rig:BaseRig:Shoulder_J_L_CTRL.rotateZ" 
+		"Elephant_RigRN.placeHolderList[63]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_L_GRP|Elephant_Rig:BaseRig:Clavical_J_L_CTRL|Elephant_Rig:BaseRig:Shoulder_J_L2_GRP|Elephant_Rig:BaseRig:Shoulder_J_L2_CTRL|Elephant_Rig:BaseRig:Arm_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_L_GRP|Elephant_Rig:BaseRig:Shoulder_J_L_CTRL|Elephant_Rig:BaseRig:Elbow_J_L_GRP|Elephant_Rig:BaseRig:Elbow_J_L_CTRL.rotateY" 
+		"Elephant_RigRN.placeHolderList[64]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_L_GRP|Elephant_Rig:BaseRig:Clavical_J_L_CTRL|Elephant_Rig:BaseRig:Shoulder_J_L2_GRP|Elephant_Rig:BaseRig:Shoulder_J_L2_CTRL|Elephant_Rig:BaseRig:Arm_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_L_GRP|Elephant_Rig:BaseRig:Shoulder_J_L_CTRL|Elephant_Rig:BaseRig:Elbow_J_L_GRP|Elephant_Rig:BaseRig:Elbow_J_L_CTRL.rotateZ" 
+		"Elephant_RigRN.placeHolderList[65]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_L_GRP|Elephant_Rig:BaseRig:Clavical_J_L_CTRL|Elephant_Rig:BaseRig:Shoulder_J_L2_GRP|Elephant_Rig:BaseRig:Shoulder_J_L2_CTRL|Elephant_Rig:BaseRig:Arm_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_L_GRP|Elephant_Rig:BaseRig:Shoulder_J_L_CTRL|Elephant_Rig:BaseRig:Elbow_J_L_GRP|Elephant_Rig:BaseRig:Elbow_J_L_CTRL.rotateX" 
+		"Elephant_RigRN.placeHolderList[66]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_L_GRP|Elephant_Rig:BaseRig:Clavical_J_L_CTRL|Elephant_Rig:BaseRig:Shoulder_J_L2_GRP|Elephant_Rig:BaseRig:Shoulder_J_L2_CTRL|Elephant_Rig:BaseRig:Arm_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_L_GRP|Elephant_Rig:BaseRig:Shoulder_J_L_CTRL|Elephant_Rig:BaseRig:Elbow_J_L_GRP|Elephant_Rig:BaseRig:Elbow_J_L_CTRL|Elephant_Rig:BaseRig:Wrist_J_L_GRP|Elephant_Rig:BaseRig:Wrist_J_L_CTRL.rotateX" 
+		"Elephant_RigRN.placeHolderList[67]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_L_GRP|Elephant_Rig:BaseRig:Clavical_J_L_CTRL|Elephant_Rig:BaseRig:Shoulder_J_L2_GRP|Elephant_Rig:BaseRig:Shoulder_J_L2_CTRL|Elephant_Rig:BaseRig:Arm_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_L_GRP|Elephant_Rig:BaseRig:Shoulder_J_L_CTRL|Elephant_Rig:BaseRig:Elbow_J_L_GRP|Elephant_Rig:BaseRig:Elbow_J_L_CTRL|Elephant_Rig:BaseRig:Wrist_J_L_GRP|Elephant_Rig:BaseRig:Wrist_J_L_CTRL.rotateY" 
+		"Elephant_RigRN.placeHolderList[68]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_L_GRP|Elephant_Rig:BaseRig:Clavical_J_L_CTRL|Elephant_Rig:BaseRig:Shoulder_J_L2_GRP|Elephant_Rig:BaseRig:Shoulder_J_L2_CTRL|Elephant_Rig:BaseRig:Arm_L_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_L_GRP|Elephant_Rig:BaseRig:Shoulder_J_L_CTRL|Elephant_Rig:BaseRig:Elbow_J_L_GRP|Elephant_Rig:BaseRig:Elbow_J_L_CTRL|Elephant_Rig:BaseRig:Wrist_J_L_GRP|Elephant_Rig:BaseRig:Wrist_J_L_CTRL.rotateZ" 
+		"Elephant_RigRN.placeHolderList[69]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_R_GRP|Elephant_Rig:BaseRig:Clavical_J_R_CTRL.rotateX" 
+		"Elephant_RigRN.placeHolderList[70]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_R_GRP|Elephant_Rig:BaseRig:Clavical_J_R_CTRL.rotateY" 
+		"Elephant_RigRN.placeHolderList[71]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_R_GRP|Elephant_Rig:BaseRig:Clavical_J_R_CTRL.rotateZ" 
+		"Elephant_RigRN.placeHolderList[72]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_R_GRP|Elephant_Rig:BaseRig:Clavical_J_R_CTRL|Elephant_Rig:BaseRig:Shoulder_J_R2_GRP|Elephant_Rig:BaseRig:Shoulder_J_R2_CTRL.rotateX" 
+		"Elephant_RigRN.placeHolderList[73]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_R_GRP|Elephant_Rig:BaseRig:Clavical_J_R_CTRL|Elephant_Rig:BaseRig:Shoulder_J_R2_GRP|Elephant_Rig:BaseRig:Shoulder_J_R2_CTRL.rotateY" 
+		"Elephant_RigRN.placeHolderList[74]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_R_GRP|Elephant_Rig:BaseRig:Clavical_J_R_CTRL|Elephant_Rig:BaseRig:Shoulder_J_R2_GRP|Elephant_Rig:BaseRig:Shoulder_J_R2_CTRL.rotateZ" 
+		"Elephant_RigRN.placeHolderList[75]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_R_GRP|Elephant_Rig:BaseRig:Clavical_J_R_CTRL|Elephant_Rig:BaseRig:Shoulder_J_R2_GRP|Elephant_Rig:BaseRig:Shoulder_J_R2_CTRL|Elephant_Rig:BaseRig:Arm_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_R_GRP|Elephant_Rig:BaseRig:Shoulder_J_R_CTRL.rotateX" 
+		"Elephant_RigRN.placeHolderList[76]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_R_GRP|Elephant_Rig:BaseRig:Clavical_J_R_CTRL|Elephant_Rig:BaseRig:Shoulder_J_R2_GRP|Elephant_Rig:BaseRig:Shoulder_J_R2_CTRL|Elephant_Rig:BaseRig:Arm_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_R_GRP|Elephant_Rig:BaseRig:Shoulder_J_R_CTRL.rotateY" 
+		"Elephant_RigRN.placeHolderList[77]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_R_GRP|Elephant_Rig:BaseRig:Clavical_J_R_CTRL|Elephant_Rig:BaseRig:Shoulder_J_R2_GRP|Elephant_Rig:BaseRig:Shoulder_J_R2_CTRL|Elephant_Rig:BaseRig:Arm_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_R_GRP|Elephant_Rig:BaseRig:Shoulder_J_R_CTRL.rotateZ" 
+		"Elephant_RigRN.placeHolderList[78]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_R_GRP|Elephant_Rig:BaseRig:Clavical_J_R_CTRL|Elephant_Rig:BaseRig:Shoulder_J_R2_GRP|Elephant_Rig:BaseRig:Shoulder_J_R2_CTRL|Elephant_Rig:BaseRig:Arm_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_R_GRP|Elephant_Rig:BaseRig:Shoulder_J_R_CTRL|Elephant_Rig:BaseRig:Elbow_J_R_GRP|Elephant_Rig:BaseRig:Elbow_J_R_CTRL.rotateY" 
+		"Elephant_RigRN.placeHolderList[79]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_R_GRP|Elephant_Rig:BaseRig:Clavical_J_R_CTRL|Elephant_Rig:BaseRig:Shoulder_J_R2_GRP|Elephant_Rig:BaseRig:Shoulder_J_R2_CTRL|Elephant_Rig:BaseRig:Arm_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_R_GRP|Elephant_Rig:BaseRig:Shoulder_J_R_CTRL|Elephant_Rig:BaseRig:Elbow_J_R_GRP|Elephant_Rig:BaseRig:Elbow_J_R_CTRL.rotateZ" 
+		"Elephant_RigRN.placeHolderList[80]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_R_GRP|Elephant_Rig:BaseRig:Clavical_J_R_CTRL|Elephant_Rig:BaseRig:Shoulder_J_R2_GRP|Elephant_Rig:BaseRig:Shoulder_J_R2_CTRL|Elephant_Rig:BaseRig:Arm_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_R_GRP|Elephant_Rig:BaseRig:Shoulder_J_R_CTRL|Elephant_Rig:BaseRig:Elbow_J_R_GRP|Elephant_Rig:BaseRig:Elbow_J_R_CTRL.rotateX" 
+		"Elephant_RigRN.placeHolderList[81]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_R_GRP|Elephant_Rig:BaseRig:Clavical_J_R_CTRL|Elephant_Rig:BaseRig:Shoulder_J_R2_GRP|Elephant_Rig:BaseRig:Shoulder_J_R2_CTRL|Elephant_Rig:BaseRig:Arm_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_R_GRP|Elephant_Rig:BaseRig:Shoulder_J_R_CTRL|Elephant_Rig:BaseRig:Elbow_J_R_GRP|Elephant_Rig:BaseRig:Elbow_J_R_CTRL|Elephant_Rig:BaseRig:Wrist_J_R_GRP|Elephant_Rig:BaseRig:Wrist_J_R_CTRL.rotateY" 
+		"Elephant_RigRN.placeHolderList[82]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_R_GRP|Elephant_Rig:BaseRig:Clavical_J_R_CTRL|Elephant_Rig:BaseRig:Shoulder_J_R2_GRP|Elephant_Rig:BaseRig:Shoulder_J_R2_CTRL|Elephant_Rig:BaseRig:Arm_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_R_GRP|Elephant_Rig:BaseRig:Shoulder_J_R_CTRL|Elephant_Rig:BaseRig:Elbow_J_R_GRP|Elephant_Rig:BaseRig:Elbow_J_R_CTRL|Elephant_Rig:BaseRig:Wrist_J_R_GRP|Elephant_Rig:BaseRig:Wrist_J_R_CTRL.rotateZ" 
+		"Elephant_RigRN.placeHolderList[83]" ""
+		5 4 "Elephant_RigRN" "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls|Elephant_Rig:BaseRig:Transform_Ctrl_Grp|Elephant_Rig:BaseRig:Transform_Ctrl|Elephant_Rig:BaseRig:Root_J_GRP|Elephant_Rig:BaseRig:Root_J_CTRL|Elephant_Rig:BaseRig:LowerBack_J_GRP|Elephant_Rig:BaseRig:LowerBack_J_CTRL|Elephant_Rig:BaseRig:MiddleBack_j_GRP|Elephant_Rig:BaseRig:MiddleBack_j_CTRL|Elephant_Rig:BaseRig:UpperBack_j_GRP|Elephant_Rig:BaseRig:UpperBack_j_CTRL|Elephant_Rig:BaseRig:Clavical_J_R_GRP|Elephant_Rig:BaseRig:Clavical_J_R_CTRL|Elephant_Rig:BaseRig:Shoulder_J_R2_GRP|Elephant_Rig:BaseRig:Shoulder_J_R2_CTRL|Elephant_Rig:BaseRig:Arm_R_FK_Master_Ctrl_Grp|Elephant_Rig:BaseRig:Shoulder_J_R_GRP|Elephant_Rig:BaseRig:Shoulder_J_R_CTRL|Elephant_Rig:BaseRig:Elbow_J_R_GRP|Elephant_Rig:BaseRig:Elbow_J_R_CTRL|Elephant_Rig:BaseRig:Wrist_J_R_GRP|Elephant_Rig:BaseRig:Wrist_J_R_CTRL.rotateX" 
+		"Elephant_RigRN.placeHolderList[84]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode timeEditor -s -n "timeEditor";
@@ -161,6 +552,426 @@ createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "A0469715-45BB-1B8E-9A7E-D3B136C36B13";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 120 -ast 1 -aet 200 ";
 	setAttr ".st" 6;
+createNode animCurveTA -n "MiddleBack_j_CTRL_rotateX";
+	rename -uid "D8C83DA8-4D49-3D78-3595-88844DFB066B";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "MiddleBack_j_CTRL_rotateY";
+	rename -uid "865E6EF9-4817-D82D-C09B-A093B11C139C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "MiddleBack_j_CTRL_rotateZ";
+	rename -uid "A731A623-4537-B014-DB51-9A9107C0CBED";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 15 -45.948579385498483;
+createNode animCurveTA -n "LowerBack_J_CTRL_rotateX";
+	rename -uid "F7E3BF0D-4938-6B99-7FDC-E1A8940A7D3F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "LowerBack_J_CTRL_rotateY";
+	rename -uid "8669B33B-4AE4-C691-F178-05B44951C9D1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "LowerBack_J_CTRL_rotateZ";
+	rename -uid "6233A01C-48C2-E85E-349E-EFB9891C9D0C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 10 4.3199410381325265;
+createNode animCurveTA -n "Ankle_J_R_CTRL_rotateX";
+	rename -uid "8AA0B6E8-4C53-651B-0323-C29314460DC4";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Ankle_J_R_CTRL_rotateY";
+	rename -uid "C7A57664-41AE-7859-2A59-33AAF7993525";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Ankle_J_R_CTRL_rotateZ";
+	rename -uid "53F64A3F-44AF-B00D-5A73-C59E0171F8A1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 10 -11.316150853450264;
+createNode animCurveTA -n "Knee_J_R_CTRL_rotateX";
+	rename -uid "9EC953B1-453E-8FD2-33D6-B48A735CD057";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Knee_J_R_CTRL_rotateY";
+	rename -uid "52F9C2CE-455E-8E17-3A4C-B598351A1484";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Knee_J_R_CTRL_rotateZ";
+	rename -uid "5F3C8245-4F02-8168-D496-689C1A2C2656";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 10 -22.115124809623925;
+createNode animCurveTA -n "Hip_J_R_CTRL_rotateX";
+	rename -uid "BB8D2749-495F-C09F-DDE4-B2954E5F2132";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Hip_J_R_CTRL_rotateY";
+	rename -uid "B08C5728-4E00-6C0D-BC95-D28E45A80E32";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Hip_J_R_CTRL_rotateZ";
+	rename -uid "84479F8E-48CF-7060-C8A2-F9A699470EEC";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 10 12.60723366087265;
+createNode animCurveTA -n "Wrist_J_L_CTRL_rotateX";
+	rename -uid "A9D56872-4CBC-B96D-3637-EF8865BAD43C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Wrist_J_L_CTRL_rotateY";
+	rename -uid "2D3E4B1A-4F2F-F249-1DD3-509083C56414";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 10 -58.739852238163763;
+createNode animCurveTA -n "Wrist_J_L_CTRL_rotateZ";
+	rename -uid "BA42E47F-4043-EAED-8CCD-0FB0610F6469";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Elbow_J_L_CTRL_rotateX";
+	rename -uid "C55F0D6A-4E48-1D5C-02D9-5B8C377F2301";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Elbow_J_L_CTRL_rotateY";
+	rename -uid "64DB3A62-44CD-1D41-A567-D4BCDBCEEDD3";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 10 -58.739852238163763;
+createNode animCurveTA -n "Elbow_J_L_CTRL_rotateZ";
+	rename -uid "AD0F3B0F-4995-3992-F139-B8B88042341E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Shoulder_J_L_CTRL_rotateX";
+	rename -uid "2A639CD6-4451-BF0A-14D9-09B054549035";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Shoulder_J_L_CTRL_rotateY";
+	rename -uid "1A152D6D-411A-2228-C908-CDBF6B37A945";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 10 -58.739852238163763;
+createNode animCurveTA -n "Shoulder_J_L_CTRL_rotateZ";
+	rename -uid "82817002-49AE-6361-3CC1-0C8D316F2AE4";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Shoulder_J_L2_CTRL_rotateX";
+	rename -uid "E79E13CB-47ED-48E7-ABD7-8ABA5767ACAB";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Shoulder_J_L2_CTRL_rotateY";
+	rename -uid "168ABD1D-4BB2-C97A-E174-F49E1C8F81AE";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Shoulder_J_L2_CTRL_rotateZ";
+	rename -uid "5DF29B85-4CF9-8B7F-4131-7FB53CDB9207";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Wrist_J_R_CTRL_rotateX";
+	rename -uid "BEDAA601-4D7C-7ECD-1071-92AEFE8B4200";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Wrist_J_R_CTRL_rotateY";
+	rename -uid "DCECE13F-4E7B-A701-A0FC-2BAEC7DD21B6";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 10 -58.739852238163763;
+createNode animCurveTA -n "Wrist_J_R_CTRL_rotateZ";
+	rename -uid "4DF3605C-4197-C2A8-6549-BA9A6FDF2DFC";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Clavical_J_L_CTRL_rotateX";
+	rename -uid "E7054B3F-4EB6-D1BF-0CD1-4FA54CF18C68";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Clavical_J_L_CTRL_rotateY";
+	rename -uid "ADC8A8E8-43C6-922C-2205-688F50A70EAC";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Clavical_J_L_CTRL_rotateZ";
+	rename -uid "E24DD65A-45D7-8766-74F2-22AD2FDA06AA";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Jaw_J_CTRL_rotateX";
+	rename -uid "F5B73412-4639-E5F4-7587-49B09C611D62";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Jaw_J_CTRL_rotateY";
+	rename -uid "340C6E46-4D18-0E52-A6F7-64AE6C13A4C7";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Jaw_J_CTRL_rotateZ";
+	rename -uid "6CD54519-4FF6-CE79-7690-C5914BB913DB";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "EyeLid_J_R_CTRL_rotateX";
+	rename -uid "B4715D44-4174-687B-C095-CF92430B1DDD";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "EyeLid_J_R_CTRL_rotateY";
+	rename -uid "09FC7F3C-44A3-FB66-3625-57AC207C35B5";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "EyeLid_J_R_CTRL_rotateZ";
+	rename -uid "108A69B9-4F97-6CE6-A9C5-20800C0E5DF6";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Eye_J_R_CTRL_rotateX";
+	rename -uid "82BED89A-4249-242B-3A6C-E4B06FDB1914";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Eye_J_R_CTRL_rotateY";
+	rename -uid "05E21B5F-45EF-3B3E-3B48-51AA1EAAD88B";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Eye_J_R_CTRL_rotateZ";
+	rename -uid "43A5B950-4E10-174B-7156-4FBF8B087F34";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "EyeLid_J_L_CTRL_rotateX";
+	rename -uid "FB520E35-4F5A-C8E9-BD73-3D9A0D0FD69F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "EyeLid_J_L_CTRL_rotateY";
+	rename -uid "3CCB8A3D-41A0-B9FD-92BC-1BB1EDC47A28";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "EyeLid_J_L_CTRL_rotateZ";
+	rename -uid "164B18EE-4877-B44C-01B6-CB8E089A5B80";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Eye_J_L_CTRL_rotateX";
+	rename -uid "2BB1FE23-4816-1D02-39AD-1ABB0A5A9CC5";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Eye_J_L_CTRL_rotateY";
+	rename -uid "B051680F-4F60-B93D-99A2-E69E3F006A9B";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Eye_J_L_CTRL_rotateZ";
+	rename -uid "4A0E210D-416B-6855-4437-9C932BF8244E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "head_J_CTRL_rotateX";
+	rename -uid "C2100A07-47DC-7C4E-395C-DBA71E18FF58";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "head_J_CTRL_rotateY";
+	rename -uid "0DEA5A97-4BC1-65DF-0044-019E2D76783B";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "head_J_CTRL_rotateZ";
+	rename -uid "7F40D703-40E3-786D-D55D-CF9B87CB4F44";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "UpperBack_j_CTRL_rotateX";
+	rename -uid "BAE4D027-48DB-64CF-D053-5ABA108B6838";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "UpperBack_j_CTRL_rotateY";
+	rename -uid "A204FF05-4629-73F8-F347-029E47A2C8B6";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "UpperBack_j_CTRL_rotateZ";
+	rename -uid "A3A554C3-4C50-03C1-75A0-C8A05B0132A0";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Elbow_J_R_CTRL_rotateX";
+	rename -uid "14ACAE79-4E2A-C09F-B875-EC97CD9A2441";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Elbow_J_R_CTRL_rotateY";
+	rename -uid "441CE62F-4A02-3163-8594-3C9E59FB116E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 10 -58.739852238163763;
+createNode animCurveTA -n "Elbow_J_R_CTRL_rotateZ";
+	rename -uid "35891695-474F-B26E-FFD2-45914798DA6D";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Shoulder_J_R_CTRL_rotateX";
+	rename -uid "19BEE847-41DF-D908-413B-C9829A99C7A4";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Shoulder_J_R_CTRL_rotateY";
+	rename -uid "B8450A82-4A80-AED2-DA9D-AC974D688D26";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 10 -58.739852238163763;
+createNode animCurveTA -n "Shoulder_J_R_CTRL_rotateZ";
+	rename -uid "960D7E3F-45C2-AB84-2013-9D8164308AAB";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Shoulder_J_R2_CTRL_rotateX";
+	rename -uid "6A5B2593-4493-841B-F090-9FB02539438F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Shoulder_J_R2_CTRL_rotateY";
+	rename -uid "CD5725AD-40F5-6E2D-36C5-78BFF5A3A8EE";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Shoulder_J_R2_CTRL_rotateZ";
+	rename -uid "5E7B2FA5-40B1-EE53-7683-889476FA7894";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Clavical_J_R_CTRL_rotateX";
+	rename -uid "A1C5D07F-4BC4-0DD6-B13C-5FABE4768090";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Clavical_J_R_CTRL_rotateY";
+	rename -uid "6F6553CA-4DEE-CBDF-0D8C-50BBB757B5C4";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Clavical_J_R_CTRL_rotateZ";
+	rename -uid "0EF04555-45C4-F78F-1C8F-CC88B79B2C8A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Ankle_J_L_CTRL_rotateX";
+	rename -uid "7F10E05C-415E-D3BF-681D-DFB9610B7729";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Ankle_J_L_CTRL_rotateY";
+	rename -uid "062C851F-47E0-B037-561E-1FACB150B705";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Ankle_J_L_CTRL_rotateZ";
+	rename -uid "A3A11278-4CC2-ABD8-D558-269B8B561E6D";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 10 -11.316150853450264;
+createNode animCurveTA -n "Knee_J_L_CTRL_rotateX";
+	rename -uid "360B20DA-4902-9CC9-AA8B-8B834391DF20";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Knee_J_L_CTRL_rotateY";
+	rename -uid "3749E143-4708-66DF-ACB7-A989A5D383B1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Knee_J_L_CTRL_rotateZ";
+	rename -uid "52F8085F-45D3-1875-F67F-DDBE191718D0";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 10 -22.115124809623925;
+createNode animCurveTA -n "Hip_J_L_CTRL_rotateX";
+	rename -uid "97B5BE83-4FCA-0928-7E95-1E99091400DF";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Hip_J_L_CTRL_rotateY";
+	rename -uid "7B9E2962-48D1-5DD8-82E4-93A0B43FCB42";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Hip_J_L_CTRL_rotateZ";
+	rename -uid "1023EEDC-4235-0CD1-1933-FAA3CB3EFD9F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 10 12.60723366087265;
+createNode animCurveTA -n "Pelvis_J_CTRL_rotateX";
+	rename -uid "37FBC001-4E32-51DC-A4B6-36BC3A993F3F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Pelvis_J_CTRL_rotateY";
+	rename -uid "4EBD0BE4-48DB-DA4C-A8BC-8EB01B52E5C5";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Pelvis_J_CTRL_rotateZ";
+	rename -uid "7309F143-4FD9-657E-EEC2-138E8CBD21A1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  1 0 10 33.379285416868818 15 41.823463205083485;
+createNode animCurveTA -n "Root_J_CTRL_rotateX";
+	rename -uid "59461D6B-4BCB-7E00-A455-F3AA4F762756";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Root_J_CTRL_rotateY";
+	rename -uid "15BAC67B-4D53-AFDE-0C68-19A1473174BA";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Root_J_CTRL_rotateZ";
+	rename -uid "9D5B06B3-4F40-2ED7-AB5E-CDAC0D7C277F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 10 -18.709607478878343;
+createNode animCurveTA -n "Transform_Ctrl_rotateX";
+	rename -uid "EF3D4601-4084-D9C8-2B25-0593327FD1B4";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Transform_Ctrl_rotateY";
+	rename -uid "97BA5780-429D-941A-5B0F-7AA79B0E70E3";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Transform_Ctrl_rotateZ";
+	rename -uid "005441A5-4974-F62A-F66A-E09267878098";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -192,6 +1003,90 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
+connectAttr "Transform_Ctrl_rotateX.o" "Elephant_RigRN.phl[1]";
+connectAttr "Transform_Ctrl_rotateY.o" "Elephant_RigRN.phl[2]";
+connectAttr "Transform_Ctrl_rotateZ.o" "Elephant_RigRN.phl[3]";
+connectAttr "Root_J_CTRL_rotateX.o" "Elephant_RigRN.phl[4]";
+connectAttr "Root_J_CTRL_rotateY.o" "Elephant_RigRN.phl[5]";
+connectAttr "Root_J_CTRL_rotateZ.o" "Elephant_RigRN.phl[6]";
+connectAttr "Pelvis_J_CTRL_rotateX.o" "Elephant_RigRN.phl[7]";
+connectAttr "Pelvis_J_CTRL_rotateY.o" "Elephant_RigRN.phl[8]";
+connectAttr "Pelvis_J_CTRL_rotateZ.o" "Elephant_RigRN.phl[9]";
+connectAttr "Hip_J_L_CTRL_rotateY.o" "Elephant_RigRN.phl[10]";
+connectAttr "Hip_J_L_CTRL_rotateZ.o" "Elephant_RigRN.phl[11]";
+connectAttr "Hip_J_L_CTRL_rotateX.o" "Elephant_RigRN.phl[12]";
+connectAttr "Knee_J_L_CTRL_rotateY.o" "Elephant_RigRN.phl[13]";
+connectAttr "Knee_J_L_CTRL_rotateZ.o" "Elephant_RigRN.phl[14]";
+connectAttr "Knee_J_L_CTRL_rotateX.o" "Elephant_RigRN.phl[15]";
+connectAttr "Ankle_J_L_CTRL_rotateY.o" "Elephant_RigRN.phl[16]";
+connectAttr "Ankle_J_L_CTRL_rotateZ.o" "Elephant_RigRN.phl[17]";
+connectAttr "Ankle_J_L_CTRL_rotateX.o" "Elephant_RigRN.phl[18]";
+connectAttr "Hip_J_R_CTRL_rotateX.o" "Elephant_RigRN.phl[19]";
+connectAttr "Hip_J_R_CTRL_rotateY.o" "Elephant_RigRN.phl[20]";
+connectAttr "Hip_J_R_CTRL_rotateZ.o" "Elephant_RigRN.phl[21]";
+connectAttr "Knee_J_R_CTRL_rotateX.o" "Elephant_RigRN.phl[22]";
+connectAttr "Knee_J_R_CTRL_rotateY.o" "Elephant_RigRN.phl[23]";
+connectAttr "Knee_J_R_CTRL_rotateZ.o" "Elephant_RigRN.phl[24]";
+connectAttr "Ankle_J_R_CTRL_rotateX.o" "Elephant_RigRN.phl[25]";
+connectAttr "Ankle_J_R_CTRL_rotateY.o" "Elephant_RigRN.phl[26]";
+connectAttr "Ankle_J_R_CTRL_rotateZ.o" "Elephant_RigRN.phl[27]";
+connectAttr "LowerBack_J_CTRL_rotateY.o" "Elephant_RigRN.phl[28]";
+connectAttr "LowerBack_J_CTRL_rotateZ.o" "Elephant_RigRN.phl[29]";
+connectAttr "LowerBack_J_CTRL_rotateX.o" "Elephant_RigRN.phl[30]";
+connectAttr "MiddleBack_j_CTRL_rotateY.o" "Elephant_RigRN.phl[31]";
+connectAttr "MiddleBack_j_CTRL_rotateZ.o" "Elephant_RigRN.phl[32]";
+connectAttr "MiddleBack_j_CTRL_rotateX.o" "Elephant_RigRN.phl[33]";
+connectAttr "UpperBack_j_CTRL_rotateY.o" "Elephant_RigRN.phl[34]";
+connectAttr "UpperBack_j_CTRL_rotateZ.o" "Elephant_RigRN.phl[35]";
+connectAttr "UpperBack_j_CTRL_rotateX.o" "Elephant_RigRN.phl[36]";
+connectAttr "head_J_CTRL_rotateX.o" "Elephant_RigRN.phl[37]";
+connectAttr "head_J_CTRL_rotateY.o" "Elephant_RigRN.phl[38]";
+connectAttr "head_J_CTRL_rotateZ.o" "Elephant_RigRN.phl[39]";
+connectAttr "Eye_J_L_CTRL_rotateX.o" "Elephant_RigRN.phl[40]";
+connectAttr "Eye_J_L_CTRL_rotateY.o" "Elephant_RigRN.phl[41]";
+connectAttr "Eye_J_L_CTRL_rotateZ.o" "Elephant_RigRN.phl[42]";
+connectAttr "EyeLid_J_L_CTRL_rotateX.o" "Elephant_RigRN.phl[43]";
+connectAttr "EyeLid_J_L_CTRL_rotateY.o" "Elephant_RigRN.phl[44]";
+connectAttr "EyeLid_J_L_CTRL_rotateZ.o" "Elephant_RigRN.phl[45]";
+connectAttr "Eye_J_R_CTRL_rotateX.o" "Elephant_RigRN.phl[46]";
+connectAttr "Eye_J_R_CTRL_rotateY.o" "Elephant_RigRN.phl[47]";
+connectAttr "Eye_J_R_CTRL_rotateZ.o" "Elephant_RigRN.phl[48]";
+connectAttr "EyeLid_J_R_CTRL_rotateX.o" "Elephant_RigRN.phl[49]";
+connectAttr "EyeLid_J_R_CTRL_rotateY.o" "Elephant_RigRN.phl[50]";
+connectAttr "EyeLid_J_R_CTRL_rotateZ.o" "Elephant_RigRN.phl[51]";
+connectAttr "Jaw_J_CTRL_rotateX.o" "Elephant_RigRN.phl[52]";
+connectAttr "Jaw_J_CTRL_rotateY.o" "Elephant_RigRN.phl[53]";
+connectAttr "Jaw_J_CTRL_rotateZ.o" "Elephant_RigRN.phl[54]";
+connectAttr "Clavical_J_L_CTRL_rotateX.o" "Elephant_RigRN.phl[55]";
+connectAttr "Clavical_J_L_CTRL_rotateY.o" "Elephant_RigRN.phl[56]";
+connectAttr "Clavical_J_L_CTRL_rotateZ.o" "Elephant_RigRN.phl[57]";
+connectAttr "Shoulder_J_L2_CTRL_rotateX.o" "Elephant_RigRN.phl[58]";
+connectAttr "Shoulder_J_L2_CTRL_rotateY.o" "Elephant_RigRN.phl[59]";
+connectAttr "Shoulder_J_L2_CTRL_rotateZ.o" "Elephant_RigRN.phl[60]";
+connectAttr "Shoulder_J_L_CTRL_rotateX.o" "Elephant_RigRN.phl[61]";
+connectAttr "Shoulder_J_L_CTRL_rotateY.o" "Elephant_RigRN.phl[62]";
+connectAttr "Shoulder_J_L_CTRL_rotateZ.o" "Elephant_RigRN.phl[63]";
+connectAttr "Elbow_J_L_CTRL_rotateY.o" "Elephant_RigRN.phl[64]";
+connectAttr "Elbow_J_L_CTRL_rotateZ.o" "Elephant_RigRN.phl[65]";
+connectAttr "Elbow_J_L_CTRL_rotateX.o" "Elephant_RigRN.phl[66]";
+connectAttr "Wrist_J_L_CTRL_rotateX.o" "Elephant_RigRN.phl[67]";
+connectAttr "Wrist_J_L_CTRL_rotateY.o" "Elephant_RigRN.phl[68]";
+connectAttr "Wrist_J_L_CTRL_rotateZ.o" "Elephant_RigRN.phl[69]";
+connectAttr "Clavical_J_R_CTRL_rotateX.o" "Elephant_RigRN.phl[70]";
+connectAttr "Clavical_J_R_CTRL_rotateY.o" "Elephant_RigRN.phl[71]";
+connectAttr "Clavical_J_R_CTRL_rotateZ.o" "Elephant_RigRN.phl[72]";
+connectAttr "Shoulder_J_R2_CTRL_rotateX.o" "Elephant_RigRN.phl[73]";
+connectAttr "Shoulder_J_R2_CTRL_rotateY.o" "Elephant_RigRN.phl[74]";
+connectAttr "Shoulder_J_R2_CTRL_rotateZ.o" "Elephant_RigRN.phl[75]";
+connectAttr "Shoulder_J_R_CTRL_rotateX.o" "Elephant_RigRN.phl[76]";
+connectAttr "Shoulder_J_R_CTRL_rotateY.o" "Elephant_RigRN.phl[77]";
+connectAttr "Shoulder_J_R_CTRL_rotateZ.o" "Elephant_RigRN.phl[78]";
+connectAttr "Elbow_J_R_CTRL_rotateY.o" "Elephant_RigRN.phl[79]";
+connectAttr "Elbow_J_R_CTRL_rotateZ.o" "Elephant_RigRN.phl[80]";
+connectAttr "Elbow_J_R_CTRL_rotateX.o" "Elephant_RigRN.phl[81]";
+connectAttr "Wrist_J_R_CTRL_rotateY.o" "Elephant_RigRN.phl[82]";
+connectAttr "Wrist_J_R_CTRL_rotateZ.o" "Elephant_RigRN.phl[83]";
+connectAttr "Wrist_J_R_CTRL_rotateX.o" "Elephant_RigRN.phl[84]";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
