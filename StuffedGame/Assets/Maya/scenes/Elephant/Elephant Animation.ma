@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Elephant Animation.ma
-//Last modified: Wed, Jun 17, 2020 10:08:09 AM
+//Last modified: Wed, Jun 17, 2020 10:16:36 AM
 //Codeset: 1252
 file -rdi 1 -ns "Elephant_Rig" -rfn "Elephant_RigRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/Elephant/Elephant_Rig.ma";
@@ -20,13 +20,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "A378DD57-4BB3-37FF-C3FD-1C8E773BBF42";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.030631198706977614 -0.98147712789659947 21.807477420586437 ;
-	setAttr ".r" -type "double3" 9.8616472715399048 -360.99999999992298 -7.4555605526639288e-17 ;
+	setAttr ".t" -type "double3" -0.42563851035613531 2.3447861280521245 28.52775590427731 ;
+	setAttr ".r" -type "double3" 2.6616472715399118 -362.19999999992223 -3.1083015091497891e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "4EFC06F9-490F-C985-5411-2A87AF15A41D";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 22.856300094941215;
+	setAttr ".coi" 29.398024403429751;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -79,7 +79,7 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 createNode fosterParent -n "Elephant_RigRNfosterParent1";
-	rename -uid "BF50BCD5-4B10-5188-C1A1-8582EE43583E";
+	rename -uid "89763C10-4520-D193-3D10-7B90651199B0";
 createNode parentConstraint -n "Root_J_parentConstraint1" -p "Elephant_RigRNfosterParent1";
 	rename -uid "E351F97B-4678-D22A-D8D8-C68D0BBC9CDF";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Root_J_CTRLW0" -dv 1 -min 0 -at "double";
@@ -229,9 +229,11 @@ createNode reference -n "Elephant_RigRN";
 		"Elephant_RigRN"
 		"Elephant_RigRN" 0
 		"Elephant_Rig:BaseRigRN" 0
-		"Elephant_RigRN" 2
+		"Elephant_RigRN" 3
+		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Geometry|Elephant_Rig:Elephant_Geo|Elephant_Rig:Elephant_GeoShape" 
+		"visibility" " -k 0 1"
 		2 "|Elephant_Rig:Elephant_World|Elephant_Rig:Controls" "visibility" " 1"
-		2 "Elephant_Rig:Geometry_Layer" "displayType" " 2"
+		2 "Elephant_Rig:Geometry_Layer" "displayType" " 0"
 		"Elephant_Rig:BaseRigRN" 221
 		0 "|Elephant_RigRNfosterParent1|Root_J_parentConstraint1" "|Elephant_Rig:Elephant_World|Elephant_Rig:Skeleton|Elephant_Rig:BaseRig:Root_J" 
 		"-s -r "
@@ -1238,8 +1240,8 @@ createNode animCurveTL -n "Root_J_CTRL_translateZ";
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 0;
 select -ne :time1;
-	setAttr ".o" 80;
-	setAttr ".unw" 80;
+	setAttr ".o" 71;
+	setAttr ".unw" 71;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
