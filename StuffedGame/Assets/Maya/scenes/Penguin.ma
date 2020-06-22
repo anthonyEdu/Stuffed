@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Penguin.ma
-//Last modified: Sun, Jun 21, 2020 10:34:23 PM
+//Last modified: Sun, Jun 21, 2020 10:44:45 PM
 //Codeset: 1252
 file -rdi 1 -ns "BaseCharacter" -rfn "BaseCharacterRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/Xmen9/Desktop/__School/_ _UVU2020Summer/_DGM3220/Repo/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
@@ -20,13 +20,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "303A8C8F-4E75-124D-670F-61AAA4D7523B";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.1348484318846985 3.7977174397138187 20.218921593991841 ;
-	setAttr ".r" -type "double3" 1799.6616478785406 38523.400000022615 1.5557435920232339e-18 ;
+	setAttr ".t" -type "double3" -1.2589859270998591 4.8153314581108129 20.274407079055734 ;
+	setAttr ".r" -type "double3" 1794.861647879095 38516.200000018791 1.9922266493293652e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "ECF3FB9B-4E95-2871-C87B-4BBBB370A430";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 21.165499039340883;
+	setAttr ".coi" 21.16549903934105;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -9550,7 +9550,7 @@ createNode mesh -n "Penguin_V_2_3_UV_mapped1:EyeMesh_RShape" -p "Penguin_V_2_3_U
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode fosterParent -n "BaseCharacterRNfosterParent1";
-	rename -uid "C9277DA2-4AEC-4A7A-2FBB-EF90F9D47E74";
+	rename -uid "461ECFCF-40DD-E3FA-1ED4-E78CA5121F31";
 createNode mesh -n "BaseCharacter:polySurfaceShape1" -p "BaseCharacterRNfosterParent1";
 	rename -uid "FC93FAC2-4D07-7D8A-DB05-6EA186B0552B";
 	setAttr -k off ".v";
@@ -12221,7 +12221,7 @@ createNode script -n "uiConfigurationScriptNode";
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "C65E2984-46F8-B6DE-3BB7-8281F069E1E6";
-	setAttr ".b" -type "string" "playbackOptions -min 1 -max 250 -ast 1 -aet 2000 ";
+	setAttr ".b" -type "string" "playbackOptions -min 1 -max 250 -ast 0 -aet 2000 ";
 	setAttr ".st" 6;
 createNode shadingEngine -n "PenguinOBJ1:lambert4SG";
 	rename -uid "082C172E-4AA9-3CCD-317F-D1AD2C9A1072";
@@ -12236,7 +12236,7 @@ createNode reference -n "BaseCharacterRN";
 	setAttr -s 2 ".fn";
 	setAttr ".fn[0]" -type "string" "C:/Users/Xmen9/Desktop/__School/_ _UVU2020Summer/_DGM3220/Repo/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
 	setAttr ".fn[1]" -type "string" "C:/Users/Xmen9/Desktop/__School/_ _UVU2020Summer/_DGM3220/Repo/Stuffed/StuffedGame/Assets/Maya//scenes/BaseCharacter.ma";
-	setAttr -s 457 ".phl";
+	setAttr -s 469 ".phl";
 	setAttr ".phl[633]" 0;
 	setAttr ".phl[634]" 0;
 	setAttr ".phl[635]" 0;
@@ -12526,6 +12526,18 @@ createNode reference -n "BaseCharacterRN";
 	setAttr ".phl[919]" 0;
 	setAttr ".phl[920]" 0;
 	setAttr ".phl[921]" 0;
+	setAttr ".phl[922]" 0;
+	setAttr ".phl[923]" 0;
+	setAttr ".phl[924]" 0;
+	setAttr ".phl[925]" 0;
+	setAttr ".phl[926]" 0;
+	setAttr ".phl[927]" 0;
+	setAttr ".phl[928]" 0;
+	setAttr ".phl[929]" 0;
+	setAttr ".phl[930]" 0;
+	setAttr ".phl[931]" 0;
+	setAttr ".phl[932]" 0;
+	setAttr ".phl[933]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"BaseCharacterRN"
 		"BaseCharacterRN" 311
@@ -13160,7 +13172,7 @@ createNode reference -n "BaseCharacterRN";
 		"BaseCharacterRN.placeHolderList[631]" ""
 		5 4 "BaseCharacterRN" "|BaseCharacter:Transform_Ctrl_Grp|BaseCharacter:Transform_Ctrl|BaseCharacter:Root_J_GRP|BaseCharacter:Root_J_CTRL|BaseCharacter:LowerBack_J_GRP|BaseCharacter:LowerBack_J_CTRL|BaseCharacter:MiddleBack_j_GRP|BaseCharacter:MiddleBack_j_CTRL|BaseCharacter:UpperBack_j_GRP|BaseCharacter:UpperBack_j_CTRL|BaseCharacter:Clavical_J_R_GRP|BaseCharacter:Clavical_J_R_CTRL|BaseCharacter:Shoulder_J_R2_GRP|BaseCharacter:Shoulder_J_R2_CTRL|BaseCharacter:Arm_R_FK_Master_Ctrl_Grp|BaseCharacter:Shoulder_J_R_GRP|BaseCharacter:Shoulder_J_R_CTRL|BaseCharacter:Elbow_J_R_GRP|BaseCharacter:Elbow_J_R_CTRL|BaseCharacter:Wrist_J_R_GRP|BaseCharacter:Wrist_J_R_CTRL.scaleZ" 
 		"BaseCharacterRN.placeHolderList[632]" ""
-		"BaseCharacterRN" 833
+		"BaseCharacterRN" 845
 		0 "|BaseCharacterRNfosterParent1|BaseCharacter:polySurfaceShape2" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_L|BaseCharacter:EyeMesh_L" 
 		"-s -r "
 		0 "|BaseCharacterRNfosterParent1|BaseCharacter:polySurfaceShape1" "|BaseCharacter:Root_J|BaseCharacter:LowerBack_J|BaseCharacter:MiddleBack_j|BaseCharacter:UpperBack_j|BaseCharacter:head_J|BaseCharacter:Eye_J_R|BaseCharacter:EyeMesh_R" 
@@ -13183,7 +13195,7 @@ createNode reference -n "BaseCharacterRN";
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK" 
 		"objectColor" " 2"
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK" 
-		"translate" " -type \"double3\" -0.50148013324945029 -0.1218121244933358 -0.56434152658354697"
+		"translate" " -type \"double3\" -0.50148013324945029 -0.12181212449333571 -0.56434152658354719"
 		
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK" 
 		"translateX" " -av"
@@ -13192,7 +13204,7 @@ createNode reference -n "BaseCharacterRN";
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK" 
 		"translateZ" " -av"
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK" 
-		"rotate" " -type \"double3\" 28.04168962206785665 -0.0025258396037625948 0.00020900121454832613"
+		"rotate" " -type \"double3\" 28.04168962206785665 -0.0025258396037618944 0.0002090012145509574"
 		
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK" 
 		"rotateX" " -av"
@@ -13201,7 +13213,7 @@ createNode reference -n "BaseCharacterRN";
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK" 
 		"rotateZ" " -av"
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK" 
-		"scale" " -type \"double3\" 1.00000000000000022 1 1"
+		"scale" " -type \"double3\" 1.00000000000000022 1 1.00000000000000022"
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK" 
 		"scaleX" " -av"
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_L_IK" 
@@ -13307,7 +13319,7 @@ createNode reference -n "BaseCharacterRN";
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK" 
 		"objectColor" " 2"
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK" 
-		"translate" " -type \"double3\" -0.50148000000000148 -0.12181200000000006 0.5643420000000029"
+		"translate" " -type \"double3\" -0.50148000000000148 -0.12181200000000005 0.56434200000000279"
 		
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK" 
 		"translateX" " -av"
@@ -13316,7 +13328,7 @@ createNode reference -n "BaseCharacterRN";
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK" 
 		"translateZ" " -av"
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK" 
-		"rotate" " -type \"double3\" 28.04422295855184188 -0.0027085118402876314 0.00020594849406288263"
+		"rotate" " -type \"double3\" 28.04422295855184188 -0.0027085118402871236 0.00020594849406597719"
 		
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK" 
 		"rotateX" " -av"
@@ -13325,7 +13337,7 @@ createNode reference -n "BaseCharacterRN";
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK" 
 		"rotateZ" " -av"
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK" 
-		"scale" " -type \"double3\" 1.00000000000000022 1 1"
+		"scale" " -type \"double3\" 1.00000000000000022 1 1.00000000000000022"
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK" 
 		"scaleX" " -av"
 		2 "|BaseCharacter:Root_J|BaseCharacter:Pelvis_J|BaseCharacter:Hip_J_R_IK" 
@@ -14834,12 +14846,36 @@ createNode reference -n "BaseCharacterRN";
 		"BaseCharacterRN.placeHolderList[917]" ""
 		5 4 "BaseCharacterRN" "BaseCharacter:BaseCharacterSet.angularValues[45]" 
 		"BaseCharacterRN.placeHolderList[918]" ""
-		5 4 "BaseCharacterRN" "BaseCharacter:BaseCharacterSet.angularValues[70]" 
+		5 4 "BaseCharacterRN" "BaseCharacter:BaseCharacterSet.angularValues[49]" 
 		"BaseCharacterRN.placeHolderList[919]" ""
-		5 4 "BaseCharacterRN" "BaseCharacter:BaseCharacterSet.angularValues[71]" 
+		5 4 "BaseCharacterRN" "BaseCharacter:BaseCharacterSet.angularValues[50]" 
 		"BaseCharacterRN.placeHolderList[920]" ""
+		5 4 "BaseCharacterRN" "BaseCharacter:BaseCharacterSet.angularValues[51]" 
+		"BaseCharacterRN.placeHolderList[921]" ""
+		5 4 "BaseCharacterRN" "BaseCharacter:BaseCharacterSet.angularValues[52]" 
+		"BaseCharacterRN.placeHolderList[922]" ""
+		5 4 "BaseCharacterRN" "BaseCharacter:BaseCharacterSet.angularValues[53]" 
+		"BaseCharacterRN.placeHolderList[923]" ""
+		5 4 "BaseCharacterRN" "BaseCharacter:BaseCharacterSet.angularValues[54]" 
+		"BaseCharacterRN.placeHolderList[924]" ""
+		5 4 "BaseCharacterRN" "BaseCharacter:BaseCharacterSet.angularValues[70]" 
+		"BaseCharacterRN.placeHolderList[925]" ""
+		5 4 "BaseCharacterRN" "BaseCharacter:BaseCharacterSet.angularValues[71]" 
+		"BaseCharacterRN.placeHolderList[926]" ""
 		5 4 "BaseCharacterRN" "BaseCharacter:BaseCharacterSet.angularValues[72]" 
-		"BaseCharacterRN.placeHolderList[921]" "";
+		"BaseCharacterRN.placeHolderList[927]" ""
+		5 4 "BaseCharacterRN" "BaseCharacter:BaseCharacterSet.angularValues[73]" 
+		"BaseCharacterRN.placeHolderList[928]" ""
+		5 4 "BaseCharacterRN" "BaseCharacter:BaseCharacterSet.angularValues[74]" 
+		"BaseCharacterRN.placeHolderList[929]" ""
+		5 4 "BaseCharacterRN" "BaseCharacter:BaseCharacterSet.angularValues[75]" 
+		"BaseCharacterRN.placeHolderList[930]" ""
+		5 4 "BaseCharacterRN" "BaseCharacter:BaseCharacterSet.angularValues[76]" 
+		"BaseCharacterRN.placeHolderList[931]" ""
+		5 4 "BaseCharacterRN" "BaseCharacter:BaseCharacterSet.angularValues[77]" 
+		"BaseCharacterRN.placeHolderList[932]" ""
+		5 4 "BaseCharacterRN" "BaseCharacter:BaseCharacterSet.angularValues[78]" 
+		"BaseCharacterRN.placeHolderList[933]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode polyMapSew -n "Penguin_with_hair:polyMapSew1";
@@ -20090,6 +20126,68 @@ createNode animCurveTA -n "BaseCharacterSet_Eye_J_R_CTRL_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 6 ".ktv[0:5]"  1 0 48 11.565151058548368 96 -12.927586932280912
 		 144 14.428082252219475 196 -7.1960348953160054 240 16.519151413584726;
+createNode animCurveTA -n "BaseCharacterSet_Clavical_J_L_CTRL_rotateX";
+	rename -uid "0613BC95-4BB9-3E45-00F0-DC8B6EA51FBF";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 48 0 144 0 240 0;
+createNode animCurveTA -n "BaseCharacterSet_Clavical_J_L_CTRL_rotateY";
+	rename -uid "8F74421E-4018-DD74-2771-B4B4C3E2A08D";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 48 -13.870489519064229 144 13.999241764725165
+		 240 -18.957695774572485;
+createNode animCurveTA -n "BaseCharacterSet_Clavical_J_L_CTRL_rotateZ";
+	rename -uid "DC91EDD7-4B19-A36E-B610-DFB8C1F9C239";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 48 -6.0587601477517055 144 17.518263628493514
+		 240 -8.6848610194239964;
+createNode animCurveTA -n "BaseCharacterSet_Shoulder_J_L2_CTRL_rotateX";
+	rename -uid "BC9772F5-4DB8-E0A9-820B-BE97F93A3334";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  48 0 144 0 240 0;
+createNode animCurveTA -n "BaseCharacterSet_Shoulder_J_L2_CTRL_rotateY";
+	rename -uid "24BB097B-483C-07AD-86F4-A1BAFA8650D0";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  48 0 144 0 240 0;
+createNode animCurveTA -n "BaseCharacterSet_Shoulder_J_L2_CTRL_rotateZ";
+	rename -uid "6887E02A-4347-3311-4064-2088C9E52491";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  48 0 144 21.511209205147455 240 4.9480532630693173;
+createNode animCurveTA -n "BaseCharacterSet_Elbow_J_L_CTRL_rotateX";
+	rename -uid "382A17EF-49EF-7B3D-1C40-598F9F3456CA";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  48 0 144 0 240 0;
+createNode animCurveTA -n "BaseCharacterSet_Elbow_J_L_CTRL_rotateY";
+	rename -uid "AE7BF0D0-4930-A7A9-E755-D8B64216D508";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  48 0 144 0 240 0;
+createNode animCurveTA -n "BaseCharacterSet_Elbow_J_L_CTRL_rotateZ";
+	rename -uid "205A47C0-4A71-295E-C1F8-AAB26797816B";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  48 0 144 46.335692930236142 240 -1.9881330863139361;
+createNode animCurveTA -n "BaseCharacterSet_Wrist_J_L_CTRL_rotateX";
+	rename -uid "4E2EFDE4-490C-190A-B783-04A1D4A7604A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  48 0 144 0 240 0;
+createNode animCurveTA -n "BaseCharacterSet_Wrist_J_L_CTRL_rotateY";
+	rename -uid "13BD6733-46E5-6810-9559-8F9656EFD260";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  48 0 144 0 240 0;
+createNode animCurveTA -n "BaseCharacterSet_Wrist_J_L_CTRL_rotateZ";
+	rename -uid "43263249-4807-1428-7E40-B88BC40224A7";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  48 0 144 38.126494902812219 240 -9.0784029223438694;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -20427,9 +20525,33 @@ connectAttr "BaseCharacterSet_Eye_J_R_CTRL_rotateY.o" "BaseCharacterRN.phl[917]"
 		;
 connectAttr "BaseCharacterSet_Eye_J_R_CTRL_rotateX.o" "BaseCharacterRN.phl[918]"
 		;
-connectAttr "BaseCharacterSet_Jaw_J_CTRL_rotateZ.o" "BaseCharacterRN.phl[919]";
-connectAttr "BaseCharacterSet_Jaw_J_CTRL_rotateY.o" "BaseCharacterRN.phl[920]";
-connectAttr "BaseCharacterSet_Jaw_J_CTRL_rotateX.o" "BaseCharacterRN.phl[921]";
+connectAttr "BaseCharacterSet_Elbow_J_L_CTRL_rotateZ.o" "BaseCharacterRN.phl[919]"
+		;
+connectAttr "BaseCharacterSet_Elbow_J_L_CTRL_rotateY.o" "BaseCharacterRN.phl[920]"
+		;
+connectAttr "BaseCharacterSet_Elbow_J_L_CTRL_rotateX.o" "BaseCharacterRN.phl[921]"
+		;
+connectAttr "BaseCharacterSet_Wrist_J_L_CTRL_rotateZ.o" "BaseCharacterRN.phl[922]"
+		;
+connectAttr "BaseCharacterSet_Wrist_J_L_CTRL_rotateY.o" "BaseCharacterRN.phl[923]"
+		;
+connectAttr "BaseCharacterSet_Wrist_J_L_CTRL_rotateX.o" "BaseCharacterRN.phl[924]"
+		;
+connectAttr "BaseCharacterSet_Jaw_J_CTRL_rotateZ.o" "BaseCharacterRN.phl[925]";
+connectAttr "BaseCharacterSet_Jaw_J_CTRL_rotateY.o" "BaseCharacterRN.phl[926]";
+connectAttr "BaseCharacterSet_Jaw_J_CTRL_rotateX.o" "BaseCharacterRN.phl[927]";
+connectAttr "BaseCharacterSet_Clavical_J_L_CTRL_rotateZ.o" "BaseCharacterRN.phl[928]"
+		;
+connectAttr "BaseCharacterSet_Clavical_J_L_CTRL_rotateY.o" "BaseCharacterRN.phl[929]"
+		;
+connectAttr "BaseCharacterSet_Clavical_J_L_CTRL_rotateX.o" "BaseCharacterRN.phl[930]"
+		;
+connectAttr "BaseCharacterSet_Shoulder_J_L2_CTRL_rotateZ.o" "BaseCharacterRN.phl[931]"
+		;
+connectAttr "BaseCharacterSet_Shoulder_J_L2_CTRL_rotateY.o" "BaseCharacterRN.phl[932]"
+		;
+connectAttr "BaseCharacterSet_Shoulder_J_L2_CTRL_rotateX.o" "BaseCharacterRN.phl[933]"
+		;
 connectAttr "MyEyes.di" "Penguin_V_2_3_UV_mapped:EyeMesh_L.do";
 connectAttr "MyCharacter.di" "Penguin_V_2_3_UV_mapped:polySurface33.do";
 connectAttr "skinCluster1GroupId.id" "Penguin_V_2_3_UV_mapped:polySurface33Shape.iog.og[10].gid"
