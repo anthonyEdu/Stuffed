@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: Dragon Rig.ma
-//Last modified: Wed, Jun 24, 2020 08:39:53 PM
+//Last modified: Thu, Jun 25, 2020 03:51:08 PM
 //Codeset: 1252
 file -rdi 1 -ns "BaseRig" -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
 file -r -ns "BaseRig" -dr 1 -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
@@ -13,7 +13,7 @@ fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 18363)\n";
 fileInfo "license" "student";
-fileInfo "UUID" "EABEC34E-4A76-240C-BA6C-6FBCAF1DCC5C";
+fileInfo "UUID" "024397E4-4E18-0AEE-020D-8E90EB477F95";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
 	setAttr ".v" no;
@@ -19951,26 +19951,26 @@ createNode mesh -n "polySurfaceShape6" -p "R_Wing_Geo_High";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "B82FEDC8-403C-B6C1-A839-D6A4C5AFDB5D";
+	rename -uid "50A4C020-425A-8C79-E500-478B263EA397";
 	setAttr -s 7 ".lnk";
 	setAttr -s 7 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "71E5CEB5-4130-6D9E-470C-C9BD6AC9257E";
+	rename -uid "6D1B95CB-433D-3220-AFFD-08AE0B3C8CAE";
 	setAttr ".cdl" 5;
 	setAttr -s 5 ".dli[1:4]"  3 5 1 4;
 	setAttr -s 3 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "E7C5F4A4-1A43-5AA7-BC6D-F3BC66616717";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "E38E5C61-4856-C7C9-9DDE-4CB18BB57320";
+	rename -uid "2EC48245-4A86-1738-EA36-B59E130BC297";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "FF83EB3D-CE4E-B5AE-86C3-BEBE5F5E5A78";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "703339A1-45DA-259D-0563-288F2B8DDF4F";
+	rename -uid "BED0CF55-450F-BA0A-33BF-2FB87733E9C7";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 1 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "413DB235-427C-4A8F-3C17-1AB2DFE709DC";
+	rename -uid "0EA29E75-4E6F-97BB-4FCE-1C8789B2E030";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "0A41BEBB-A04A-3F4E-1C8A-B69EEECED819";
 	setAttr ".b" -type "string" (
@@ -20214,7 +20214,6 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".btrs" 512;
 select -ne :characterPartition;
 select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "Base_Joints_Layer.di" "BaseRigRN.phl[1]";
 connectAttr "Geometry_Layer.di" "Body_Geo_Low.do";
 connectAttr "Geometry_Layer.di" "L_Horn_Geo_Low.do";
