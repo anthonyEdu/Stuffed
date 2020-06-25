@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: Elephant_Rig.ma
-//Last modified: Thu, Jun 25, 2020 03:52:18 PM
+//Last modified: Thu, Jun 25, 2020 04:41:44 PM
 //Codeset: 1252
 file -rdi 1 -ns "BaseRig" -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
 file -r -ns "BaseRig" -dr 1 -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
@@ -13,7 +13,7 @@ fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 18363)\n";
 fileInfo "license" "student";
-fileInfo "UUID" "4DB5148C-427F-A8B5-EBB6-4A8D22527B5D";
+fileInfo "UUID" "91497466-4EE3-AB27-AFBD-B696F6509AFD";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
 	setAttr ".t" -type "double3" 0.55719427282889811 2.7058697782646028 28.51682066901785 ;
@@ -18781,26 +18781,26 @@ createNode mesh -n "polySurfaceShape7" -p "R_Eye_Geo_High";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".bw" 3;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "2820AE49-43C1-F07A-C8A8-11A776803C85";
+	rename -uid "3BDED14D-47E4-99BC-535C-19BDB5316925";
 	setAttr -s 16 ".lnk";
 	setAttr -s 16 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "53F37E79-442D-E122-7E52-7FAB77FC251E";
+	rename -uid "E05AFCF1-4840-DCD6-EE24-578C909FAC6C";
 	setAttr ".cdl" 5;
 	setAttr -s 8 ".dli[1:7]"  5 8 3 2 4 6 7;
 	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "E7C5F4A4-1A43-5AA7-BC6D-F3BC66616717";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "8177E391-4FD6-38F5-AB8E-61B8AD6B6910";
+	rename -uid "7C125490-4F94-303A-76A7-B6BA2AF7965B";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "FF83EB3D-CE4E-B5AE-86C3-BEBE5F5E5A78";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "D838BB34-4651-031E-AF19-BBA12CA3DA6D";
+	rename -uid "28E49C3F-4B6D-2905-F4A8-D8AF7E323FEB";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 1 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "F6F07F2C-400D-8CD0-02D8-3A9F4018FF6D";
+	rename -uid "B9084382-49C8-94E7-7F8C-309525530D8B";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "0A41BEBB-A04A-3F4E-1C8A-B69EEECED819";
 	setAttr ".b" -type "string" (
@@ -23809,8 +23809,8 @@ connectAttr "BaseRigRN.phl[129]" "skinCluster1.ma[25]";
 connectAttr "BaseRigRN.phl[130]" "skinCluster1.ifcl[25]";
 connectAttr "BaseRigRN.phl[131]" "bindPose1.wm[28]";
 connectAttr "BaseRigRN.phl[132]" "skinCluster1.lw[26]";
-connectAttr "BaseRigRN.phl[133]" "bindPose1.m[28]";
-connectAttr "BaseRigRN.phl[134]" "skinCluster1.ptt";
+connectAttr "BaseRigRN.phl[133]" "skinCluster1.ptt";
+connectAttr "BaseRigRN.phl[134]" "bindPose1.m[28]";
 connectAttr "BaseRigRN.phl[135]" "skinCluster1.ma[26]";
 connectAttr "BaseRigRN.phl[136]" "skinCluster1.ifcl[26]";
 connectAttr "Geometry_Layer.di" "Elephant_Geo.do";
