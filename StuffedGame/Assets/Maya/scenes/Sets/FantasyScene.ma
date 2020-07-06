@@ -1,8 +1,9 @@
 //Maya ASCII 2020 scene
 //Name: FantasyScene.ma
-//Last modified: Mon, Jul 06, 2020 02:40:21 PM
+//Last modified: Mon, Jul 06, 2020 02:49:07 PM
 //Codeset: 1252
 requires maya "2020";
+requires "stereoCamera" "10.0";
 requires "stereoCamera" "10.0";
 requires "mtoa" "3.1.2";
 currentUnit -l centimeter -a degree -t film;
@@ -12,7 +13,7 @@ fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 18363)\n";
 fileInfo "license" "student";
-fileInfo "UUID" "B8212D23-42FC-8AA2-0B48-F4AB61276032";
+fileInfo "UUID" "F96EF3B1-4B2C-ADBE-C7B4-A5A6C0B78CD5";
 createNode transform -s -n "persp";
 	rename -uid "E36E0618-DD48-9D04-E529-F190D6D93A3D";
 	setAttr ".v" no;
@@ -15347,26 +15348,26 @@ createNode mesh -n "Crown_Geo_LowShape" -p "Crown_Geo_Low";
 		297 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "67602C10-4F2D-6A19-D4B9-CCB432C41A85";
+	rename -uid "1A3D2398-44C9-54FD-8814-15B7F8C21A6A";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "E3C8EA29-4190-0F65-C0EC-0EA2AEE5319D";
+	rename -uid "C1A86E12-4DFC-0C52-76C4-258F36008CFE";
 	setAttr ".cdl" 1;
 	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "0FB4FE05-8C47-2224-3F44-3683FCF96A42";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "026E1A13-40F3-17C1-E8C8-81A152492C15";
+	rename -uid "0954B323-491D-0A4B-7608-24AE6C66B746";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "5EC5BB13-4B4E-5BFE-47C0-BE8F8721CAF4";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "14E80BFA-4411-FAFE-5DBE-9DAB0CF0CC93";
+	rename -uid "01E54E33-45BD-4015-FBF6-19B1A2F381FC";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 1 1 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "F9C867B2-43C4-C1FF-AB58-20834E097D0B";
+	rename -uid "EB00C4AD-4CC4-FFE7-79F9-038AE2964C03";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "28640CF3-4947-52D6-FE64-3898B42F3B26";
 	setAttr ".b" -type "string" (
