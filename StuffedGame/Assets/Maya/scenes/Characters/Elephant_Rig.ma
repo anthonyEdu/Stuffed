@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: Elephant_Rig.ma
-//Last modified: Thu, Jun 25, 2020 04:41:44 PM
+//Last modified: Wed, Jul 08, 2020 03:39:58 PM
 //Codeset: 1252
 file -rdi 1 -ns "BaseRig" -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
 file -r -ns "BaseRig" -dr 1 -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
@@ -13,7 +13,7 @@ fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 18363)\n";
 fileInfo "license" "student";
-fileInfo "UUID" "91497466-4EE3-AB27-AFBD-B696F6509AFD";
+fileInfo "UUID" "412201E4-4874-C080-4FBB-64B96080D9E7";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
 	setAttr ".t" -type "double3" 0.55719427282889811 2.7058697782646028 28.51682066901785 ;
@@ -18781,26 +18781,26 @@ createNode mesh -n "polySurfaceShape7" -p "R_Eye_Geo_High";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".bw" 3;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "3BDED14D-47E4-99BC-535C-19BDB5316925";
+	rename -uid "4620F83D-432D-3D7D-D20B-828DDD91E98F";
 	setAttr -s 16 ".lnk";
 	setAttr -s 16 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "E05AFCF1-4840-DCD6-EE24-578C909FAC6C";
+	rename -uid "7E79B2A9-4AAD-337B-7FAA-0DA1933E6F9D";
 	setAttr ".cdl" 5;
 	setAttr -s 8 ".dli[1:7]"  5 8 3 2 4 6 7;
 	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "E7C5F4A4-1A43-5AA7-BC6D-F3BC66616717";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "7C125490-4F94-303A-76A7-B6BA2AF7965B";
+	rename -uid "DC7F99A5-47CB-9DEB-85CA-2FA86073DD05";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "FF83EB3D-CE4E-B5AE-86C3-BEBE5F5E5A78";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "28E49C3F-4B6D-2905-F4A8-D8AF7E323FEB";
+	rename -uid "E39E79B5-4EDE-521B-E9D6-DFA1B47F0454";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 1 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "B9084382-49C8-94E7-7F8C-309525530D8B";
+	rename -uid "A8443C77-4122-6986-761C-CD90E40C3151";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "0A41BEBB-A04A-3F4E-1C8A-B69EEECED819";
 	setAttr ".b" -type "string" (
@@ -23641,6 +23641,10 @@ createNode dagPose -n "bindPose1";
 	setAttr -s 29 ".g[0:28]" yes yes no no no no no no no no no no no no 
 		no no no no no no yes no no no no yes no no no;
 	setAttr ".bp" yes;
+createNode reference -n "sharedReferenceNode";
+	rename -uid "8B8F3DB3-40AF-0948-5237-358202EE4518";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"sharedReferenceNode";
 select -ne :time1;
 	setAttr ".o" 61;
 	setAttr ".unw" 61;
@@ -23950,6 +23954,7 @@ connectAttr "White_ShaderSG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0
 		;
 connectAttr "lambert2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
 		;
+connectAttr "sharedReferenceNode.sr" "BaseRigRN.sr";
 connectAttr "groupId51.msg" "tweakSet1.gn" -na;
 connectAttr "Elephant_GeoShape.iog.og[7]" "tweakSet1.dsm" -na;
 connectAttr "tweak1.msg" "tweakSet1.ub[0]";
