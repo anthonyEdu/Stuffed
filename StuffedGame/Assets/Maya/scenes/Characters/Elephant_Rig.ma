@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: Elephant_Rig.ma
-//Last modified: Thu, Jul 09, 2020 04:11:33 PM
+//Last modified: Thu, Jul 09, 2020 04:30:21 PM
 //Codeset: 1252
 file -rdi 1 -ns "BaseRig" -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
 file -r -ns "BaseRig" -dr 1 -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
@@ -14,17 +14,17 @@ fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 18363)\n";
 fileInfo "license" "student";
-fileInfo "UUID" "723D1B64-4584-0676-27AD-F4ADE6355F35";
+fileInfo "UUID" "B1866C8F-4799-BD3A-FE5F-B09C6FBDF572";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
-	setAttr ".t" -type "double3" -0.68828446819017564 8.5493172371129429 17.755616380535042 ;
-	setAttr ".r" -type "double3" -731.73835315961139 -2525.7999999984559 0 ;
+	setAttr ".t" -type "double3" -0.44555763964137141 7.1947102617987078 26.393960427129272 ;
+	setAttr ".r" -type "double3" -725.73835315975953 -2526.9999999980637 -2.0027750574814575e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "77E8AA9E-234E-68FC-26D2-21B85028178A";
 	setAttr -k off ".v";
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 20.023730044650588;
+	setAttr ".coi" 25.645694443343181;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -9962,7 +9962,7 @@ createNode transform -n "Skeleton" -p "Elephant_World";
 createNode transform -n "Controls" -p "Elephant_World";
 	rename -uid "15694E93-4782-8097-8B8C-3CBA44A52D42";
 createNode fosterParent -n "BaseRigRNfosterParent1";
-	rename -uid "BBA1013E-4815-01FB-E0F7-44ADB8C896C0";
+	rename -uid "B28FEA41-444A-CDE8-6EC8-12A3BDD420D1";
 createNode transform -n "L_UpperEar_Ctrl_Grp" -p "BaseRigRNfosterParent1";
 	rename -uid "89FC6985-4A06-2F2B-B2B5-BBA9D2E7F63D";
 	setAttr ".t" -type "double3" -0.35932900000000517 6.50703 1.8800799999999989 ;
@@ -10075,15 +10075,25 @@ createNode nurbsCurve -n "R_LowerEar_CtrlShape" -p "R_LowerEar_Ctrl";
 		;
 createNode joint -n "L_UpperEar_J" -p "BaseRigRNfosterParent1";
 	rename -uid "23BF8163-4547-F9B4-EB8F-E78D96A70242";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 23.245962885581772 6.9458411804018763 -105.72347259256121 ;
+	setAttr ".bps" -type "matrix" 0.12093108512701722 -0.95551633583985951 -0.26900595642693631 0
+		 -0.39178252904902877 -0.29493818325738802 0.87150325185209643 0 -0.91207572195621434 -2.1426820292498134e-16 -0.41002180114970832 0
+		 -1.8800799999999991 6.5070299999999994 -0.35932900000000373 1;
 	setAttr ".radi" 0.57593498708065993;
+	setAttr ".liw" yes;
 createNode joint -n "L_LowerEar_J" -p "L_UpperEar_J";
 	rename -uid "448F54DC-4D76-99C1-C9CD-A8A2B9818405";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".bps" -type "matrix" 0.12093108512701722 -0.95551633583985962 -0.26900595642693609 0
+		 -0.39178252904902877 -0.29493818325738785 0.87150325185209654 0 -0.91207572195621434 -3.0531133177191805e-16 -0.41002180114970832 0
+		 -2.1785499999999995 4.1487499999999979 -1.0232600000000043 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode parentConstraint -n "L_LowerEar_J_parentConstraint1" -p "L_LowerEar_J";
 	rename -uid "0AC8392C-4B90-A71B-B66E-34821A6BFAD3";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_LowerEar_CtrlW0" -dv 1 -min 0 -at "double";
@@ -10128,15 +10138,25 @@ createNode parentConstraint -n "L_UpperEar_J_parentConstraint1" -p "L_UpperEar_J
 	setAttr -k on ".w0";
 createNode joint -n "R_UpperEar_J" -p "BaseRigRNfosterParent1";
 	rename -uid "C4659468-469E-4630-8403-C2A32ABBA905";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 23.245962885581775 6.945841180401878 -105.72347259256119 ;
+	setAttr ".bps" -type "matrix" 0.12093108512701728 -0.95551633583985962 -0.26900595642693653 0
+		 -0.39178252904902894 -0.29493818325738824 0.87150325185209643 0 -0.91207572195621422 -2.1426820292498146e-16 -0.41002180114970849 0
+		 1.8800823688507087 6.5070343017578116 -0.35932868719100558 1;
 	setAttr ".radi" 0.57593498708065993;
+	setAttr ".liw" yes;
 createNode joint -n "R_LowerEar_J" -p "R_UpperEar_J";
 	rename -uid "99DA6756-4255-E386-4828-2A9E971C99BF";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".bps" -type "matrix" 0.12093108512701728 -0.95551633583985962 -0.26900595642693653 0
+		 -0.39178252904902894 -0.29493818325738824 0.87150325185209643 0 -0.91207572195621422 -2.1426820292498146e-16 -0.41002180114970849 0
+		 2.1785495281219509 4.1487469673156738 -1.0232559442520095 1;
 	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode parentConstraint -n "R_LowerEar_J_parentConstraint1" -p "R_LowerEar_J";
 	rename -uid "6E511BD5-4EF2-BE95-3E3E-5E80D5982679";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_LowerEar_CtrlW0" -dv 1 -min 0 -at "double";
@@ -10719,7 +10739,7 @@ createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
 	setAttr ".tgi[0].ni[8].nvs" 1923;
 createNode reference -n "BaseRigRN";
 	rename -uid "964E0B97-46C0-80EF-405F-90878FE7DEDF";
-	setAttr -s 140 ".phl";
+	setAttr -s 139 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -10859,7 +10879,6 @@ createNode reference -n "BaseRigRN";
 	setAttr ".phl[137]" 0;
 	setAttr ".phl[138]" 0;
 	setAttr ".phl[139]" 0;
-	setAttr ".phl[140]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"BaseRigRN"
 		"BaseRigRN" 4
@@ -10867,7 +10886,7 @@ createNode reference -n "BaseRigRN";
 		2 "BaseRig:layer1" "visibility" " 0"
 		2 "BaseRig:layer2" "displayType" " 2"
 		2 "BaseRig:layer2" "visibility" " 1"
-		"BaseRigRN" 482
+		"BaseRigRN" 481
 		0 "|BaseRig:Root_J" "|Elephant_World|Skeleton" "-s -r "
 		0 "|BaseRig:Transform_Ctrl_Grp" "|Elephant_World|Controls" "-s -r "
 		0 "|BaseRigRNfosterParent1|R_UpperEar_J" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J" 
@@ -11516,7 +11535,7 @@ createNode reference -n "BaseRigRN";
 		2 "|Elephant_World|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL|BaseRig:Clavical_J_R_GRP|BaseRig:Clavical_J_R_CTRL|BaseRig:Shoulder_J_R2_GRP|BaseRig:Shoulder_J_R2_CTRL|BaseRig:Arm_R_FK_Master_Ctrl_Grp|BaseRig:Shoulder_J_R_GRP|BaseRig:Shoulder_J_R_CTRL|BaseRig:Elbow_J_R_GRP|BaseRig:Elbow_J_R_CTRL|BaseRig:Wrist_J_R_GRP|BaseRig:Wrist_J_R_CTRL" 
 		"rotateX" " -av"
 		2 "BaseRig:Joints" "displayType" " 0"
-		2 "BaseRig:Joints" "visibility" " 1"
+		2 "BaseRig:Joints" "visibility" " 0"
 		2 "BaseRig:bindPose1" "worldMatrix" " -s 25"
 		2 "BaseRig:BaseCharacterSet" "referenceMapping" (" -type \"characterMapping\" 84 \"BaseRig:Hip_J_R_CTRL.rotateZ\" 2 1 \"BaseRig:Hip_J_R_CTRL.rotateY\" 2 2 \"BaseRig:Hip_J_R_CTRL.rotateX\" 2 3 \"BaseRig:Knee_J_R_CTRL.rotateZ\" 2 4 \"BaseRig:Knee_J_R_CTRL.rotateY\" 2 5 \"BaseRig:Knee_J_R_CTRL.rotateX\" 2 6 \"BaseRig:Ankle_J_R_CTRL.rotateZ\" 2 7 \"BaseRig:Ankle_J_R_CTRL.rotateY\" 2 8 \"BaseRig:Ankle_J_R_CTRL.rotateX\" 2 9 \"BaseRig:Root_J_CTRL.rotateZ\" 2 10 \"BaseRig:Root_J_CTRL.rotateY\" 2 11 \"BaseRig:Root_J_CTRL.rotateX\" 2 12 \"BaseRig:Root_J_CTRL.translateZ\" 1 1 \"BaseRig:Root_J_CTRL.translateY\" 1 2 \"BaseRig:Root_J_CTRL.translateX\" 1 3 \"BaseRig:Pelvis_J_CTRL.rotateZ\" 2 13 \"BaseRig:Pelvis_J_CTRL.rotateY\" 2 14 \"BaseRig:Pelvis_J_CTRL.rotateX\" 2 15 \"BaseRig:Hip_J_L_CTRL.rotateZ\" 2 16 \"BaseRig:Hip_J_L_CTRL.rotateY\" 2 17 \"BaseRig:Hip_J_L_CTRL.rotateX\" 2 18 \"BaseRig:Knee_J_L_CTRL.rotateZ\" 2 19 \"BaseRig:Knee_J_L_CTRL.rotateY\" 2 20 \"BaseRig:Knee_J_L_CTRL.rotateX\" 2 21 \"BaseRig:Ankle_J_L_CTRL.rotateZ\" 2 22 \"BaseRig:Ankle_J_L_CTRL.rotateY\" 2 23 \"BaseRig:Ankle_J_L_CTRL.rotateX\" 2 24 \"BaseRig:Lo"
 		+ "werBack_J_CTRL.rotateZ\" 2 25 \"BaseRig:LowerBack_J_CTRL.rotateY\" 2 26 \"BaseRig:LowerBack_J_CTRL.rotateX\" 2 27 \"BaseRig:MiddleBack_j_CTRL.rotateZ\" 2 28 \"BaseRig:MiddleBack_j_CTRL.rotateY\" 2 29 \"BaseRig:MiddleBack_j_CTRL.rotateX\" 2 30 \"BaseRig:UpperBack_j_CTRL.rotateZ\" 2 31 \"BaseRig:UpperBack_j_CTRL.rotateY\" 2 32 \"BaseRig:UpperBack_j_CTRL.rotateX\" 2 33 \"BaseRig:head_J_CTRL.rotateZ\" 2 34 \"BaseRig:head_J_CTRL.rotateY\" 2 35 \"BaseRig:head_J_CTRL.rotateX\" 2 36 \"BaseRig:Eye_J_L_CTRL.rotateZ\" 2 37 \"BaseRig:Eye_J_L_CTRL.rotateY\" 2 38 \"BaseRig:Eye_J_L_CTRL.rotateX\" 2 39 \"BaseRig:EyeLid_J_L_CTRL.rotateZ\" 2 40 \"BaseRig:EyeLid_J_L_CTRL.rotateY\" 2 41 \"BaseRig:EyeLid_J_L_CTRL.rotateX\" 2 42 \"BaseRig:Eye_J_R_CTRL.rotateZ\" 2 43 \"BaseRig:Eye_J_R_CTRL.rotateY\" 2 44 \"BaseRig:Eye_J_R_CTRL.rotateX\" 2 45 \"BaseRig:EyeLid_J_R_CTRL.rotateZ\" 2 46 \"BaseRig:EyeLid_J_R_CTRL.rotateY\" 2 47 \"BaseRig:EyeLid_J_R_CTRL.rotateX\" 2 48 \"BaseRig:Elbow_J_L_CTRL.rotateZ\" 2 49 \"BaseRig:Elbow_J_L_CTRL.rotateY\" 2 50 \"BaseRig:Elbow_J_L_CTRL.rotateX\" 2 51 \"Ba"
@@ -11845,15 +11864,13 @@ createNode reference -n "BaseRigRN";
 		"BaseRigRN.placeHolderList[134]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.message" 
 		"BaseRigRN.placeHolderList[135]" ""
-		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.message" 
-		"BaseRigRN.placeHolderList[136]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.worldMatrix" 
-		"BaseRigRN.placeHolderList[137]" ""
+		"BaseRigRN.placeHolderList[136]" ""
 		5 3 "BaseRigRN" "|Elephant_World|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.objectColorRGB" 
-		"BaseRigRN.placeHolderList[138]" ""
-		5 3 "BaseRigRN" "BaseRig:Joints.drawInfo" "BaseRigRN.placeHolderList[139]" 
+		"BaseRigRN.placeHolderList[137]" ""
+		5 3 "BaseRigRN" "BaseRig:Joints.drawInfo" "BaseRigRN.placeHolderList[138]" 
 		""
-		5 3 "BaseRigRN" "BaseRig:Joints.drawInfo" "BaseRigRN.placeHolderList[140]" 
+		5 3 "BaseRigRN" "BaseRig:Joints.drawInfo" "BaseRigRN.placeHolderList[139]" 
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -14864,7 +14881,7 @@ createNode skinCluster -n "skinCluster1";
 		2 3 0.036480803042650223 4 0.96351919695734978
 		2 22 0.13805805146694183 24 0.86194194853305817
 		2 17 0.184947669506073 19 0.815052330493927;
-	setAttr -s 27 ".pm";
+	setAttr -s 31 ".pm";
 	setAttr ".pm[0]" -type "matrix" 1.7763568394002497e-15 0 -0.99999999999999978 0 0 1 0 0
 		 0.99999999999999978 0 1.7763568394002497e-15 0 0 -2.0000000000000004 0 1;
 	setAttr ".pm[1]" -type "matrix" 0 -1.7763568394002497e-15 -0.99999999999999978 0
@@ -14941,23 +14958,35 @@ createNode skinCluster -n "skinCluster1";
 	setAttr ".pm[26]" -type "matrix" 0.74311038342101521 0.66916885615804889 1.3994831728072667e-15 0
 		 0.669168856158049 -0.74311038342101543 -2.555273573040531e-15 0 -7.1870943536366636e-16 2.7890539980401862e-15 -1 0
 		 -0.56331828302429776 2.9260591661841975 6.5570462208999209e-15 1;
+	setAttr ".pm[27]" -type "matrix" 0.12093108512701663 -0.39178252904902705 -0.91207572195621434 -0
+		 -0.95551633583985962 -0.29493818325738808 -2.6367796834847458e-16 0 -0.26900595642693642 0.87150325185209687 -0.41002180114970649 -0
+		 6.3482719360087083 1.4957455013715892 -1.8621080471207603 1;
+	setAttr ".pm[28]" -type "matrix" 0.12093108512701663 -0.39178252904902705 -0.91207572195621434 -0
+		 -0.95551633583985962 -0.29493818325738808 -2.6367796834847458e-16 0 -0.26900595642693642 0.87150325185209687 -0.41002180114970649 -0
+		 3.9523897788456517 1.2618813766195067 -2.40656147231216 1;
+	setAttr ".pm[29]" -type "matrix" 0.12093108512701675 -0.39178252904902711 -0.91207572195621445 -0
+		 -0.9555163358398594 -0.29493818325738819 -1.8041124150158781e-16 0 -0.26900595642693653 0.87150325185209665 -0.41002180114970666 -0
+		 5.8935556150371617 2.9689124200134822 1.5674448883798433 1;
+	setAttr ".pm[30]" -type "matrix" 0.12093108512701675 -0.39178252904902711 -0.91207572195621445 -0
+		 -0.9555163358398594 -0.29493818325738819 -1.8041124150158781e-16 0 -0.26900595642693653 0.87150325185209665 -0.41002180114970666 -0
+		 3.4254791981444033 2.9689124200134831 1.5674448883798429 1;
 	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-	setAttr -s 27 ".ma";
-	setAttr -s 27 ".dpf[0:26]"  4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
-		4 4 4 4 4 4 4;
-	setAttr -s 27 ".lw";
-	setAttr -s 27 ".lw";
+	setAttr -s 31 ".ma";
+	setAttr -s 31 ".dpf[0:30]"  4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+		4 4 4 4 4 4 4 4 4 4 4;
+	setAttr -s 31 ".lw";
+	setAttr -s 31 ".lw";
 	setAttr ".mmi" yes;
 	setAttr ".mi" 4;
 	setAttr ".ucm" yes;
-	setAttr -s 27 ".ifcl";
-	setAttr -s 27 ".ifcl";
+	setAttr -s 31 ".ifcl";
+	setAttr -s 31 ".ifcl";
 createNode dagPose -n "bindPose1";
 	rename -uid "E6582CF9-401C-B96F-0851-F88B792BDAF2";
-	setAttr -s 29 ".wm";
+	setAttr -s 33 ".wm";
 	setAttr ".wm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".wm[1]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-	setAttr -s 29 ".xm";
+	setAttr -s 33 ".xm";
 	setAttr ".xm[0]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 yes;
 	setAttr ".xm[1]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -14992,10 +15021,10 @@ createNode dagPose -n "bindPose1";
 		 0 0 0 0 0 0 0 0 0 0 1 0 0 0.70710678118654757 0.70710678118654757 1 1 1 yes;
 	setAttr ".xm[11]" -type "matrix" "xform" 1 1 1 0 0 0 0 0.58923177826553319 -1.4426968607360314e-16
 		 1.3433948659359174e-17 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 yes;
-	setAttr ".xm[12]" -type "matrix" "xform" 1 1 1 0 0 0 0 0.58923177826553319 -1.4426968607360314e-16
+	setAttr ".xm[12]" -type "matrix" "xform" 1 1 1 0 0 0 0 0.58923177826553319 -1.4426968607360317e-16
 		 1.3433948659359174e-17 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 yes;
-	setAttr ".xm[13]" -type "matrix" "xform" 1 1 1 0 0 0 0 0.58923177826553408 -1.4426968607360304e-16
-		 1.3433948659359174e-17 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 -0.70710678118654757 0.70710678118654746 1
+	setAttr ".xm[13]" -type "matrix" "xform" 1 1 1 0 0 0 0 0.58923177826553408 -1.4426968607360309e-16
+		 1.3433948659359177e-17 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 -0.70710678118654757 0.70710678118654746 1
 		 1 1 yes;
 	setAttr ".xm[14]" -type "matrix" "xform" 1 1 1 0 0 0 0 0.76422435045242243 1.8948126760676569
 		 -0.7973245978355179 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 yes;
@@ -15040,10 +15069,22 @@ createNode dagPose -n "bindPose1";
 		0 0 0 1 1 1 1 yes;
 	setAttr ".xm[28]" -type "matrix" "xform" 1 1 1 0 0 0 0 -0.3438129505965194 1.4548538533887267e-06
 		 5.9500953009321838e-16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 yes;
-	setAttr -s 29 ".m";
-	setAttr -s 29 ".p";
-	setAttr -s 29 ".g[0:28]" yes yes no no no no no no no no no no no no 
-		no no no no no no yes no no no no yes no no no;
+	setAttr ".xm[29]" -type "matrix" "xform" 1 1 1 -3.3306690738754696e-16 -4.622231866529366e-33
+		 -2.7755575615628914e-17 0 -0.35932900000000445 2.7393346652033985 1.8800799999999986 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0.16871314773472584 -0.1244910149502105 -0.78676868608895112 0.58054534324889084 1
+		 1 1 yes;
+	setAttr ".xm[30]" -type "matrix" "xform" 1 1 1 0 0 0 0 2.3958821571630566 0.23386412475208274
+		 0.54445342519139928 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 yes;
+	setAttr ".xm[31]" -type "matrix" "xform" 1 1 1 6.9333477997940463e-33 3.3306690738754691e-16
+		 4.1633363423443364e-17 0 -0.35932868719100658 2.7393389669612107 -1.8800823688507082 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0.16871314773472587 -0.12449101495021053 -0.78676868608895101 0.58054534324889073 1
+		 1 1 yes;
+	setAttr ".xm[32]" -type "matrix" "xform" 1 1 1 0 0 0 0 2.468076416892758 -8.8817841970012523e-16
+		 2.2204460492503131e-16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 yes;
+	setAttr -s 33 ".m";
+	setAttr -s 33 ".p";
+	setAttr -s 33 ".g[0:32]" yes yes no no no no no no no no no no no no 
+		no no no no no no yes no no no no yes no no no no no no no;
 	setAttr ".bp" yes;
 createNode reference -n "sharedReferenceNode";
 	rename -uid "8B8F3DB3-40AF-0948-5237-358202EE4518";
@@ -15219,12 +15260,11 @@ connectAttr "BaseRigRN.phl[131]" "skinCluster1.ma[25]";
 connectAttr "BaseRigRN.phl[132]" "skinCluster1.ifcl[25]";
 connectAttr "BaseRigRN.phl[133]" "bindPose1.wm[28]";
 connectAttr "BaseRigRN.phl[134]" "skinCluster1.lw[26]";
-connectAttr "BaseRigRN.phl[135]" "skinCluster1.ptt";
-connectAttr "BaseRigRN.phl[136]" "bindPose1.m[28]";
-connectAttr "BaseRigRN.phl[137]" "skinCluster1.ma[26]";
-connectAttr "BaseRigRN.phl[138]" "skinCluster1.ifcl[26]";
-connectAttr "BaseRigRN.phl[139]" "L_UpperEar_J.do";
-connectAttr "BaseRigRN.phl[140]" "R_UpperEar_J.do";
+connectAttr "BaseRigRN.phl[135]" "bindPose1.m[28]";
+connectAttr "BaseRigRN.phl[136]" "skinCluster1.ma[26]";
+connectAttr "BaseRigRN.phl[137]" "skinCluster1.ifcl[26]";
+connectAttr "BaseRigRN.phl[138]" "L_UpperEar_J.do";
+connectAttr "BaseRigRN.phl[139]" "R_UpperEar_J.do";
 connectAttr "Geometry_Layer.di" "Elephant_Geo.do";
 connectAttr "skinCluster1GroupId.id" "Elephant_GeoShape.iog.og[6].gid";
 connectAttr "skinCluster1Set.mwc" "Elephant_GeoShape.iog.og[6].gco";
@@ -15422,11 +15462,32 @@ connectAttr "groupParts2.og" "tweak1.ip[0].ig";
 connectAttr "groupId51.id" "tweak1.ip[0].gi";
 connectAttr "tweak1.og[0]" "skinCluster1GroupParts.ig";
 connectAttr "skinCluster1GroupId.id" "skinCluster1GroupParts.gi";
+connectAttr "L_UpperEar_J.liw" "skinCluster1.lw[27]";
+connectAttr "L_LowerEar_J.liw" "skinCluster1.lw[28]";
+connectAttr "R_UpperEar_J.liw" "skinCluster1.lw[29]";
+connectAttr "R_LowerEar_J.liw" "skinCluster1.lw[30]";
+connectAttr "L_UpperEar_J.wm" "skinCluster1.ma[27]";
+connectAttr "L_LowerEar_J.wm" "skinCluster1.ma[28]";
+connectAttr "R_UpperEar_J.wm" "skinCluster1.ma[29]";
+connectAttr "R_LowerEar_J.wm" "skinCluster1.ma[30]";
+connectAttr "L_UpperEar_J.obcc" "skinCluster1.ifcl[27]";
+connectAttr "L_LowerEar_J.obcc" "skinCluster1.ifcl[28]";
+connectAttr "R_UpperEar_J.obcc" "skinCluster1.ifcl[29]";
+connectAttr "R_LowerEar_J.obcc" "skinCluster1.ifcl[30]";
+connectAttr "L_LowerEar_J.msg" "skinCluster1.ptt";
 connectAttr "skinCluster1GroupParts.og" "skinCluster1.ip[0].ig";
 connectAttr "skinCluster1GroupId.id" "skinCluster1.ip[0].gi";
 connectAttr "bindPose1.msg" "skinCluster1.bp";
 connectAttr "Elephant_World.msg" "bindPose1.m[0]";
 connectAttr "Skeleton.msg" "bindPose1.m[1]";
+connectAttr "L_UpperEar_J.msg" "bindPose1.m[29]";
+connectAttr "L_LowerEar_J.msg" "bindPose1.m[30]";
+connectAttr "R_UpperEar_J.msg" "bindPose1.m[31]";
+connectAttr "R_LowerEar_J.msg" "bindPose1.m[32]";
+connectAttr "L_UpperEar_J.bps" "bindPose1.wm[29]";
+connectAttr "L_LowerEar_J.bps" "bindPose1.wm[30]";
+connectAttr "R_UpperEar_J.bps" "bindPose1.wm[31]";
+connectAttr "R_LowerEar_J.bps" "bindPose1.wm[32]";
 connectAttr "bindPose1.w" "bindPose1.p[0]";
 connectAttr "bindPose1.m[0]" "bindPose1.p[1]";
 connectAttr "bindPose1.m[1]" "bindPose1.p[2]";
@@ -15456,6 +15517,10 @@ connectAttr "bindPose1.m[24]" "bindPose1.p[25]";
 connectAttr "bindPose1.m[25]" "bindPose1.p[26]";
 connectAttr "bindPose1.m[26]" "bindPose1.p[27]";
 connectAttr "bindPose1.m[27]" "bindPose1.p[28]";
+connectAttr "bindPose1.m[13]" "bindPose1.p[29]";
+connectAttr "bindPose1.m[29]" "bindPose1.p[30]";
+connectAttr "bindPose1.m[13]" "bindPose1.p[31]";
+connectAttr "bindPose1.m[31]" "bindPose1.p[32]";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "Black_ShaderSG.pa" ":renderPartition.st" -na;
