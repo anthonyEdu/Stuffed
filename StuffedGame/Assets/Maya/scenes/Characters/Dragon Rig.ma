@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: Dragon Rig.ma
-//Last modified: Fri, Jul 10, 2020 08:51:53 AM
+//Last modified: Fri, Jul 10, 2020 08:57:03 AM
 //Codeset: 1252
 file -rdi 1 -ns "BaseRig" -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
 file -r -ns "BaseRig" -dr 1 -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
@@ -13,18 +13,18 @@ fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 18363)\n";
 fileInfo "license" "student";
-fileInfo "UUID" "71E4BEBE-4E1E-CCDA-ECFC-D1BD406986C6";
+fileInfo "UUID" "8283595D-40F2-C5FA-B71C-FE82A6B5F394";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 5.3673201804521309 4.1587196941106059 15.874697094570086 ;
-	setAttr ".r" -type "double3" 2.0616468203997225 -356.5999999998624 7.4675692415374835e-17 ;
+	setAttr ".t" -type "double3" 0.76897820667500483 1.327635065551382 17.458588553449346 ;
+	setAttr ".r" -type "double3" 5.0616468204259064 -360.2000000000964 1.0871102739386655e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "77E8AA9E-234E-68FC-26D2-21B85028178A";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 19.392817993878925;
+	setAttr ".coi" 17.087926795201263;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -8657,13 +8657,6 @@ createNode camera -n "leftShape" -p "left";
 	setAttr ".tp" -type "double3" -0.010129928588867188 4.5405649836849342 0.13137614727020264 ;
 	setAttr ".hc" -type "string" "viewSet -ls %camera";
 	setAttr ".o" yes;
-createNode joint -n "R_Ear_J";
-	rename -uid "AAD884A3-4AE5-58B9-7017-DB8ADA615493";
-	setAttr ".t" -type "double3" 1.4899694919586182 6.1422519683837891 -0.019638597965240479 ;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 0.95695538158016213 -3.3233175490126268 -16.073815294406991 ;
-	setAttr ".radi" 0.5;
 createNode joint -n "R_Wing_01_J";
 	rename -uid "39AF4DE5-4BBB-1826-B65C-3B8D9097B2A1";
 	setAttr ".t" -type "double3" 0.23241749405860901 3.3429951667785645 -0.30655506253242493 ;
@@ -8708,12 +8701,72 @@ createNode joint -n "R_Finger_04_J";
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 141.85997916223201 3.6179058083355122 -54.074925238525545 ;
 	setAttr ".radi" 0.25;
-createNode joint -n "Tail_01_J";
-	rename -uid "E41ABFFF-49C7-8092-DD3A-6E8C265A9C2D";
-	setAttr ".t" -type "double3" 1.4901161193847656e-08 1.7075715065002441 -0.45059904456138611 ;
+createNode joint -n "L_Wing_01_J";
+	rename -uid "0DD93CC4-4BAD-413B-477E-189094F58EC3";
+	setAttr ".t" -type "double3" -0.232417 3.343 -0.306555 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -90.000003356393805 43.576979914054469 -90.000002313658044 ;
+	setAttr ".jot" -type "string" "xzy";
+	setAttr ".jo" -type "double3" 127.12335954519685 36.618098270246087 51.761258159631183 ;
+	setAttr ".radi" 0.5;
+createNode joint -n "L_Wing_01_J1" -p "L_Wing_01_J";
+	rename -uid "E0D25254-4BB5-41DE-8E10-03BF9F3390F9";
+	setAttr ".t" -type "double3" 1.2552423924451714 -1.892335552299182 -0.99355588166296416 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jot" -type "string" "xzy";
+	setAttr ".jo" -type "double3" -37.993751752750711 3.359107521662533 70.947699719331254 ;
+	setAttr ".radi" 0.5;
+createNode joint -n "L_Finger_01_J";
+	rename -uid "EC71FBF0-46DD-96FF-1893-7AA2E33C2D9B";
+	setAttr ".t" -type "double3" -1.73467 1.90204 0.111024 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" -5.9565114532424799 5.3666490402708042 -48.126583089248598 ;
+	setAttr ".radi" 0.25;
+createNode joint -n "L_Finger_02_J";
+	rename -uid "7AF68072-4FEC-D408-A960-4E9422BDA4E0";
+	setAttr ".t" -type "double3" -2.08678 2.21547 0.268359 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" -152.48194207219058 -8.0162653597224942 -57.026698543014284 ;
+	setAttr ".radi" 0.25;
+createNode joint -n "L_Finger_03_J";
+	rename -uid "866B4AFE-4217-10F0-DD9E-7EBC8E54692D";
+	setAttr ".t" -type "double3" -2.20575 2.25815 0.00017795699999999999 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" 178.5905728997686 1.0019833809711765 -54.597231497355267 ;
+	setAttr ".radi" 0.25;
+createNode joint -n "L_Finger_04_J";
+	rename -uid "DB4C4642-4FDC-1A4A-CD56-BB9A0476D8AF";
+	setAttr ".t" -type "double3" -2.13304 2.19502 -0.26266 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" 141.85997916223201 3.6179058083355122 -54.074925238525559 ;
+	setAttr ".radi" 0.25;
+createNode fosterParent -n "BaseRigRNfosterParent1";
+	rename -uid "4B1DFA6F-493E-101B-6932-DBBC4E9269D7";
+createNode joint -n "R_Ear_J" -p "BaseRigRNfosterParent1";
+	rename -uid "AAD884A3-4AE5-58B9-7017-DB8ADA615493";
+	setAttr ".t" -type "double3" -0.019638597965238789 2.3745566335871882 -1.4899694919586179 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" -77.667682560595466 73.595103247531171 -78.15526391319375 ;
+	setAttr ".radi" 0.5;
+createNode joint -n "L_Ear_J" -p "BaseRigRNfosterParent1";
+	rename -uid "19A7F206-4722-5A94-CF13-9D94553190D1";
+	setAttr ".t" -type "double3" -0.019638600000003604 2.3745546652033989 1.4899699999999998 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" -77.66768256059548 73.595103247531142 -78.155263913193764 ;
+	setAttr ".radi" 0.5;
+createNode joint -n "Tail_01_J" -p "BaseRigRNfosterParent1";
+	rename -uid "E41ABFFF-49C7-8092-DD3A-6E8C265A9C2D";
+	setAttr ".t" -type "double3" -0.2924284934997563 0.45059904456138566 -1.4901161994272348e-08 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" 179.99999823847676 -1.6761269012671078e-06 136.42302008594555 ;
 	setAttr ".radi" 0.4;
 createNode joint -n "Tail__2_J" -p "Tail_01_J";
 	rename -uid "1DF745E4-4254-1543-A063-8598AAD3C2BD";
@@ -8909,12 +8962,22 @@ createNode groupParts -n "groupParts1";
 	setAttr ".ic" -type "componentList" 1 "f[0:2509]";
 createNode reference -n "BaseRigRN";
 	rename -uid "35A64DEF-485C-EF72-4355-7F914532D9A8";
+	setAttr -s 3 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"BaseRigRN"
 		"BaseRigRN" 0
-		"BaseRigRN" 10
+		"BaseRigRN" 16
 		0 "|BaseRig:Root_J" "|World_Dragon|Skeleton" "-s -r "
 		0 "|BaseRig:Transform_Ctrl_Grp" "|World_Dragon|Controls" "-s -r "
+		0 "|BaseRigRNfosterParent1|Tail_01_J" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J" 
+		"-s -r "
+		0 "|BaseRigRNfosterParent1|L_Ear_J" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J" 
+		"-s -r "
+		0 "|BaseRigRNfosterParent1|R_Ear_J" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J" 
+		"-s -r "
 		2 "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L" 
 		"displayLocalAxis" " 1"
 		2 "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK" 
@@ -8932,7 +8995,13 @@ createNode reference -n "BaseRigRN";
 		+ "werBack_J_CTRL.rotateZ\" 2 25 \"BaseRig:LowerBack_J_CTRL.rotateY\" 2 26 \"BaseRig:LowerBack_J_CTRL.rotateX\" 2 27 \"BaseRig:MiddleBack_j_CTRL.rotateZ\" 2 28 \"BaseRig:MiddleBack_j_CTRL.rotateY\" 2 29 \"BaseRig:MiddleBack_j_CTRL.rotateX\" 2 30 \"BaseRig:UpperBack_j_CTRL.rotateZ\" 2 31 \"BaseRig:UpperBack_j_CTRL.rotateY\" 2 32 \"BaseRig:UpperBack_j_CTRL.rotateX\" 2 33 \"BaseRig:head_J_CTRL.rotateZ\" 2 34 \"BaseRig:head_J_CTRL.rotateY\" 2 35 \"BaseRig:head_J_CTRL.rotateX\" 2 36 \"BaseRig:Eye_J_L_CTRL.rotateZ\" 2 37 \"BaseRig:Eye_J_L_CTRL.rotateY\" 2 38 \"BaseRig:Eye_J_L_CTRL.rotateX\" 2 39 \"BaseRig:EyeLid_J_L_CTRL.rotateZ\" 2 40 \"BaseRig:EyeLid_J_L_CTRL.rotateY\" 2 41 \"BaseRig:EyeLid_J_L_CTRL.rotateX\" 2 42 \"BaseRig:Eye_J_R_CTRL.rotateZ\" 2 43 \"BaseRig:Eye_J_R_CTRL.rotateY\" 2 44 \"BaseRig:Eye_J_R_CTRL.rotateX\" 2 45 \"BaseRig:EyeLid_J_R_CTRL.rotateZ\" 2 46 \"BaseRig:EyeLid_J_R_CTRL.rotateY\" 2 47 \"BaseRig:EyeLid_J_R_CTRL.rotateX\" 2 48 \"BaseRig:Elbow_J_L_CTRL.rotateZ\" 2 49 \"BaseRig:Elbow_J_L_CTRL.rotateY\" 2 50 \"BaseRig:Elbow_J_L_CTRL.rotateX\" 2 51 \"Ba"
 		+ "seRig:Wrist_J_L_CTRL.rotateZ\" 2 52 \"BaseRig:Wrist_J_L_CTRL.rotateY\" 2 53 \"BaseRig:Wrist_J_L_CTRL.rotateX\" 2 54 \"BaseRig:Clavical_J_R_CTRL.rotateZ\" 2 55 \"BaseRig:Clavical_J_R_CTRL.rotateY\" 2 56 \"BaseRig:Clavical_J_R_CTRL.rotateX\" 2 57 \"BaseRig:Shoulder_J_R2_CTRL.rotateZ\" 2 58 \"BaseRig:Shoulder_J_R2_CTRL.rotateY\" 2 59 \"BaseRig:Shoulder_J_R2_CTRL.rotateX\" 2 60 \"BaseRig:Shoulder_J_R_CTRL.rotateZ\" 2 61 \"BaseRig:Shoulder_J_R_CTRL.rotateY\" 2 62 \"BaseRig:Shoulder_J_R_CTRL.rotateX\" 2 63 \"BaseRig:Elbow_J_R_CTRL.rotateZ\" 2 64 \"BaseRig:Elbow_J_R_CTRL.rotateY\" 2 65 \"BaseRig:Elbow_J_R_CTRL.rotateX\" 2 66 \"BaseRig:Wrist_J_R_CTRL.rotateZ\" 2 67 \"BaseRig:Wrist_J_R_CTRL.rotateY\" 2 68 \"BaseRig:Wrist_J_R_CTRL.rotateX\" 2 69 \"BaseRig:Jaw_J_CTRL.rotateZ\" 2 70 \"BaseRig:Jaw_J_CTRL.rotateY\" 2 71 \"BaseRig:Jaw_J_CTRL.rotateX\" 2 72 \"BaseRig:Clavical_J_L_CTRL.rotateZ\" 2 73 \"BaseRig:Clavical_J_L_CTRL.rotateY\" 2 74 \"BaseRig:Clavical_J_L_CTRL.rotateX\" 2 75 \"BaseRig:Shoulder_J_L2_CTRL.rotateZ\" 2 76 \"BaseRig:Shoulder_J_L2_CTRL.rotateY\" 2 77 \"Bas"
 		+ "eRig:Shoulder_J_L2_CTRL.rotateX\" 2 78 \"BaseRig:Shoulder_J_L_CTRL.rotateZ\" 2 79 \"BaseRig:Shoulder_J_L_CTRL.rotateY\" 2 80 \"BaseRig:Shoulder_J_L_CTRL.rotateX\" 2 81"
-		);
+		)
+		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J.scale" 
+		"BaseRigRN.placeHolderList[1]" ""
+		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J.scale" 
+		"BaseRigRN.placeHolderList[2]" ""
+		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J.scale" 
+		"BaseRigRN.placeHolderList[3]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 select -ne :time1;
@@ -8971,6 +9040,9 @@ select -ne :hardwareRenderGlobals;
 select -ne :characterPartition;
 select -ne :ikSystem;
 	setAttr -s 4 ".sol";
+connectAttr "BaseRigRN.phl[1]" "Tail_01_J.is";
+connectAttr "BaseRigRN.phl[2]" "R_Ear_J.is";
+connectAttr "BaseRigRN.phl[3]" "L_Ear_J.is";
 connectAttr "Geometry_Layer.di" "L_Body_Geo_Low.do";
 connectAttr "groupId61.id" "L_Body_Geo_LowShape.iog.og[0].gid";
 connectAttr "lambert2SG.mwc" "L_Body_Geo_LowShape.iog.og[0].gco";
@@ -8982,6 +9054,7 @@ connectAttr "Geometry_Layer.di" "L_Wing_Geo_Low.do";
 connectAttr "L_Wing_Geo_LowShapeOrig.w" "L_Wing_Geo_LowShape.i";
 connectAttr "Geometry_Layer.di" "R_Wing_Geo_Low.do";
 connectAttr "R_Wing_01_J.s" "R_Wing_01_J1.is";
+connectAttr "L_Wing_01_J.s" "L_Wing_01_J1.is";
 connectAttr "Tail_01_J.s" "Tail__2_J.is";
 connectAttr "Tail__2_J.s" "Tail_03_J.is";
 connectAttr "Tail_03_J.s" "Tail_04_J.is";
@@ -9045,6 +9118,7 @@ connectAttr "Yellow_ShaderSG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[
 		;
 connectAttr "L_Body_Geo_LowShapeOrig.w" "groupParts1.ig";
 connectAttr "groupId61.id" "groupParts1.gi";
+connectAttr "BaseRigRNfosterParent1.msg" "BaseRigRN.fp";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "Yellow_ShaderSG.pa" ":renderPartition.st" -na;
 connectAttr "Red_ShaderSG.pa" ":renderPartition.st" -na;
