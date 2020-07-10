@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: Dragon Rig.ma
-//Last modified: Fri, Jul 10, 2020 08:57:03 AM
+//Last modified: Fri, Jul 10, 2020 09:02:50 AM
 //Codeset: 1252
 file -rdi 1 -ns "BaseRig" -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
 file -r -ns "BaseRig" -dr 1 -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
@@ -13,18 +13,18 @@ fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 18363)\n";
 fileInfo "license" "student";
-fileInfo "UUID" "8283595D-40F2-C5FA-B71C-FE82A6B5F394";
+fileInfo "UUID" "91EB1D36-42C6-6CBF-DBF6-AFAF9D21CB0F";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.76897820667500483 1.327635065551382 17.458588553449346 ;
-	setAttr ".r" -type "double3" 5.0616468204259064 -360.2000000000964 1.0871102739386655e-17 ;
+	setAttr ".t" -type "double3" -15.829755065427019 2.4914565677729184 -1.8713278252775929 ;
+	setAttr ".r" -type "double3" 4.4616468206314241 -461.39999999996093 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "77E8AA9E-234E-68FC-26D2-21B85028178A";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 17.087926795201263;
+	setAttr ".coi" 16.404502703681363;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -8657,13 +8657,43 @@ createNode camera -n "leftShape" -p "left";
 	setAttr ".tp" -type "double3" -0.010129928588867188 4.5405649836849342 0.13137614727020264 ;
 	setAttr ".hc" -type "string" "viewSet -ls %camera";
 	setAttr ".o" yes;
-createNode joint -n "R_Wing_01_J";
+createNode fosterParent -n "BaseRigRNfosterParent1";
+	rename -uid "11D58974-4103-F131-6837-65ABBEE26F08";
+createNode joint -n "R_Finger_04_J" -p "BaseRigRNfosterParent1";
+	rename -uid "5A2A11A4-4803-5668-3B81-CF9C586E9E87";
+	setAttr ".t" -type "double3" 2.4906063741107678 2.7222778275915682 0.26265972852707303 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" -38.14002083776797 -3.6179058083356774 96.077874331046459 ;
+	setAttr ".radi" 0.25;
+createNode joint -n "R_Finger_03_J" -p "BaseRigRNfosterParent1";
+	rename -uid "A1B00C06-4ABD-BB06-5B3F-15B6287F1966";
+	setAttr ".t" -type "double3" 2.5868850191373545 2.7240264123405655 -0.00017795711755365186 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" -1.4094271002300671 -1.0019833809713419 96.600180589876189 ;
+	setAttr ".radi" 0.25;
+createNode joint -n "R_Finger_02_J" -p "BaseRigRNfosterParent1";
+	rename -uid "9C4BE58A-496C-44C6-3015-678D16FD378E";
+	setAttr ".t" -type "double3" 2.4699127535636327 2.676129113693329 -0.26835882663726424 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" 27.518057927809444 8.0162653597223255 99.029647635535213 ;
+	setAttr ".radi" 0.25;
+createNode joint -n "R_Finger_01_J" -p "BaseRigRNfosterParent1";
+	rename -uid "523A98A5-492B-3795-5A3E-CB917480B5CC";
+	setAttr ".t" -type "double3" 1.9985194167546123 2.6734146411354622 -0.11102400720119064 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" 174.04348854675766 -5.3666490402709659 90.12953218176952 ;
+	setAttr ".radi" 0.25;
+createNode joint -n "R_Wing_01_J" -p "BaseRigRNfosterParent1";
 	rename -uid "39AF4DE5-4BBB-1826-B65C-3B8D9097B2A1";
-	setAttr ".t" -type "double3" 0.23241749405860901 3.3429951667785645 -0.30655506253242493 ;
+	setAttr ".t" -type "double3" 0.6036102476933416 -0.20911329159970338 0.3065550625324252 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
-	setAttr ".jo" -type "double3" 127.12335954519688 36.618098270246094 51.761258159631183 ;
+	setAttr ".jo" -type "double3" -52.876640454802946 -36.618098270246023 -61.223580367656908 ;
 	setAttr ".radi" 0.5;
 createNode joint -n "R_Wing_01_J1" -p "R_Wing_01_J";
 	rename -uid "EA64239B-4587-43DF-26FB-60B4846488C5";
@@ -8673,41 +8703,41 @@ createNode joint -n "R_Wing_01_J1" -p "R_Wing_01_J";
 	setAttr ".jot" -type "string" "xzy";
 	setAttr ".jo" -type "double3" -37.993751752750704 3.3591075216625677 70.947699719331254 ;
 	setAttr ".radi" 0.5;
-createNode joint -n "R_Finger_01_J";
-	rename -uid "523A98A5-492B-3795-5A3E-CB917480B5CC";
-	setAttr ".t" -type "double3" 1.7346663475036621 1.9020447731018066 0.11102400720119476 ;
+createNode joint -n "L_Finger_04_J" -p "BaseRigRNfosterParent1";
+	rename -uid "DB4C4642-4FDC-1A4A-CD56-BB9A0476D8AF";
+	setAttr ".t" -type "double3" -2.6391837177874997 -2.6413091645496238 -0.26266000000000345 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -5.9565114532423777 5.3666490402708034 -48.126583089248591 ;
+	setAttr ".jo" -type "double3" 141.85997916223215 3.6179058083355877 -15.245480339372641 ;
 	setAttr ".radi" 0.25;
-createNode joint -n "R_Finger_02_J";
-	rename -uid "9C4BE58A-496C-44C6-3015-678D16FD378E";
-	setAttr ".t" -type "double3" 2.0867800712585449 2.2154693603515625 0.26835882663726807 ;
+createNode joint -n "L_Finger_03_J" -p "BaseRigRNfosterParent1";
+	rename -uid "866B4AFE-4217-10F0-DD9E-7EBC8E54692D";
+	setAttr ".t" -type "double3" -2.7354087373673259 -2.6377193725135664 0.0001779569999965284 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -152.48194207219058 -8.016265359722496 -57.026698543014277 ;
+	setAttr ".jo" -type "double3" 178.59057289976874 1.0019833809712559 -15.767786598202347 ;
 	setAttr ".radi" 0.25;
-createNode joint -n "R_Finger_03_J";
-	rename -uid "A1B00C06-4ABD-BB06-5B3F-15B6287F1966";
-	setAttr ".t" -type "double3" 2.2057547569274902 2.258150577545166 0.00017795711755752563 ;
+createNode joint -n "L_Finger_02_J" -p "BaseRigRNfosterParent1";
+	rename -uid "7AF68072-4FEC-D408-A960-4E9422BDA4E0";
+	setAttr ".t" -type "double3" -2.6159686815313057 -2.5963730744702294 0.26835899999999646 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 178.59057289976991 1.0019833809711758 -54.597231497355253 ;
+	setAttr ".jo" -type "double3" -152.48194207219044 -8.0162653597224036 -18.197253643861387 ;
 	setAttr ".radi" 0.25;
-createNode joint -n "R_Finger_04_J";
-	rename -uid "5A2A11A4-4803-5668-3B81-CF9C586E9E87";
-	setAttr ".t" -type "double3" 2.1330389976501465 2.1950232982635498 -0.26265972852706909 ;
+createNode joint -n "L_Finger_01_J" -p "BaseRigRNfosterParent1";
+	rename -uid "EC71FBF0-46DD-96FF-1893-7AA2E33C2D9B";
+	setAttr ".t" -type "double3" -2.1451474742946814 -2.6197655479659381 0.11102399999999615 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 141.85997916223201 3.6179058083355122 -54.074925238525545 ;
+	setAttr ".jo" -type "double3" -5.9565114532423262 5.3666490402708638 -9.2971381900956711 ;
 	setAttr ".radi" 0.25;
-createNode joint -n "L_Wing_01_J";
+createNode joint -n "L_Wing_01_J" -p "BaseRigRNfosterParent1";
 	rename -uid "0DD93CC4-4BAD-413B-477E-189094F58EC3";
-	setAttr ".t" -type "double3" -0.232417 3.343 -0.306555 ;
+	setAttr ".t" -type "double3" -0.60360865591616919 0.2091188972481528 -0.30655500000000019 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
-	setAttr ".jo" -type "double3" 127.12335954519685 36.618098270246087 51.761258159631183 ;
+	setAttr ".jo" -type "double3" 127.12335954519688 36.618098270245902 42.298935951605614 ;
 	setAttr ".radi" 0.5;
 createNode joint -n "L_Wing_01_J1" -p "L_Wing_01_J";
 	rename -uid "E0D25254-4BB5-41DE-8E10-03BF9F3390F9";
@@ -8717,49 +8747,19 @@ createNode joint -n "L_Wing_01_J1" -p "L_Wing_01_J";
 	setAttr ".jot" -type "string" "xzy";
 	setAttr ".jo" -type "double3" -37.993751752750711 3.359107521662533 70.947699719331254 ;
 	setAttr ".radi" 0.5;
-createNode joint -n "L_Finger_01_J";
-	rename -uid "EC71FBF0-46DD-96FF-1893-7AA2E33C2D9B";
-	setAttr ".t" -type "double3" -1.73467 1.90204 0.111024 ;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -5.9565114532424799 5.3666490402708042 -48.126583089248598 ;
-	setAttr ".radi" 0.25;
-createNode joint -n "L_Finger_02_J";
-	rename -uid "7AF68072-4FEC-D408-A960-4E9422BDA4E0";
-	setAttr ".t" -type "double3" -2.08678 2.21547 0.268359 ;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -152.48194207219058 -8.0162653597224942 -57.026698543014284 ;
-	setAttr ".radi" 0.25;
-createNode joint -n "L_Finger_03_J";
-	rename -uid "866B4AFE-4217-10F0-DD9E-7EBC8E54692D";
-	setAttr ".t" -type "double3" -2.20575 2.25815 0.00017795699999999999 ;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 178.5905728997686 1.0019833809711765 -54.597231497355267 ;
-	setAttr ".radi" 0.25;
-createNode joint -n "L_Finger_04_J";
-	rename -uid "DB4C4642-4FDC-1A4A-CD56-BB9A0476D8AF";
-	setAttr ".t" -type "double3" -2.13304 2.19502 -0.26266 ;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 141.85997916223201 3.6179058083355122 -54.074925238525559 ;
-	setAttr ".radi" 0.25;
-createNode fosterParent -n "BaseRigRNfosterParent1";
-	rename -uid "4B1DFA6F-493E-101B-6932-DBBC4E9269D7";
-createNode joint -n "R_Ear_J" -p "BaseRigRNfosterParent1";
-	rename -uid "AAD884A3-4AE5-58B9-7017-DB8ADA615493";
-	setAttr ".t" -type "double3" -0.019638597965238789 2.3745566335871882 -1.4899694919586179 ;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -77.667682560595466 73.595103247531171 -78.15526391319375 ;
-	setAttr ".radi" 0.5;
 createNode joint -n "L_Ear_J" -p "BaseRigRNfosterParent1";
 	rename -uid "19A7F206-4722-5A94-CF13-9D94553190D1";
 	setAttr ".t" -type "double3" -0.019638600000003604 2.3745546652033989 1.4899699999999998 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -77.66768256059548 73.595103247531142 -78.155263913193764 ;
+	setAttr ".radi" 0.5;
+createNode joint -n "R_Ear_J" -p "BaseRigRNfosterParent1";
+	rename -uid "AAD884A3-4AE5-58B9-7017-DB8ADA615493";
+	setAttr ".t" -type "double3" -0.019638597965238789 2.3745566335871882 -1.4899694919586179 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" -77.667682560595466 73.595103247531171 -78.15526391319375 ;
 	setAttr ".radi" 0.5;
 createNode joint -n "Tail_01_J" -p "BaseRigRNfosterParent1";
 	rename -uid "E41ABFFF-49C7-8092-DD3A-6E8C265A9C2D";
@@ -8962,21 +8962,51 @@ createNode groupParts -n "groupParts1";
 	setAttr ".ic" -type "componentList" 1 "f[0:2509]";
 createNode reference -n "BaseRigRN";
 	rename -uid "35A64DEF-485C-EF72-4355-7F914532D9A8";
-	setAttr -s 3 ".phl";
+	setAttr -s 13 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
+	setAttr ".phl[6]" 0;
+	setAttr ".phl[7]" 0;
+	setAttr ".phl[8]" 0;
+	setAttr ".phl[9]" 0;
+	setAttr ".phl[10]" 0;
+	setAttr ".phl[11]" 0;
+	setAttr ".phl[12]" 0;
+	setAttr ".phl[13]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"BaseRigRN"
 		"BaseRigRN" 0
-		"BaseRigRN" 16
+		"BaseRigRN" 36
 		0 "|BaseRig:Root_J" "|World_Dragon|Skeleton" "-s -r "
 		0 "|BaseRig:Transform_Ctrl_Grp" "|World_Dragon|Controls" "-s -r "
 		0 "|BaseRigRNfosterParent1|Tail_01_J" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J" 
 		"-s -r "
+		0 "|BaseRigRNfosterParent1|R_Ear_J" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J" 
+		"-s -r "
 		0 "|BaseRigRNfosterParent1|L_Ear_J" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J" 
 		"-s -r "
-		0 "|BaseRigRNfosterParent1|R_Ear_J" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J" 
+		0 "|BaseRigRNfosterParent1|L_Wing_01_J" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L" 
+		"-s -r "
+		0 "|BaseRigRNfosterParent1|L_Finger_01_J" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK" 
+		"-s -r "
+		0 "|BaseRigRNfosterParent1|L_Finger_02_J" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK" 
+		"-s -r "
+		0 "|BaseRigRNfosterParent1|L_Finger_03_J" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK" 
+		"-s -r "
+		0 "|BaseRigRNfosterParent1|L_Finger_04_J" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK" 
+		"-s -r "
+		0 "|BaseRigRNfosterParent1|R_Wing_01_J" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R" 
+		"-s -r "
+		0 "|BaseRigRNfosterParent1|R_Finger_01_J" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK" 
+		"-s -r "
+		0 "|BaseRigRNfosterParent1|R_Finger_02_J" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK" 
+		"-s -r "
+		0 "|BaseRigRNfosterParent1|R_Finger_03_J" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK" 
+		"-s -r "
+		0 "|BaseRigRNfosterParent1|R_Finger_04_J" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK" 
 		"-s -r "
 		2 "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L" 
 		"displayLocalAxis" " 1"
@@ -9001,7 +9031,27 @@ createNode reference -n "BaseRigRN";
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J.scale" 
 		"BaseRigRN.placeHolderList[2]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J.scale" 
-		"BaseRigRN.placeHolderList[3]" "";
+		"BaseRigRN.placeHolderList[3]" ""
+		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L.scale" 
+		"BaseRigRN.placeHolderList[4]" ""
+		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.scale" 
+		"BaseRigRN.placeHolderList[5]" ""
+		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.scale" 
+		"BaseRigRN.placeHolderList[6]" ""
+		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.scale" 
+		"BaseRigRN.placeHolderList[7]" ""
+		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.scale" 
+		"BaseRigRN.placeHolderList[8]" ""
+		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R.scale" 
+		"BaseRigRN.placeHolderList[9]" ""
+		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.scale" 
+		"BaseRigRN.placeHolderList[10]" ""
+		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.scale" 
+		"BaseRigRN.placeHolderList[11]" ""
+		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.scale" 
+		"BaseRigRN.placeHolderList[12]" ""
+		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.scale" 
+		"BaseRigRN.placeHolderList[13]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 select -ne :time1;
@@ -9043,6 +9093,16 @@ select -ne :ikSystem;
 connectAttr "BaseRigRN.phl[1]" "Tail_01_J.is";
 connectAttr "BaseRigRN.phl[2]" "R_Ear_J.is";
 connectAttr "BaseRigRN.phl[3]" "L_Ear_J.is";
+connectAttr "BaseRigRN.phl[4]" "L_Wing_01_J.is";
+connectAttr "BaseRigRN.phl[5]" "L_Finger_02_J.is";
+connectAttr "BaseRigRN.phl[6]" "L_Finger_01_J.is";
+connectAttr "BaseRigRN.phl[7]" "L_Finger_03_J.is";
+connectAttr "BaseRigRN.phl[8]" "L_Finger_04_J.is";
+connectAttr "BaseRigRN.phl[9]" "R_Wing_01_J.is";
+connectAttr "BaseRigRN.phl[10]" "R_Finger_03_J.is";
+connectAttr "BaseRigRN.phl[11]" "R_Finger_04_J.is";
+connectAttr "BaseRigRN.phl[12]" "R_Finger_02_J.is";
+connectAttr "BaseRigRN.phl[13]" "R_Finger_01_J.is";
 connectAttr "Geometry_Layer.di" "L_Body_Geo_Low.do";
 connectAttr "groupId61.id" "L_Body_Geo_LowShape.iog.og[0].gid";
 connectAttr "lambert2SG.mwc" "L_Body_Geo_LowShape.iog.og[0].gco";
