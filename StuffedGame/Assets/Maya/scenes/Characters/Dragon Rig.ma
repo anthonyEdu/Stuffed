@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: Dragon Rig.ma
-//Last modified: Thu, Jul 16, 2020 09:34:47 AM
+//Last modified: Wed, Jul 15, 2020 10:33:23 AM
 //Codeset: 1252
 file -rdi 1 -ns "BaseRig" -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
 file -r -ns "BaseRig" -dr 1 -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
@@ -15,18 +15,18 @@ fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 18363)\n";
 fileInfo "license" "student";
-fileInfo "UUID" "F2AFCE9C-484B-F9E2-D0DA-58A2D86E5962";
+fileInfo "UUID" "C6BE55BA-45F8-D7B3-57A8-56BD63B69C43";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 7.6000515823144994 4.6771528761849677 9.1874951760303958 ;
-	setAttr ".r" -type "double3" -357.93835317038594 -1039.399999999923 0 ;
+	setAttr ".t" -type "double3" 0.11077303915988773 1.349479490563894 24.226137515740223 ;
+	setAttr ".r" -type "double3" -354.93835317039384 -1083.7999999999568 2.4902833117158331e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "77E8AA9E-234E-68FC-26D2-21B85028178A";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 10.66569816596294;
+	setAttr ".coi" 23.354635770318534;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -16148,7 +16148,7 @@ createNode camera -n "leftShape" -p "left";
 	setAttr ".hc" -type "string" "viewSet -ls %camera";
 	setAttr ".o" yes;
 createNode fosterParent -n "BaseRigRNfosterParent1";
-	rename -uid "7FA7CA80-41BE-C9EE-866B-FFB00676D573";
+	rename -uid "8D5311E9-46E0-12F5-282E-FD8F4BBE30E7";
 createNode transform -n "R_Wing_01_Ctrl_Grp" -p "BaseRigRNfosterParent1";
 	rename -uid "9AF052A6-4E61-A97F-EDF2-BC8327DC31AB";
 	setAttr ".t" -type "double3" -0.77884053115710516 -3.259305767938308 0.30655499999999308 ;
@@ -17467,26 +17467,26 @@ createNode parentConstraint -n "Tail_01_J_parentConstraint1" -p "Tail_01_J";
 	setAttr ".rsrr" -type "double3" 1.6909571240146972e-31 3.0461575494448303e-15 6.3611093629270335e-15 ;
 	setAttr -k on ".w0";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "8C900063-4C41-8B3D-D1C5-7F81DAA7086B";
+	rename -uid "32E1C29F-412C-8367-5B89-E99795A08817";
 	setAttr -s 7 ".lnk";
 	setAttr -s 7 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "159FD5C2-44A4-65E0-BE21-D49DBB335995";
+	rename -uid "69D3FFA5-4006-9949-2BDE-B39CB010EBD7";
 	setAttr ".cdl" 3;
 	setAttr -s 5 ".dli[1:4]"  3 5 1 4;
 	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "E7C5F4A4-1A43-5AA7-BC6D-F3BC66616717";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "A07B3CCB-41D1-1858-CDE1-BAA9BE963F19";
+	rename -uid "09A8C94D-43A0-E0B0-8D71-03BBC04D8B3D";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "FF83EB3D-CE4E-B5AE-86C3-BEBE5F5E5A78";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "7182C55B-43C3-8919-6F46-499D0955985A";
+	rename -uid "EC592BB8-4359-AE77-CF4E-CC98EFFFE53F";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 1 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "333DDACB-43E7-6DCD-F50D-238BAC668794";
+	rename -uid "2045C970-4AB8-94C8-88CA-2C8BC78DA18B";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "0A41BEBB-A04A-3F4E-1C8A-B69EEECED819";
 	setAttr ".b" -type "string" (
@@ -17561,6 +17561,7 @@ createNode materialInfo -n "materialInfo1";
 	rename -uid "66D717CA-4380-A269-E8AF-2FA1B1C2EFB5";
 createNode displayLayer -n "Geometry_Layer";
 	rename -uid "AD7C12C6-40DB-AC70-94A0-73BF2B528752";
+	setAttr ".dt" 2;
 	setAttr ".do" 2;
 createNode shadingEngine -n "Yellow_ShaderSG";
 	rename -uid "DC5E9752-4E64-D3BA-8754-79AB2345EB05";
@@ -18687,7 +18688,7 @@ createNode reference -n "BaseRigRN";
 		"rotateY" " -av"
 		2 "|World_Dragon|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL|BaseRig:Clavical_J_R_GRP|BaseRig:Clavical_J_R_CTRL|BaseRig:Shoulder_J_R2_GRP|BaseRig:Shoulder_J_R2_CTRL|BaseRig:Arm_R_FK_Master_Ctrl_Grp|BaseRig:Shoulder_J_R_GRP|BaseRig:Shoulder_J_R_CTRL|BaseRig:Elbow_J_R_GRP|BaseRig:Elbow_J_R_CTRL|BaseRig:Wrist_J_R_GRP|BaseRig:Wrist_J_R_CTRL" 
 		"rotateX" " -av"
-		2 "BaseRig:Joints" "visibility" " 1"
+		2 "BaseRig:Joints" "visibility" " 0"
 		2 "BaseRig:bindPose1" "worldMatrix" " -s 58"
 		2 "BaseRig:bindPose1" "worldMatrix[58]" " -type \"matrix\" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1"
 		
@@ -18855,15 +18856,15 @@ createNode reference -n "BaseRigRN";
 		3 "BaseRig:bindPose1.world" "BaseRig:bindPose1.parents[0]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J.message" "BaseRigRN.placeHolderList[1]" 
 		""
-		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J.message" "BaseRigRN.placeHolderList[2]" 
-		""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[3]" ""
+		"BaseRigRN.placeHolderList[2]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J.worldMatrix" 
-		"BaseRigRN.placeHolderList[4]" ""
+		"BaseRigRN.placeHolderList[3]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J.objectColorRGB" 
-		"BaseRigRN.placeHolderList[5]" ""
+		"BaseRigRN.placeHolderList[4]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J.scale" 
+		"BaseRigRN.placeHolderList[5]" ""
+		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J.message" 
 		"BaseRigRN.placeHolderList[6]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J.message" 
 		"BaseRigRN.placeHolderList[7]" ""
@@ -20993,7 +20994,7 @@ createNode skinCluster -n "skinCluster6";
 		2 30 0.99596627754266254 32 0.0040337224573374752
 		1 30 1
 		2 30 0.99428299958633404 32 0.0057170004136659746
-		2 30 2.1941325036267736e-06 32 0.99999780586749631
+		2 30 2.194132503626774e-06 32 0.99999780586749631
 		2 30 5.3056932013147325e-05 32 0.99994694306798682
 		2 30 0.99170622384590812 32 0.0082937761540917802
 		2 30 0.99585423667819839 32 0.0041457633218016099
@@ -21771,8 +21772,8 @@ createNode skinCluster -n "skinCluster6";
 		4 13 0.53285688161849976 14 0.37438216805458069 15 0.049474835395812988 
 		28 0.043286114931106567
 		3 13 0.41052985191345215 14 0.51809680461883545 15 0.071373343467712402
-		4 13 0.49414766482675282 14 0.42173587942880686 15 0.084116456158654304 
-		28 4.2276186830523654e-10
+		5 0 -8.3697584689237763e-10 13 0.49414766482675282 14 0.42173587942880686 
+		15 0.084116456158654304 28 4.2276186830523654e-10
 		4 13 0.22363924763722309 14 0.51720406292624865 15 0.13418431944275877 
 		28 0.12497236999376948
 		3 14 0.51912927627563477 27 0.32871571183204651 28 0.15215501189231873
@@ -21833,9 +21834,9 @@ createNode skinCluster -n "skinCluster6";
 		14 0.061342764645814896
 		4 0 0.47873973846435547 1 0.33567941188812256 13 0.10949991643428802 
 		14 0.076080933213233948
-		3 0 0.44237321615219116 1 0.37980443239212036 13 0.10510595887899399;
-	setAttr ".wl[1436:1666].w"
-		1 14 0.072716392576694489
+		2 0 0.44237321615219116 1 0.37980443239212036;
+	setAttr ".wl[1436:1665].w"
+		2 13 0.10510595887899399 14 0.072716392576694489
 		4 0 0.41489782929420471 1 0.3975130021572113 13 0.11845623701810837 
 		14 0.069132931530475616
 		4 0 0.18985845893621445 1 0.80304612219333649 14 2.7526770281838253e-05 
@@ -22086,10 +22087,9 @@ createNode skinCluster -n "skinCluster6";
 		2 15 0.90713690221309662 17 0.092863097786903381
 		2 15 0.90362471342086792 17 0.09637528657913208
 		2 15 0.93495923280715942 17 0.065040767192840576
-		2 15 0.99993865006399574 17 6.1349936004262418e-05
-		1 14 2.9619920738355177e-08;
-	setAttr ".wl[1666:1865].w"
-		2 15 0.98482418060302734 17 0.015175789777051918
+		2 15 0.99993865006399574 17 6.1349936004262418e-05;
+	setAttr ".wl[1666:1864].w"
+		3 14 2.9619920738355177e-08 15 0.98482418060302734 17 0.015175789777051918
 		3 14 9.5992822025436908e-05 15 0.9927719840707141 17 0.0071320231072604656
 		3 15 0.98682224750518799 17 0.0011076880618929863 18 0.012070064432919025
 		2 15 0.93079977770095024 18 0.069200222299049763
@@ -22322,10 +22322,10 @@ createNode skinCluster -n "skinCluster6";
 		3 13 0.099949240684509277 14 0.5643136203289032 15 0.33573713898658752
 		3 13 0.31667959690093994 14 0.52288699150085449 15 0.16043341159820557
 		4 13 0.2006334662437439 14 0.53903692960739136 15 0.25286591053009033 
-		19 0.0074636936187744141
-		1 13 0.23518998920917511;
-	setAttr ".wl[1865:2046].w"
-		3 14 0.48907597362995148 15 0.27571025940051186 18 2.3777760361554101e-05
+		19 0.0074636936187744141;
+	setAttr ".wl[1865:2045].w"
+		4 13 0.23518998920917511 14 0.48907597362995148 15 0.27571025940051186 
+		18 2.3777760361554101e-05
 		4 13 0.12596745789051056 14 0.49747909605503082 15 0.37655343993284474 
 		18 6.1216138824704558e-09
 		4 13 0.082715459167957306 14 0.49853502959012991 15 0.41874934189188195 
@@ -22570,10 +22570,9 @@ createNode skinCluster -n "skinCluster6";
 		1 15 1
 		1 15 1
 		1 15 1
-		2 15 0.99998782828970434 18 1.2171710295660887e-05
-		1 14 9.6501002744275866e-09;
-	setAttr ".wl[2046:2265].w"
-		2 15 0.9975161767921259 18 0.0024838135577738285
+		2 15 0.99998782828970434 18 1.2171710295660887e-05;
+	setAttr ".wl[2046:2264].w"
+		3 14 9.6501002744275866e-09 15 0.9975161767921259 18 0.0024838135577738285
 		2 15 0.96505287662148476 18 0.034947123378515244
 		2 15 0.92485020309686661 18 0.075149796903133392
 		2 15 0.87761195003986359 18 0.12238804996013641
@@ -22803,10 +22802,9 @@ createNode skinCluster -n "skinCluster6";
 		20 0.019768983125686646
 		4 13 0.22355908155441284 14 0.50097465515136719 15 0.275215744972229 
 		20 0.0002505183219909668
-		3 13 0.11922851949930191 14 0.50802963227033615 15 0.37274184823036194
-		1 13 0.065968163311481476;
-	setAttr ".wl[2265:2442].w"
-		2 14 0.59253194183111191 15 0.34149989485740662
+		3 13 0.11922851949930191 14 0.50802963227033615 15 0.37274184823036194;
+	setAttr ".wl[2265:2441].w"
+		3 13 0.065968163311481476 14 0.59253194183111191 15 0.34149989485740662
 		2 14 0.46968495845794678 15 0.53031504154205322
 		2 14 0.34494900703430176 15 0.65505099296569824
 		2 14 0.21896308660507202 15 0.78103691339492798
@@ -23036,10 +23034,9 @@ createNode skinCluster -n "skinCluster6";
 		18 2.3158983708526648e-07
 		3 13 0.15537498891353607 14 0.50392009317874908 15 0.34070491790771484
 		3 13 0.17093656957149506 14 0.48566265404224396 15 0.34340077638626099
-		3 13 0.17933206260204315 14 0.4635179191827774 15 0.35715001821517944
-		1 13 0.17431308329105377;
-	setAttr ".wl[2442:2613].w"
-		2 14 0.47458179295063019 15 0.35110512375831604
+		3 13 0.17933206260204315 14 0.4635179191827774 15 0.35715001821517944;
+	setAttr ".wl[2442:2612].w"
+		3 13 0.17431308329105377 14 0.47458179295063019 15 0.35110512375831604
 		3 13 0.15208905935287476 14 0.5309564471244812 15 0.31695449352264404
 		1 15 1
 		1 15 1
@@ -23266,10 +23263,10 @@ createNode skinCluster -n "skinCluster6";
 		4 1 0.12106823921203613 2 0.36100167036056519 3 0.46761292591691017 
 		4 0.05031716451048851
 		4 1 0.10401809215545654 2 0.34344941377639771 3 0.50629444792866707 
-		4 0.046238046139478683
-		1 1 0.042674481868743896;
+		4 0.046238046139478683;
 	setAttr ".wl[2613:2652].w"
-		3 5 0.35683521628379822 6 0.55425834655761719 7 0.046231955289840698
+		4 1 0.042674481868743896 5 0.35683521628379822 6 0.55425834655761719 
+		7 0.046231955289840698
 		4 1 0.0019240981054444717 5 0.37196499236104863 6 0.50346438790341397 
 		7 0.12264652163009293
 		4 1 0.005097508430480957 5 0.37905821204185486 6 0.51485217362642288 
@@ -23510,13 +23507,14 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".btrs" 512;
 select -ne :characterPartition;
 select -ne :ikSystem;
+	setAttr -s 4 ".sol";
 connectAttr "BaseRigRN.phl[1]" "bindPose1.m[2]";
-connectAttr "BaseRigRN.phl[2]" "skinCluster6.ptt";
-connectAttr "BaseRigRN.phl[3]" "skinCluster6.lw[0]";
-connectAttr "BaseRigRN.phl[4]" "skinCluster6.ma[0]";
-connectAttr "BaseRigRN.phl[5]" "skinCluster6.ifcl[0]";
-connectAttr "BaseRigRN.phl[6]" "Tail_01_J.is";
-connectAttr "BaseRigRN.phl[7]" "bindPose1.m[3]";
+connectAttr "BaseRigRN.phl[2]" "skinCluster6.lw[0]";
+connectAttr "BaseRigRN.phl[3]" "skinCluster6.ma[0]";
+connectAttr "BaseRigRN.phl[4]" "skinCluster6.ifcl[0]";
+connectAttr "BaseRigRN.phl[5]" "Tail_01_J.is";
+connectAttr "BaseRigRN.phl[6]" "bindPose1.m[3]";
+connectAttr "BaseRigRN.phl[7]" "skinCluster6.ptt";
 connectAttr "BaseRigRN.phl[8]" "skinCluster6.lw[1]";
 connectAttr "BaseRigRN.phl[9]" "skinCluster6.ma[1]";
 connectAttr "BaseRigRN.phl[10]" "skinCluster6.ifcl[1]";
@@ -23612,8 +23610,8 @@ connectAttr "BaseRigRN.phl[99]" "skinCluster6.ifcl[21]";
 connectAttr "BaseRigRN.phl[100]" "L_Hand_Ctrl_Grp_parentConstraint1.tg[0].tis";
 connectAttr "BaseRigRN.phl[101]" "L_Hand_Ctrl_Grp_parentConstraint1.tg[0].tt";
 connectAttr "BaseRigRN.phl[102]" "L_Hand_Ctrl_Grp_parentConstraint1.tg[0].tr";
-connectAttr "BaseRigRN.phl[103]" "Finger_04_J_L.is";
-connectAttr "BaseRigRN.phl[104]" "Finger_03_J_L.is";
+connectAttr "BaseRigRN.phl[103]" "Finger_03_J_L.is";
+connectAttr "BaseRigRN.phl[104]" "Finger_04_J_L.is";
 connectAttr "BaseRigRN.phl[105]" "Finger_02_J_L.is";
 connectAttr "BaseRigRN.phl[106]" "Finger_01_J_L.is";
 connectAttr "BaseRigRN.phl[107]" "L_Hand_Ctrl_Grp_parentConstraint1.tg[0].ts";
@@ -23652,8 +23650,8 @@ connectAttr "BaseRigRN.phl[139]" "skinCluster6.ifcl[29]";
 connectAttr "BaseRigRN.phl[140]" "R_Hand_Ctrl_grp_parentConstraint1.tg[0].tis";
 connectAttr "BaseRigRN.phl[141]" "R_Hand_Ctrl_grp_parentConstraint1.tg[0].tt";
 connectAttr "BaseRigRN.phl[142]" "R_Hand_Ctrl_grp_parentConstraint1.tg[0].tr";
-connectAttr "BaseRigRN.phl[143]" "Finger_03_J_R.is";
-connectAttr "BaseRigRN.phl[144]" "Finger_04_J_R.is";
+connectAttr "BaseRigRN.phl[143]" "Finger_04_J_R.is";
+connectAttr "BaseRigRN.phl[144]" "Finger_03_J_R.is";
 connectAttr "BaseRigRN.phl[145]" "Finger_02_J_R.is";
 connectAttr "BaseRigRN.phl[146]" "Finger_01_J_R.is";
 connectAttr "BaseRigRN.phl[147]" "R_Hand_Ctrl_grp_parentConstraint1.tg[0].ts";
