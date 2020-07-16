@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: Puni the Panda 4.0.ma
-//Last modified: Wed, Jul 15, 2020 06:50:43 PM
+//Last modified: Wed, Jul 15, 2020 06:52:31 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "BaseRig1" -rfn "BaseRigRN1" -op "v=0;p=17;f=0" -typ "mayaAscii"
 		 "/Users/Katie/StuffedAgain/Stuffed/StuffedGame/Assets/Maya/scenes/BaseRig.ma";
@@ -15,18 +15,18 @@ fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Mac OS X 10.15.6";
 fileInfo "license" "student";
-fileInfo "UUID" "3C2DB0CA-A74B-3263-D286-FC87D9AC7F3F";
+fileInfo "UUID" "226EE955-3A48-F0E2-D6E5-399AF2B17A7A";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 3.0709108653989823 3.1544309996265665 13.390258055341871 ;
-	setAttr ".r" -type "double3" 363.86164678659833 7569.7999999996991 0 ;
+	setAttr ".t" -type "double3" 0.58460778208073305 2.5788834109608452 13.539369055138412 ;
+	setAttr ".r" -type "double3" 366.26164678657733 7559.3999999998587 1.2424722979911509e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "77E8AA9E-234E-68FC-26D2-21B85028178A";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 13.794986788649311;
+	setAttr ".coi" 13.794986788649284;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -8474,7 +8474,7 @@ createNode reference -n "BaseRigRN1";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"BaseRigRN1"
 		"BaseRigRN1" 0
-		"BaseRigRN1" 158
+		"BaseRigRN1" 162
 		2 "|BaseRig1:Root_J|BaseRig1:Pelvis_J" "useObjectColor" " 1"
 		2 "|BaseRig1:Root_J|BaseRig1:Pelvis_J" "objectColor" " 0"
 		2 "|BaseRig1:Root_J|BaseRig1:Pelvis_J" "lockInfluenceWeights" " 0"
@@ -8593,6 +8593,14 @@ createNode reference -n "BaseRigRN1";
 		"translateY" " -av"
 		2 "|BaseRig1:Transform_Ctrl_Grp|BaseRig1:Transform_Ctrl|BaseRig1:Root_J_GRP|BaseRig1:Root_J_CTRL" 
 		"translateX" " -av"
+		2 "|BaseRig1:Transform_Ctrl_Grp|BaseRig1:Transform_Ctrl|BaseRig1:Root_J_GRP|BaseRig1:Root_J_CTRL|BaseRig1:LowerBack_J_GRP|BaseRig1:LowerBack_J_CTRL|BaseRig1:MiddleBack_j_GRP|BaseRig1:MiddleBack_j_CTRL|BaseRig1:UpperBack_j_GRP|BaseRig1:UpperBack_j_CTRL|BaseRig1:head_J_GRP|BaseRig1:head_J_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|BaseRig1:Transform_Ctrl_Grp|BaseRig1:Transform_Ctrl|BaseRig1:Root_J_GRP|BaseRig1:Root_J_CTRL|BaseRig1:LowerBack_J_GRP|BaseRig1:LowerBack_J_CTRL|BaseRig1:MiddleBack_j_GRP|BaseRig1:MiddleBack_j_CTRL|BaseRig1:UpperBack_j_GRP|BaseRig1:UpperBack_j_CTRL|BaseRig1:head_J_GRP|BaseRig1:head_J_CTRL" 
+		"rotateZ" " -av"
+		2 "|BaseRig1:Transform_Ctrl_Grp|BaseRig1:Transform_Ctrl|BaseRig1:Root_J_GRP|BaseRig1:Root_J_CTRL|BaseRig1:LowerBack_J_GRP|BaseRig1:LowerBack_J_CTRL|BaseRig1:MiddleBack_j_GRP|BaseRig1:MiddleBack_j_CTRL|BaseRig1:UpperBack_j_GRP|BaseRig1:UpperBack_j_CTRL|BaseRig1:head_J_GRP|BaseRig1:head_J_CTRL" 
+		"rotateY" " -av"
+		2 "|BaseRig1:Transform_Ctrl_Grp|BaseRig1:Transform_Ctrl|BaseRig1:Root_J_GRP|BaseRig1:Root_J_CTRL|BaseRig1:LowerBack_J_GRP|BaseRig1:LowerBack_J_CTRL|BaseRig1:MiddleBack_j_GRP|BaseRig1:MiddleBack_j_CTRL|BaseRig1:UpperBack_j_GRP|BaseRig1:UpperBack_j_CTRL|BaseRig1:head_J_GRP|BaseRig1:head_J_CTRL" 
+		"rotateX" " -av"
 		2 "|BaseRig1:Transform_Ctrl_Grp|BaseRig1:Transform_Ctrl|BaseRig1:Root_J_GRP|BaseRig1:Root_J_CTRL|BaseRig1:LowerBack_J_GRP|BaseRig1:LowerBack_J_CTRL|BaseRig1:MiddleBack_j_GRP|BaseRig1:MiddleBack_j_CTRL|BaseRig1:UpperBack_j_GRP|BaseRig1:UpperBack_j_CTRL|BaseRig1:head_J_GRP|BaseRig1:head_J_CTRL|BaseRig1:Eye_J_L_GRP|BaseRig1:Eye_J_L_CTRL|BaseRig1:EyeLid_J_L_GRP|BaseRig1:EyeLid_J_L_CTRL" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|BaseRig1:Transform_Ctrl_Grp|BaseRig1:Transform_Ctrl|BaseRig1:Root_J_GRP|BaseRig1:Root_J_CTRL|BaseRig1:LowerBack_J_GRP|BaseRig1:LowerBack_J_CTRL|BaseRig1:MiddleBack_j_GRP|BaseRig1:MiddleBack_j_CTRL|BaseRig1:UpperBack_j_GRP|BaseRig1:UpperBack_j_CTRL|BaseRig1:head_J_GRP|BaseRig1:head_J_CTRL|BaseRig1:Eye_J_L_GRP|BaseRig1:Eye_J_L_CTRL|BaseRig1:EyeLid_J_L_GRP|BaseRig1:EyeLid_J_L_CTRL" 
