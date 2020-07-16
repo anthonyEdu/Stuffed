@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: BaseRig.ma
-//Last modified: Fri, Jul 10, 2020 07:53:14 PM
+//Last modified: Wed, Jul 15, 2020 06:44:24 PM
 //Codeset: UTF-8
 requires maya "2020";
 requires "mtoa" "4.0.0";
@@ -9,19 +9,19 @@ fileInfo "application" "maya";
 fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
-fileInfo "osv" "Mac OS X 10.15.3";
+fileInfo "osv" "Mac OS X 10.15.6";
 fileInfo "license" "student";
-fileInfo "UUID" "D51E3540-C548-D3C3-3CBF-5B94CB0C281B";
+fileInfo "UUID" "BE8DCA5C-114E-4BCF-0E38-B1A5FC240867";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -7.373398178280449 8.9440083600542479 28.937593458268399 ;
-	setAttr ".r" -type "double3" 351.26164697245798 6825.7999999938293 0 ;
+	setAttr ".t" -type "double3" -3.9649312407292205 6.2240169736841544 19.80338760577456 ;
+	setAttr ".r" -type "double3" 354.26164697246526 6826.1999999916825 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "77E8AA9E-234E-68FC-26D2-21B85028178A";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 29.924210161892713;
+	setAttr ".coi" 20.638346568933443;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -5418,26 +5418,26 @@ createNode nurbsCurve -n "Wrist_J_R_CTRLShape" -p "Wrist_J_R_CTRL";
 		-0.91952193960895978 1.0974486852102481 0.44186604755512804 -1.2441045022721235 0.49686396996855375 
 		-6.5959325758737654e-16 0 0 0 0 0 0 0 0 0;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "24ADACC0-314E-C17F-1C67-7FBEA933B99A";
+	rename -uid "C74908A2-A549-8791-97C0-D6822D6A575A";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "A98D6454-1443-52D6-A650-91A389F2A0D1";
+	rename -uid "0DFE9E09-EE4B-7171-B486-CC9873A7BD6B";
 	setAttr ".cdl" 2;
 	setAttr -s 3 ".dli[1:2]"  1 2;
 	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "E7C5F4A4-1A43-5AA7-BC6D-F3BC66616717";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "16CE3204-334E-A020-E69A-74992E0D3661";
+	rename -uid "4E60DB40-8848-AA28-F948-FF9B2A8789D7";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "FF83EB3D-CE4E-B5AE-86C3-BEBE5F5E5A78";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "FF6EA451-F242-2960-30E1-15BB6BBD164F";
+	rename -uid "08308E9B-8B4A-B99E-BBE0-9BBE068ACB92";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "ED9ACED8-7B4E-1BD3-9023-42B04A627ADA";
+	rename -uid "5A236FDF-5F40-D307-AFA6-3382332AF492";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "0A41BEBB-A04A-3F4E-1C8A-B69EEECED819";
 	setAttr ".b" -type "string" (
