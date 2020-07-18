@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
-//Name: Eagle24.ma
-//Last modified: Fri, Jul 17, 2020 08:45:15 PM
+//Name: Eagle25.ma
+//Last modified: Fri, Jul 17, 2020 08:45:31 PM
 //Codeset: 1252
 file -rdi 1 -ns "BaseRig" -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/serol/OneDrive/Desktop/Summer2020/Stuffed/StuffedGame/Assets/Maya/scenes/BaseRig.ma";
 file -r -ns "BaseRig" -dr 1 -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/serol/OneDrive/Desktop/Summer2020/Stuffed/StuffedGame/Assets/Maya/scenes/BaseRig.ma";
@@ -13,7 +13,7 @@ fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "202004291615-7bd99f0972";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 18363)\n";
-fileInfo "UUID" "66EC7453-47E9-CA72-1C99-688BEF14C876";
+fileInfo "UUID" "7ACE1DDA-45AC-4DD5-D9BB-01A9B091D789";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
@@ -14971,4 +14971,4 @@ connectAttr "Feathers.msg" ":defaultShaderList1.s" -na;
 connectAttr "Talons.msg" ":defaultShaderList1.s" -na;
 connectAttr "eyes.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of Eagle24.ma
+// End of Eagle25.ma
