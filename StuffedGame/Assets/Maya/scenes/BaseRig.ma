@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: BaseRig.ma
-//Last modified: Sat, Jul 18, 2020 09:50:43 PM
+//Last modified: Sat, Jul 18, 2020 09:53:38 PM
 //Codeset: UTF-8
 requires maya "2020";
 requires "mtoa" "4.0.0";
@@ -11,17 +11,17 @@ fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Mac OS X 10.15.6";
 fileInfo "license" "student";
-fileInfo "UUID" "F617E3CD-1140-CEB1-BBF4-80BB5841D872";
+fileInfo "UUID" "3078DFFC-3D49-DFF4-7849-F48860D283BF";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.9688865418533099 5.5142094588266621 11.834930539944478 ;
-	setAttr ".r" -type "double3" 351.86164697243242 6848.9999999893489 1.0063127173589931e-16 ;
+	setAttr ".t" -type "double3" -0.29333131932185297 5.9675996616261671 17.169002502656628 ;
+	setAttr ".r" -type "double3" 355.46164697495573 6836.5999999859196 2.4891897472151506e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "77E8AA9E-234E-68FC-26D2-21B85028178A";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 10.318265687658327;
+	setAttr ".coi" 15.779228977322655;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -4839,7 +4839,7 @@ createNode transform -n "Eye_J_R_CTRL" -p "Eye_J_R_GRP";
 	setAttr -l on ".tx";
 	setAttr -l on ".ty";
 	setAttr -l on ".tz";
-	setAttr ".r" -type "double3" 0 0 4.2772412361387619 ;
+	setAttr ".r" -type "double3" 0 0 0 ;
 	setAttr -av ".rz";
 	setAttr -av ".ry";
 	setAttr -av ".rx";
@@ -5787,8 +5787,7 @@ createNode character -n "BaseCharacterSet";
 	setAttr -s 84 ".dnsm";
 	setAttr -s 3 ".lv";
 	setAttr -s 3 ".lv";
-	setAttr -s 81 ".av[43:81]"  4.2772412361387619 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 81 ".av";
 	setAttr -s 81 ".av";
 	setAttr ".am" -type "characterMapping" 84 "Hip_J_R_CTRL.rotateZ" 2 1 "Hip_J_R_CTRL.rotateY" 
 		2 2 "Hip_J_R_CTRL.rotateX" 2 3 "Knee_J_R_CTRL.rotateZ" 2 
