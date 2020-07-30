@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: Eagle29.ma
-//Last modified: Wed, Jul 29, 2020 06:52:50 PM
+//Last modified: Wed, Jul 29, 2020 07:33:06 PM
 //Codeset: 1252
 file -rdi 1 -ns "BaseRig" -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/serol/OneDrive/Desktop/Summer2020/Stuffed/StuffedGame/Assets/Maya/scenes/BaseRig.ma";
 file -r -ns "BaseRig" -dr 1 -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/serol/OneDrive/Desktop/Summer2020/Stuffed/StuffedGame/Assets/Maya/scenes/BaseRig.ma";
@@ -13,7 +13,7 @@ fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "202004291615-7bd99f0972";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 18363)\n";
-fileInfo "UUID" "2ACCF7F2-4484-17D3-81BD-6C9E5E259982";
+fileInfo "UUID" "26056D9A-4D90-AD68-1BA5-6E9B1C999996";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
@@ -10309,7 +10309,7 @@ createNode script -n "uiConfigurationScriptNode";
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "30A8CC4E-4A4C-F8A5-B53D-49B299CB5392";
-	setAttr ".b" -type "string" "playbackOptions -min 160 -max 250 -ast 1 -aet 250 ";
+	setAttr ".b" -type "string" "playbackOptions -min 250 -max 349 -ast 1 -aet 349 ";
 	setAttr ".st" 6;
 createNode timeEditor -s -n "timeEditor";
 	rename -uid "6A554A63-4B43-6BB2-0828-FC8831D4FF7F";
@@ -10728,7 +10728,7 @@ createNode reference -n "BaseRigRN";
 		2 "|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_IK|BaseRig:Knee_J_L_IK" 
 		"objectColor" " 2"
 		2 "|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_IK|BaseRig:Knee_J_L_IK" 
-		"rotate" " -type \"double3\" -0.012110980284994334 -4.42616240277398187 1.08667085083314641"
+		"rotate" " -type \"double3\" -0.012110980284987999 -4.42616240277428208 1.08667085083257775"
 		
 		2 "|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_IK|BaseRig:Knee_J_L_IK" 
 		"bindPose" " -type \"matrix\" 0.0098367554783119204 -0.96018345690976659 -0.27919700449408674 0 -0.46337960686451812 -0.2517989681121488 0.84963322651585549 0 -0.88610528617300599 0.12101656388473525 -0.44740631765967193 0 0.56431285516739604 0.84200935539222366 0.0090082709995914084 1"
@@ -10809,7 +10809,7 @@ createNode reference -n "BaseRigRN";
 		2 "|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_IK|BaseRig:Knee_J_R_IK" 
 		"objectColor" " 2"
 		2 "|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_IK|BaseRig:Knee_J_R_IK" 
-		"rotate" " -type \"double3\" -0.012111507929834406 -4.4261558631012452 1.08667600011419485"
+		"rotate" " -type \"double3\" -0.012111507929823864 -4.42615586310174525 1.08667600011324894"
 		
 		2 "|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_IK|BaseRig:Knee_J_R_IK" 
 		"bindPose" " -type \"matrix\" 0.0098417591816172267 0.96018355328695182 0.27919649670698743 0 -0.46341862045496407 0.25179542610208328 -0.84961299755223207 0 -0.886084827763025 -0.12102316882032993 0.44744504759451403 0 -0.56431138231908429 0.84200928977665013 0.0090078638809925893 1"
@@ -11061,7 +11061,7 @@ createNode reference -n "BaseRigRN";
 		2 "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_IK|BaseRig:Shoulder_J_R_IK|BaseRig:Elbow_J_R_IK" 
 		"useObjectColor" " 0"
 		2 "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_IK|BaseRig:Shoulder_J_R_IK|BaseRig:Elbow_J_R_IK" 
-		"rotate" " -type \"double3\" 2.1144378478987398e-05 -0.0031330433639265168 0.00037949236194062004"
+		"rotate" " -type \"double3\" 2.1144378478992121e-05 -0.0031330433628097773 0.00037949236194070483"
 		
 		2 "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_IK|BaseRig:Shoulder_J_R_IK|BaseRig:Elbow_J_R_IK" 
 		"bindPose" " -type \"matrix\" 0.74666249578720456 0.66520306371768523 -3.7489040314768322e-05 0 0.66486896737558654 -0.7462856983545304 0.031731886997341779 0 0.021080170913543122 -0.023717935240994734 -0.99949641617274432 0 -1.28288847822534535 2.7882340438702311 -1.293538013302457e-05 1"
@@ -14992,8 +14992,8 @@ createNode phong -n "pasted__eyes";
 	rename -uid "6E5BB11E-4B45-7C2C-FC65-7BBD1A4F5EDD";
 	setAttr ".c" -type "float3" 0 0 0 ;
 select -ne :time1;
-	setAttr ".o" 160;
-	setAttr ".unw" 160;
+	setAttr ".o" 335;
+	setAttr ".unw" 335;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
