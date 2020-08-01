@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: BaseRig.ma
-//Last modified: Wed, Jul 29, 2020 10:04:29 PM
+//Last modified: Wed, Jul 29, 2020 11:15:30 PM
 //Codeset: 1252
 requires maya "2020";
 requires "mtoa" "4.0.0";
@@ -12,12 +12,12 @@ fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 19041)\n";
 fileInfo "license" "student";
-fileInfo "UUID" "76F64BA1-4BF2-7A68-57B9-ECBB9705C18A";
+fileInfo "UUID" "BD63FB25-4D7F-FD40-5660-6784B54EBD6C";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -11.20666267703241 11.43974729972239 12.440903490630966 ;
-	setAttr ".r" -type "double3" 335.66164699305318 6793.8000000151542 4.5952265378864556e-15 ;
+	setAttr ".t" -type "double3" 2.121611748371329 0.006812070408656723 18.10543630085035 ;
+	setAttr ".r" -type "double3" 374.6616469919428 6847.0000000124101 -2.0027750575430328e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "77E8AA9E-234E-68FC-26D2-21B85028178A";
 	setAttr -k off ".v" no;
