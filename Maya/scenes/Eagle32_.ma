@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: Eagle32_.ma
-//Last modified: Tue, Aug 04, 2020 05:00:08 PM
+//Last modified: Tue, Aug 04, 2020 05:02:49 PM
 //Codeset: 1252
 file -rdi 1 -ns "BaseRig" -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/serol/OneDrive/Desktop/Summer2020/Stuffed/StuffedGame/Assets/Maya/scenes/BaseRig.ma";
 file -r -ns "BaseRig" -dr 1 -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/serol/OneDrive/Desktop/Summer2020/Stuffed/StuffedGame/Assets/Maya/scenes/BaseRig.ma";
@@ -13,7 +13,7 @@ fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "202004291615-7bd99f0972";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 18363)\n";
-fileInfo "UUID" "B73CB53F-4228-244A-ADD2-4BBF60F9BBDA";
+fileInfo "UUID" "B3DE424E-4CC3-6082-A189-D1A06FA0BADA";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
@@ -14502,13 +14502,12 @@ createNode animCurveTA -n "BaseCharacterSet_head_J_CTRL_rotateY";
 	rename -uid "C654DFE4-43BC-DF4C-600D-B5A41DA7C9B9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  0 0 1 0 35 0 67 6.2677586727393484 92 -2.9853994350612045
-		 122 5.4380691212538403 160 0 182 0.20039160116980503 190 -0.16902053426893845 229 -0.16902053426893845
-		 250 0;
+	setAttr -s 11 ".ktv[0:10]"  0 0 1 0 35 0 67 4 92 -0.3 122 3.0000000000000004
+		 160 0 182 0.20039160116980503 190 -0.16902053426893845 229 -0.16902053426893845 250 0;
 	setAttr -s 11 ".kit[4:10]"  3 3 18 18 18 18 18;
 	setAttr -s 11 ".kot[2:10]"  1 1 3 3 18 18 18 18 
 		18;
-	setAttr -s 11 ".ktl[2:10]" no no no no yes yes yes yes yes;
+	setAttr -s 11 ".ktl[2:10]" no yes yes yes yes yes yes yes yes;
 	setAttr -s 11 ".kox[2:10]"  0.99902408102404228 0.98718438513159068 
 		1 1 1 1 1 1 1;
 	setAttr -s 11 ".koy[2:10]"  0.044168829892445749 0.15958380166032962 
