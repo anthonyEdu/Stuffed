@@ -1,13 +1,13 @@
 //Maya ASCII 2020 scene
 //Name: Dragon Rig.ma
-//Last modified: Fri, Jul 31, 2020 11:14:29 AM
+//Last modified: Wed, Aug 12, 2020 08:12:19 AM
 //Codeset: 1252
 file -rdi 1 -ns "BaseRig" -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
 file -r -ns "BaseRig" -dr 1 -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kand8/Documents/Summer 2020/Project Management/Stuffed/StuffedGame/Assets/Maya//scenes/BaseRig.ma";
 requires maya "2020";
 requires "stereoCamera" "10.0";
-requires "stereoCamera" "10.0";
 requires "mtoa" "3.1.2";
+requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2020";
@@ -15,7 +15,7 @@ fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 18363)\n";
 fileInfo "license" "student";
-fileInfo "UUID" "9DCB145F-418E-F0EF-BF4A-DF867BB29B2A";
+fileInfo "UUID" "4CC23DB6-4E9A-E829-3296-E5BBC0C482BB";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
 	setAttr ".v" no;
@@ -16149,7 +16149,7 @@ createNode transform -n "Skeleton" -p "World_Dragon";
 createNode transform -n "Controls" -p "World_Dragon";
 	rename -uid "13B68592-4958-3A83-9066-55BDE2DBD8D8";
 createNode fosterParent -n "BaseRigRNfosterParent1";
-	rename -uid "CEBA9CF2-436C-B2BD-585D-A0A55DBEAFB4";
+	rename -uid "40CC8DF6-45E1-BD0F-1CEB-6BA5FDCE33D9";
 createNode transform -n "R_Wing_01_Ctrl_Grp" -p "BaseRigRNfosterParent1";
 	rename -uid "9AF052A6-4E61-A97F-EDF2-BC8327DC31AB";
 	setAttr ".t" -type "double3" -0.77884053115710516 -3.259305767938308 0.30655499999999308 ;
@@ -17470,73 +17470,72 @@ createNode parentConstraint -n "Tail_01_J_parentConstraint1" -p "Tail_01_J";
 	setAttr ".rsrr" -type "double3" 1.6909571240146972e-31 3.0461575494448303e-15 6.3611093629270335e-15 ;
 	setAttr -k on ".w0";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "D722AE6B-4319-2DD0-0D28-B495F79CEDC1";
+	rename -uid "A50A8405-458B-BAE7-1DF5-ECABF237FFB6";
 	setAttr -s 9 ".lnk";
 	setAttr -s 9 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "45F70F50-4BC3-A6BE-BC62-AAA405C4225E";
+	rename -uid "7A2C7FFB-4FE1-ECE0-93F6-AF8E34F5CBBC";
 	setAttr ".cdl" 3;
 	setAttr -s 5 ".dli[1:4]"  3 5 1 4;
 	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "E7C5F4A4-1A43-5AA7-BC6D-F3BC66616717";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "4B4BD55E-4213-B6AF-B7D1-27892C070248";
+	rename -uid "40428B26-4433-575B-2023-FD80786B7024";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "FF83EB3D-CE4E-B5AE-86C3-BEBE5F5E5A78";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "85AA374F-43A3-5C72-175F-C9AB39807C79";
+	rename -uid "9F788ED7-47D8-E638-576D-D38CEC7450DC";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 2 0 1 ;
 	setAttr -s 2 ".bspr";
 	setAttr -s 2 ".obsv";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "EF52BAA3-43A8-A625-0D8B-A1905CD88DBF";
+	rename -uid "34A667D2-4101-35C2-CDE4-C681379E3972";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "0A41BEBB-A04A-3F4E-1C8A-B69EEECED819";
 	setAttr ".b" -type "string" (
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n"
-		+ "            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n"
-		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n"
-		+ "            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n"
-		+ "            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
-		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
-		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n"
-		+ "            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n"
-		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n"
-		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1175\n            -height 483\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n"
-		+ "            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -selectCommand \"<function selCom at 0x7f29c5c04aa0>\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n"
-		+ "            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n"
-		+ "            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n"
-		+ "            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n"
-		+ "                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -isSet 0\n"
-		+ "                -isSetMember 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -selectionOrder \"display\" \n                -expandAttribute 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n"
-		+ "                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n"
-		+ "                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 1\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n"
-		+ "                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n"
-		+ "\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n"
-		+ "                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n"
-		+ "                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n"
-		+ "                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n"
-		+ "\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n"
-		+ "                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n"
-		+ "                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n"
-		+ "                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n"
-		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1175\\n    -height 483\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1175\\n    -height 483\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n"
+		+ "            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n"
+		+ "            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
+		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
+		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n"
+		+ "            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n"
+		+ "            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n"
+		+ "            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n"
+		+ "            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1134\n            -height 791\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n"
+		+ "            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n"
+		+ "            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -selectCommand \"<function selCom at 0x7f29c5c04aa0>\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n"
+		+ "            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n"
+		+ "                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n"
+		+ "                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n"
+		+ "                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n"
+		+ "                -showPublishedAsConnected 0\n                -showParentContainers 1\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n"
+		+ "                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n"
+		+ "                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n"
+		+ "                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -editorMode \"default\" \n"
+		+ "                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n"
+		+ "                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n"
+		+ "                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n"
+		+ "                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n"
+		+ "                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1134\\n    -height 791\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1134\\n    -height 791\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -17596,370 +17595,6 @@ createNode materialInfo -n "materialInfo5";
 createNode reference -n "BaseRigRN";
 	rename -uid "35A64DEF-485C-EF72-4355-7F914532D9A8";
 	setAttr -s 385 ".phl";
-	setAttr ".phl[1810]" 0;
-	setAttr ".phl[1811]" 0;
-	setAttr ".phl[1812]" 0;
-	setAttr ".phl[1813]" 0;
-	setAttr ".phl[1814]" 0;
-	setAttr ".phl[1815]" 0;
-	setAttr ".phl[1816]" 0;
-	setAttr ".phl[1817]" 0;
-	setAttr ".phl[1818]" 0;
-	setAttr ".phl[1819]" 0;
-	setAttr ".phl[1820]" 0;
-	setAttr ".phl[1821]" 0;
-	setAttr ".phl[1822]" 0;
-	setAttr ".phl[1823]" 0;
-	setAttr ".phl[1824]" 0;
-	setAttr ".phl[1825]" 0;
-	setAttr ".phl[1826]" 0;
-	setAttr ".phl[1827]" 0;
-	setAttr ".phl[1828]" 0;
-	setAttr ".phl[1829]" 0;
-	setAttr ".phl[1830]" 0;
-	setAttr ".phl[1831]" 0;
-	setAttr ".phl[1832]" 0;
-	setAttr ".phl[1833]" 0;
-	setAttr ".phl[1834]" 0;
-	setAttr ".phl[1835]" 0;
-	setAttr ".phl[1836]" 0;
-	setAttr ".phl[1837]" 0;
-	setAttr ".phl[1838]" 0;
-	setAttr ".phl[1839]" 0;
-	setAttr ".phl[1840]" 0;
-	setAttr ".phl[1841]" 0;
-	setAttr ".phl[1842]" 0;
-	setAttr ".phl[1843]" 0;
-	setAttr ".phl[1844]" 0;
-	setAttr ".phl[1845]" 0;
-	setAttr ".phl[1846]" 0;
-	setAttr ".phl[1847]" 0;
-	setAttr ".phl[1848]" 0;
-	setAttr ".phl[1849]" 0;
-	setAttr ".phl[1850]" 0;
-	setAttr ".phl[1851]" 0;
-	setAttr ".phl[1852]" 0;
-	setAttr ".phl[1853]" 0;
-	setAttr ".phl[1854]" 0;
-	setAttr ".phl[1855]" 0;
-	setAttr ".phl[1856]" 0;
-	setAttr ".phl[1857]" 0;
-	setAttr ".phl[1858]" 0;
-	setAttr ".phl[1859]" 0;
-	setAttr ".phl[1860]" 0;
-	setAttr ".phl[1861]" 0;
-	setAttr ".phl[1862]" 0;
-	setAttr ".phl[1863]" 0;
-	setAttr ".phl[1864]" 0;
-	setAttr ".phl[1865]" 0;
-	setAttr ".phl[1866]" 0;
-	setAttr ".phl[1867]" 0;
-	setAttr ".phl[1868]" 0;
-	setAttr ".phl[1869]" 0;
-	setAttr ".phl[1870]" 0;
-	setAttr ".phl[1871]" 0;
-	setAttr ".phl[1872]" 0;
-	setAttr ".phl[1873]" 0;
-	setAttr ".phl[1874]" 0;
-	setAttr ".phl[1875]" 0;
-	setAttr ".phl[1876]" 0;
-	setAttr ".phl[1877]" 0;
-	setAttr ".phl[1878]" 0;
-	setAttr ".phl[1879]" 0;
-	setAttr ".phl[1880]" 0;
-	setAttr ".phl[1881]" 0;
-	setAttr ".phl[1882]" 0;
-	setAttr ".phl[1883]" 0;
-	setAttr ".phl[1884]" 0;
-	setAttr ".phl[1885]" 0;
-	setAttr ".phl[1886]" 0;
-	setAttr ".phl[1887]" 0;
-	setAttr ".phl[1888]" 0;
-	setAttr ".phl[1889]" 0;
-	setAttr ".phl[1890]" 0;
-	setAttr ".phl[1891]" 0;
-	setAttr ".phl[1892]" 0;
-	setAttr ".phl[1893]" 0;
-	setAttr ".phl[1894]" 0;
-	setAttr ".phl[1895]" 0;
-	setAttr ".phl[1896]" 0;
-	setAttr ".phl[1897]" 0;
-	setAttr ".phl[1898]" 0;
-	setAttr ".phl[1899]" 0;
-	setAttr ".phl[1900]" 0;
-	setAttr ".phl[1901]" 0;
-	setAttr ".phl[1902]" 0;
-	setAttr ".phl[1903]" 0;
-	setAttr ".phl[1904]" 0;
-	setAttr ".phl[1905]" 0;
-	setAttr ".phl[1906]" 0;
-	setAttr ".phl[1907]" 0;
-	setAttr ".phl[1908]" 0;
-	setAttr ".phl[1909]" 0;
-	setAttr ".phl[1910]" 0;
-	setAttr ".phl[1911]" 0;
-	setAttr ".phl[1912]" 0;
-	setAttr ".phl[1913]" 0;
-	setAttr ".phl[1914]" 0;
-	setAttr ".phl[1915]" 0;
-	setAttr ".phl[1916]" 0;
-	setAttr ".phl[1917]" 0;
-	setAttr ".phl[1918]" 0;
-	setAttr ".phl[1919]" 0;
-	setAttr ".phl[1920]" 0;
-	setAttr ".phl[1921]" 0;
-	setAttr ".phl[1922]" 0;
-	setAttr ".phl[1923]" 0;
-	setAttr ".phl[1924]" 0;
-	setAttr ".phl[1925]" 0;
-	setAttr ".phl[1926]" 0;
-	setAttr ".phl[1927]" 0;
-	setAttr ".phl[1928]" 0;
-	setAttr ".phl[1929]" 0;
-	setAttr ".phl[1930]" 0;
-	setAttr ".phl[1931]" 0;
-	setAttr ".phl[1932]" 0;
-	setAttr ".phl[1933]" 0;
-	setAttr ".phl[1934]" 0;
-	setAttr ".phl[1935]" 0;
-	setAttr ".phl[1936]" 0;
-	setAttr ".phl[1937]" 0;
-	setAttr ".phl[1938]" 0;
-	setAttr ".phl[1939]" 0;
-	setAttr ".phl[1940]" 0;
-	setAttr ".phl[1941]" 0;
-	setAttr ".phl[1942]" 0;
-	setAttr ".phl[1943]" 0;
-	setAttr ".phl[1944]" 0;
-	setAttr ".phl[1945]" 0;
-	setAttr ".phl[1946]" 0;
-	setAttr ".phl[1947]" 0;
-	setAttr ".phl[1948]" 0;
-	setAttr ".phl[1949]" 0;
-	setAttr ".phl[1950]" 0;
-	setAttr ".phl[1951]" 0;
-	setAttr ".phl[1952]" 0;
-	setAttr ".phl[1953]" 0;
-	setAttr ".phl[1954]" 0;
-	setAttr ".phl[1955]" 0;
-	setAttr ".phl[1956]" 0;
-	setAttr ".phl[1957]" 0;
-	setAttr ".phl[1958]" 0;
-	setAttr ".phl[1959]" 0;
-	setAttr ".phl[1960]" 0;
-	setAttr ".phl[1961]" 0;
-	setAttr ".phl[1962]" 0;
-	setAttr ".phl[1963]" 0;
-	setAttr ".phl[1964]" 0;
-	setAttr ".phl[1965]" 0;
-	setAttr ".phl[1966]" 0;
-	setAttr ".phl[1967]" 0;
-	setAttr ".phl[1968]" 0;
-	setAttr ".phl[1969]" 0;
-	setAttr ".phl[1970]" 0;
-	setAttr ".phl[1971]" 0;
-	setAttr ".phl[1972]" 0;
-	setAttr ".phl[1973]" 0;
-	setAttr ".phl[1974]" 0;
-	setAttr ".phl[1975]" 0;
-	setAttr ".phl[1976]" 0;
-	setAttr ".phl[1977]" 0;
-	setAttr ".phl[1978]" 0;
-	setAttr ".phl[1979]" 0;
-	setAttr ".phl[1980]" 0;
-	setAttr ".phl[1981]" 0;
-	setAttr ".phl[1982]" 0;
-	setAttr ".phl[1983]" 0;
-	setAttr ".phl[1984]" 0;
-	setAttr ".phl[1985]" 0;
-	setAttr ".phl[1986]" 0;
-	setAttr ".phl[1987]" 0;
-	setAttr ".phl[1988]" 0;
-	setAttr ".phl[1989]" 0;
-	setAttr ".phl[1990]" 0;
-	setAttr ".phl[1991]" 0;
-	setAttr ".phl[1992]" 0;
-	setAttr ".phl[1993]" 0;
-	setAttr ".phl[1994]" 0;
-	setAttr ".phl[1995]" 0;
-	setAttr ".phl[1996]" 0;
-	setAttr ".phl[1997]" 0;
-	setAttr ".phl[1998]" 0;
-	setAttr ".phl[1999]" 0;
-	setAttr ".phl[2000]" 0;
-	setAttr ".phl[2001]" 0;
-	setAttr ".phl[2002]" 0;
-	setAttr ".phl[2003]" 0;
-	setAttr ".phl[2004]" 0;
-	setAttr ".phl[2005]" 0;
-	setAttr ".phl[2006]" 0;
-	setAttr ".phl[2007]" 0;
-	setAttr ".phl[2008]" 0;
-	setAttr ".phl[2009]" 0;
-	setAttr ".phl[2010]" 0;
-	setAttr ".phl[2011]" 0;
-	setAttr ".phl[2012]" 0;
-	setAttr ".phl[2013]" 0;
-	setAttr ".phl[2014]" 0;
-	setAttr ".phl[2015]" 0;
-	setAttr ".phl[2016]" 0;
-	setAttr ".phl[2017]" 0;
-	setAttr ".phl[2018]" 0;
-	setAttr ".phl[2019]" 0;
-	setAttr ".phl[2020]" 0;
-	setAttr ".phl[2021]" 0;
-	setAttr ".phl[2022]" 0;
-	setAttr ".phl[2023]" 0;
-	setAttr ".phl[2024]" 0;
-	setAttr ".phl[2025]" 0;
-	setAttr ".phl[2026]" 0;
-	setAttr ".phl[2027]" 0;
-	setAttr ".phl[2028]" 0;
-	setAttr ".phl[2029]" 0;
-	setAttr ".phl[2030]" 0;
-	setAttr ".phl[2031]" 0;
-	setAttr ".phl[2032]" 0;
-	setAttr ".phl[2033]" 0;
-	setAttr ".phl[2034]" 0;
-	setAttr ".phl[2035]" 0;
-	setAttr ".phl[2036]" 0;
-	setAttr ".phl[2037]" 0;
-	setAttr ".phl[2038]" 0;
-	setAttr ".phl[2039]" 0;
-	setAttr ".phl[2040]" 0;
-	setAttr ".phl[2041]" 0;
-	setAttr ".phl[2042]" 0;
-	setAttr ".phl[2043]" 0;
-	setAttr ".phl[2044]" 0;
-	setAttr ".phl[2045]" 0;
-	setAttr ".phl[2046]" 0;
-	setAttr ".phl[2047]" 0;
-	setAttr ".phl[2048]" 0;
-	setAttr ".phl[2049]" 0;
-	setAttr ".phl[2050]" 0;
-	setAttr ".phl[2051]" 0;
-	setAttr ".phl[2052]" 0;
-	setAttr ".phl[2053]" 0;
-	setAttr ".phl[2054]" 0;
-	setAttr ".phl[2055]" 0;
-	setAttr ".phl[2056]" 0;
-	setAttr ".phl[2057]" 0;
-	setAttr ".phl[2058]" 0;
-	setAttr ".phl[2059]" 0;
-	setAttr ".phl[2060]" 0;
-	setAttr ".phl[2061]" 0;
-	setAttr ".phl[2062]" 0;
-	setAttr ".phl[2063]" 0;
-	setAttr ".phl[2064]" 0;
-	setAttr ".phl[2065]" 0;
-	setAttr ".phl[2066]" 0;
-	setAttr ".phl[2067]" 0;
-	setAttr ".phl[2068]" 0;
-	setAttr ".phl[2069]" 0;
-	setAttr ".phl[2070]" 0;
-	setAttr ".phl[2071]" 0;
-	setAttr ".phl[2072]" 0;
-	setAttr ".phl[2073]" 0;
-	setAttr ".phl[2074]" 0;
-	setAttr ".phl[2075]" 0;
-	setAttr ".phl[2076]" 0;
-	setAttr ".phl[2077]" 0;
-	setAttr ".phl[2078]" 0;
-	setAttr ".phl[2079]" 0;
-	setAttr ".phl[2080]" 0;
-	setAttr ".phl[2081]" 0;
-	setAttr ".phl[2082]" 0;
-	setAttr ".phl[2083]" 0;
-	setAttr ".phl[2084]" 0;
-	setAttr ".phl[2085]" 0;
-	setAttr ".phl[2086]" 0;
-	setAttr ".phl[2087]" 0;
-	setAttr ".phl[2088]" 0;
-	setAttr ".phl[2089]" 0;
-	setAttr ".phl[2090]" 0;
-	setAttr ".phl[2091]" 0;
-	setAttr ".phl[2092]" 0;
-	setAttr ".phl[2093]" 0;
-	setAttr ".phl[2094]" 0;
-	setAttr ".phl[2095]" 0;
-	setAttr ".phl[2096]" 0;
-	setAttr ".phl[2097]" 0;
-	setAttr ".phl[2098]" 0;
-	setAttr ".phl[2099]" 0;
-	setAttr ".phl[2100]" 0;
-	setAttr ".phl[2101]" 0;
-	setAttr ".phl[2102]" 0;
-	setAttr ".phl[2103]" 0;
-	setAttr ".phl[2104]" 0;
-	setAttr ".phl[2105]" 0;
-	setAttr ".phl[2106]" 0;
-	setAttr ".phl[2107]" 0;
-	setAttr ".phl[2108]" 0;
-	setAttr ".phl[2109]" 0;
-	setAttr ".phl[2110]" 0;
-	setAttr ".phl[2111]" 0;
-	setAttr ".phl[2112]" 0;
-	setAttr ".phl[2113]" 0;
-	setAttr ".phl[2114]" 0;
-	setAttr ".phl[2115]" 0;
-	setAttr ".phl[2116]" 0;
-	setAttr ".phl[2117]" 0;
-	setAttr ".phl[2118]" 0;
-	setAttr ".phl[2119]" 0;
-	setAttr ".phl[2120]" 0;
-	setAttr ".phl[2121]" 0;
-	setAttr ".phl[2122]" 0;
-	setAttr ".phl[2123]" 0;
-	setAttr ".phl[2124]" 0;
-	setAttr ".phl[2125]" 0;
-	setAttr ".phl[2126]" 0;
-	setAttr ".phl[2127]" 0;
-	setAttr ".phl[2128]" 0;
-	setAttr ".phl[2129]" 0;
-	setAttr ".phl[2130]" 0;
-	setAttr ".phl[2131]" 0;
-	setAttr ".phl[2132]" 0;
-	setAttr ".phl[2133]" 0;
-	setAttr ".phl[2134]" 0;
-	setAttr ".phl[2135]" 0;
-	setAttr ".phl[2136]" 0;
-	setAttr ".phl[2137]" 0;
-	setAttr ".phl[2138]" 0;
-	setAttr ".phl[2139]" 0;
-	setAttr ".phl[2140]" 0;
-	setAttr ".phl[2141]" 0;
-	setAttr ".phl[2142]" 0;
-	setAttr ".phl[2143]" 0;
-	setAttr ".phl[2144]" 0;
-	setAttr ".phl[2145]" 0;
-	setAttr ".phl[2146]" 0;
-	setAttr ".phl[2147]" 0;
-	setAttr ".phl[2148]" 0;
-	setAttr ".phl[2149]" 0;
-	setAttr ".phl[2150]" 0;
-	setAttr ".phl[2151]" 0;
-	setAttr ".phl[2152]" 0;
-	setAttr ".phl[2153]" 0;
-	setAttr ".phl[2154]" 0;
-	setAttr ".phl[2155]" 0;
-	setAttr ".phl[2156]" 0;
-	setAttr ".phl[2157]" 0;
-	setAttr ".phl[2158]" 0;
-	setAttr ".phl[2159]" 0;
-	setAttr ".phl[2160]" 0;
-	setAttr ".phl[2161]" 0;
-	setAttr ".phl[2162]" 0;
-	setAttr ".phl[2163]" 0;
-	setAttr ".phl[2164]" 0;
-	setAttr ".phl[2165]" 0;
-	setAttr ".phl[2166]" 0;
-	setAttr ".phl[2167]" 0;
-	setAttr ".phl[2168]" 0;
-	setAttr ".phl[2169]" 0;
-	setAttr ".phl[2170]" 0;
-	setAttr ".phl[2171]" 0;
-	setAttr ".phl[2172]" 0;
-	setAttr ".phl[2173]" 0;
 	setAttr ".phl[2174]" 0;
 	setAttr ".phl[2175]" 0;
 	setAttr ".phl[2176]" 0;
@@ -17980,12 +17615,376 @@ createNode reference -n "BaseRigRN";
 	setAttr ".phl[2191]" 0;
 	setAttr ".phl[2192]" 0;
 	setAttr ".phl[2193]" 0;
+	setAttr ".phl[2194]" 0;
+	setAttr ".phl[2195]" 0;
+	setAttr ".phl[2196]" 0;
+	setAttr ".phl[2197]" 0;
+	setAttr ".phl[2198]" 0;
+	setAttr ".phl[2199]" 0;
+	setAttr ".phl[2200]" 0;
+	setAttr ".phl[2201]" 0;
+	setAttr ".phl[2202]" 0;
+	setAttr ".phl[2203]" 0;
+	setAttr ".phl[2204]" 0;
+	setAttr ".phl[2205]" 0;
+	setAttr ".phl[2206]" 0;
+	setAttr ".phl[2207]" 0;
+	setAttr ".phl[2208]" 0;
+	setAttr ".phl[2209]" 0;
+	setAttr ".phl[2210]" 0;
+	setAttr ".phl[2211]" 0;
+	setAttr ".phl[2212]" 0;
+	setAttr ".phl[2213]" 0;
+	setAttr ".phl[2214]" 0;
+	setAttr ".phl[2215]" 0;
+	setAttr ".phl[2216]" 0;
+	setAttr ".phl[2217]" 0;
+	setAttr ".phl[2218]" 0;
+	setAttr ".phl[2219]" 0;
+	setAttr ".phl[2220]" 0;
+	setAttr ".phl[2221]" 0;
+	setAttr ".phl[2222]" 0;
+	setAttr ".phl[2223]" 0;
+	setAttr ".phl[2224]" 0;
+	setAttr ".phl[2225]" 0;
+	setAttr ".phl[2226]" 0;
+	setAttr ".phl[2227]" 0;
+	setAttr ".phl[2228]" 0;
+	setAttr ".phl[2229]" 0;
+	setAttr ".phl[2230]" 0;
+	setAttr ".phl[2231]" 0;
+	setAttr ".phl[2232]" 0;
+	setAttr ".phl[2233]" 0;
+	setAttr ".phl[2234]" 0;
+	setAttr ".phl[2235]" 0;
+	setAttr ".phl[2236]" 0;
+	setAttr ".phl[2237]" 0;
+	setAttr ".phl[2238]" 0;
+	setAttr ".phl[2239]" 0;
+	setAttr ".phl[2240]" 0;
+	setAttr ".phl[2241]" 0;
+	setAttr ".phl[2242]" 0;
+	setAttr ".phl[2243]" 0;
+	setAttr ".phl[2244]" 0;
+	setAttr ".phl[2245]" 0;
+	setAttr ".phl[2246]" 0;
+	setAttr ".phl[2247]" 0;
+	setAttr ".phl[2248]" 0;
+	setAttr ".phl[2249]" 0;
+	setAttr ".phl[2250]" 0;
+	setAttr ".phl[2251]" 0;
+	setAttr ".phl[2252]" 0;
+	setAttr ".phl[2253]" 0;
+	setAttr ".phl[2254]" 0;
+	setAttr ".phl[2255]" 0;
+	setAttr ".phl[2256]" 0;
+	setAttr ".phl[2257]" 0;
+	setAttr ".phl[2258]" 0;
+	setAttr ".phl[2259]" 0;
+	setAttr ".phl[2260]" 0;
+	setAttr ".phl[2261]" 0;
+	setAttr ".phl[2262]" 0;
+	setAttr ".phl[2263]" 0;
+	setAttr ".phl[2264]" 0;
+	setAttr ".phl[2265]" 0;
+	setAttr ".phl[2266]" 0;
+	setAttr ".phl[2267]" 0;
+	setAttr ".phl[2268]" 0;
+	setAttr ".phl[2269]" 0;
+	setAttr ".phl[2270]" 0;
+	setAttr ".phl[2271]" 0;
+	setAttr ".phl[2272]" 0;
+	setAttr ".phl[2273]" 0;
+	setAttr ".phl[2274]" 0;
+	setAttr ".phl[2275]" 0;
+	setAttr ".phl[2276]" 0;
+	setAttr ".phl[2277]" 0;
+	setAttr ".phl[2278]" 0;
+	setAttr ".phl[2279]" 0;
+	setAttr ".phl[2280]" 0;
+	setAttr ".phl[2281]" 0;
+	setAttr ".phl[2282]" 0;
+	setAttr ".phl[2283]" 0;
+	setAttr ".phl[2284]" 0;
+	setAttr ".phl[2285]" 0;
+	setAttr ".phl[2286]" 0;
+	setAttr ".phl[2287]" 0;
+	setAttr ".phl[2288]" 0;
+	setAttr ".phl[2289]" 0;
+	setAttr ".phl[2290]" 0;
+	setAttr ".phl[2291]" 0;
+	setAttr ".phl[2292]" 0;
+	setAttr ".phl[2293]" 0;
+	setAttr ".phl[2294]" 0;
+	setAttr ".phl[2295]" 0;
+	setAttr ".phl[2296]" 0;
+	setAttr ".phl[2297]" 0;
+	setAttr ".phl[2298]" 0;
+	setAttr ".phl[2299]" 0;
+	setAttr ".phl[2300]" 0;
+	setAttr ".phl[2301]" 0;
+	setAttr ".phl[2302]" 0;
+	setAttr ".phl[2303]" 0;
+	setAttr ".phl[2304]" 0;
+	setAttr ".phl[2305]" 0;
+	setAttr ".phl[2306]" 0;
+	setAttr ".phl[2307]" 0;
+	setAttr ".phl[2308]" 0;
+	setAttr ".phl[2309]" 0;
+	setAttr ".phl[2310]" 0;
+	setAttr ".phl[2311]" 0;
+	setAttr ".phl[2312]" 0;
+	setAttr ".phl[2313]" 0;
+	setAttr ".phl[2314]" 0;
+	setAttr ".phl[2315]" 0;
+	setAttr ".phl[2316]" 0;
+	setAttr ".phl[2317]" 0;
+	setAttr ".phl[2318]" 0;
+	setAttr ".phl[2319]" 0;
+	setAttr ".phl[2320]" 0;
+	setAttr ".phl[2321]" 0;
+	setAttr ".phl[2322]" 0;
+	setAttr ".phl[2323]" 0;
+	setAttr ".phl[2324]" 0;
+	setAttr ".phl[2325]" 0;
+	setAttr ".phl[2326]" 0;
+	setAttr ".phl[2327]" 0;
+	setAttr ".phl[2328]" 0;
+	setAttr ".phl[2329]" 0;
+	setAttr ".phl[2330]" 0;
+	setAttr ".phl[2331]" 0;
+	setAttr ".phl[2332]" 0;
+	setAttr ".phl[2333]" 0;
+	setAttr ".phl[2334]" 0;
+	setAttr ".phl[2335]" 0;
+	setAttr ".phl[2336]" 0;
+	setAttr ".phl[2337]" 0;
+	setAttr ".phl[2338]" 0;
+	setAttr ".phl[2339]" 0;
+	setAttr ".phl[2340]" 0;
+	setAttr ".phl[2341]" 0;
+	setAttr ".phl[2342]" 0;
+	setAttr ".phl[2343]" 0;
+	setAttr ".phl[2344]" 0;
+	setAttr ".phl[2345]" 0;
+	setAttr ".phl[2346]" 0;
+	setAttr ".phl[2347]" 0;
+	setAttr ".phl[2348]" 0;
+	setAttr ".phl[2349]" 0;
+	setAttr ".phl[2350]" 0;
+	setAttr ".phl[2351]" 0;
+	setAttr ".phl[2352]" 0;
+	setAttr ".phl[2353]" 0;
+	setAttr ".phl[2354]" 0;
+	setAttr ".phl[2355]" 0;
+	setAttr ".phl[2356]" 0;
+	setAttr ".phl[2357]" 0;
+	setAttr ".phl[2358]" 0;
+	setAttr ".phl[2359]" 0;
+	setAttr ".phl[2360]" 0;
+	setAttr ".phl[2361]" 0;
+	setAttr ".phl[2362]" 0;
+	setAttr ".phl[2363]" 0;
+	setAttr ".phl[2364]" 0;
+	setAttr ".phl[2365]" 0;
+	setAttr ".phl[2366]" 0;
+	setAttr ".phl[2367]" 0;
+	setAttr ".phl[2368]" 0;
+	setAttr ".phl[2369]" 0;
+	setAttr ".phl[2370]" 0;
+	setAttr ".phl[2371]" 0;
+	setAttr ".phl[2372]" 0;
+	setAttr ".phl[2373]" 0;
+	setAttr ".phl[2374]" 0;
+	setAttr ".phl[2375]" 0;
+	setAttr ".phl[2376]" 0;
+	setAttr ".phl[2377]" 0;
+	setAttr ".phl[2378]" 0;
+	setAttr ".phl[2379]" 0;
+	setAttr ".phl[2380]" 0;
+	setAttr ".phl[2381]" 0;
+	setAttr ".phl[2382]" 0;
+	setAttr ".phl[2383]" 0;
+	setAttr ".phl[2384]" 0;
+	setAttr ".phl[2385]" 0;
+	setAttr ".phl[2386]" 0;
+	setAttr ".phl[2387]" 0;
+	setAttr ".phl[2388]" 0;
+	setAttr ".phl[2389]" 0;
+	setAttr ".phl[2390]" 0;
+	setAttr ".phl[2391]" 0;
+	setAttr ".phl[2392]" 0;
+	setAttr ".phl[2393]" 0;
+	setAttr ".phl[2394]" 0;
+	setAttr ".phl[2395]" 0;
+	setAttr ".phl[2396]" 0;
+	setAttr ".phl[2397]" 0;
+	setAttr ".phl[2398]" 0;
+	setAttr ".phl[2399]" 0;
+	setAttr ".phl[2400]" 0;
+	setAttr ".phl[2401]" 0;
+	setAttr ".phl[2402]" 0;
+	setAttr ".phl[2403]" 0;
+	setAttr ".phl[2404]" 0;
+	setAttr ".phl[2405]" 0;
+	setAttr ".phl[2406]" 0;
+	setAttr ".phl[2407]" 0;
+	setAttr ".phl[2408]" 0;
+	setAttr ".phl[2409]" 0;
+	setAttr ".phl[2410]" 0;
+	setAttr ".phl[2411]" 0;
+	setAttr ".phl[2412]" 0;
+	setAttr ".phl[2413]" 0;
+	setAttr ".phl[2414]" 0;
+	setAttr ".phl[2415]" 0;
+	setAttr ".phl[2416]" 0;
+	setAttr ".phl[2417]" 0;
+	setAttr ".phl[2418]" 0;
+	setAttr ".phl[2419]" 0;
+	setAttr ".phl[2420]" 0;
+	setAttr ".phl[2421]" 0;
+	setAttr ".phl[2422]" 0;
+	setAttr ".phl[2423]" 0;
+	setAttr ".phl[2424]" 0;
+	setAttr ".phl[2425]" 0;
+	setAttr ".phl[2426]" 0;
+	setAttr ".phl[2427]" 0;
+	setAttr ".phl[2428]" 0;
+	setAttr ".phl[2429]" 0;
+	setAttr ".phl[2430]" 0;
+	setAttr ".phl[2431]" 0;
+	setAttr ".phl[2432]" 0;
+	setAttr ".phl[2433]" 0;
+	setAttr ".phl[2434]" 0;
+	setAttr ".phl[2435]" 0;
+	setAttr ".phl[2436]" 0;
+	setAttr ".phl[2437]" 0;
+	setAttr ".phl[2438]" 0;
+	setAttr ".phl[2439]" 0;
+	setAttr ".phl[2440]" 0;
+	setAttr ".phl[2441]" 0;
+	setAttr ".phl[2442]" 0;
+	setAttr ".phl[2443]" 0;
+	setAttr ".phl[2444]" 0;
+	setAttr ".phl[2445]" 0;
+	setAttr ".phl[2446]" 0;
+	setAttr ".phl[2447]" 0;
+	setAttr ".phl[2448]" 0;
+	setAttr ".phl[2449]" 0;
+	setAttr ".phl[2450]" 0;
+	setAttr ".phl[2451]" 0;
+	setAttr ".phl[2452]" 0;
+	setAttr ".phl[2453]" 0;
+	setAttr ".phl[2454]" 0;
+	setAttr ".phl[2455]" 0;
+	setAttr ".phl[2456]" 0;
+	setAttr ".phl[2457]" 0;
+	setAttr ".phl[2458]" 0;
+	setAttr ".phl[2459]" 0;
+	setAttr ".phl[2460]" 0;
+	setAttr ".phl[2461]" 0;
+	setAttr ".phl[2462]" 0;
+	setAttr ".phl[2463]" 0;
+	setAttr ".phl[2464]" 0;
+	setAttr ".phl[2465]" 0;
+	setAttr ".phl[2466]" 0;
+	setAttr ".phl[2467]" 0;
+	setAttr ".phl[2468]" 0;
+	setAttr ".phl[2469]" 0;
+	setAttr ".phl[2470]" 0;
+	setAttr ".phl[2471]" 0;
+	setAttr ".phl[2472]" 0;
+	setAttr ".phl[2473]" 0;
+	setAttr ".phl[2474]" 0;
+	setAttr ".phl[2475]" 0;
+	setAttr ".phl[2476]" 0;
+	setAttr ".phl[2477]" 0;
+	setAttr ".phl[2478]" 0;
+	setAttr ".phl[2479]" 0;
+	setAttr ".phl[2480]" 0;
+	setAttr ".phl[2481]" 0;
+	setAttr ".phl[2482]" 0;
+	setAttr ".phl[2483]" 0;
+	setAttr ".phl[2484]" 0;
+	setAttr ".phl[2485]" 0;
+	setAttr ".phl[2486]" 0;
+	setAttr ".phl[2487]" 0;
+	setAttr ".phl[2488]" 0;
+	setAttr ".phl[2489]" 0;
+	setAttr ".phl[2490]" 0;
+	setAttr ".phl[2491]" 0;
+	setAttr ".phl[2492]" 0;
+	setAttr ".phl[2493]" 0;
+	setAttr ".phl[2494]" 0;
+	setAttr ".phl[2495]" 0;
+	setAttr ".phl[2496]" 0;
+	setAttr ".phl[2497]" 0;
+	setAttr ".phl[2498]" 0;
+	setAttr ".phl[2499]" 0;
+	setAttr ".phl[2500]" 0;
+	setAttr ".phl[2501]" 0;
+	setAttr ".phl[2502]" 0;
+	setAttr ".phl[2503]" 0;
+	setAttr ".phl[2504]" 0;
+	setAttr ".phl[2505]" 0;
+	setAttr ".phl[2506]" 0;
+	setAttr ".phl[2507]" 0;
+	setAttr ".phl[2508]" 0;
+	setAttr ".phl[2509]" 0;
+	setAttr ".phl[2510]" 0;
+	setAttr ".phl[2511]" 0;
+	setAttr ".phl[2512]" 0;
+	setAttr ".phl[2513]" 0;
+	setAttr ".phl[2514]" 0;
+	setAttr ".phl[2515]" 0;
+	setAttr ".phl[2516]" 0;
+	setAttr ".phl[2517]" 0;
+	setAttr ".phl[2518]" 0;
+	setAttr ".phl[2519]" 0;
+	setAttr ".phl[2520]" 0;
+	setAttr ".phl[2521]" 0;
+	setAttr ".phl[2522]" 0;
+	setAttr ".phl[2523]" 0;
+	setAttr ".phl[2524]" 0;
+	setAttr ".phl[2525]" 0;
+	setAttr ".phl[2526]" 0;
+	setAttr ".phl[2527]" 0;
+	setAttr ".phl[2528]" 0;
+	setAttr ".phl[2529]" 0;
+	setAttr ".phl[2530]" 0;
+	setAttr ".phl[2531]" 0;
+	setAttr ".phl[2532]" 0;
+	setAttr ".phl[2533]" 0;
+	setAttr ".phl[2534]" 0;
+	setAttr ".phl[2535]" 0;
+	setAttr ".phl[2536]" 0;
+	setAttr ".phl[2537]" 0;
+	setAttr ".phl[2538]" 0;
+	setAttr ".phl[2539]" 0;
+	setAttr ".phl[2540]" 0;
+	setAttr ".phl[2541]" 0;
+	setAttr ".phl[2542]" 0;
+	setAttr ".phl[2543]" 0;
+	setAttr ".phl[2544]" 0;
+	setAttr ".phl[2545]" 0;
+	setAttr ".phl[2546]" 0;
+	setAttr ".phl[2547]" 0;
+	setAttr ".phl[2548]" 0;
+	setAttr ".phl[2549]" 0;
+	setAttr ".phl[2550]" 0;
+	setAttr ".phl[2551]" 0;
+	setAttr ".phl[2552]" 0;
+	setAttr ".phl[2553]" 0;
+	setAttr ".phl[2554]" 0;
+	setAttr ".phl[2555]" 0;
+	setAttr ".phl[2556]" 0;
+	setAttr ".phl[2557]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"BaseRigRN"
 		"BaseRigRN" 2
 		0 "|BaseRigRNfosterParent1|Finger_01_J_L" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK" 
 		"-s -r "
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[46]" "BaseRigRN.placeHolderList[1809]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[46]" "BaseRigRN.placeHolderList[2173]" 
 		""
 		"BaseRigRN" 797
 		0 "|BaseRig:Root_J" "|World_Dragon|Skeleton" "-s -r "
@@ -18695,7 +18694,7 @@ createNode reference -n "BaseRigRN";
 		2 "|World_Dragon|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL|BaseRig:head_J_GRP|BaseRig:head_J_CTRL|BaseRig:Eye_J_L_GRP|BaseRig:Eye_J_L_CTRL" 
 		"rotateX" " -av"
 		2 "|World_Dragon|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL|BaseRig:head_J_GRP|BaseRig:head_J_CTRL|BaseRig:EyeLid_J_R_GRP|BaseRig:EyeLid_J_R_CTRL" 
-		"rotate" " -type \"double3\" -5.93600000000000083 0 0.8057142857142997"
+		"rotate" " -type \"double3\" -5.93600000000000083 0 -0.31835127986167466"
 		2 "|World_Dragon|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL|BaseRig:head_J_GRP|BaseRig:head_J_CTRL|BaseRig:EyeLid_J_R_GRP|BaseRig:EyeLid_J_R_CTRL" 
 		"rotateZ" " -av"
 		2 "|World_Dragon|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL|BaseRig:head_J_GRP|BaseRig:head_J_CTRL|BaseRig:EyeLid_J_R_GRP|BaseRig:EyeLid_J_R_CTRL" 
@@ -18909,7 +18908,7 @@ createNode reference -n "BaseRigRN";
 		2 "BaseRig:bindPose1" "g[21:23]" " 0 1 1"
 		2 "BaseRig:bindPose1" "g[58:90]" " 1 1 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0"
 		
-		2 "BaseRig:BaseCharacterSet" "av[1:81]" " -s 81 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13.61516034985422685 -14.65092611439039771 1.68837897098860412 -1.06966145833333948 0.27546296296288986 0 0 4.42295949521677034 0 -0.57209780708184976 -10.09992209602689428 -7.97211857804748281 -1.79674074074074253 -3.00000000000000044 0 0.8057142857142997 0 5.93600000000000083 -1.79674074074074253 -3.00000000000000044 0 0.8057142857142997 0 -5.93600000000000083 -21.69041210715610646 -38.57482004122247332 14.84414477480430428 -21.69041210715610646 -38.57482004122247332 14.84414477480430428 0 0 0 0 0 0 -5.19318181818181301 -46.0117500000000561 -12.49200000000002397 -5.19318181818181301 -46.0117500000000561 -12.49200000000002397 -5.19318181818181301 -46.0117500000000561 -12.49200000000002397 4.54585599999999257 0 0 0 0 0 0 0 0 -21.69041210715610646 -38.57482004122247332 14.84414477480430428"
+		2 "BaseRig:BaseCharacterSet" "av[1:81]" " -s 81 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13.61516034985422685 -14.65092611439039771 1.68837897098860412 -1.06966145833333948 0.27546296296288986 0 0 4.42295949521677034 0 -0.57209780708184976 -10.09992209602689428 -7.97211857804748281 -1.79674074074074253 -3.00000000000000044 0 0.8057142857142997 0 5.93600000000000083 -1.79674074074074253 -3.00000000000000044 0 -0.31835127986167466 0 -5.93600000000000083 -21.69041210715610646 -38.57482004122247332 14.84414477480430428 -21.69041210715610646 -38.57482004122247332 14.84414477480430428 0 0 0 0 0 0 -5.19318181818181301 -46.0117500000000561 -12.49200000000002397 -5.19318181818181301 -46.0117500000000561 -12.49200000000002397 -5.19318181818181301 -46.0117500000000561 -12.49200000000002397 4.54585599999999257 0 0 0 0 0 0 0 0 -21.69041210715610646 -38.57482004122247332 14.84414477480430428"
 		
 		2 "BaseRig:BaseCharacterSet" "angularValues" " -s 81"
 		2 "BaseRig:BaseCharacterSet" "referenceMapping" (" -type \"characterMapping\" 84 \"BaseRig:Hip_J_R_CTRL.rotateZ\" 2 1 \"BaseRig:Hip_J_R_CTRL.rotateY\" 2 2 \"BaseRig:Hip_J_R_CTRL.rotateX\" 2 3 \"BaseRig:Knee_J_R_CTRL.rotateZ\" 2 4 \"BaseRig:Knee_J_R_CTRL.rotateY\" 2 5 \"BaseRig:Knee_J_R_CTRL.rotateX\" 2 6 \"BaseRig:Ankle_J_R_CTRL.rotateZ\" 2 7 \"BaseRig:Ankle_J_R_CTRL.rotateY\" 2 8 \"BaseRig:Ankle_J_R_CTRL.rotateX\" 2 9 \"BaseRig:Root_J_CTRL.rotateZ\" 2 10 \"BaseRig:Root_J_CTRL.rotateY\" 2 11 \"BaseRig:Root_J_CTRL.rotateX\" 2 12 \"BaseRig:Root_J_CTRL.translateZ\" 1 1 \"BaseRig:Root_J_CTRL.translateY\" 1 2 \"BaseRig:Root_J_CTRL.translateX\" 1 3 \"BaseRig:Pelvis_J_CTRL.rotateZ\" 2 13 \"BaseRig:Pelvis_J_CTRL.rotateY\" 2 14 \"BaseRig:Pelvis_J_CTRL.rotateX\" 2 15 \"BaseRig:Hip_J_L_CTRL.rotateZ\" 2 16 \"BaseRig:Hip_J_L_CTRL.rotateY\" 2 17 \"BaseRig:Hip_J_L_CTRL.rotateX\" 2 18 \"BaseRig:Knee_J_L_CTRL.rotateZ\" 2 19 \"BaseRig:Knee_J_L_CTRL.rotateY\" 2 20 \"BaseRig:Knee_J_L_CTRL.rotateX\" 2 21 \"BaseRig:Ankle_J_L_CTRL.rotateZ\" 2 22 \"BaseRig:Ankle_J_L_CTRL.rotateY\" 2 23 \"BaseRig:Ankle_J_L_CTRL.rotateX\" 2 24 \"BaseRig:Lo"
@@ -18922,6 +18921,10 @@ createNode reference -n "BaseRigRN";
 		3 "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeMesh_L|BaseRig:EyeMesh_LShape.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "BaseRig:polyPlanarProj1.output" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeMesh_L|BaseRig:EyeMesh_LShape.inMesh" 
+		""
+		3 "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeMesh_R|BaseRig:EyeMesh_RShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "BaseRig:polyPlanarProj2.output" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeMesh_R|BaseRig:EyeMesh_RShape.inMesh" 
 		""
 		3 "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_FK|BaseRig:Knee_J_L_FK|BaseRig:Ankle_J_L_FK.message" 
 		"BaseRig:bindPose1.members[4]" ""
@@ -18979,697 +18982,693 @@ createNode reference -n "BaseRigRN";
 		3 "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R.bindPose" 
 		"BaseRig:bindPose1.worldMatrix[14]" ""
 		3 "BaseRig:bindPose1.world" "BaseRig:bindPose1.parents[0]" ""
-		3 "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeMesh_R|BaseRig:EyeMesh_RShape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "BaseRig:polyPlanarProj2.output" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeMesh_R|BaseRig:EyeMesh_RShape.inMesh" 
-		""
-		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J.message" "BaseRigRN.placeHolderList[1810]" 
+		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J.message" "BaseRigRN.placeHolderList[2174]" 
 		""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[1811]" ""
+		"BaseRigRN.placeHolderList[2175]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J.worldMatrix" 
-		"BaseRigRN.placeHolderList[1812]" ""
+		"BaseRigRN.placeHolderList[2176]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J.objectColorRGB" 
-		"BaseRigRN.placeHolderList[1813]" ""
+		"BaseRigRN.placeHolderList[2177]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J.scale" 
-		"BaseRigRN.placeHolderList[1814]" ""
+		"BaseRigRN.placeHolderList[2178]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J.message" 
-		"BaseRigRN.placeHolderList[1815]" ""
+		"BaseRigRN.placeHolderList[2179]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[1816]" ""
+		"BaseRigRN.placeHolderList[2180]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J.worldMatrix" 
-		"BaseRigRN.placeHolderList[1817]" ""
+		"BaseRigRN.placeHolderList[2181]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J.objectColorRGB" 
-		"BaseRigRN.placeHolderList[1818]" ""
+		"BaseRigRN.placeHolderList[2182]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_IK.message" 
-		"BaseRigRN.placeHolderList[1819]" ""
+		"BaseRigRN.placeHolderList[2183]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_IK|BaseRig:Knee_J_L_IK.message" 
-		"BaseRigRN.placeHolderList[1820]" ""
+		"BaseRigRN.placeHolderList[2184]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_FK.message" 
-		"BaseRigRN.placeHolderList[1821]" ""
+		"BaseRigRN.placeHolderList[2185]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_FK|BaseRig:Knee_J_L_FK.message" 
-		"BaseRigRN.placeHolderList[1822]" "BaseRig:bindPose1.m[3]"
+		"BaseRigRN.placeHolderList[2186]" "BaseRig:bindPose1.m[3]"
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[1823]" ""
+		"BaseRigRN.placeHolderList[2187]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK.message" 
-		"BaseRigRN.placeHolderList[1824]" ""
+		"BaseRigRN.placeHolderList[2188]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK.worldMatrix" 
-		"BaseRigRN.placeHolderList[1825]" ""
+		"BaseRigRN.placeHolderList[2189]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK.objectColorRGB" 
-		"BaseRigRN.placeHolderList[1826]" ""
+		"BaseRigRN.placeHolderList[2190]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK|BaseRig:Knee_J_L_RK.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[1827]" ""
+		"BaseRigRN.placeHolderList[2191]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK|BaseRig:Knee_J_L_RK.message" 
-		"BaseRigRN.placeHolderList[1828]" ""
+		"BaseRigRN.placeHolderList[2192]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK|BaseRig:Knee_J_L_RK.worldMatrix" 
-		"BaseRigRN.placeHolderList[1829]" ""
+		"BaseRigRN.placeHolderList[2193]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK|BaseRig:Knee_J_L_RK.objectColorRGB" 
-		"BaseRigRN.placeHolderList[1830]" ""
+		"BaseRigRN.placeHolderList[2194]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK|BaseRig:Knee_J_L_RK|BaseRig:Ankle_J_L_RK.bindPose" 
-		"BaseRigRN.placeHolderList[1831]" ""
+		"BaseRigRN.placeHolderList[2195]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK|BaseRig:Knee_J_L_RK|BaseRig:Ankle_J_L_RK.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[1832]" ""
+		"BaseRigRN.placeHolderList[2196]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK|BaseRig:Knee_J_L_RK|BaseRig:Ankle_J_L_RK.message" 
-		"BaseRigRN.placeHolderList[1833]" ""
+		"BaseRigRN.placeHolderList[2197]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK|BaseRig:Knee_J_L_RK|BaseRig:Ankle_J_L_RK.worldMatrix" 
-		"BaseRigRN.placeHolderList[1834]" ""
+		"BaseRigRN.placeHolderList[2198]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK|BaseRig:Knee_J_L_RK|BaseRig:Ankle_J_L_RK.objectColorRGB" 
-		"BaseRigRN.placeHolderList[1835]" ""
+		"BaseRigRN.placeHolderList[2199]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_IK.message" 
-		"BaseRigRN.placeHolderList[1836]" ""
+		"BaseRigRN.placeHolderList[2200]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_IK|BaseRig:Knee_J_R_IK.message" 
-		"BaseRigRN.placeHolderList[1837]" ""
+		"BaseRigRN.placeHolderList[2201]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_FK.message" 
-		"BaseRigRN.placeHolderList[1838]" ""
+		"BaseRigRN.placeHolderList[2202]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_FK|BaseRig:Knee_J_R_FK.message" 
-		"BaseRigRN.placeHolderList[1839]" "BaseRig:bindPose1.m[6]"
+		"BaseRigRN.placeHolderList[2203]" "BaseRig:bindPose1.m[6]"
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[1840]" ""
+		"BaseRigRN.placeHolderList[2204]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK.message" 
-		"BaseRigRN.placeHolderList[1841]" ""
+		"BaseRigRN.placeHolderList[2205]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK.worldMatrix" 
-		"BaseRigRN.placeHolderList[1842]" ""
+		"BaseRigRN.placeHolderList[2206]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK.objectColorRGB" 
-		"BaseRigRN.placeHolderList[1843]" ""
+		"BaseRigRN.placeHolderList[2207]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[1844]" ""
+		"BaseRigRN.placeHolderList[2208]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK.message" 
-		"BaseRigRN.placeHolderList[1845]" ""
+		"BaseRigRN.placeHolderList[2209]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK.worldMatrix" 
-		"BaseRigRN.placeHolderList[1846]" ""
+		"BaseRigRN.placeHolderList[2210]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK.objectColorRGB" 
-		"BaseRigRN.placeHolderList[1847]" ""
+		"BaseRigRN.placeHolderList[2211]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK|BaseRig:Ankle_J_R_RK.bindPose" 
-		"BaseRigRN.placeHolderList[1848]" ""
+		"BaseRigRN.placeHolderList[2212]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK|BaseRig:Ankle_J_R_RK.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[1849]" ""
+		"BaseRigRN.placeHolderList[2213]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK|BaseRig:Ankle_J_R_RK.message" 
-		"BaseRigRN.placeHolderList[1850]" ""
+		"BaseRigRN.placeHolderList[2214]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK|BaseRig:Ankle_J_R_RK.worldMatrix" 
-		"BaseRigRN.placeHolderList[1851]" ""
+		"BaseRigRN.placeHolderList[2215]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK|BaseRig:Ankle_J_R_RK.objectColorRGB" 
-		"BaseRigRN.placeHolderList[1852]" ""
+		"BaseRigRN.placeHolderList[2216]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J.message" 
-		"BaseRigRN.placeHolderList[1853]" ""
+		"BaseRigRN.placeHolderList[2217]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[1854]" ""
+		"BaseRigRN.placeHolderList[2218]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J.worldMatrix" 
-		"BaseRigRN.placeHolderList[1855]" ""
+		"BaseRigRN.placeHolderList[2219]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J.objectColorRGB" 
-		"BaseRigRN.placeHolderList[1856]" ""
+		"BaseRigRN.placeHolderList[2220]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j.message" 
-		"BaseRigRN.placeHolderList[1857]" ""
+		"BaseRigRN.placeHolderList[2221]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[1858]" ""
+		"BaseRigRN.placeHolderList[2222]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j.worldMatrix" 
-		"BaseRigRN.placeHolderList[1859]" ""
+		"BaseRigRN.placeHolderList[2223]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j.objectColorRGB" 
-		"BaseRigRN.placeHolderList[1860]" ""
+		"BaseRigRN.placeHolderList[2224]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j.message" 
-		"BaseRigRN.placeHolderList[1861]" ""
+		"BaseRigRN.placeHolderList[2225]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[1862]" ""
+		"BaseRigRN.placeHolderList[2226]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j.worldMatrix" 
-		"BaseRigRN.placeHolderList[1863]" ""
+		"BaseRigRN.placeHolderList[2227]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j.objectColorRGB" 
-		"BaseRigRN.placeHolderList[1864]" ""
+		"BaseRigRN.placeHolderList[2228]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J.scale" 
-		"BaseRigRN.placeHolderList[1865]" ""
+		"BaseRigRN.placeHolderList[2229]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J.scale" 
-		"BaseRigRN.placeHolderList[1866]" ""
+		"BaseRigRN.placeHolderList[2230]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J.message" 
-		"BaseRigRN.placeHolderList[1867]" ""
+		"BaseRigRN.placeHolderList[2231]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[1868]" ""
+		"BaseRigRN.placeHolderList[2232]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J.worldMatrix" 
-		"BaseRigRN.placeHolderList[1869]" ""
+		"BaseRigRN.placeHolderList[2233]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J.objectColorRGB" 
-		"BaseRigRN.placeHolderList[1870]" ""
+		"BaseRigRN.placeHolderList[2234]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:EyeLid_J_L.message" 
-		"BaseRigRN.placeHolderList[1871]" "BaseRig:bindPose1.m[13]"
+		"BaseRigRN.placeHolderList[2235]" "BaseRig:bindPose1.m[13]"
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:EyeLid_J_L.bindPose" 
-		"BaseRigRN.placeHolderList[1872]" "BaseRig:bindPose1.wm[13]"
+		"BaseRigRN.placeHolderList[2236]" "BaseRig:bindPose1.wm[13]"
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:EyeLid_J_L.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[1873]" ""
+		"BaseRigRN.placeHolderList[2237]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:EyeLid_J_L.worldMatrix" 
-		"BaseRigRN.placeHolderList[1874]" ""
+		"BaseRigRN.placeHolderList[2238]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:EyeLid_J_L.objectColorRGB" 
-		"BaseRigRN.placeHolderList[1875]" ""
+		"BaseRigRN.placeHolderList[2239]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L.message" 
-		"BaseRigRN.placeHolderList[1876]" "BaseRig:bindPose1.m[12]"
+		"BaseRigRN.placeHolderList[2240]" "BaseRig:bindPose1.m[12]"
 		5 4 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeMesh_L|BaseRig:EyeMesh_LShape.inMesh" 
-		"BaseRigRN.placeHolderList[1877]" ""
+		"BaseRigRN.placeHolderList[2241]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeMesh_L|BaseRig:EyeMesh_LShape.instObjGroups.objectGroups[0]" 
-		"BaseRigRN.placeHolderList[1878]" ""
+		"BaseRigRN.placeHolderList[2242]" ""
 		5 4 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeMesh_L|BaseRig:EyeMesh_LShape.instObjGroups.objectGroups[0].objectGroupId" 
-		"BaseRigRN.placeHolderList[1879]" ""
+		"BaseRigRN.placeHolderList[2243]" ""
 		5 4 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeMesh_L|BaseRig:EyeMesh_LShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		"BaseRigRN.placeHolderList[1880]" ""
+		"BaseRigRN.placeHolderList[2244]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeMesh_L|BaseRig:EyeMesh_LShape.instObjGroups.objectGroups[1]" 
-		"BaseRigRN.placeHolderList[1881]" ""
+		"BaseRigRN.placeHolderList[2245]" ""
 		5 4 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeMesh_L|BaseRig:EyeMesh_LShape.instObjGroups.objectGroups[1].objectGroupId" 
-		"BaseRigRN.placeHolderList[1882]" ""
+		"BaseRigRN.placeHolderList[2246]" ""
 		5 4 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeMesh_L|BaseRig:EyeMesh_LShape.instObjGroups.objectGroups[1].objectGrpColor" 
-		"BaseRigRN.placeHolderList[1883]" ""
+		"BaseRigRN.placeHolderList[2247]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeMesh_L|BaseRig:EyeMesh_LShape.compInstObjGroups.compObjectGroups[0]" 
-		"BaseRigRN.placeHolderList[1884]" ""
+		"BaseRigRN.placeHolderList[2248]" ""
 		5 4 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeMesh_L|BaseRig:EyeMesh_LShape.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		"BaseRigRN.placeHolderList[1885]" ""
+		"BaseRigRN.placeHolderList[2249]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:EyeLid_J_R.message" 
-		"BaseRigRN.placeHolderList[1886]" "BaseRig:bindPose1.m[15]"
+		"BaseRigRN.placeHolderList[2250]" "BaseRig:bindPose1.m[15]"
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:EyeLid_J_R.bindPose" 
-		"BaseRigRN.placeHolderList[1887]" "BaseRig:bindPose1.wm[15]"
+		"BaseRigRN.placeHolderList[2251]" "BaseRig:bindPose1.wm[15]"
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:EyeLid_J_R.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[1888]" ""
+		"BaseRigRN.placeHolderList[2252]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:EyeLid_J_R.worldMatrix" 
-		"BaseRigRN.placeHolderList[1889]" ""
+		"BaseRigRN.placeHolderList[2253]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:EyeLid_J_R.objectColorRGB" 
-		"BaseRigRN.placeHolderList[1890]" ""
+		"BaseRigRN.placeHolderList[2254]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R.message" 
-		"BaseRigRN.placeHolderList[1891]" "BaseRig:bindPose1.m[14]"
+		"BaseRigRN.placeHolderList[2255]" "BaseRig:bindPose1.m[14]"
 		5 4 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeMesh_R|BaseRig:EyeMesh_RShape.inMesh" 
-		"BaseRigRN.placeHolderList[1892]" ""
+		"BaseRigRN.placeHolderList[2256]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeMesh_R|BaseRig:EyeMesh_RShape.instObjGroups.objectGroups[0]" 
-		"BaseRigRN.placeHolderList[1893]" ""
+		"BaseRigRN.placeHolderList[2257]" ""
 		5 4 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeMesh_R|BaseRig:EyeMesh_RShape.instObjGroups.objectGroups[0].objectGroupId" 
-		"BaseRigRN.placeHolderList[1894]" ""
+		"BaseRigRN.placeHolderList[2258]" ""
 		5 4 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeMesh_R|BaseRig:EyeMesh_RShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		"BaseRigRN.placeHolderList[1895]" ""
+		"BaseRigRN.placeHolderList[2259]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeMesh_R|BaseRig:EyeMesh_RShape.instObjGroups.objectGroups[1]" 
-		"BaseRigRN.placeHolderList[1896]" ""
+		"BaseRigRN.placeHolderList[2260]" ""
 		5 4 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeMesh_R|BaseRig:EyeMesh_RShape.instObjGroups.objectGroups[1].objectGroupId" 
-		"BaseRigRN.placeHolderList[1897]" ""
+		"BaseRigRN.placeHolderList[2261]" ""
 		5 4 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeMesh_R|BaseRig:EyeMesh_RShape.instObjGroups.objectGroups[1].objectGrpColor" 
-		"BaseRigRN.placeHolderList[1898]" ""
+		"BaseRigRN.placeHolderList[2262]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeMesh_R|BaseRig:EyeMesh_RShape.compInstObjGroups.compObjectGroups[0]" 
-		"BaseRigRN.placeHolderList[1899]" ""
+		"BaseRigRN.placeHolderList[2263]" ""
 		5 4 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeMesh_R|BaseRig:EyeMesh_RShape.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		"BaseRigRN.placeHolderList[1900]" ""
+		"BaseRigRN.placeHolderList[2264]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Jaw_J.message" 
-		"BaseRigRN.placeHolderList[1901]" "BaseRig:bindPose1.m[16]"
+		"BaseRigRN.placeHolderList[2265]" "BaseRig:bindPose1.m[16]"
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Jaw_J.bindPose" 
-		"BaseRigRN.placeHolderList[1902]" "BaseRig:bindPose1.wm[16]"
+		"BaseRigRN.placeHolderList[2266]" "BaseRig:bindPose1.wm[16]"
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Jaw_J.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[1903]" ""
+		"BaseRigRN.placeHolderList[2267]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Jaw_J.worldMatrix" 
-		"BaseRigRN.placeHolderList[1904]" ""
+		"BaseRigRN.placeHolderList[2268]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Jaw_J.objectColorRGB" 
-		"BaseRigRN.placeHolderList[1905]" ""
+		"BaseRigRN.placeHolderList[2269]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L.scale" 
-		"BaseRigRN.placeHolderList[1906]" ""
+		"BaseRigRN.placeHolderList[2270]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L.message" 
-		"BaseRigRN.placeHolderList[1907]" ""
+		"BaseRigRN.placeHolderList[2271]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[1908]" ""
+		"BaseRigRN.placeHolderList[2272]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L.worldMatrix" 
-		"BaseRigRN.placeHolderList[1909]" ""
+		"BaseRigRN.placeHolderList[2273]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L.objectColorRGB" 
-		"BaseRigRN.placeHolderList[1910]" ""
+		"BaseRigRN.placeHolderList[2274]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_IK.message" 
-		"BaseRigRN.placeHolderList[1911]" ""
+		"BaseRigRN.placeHolderList[2275]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_IK|BaseRig:Shoulder_J_L_IK.message" 
-		"BaseRigRN.placeHolderList[1912]" ""
+		"BaseRigRN.placeHolderList[2276]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_IK|BaseRig:Shoulder_J_L_IK|BaseRig:Elbow_J_L_IK.message" 
-		"BaseRigRN.placeHolderList[1913]" ""
+		"BaseRigRN.placeHolderList[2277]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_FK.message" 
-		"BaseRigRN.placeHolderList[1914]" ""
+		"BaseRigRN.placeHolderList[2278]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_FK|BaseRig:Shoulder_J_L_FK.message" 
-		"BaseRigRN.placeHolderList[1915]" ""
+		"BaseRigRN.placeHolderList[2279]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_FK|BaseRig:Shoulder_J_L_FK|BaseRig:Elbow_J_L_FK.message" 
-		"BaseRigRN.placeHolderList[1916]" ""
+		"BaseRigRN.placeHolderList[2280]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK.message" 
-		"BaseRigRN.placeHolderList[1917]" ""
+		"BaseRigRN.placeHolderList[2281]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[1918]" ""
+		"BaseRigRN.placeHolderList[2282]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK.message" 
-		"BaseRigRN.placeHolderList[1919]" ""
+		"BaseRigRN.placeHolderList[2283]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK.worldMatrix" 
-		"BaseRigRN.placeHolderList[1920]" ""
+		"BaseRigRN.placeHolderList[2284]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK.objectColorRGB" 
-		"BaseRigRN.placeHolderList[1921]" ""
+		"BaseRigRN.placeHolderList[2285]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[1922]" ""
+		"BaseRigRN.placeHolderList[2286]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK.message" 
-		"BaseRigRN.placeHolderList[1923]" ""
+		"BaseRigRN.placeHolderList[2287]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK.worldMatrix" 
-		"BaseRigRN.placeHolderList[1924]" ""
+		"BaseRigRN.placeHolderList[2288]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK.objectColorRGB" 
-		"BaseRigRN.placeHolderList[1925]" ""
+		"BaseRigRN.placeHolderList[2289]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.inverseScale" 
-		"BaseRigRN.placeHolderList[1926]" ""
+		"BaseRigRN.placeHolderList[2290]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.translate" 
-		"BaseRigRN.placeHolderList[1927]" ""
+		"BaseRigRN.placeHolderList[2291]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.rotate" 
-		"BaseRigRN.placeHolderList[1928]" ""
+		"BaseRigRN.placeHolderList[2292]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.scale" 
-		"BaseRigRN.placeHolderList[1929]" ""
+		"BaseRigRN.placeHolderList[2293]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.scale" 
-		"BaseRigRN.placeHolderList[1930]" ""
+		"BaseRigRN.placeHolderList[2294]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.scale" 
-		"BaseRigRN.placeHolderList[1931]" ""
+		"BaseRigRN.placeHolderList[2295]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.scale" 
-		"BaseRigRN.placeHolderList[1932]" ""
+		"BaseRigRN.placeHolderList[2296]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.scale" 
-		"BaseRigRN.placeHolderList[1933]" ""
+		"BaseRigRN.placeHolderList[2297]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.rotateOrder" 
-		"BaseRigRN.placeHolderList[1934]" ""
+		"BaseRigRN.placeHolderList[2298]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.rotatePivot" 
-		"BaseRigRN.placeHolderList[1935]" ""
+		"BaseRigRN.placeHolderList[2299]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.rotatePivotTranslate" 
-		"BaseRigRN.placeHolderList[1936]" ""
+		"BaseRigRN.placeHolderList[2300]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.jointOrient" 
-		"BaseRigRN.placeHolderList[1937]" ""
+		"BaseRigRN.placeHolderList[2301]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.segmentScaleCompensate" 
-		"BaseRigRN.placeHolderList[1938]" ""
+		"BaseRigRN.placeHolderList[2302]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[1939]" ""
+		"BaseRigRN.placeHolderList[2303]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.parentMatrix" 
-		"BaseRigRN.placeHolderList[1940]" ""
+		"BaseRigRN.placeHolderList[2304]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.message" 
-		"BaseRigRN.placeHolderList[1941]" ""
+		"BaseRigRN.placeHolderList[2305]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.worldMatrix" 
-		"BaseRigRN.placeHolderList[1942]" ""
+		"BaseRigRN.placeHolderList[2306]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.objectColorRGB" 
-		"BaseRigRN.placeHolderList[1943]" ""
+		"BaseRigRN.placeHolderList[2307]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R.scale" 
-		"BaseRigRN.placeHolderList[1944]" ""
+		"BaseRigRN.placeHolderList[2308]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R.message" 
-		"BaseRigRN.placeHolderList[1945]" ""
+		"BaseRigRN.placeHolderList[2309]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[1946]" ""
+		"BaseRigRN.placeHolderList[2310]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R.worldMatrix" 
-		"BaseRigRN.placeHolderList[1947]" ""
+		"BaseRigRN.placeHolderList[2311]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R.objectColorRGB" 
-		"BaseRigRN.placeHolderList[1948]" ""
+		"BaseRigRN.placeHolderList[2312]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_IK.message" 
-		"BaseRigRN.placeHolderList[1949]" ""
+		"BaseRigRN.placeHolderList[2313]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_IK|BaseRig:Shoulder_J_R_IK.message" 
-		"BaseRigRN.placeHolderList[1950]" ""
+		"BaseRigRN.placeHolderList[2314]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_IK|BaseRig:Shoulder_J_R_IK|BaseRig:Elbow_J_R_IK.message" 
-		"BaseRigRN.placeHolderList[1951]" ""
+		"BaseRigRN.placeHolderList[2315]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_FK.message" 
-		"BaseRigRN.placeHolderList[1952]" ""
+		"BaseRigRN.placeHolderList[2316]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_FK|BaseRig:Shoulder_J_R_FK.message" 
-		"BaseRigRN.placeHolderList[1953]" ""
+		"BaseRigRN.placeHolderList[2317]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_FK|BaseRig:Shoulder_J_R_FK|BaseRig:Elbow_J_R_FK.message" 
-		"BaseRigRN.placeHolderList[1954]" ""
+		"BaseRigRN.placeHolderList[2318]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_FK|BaseRig:Shoulder_J_R_FK|BaseRig:Elbow_J_R_FK|BaseRig:Wrist_J_R_FK.message" 
-		"BaseRigRN.placeHolderList[1955]" "BaseRig:bindPose1.m[24]"
+		"BaseRigRN.placeHolderList[2319]" "BaseRig:bindPose1.m[24]"
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_FK|BaseRig:Shoulder_J_R_FK|BaseRig:Elbow_J_R_FK|BaseRig:Wrist_J_R_FK.bindPose" 
-		"BaseRigRN.placeHolderList[1956]" "BaseRig:bindPose1.wm[24]"
+		"BaseRigRN.placeHolderList[2320]" "BaseRig:bindPose1.wm[24]"
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK.message" 
-		"BaseRigRN.placeHolderList[1957]" ""
+		"BaseRigRN.placeHolderList[2321]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[1958]" ""
+		"BaseRigRN.placeHolderList[2322]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK.message" 
-		"BaseRigRN.placeHolderList[1959]" ""
+		"BaseRigRN.placeHolderList[2323]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK.worldMatrix" 
-		"BaseRigRN.placeHolderList[1960]" ""
+		"BaseRigRN.placeHolderList[2324]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK.objectColorRGB" 
-		"BaseRigRN.placeHolderList[1961]" ""
+		"BaseRigRN.placeHolderList[2325]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[1962]" ""
+		"BaseRigRN.placeHolderList[2326]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK.message" 
-		"BaseRigRN.placeHolderList[1963]" ""
+		"BaseRigRN.placeHolderList[2327]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK.worldMatrix" 
-		"BaseRigRN.placeHolderList[1964]" ""
+		"BaseRigRN.placeHolderList[2328]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK.objectColorRGB" 
-		"BaseRigRN.placeHolderList[1965]" ""
+		"BaseRigRN.placeHolderList[2329]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.inverseScale" 
-		"BaseRigRN.placeHolderList[1966]" ""
+		"BaseRigRN.placeHolderList[2330]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.translate" 
-		"BaseRigRN.placeHolderList[1967]" ""
+		"BaseRigRN.placeHolderList[2331]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.rotate" 
-		"BaseRigRN.placeHolderList[1968]" ""
+		"BaseRigRN.placeHolderList[2332]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.scale" 
-		"BaseRigRN.placeHolderList[1969]" ""
+		"BaseRigRN.placeHolderList[2333]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.scale" 
-		"BaseRigRN.placeHolderList[1970]" ""
+		"BaseRigRN.placeHolderList[2334]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.scale" 
-		"BaseRigRN.placeHolderList[1971]" ""
+		"BaseRigRN.placeHolderList[2335]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.scale" 
-		"BaseRigRN.placeHolderList[1972]" ""
+		"BaseRigRN.placeHolderList[2336]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.scale" 
-		"BaseRigRN.placeHolderList[1973]" ""
+		"BaseRigRN.placeHolderList[2337]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.rotateOrder" 
-		"BaseRigRN.placeHolderList[1974]" ""
+		"BaseRigRN.placeHolderList[2338]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.rotatePivot" 
-		"BaseRigRN.placeHolderList[1975]" ""
+		"BaseRigRN.placeHolderList[2339]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.rotatePivotTranslate" 
-		"BaseRigRN.placeHolderList[1976]" ""
+		"BaseRigRN.placeHolderList[2340]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.jointOrient" 
-		"BaseRigRN.placeHolderList[1977]" ""
+		"BaseRigRN.placeHolderList[2341]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.segmentScaleCompensate" 
-		"BaseRigRN.placeHolderList[1978]" ""
+		"BaseRigRN.placeHolderList[2342]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[1979]" ""
+		"BaseRigRN.placeHolderList[2343]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.parentMatrix" 
-		"BaseRigRN.placeHolderList[1980]" ""
+		"BaseRigRN.placeHolderList[2344]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.message" 
-		"BaseRigRN.placeHolderList[1981]" ""
+		"BaseRigRN.placeHolderList[2345]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.worldMatrix" 
-		"BaseRigRN.placeHolderList[1982]" ""
+		"BaseRigRN.placeHolderList[2346]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.objectColorRGB" 
-		"BaseRigRN.placeHolderList[1983]" ""
+		"BaseRigRN.placeHolderList[2347]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL|BaseRig:head_J_GRP|BaseRig:head_J_CTRL|BaseRig:Jaw_J_GRP|BaseRig:Jaw_J_CTRL.Smile" 
-		"BaseRigRN.placeHolderList[1984]" ""
+		"BaseRigRN.placeHolderList[2348]" ""
 		5 4 "BaseRigRN" "|World_Dragon|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL|BaseRig:head_J_GRP|BaseRig:head_J_CTRL|BaseRig:Jaw_J_GRP|BaseRig:Jaw_J_CTRL.Smile" 
-		"BaseRigRN.placeHolderList[1985]" ""
+		"BaseRigRN.placeHolderList[2349]" ""
 		5 3 "BaseRigRN" "|World_Dragon|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL|BaseRig:head_J_GRP|BaseRig:head_J_CTRL|BaseRig:Jaw_J_GRP|BaseRig:Jaw_J_CTRL.Frown" 
-		"BaseRigRN.placeHolderList[1986]" ""
+		"BaseRigRN.placeHolderList[2350]" ""
 		5 4 "BaseRigRN" "|World_Dragon|Controls|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL|BaseRig:head_J_GRP|BaseRig:head_J_CTRL|BaseRig:Jaw_J_GRP|BaseRig:Jaw_J_CTRL.Frown" 
-		"BaseRigRN.placeHolderList[1987]" ""
-		5 4 "BaseRigRN" "BaseRig:bindPose1.members[58]" "BaseRigRN.placeHolderList[1988]" 
+		"BaseRigRN.placeHolderList[2351]" ""
+		5 4 "BaseRigRN" "BaseRig:bindPose1.members[58]" "BaseRigRN.placeHolderList[2352]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:bindPose1.members[59]" "BaseRigRN.placeHolderList[1989]" 
+		5 4 "BaseRigRN" "BaseRig:bindPose1.members[59]" "BaseRigRN.placeHolderList[2353]" 
 		""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK.message" 
-		"BaseRig:bindPose1.members[60]" "BaseRigRN.placeHolderList[1990]" "BaseRigRN.placeHolderList[1991]" 
+		"BaseRig:bindPose1.members[60]" "BaseRigRN.placeHolderList[2354]" "BaseRigRN.placeHolderList[2355]" 
 		""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK|BaseRig:Knee_J_L_RK.message" 
-		"BaseRig:bindPose1.members[61]" "BaseRigRN.placeHolderList[1992]" "BaseRigRN.placeHolderList[1993]" 
+		"BaseRig:bindPose1.members[61]" "BaseRigRN.placeHolderList[2356]" "BaseRigRN.placeHolderList[2357]" 
 		""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK|BaseRig:Knee_J_L_RK|BaseRig:Ankle_J_L_RK.message" 
-		"BaseRig:bindPose1.members[62]" "BaseRigRN.placeHolderList[1994]" "BaseRigRN.placeHolderList[1995]" 
+		"BaseRig:bindPose1.members[62]" "BaseRigRN.placeHolderList[2358]" "BaseRigRN.placeHolderList[2359]" 
 		""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK.message" 
-		"BaseRig:bindPose1.members[63]" "BaseRigRN.placeHolderList[1996]" "BaseRigRN.placeHolderList[1997]" 
+		"BaseRig:bindPose1.members[63]" "BaseRigRN.placeHolderList[2360]" "BaseRigRN.placeHolderList[2361]" 
 		""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK.message" 
-		"BaseRig:bindPose1.members[64]" "BaseRigRN.placeHolderList[1998]" "BaseRigRN.placeHolderList[1999]" 
+		"BaseRig:bindPose1.members[64]" "BaseRigRN.placeHolderList[2362]" "BaseRigRN.placeHolderList[2363]" 
 		""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK|BaseRig:Ankle_J_R_RK.message" 
-		"BaseRig:bindPose1.members[65]" "BaseRigRN.placeHolderList[2000]" "BaseRigRN.placeHolderList[2001]" 
+		"BaseRig:bindPose1.members[65]" "BaseRigRN.placeHolderList[2364]" "BaseRigRN.placeHolderList[2365]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:bindPose1.members[66]" "BaseRigRN.placeHolderList[2002]" 
+		5 4 "BaseRigRN" "BaseRig:bindPose1.members[66]" "BaseRigRN.placeHolderList[2366]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:bindPose1.members[67]" "BaseRigRN.placeHolderList[2003]" 
+		5 4 "BaseRigRN" "BaseRig:bindPose1.members[67]" "BaseRigRN.placeHolderList[2367]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:bindPose1.members[68]" "BaseRigRN.placeHolderList[2004]" 
+		5 4 "BaseRigRN" "BaseRig:bindPose1.members[68]" "BaseRigRN.placeHolderList[2368]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:bindPose1.members[69]" "BaseRigRN.placeHolderList[2005]" 
+		5 4 "BaseRigRN" "BaseRig:bindPose1.members[69]" "BaseRigRN.placeHolderList[2369]" 
 		""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L.message" 
-		"BaseRig:bindPose1.members[70]" "BaseRigRN.placeHolderList[2006]" "BaseRigRN.placeHolderList[2007]" 
+		"BaseRig:bindPose1.members[70]" "BaseRigRN.placeHolderList[2370]" "BaseRigRN.placeHolderList[2371]" 
 		"BaseRig:bindPose1.m[12]"
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:EyeLid_J_L.message" 
-		"BaseRig:bindPose1.members[71]" "BaseRigRN.placeHolderList[2008]" "BaseRigRN.placeHolderList[2009]" 
+		"BaseRig:bindPose1.members[71]" "BaseRigRN.placeHolderList[2372]" "BaseRigRN.placeHolderList[2373]" 
 		"BaseRig:bindPose1.m[13]"
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R.message" 
-		"BaseRig:bindPose1.members[72]" "BaseRigRN.placeHolderList[2010]" "BaseRigRN.placeHolderList[2011]" 
+		"BaseRig:bindPose1.members[72]" "BaseRigRN.placeHolderList[2374]" "BaseRigRN.placeHolderList[2375]" 
 		"BaseRig:bindPose1.m[14]"
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:EyeLid_J_R.message" 
-		"BaseRig:bindPose1.members[73]" "BaseRigRN.placeHolderList[2012]" "BaseRigRN.placeHolderList[2013]" 
+		"BaseRig:bindPose1.members[73]" "BaseRigRN.placeHolderList[2376]" "BaseRigRN.placeHolderList[2377]" 
 		"BaseRig:bindPose1.m[15]"
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Jaw_J.message" 
-		"BaseRig:bindPose1.members[74]" "BaseRigRN.placeHolderList[2014]" "BaseRigRN.placeHolderList[2015]" 
+		"BaseRig:bindPose1.members[74]" "BaseRigRN.placeHolderList[2378]" "BaseRigRN.placeHolderList[2379]" 
 		"BaseRig:bindPose1.m[16]"
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK.message" 
-		"BaseRig:bindPose1.members[75]" "BaseRigRN.placeHolderList[2016]" "BaseRigRN.placeHolderList[2017]" 
+		"BaseRig:bindPose1.members[75]" "BaseRigRN.placeHolderList[2380]" "BaseRigRN.placeHolderList[2381]" 
 		""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK.message" 
-		"BaseRig:bindPose1.members[76]" "BaseRigRN.placeHolderList[2018]" "BaseRigRN.placeHolderList[2019]" 
+		"BaseRig:bindPose1.members[76]" "BaseRigRN.placeHolderList[2382]" "BaseRigRN.placeHolderList[2383]" 
 		""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK.message" 
-		"BaseRig:bindPose1.members[77]" "BaseRigRN.placeHolderList[2020]" "BaseRigRN.placeHolderList[2021]" 
+		"BaseRig:bindPose1.members[77]" "BaseRigRN.placeHolderList[2384]" "BaseRigRN.placeHolderList[2385]" 
 		""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.message" 
-		"BaseRig:bindPose1.members[78]" "BaseRigRN.placeHolderList[2022]" "BaseRigRN.placeHolderList[2023]" 
+		"BaseRig:bindPose1.members[78]" "BaseRigRN.placeHolderList[2386]" "BaseRigRN.placeHolderList[2387]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:bindPose1.members[79]" "BaseRigRN.placeHolderList[2024]" 
+		5 4 "BaseRigRN" "BaseRig:bindPose1.members[79]" "BaseRigRN.placeHolderList[2388]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:bindPose1.members[80]" "BaseRigRN.placeHolderList[2025]" 
+		5 4 "BaseRigRN" "BaseRig:bindPose1.members[80]" "BaseRigRN.placeHolderList[2389]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:bindPose1.members[81]" "BaseRigRN.placeHolderList[2026]" 
+		5 4 "BaseRigRN" "BaseRig:bindPose1.members[81]" "BaseRigRN.placeHolderList[2390]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:bindPose1.members[82]" "BaseRigRN.placeHolderList[2027]" 
+		5 4 "BaseRigRN" "BaseRig:bindPose1.members[82]" "BaseRigRN.placeHolderList[2391]" 
 		""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK.message" 
-		"BaseRig:bindPose1.members[83]" "BaseRigRN.placeHolderList[2028]" "BaseRigRN.placeHolderList[2029]" 
+		"BaseRig:bindPose1.members[83]" "BaseRigRN.placeHolderList[2392]" "BaseRigRN.placeHolderList[2393]" 
 		""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK.message" 
-		"BaseRig:bindPose1.members[84]" "BaseRigRN.placeHolderList[2030]" "BaseRigRN.placeHolderList[2031]" 
+		"BaseRig:bindPose1.members[84]" "BaseRigRN.placeHolderList[2394]" "BaseRigRN.placeHolderList[2395]" 
 		""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK.message" 
-		"BaseRig:bindPose1.members[85]" "BaseRigRN.placeHolderList[2032]" "BaseRigRN.placeHolderList[2033]" 
+		"BaseRig:bindPose1.members[85]" "BaseRigRN.placeHolderList[2396]" "BaseRigRN.placeHolderList[2397]" 
 		""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.message" 
-		"BaseRig:bindPose1.members[86]" "BaseRigRN.placeHolderList[2034]" "BaseRigRN.placeHolderList[2035]" 
+		"BaseRig:bindPose1.members[86]" "BaseRigRN.placeHolderList[2398]" "BaseRigRN.placeHolderList[2399]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:bindPose1.members[87]" "BaseRigRN.placeHolderList[2036]" 
+		5 4 "BaseRigRN" "BaseRig:bindPose1.members[87]" "BaseRigRN.placeHolderList[2400]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:bindPose1.members[88]" "BaseRigRN.placeHolderList[2037]" 
+		5 4 "BaseRigRN" "BaseRig:bindPose1.members[88]" "BaseRigRN.placeHolderList[2401]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:bindPose1.members[89]" "BaseRigRN.placeHolderList[2038]" 
+		5 4 "BaseRigRN" "BaseRig:bindPose1.members[89]" "BaseRigRN.placeHolderList[2402]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:bindPose1.members[90]" "BaseRigRN.placeHolderList[2039]" 
+		5 4 "BaseRigRN" "BaseRig:bindPose1.members[90]" "BaseRigRN.placeHolderList[2403]" 
 		""
 		5 0 "BaseRigRN" "BaseRig:bindPose1.members[59]" "BaseRig:bindPose1.parents[0]" 
-		"BaseRigRN.placeHolderList[2040]" "BaseRigRN.placeHolderList[2041]" ""
+		"BaseRigRN.placeHolderList[2404]" "BaseRigRN.placeHolderList[2405]" ""
 		5 0 "BaseRigRN" "BaseRig:bindPose1.world" "BaseRig:bindPose1.parents[58]" 
-		"BaseRigRN.placeHolderList[2042]" "BaseRigRN.placeHolderList[2043]" "BaseRig:bindPose1.p[0]"
+		"BaseRigRN.placeHolderList[2406]" "BaseRigRN.placeHolderList[2407]" "BaseRig:bindPose1.p[0]"
 		
-		5 4 "BaseRigRN" "BaseRig:bindPose1.parents[59]" "BaseRigRN.placeHolderList[2044]" 
+		5 4 "BaseRigRN" "BaseRig:bindPose1.parents[59]" "BaseRigRN.placeHolderList[2408]" 
 		""
 		5 0 "BaseRigRN" "BaseRig:bindPose1.members[1]" "BaseRig:bindPose1.parents[60]" 
-		"BaseRigRN.placeHolderList[2045]" "BaseRigRN.placeHolderList[2046]" ""
+		"BaseRigRN.placeHolderList[2409]" "BaseRigRN.placeHolderList[2410]" ""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK.message" 
-		"BaseRig:bindPose1.parents[61]" "BaseRigRN.placeHolderList[2047]" "BaseRigRN.placeHolderList[2048]" 
+		"BaseRig:bindPose1.parents[61]" "BaseRigRN.placeHolderList[2411]" "BaseRigRN.placeHolderList[2412]" 
 		""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK|BaseRig:Knee_J_L_RK.message" 
-		"BaseRig:bindPose1.parents[62]" "BaseRigRN.placeHolderList[2049]" "BaseRigRN.placeHolderList[2050]" 
+		"BaseRig:bindPose1.parents[62]" "BaseRigRN.placeHolderList[2413]" "BaseRigRN.placeHolderList[2414]" 
 		""
 		5 0 "BaseRigRN" "BaseRig:bindPose1.members[1]" "BaseRig:bindPose1.parents[63]" 
-		"BaseRigRN.placeHolderList[2051]" "BaseRigRN.placeHolderList[2052]" ""
+		"BaseRigRN.placeHolderList[2415]" "BaseRigRN.placeHolderList[2416]" ""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK.message" 
-		"BaseRig:bindPose1.parents[64]" "BaseRigRN.placeHolderList[2053]" "BaseRigRN.placeHolderList[2054]" 
+		"BaseRig:bindPose1.parents[64]" "BaseRigRN.placeHolderList[2417]" "BaseRigRN.placeHolderList[2418]" 
 		""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK.message" 
-		"BaseRig:bindPose1.parents[65]" "BaseRigRN.placeHolderList[2055]" "BaseRigRN.placeHolderList[2056]" 
+		"BaseRig:bindPose1.parents[65]" "BaseRigRN.placeHolderList[2419]" "BaseRigRN.placeHolderList[2420]" 
 		""
 		5 0 "BaseRigRN" "BaseRig:bindPose1.members[1]" "BaseRig:bindPose1.parents[66]" 
-		"BaseRigRN.placeHolderList[2057]" "BaseRigRN.placeHolderList[2058]" ""
-		5 4 "BaseRigRN" "BaseRig:bindPose1.parents[67]" "BaseRigRN.placeHolderList[2059]" 
+		"BaseRigRN.placeHolderList[2421]" "BaseRigRN.placeHolderList[2422]" ""
+		5 4 "BaseRigRN" "BaseRig:bindPose1.parents[67]" "BaseRigRN.placeHolderList[2423]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:bindPose1.parents[68]" "BaseRigRN.placeHolderList[2060]" 
+		5 4 "BaseRigRN" "BaseRig:bindPose1.parents[68]" "BaseRigRN.placeHolderList[2424]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:bindPose1.parents[69]" "BaseRigRN.placeHolderList[2061]" 
+		5 4 "BaseRigRN" "BaseRig:bindPose1.parents[69]" "BaseRigRN.placeHolderList[2425]" 
 		""
 		5 0 "BaseRigRN" "BaseRig:bindPose1.members[11]" "BaseRig:bindPose1.parents[70]" 
-		"BaseRigRN.placeHolderList[2062]" "BaseRigRN.placeHolderList[2063]" "BaseRig:bindPose1.p[16]"
+		"BaseRigRN.placeHolderList[2426]" "BaseRigRN.placeHolderList[2427]" "BaseRig:bindPose1.p[16]"
 		
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L.message" 
-		"BaseRig:bindPose1.parents[71]" "BaseRigRN.placeHolderList[2064]" "BaseRigRN.placeHolderList[2065]" 
+		"BaseRig:bindPose1.parents[71]" "BaseRigRN.placeHolderList[2428]" "BaseRigRN.placeHolderList[2429]" 
 		"BaseRig:bindPose1.m[12]"
 		5 0 "BaseRigRN" "BaseRig:bindPose1.members[11]" "BaseRig:bindPose1.parents[72]" 
-		"BaseRigRN.placeHolderList[2066]" "BaseRigRN.placeHolderList[2067]" "BaseRig:bindPose1.p[16]"
+		"BaseRigRN.placeHolderList[2430]" "BaseRigRN.placeHolderList[2431]" "BaseRig:bindPose1.p[16]"
 		
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R.message" 
-		"BaseRig:bindPose1.parents[73]" "BaseRigRN.placeHolderList[2068]" "BaseRigRN.placeHolderList[2069]" 
+		"BaseRig:bindPose1.parents[73]" "BaseRigRN.placeHolderList[2432]" "BaseRigRN.placeHolderList[2433]" 
 		"BaseRig:bindPose1.m[14]"
 		5 0 "BaseRigRN" "BaseRig:bindPose1.members[11]" "BaseRig:bindPose1.parents[74]" 
-		"BaseRigRN.placeHolderList[2070]" "BaseRigRN.placeHolderList[2071]" "BaseRig:bindPose1.p[16]"
+		"BaseRigRN.placeHolderList[2434]" "BaseRigRN.placeHolderList[2435]" "BaseRig:bindPose1.p[16]"
 		
 		5 0 "BaseRigRN" "BaseRig:bindPose1.members[17]" "BaseRig:bindPose1.parents[75]" 
-		"BaseRigRN.placeHolderList[2072]" "BaseRigRN.placeHolderList[2073]" ""
+		"BaseRigRN.placeHolderList[2436]" "BaseRigRN.placeHolderList[2437]" ""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK.message" 
-		"BaseRig:bindPose1.parents[76]" "BaseRigRN.placeHolderList[2074]" "BaseRigRN.placeHolderList[2075]" 
+		"BaseRig:bindPose1.parents[76]" "BaseRigRN.placeHolderList[2438]" "BaseRigRN.placeHolderList[2439]" 
 		""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK.message" 
-		"BaseRig:bindPose1.parents[77]" "BaseRigRN.placeHolderList[2076]" "BaseRigRN.placeHolderList[2077]" 
+		"BaseRig:bindPose1.parents[77]" "BaseRigRN.placeHolderList[2440]" "BaseRigRN.placeHolderList[2441]" 
 		""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK.message" 
-		"BaseRig:bindPose1.parents[78]" "BaseRigRN.placeHolderList[2078]" "BaseRigRN.placeHolderList[2079]" 
+		"BaseRig:bindPose1.parents[78]" "BaseRigRN.placeHolderList[2442]" "BaseRigRN.placeHolderList[2443]" 
 		""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.message" 
-		"BaseRig:bindPose1.parents[79]" "BaseRigRN.placeHolderList[2080]" "BaseRigRN.placeHolderList[2081]" 
+		"BaseRig:bindPose1.parents[79]" "BaseRigRN.placeHolderList[2444]" "BaseRigRN.placeHolderList[2445]" 
 		""
 		5 0 "BaseRigRN" "BaseRig:bindPose1.members[78]" "BaseRig:bindPose1.parents[80]" 
-		"BaseRigRN.placeHolderList[2082]" "BaseRigRN.placeHolderList[2083]" ""
+		"BaseRigRN.placeHolderList[2446]" "BaseRigRN.placeHolderList[2447]" ""
 		5 0 "BaseRigRN" "BaseRig:bindPose1.members[78]" "BaseRig:bindPose1.parents[81]" 
-		"BaseRigRN.placeHolderList[2084]" "BaseRigRN.placeHolderList[2085]" ""
+		"BaseRigRN.placeHolderList[2448]" "BaseRigRN.placeHolderList[2449]" ""
 		5 0 "BaseRigRN" "BaseRig:bindPose1.members[78]" "BaseRig:bindPose1.parents[82]" 
-		"BaseRigRN.placeHolderList[2086]" "BaseRigRN.placeHolderList[2087]" ""
+		"BaseRigRN.placeHolderList[2450]" "BaseRigRN.placeHolderList[2451]" ""
 		5 0 "BaseRigRN" "BaseRig:bindPose1.members[21]" "BaseRig:bindPose1.parents[83]" 
-		"BaseRigRN.placeHolderList[2088]" "BaseRigRN.placeHolderList[2089]" ""
+		"BaseRigRN.placeHolderList[2452]" "BaseRigRN.placeHolderList[2453]" ""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK.message" 
-		"BaseRig:bindPose1.parents[84]" "BaseRigRN.placeHolderList[2090]" "BaseRigRN.placeHolderList[2091]" 
+		"BaseRig:bindPose1.parents[84]" "BaseRigRN.placeHolderList[2454]" "BaseRigRN.placeHolderList[2455]" 
 		""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK.message" 
-		"BaseRig:bindPose1.parents[85]" "BaseRigRN.placeHolderList[2092]" "BaseRigRN.placeHolderList[2093]" 
+		"BaseRig:bindPose1.parents[85]" "BaseRigRN.placeHolderList[2456]" "BaseRigRN.placeHolderList[2457]" 
 		""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK.message" 
-		"BaseRig:bindPose1.parents[86]" "BaseRigRN.placeHolderList[2094]" "BaseRigRN.placeHolderList[2095]" 
+		"BaseRig:bindPose1.parents[86]" "BaseRigRN.placeHolderList[2458]" "BaseRigRN.placeHolderList[2459]" 
 		""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.message" 
-		"BaseRig:bindPose1.parents[87]" "BaseRigRN.placeHolderList[2096]" "BaseRigRN.placeHolderList[2097]" 
+		"BaseRig:bindPose1.parents[87]" "BaseRigRN.placeHolderList[2460]" "BaseRigRN.placeHolderList[2461]" 
 		""
 		5 0 "BaseRigRN" "BaseRig:bindPose1.members[86]" "BaseRig:bindPose1.parents[88]" 
-		"BaseRigRN.placeHolderList[2098]" "BaseRigRN.placeHolderList[2099]" ""
+		"BaseRigRN.placeHolderList[2462]" "BaseRigRN.placeHolderList[2463]" ""
 		5 0 "BaseRigRN" "BaseRig:bindPose1.members[86]" "BaseRig:bindPose1.parents[89]" 
-		"BaseRigRN.placeHolderList[2100]" "BaseRigRN.placeHolderList[2101]" ""
+		"BaseRigRN.placeHolderList[2464]" "BaseRigRN.placeHolderList[2465]" ""
 		5 0 "BaseRigRN" "BaseRig:bindPose1.members[86]" "BaseRig:bindPose1.parents[90]" 
-		"BaseRigRN.placeHolderList[2102]" "BaseRigRN.placeHolderList[2103]" ""
+		"BaseRigRN.placeHolderList[2466]" "BaseRigRN.placeHolderList[2467]" ""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK.bindPose" 
-		"BaseRig:bindPose1.worldMatrix[60]" "BaseRigRN.placeHolderList[2104]" "BaseRigRN.placeHolderList[2105]" 
+		"BaseRig:bindPose1.worldMatrix[60]" "BaseRigRN.placeHolderList[2468]" "BaseRigRN.placeHolderList[2469]" 
 		""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK|BaseRig:Knee_J_L_RK.bindPose" 
-		"BaseRig:bindPose1.worldMatrix[61]" "BaseRigRN.placeHolderList[2106]" "BaseRigRN.placeHolderList[2107]" 
+		"BaseRig:bindPose1.worldMatrix[61]" "BaseRigRN.placeHolderList[2470]" "BaseRigRN.placeHolderList[2471]" 
 		""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_L_RK|BaseRig:Knee_J_L_RK|BaseRig:Ankle_J_L_RK.bindPose" 
-		"BaseRig:bindPose1.worldMatrix[62]" "BaseRigRN.placeHolderList[2108]" "BaseRigRN.placeHolderList[2109]" 
+		"BaseRig:bindPose1.worldMatrix[62]" "BaseRigRN.placeHolderList[2472]" "BaseRigRN.placeHolderList[2473]" 
 		""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK.bindPose" 
-		"BaseRig:bindPose1.worldMatrix[63]" "BaseRigRN.placeHolderList[2110]" "BaseRigRN.placeHolderList[2111]" 
+		"BaseRig:bindPose1.worldMatrix[63]" "BaseRigRN.placeHolderList[2474]" "BaseRigRN.placeHolderList[2475]" 
 		""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK.bindPose" 
-		"BaseRig:bindPose1.worldMatrix[64]" "BaseRigRN.placeHolderList[2112]" "BaseRigRN.placeHolderList[2113]" 
+		"BaseRig:bindPose1.worldMatrix[64]" "BaseRigRN.placeHolderList[2476]" "BaseRigRN.placeHolderList[2477]" 
 		""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:Pelvis_J|BaseRig:Hip_J_R_RK|BaseRig:Knee_J_R_RK|BaseRig:Ankle_J_R_RK.bindPose" 
-		"BaseRig:bindPose1.worldMatrix[65]" "BaseRigRN.placeHolderList[2114]" "BaseRigRN.placeHolderList[2115]" 
+		"BaseRig:bindPose1.worldMatrix[65]" "BaseRigRN.placeHolderList[2478]" "BaseRigRN.placeHolderList[2479]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:bindPose1.worldMatrix[66]" "BaseRigRN.placeHolderList[2116]" 
+		5 4 "BaseRigRN" "BaseRig:bindPose1.worldMatrix[66]" "BaseRigRN.placeHolderList[2480]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:bindPose1.worldMatrix[67]" "BaseRigRN.placeHolderList[2117]" 
+		5 4 "BaseRigRN" "BaseRig:bindPose1.worldMatrix[67]" "BaseRigRN.placeHolderList[2481]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:bindPose1.worldMatrix[68]" "BaseRigRN.placeHolderList[2118]" 
+		5 4 "BaseRigRN" "BaseRig:bindPose1.worldMatrix[68]" "BaseRigRN.placeHolderList[2482]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:bindPose1.worldMatrix[69]" "BaseRigRN.placeHolderList[2119]" 
+		5 4 "BaseRigRN" "BaseRig:bindPose1.worldMatrix[69]" "BaseRigRN.placeHolderList[2483]" 
 		""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L.bindPose" 
-		"BaseRig:bindPose1.worldMatrix[70]" "BaseRigRN.placeHolderList[2120]" "BaseRigRN.placeHolderList[2121]" 
+		"BaseRig:bindPose1.worldMatrix[70]" "BaseRigRN.placeHolderList[2484]" "BaseRigRN.placeHolderList[2485]" 
 		"BaseRig:bindPose1.wm[12]"
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:EyeLid_J_L.bindPose" 
-		"BaseRig:bindPose1.worldMatrix[71]" "BaseRigRN.placeHolderList[2122]" "BaseRigRN.placeHolderList[2123]" 
+		"BaseRig:bindPose1.worldMatrix[71]" "BaseRigRN.placeHolderList[2486]" "BaseRigRN.placeHolderList[2487]" 
 		"BaseRig:bindPose1.wm[13]"
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R.bindPose" 
-		"BaseRig:bindPose1.worldMatrix[72]" "BaseRigRN.placeHolderList[2124]" "BaseRigRN.placeHolderList[2125]" 
+		"BaseRig:bindPose1.worldMatrix[72]" "BaseRigRN.placeHolderList[2488]" "BaseRigRN.placeHolderList[2489]" 
 		"BaseRig:bindPose1.wm[14]"
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:EyeLid_J_R.bindPose" 
-		"BaseRig:bindPose1.worldMatrix[73]" "BaseRigRN.placeHolderList[2126]" "BaseRigRN.placeHolderList[2127]" 
+		"BaseRig:bindPose1.worldMatrix[73]" "BaseRigRN.placeHolderList[2490]" "BaseRigRN.placeHolderList[2491]" 
 		"BaseRig:bindPose1.wm[15]"
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Jaw_J.bindPose" 
-		"BaseRig:bindPose1.worldMatrix[74]" "BaseRigRN.placeHolderList[2128]" "BaseRigRN.placeHolderList[2129]" 
+		"BaseRig:bindPose1.worldMatrix[74]" "BaseRigRN.placeHolderList[2492]" "BaseRigRN.placeHolderList[2493]" 
 		"BaseRig:bindPose1.wm[16]"
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK.bindPose" 
-		"BaseRig:bindPose1.worldMatrix[75]" "BaseRigRN.placeHolderList[2130]" "BaseRigRN.placeHolderList[2131]" 
+		"BaseRig:bindPose1.worldMatrix[75]" "BaseRigRN.placeHolderList[2494]" "BaseRigRN.placeHolderList[2495]" 
 		""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK.bindPose" 
-		"BaseRig:bindPose1.worldMatrix[76]" "BaseRigRN.placeHolderList[2132]" "BaseRigRN.placeHolderList[2133]" 
+		"BaseRig:bindPose1.worldMatrix[76]" "BaseRigRN.placeHolderList[2496]" "BaseRigRN.placeHolderList[2497]" 
 		""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK.bindPose" 
-		"BaseRig:bindPose1.worldMatrix[77]" "BaseRigRN.placeHolderList[2134]" "BaseRigRN.placeHolderList[2135]" 
+		"BaseRig:bindPose1.worldMatrix[77]" "BaseRigRN.placeHolderList[2498]" "BaseRigRN.placeHolderList[2499]" 
 		""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.bindPose" 
-		"BaseRig:bindPose1.worldMatrix[78]" "BaseRigRN.placeHolderList[2136]" "BaseRigRN.placeHolderList[2137]" 
+		"BaseRig:bindPose1.worldMatrix[78]" "BaseRigRN.placeHolderList[2500]" "BaseRigRN.placeHolderList[2501]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:bindPose1.worldMatrix[79]" "BaseRigRN.placeHolderList[2138]" 
+		5 4 "BaseRigRN" "BaseRig:bindPose1.worldMatrix[79]" "BaseRigRN.placeHolderList[2502]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:bindPose1.worldMatrix[80]" "BaseRigRN.placeHolderList[2139]" 
+		5 4 "BaseRigRN" "BaseRig:bindPose1.worldMatrix[80]" "BaseRigRN.placeHolderList[2503]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:bindPose1.worldMatrix[81]" "BaseRigRN.placeHolderList[2140]" 
+		5 4 "BaseRigRN" "BaseRig:bindPose1.worldMatrix[81]" "BaseRigRN.placeHolderList[2504]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:bindPose1.worldMatrix[82]" "BaseRigRN.placeHolderList[2141]" 
+		5 4 "BaseRigRN" "BaseRig:bindPose1.worldMatrix[82]" "BaseRigRN.placeHolderList[2505]" 
 		""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK.bindPose" 
-		"BaseRig:bindPose1.worldMatrix[83]" "BaseRigRN.placeHolderList[2142]" "BaseRigRN.placeHolderList[2143]" 
+		"BaseRig:bindPose1.worldMatrix[83]" "BaseRigRN.placeHolderList[2506]" "BaseRigRN.placeHolderList[2507]" 
 		""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK.bindPose" 
-		"BaseRig:bindPose1.worldMatrix[84]" "BaseRigRN.placeHolderList[2144]" "BaseRigRN.placeHolderList[2145]" 
+		"BaseRig:bindPose1.worldMatrix[84]" "BaseRigRN.placeHolderList[2508]" "BaseRigRN.placeHolderList[2509]" 
 		""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK.bindPose" 
-		"BaseRig:bindPose1.worldMatrix[85]" "BaseRigRN.placeHolderList[2146]" "BaseRigRN.placeHolderList[2147]" 
+		"BaseRig:bindPose1.worldMatrix[85]" "BaseRigRN.placeHolderList[2510]" "BaseRigRN.placeHolderList[2511]" 
 		""
 		5 0 "BaseRigRN" "|World_Dragon|Skeleton|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.bindPose" 
-		"BaseRig:bindPose1.worldMatrix[86]" "BaseRigRN.placeHolderList[2148]" "BaseRigRN.placeHolderList[2149]" 
+		"BaseRig:bindPose1.worldMatrix[86]" "BaseRigRN.placeHolderList[2512]" "BaseRigRN.placeHolderList[2513]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:bindPose1.worldMatrix[87]" "BaseRigRN.placeHolderList[2150]" 
+		5 4 "BaseRigRN" "BaseRig:bindPose1.worldMatrix[87]" "BaseRigRN.placeHolderList[2514]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:bindPose1.worldMatrix[88]" "BaseRigRN.placeHolderList[2151]" 
+		5 4 "BaseRigRN" "BaseRig:bindPose1.worldMatrix[88]" "BaseRigRN.placeHolderList[2515]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:bindPose1.worldMatrix[89]" "BaseRigRN.placeHolderList[2152]" 
+		5 4 "BaseRigRN" "BaseRig:bindPose1.worldMatrix[89]" "BaseRigRN.placeHolderList[2516]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:bindPose1.worldMatrix[90]" "BaseRigRN.placeHolderList[2153]" 
+		5 4 "BaseRigRN" "BaseRig:bindPose1.worldMatrix[90]" "BaseRigRN.placeHolderList[2517]" 
 		""
-		5 3 "BaseRigRN" "BaseRig:polyPlanarProj1.output" "BaseRigRN.placeHolderList[2154]" 
+		5 3 "BaseRigRN" "BaseRig:polyPlanarProj1.output" "BaseRigRN.placeHolderList[2518]" 
 		"BaseRig:EyeMesh_LShape.i"
-		5 3 "BaseRigRN" "BaseRig:polyPlanarProj2.output" "BaseRigRN.placeHolderList[2155]" 
+		5 3 "BaseRigRN" "BaseRig:polyPlanarProj2.output" "BaseRigRN.placeHolderList[2519]" 
 		"BaseRig:EyeMesh_RShape.i"
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[25]" "BaseRigRN.placeHolderList[2156]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[25]" "BaseRigRN.placeHolderList[2520]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[26]" "BaseRigRN.placeHolderList[2157]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[26]" "BaseRigRN.placeHolderList[2521]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[27]" "BaseRigRN.placeHolderList[2158]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[27]" "BaseRigRN.placeHolderList[2522]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[28]" "BaseRigRN.placeHolderList[2159]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[28]" "BaseRigRN.placeHolderList[2523]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[29]" "BaseRigRN.placeHolderList[2160]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[29]" "BaseRigRN.placeHolderList[2524]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[31]" "BaseRigRN.placeHolderList[2161]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[31]" "BaseRigRN.placeHolderList[2525]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[32]" "BaseRigRN.placeHolderList[2162]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[32]" "BaseRigRN.placeHolderList[2526]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[33]" "BaseRigRN.placeHolderList[2163]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[33]" "BaseRigRN.placeHolderList[2527]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[34]" "BaseRigRN.placeHolderList[2164]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[34]" "BaseRigRN.placeHolderList[2528]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[35]" "BaseRigRN.placeHolderList[2165]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[35]" "BaseRigRN.placeHolderList[2529]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[36]" "BaseRigRN.placeHolderList[2166]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[36]" "BaseRigRN.placeHolderList[2530]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[37]" "BaseRigRN.placeHolderList[2167]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[37]" "BaseRigRN.placeHolderList[2531]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[38]" "BaseRigRN.placeHolderList[2168]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[38]" "BaseRigRN.placeHolderList[2532]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[40]" "BaseRigRN.placeHolderList[2169]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[40]" "BaseRigRN.placeHolderList[2533]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[42]" "BaseRigRN.placeHolderList[2170]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[42]" "BaseRigRN.placeHolderList[2534]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[43]" "BaseRigRN.placeHolderList[2171]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[43]" "BaseRigRN.placeHolderList[2535]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[44]" "BaseRigRN.placeHolderList[2172]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[44]" "BaseRigRN.placeHolderList[2536]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[46]" "BaseRigRN.placeHolderList[2173]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[46]" "BaseRigRN.placeHolderList[2537]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[48]" "BaseRigRN.placeHolderList[2174]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[48]" "BaseRigRN.placeHolderList[2538]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[49]" "BaseRigRN.placeHolderList[2175]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[49]" "BaseRigRN.placeHolderList[2539]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[50]" "BaseRigRN.placeHolderList[2176]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[50]" "BaseRigRN.placeHolderList[2540]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[51]" "BaseRigRN.placeHolderList[2177]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[51]" "BaseRigRN.placeHolderList[2541]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[52]" "BaseRigRN.placeHolderList[2178]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[52]" "BaseRigRN.placeHolderList[2542]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[53]" "BaseRigRN.placeHolderList[2179]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[53]" "BaseRigRN.placeHolderList[2543]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[54]" "BaseRigRN.placeHolderList[2180]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[54]" "BaseRigRN.placeHolderList[2544]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[61]" "BaseRigRN.placeHolderList[2181]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[61]" "BaseRigRN.placeHolderList[2545]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[62]" "BaseRigRN.placeHolderList[2182]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[62]" "BaseRigRN.placeHolderList[2546]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[63]" "BaseRigRN.placeHolderList[2183]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[63]" "BaseRigRN.placeHolderList[2547]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[64]" "BaseRigRN.placeHolderList[2184]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[64]" "BaseRigRN.placeHolderList[2548]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[65]" "BaseRigRN.placeHolderList[2185]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[65]" "BaseRigRN.placeHolderList[2549]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[66]" "BaseRigRN.placeHolderList[2186]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[66]" "BaseRigRN.placeHolderList[2550]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[67]" "BaseRigRN.placeHolderList[2187]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[67]" "BaseRigRN.placeHolderList[2551]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[68]" "BaseRigRN.placeHolderList[2188]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[68]" "BaseRigRN.placeHolderList[2552]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[69]" "BaseRigRN.placeHolderList[2189]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[69]" "BaseRigRN.placeHolderList[2553]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[70]" "BaseRigRN.placeHolderList[2190]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[70]" "BaseRigRN.placeHolderList[2554]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[79]" "BaseRigRN.placeHolderList[2191]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[79]" "BaseRigRN.placeHolderList[2555]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[80]" "BaseRigRN.placeHolderList[2192]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[80]" "BaseRigRN.placeHolderList[2556]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[81]" "BaseRigRN.placeHolderList[2193]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[81]" "BaseRigRN.placeHolderList[2557]" 
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -24836,329 +24835,329 @@ select -ne :hardwareRenderGlobals;
 select -ne :characterPartition;
 select -ne :ikSystem;
 	setAttr -s 4 ".sol";
-connectAttr "BaseRigRN.phl[1810]" "bindPose1.m[2]";
-connectAttr "BaseRigRN.phl[1811]" "skinCluster6.lw[0]";
-connectAttr "BaseRigRN.phl[1812]" "skinCluster6.ma[0]";
-connectAttr "BaseRigRN.phl[1813]" "skinCluster6.ifcl[0]";
-connectAttr "BaseRigRN.phl[1814]" "Tail_01_J.is";
-connectAttr "BaseRigRN.phl[1815]" "bindPose1.m[3]";
-connectAttr "BaseRigRN.phl[1816]" "skinCluster6.lw[1]";
-connectAttr "BaseRigRN.phl[1817]" "skinCluster6.ma[1]";
-connectAttr "BaseRigRN.phl[1818]" "skinCluster6.ifcl[1]";
-connectAttr "BaseRigRN.phl[1819]" "bindPose1.m[4]";
-connectAttr "BaseRigRN.phl[1820]" "bindPose1.m[5]";
-connectAttr "BaseRigRN.phl[1821]" "bindPose1.m[7]";
-connectAttr "BaseRigRN.phl[1822]" "bindPose1.m[8]";
-connectAttr "BaseRigRN.phl[1823]" "skinCluster6.lw[2]";
-connectAttr "BaseRigRN.phl[1824]" "bindPose1.m[10]";
-connectAttr "BaseRigRN.phl[1825]" "skinCluster6.ma[2]";
-connectAttr "BaseRigRN.phl[1826]" "skinCluster6.ifcl[2]";
-connectAttr "BaseRigRN.phl[1827]" "skinCluster6.lw[3]";
-connectAttr "BaseRigRN.phl[1828]" "bindPose1.m[11]";
-connectAttr "BaseRigRN.phl[1829]" "skinCluster6.ma[3]";
-connectAttr "BaseRigRN.phl[1830]" "skinCluster6.ifcl[3]";
-connectAttr "BaseRigRN.phl[1831]" "bindPose1.wm[122]";
-connectAttr "BaseRigRN.phl[1832]" "skinCluster6.lw[4]";
-connectAttr "BaseRigRN.phl[1833]" "bindPose1.m[122]";
-connectAttr "BaseRigRN.phl[1834]" "skinCluster6.ma[4]";
-connectAttr "BaseRigRN.phl[1835]" "skinCluster6.ifcl[4]";
-connectAttr "BaseRigRN.phl[1836]" "bindPose1.m[13]";
-connectAttr "BaseRigRN.phl[1837]" "bindPose1.m[14]";
-connectAttr "BaseRigRN.phl[1838]" "bindPose1.m[16]";
-connectAttr "BaseRigRN.phl[1839]" "bindPose1.m[17]";
-connectAttr "BaseRigRN.phl[1840]" "skinCluster6.lw[5]";
-connectAttr "BaseRigRN.phl[1841]" "bindPose1.m[19]";
-connectAttr "BaseRigRN.phl[1842]" "skinCluster6.ma[5]";
-connectAttr "BaseRigRN.phl[1843]" "skinCluster6.ifcl[5]";
-connectAttr "BaseRigRN.phl[1844]" "skinCluster6.lw[6]";
-connectAttr "BaseRigRN.phl[1845]" "bindPose1.m[20]";
-connectAttr "BaseRigRN.phl[1846]" "skinCluster6.ma[6]";
-connectAttr "BaseRigRN.phl[1847]" "skinCluster6.ifcl[6]";
-connectAttr "BaseRigRN.phl[1848]" "bindPose1.wm[121]";
-connectAttr "BaseRigRN.phl[1849]" "skinCluster6.lw[7]";
-connectAttr "BaseRigRN.phl[1850]" "bindPose1.m[121]";
-connectAttr "BaseRigRN.phl[1851]" "skinCluster6.ma[7]";
-connectAttr "BaseRigRN.phl[1852]" "skinCluster6.ifcl[7]";
-connectAttr "BaseRigRN.phl[1853]" "bindPose1.m[26]";
-connectAttr "BaseRigRN.phl[1854]" "skinCluster6.lw[12]";
-connectAttr "BaseRigRN.phl[1855]" "skinCluster6.ma[12]";
-connectAttr "BaseRigRN.phl[1856]" "skinCluster6.ifcl[12]";
-connectAttr "BaseRigRN.phl[1857]" "bindPose1.m[27]";
-connectAttr "BaseRigRN.phl[1858]" "skinCluster6.lw[13]";
-connectAttr "BaseRigRN.phl[1859]" "skinCluster6.ma[13]";
-connectAttr "BaseRigRN.phl[1860]" "skinCluster6.ifcl[13]";
-connectAttr "BaseRigRN.phl[1861]" "bindPose1.m[28]";
-connectAttr "BaseRigRN.phl[1862]" "skinCluster6.lw[14]";
-connectAttr "BaseRigRN.phl[1863]" "skinCluster6.ma[14]";
-connectAttr "BaseRigRN.phl[1864]" "skinCluster6.ifcl[14]";
-connectAttr "BaseRigRN.phl[1865]" "Ear_J_L.is";
-connectAttr "BaseRigRN.phl[1866]" "Ear_J_R.is";
-connectAttr "BaseRigRN.phl[1867]" "bindPose1.m[29]";
-connectAttr "BaseRigRN.phl[1868]" "skinCluster6.lw[15]";
-connectAttr "BaseRigRN.phl[1869]" "skinCluster6.ma[15]";
-connectAttr "BaseRigRN.phl[1870]" "skinCluster6.ifcl[15]";
-connectAttr "BaseRigRN.phl[1871]" "bindPose1.m[115]";
-connectAttr "BaseRigRN.phl[1872]" "bindPose1.wm[115]";
-connectAttr "BaseRigRN.phl[1873]" "skinCluster6.lw[16]";
-connectAttr "BaseRigRN.phl[1874]" "skinCluster6.ma[16]";
-connectAttr "BaseRigRN.phl[1875]" "skinCluster6.ifcl[16]";
-connectAttr "BaseRigRN.phl[1876]" "bindPose1.m[30]";
-connectAttr "groupParts16.og" "BaseRigRN.phl[1877]";
-connectAttr "BaseRigRN.phl[1878]" "Black_Shader1SG.dsm" -na;
-connectAttr "groupId37.id" "BaseRigRN.phl[1879]";
-connectAttr "Black_Shader1SG.mwc" "BaseRigRN.phl[1880]";
-connectAttr "BaseRigRN.phl[1881]" "lambert3SG.dsm" -na;
-connectAttr "groupId39.id" "BaseRigRN.phl[1882]";
-connectAttr "lambert3SG.mwc" "BaseRigRN.phl[1883]";
-connectAttr "BaseRigRN.phl[1884]" "lambert2SG.dsm" -na;
-connectAttr "groupId38.id" "BaseRigRN.phl[1885]";
-connectAttr "BaseRigRN.phl[1886]" "bindPose1.m[114]";
-connectAttr "BaseRigRN.phl[1887]" "bindPose1.wm[114]";
-connectAttr "BaseRigRN.phl[1888]" "skinCluster6.lw[17]";
-connectAttr "BaseRigRN.phl[1889]" "skinCluster6.ma[17]";
-connectAttr "BaseRigRN.phl[1890]" "skinCluster6.ifcl[17]";
-connectAttr "BaseRigRN.phl[1891]" "bindPose1.m[32]";
-connectAttr "groupParts18.og" "BaseRigRN.phl[1892]";
-connectAttr "BaseRigRN.phl[1893]" "Black_Shader1SG.dsm" -na;
-connectAttr "groupId40.id" "BaseRigRN.phl[1894]";
-connectAttr "Black_Shader1SG.mwc" "BaseRigRN.phl[1895]";
-connectAttr "BaseRigRN.phl[1896]" "lambert3SG.dsm" -na;
-connectAttr "groupId42.id" "BaseRigRN.phl[1897]";
-connectAttr "lambert3SG.mwc" "BaseRigRN.phl[1898]";
-connectAttr "BaseRigRN.phl[1899]" "lambert2SG.dsm" -na;
-connectAttr "groupId41.id" "BaseRigRN.phl[1900]";
-connectAttr "BaseRigRN.phl[1901]" "bindPose1.m[116]";
-connectAttr "BaseRigRN.phl[1902]" "bindPose1.wm[116]";
-connectAttr "BaseRigRN.phl[1903]" "skinCluster6.lw[18]";
-connectAttr "BaseRigRN.phl[1904]" "skinCluster6.ma[18]";
-connectAttr "BaseRigRN.phl[1905]" "skinCluster6.ifcl[18]";
-connectAttr "BaseRigRN.phl[1906]" "|BaseRigRNfosterParent1|Wing_01_J_L.is";
-connectAttr "BaseRigRN.phl[1907]" "bindPose1.m[37]";
-connectAttr "BaseRigRN.phl[1908]" "skinCluster6.lw[19]";
-connectAttr "BaseRigRN.phl[1909]" "skinCluster6.ma[19]";
-connectAttr "BaseRigRN.phl[1910]" "skinCluster6.ifcl[19]";
-connectAttr "BaseRigRN.phl[1911]" "bindPose1.m[38]";
-connectAttr "BaseRigRN.phl[1912]" "bindPose1.m[39]";
-connectAttr "BaseRigRN.phl[1913]" "bindPose1.m[40]";
-connectAttr "BaseRigRN.phl[1914]" "bindPose1.m[42]";
-connectAttr "BaseRigRN.phl[1915]" "bindPose1.m[43]";
-connectAttr "BaseRigRN.phl[1916]" "bindPose1.m[44]";
-connectAttr "BaseRigRN.phl[1917]" "bindPose1.m[46]";
-connectAttr "BaseRigRN.phl[1918]" "skinCluster6.lw[20]";
-connectAttr "BaseRigRN.phl[1919]" "bindPose1.m[47]";
-connectAttr "BaseRigRN.phl[1920]" "skinCluster6.ma[20]";
-connectAttr "BaseRigRN.phl[1921]" "skinCluster6.ifcl[20]";
-connectAttr "BaseRigRN.phl[1922]" "skinCluster6.lw[21]";
-connectAttr "BaseRigRN.phl[1923]" "bindPose1.m[48]";
-connectAttr "BaseRigRN.phl[1924]" "skinCluster6.ma[21]";
-connectAttr "BaseRigRN.phl[1925]" "skinCluster6.ifcl[21]";
-connectAttr "BaseRigRN.phl[1926]" "L_Hand_Ctrl_Grp_parentConstraint1.tg[0].tis";
-connectAttr "BaseRigRN.phl[1927]" "L_Hand_Ctrl_Grp_parentConstraint1.tg[0].tt";
-connectAttr "BaseRigRN.phl[1928]" "L_Hand_Ctrl_Grp_parentConstraint1.tg[0].tr";
-connectAttr "BaseRigRN.phl[1929]" "Finger_02_J_L.is";
-connectAttr "BaseRigRN.phl[1930]" "Finger_04_J_L.is";
-connectAttr "BaseRigRN.phl[1931]" "Finger_01_J_L.is";
-connectAttr "BaseRigRN.phl[1932]" "L_Hand_Ctrl_Grp_parentConstraint1.tg[0].ts";
-connectAttr "BaseRigRN.phl[1933]" "Finger_03_J_L.is";
-connectAttr "BaseRigRN.phl[1934]" "L_Hand_Ctrl_Grp_parentConstraint1.tg[0].tro";
-connectAttr "BaseRigRN.phl[1935]" "L_Hand_Ctrl_Grp_parentConstraint1.tg[0].trp";
-connectAttr "BaseRigRN.phl[1936]" "L_Hand_Ctrl_Grp_parentConstraint1.tg[0].trt";
-connectAttr "BaseRigRN.phl[1937]" "L_Hand_Ctrl_Grp_parentConstraint1.tg[0].tjo";
-connectAttr "BaseRigRN.phl[1938]" "L_Hand_Ctrl_Grp_parentConstraint1.tg[0].tsc";
-connectAttr "BaseRigRN.phl[1939]" "skinCluster6.lw[22]";
-connectAttr "BaseRigRN.phl[1940]" "L_Hand_Ctrl_Grp_parentConstraint1.tg[0].tpm";
-connectAttr "BaseRigRN.phl[1941]" "bindPose1.m[49]";
-connectAttr "BaseRigRN.phl[1942]" "skinCluster6.ma[22]";
-connectAttr "BaseRigRN.phl[1943]" "skinCluster6.ifcl[22]";
-connectAttr "BaseRigRN.phl[1944]" "Wing_01_J_R.is";
-connectAttr "BaseRigRN.phl[1945]" "bindPose1.m[56]";
-connectAttr "BaseRigRN.phl[1946]" "skinCluster6.lw[27]";
-connectAttr "BaseRigRN.phl[1947]" "skinCluster6.ma[27]";
-connectAttr "BaseRigRN.phl[1948]" "skinCluster6.ifcl[27]";
-connectAttr "BaseRigRN.phl[1949]" "bindPose1.m[57]";
-connectAttr "BaseRigRN.phl[1950]" "bindPose1.m[58]";
-connectAttr "BaseRigRN.phl[1951]" "bindPose1.m[59]";
-connectAttr "BaseRigRN.phl[1952]" "bindPose1.m[61]";
-connectAttr "BaseRigRN.phl[1953]" "bindPose1.m[62]";
-connectAttr "BaseRigRN.phl[1954]" "bindPose1.m[63]";
-connectAttr "BaseRigRN.phl[1955]" "bindPose1.m[91]";
-connectAttr "BaseRigRN.phl[1956]" "bindPose1.wm[91]";
-connectAttr "BaseRigRN.phl[1957]" "bindPose1.m[65]";
-connectAttr "BaseRigRN.phl[1958]" "skinCluster6.lw[28]";
-connectAttr "BaseRigRN.phl[1959]" "bindPose1.m[66]";
-connectAttr "BaseRigRN.phl[1960]" "skinCluster6.ma[28]";
-connectAttr "BaseRigRN.phl[1961]" "skinCluster6.ifcl[28]";
-connectAttr "BaseRigRN.phl[1962]" "skinCluster6.lw[29]";
-connectAttr "BaseRigRN.phl[1963]" "bindPose1.m[67]";
-connectAttr "BaseRigRN.phl[1964]" "skinCluster6.ma[29]";
-connectAttr "BaseRigRN.phl[1965]" "skinCluster6.ifcl[29]";
-connectAttr "BaseRigRN.phl[1966]" "R_Hand_Ctrl_grp_parentConstraint1.tg[0].tis";
-connectAttr "BaseRigRN.phl[1967]" "R_Hand_Ctrl_grp_parentConstraint1.tg[0].tt";
-connectAttr "BaseRigRN.phl[1968]" "R_Hand_Ctrl_grp_parentConstraint1.tg[0].tr";
-connectAttr "BaseRigRN.phl[1969]" "Finger_03_J_R.is";
-connectAttr "BaseRigRN.phl[1970]" "Finger_04_J_R.is";
-connectAttr "BaseRigRN.phl[1971]" "Finger_02_J_R.is";
-connectAttr "BaseRigRN.phl[1972]" "Finger_01_J_R.is";
-connectAttr "BaseRigRN.phl[1973]" "R_Hand_Ctrl_grp_parentConstraint1.tg[0].ts";
-connectAttr "BaseRigRN.phl[1974]" "R_Hand_Ctrl_grp_parentConstraint1.tg[0].tro";
-connectAttr "BaseRigRN.phl[1975]" "R_Hand_Ctrl_grp_parentConstraint1.tg[0].trp";
-connectAttr "BaseRigRN.phl[1976]" "R_Hand_Ctrl_grp_parentConstraint1.tg[0].trt";
-connectAttr "BaseRigRN.phl[1977]" "R_Hand_Ctrl_grp_parentConstraint1.tg[0].tjo";
-connectAttr "BaseRigRN.phl[1978]" "R_Hand_Ctrl_grp_parentConstraint1.tg[0].tsc";
-connectAttr "BaseRigRN.phl[1979]" "skinCluster6.lw[30]";
-connectAttr "BaseRigRN.phl[1980]" "R_Hand_Ctrl_grp_parentConstraint1.tg[0].tpm";
-connectAttr "BaseRigRN.phl[1981]" "bindPose1.m[68]";
-connectAttr "BaseRigRN.phl[1982]" "skinCluster6.ma[30]";
-connectAttr "BaseRigRN.phl[1983]" "skinCluster6.ifcl[30]";
-connectAttr "BaseRigRN.phl[1984]" "blendShape1.w[0]";
-connectAttr "Jaw_J_CTRL_Smile.o" "BaseRigRN.phl[1985]";
-connectAttr "BaseRigRN.phl[1986]" "blendShape1.w[1]";
-connectAttr "Jaw_J_CTRL_Frown.o" "BaseRigRN.phl[1987]";
-connectAttr "World_Dragon.msg" "BaseRigRN.phl[1988]";
-connectAttr "Skeleton.msg" "BaseRigRN.phl[1989]";
-connectAttr "BaseRigRN.phl[1990]" "BaseRigRN.phl[1991]";
-connectAttr "BaseRigRN.phl[1992]" "BaseRigRN.phl[1993]";
-connectAttr "BaseRigRN.phl[1994]" "BaseRigRN.phl[1995]";
-connectAttr "BaseRigRN.phl[1996]" "BaseRigRN.phl[1997]";
-connectAttr "BaseRigRN.phl[1998]" "BaseRigRN.phl[1999]";
-connectAttr "BaseRigRN.phl[2000]" "BaseRigRN.phl[2001]";
-connectAttr "Tail_01_J.msg" "BaseRigRN.phl[2002]";
-connectAttr "Tail__2_J.msg" "BaseRigRN.phl[2003]";
-connectAttr "Tail_03_J.msg" "BaseRigRN.phl[2004]";
-connectAttr "Tail_04_J.msg" "BaseRigRN.phl[2005]";
-connectAttr "BaseRigRN.phl[2006]" "BaseRigRN.phl[2007]";
-connectAttr "BaseRigRN.phl[2008]" "BaseRigRN.phl[2009]";
-connectAttr "BaseRigRN.phl[2010]" "BaseRigRN.phl[2011]";
-connectAttr "BaseRigRN.phl[2012]" "BaseRigRN.phl[2013]";
-connectAttr "BaseRigRN.phl[2014]" "BaseRigRN.phl[2015]";
-connectAttr "BaseRigRN.phl[2016]" "BaseRigRN.phl[2017]";
-connectAttr "BaseRigRN.phl[2018]" "BaseRigRN.phl[2019]";
-connectAttr "BaseRigRN.phl[2020]" "BaseRigRN.phl[2021]";
-connectAttr "BaseRigRN.phl[2022]" "BaseRigRN.phl[2023]";
-connectAttr "Finger_01_J_L.msg" "BaseRigRN.phl[2024]";
-connectAttr "Finger_02_J_L.msg" "BaseRigRN.phl[2025]";
-connectAttr "Finger_03_J_L.msg" "BaseRigRN.phl[2026]";
-connectAttr "Finger_04_J_L.msg" "BaseRigRN.phl[2027]";
-connectAttr "BaseRigRN.phl[2028]" "BaseRigRN.phl[2029]";
-connectAttr "BaseRigRN.phl[2030]" "BaseRigRN.phl[2031]";
-connectAttr "BaseRigRN.phl[2032]" "BaseRigRN.phl[2033]";
-connectAttr "BaseRigRN.phl[2034]" "BaseRigRN.phl[2035]";
-connectAttr "Finger_01_J_R.msg" "BaseRigRN.phl[2036]";
-connectAttr "Finger_02_J_R.msg" "BaseRigRN.phl[2037]";
-connectAttr "Finger_03_J_R.msg" "BaseRigRN.phl[2038]";
-connectAttr "Finger_04_J_R.msg" "BaseRigRN.phl[2039]";
-connectAttr "BaseRigRN.phl[2040]" "BaseRigRN.phl[2041]";
-connectAttr "BaseRigRN.phl[2042]" "BaseRigRN.phl[2043]";
-connectAttr "World_Dragon.msg" "BaseRigRN.phl[2044]";
-connectAttr "BaseRigRN.phl[2045]" "BaseRigRN.phl[2046]";
-connectAttr "BaseRigRN.phl[2047]" "BaseRigRN.phl[2048]";
-connectAttr "BaseRigRN.phl[2049]" "BaseRigRN.phl[2050]";
-connectAttr "BaseRigRN.phl[2051]" "BaseRigRN.phl[2052]";
-connectAttr "BaseRigRN.phl[2053]" "BaseRigRN.phl[2054]";
-connectAttr "BaseRigRN.phl[2055]" "BaseRigRN.phl[2056]";
-connectAttr "BaseRigRN.phl[2057]" "BaseRigRN.phl[2058]";
-connectAttr "Tail_01_J.msg" "BaseRigRN.phl[2059]";
-connectAttr "Tail__2_J.msg" "BaseRigRN.phl[2060]";
-connectAttr "Tail_03_J.msg" "BaseRigRN.phl[2061]";
-connectAttr "BaseRigRN.phl[2062]" "BaseRigRN.phl[2063]";
-connectAttr "BaseRigRN.phl[2064]" "BaseRigRN.phl[2065]";
-connectAttr "BaseRigRN.phl[2066]" "BaseRigRN.phl[2067]";
-connectAttr "BaseRigRN.phl[2068]" "BaseRigRN.phl[2069]";
-connectAttr "BaseRigRN.phl[2070]" "BaseRigRN.phl[2071]";
-connectAttr "BaseRigRN.phl[2072]" "BaseRigRN.phl[2073]";
-connectAttr "BaseRigRN.phl[2074]" "BaseRigRN.phl[2075]";
-connectAttr "BaseRigRN.phl[2076]" "BaseRigRN.phl[2077]";
-connectAttr "BaseRigRN.phl[2078]" "BaseRigRN.phl[2079]";
-connectAttr "BaseRigRN.phl[2080]" "BaseRigRN.phl[2081]";
-connectAttr "BaseRigRN.phl[2082]" "BaseRigRN.phl[2083]";
-connectAttr "BaseRigRN.phl[2084]" "BaseRigRN.phl[2085]";
-connectAttr "BaseRigRN.phl[2086]" "BaseRigRN.phl[2087]";
-connectAttr "BaseRigRN.phl[2088]" "BaseRigRN.phl[2089]";
-connectAttr "BaseRigRN.phl[2090]" "BaseRigRN.phl[2091]";
-connectAttr "BaseRigRN.phl[2092]" "BaseRigRN.phl[2093]";
-connectAttr "BaseRigRN.phl[2094]" "BaseRigRN.phl[2095]";
-connectAttr "BaseRigRN.phl[2096]" "BaseRigRN.phl[2097]";
-connectAttr "BaseRigRN.phl[2098]" "BaseRigRN.phl[2099]";
-connectAttr "BaseRigRN.phl[2100]" "BaseRigRN.phl[2101]";
-connectAttr "BaseRigRN.phl[2102]" "BaseRigRN.phl[2103]";
-connectAttr "BaseRigRN.phl[2104]" "BaseRigRN.phl[2105]";
-connectAttr "BaseRigRN.phl[2106]" "BaseRigRN.phl[2107]";
-connectAttr "BaseRigRN.phl[2108]" "BaseRigRN.phl[2109]";
-connectAttr "BaseRigRN.phl[2110]" "BaseRigRN.phl[2111]";
-connectAttr "BaseRigRN.phl[2112]" "BaseRigRN.phl[2113]";
-connectAttr "BaseRigRN.phl[2114]" "BaseRigRN.phl[2115]";
-connectAttr "Tail_01_J.bps" "BaseRigRN.phl[2116]";
-connectAttr "Tail__2_J.bps" "BaseRigRN.phl[2117]";
-connectAttr "Tail_03_J.bps" "BaseRigRN.phl[2118]";
-connectAttr "Tail_04_J.bps" "BaseRigRN.phl[2119]";
-connectAttr "BaseRigRN.phl[2120]" "BaseRigRN.phl[2121]";
-connectAttr "BaseRigRN.phl[2122]" "BaseRigRN.phl[2123]";
-connectAttr "BaseRigRN.phl[2124]" "BaseRigRN.phl[2125]";
-connectAttr "BaseRigRN.phl[2126]" "BaseRigRN.phl[2127]";
-connectAttr "BaseRigRN.phl[2128]" "BaseRigRN.phl[2129]";
-connectAttr "BaseRigRN.phl[2130]" "BaseRigRN.phl[2131]";
-connectAttr "BaseRigRN.phl[2132]" "BaseRigRN.phl[2133]";
-connectAttr "BaseRigRN.phl[2134]" "BaseRigRN.phl[2135]";
-connectAttr "BaseRigRN.phl[2136]" "BaseRigRN.phl[2137]";
-connectAttr "Finger_01_J_L.bps" "BaseRigRN.phl[2138]";
-connectAttr "Finger_02_J_L.bps" "BaseRigRN.phl[2139]";
-connectAttr "Finger_03_J_L.bps" "BaseRigRN.phl[2140]";
-connectAttr "Finger_04_J_L.bps" "BaseRigRN.phl[2141]";
-connectAttr "BaseRigRN.phl[2142]" "BaseRigRN.phl[2143]";
-connectAttr "BaseRigRN.phl[2144]" "BaseRigRN.phl[2145]";
-connectAttr "BaseRigRN.phl[2146]" "BaseRigRN.phl[2147]";
-connectAttr "BaseRigRN.phl[2148]" "BaseRigRN.phl[2149]";
-connectAttr "Finger_01_J_R.bps" "BaseRigRN.phl[2150]";
-connectAttr "Finger_02_J_R.bps" "BaseRigRN.phl[2151]";
-connectAttr "Finger_03_J_R.bps" "BaseRigRN.phl[2152]";
-connectAttr "Finger_04_J_R.bps" "BaseRigRN.phl[2153]";
-connectAttr "BaseRigRN.phl[2154]" "groupParts15.ig";
-connectAttr "BaseRigRN.phl[2155]" "groupParts17.ig";
-connectAttr "BaseCharacterSet_LowerBack_J_CTRL_rotateZ.o" "BaseRigRN.phl[2156]";
-connectAttr "BaseCharacterSet_LowerBack_J_CTRL_rotateY.o" "BaseRigRN.phl[2157]";
-connectAttr "BaseCharacterSet_LowerBack_J_CTRL_rotateX.o" "BaseRigRN.phl[2158]";
-connectAttr "BaseCharacterSet_MiddleBack_j_CTRL_rotateZ.o" "BaseRigRN.phl[2159]"
+connectAttr "BaseRigRN.phl[2174]" "bindPose1.m[2]";
+connectAttr "BaseRigRN.phl[2175]" "skinCluster6.lw[0]";
+connectAttr "BaseRigRN.phl[2176]" "skinCluster6.ma[0]";
+connectAttr "BaseRigRN.phl[2177]" "skinCluster6.ifcl[0]";
+connectAttr "BaseRigRN.phl[2178]" "Tail_01_J.is";
+connectAttr "BaseRigRN.phl[2179]" "bindPose1.m[3]";
+connectAttr "BaseRigRN.phl[2180]" "skinCluster6.lw[1]";
+connectAttr "BaseRigRN.phl[2181]" "skinCluster6.ma[1]";
+connectAttr "BaseRigRN.phl[2182]" "skinCluster6.ifcl[1]";
+connectAttr "BaseRigRN.phl[2183]" "bindPose1.m[4]";
+connectAttr "BaseRigRN.phl[2184]" "bindPose1.m[5]";
+connectAttr "BaseRigRN.phl[2185]" "bindPose1.m[7]";
+connectAttr "BaseRigRN.phl[2186]" "bindPose1.m[8]";
+connectAttr "BaseRigRN.phl[2187]" "skinCluster6.lw[2]";
+connectAttr "BaseRigRN.phl[2188]" "bindPose1.m[10]";
+connectAttr "BaseRigRN.phl[2189]" "skinCluster6.ma[2]";
+connectAttr "BaseRigRN.phl[2190]" "skinCluster6.ifcl[2]";
+connectAttr "BaseRigRN.phl[2191]" "skinCluster6.lw[3]";
+connectAttr "BaseRigRN.phl[2192]" "bindPose1.m[11]";
+connectAttr "BaseRigRN.phl[2193]" "skinCluster6.ma[3]";
+connectAttr "BaseRigRN.phl[2194]" "skinCluster6.ifcl[3]";
+connectAttr "BaseRigRN.phl[2195]" "bindPose1.wm[122]";
+connectAttr "BaseRigRN.phl[2196]" "skinCluster6.lw[4]";
+connectAttr "BaseRigRN.phl[2197]" "bindPose1.m[122]";
+connectAttr "BaseRigRN.phl[2198]" "skinCluster6.ma[4]";
+connectAttr "BaseRigRN.phl[2199]" "skinCluster6.ifcl[4]";
+connectAttr "BaseRigRN.phl[2200]" "bindPose1.m[13]";
+connectAttr "BaseRigRN.phl[2201]" "bindPose1.m[14]";
+connectAttr "BaseRigRN.phl[2202]" "bindPose1.m[16]";
+connectAttr "BaseRigRN.phl[2203]" "bindPose1.m[17]";
+connectAttr "BaseRigRN.phl[2204]" "skinCluster6.lw[5]";
+connectAttr "BaseRigRN.phl[2205]" "bindPose1.m[19]";
+connectAttr "BaseRigRN.phl[2206]" "skinCluster6.ma[5]";
+connectAttr "BaseRigRN.phl[2207]" "skinCluster6.ifcl[5]";
+connectAttr "BaseRigRN.phl[2208]" "skinCluster6.lw[6]";
+connectAttr "BaseRigRN.phl[2209]" "bindPose1.m[20]";
+connectAttr "BaseRigRN.phl[2210]" "skinCluster6.ma[6]";
+connectAttr "BaseRigRN.phl[2211]" "skinCluster6.ifcl[6]";
+connectAttr "BaseRigRN.phl[2212]" "bindPose1.wm[121]";
+connectAttr "BaseRigRN.phl[2213]" "skinCluster6.lw[7]";
+connectAttr "BaseRigRN.phl[2214]" "bindPose1.m[121]";
+connectAttr "BaseRigRN.phl[2215]" "skinCluster6.ma[7]";
+connectAttr "BaseRigRN.phl[2216]" "skinCluster6.ifcl[7]";
+connectAttr "BaseRigRN.phl[2217]" "bindPose1.m[26]";
+connectAttr "BaseRigRN.phl[2218]" "skinCluster6.lw[12]";
+connectAttr "BaseRigRN.phl[2219]" "skinCluster6.ma[12]";
+connectAttr "BaseRigRN.phl[2220]" "skinCluster6.ifcl[12]";
+connectAttr "BaseRigRN.phl[2221]" "bindPose1.m[27]";
+connectAttr "BaseRigRN.phl[2222]" "skinCluster6.lw[13]";
+connectAttr "BaseRigRN.phl[2223]" "skinCluster6.ma[13]";
+connectAttr "BaseRigRN.phl[2224]" "skinCluster6.ifcl[13]";
+connectAttr "BaseRigRN.phl[2225]" "bindPose1.m[28]";
+connectAttr "BaseRigRN.phl[2226]" "skinCluster6.lw[14]";
+connectAttr "BaseRigRN.phl[2227]" "skinCluster6.ma[14]";
+connectAttr "BaseRigRN.phl[2228]" "skinCluster6.ifcl[14]";
+connectAttr "BaseRigRN.phl[2229]" "Ear_J_L.is";
+connectAttr "BaseRigRN.phl[2230]" "Ear_J_R.is";
+connectAttr "BaseRigRN.phl[2231]" "bindPose1.m[29]";
+connectAttr "BaseRigRN.phl[2232]" "skinCluster6.lw[15]";
+connectAttr "BaseRigRN.phl[2233]" "skinCluster6.ma[15]";
+connectAttr "BaseRigRN.phl[2234]" "skinCluster6.ifcl[15]";
+connectAttr "BaseRigRN.phl[2235]" "bindPose1.m[115]";
+connectAttr "BaseRigRN.phl[2236]" "bindPose1.wm[115]";
+connectAttr "BaseRigRN.phl[2237]" "skinCluster6.lw[16]";
+connectAttr "BaseRigRN.phl[2238]" "skinCluster6.ma[16]";
+connectAttr "BaseRigRN.phl[2239]" "skinCluster6.ifcl[16]";
+connectAttr "BaseRigRN.phl[2240]" "bindPose1.m[30]";
+connectAttr "groupParts16.og" "BaseRigRN.phl[2241]";
+connectAttr "BaseRigRN.phl[2242]" "Black_Shader1SG.dsm" -na;
+connectAttr "groupId37.id" "BaseRigRN.phl[2243]";
+connectAttr "Black_Shader1SG.mwc" "BaseRigRN.phl[2244]";
+connectAttr "BaseRigRN.phl[2245]" "lambert3SG.dsm" -na;
+connectAttr "groupId39.id" "BaseRigRN.phl[2246]";
+connectAttr "lambert3SG.mwc" "BaseRigRN.phl[2247]";
+connectAttr "BaseRigRN.phl[2248]" "lambert2SG.dsm" -na;
+connectAttr "groupId38.id" "BaseRigRN.phl[2249]";
+connectAttr "BaseRigRN.phl[2250]" "bindPose1.m[114]";
+connectAttr "BaseRigRN.phl[2251]" "bindPose1.wm[114]";
+connectAttr "BaseRigRN.phl[2252]" "skinCluster6.lw[17]";
+connectAttr "BaseRigRN.phl[2253]" "skinCluster6.ma[17]";
+connectAttr "BaseRigRN.phl[2254]" "skinCluster6.ifcl[17]";
+connectAttr "BaseRigRN.phl[2255]" "bindPose1.m[32]";
+connectAttr "groupParts18.og" "BaseRigRN.phl[2256]";
+connectAttr "BaseRigRN.phl[2257]" "Black_Shader1SG.dsm" -na;
+connectAttr "groupId40.id" "BaseRigRN.phl[2258]";
+connectAttr "Black_Shader1SG.mwc" "BaseRigRN.phl[2259]";
+connectAttr "BaseRigRN.phl[2260]" "lambert3SG.dsm" -na;
+connectAttr "groupId42.id" "BaseRigRN.phl[2261]";
+connectAttr "lambert3SG.mwc" "BaseRigRN.phl[2262]";
+connectAttr "BaseRigRN.phl[2263]" "lambert2SG.dsm" -na;
+connectAttr "groupId41.id" "BaseRigRN.phl[2264]";
+connectAttr "BaseRigRN.phl[2265]" "bindPose1.m[116]";
+connectAttr "BaseRigRN.phl[2266]" "bindPose1.wm[116]";
+connectAttr "BaseRigRN.phl[2267]" "skinCluster6.lw[18]";
+connectAttr "BaseRigRN.phl[2268]" "skinCluster6.ma[18]";
+connectAttr "BaseRigRN.phl[2269]" "skinCluster6.ifcl[18]";
+connectAttr "BaseRigRN.phl[2270]" "|BaseRigRNfosterParent1|Wing_01_J_L.is";
+connectAttr "BaseRigRN.phl[2271]" "bindPose1.m[37]";
+connectAttr "BaseRigRN.phl[2272]" "skinCluster6.lw[19]";
+connectAttr "BaseRigRN.phl[2273]" "skinCluster6.ma[19]";
+connectAttr "BaseRigRN.phl[2274]" "skinCluster6.ifcl[19]";
+connectAttr "BaseRigRN.phl[2275]" "bindPose1.m[38]";
+connectAttr "BaseRigRN.phl[2276]" "bindPose1.m[39]";
+connectAttr "BaseRigRN.phl[2277]" "bindPose1.m[40]";
+connectAttr "BaseRigRN.phl[2278]" "bindPose1.m[42]";
+connectAttr "BaseRigRN.phl[2279]" "bindPose1.m[43]";
+connectAttr "BaseRigRN.phl[2280]" "bindPose1.m[44]";
+connectAttr "BaseRigRN.phl[2281]" "bindPose1.m[46]";
+connectAttr "BaseRigRN.phl[2282]" "skinCluster6.lw[20]";
+connectAttr "BaseRigRN.phl[2283]" "bindPose1.m[47]";
+connectAttr "BaseRigRN.phl[2284]" "skinCluster6.ma[20]";
+connectAttr "BaseRigRN.phl[2285]" "skinCluster6.ifcl[20]";
+connectAttr "BaseRigRN.phl[2286]" "skinCluster6.lw[21]";
+connectAttr "BaseRigRN.phl[2287]" "bindPose1.m[48]";
+connectAttr "BaseRigRN.phl[2288]" "skinCluster6.ma[21]";
+connectAttr "BaseRigRN.phl[2289]" "skinCluster6.ifcl[21]";
+connectAttr "BaseRigRN.phl[2290]" "L_Hand_Ctrl_Grp_parentConstraint1.tg[0].tis";
+connectAttr "BaseRigRN.phl[2291]" "L_Hand_Ctrl_Grp_parentConstraint1.tg[0].tt";
+connectAttr "BaseRigRN.phl[2292]" "L_Hand_Ctrl_Grp_parentConstraint1.tg[0].tr";
+connectAttr "BaseRigRN.phl[2293]" "Finger_04_J_L.is";
+connectAttr "BaseRigRN.phl[2294]" "Finger_02_J_L.is";
+connectAttr "BaseRigRN.phl[2295]" "Finger_01_J_L.is";
+connectAttr "BaseRigRN.phl[2296]" "L_Hand_Ctrl_Grp_parentConstraint1.tg[0].ts";
+connectAttr "BaseRigRN.phl[2297]" "Finger_03_J_L.is";
+connectAttr "BaseRigRN.phl[2298]" "L_Hand_Ctrl_Grp_parentConstraint1.tg[0].tro";
+connectAttr "BaseRigRN.phl[2299]" "L_Hand_Ctrl_Grp_parentConstraint1.tg[0].trp";
+connectAttr "BaseRigRN.phl[2300]" "L_Hand_Ctrl_Grp_parentConstraint1.tg[0].trt";
+connectAttr "BaseRigRN.phl[2301]" "L_Hand_Ctrl_Grp_parentConstraint1.tg[0].tjo";
+connectAttr "BaseRigRN.phl[2302]" "L_Hand_Ctrl_Grp_parentConstraint1.tg[0].tsc";
+connectAttr "BaseRigRN.phl[2303]" "skinCluster6.lw[22]";
+connectAttr "BaseRigRN.phl[2304]" "L_Hand_Ctrl_Grp_parentConstraint1.tg[0].tpm";
+connectAttr "BaseRigRN.phl[2305]" "bindPose1.m[49]";
+connectAttr "BaseRigRN.phl[2306]" "skinCluster6.ma[22]";
+connectAttr "BaseRigRN.phl[2307]" "skinCluster6.ifcl[22]";
+connectAttr "BaseRigRN.phl[2308]" "Wing_01_J_R.is";
+connectAttr "BaseRigRN.phl[2309]" "bindPose1.m[56]";
+connectAttr "BaseRigRN.phl[2310]" "skinCluster6.lw[27]";
+connectAttr "BaseRigRN.phl[2311]" "skinCluster6.ma[27]";
+connectAttr "BaseRigRN.phl[2312]" "skinCluster6.ifcl[27]";
+connectAttr "BaseRigRN.phl[2313]" "bindPose1.m[57]";
+connectAttr "BaseRigRN.phl[2314]" "bindPose1.m[58]";
+connectAttr "BaseRigRN.phl[2315]" "bindPose1.m[59]";
+connectAttr "BaseRigRN.phl[2316]" "bindPose1.m[61]";
+connectAttr "BaseRigRN.phl[2317]" "bindPose1.m[62]";
+connectAttr "BaseRigRN.phl[2318]" "bindPose1.m[63]";
+connectAttr "BaseRigRN.phl[2319]" "bindPose1.m[91]";
+connectAttr "BaseRigRN.phl[2320]" "bindPose1.wm[91]";
+connectAttr "BaseRigRN.phl[2321]" "bindPose1.m[65]";
+connectAttr "BaseRigRN.phl[2322]" "skinCluster6.lw[28]";
+connectAttr "BaseRigRN.phl[2323]" "bindPose1.m[66]";
+connectAttr "BaseRigRN.phl[2324]" "skinCluster6.ma[28]";
+connectAttr "BaseRigRN.phl[2325]" "skinCluster6.ifcl[28]";
+connectAttr "BaseRigRN.phl[2326]" "skinCluster6.lw[29]";
+connectAttr "BaseRigRN.phl[2327]" "bindPose1.m[67]";
+connectAttr "BaseRigRN.phl[2328]" "skinCluster6.ma[29]";
+connectAttr "BaseRigRN.phl[2329]" "skinCluster6.ifcl[29]";
+connectAttr "BaseRigRN.phl[2330]" "R_Hand_Ctrl_grp_parentConstraint1.tg[0].tis";
+connectAttr "BaseRigRN.phl[2331]" "R_Hand_Ctrl_grp_parentConstraint1.tg[0].tt";
+connectAttr "BaseRigRN.phl[2332]" "R_Hand_Ctrl_grp_parentConstraint1.tg[0].tr";
+connectAttr "BaseRigRN.phl[2333]" "Finger_04_J_R.is";
+connectAttr "BaseRigRN.phl[2334]" "Finger_03_J_R.is";
+connectAttr "BaseRigRN.phl[2335]" "Finger_02_J_R.is";
+connectAttr "BaseRigRN.phl[2336]" "Finger_01_J_R.is";
+connectAttr "BaseRigRN.phl[2337]" "R_Hand_Ctrl_grp_parentConstraint1.tg[0].ts";
+connectAttr "BaseRigRN.phl[2338]" "R_Hand_Ctrl_grp_parentConstraint1.tg[0].tro";
+connectAttr "BaseRigRN.phl[2339]" "R_Hand_Ctrl_grp_parentConstraint1.tg[0].trp";
+connectAttr "BaseRigRN.phl[2340]" "R_Hand_Ctrl_grp_parentConstraint1.tg[0].trt";
+connectAttr "BaseRigRN.phl[2341]" "R_Hand_Ctrl_grp_parentConstraint1.tg[0].tjo";
+connectAttr "BaseRigRN.phl[2342]" "R_Hand_Ctrl_grp_parentConstraint1.tg[0].tsc";
+connectAttr "BaseRigRN.phl[2343]" "skinCluster6.lw[30]";
+connectAttr "BaseRigRN.phl[2344]" "R_Hand_Ctrl_grp_parentConstraint1.tg[0].tpm";
+connectAttr "BaseRigRN.phl[2345]" "bindPose1.m[68]";
+connectAttr "BaseRigRN.phl[2346]" "skinCluster6.ma[30]";
+connectAttr "BaseRigRN.phl[2347]" "skinCluster6.ifcl[30]";
+connectAttr "BaseRigRN.phl[2348]" "blendShape1.w[0]";
+connectAttr "Jaw_J_CTRL_Smile.o" "BaseRigRN.phl[2349]";
+connectAttr "BaseRigRN.phl[2350]" "blendShape1.w[1]";
+connectAttr "Jaw_J_CTRL_Frown.o" "BaseRigRN.phl[2351]";
+connectAttr "World_Dragon.msg" "BaseRigRN.phl[2352]";
+connectAttr "Skeleton.msg" "BaseRigRN.phl[2353]";
+connectAttr "BaseRigRN.phl[2354]" "BaseRigRN.phl[2355]";
+connectAttr "BaseRigRN.phl[2356]" "BaseRigRN.phl[2357]";
+connectAttr "BaseRigRN.phl[2358]" "BaseRigRN.phl[2359]";
+connectAttr "BaseRigRN.phl[2360]" "BaseRigRN.phl[2361]";
+connectAttr "BaseRigRN.phl[2362]" "BaseRigRN.phl[2363]";
+connectAttr "BaseRigRN.phl[2364]" "BaseRigRN.phl[2365]";
+connectAttr "Tail_01_J.msg" "BaseRigRN.phl[2366]";
+connectAttr "Tail__2_J.msg" "BaseRigRN.phl[2367]";
+connectAttr "Tail_03_J.msg" "BaseRigRN.phl[2368]";
+connectAttr "Tail_04_J.msg" "BaseRigRN.phl[2369]";
+connectAttr "BaseRigRN.phl[2370]" "BaseRigRN.phl[2371]";
+connectAttr "BaseRigRN.phl[2372]" "BaseRigRN.phl[2373]";
+connectAttr "BaseRigRN.phl[2374]" "BaseRigRN.phl[2375]";
+connectAttr "BaseRigRN.phl[2376]" "BaseRigRN.phl[2377]";
+connectAttr "BaseRigRN.phl[2378]" "BaseRigRN.phl[2379]";
+connectAttr "BaseRigRN.phl[2380]" "BaseRigRN.phl[2381]";
+connectAttr "BaseRigRN.phl[2382]" "BaseRigRN.phl[2383]";
+connectAttr "BaseRigRN.phl[2384]" "BaseRigRN.phl[2385]";
+connectAttr "BaseRigRN.phl[2386]" "BaseRigRN.phl[2387]";
+connectAttr "Finger_01_J_L.msg" "BaseRigRN.phl[2388]";
+connectAttr "Finger_02_J_L.msg" "BaseRigRN.phl[2389]";
+connectAttr "Finger_03_J_L.msg" "BaseRigRN.phl[2390]";
+connectAttr "Finger_04_J_L.msg" "BaseRigRN.phl[2391]";
+connectAttr "BaseRigRN.phl[2392]" "BaseRigRN.phl[2393]";
+connectAttr "BaseRigRN.phl[2394]" "BaseRigRN.phl[2395]";
+connectAttr "BaseRigRN.phl[2396]" "BaseRigRN.phl[2397]";
+connectAttr "BaseRigRN.phl[2398]" "BaseRigRN.phl[2399]";
+connectAttr "Finger_01_J_R.msg" "BaseRigRN.phl[2400]";
+connectAttr "Finger_02_J_R.msg" "BaseRigRN.phl[2401]";
+connectAttr "Finger_03_J_R.msg" "BaseRigRN.phl[2402]";
+connectAttr "Finger_04_J_R.msg" "BaseRigRN.phl[2403]";
+connectAttr "BaseRigRN.phl[2404]" "BaseRigRN.phl[2405]";
+connectAttr "BaseRigRN.phl[2406]" "BaseRigRN.phl[2407]";
+connectAttr "World_Dragon.msg" "BaseRigRN.phl[2408]";
+connectAttr "BaseRigRN.phl[2409]" "BaseRigRN.phl[2410]";
+connectAttr "BaseRigRN.phl[2411]" "BaseRigRN.phl[2412]";
+connectAttr "BaseRigRN.phl[2413]" "BaseRigRN.phl[2414]";
+connectAttr "BaseRigRN.phl[2415]" "BaseRigRN.phl[2416]";
+connectAttr "BaseRigRN.phl[2417]" "BaseRigRN.phl[2418]";
+connectAttr "BaseRigRN.phl[2419]" "BaseRigRN.phl[2420]";
+connectAttr "BaseRigRN.phl[2421]" "BaseRigRN.phl[2422]";
+connectAttr "Tail_01_J.msg" "BaseRigRN.phl[2423]";
+connectAttr "Tail__2_J.msg" "BaseRigRN.phl[2424]";
+connectAttr "Tail_03_J.msg" "BaseRigRN.phl[2425]";
+connectAttr "BaseRigRN.phl[2426]" "BaseRigRN.phl[2427]";
+connectAttr "BaseRigRN.phl[2428]" "BaseRigRN.phl[2429]";
+connectAttr "BaseRigRN.phl[2430]" "BaseRigRN.phl[2431]";
+connectAttr "BaseRigRN.phl[2432]" "BaseRigRN.phl[2433]";
+connectAttr "BaseRigRN.phl[2434]" "BaseRigRN.phl[2435]";
+connectAttr "BaseRigRN.phl[2436]" "BaseRigRN.phl[2437]";
+connectAttr "BaseRigRN.phl[2438]" "BaseRigRN.phl[2439]";
+connectAttr "BaseRigRN.phl[2440]" "BaseRigRN.phl[2441]";
+connectAttr "BaseRigRN.phl[2442]" "BaseRigRN.phl[2443]";
+connectAttr "BaseRigRN.phl[2444]" "BaseRigRN.phl[2445]";
+connectAttr "BaseRigRN.phl[2446]" "BaseRigRN.phl[2447]";
+connectAttr "BaseRigRN.phl[2448]" "BaseRigRN.phl[2449]";
+connectAttr "BaseRigRN.phl[2450]" "BaseRigRN.phl[2451]";
+connectAttr "BaseRigRN.phl[2452]" "BaseRigRN.phl[2453]";
+connectAttr "BaseRigRN.phl[2454]" "BaseRigRN.phl[2455]";
+connectAttr "BaseRigRN.phl[2456]" "BaseRigRN.phl[2457]";
+connectAttr "BaseRigRN.phl[2458]" "BaseRigRN.phl[2459]";
+connectAttr "BaseRigRN.phl[2460]" "BaseRigRN.phl[2461]";
+connectAttr "BaseRigRN.phl[2462]" "BaseRigRN.phl[2463]";
+connectAttr "BaseRigRN.phl[2464]" "BaseRigRN.phl[2465]";
+connectAttr "BaseRigRN.phl[2466]" "BaseRigRN.phl[2467]";
+connectAttr "BaseRigRN.phl[2468]" "BaseRigRN.phl[2469]";
+connectAttr "BaseRigRN.phl[2470]" "BaseRigRN.phl[2471]";
+connectAttr "BaseRigRN.phl[2472]" "BaseRigRN.phl[2473]";
+connectAttr "BaseRigRN.phl[2474]" "BaseRigRN.phl[2475]";
+connectAttr "BaseRigRN.phl[2476]" "BaseRigRN.phl[2477]";
+connectAttr "BaseRigRN.phl[2478]" "BaseRigRN.phl[2479]";
+connectAttr "Tail_01_J.bps" "BaseRigRN.phl[2480]";
+connectAttr "Tail__2_J.bps" "BaseRigRN.phl[2481]";
+connectAttr "Tail_03_J.bps" "BaseRigRN.phl[2482]";
+connectAttr "Tail_04_J.bps" "BaseRigRN.phl[2483]";
+connectAttr "BaseRigRN.phl[2484]" "BaseRigRN.phl[2485]";
+connectAttr "BaseRigRN.phl[2486]" "BaseRigRN.phl[2487]";
+connectAttr "BaseRigRN.phl[2488]" "BaseRigRN.phl[2489]";
+connectAttr "BaseRigRN.phl[2490]" "BaseRigRN.phl[2491]";
+connectAttr "BaseRigRN.phl[2492]" "BaseRigRN.phl[2493]";
+connectAttr "BaseRigRN.phl[2494]" "BaseRigRN.phl[2495]";
+connectAttr "BaseRigRN.phl[2496]" "BaseRigRN.phl[2497]";
+connectAttr "BaseRigRN.phl[2498]" "BaseRigRN.phl[2499]";
+connectAttr "BaseRigRN.phl[2500]" "BaseRigRN.phl[2501]";
+connectAttr "Finger_01_J_L.bps" "BaseRigRN.phl[2502]";
+connectAttr "Finger_02_J_L.bps" "BaseRigRN.phl[2503]";
+connectAttr "Finger_03_J_L.bps" "BaseRigRN.phl[2504]";
+connectAttr "Finger_04_J_L.bps" "BaseRigRN.phl[2505]";
+connectAttr "BaseRigRN.phl[2506]" "BaseRigRN.phl[2507]";
+connectAttr "BaseRigRN.phl[2508]" "BaseRigRN.phl[2509]";
+connectAttr "BaseRigRN.phl[2510]" "BaseRigRN.phl[2511]";
+connectAttr "BaseRigRN.phl[2512]" "BaseRigRN.phl[2513]";
+connectAttr "Finger_01_J_R.bps" "BaseRigRN.phl[2514]";
+connectAttr "Finger_02_J_R.bps" "BaseRigRN.phl[2515]";
+connectAttr "Finger_03_J_R.bps" "BaseRigRN.phl[2516]";
+connectAttr "Finger_04_J_R.bps" "BaseRigRN.phl[2517]";
+connectAttr "BaseRigRN.phl[2518]" "groupParts15.ig";
+connectAttr "BaseRigRN.phl[2519]" "groupParts17.ig";
+connectAttr "BaseCharacterSet_LowerBack_J_CTRL_rotateZ.o" "BaseRigRN.phl[2520]";
+connectAttr "BaseCharacterSet_LowerBack_J_CTRL_rotateY.o" "BaseRigRN.phl[2521]";
+connectAttr "BaseCharacterSet_LowerBack_J_CTRL_rotateX.o" "BaseRigRN.phl[2522]";
+connectAttr "BaseCharacterSet_MiddleBack_j_CTRL_rotateZ.o" "BaseRigRN.phl[2523]"
 		;
-connectAttr "BaseCharacterSet_MiddleBack_j_CTRL_rotateY.o" "BaseRigRN.phl[2160]"
+connectAttr "BaseCharacterSet_MiddleBack_j_CTRL_rotateY.o" "BaseRigRN.phl[2524]"
 		;
-connectAttr "BaseCharacterSet_UpperBack_j_CTRL_rotateZ.o" "BaseRigRN.phl[2161]";
-connectAttr "BaseCharacterSet_UpperBack_j_CTRL_rotateY.o" "BaseRigRN.phl[2162]";
-connectAttr "BaseCharacterSet_UpperBack_j_CTRL_rotateX.o" "BaseRigRN.phl[2163]";
-connectAttr "BaseCharacterSet_head_J_CTRL_rotateZ.o" "BaseRigRN.phl[2164]";
-connectAttr "BaseCharacterSet_head_J_CTRL_rotateY.o" "BaseRigRN.phl[2165]";
-connectAttr "BaseCharacterSet_head_J_CTRL_rotateX.o" "BaseRigRN.phl[2166]";
-connectAttr "BaseCharacterSet_Eye_J_L_CTRL_rotateZ.o" "BaseRigRN.phl[2167]";
-connectAttr "BaseCharacterSet_Eye_J_L_CTRL_rotateY.o" "BaseRigRN.phl[2168]";
-connectAttr "BaseCharacterSet_EyeLid_J_L_CTRL_rotateZ.o" "BaseRigRN.phl[2169]";
-connectAttr "BaseCharacterSet_EyeLid_J_L_CTRL_rotateX.o" "BaseRigRN.phl[2170]";
-connectAttr "BaseCharacterSet_Eye_J_R_CTRL_rotateZ.o" "BaseRigRN.phl[2171]";
-connectAttr "BaseCharacterSet_Eye_J_R_CTRL_rotateY.o" "BaseRigRN.phl[2172]";
-connectAttr "BaseCharacterSet_EyeLid_J_R_CTRL_rotateZ1.o" "BaseRigRN.phl[2173]";
-connectAttr "BaseCharacterSet_EyeLid_J_R_CTRL_rotateX.o" "BaseRigRN.phl[2174]";
-connectAttr "BaseCharacterSet_Elbow_J_L_CTRL_rotateZ.o" "BaseRigRN.phl[2175]";
-connectAttr "BaseCharacterSet_Elbow_J_L_CTRL_rotateY.o" "BaseRigRN.phl[2176]";
-connectAttr "BaseCharacterSet_Elbow_J_L_CTRL_rotateX.o" "BaseRigRN.phl[2177]";
-connectAttr "BaseCharacterSet_Wrist_J_L_CTRL_rotateZ.o" "BaseRigRN.phl[2178]";
-connectAttr "BaseCharacterSet_Wrist_J_L_CTRL_rotateY.o" "BaseRigRN.phl[2179]";
-connectAttr "BaseCharacterSet_Wrist_J_L_CTRL_rotateX.o" "BaseRigRN.phl[2180]";
-connectAttr "BaseCharacterSet_Shoulder_J_R_CTRL_rotateZ.o" "BaseRigRN.phl[2181]"
+connectAttr "BaseCharacterSet_UpperBack_j_CTRL_rotateZ.o" "BaseRigRN.phl[2525]";
+connectAttr "BaseCharacterSet_UpperBack_j_CTRL_rotateY.o" "BaseRigRN.phl[2526]";
+connectAttr "BaseCharacterSet_UpperBack_j_CTRL_rotateX.o" "BaseRigRN.phl[2527]";
+connectAttr "BaseCharacterSet_head_J_CTRL_rotateZ.o" "BaseRigRN.phl[2528]";
+connectAttr "BaseCharacterSet_head_J_CTRL_rotateY.o" "BaseRigRN.phl[2529]";
+connectAttr "BaseCharacterSet_head_J_CTRL_rotateX.o" "BaseRigRN.phl[2530]";
+connectAttr "BaseCharacterSet_Eye_J_L_CTRL_rotateZ.o" "BaseRigRN.phl[2531]";
+connectAttr "BaseCharacterSet_Eye_J_L_CTRL_rotateY.o" "BaseRigRN.phl[2532]";
+connectAttr "BaseCharacterSet_EyeLid_J_L_CTRL_rotateZ.o" "BaseRigRN.phl[2533]";
+connectAttr "BaseCharacterSet_EyeLid_J_L_CTRL_rotateX.o" "BaseRigRN.phl[2534]";
+connectAttr "BaseCharacterSet_Eye_J_R_CTRL_rotateZ.o" "BaseRigRN.phl[2535]";
+connectAttr "BaseCharacterSet_Eye_J_R_CTRL_rotateY.o" "BaseRigRN.phl[2536]";
+connectAttr "BaseCharacterSet_EyeLid_J_R_CTRL_rotateZ.o" "BaseRigRN.phl[2537]";
+connectAttr "BaseCharacterSet_EyeLid_J_R_CTRL_rotateX.o" "BaseRigRN.phl[2538]";
+connectAttr "BaseCharacterSet_Elbow_J_L_CTRL_rotateZ.o" "BaseRigRN.phl[2539]";
+connectAttr "BaseCharacterSet_Elbow_J_L_CTRL_rotateY.o" "BaseRigRN.phl[2540]";
+connectAttr "BaseCharacterSet_Elbow_J_L_CTRL_rotateX.o" "BaseRigRN.phl[2541]";
+connectAttr "BaseCharacterSet_Wrist_J_L_CTRL_rotateZ.o" "BaseRigRN.phl[2542]";
+connectAttr "BaseCharacterSet_Wrist_J_L_CTRL_rotateY.o" "BaseRigRN.phl[2543]";
+connectAttr "BaseCharacterSet_Wrist_J_L_CTRL_rotateX.o" "BaseRigRN.phl[2544]";
+connectAttr "BaseCharacterSet_Shoulder_J_R_CTRL_rotateZ.o" "BaseRigRN.phl[2545]"
 		;
-connectAttr "BaseCharacterSet_Shoulder_J_R_CTRL_rotateY.o" "BaseRigRN.phl[2182]"
+connectAttr "BaseCharacterSet_Shoulder_J_R_CTRL_rotateY.o" "BaseRigRN.phl[2546]"
 		;
-connectAttr "BaseCharacterSet_Shoulder_J_R_CTRL_rotateX.o" "BaseRigRN.phl[2183]"
+connectAttr "BaseCharacterSet_Shoulder_J_R_CTRL_rotateX.o" "BaseRigRN.phl[2547]"
 		;
-connectAttr "BaseCharacterSet_Elbow_J_R_CTRL_rotateZ.o" "BaseRigRN.phl[2184]";
-connectAttr "BaseCharacterSet_Elbow_J_R_CTRL_rotateY.o" "BaseRigRN.phl[2185]";
-connectAttr "BaseCharacterSet_Elbow_J_R_CTRL_rotateX.o" "BaseRigRN.phl[2186]";
-connectAttr "BaseCharacterSet_Wrist_J_R_CTRL_rotateZ.o" "BaseRigRN.phl[2187]";
-connectAttr "BaseCharacterSet_Wrist_J_R_CTRL_rotateY.o" "BaseRigRN.phl[2188]";
-connectAttr "BaseCharacterSet_Wrist_J_R_CTRL_rotateX.o" "BaseRigRN.phl[2189]";
-connectAttr "BaseCharacterSet_Jaw_J_CTRL_rotateZ.o" "BaseRigRN.phl[2190]";
-connectAttr "BaseCharacterSet_Shoulder_J_L_CTRL_rotateZ.o" "BaseRigRN.phl[2191]"
+connectAttr "BaseCharacterSet_Elbow_J_R_CTRL_rotateZ.o" "BaseRigRN.phl[2548]";
+connectAttr "BaseCharacterSet_Elbow_J_R_CTRL_rotateY.o" "BaseRigRN.phl[2549]";
+connectAttr "BaseCharacterSet_Elbow_J_R_CTRL_rotateX.o" "BaseRigRN.phl[2550]";
+connectAttr "BaseCharacterSet_Wrist_J_R_CTRL_rotateZ.o" "BaseRigRN.phl[2551]";
+connectAttr "BaseCharacterSet_Wrist_J_R_CTRL_rotateY.o" "BaseRigRN.phl[2552]";
+connectAttr "BaseCharacterSet_Wrist_J_R_CTRL_rotateX.o" "BaseRigRN.phl[2553]";
+connectAttr "BaseCharacterSet_Jaw_J_CTRL_rotateZ.o" "BaseRigRN.phl[2554]";
+connectAttr "BaseCharacterSet_Shoulder_J_L_CTRL_rotateZ.o" "BaseRigRN.phl[2555]"
 		;
-connectAttr "BaseCharacterSet_Shoulder_J_L_CTRL_rotateY.o" "BaseRigRN.phl[2192]"
+connectAttr "BaseCharacterSet_Shoulder_J_L_CTRL_rotateY.o" "BaseRigRN.phl[2556]"
 		;
-connectAttr "BaseCharacterSet_Shoulder_J_L_CTRL_rotateX.o" "BaseRigRN.phl[2193]"
+connectAttr "BaseCharacterSet_Shoulder_J_L_CTRL_rotateX.o" "BaseRigRN.phl[2557]"
 		;
 connectAttr "Geometry_Layer.di" "Body_Geo_Low.do";
 connectAttr "groupId32.id" "Body_Geo_LowShape.iog.og[0].gid";
@@ -25704,7 +25703,7 @@ connectAttr "Yellow_ShaderSG.msg" "materialInfo2.sg";
 connectAttr "Red_ShaderSG.msg" "materialInfo3.sg";
 connectAttr "Blue_ShaderSG.msg" "materialInfo4.sg";
 connectAttr "Green_ShaderSG.msg" "materialInfo5.sg";
-connectAttr "BaseCharacterSet_EyeLid_J_R_CTRL_rotateZ.o" "BaseRigRN.phl[1809]";
+connectAttr "BaseCharacterSet_EyeLid_J_R_CTRL_rotateZ1.o" "BaseRigRN.phl[2173]";
 connectAttr "BaseRigRNfosterParent1.msg" "BaseRigRN.fp";
 connectAttr "sharedReferenceNode.sr" "BaseRigRN.sr";
 connectAttr "World_Dragon.msg" "bindPose1.m[0]";
