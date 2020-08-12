@@ -14,13 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vector3Datas:
   - {fileID: 11400000, guid: f8c06b9e88c81804fa4b816f2bb61dff, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 82168896334f6bf459a8cb8ad9f7f95c, type: 2}
+  - {fileID: 11400000, guid: 0c0511bdec8fccc4eb0ec7facc2c766a, type: 2}
+  - {fileID: 11400000, guid: b00ff3b65a88f35459437ba73ad3fc07, type: 2}
+  - {fileID: 11400000, guid: fe18b4f161fac344297e497704cf510b, type: 2}
+  - {fileID: 11400000, guid: 21d21bf1e58401849b3992fbce6c6158, type: 2}
+  - {fileID: 11400000, guid: 89ed4e7ed79f9c148a21340f227ffa0d, type: 2}
+  - {fileID: 11400000, guid: 78dd6ee1b3d143e449c48a277ad7e453, type: 2}
+  - {fileID: 11400000, guid: c9a32e9c1531ac94c85a72cc13c4eced, type: 2}
   index: 0
