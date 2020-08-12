@@ -419,7 +419,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 075a30697b40b05478017a2fc3843bf9, type: 3}
+  - {fileID: 2100000, guid: 952fea08b5fac4a41b1b04412be8eee3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1261,6 +1261,9 @@ MonoBehaviour:
       m_Calls: []
   respondEvent:
     m_PersistentCalls:
+      m_Calls: []
+  respondLateEvent:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1604810880565165057}
         m_MethodName: SetTrigger
@@ -1273,9 +1276,6 @@ MonoBehaviour:
           m_StringArgument: Celebrate
           m_BoolArgument: 0
         m_CallState: 2
-  respondLateEvent:
-    m_PersistentCalls:
-      m_Calls: []
   holdTime: 0.1
 --- !u!1 &3926824357396026392
 GameObject:
@@ -1556,7 +1556,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 075a30697b40b05478017a2fc3843bf9, type: 3}
+  - {fileID: 2100000, guid: 952fea08b5fac4a41b1b04412be8eee3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1975,7 +1975,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 075a30697b40b05478017a2fc3843bf9, type: 3}
+  - {fileID: 2100000, guid: 952fea08b5fac4a41b1b04412be8eee3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
