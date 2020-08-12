@@ -1218,12 +1218,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 455853484}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1264671979 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6825840490559150954, guid: f4dc2c32ec9299c4d918283e1eb9cafc,
-    type: 3}
-  m_PrefabInstance: {fileID: 6825840489634252673}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1266907577
 GameObject:
   m_ObjectHideFlags: 0
@@ -2540,7 +2534,7 @@ PrefabInstance:
     - target: {fileID: 6825840489845361621, guid: f4dc2c32ec9299c4d918283e1eb9cafc,
         type: 3}
       propertyPath: awakeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6825840489845361621, guid: f4dc2c32ec9299c4d918283e1eb9cafc,
         type: 3}
@@ -2551,12 +2545,12 @@ PrefabInstance:
         type: 3}
       propertyPath: awakeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 11400000, guid: f4158a26e46614e9a9825cd52c9cfd3b,
+      objectReference: {fileID: 11400000, guid: b3771086f9d932e48b4a9fd2f29177ce,
         type: 2}
     - target: {fileID: 6825840489845361621, guid: f4dc2c32ec9299c4d918283e1eb9cafc,
         type: 3}
       propertyPath: awakeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CreateInstance
+      value: SetValue
       objectReference: {fileID: 0}
     - target: {fileID: 6825840489845361621, guid: f4dc2c32ec9299c4d918283e1eb9cafc,
         type: 3}
@@ -2566,7 +2560,7 @@ PrefabInstance:
     - target: {fileID: 6825840489845361621, guid: f4dc2c32ec9299c4d918283e1eb9cafc,
         type: 3}
       propertyPath: awakeEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6825840489845361621, guid: f4dc2c32ec9299c4d918283e1eb9cafc,
         type: 3}
@@ -2577,28 +2571,27 @@ PrefabInstance:
         type: 3}
       propertyPath: awakeEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 11400000, guid: f4158a26e46614e9a9825cd52c9cfd3b,
+      objectReference: {fileID: 11400000, guid: 26f8f97231f9c9447aaa91ff11331862,
         type: 2}
     - target: {fileID: 6825840489845361621, guid: f4dc2c32ec9299c4d918283e1eb9cafc,
         type: 3}
       propertyPath: awakeEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: InstanceAddToParent
+      value: SetValue
       objectReference: {fileID: 0}
     - target: {fileID: 6825840489845361621, guid: f4dc2c32ec9299c4d918283e1eb9cafc,
         type: 3}
       propertyPath: awakeEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6825840489845361621, guid: f4dc2c32ec9299c4d918283e1eb9cafc,
         type: 3}
       propertyPath: awakeEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 6160632511927733173, guid: c9606b2b208765f49bf8e923f7dc725c,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6825840489845361621, guid: f4dc2c32ec9299c4d918283e1eb9cafc,
         type: 3}
       propertyPath: awakeEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6825840489845361621, guid: f4dc2c32ec9299c4d918283e1eb9cafc,
         type: 3}
@@ -2614,17 +2607,22 @@ PrefabInstance:
     - target: {fileID: 6825840489845361621, guid: f4dc2c32ec9299c4d918283e1eb9cafc,
         type: 3}
       propertyPath: awakeEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: AddPositionToList
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6825840489845361621, guid: f4dc2c32ec9299c4d918283e1eb9cafc,
         type: 3}
       propertyPath: awakeEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Transform, UnityEngine
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6825840489845361621, guid: f4dc2c32ec9299c4d918283e1eb9cafc,
         type: 3}
       propertyPath: awakeEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 1264671979}
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825840489845361621, guid: f4dc2c32ec9299c4d918283e1eb9cafc,
+        type: 3}
+      propertyPath: awakeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4dc2c32ec9299c4d918283e1eb9cafc, type: 3}
