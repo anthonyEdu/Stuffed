@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Locations
   m_EditorClassIdentifier: 
   vector3Datas:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: f8c06b9e88c81804fa4b816f2bb61dff, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
