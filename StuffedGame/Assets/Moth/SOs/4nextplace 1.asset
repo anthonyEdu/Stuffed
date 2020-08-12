@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e259f11b1e8c34e6d99ae3b36e535d88, type: 3}
   m_Name: 4nextplace 1
   m_EditorClassIdentifier: 
-  value: {x: -1.43, y: 1.54, z: 10.25}
+  value: {x: -1.43, y: 1.7, z: 10.25}
