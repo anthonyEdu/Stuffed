@@ -1,5 +1,7 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD
+=======
 --- !u!1107 &-6127817705966851368
 AnimatorStateMachine:
   serializedVersion: 5
@@ -19,6 +21,7 @@ AnimatorStateMachine:
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 0}
+>>>>>>> master
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -28,6 +31,9 @@ AnimatorController:
   m_Name: CharacterAnims
   serializedVersion: 5
   m_AnimatorParameters: []
+<<<<<<< HEAD
+  m_AnimatorLayers: []
+=======
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -41,3 +47,4 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+>>>>>>> master
