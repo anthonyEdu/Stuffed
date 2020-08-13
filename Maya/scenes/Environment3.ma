@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: Environment3.ma
-//Last modified: Thu, Aug 13, 2020 09:27:41 AM
+//Last modified: Thu, Aug 13, 2020 10:00:37 AM
 //Codeset: 1252
 requires maya "2020";
 requires "mtoa" "4.0.3";
@@ -11,7 +11,7 @@ fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "202004291615-7bd99f0972";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 18363)\n";
-fileInfo "UUID" "438E3CF5-4FD9-838D-8BDB-3DA0ABF0F823";
+fileInfo "UUID" "59A8C799-4914-33AE-1635-1C88F90EE684";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "EBC1E02C-4337-6BDA-BD60-8A989C270227";
@@ -3755,19 +3755,19 @@ createNode mesh -n "pCubeShape8" -p "pCube8";
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "F7D0B88D-4FD4-8C69-D725-519788E64CD2";
+	rename -uid "F84FB02D-46A6-5F33-4B7C-AC8274EB75AB";
 	setAttr -s 9 ".lnk";
 	setAttr -s 9 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "91B2B82B-471A-E48D-0B89-47A91BB41BC1";
+	rename -uid "2E481650-4E8A-4F93-55DE-F981B168A51C";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "EA0B5781-4B3E-BC41-B4E4-9B988ACD4D17";
+	rename -uid "3982D5C1-48A8-409B-E827-0AB8A69AD6EE";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "AC789401-4400-DAC3-C3A6-38BC559356D7";
+	rename -uid "08558F36-4E57-C8AF-A4B3-37BB7D29330C";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "6F4EA94F-4B4D-0EFE-6DD3-15BA265F6378";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "D8ED9121-405B-E548-640D-B190EC5059F2";
+	rename -uid "C771BC04-45CB-EB80-9074-289C208F889A";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "C142DA39-44ED-A04B-77C6-D39B0EB34981";
 	setAttr ".g" yes;
@@ -4119,7 +4119,7 @@ createNode polyDelEdge -n "polyDelEdge1";
 createNode polyTweak -n "polyTweak1";
 	rename -uid "35C0DD84-4763-5E59-39D5-E697F12E77F8";
 	setAttr ".uopa" yes;
-	setAttr -s 7 ".tk";
+	setAttr -s 6 ".tk";
 	setAttr ".tk[14]" -type "float3" 0.018068392 -0.016890639 0 ;
 	setAttr ".tk[15]" -type "float3" 0.018068392 -0.016890639 0 ;
 	setAttr ".tk[34]" -type "float3" -0.026863668 0 0 ;
@@ -4139,7 +4139,7 @@ createNode polySplitRing -n "polySplitRing15";
 createNode polyTweak -n "polyTweak2";
 	rename -uid "9BF510EF-43B0-206C-42C9-B1A2B7886E3F";
 	setAttr ".uopa" yes;
-	setAttr -s 13 ".tk";
+	setAttr -s 8 ".tk";
 	setAttr ".tk[16]" -type "float3" -0.0629851 0 0 ;
 	setAttr ".tk[17]" -type "float3" -0.0629851 0 0 ;
 	setAttr ".tk[46]" -type "float3" -0.018195111 0 0 ;
