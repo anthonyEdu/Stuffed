@@ -128,7 +128,7 @@ MonoBehaviour:
   mouseDownEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: e204fc4c23c394c91a4c6efff705ed4b, type: 2}
+      - m_Target: {fileID: 11400000, guid: 5001f5f55305bfb449a90a8d8792bd34, type: 2}
         m_MethodName: UpdateValue
         m_Mode: 3
         m_Arguments:
@@ -139,7 +139,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: fc4af5bf1ffdf47d9ba9e1bfc9ddc8d3, type: 2}
+      - m_Target: {fileID: 11400000, guid: 530e4ad2c6c55194e87a27ec33b8d696, type: 2}
         m_MethodName: RaiseAction
         m_Mode: 1
         m_Arguments:
@@ -150,11 +150,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: 20cc54b661cfb4b5d8d38d036c9ef1f2, type: 2}
+      - m_Target: {fileID: 11400000, guid: 976ad70cf2b716d4ba31d2d43927d146, type: 2}
         m_MethodName: CompareValue
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: e204fc4c23c394c91a4c6efff705ed4b,
+          m_ObjectArgument: {fileID: 11400000, guid: 976ad70cf2b716d4ba31d2d43927d146,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: IntData, Assembly-CSharp
           m_IntArgument: 0

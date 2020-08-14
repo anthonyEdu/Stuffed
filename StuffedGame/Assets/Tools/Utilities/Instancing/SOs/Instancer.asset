@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9f69600619194773b1196df63f2b828, type: 3}
   m_Name: Instancer
   m_EditorClassIdentifier: 
+  prefab: {fileID: 1675161757621463808, guid: eef88cb5ada76f14295f55ad4bad03c8, type: 3}
+  indexer: {fileID: 11400000, guid: a444326388c39cf41a848df8173989f0, type: 2}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6df0c6962af14c60b2d5c35ebd9c64c, type: 3}
   m_Name: InstanceNumber
   m_EditorClassIdentifier: 
-  value: 14
+  value: 5
   decrementEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -22,7 +22,7 @@ MonoBehaviour:
   compareTrueEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: e72c8bca46e6542da95ffb1ca8fae83d, type: 2}
+      - m_Target: {fileID: 11400000, guid: bf380e5757c074645a6534e409b198de, type: 2}
         m_MethodName: RaiseAction
         m_Mode: 1
         m_Arguments:
